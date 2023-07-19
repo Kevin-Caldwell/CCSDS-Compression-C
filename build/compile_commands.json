@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build",
+  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx86\\x86\\cl.exe  /nologo /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\CCSDS_Compression.dir\\main.c.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\main.c",
+  "file": "C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\main.c",
+  "output": "CMakeFiles\\CCSDS_Compression.dir\\main.c.obj"
+},
+{
+  "directory": "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build",
+  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx86\\x86\\cl.exe  /nologo /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\CCSDS_Compression.dir\\src\\image.c.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\image.c",
+  "file": "C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\image.c",
+  "output": "CMakeFiles\\CCSDS_Compression.dir\\src\\image.c.obj"
+},
+{
+  "directory": "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build",
+  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx86\\x86\\cl.exe  /nologo /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\CCSDS_Compression.dir\\src\\generate_image.c.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\generate_image.c",
+  "file": "C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\generate_image.c",
+  "output": "CMakeFiles\\CCSDS_Compression.dir\\src\\generate_image.c.obj"
+}
+]
