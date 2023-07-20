@@ -1,16 +1,18 @@
-#pragma once
-#include "math_functions.h"
-#include "constants.h"
+#ifndef IMAGE_H
+#define IMAGE_H
+
+#include "Math/math_functions.h"
+#include "Math/constants.h"
 #include <stdlib.h>
 
 typedef uint16_t PIXEL;
 typedef size_t INDEX;
 
-#define FRAME_SIZE size.x * size.z
-#define MAP3_1(x, y, z, size) (y * FRAME_SIZE + size.x * z + y)
+#define FRAME_SIZE(size) size.x * size.z
+#define MAP3_1(x, y, z, size) (y * FRAME_SIZE(size) + size.x * z + y)
 #define GetT(x, y) (y * Nx + x) 
-#define GetX(T) (t % Nx)
-#define GetY(T) ((int)t / Nx)
+#define GetX(t) (t % Nx)
+#define GetY(t) ((int)t / Nx)
 
 /* The frame is a 3 Dimensional array of unsigned integers
 The data is stored as a sequence of y x-z images
@@ -32,3 +34,7 @@ int InitImage(image** img_p, size_t x, size_t y, size_t z);
 
 PIXEL GetPixel(image* hIMG, INDEX x, INDEX y, INDEX z);
 PIXEL* GetFrame(image* hIMG, INDEX y);
+
+void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
+
+#endif

@@ -59,7 +59,12 @@
     "*.py": "python",
     "encoder.h": "c",
     "math_functions.h": "c",
-    "inttypes.h": "c"
+    "inttypes.h": "c",
+    "generate_image.h": "c",
+    "constants.h": "c",
+    "image.h": "c",
+    "stdio.h": "c",
+    "gl.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

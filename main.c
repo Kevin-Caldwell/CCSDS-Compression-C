@@ -2,12 +2,12 @@
 
 #define TESTING_MATH
 
-#include "include/generate_image.h"
+#include "include/Testing/generate_image.h"
 
 int main(int argInt, char** argS){
-    printf("Hello, from CCSDS_Compression!\n");
+    printf("Starting Program...\n");
 
-    GenerateRandomData();
+    TEST_1();
     
     return 0;
 }

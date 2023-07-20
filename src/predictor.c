@@ -14,12 +14,11 @@ int FindLocalSum(INDEX z, INDEX y, INDEX x)
     }
     else if (y > 0 && x == 0)
     {
-        return 2 * (SR(z, GetT(x, y-1) + SR(z, GetT(x+1, y-1));
+        return 2 * (SR(z, GetT(x, y - 1)) + SR_C(z, x + 1, y - 1));
     }
     else if (y > 0 && x == Nx - 1)
     {
-        return SR(z, GetT(x-1, y)) + SR(z, GetT(x-1, y-1)) 
-        + 2 * SR(z, GetT(x, y-1);
+        return SR(z, GetT(x - 1, y)) + SR_C(z, x - 1, y - 1) + 2 * SR(z, GetT(x, y - 1));
     }
 #endif
 
@@ -28,17 +27,17 @@ int FindLocalSum(INDEX z, INDEX y, INDEX x)
 
 int CentralLocalDifference(INDEX x, INDEX y, INDEX z)
 {
-    return 4 * SR(z, GetT(x, y)) - LS(z, y, x);
+    return 4 * SR_C(z, x, y) - LS(z, y, x);
 }
 
-int DirectionalLocalDifferences(INDEX x, INDEX y, INDEX z, DIRECTION d)
+int DirectionalLocalDifferences(INDEX x, INDEX y, INDEX z, int d)
 {
     switch (d)
     {
     case N:
         if (y > 0)
         {
-            return 4 * SR(z, y, x - 1) - LS(z, y, x);
+            return 4 * SR_C(z, y, x - 1) - LS(z, y, x);
         }
         else if (y == 0)
         {
@@ -46,26 +45,36 @@ int DirectionalLocalDifferences(INDEX x, INDEX y, INDEX z, DIRECTION d)
         }
         break;
     case W:
-        if(x > 0 && y > 0){
-            return 4 * SR(z,y,x-1) - LS(z, y, x);
-        } else if(x == 0 && y > 0){
-            return 4 * SR(z,y-1,x) - LS(z,y,x);
-        } else if(y == 0){
+        if (x > 0 && y > 0)
+        {
+            return 4 * SR_C(z, y, x - 1) - LS(z, y, x);
+        }
+        else if (x == 0 && y > 0)
+        {
+            return 4 * SR_C(z, y - 1, x) - LS(z, y, x);
+        }
+        else if (y == 0)
+        {
             return 0;
         }
     case NW:
-        if(x > 0 && y > 0){
-            return 4 * SR(z,y-1,x-1) - LS(z, y, x);
-        } else if (x == 0 && y > 0)
+        if (x > 0 && y > 0)
         {
-            return 4 * SR(z,y-1,x) - LS(z,y,x);
-        } else if (y == 0){
+            return 4 * SR_C(z, y - 1, x - 1) - LS(z, y, x);
+        }
+        else if (x == 0 && y > 0)
+        {
+            return 4 * SR_C(z, y - 1, x) - LS(z, y, x);
+        }
+        else if (y == 0)
+        {
             return 0;
         }
-        
+
     default:
         break;
     }
+    return 0;
 }
 
 int CalculateHighResolutionSample(INDEX i)
@@ -79,6 +88,8 @@ int SampleRepresentative(INDEX z, INDEX t)
     {
         return GetPixel(hIMG, GetX(t), GetY(t), z);
     }
+
+    return 0;
 }
 
 // Spectral Band z
@@ -95,7 +106,7 @@ int DoubleResolutionSampleRepresentative(INDEX z, INDEX t)
     int s_curve = 0;
     // TODO end
 
-    int sampleRep = 4 * (BPOW(Theta) - damping[z]) * ((sPrime * BPOW(Omega) - SIGN(qz) * mz_t * offset[z] * BPOW(Omega - THETA))) + damping[z] * s_curve - offset[z] * BPOW(Omega + 1);
+    int sampleRep = 4 * (BPOW(THETA) - damping[z]) * ((sPrime * BPOW(Omega) - SIGN(qz) * mz_t * offset[z] * BPOW(Omega - THETA))) + damping[z] * s_curve - offset[z] * BPOW(Omega + 1);
     return sampleRep / (BPOW(Omega + THETA + 1));
 }
 
@@ -116,6 +127,7 @@ int DoubleResolutionPredictedSample(INDEX z, INDEX t)
     int s_curve = 0;
     int x = 0;
     int y = 0;
+    int Q = 0;
     // TODO end
 
     if (t > 0)
@@ -130,4 +142,6 @@ int DoubleResolutionPredictedSample(INDEX z, INDEX t)
     {
         return 2 * Smid;
     }
+
+    return 0;
 }

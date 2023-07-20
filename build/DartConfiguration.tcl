@@ -4,31 +4,30 @@
 
 
 # Configuration directories and files
-SourceDirectory: C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C
-BuildDirectory: C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build
+SourceDirectory: /home/kevin/Kevin/Programming/C/CCSDS_Compression/C
+BuildDirectory: /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: Kevin
+Site: kevin-linux
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Win32-ninja
+BuildName: Linux-gcc-12
 
 # Subprojects
 LabelsForSubprojects: 
 
 # Submission information
 SubmitURL: http://
-SubmitInactivityTimeout: 
 
 # Dashboard start time
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "C:/Program Files/CMake/bin/cmake.exe" "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C"
-MakeCommand: "C:\Program Files\CMake\bin\cmake.exe" --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/usr/bin/cmake" "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -45,7 +44,7 @@ SVNOptions:
 SVNUpdateOptions: 
 
 # Git options
-GITCommand: 
+GITCommand: /usr/bin/git
 GITInitSubmodules: 
 GITUpdateOptions: 
 GITUpdateCustom: 
@@ -58,9 +57,9 @@ P4UpdateOptions:
 P4UpdateCustom: 
 
 # Generic update command
-UpdateCommand: 
+UpdateCommand: /usr/bin/git
 UpdateOptions: 
-UpdateType: 
+UpdateType: git
 
 # Compiler info
 Compiler: 
@@ -76,12 +75,12 @@ CudaSanitizerCommand:
 CudaSanitizerCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
-MemoryCheckCommand: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin/cuda-memcheck.exe
+MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
 MemoryCheckCommandOptions: 
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: COVERAGE_COMMAND-NOTFOUND
+CoverageCommand: /usr/bin/gcov
 CoverageExtraFlags: -l
 
 # Testing options

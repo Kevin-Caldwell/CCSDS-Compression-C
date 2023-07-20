@@ -1,8 +1,9 @@
-#pragma once
+#ifndef PREDICTOR_H
+#define PREDICTOR_H
 
 #include <stdlib.h>
-#include "constants.h"
-#include "math_functions.h"
+#include "Math/constants.h"
+#include "Math/math_functions.h"
 #include "image.h"
 
 /*  s_squiggle_z(t)         Double-Resolution Predicted Sample Value
@@ -41,7 +42,8 @@
 #define DRPS DoubleResolutionPredictedSample
 #define LS FindLocalSum
 #define HRS CalculateHighResolutionSample
-#define SR SampleRepresentative
+#define SR(z, t) SampleRepresentative(z, t)
+#define SR_C(z, y, x) SampleRepresentative(z, GetT(x, y))
 
 #define PredictedSampleValue(z, t) (DRPS(z, t) / 2)
 #define PSV(z, t) PredictedSampleValue(z, t)
@@ -101,14 +103,16 @@ void LocalDifferenceVector(INDEX z, INDEX t){
     //local_difference_vector[0] = 
 }
 
-int FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x);
+int FindLocalSum(INDEX z, INDEX y, INDEX x);
 
-int CalculateHighResolutionSample(image *hIMG, INDEX i);
+int CalculateHighResolutionSample(INDEX i);
 
-int SampleRepresentative(image *hIMG, INDEX t);
+int SampleRepresentative(INDEX z, INDEX t);
 
-double DoubleResolutionSampleRepresentative(image *hIMG, INDEX z, INDEX t);
+int DoubleResolutionSampleRepresentative(INDEX z, INDEX t);
 
 int QuantizerBinCenter(INDEX z, INDEX t);
 
 int DoubleResolutionPredictedSample(INDEX z, INDEX t);
+
+#endif

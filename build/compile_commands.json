@@ -1,20 +1,32 @@
 [
 {
-  "directory": "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx86\\x86\\cl.exe  /nologo /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\CCSDS_Compression.dir\\main.c.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\main.c",
-  "file": "C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\main.c",
-  "output": "CMakeFiles\\CCSDS_Compression.dir\\main.c.obj"
+  "directory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build",
+  "command": "/usr/bin/gcc-12  -I/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/include -g -o CMakeFiles/CCSDS_Compression.dir/main.c.o -c /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/main.c",
+  "file": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/main.c"
 },
 {
-  "directory": "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx86\\x86\\cl.exe  /nologo /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\CCSDS_Compression.dir\\src\\image.c.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\image.c",
-  "file": "C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\image.c",
-  "output": "CMakeFiles\\CCSDS_Compression.dir\\src\\image.c.obj"
+  "directory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build",
+  "command": "/usr/bin/gcc-12  -I/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/include -g -o CMakeFiles/CCSDS_Compression.dir/src/encoder.c.o -c /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/encoder.c",
+  "file": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/encoder.c"
 },
 {
-  "directory": "C:/Kevin/UTAT/FINCH/Firmware/CCSDS_Implementation/C/build",
-  "command": "C:\\PROGRA~1\\MICROS~4\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\14.36.32532\\bin\\Hostx86\\x86\\cl.exe  /nologo /DWIN32 /D_WINDOWS /W3 /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\CCSDS_Compression.dir\\src\\generate_image.c.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\generate_image.c",
-  "file": "C:\\Kevin\\UTAT\\FINCH\\Firmware\\CCSDS_Implementation\\C\\src\\generate_image.c",
-  "output": "CMakeFiles\\CCSDS_Compression.dir\\src\\generate_image.c.obj"
+  "directory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build",
+  "command": "/usr/bin/gcc-12  -I/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/include -g -o CMakeFiles/CCSDS_Compression.dir/src/image.c.o -c /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/image.c",
+  "file": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/image.c"
+},
+{
+  "directory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build",
+  "command": "/usr/bin/gcc-12  -I/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/include -g -o CMakeFiles/CCSDS_Compression.dir/src/generate_image.c.o -c /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/generate_image.c",
+  "file": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/generate_image.c"
+},
+{
+  "directory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build",
+  "command": "/usr/bin/gcc-12  -I/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/include -g -o CMakeFiles/CCSDS_Compression.dir/src/predictor.c.o -c /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/predictor.c",
+  "file": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/predictor.c"
+},
+{
+  "directory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/build",
+  "command": "/usr/bin/gcc-12  -I/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/include -g -o CMakeFiles/CCSDS_Compression.dir/src/constants.c.o -c /home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/constants.c",
+  "file": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/C/src/constants.c"
 }
 ]
