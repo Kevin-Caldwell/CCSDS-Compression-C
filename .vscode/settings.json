@@ -64,7 +64,17 @@
     "constants.h": "c",
     "image.h": "c",
     "stdio.h": "c",
-    "gl.h": "c"
+    "gl.h": "c",
+    "array": "c",
+    "string_view": "c",
+    "initializer_list": "c",
+    "utility": "c",
+    "local_sum.h": "c",
+    "sample_representative.h": "c",
+    "local_differences.h": "c",
+    "quantizer.h": "c",
+    "image_instance.h": "c",
+    "linear_algebra.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }

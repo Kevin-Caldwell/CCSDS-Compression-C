@@ -11,9 +11,11 @@
 #endif
 
 
-#define CLIP(x, min_val, max_val) (x < min_val ? min_val : (x > max_val ? max_val: x))
+#define CLIP(x, min_val, max_val) ((x) < (min_val) ? (min_val) : ((x) > (max_val) ? (max_val) : (x)))
 #define SIGN(x) x < 0 ? -1 : (x > 0 ? 1 : 0)
 #define SIGN_P(x) x >> (sizeof(x) * 8 - 1) ? -1 : 1
+
+#define MOD(x, R) (x + BPOW(R - 1) % BPOW(R) - BPOW(R - 1))
 
 #define MAX(a, b) (a > b ? a : b)
 #define MIN(a, b) (a < b ? a : b)
@@ -21,14 +23,13 @@
 #define BPOW(x) (1 << (x))
 
 /// Error Codes: TODO
-#pragma region Error Codes
 enum RetVal{
     OK = 0, ERROR
 };
-#pragma endregion Error Codes
 
 typedef size_t DIM;
 typedef unsigned int UINT;
+
 
 /* Spatial Dimensions: x, y
 Spectral Band: z
@@ -39,4 +40,4 @@ typedef struct dim3{
     DIM z;
 } dim3;
 
-#endif
+#endif /* MATH_FUNCTIONS_H */

@@ -1,27 +1,32 @@
-#include "Testing/generate_image.h"
+#include "testing/generate_image.h"
 
 #include <stdio.h>
 
 
 int GenerateData(image** hIMG, dim3* dataPoints, UINT point_count){
     InitImage(hIMG, Nx, Ny, Nz);
+    image* img = *hIMG;
 
     UINT distance;
     UINT minimum_distance = 0;
-    UINT index;
+    UINT index = 0;
 
     for(int i = 0; i < Nx; i++){
         for(int j = 0; j < Ny; j++){
             for(int k = 0; k < Nz; k++){
-                minimum_distance = 0;
-                minimum_distance--;
+                minimum_distance = INT16_MAX;
                 index = 0;
                 for(int l = 0; l < point_count; l++){
                     distance = abs(dataPoints[l].x - i) + abs(dataPoints[l].y - j) + abs(dataPoints[l].z - k);
-                    minimum_distance = MIN(minimum_distance, distance);
+                    if(minimum_distance > distance){
+                        minimum_distance = distance;
+                        index = l;
+                    }
                 }
 
-                SetPixel(*hIMG, i, j, k, minimum_distance);
+                //printf("%i, %i\n", distance, index);
+
+                SetPixel(img, i, j, k, index);
             }
         }
     }
@@ -44,6 +49,7 @@ int SpreadPoints(dim3** points, dim3 bounds, UINT point_count){
 
 int TEST_1()
 {
+    image* data;
 
     dim3* points;
     dim3 bounds;
@@ -57,7 +63,14 @@ int TEST_1()
         printf("{%lu, %lu, %lu}\n", points[i].x, points[i].y, points[i].z);
     }
 
+    GenerateData(&data, points, 10);
+
+    for(int i = 0; i < Nx * Ny * Nz; i++){
+        printf("%hu ", data->data[i]);
+    }
+
     free(points);
+    free(data);
 
     return 0;
 }

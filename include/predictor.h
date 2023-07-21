@@ -2,8 +2,8 @@
 #define PREDICTOR_H
 
 #include <stdlib.h>
-#include "Math/constants.h"
-#include "Math/math_functions.h"
+#include "constants.h"
+#include "math/math_functions.h"
 #include "image.h"
 
 /*  s_squiggle_z(t)         Double-Resolution Predicted Sample Value
@@ -32,6 +32,8 @@
 #define C(z) (unsigned int) Ps(z) + 3
 #endif
 
+#define T(x, y) (y * Nx + x) 
+
 #define DAMPING_MIN 0
 #define DAMPING_MAX BPOW(THETA) - 1
 
@@ -40,10 +42,8 @@
 #define OFFSET_MAX BPOW(THETA) - 1
 
 #define DRPS DoubleResolutionPredictedSample
-#define LS FindLocalSum
 #define HRS CalculateHighResolutionSample
-#define SR(z, t) SampleRepresentative(z, t)
-#define SR_C(z, y, x) SampleRepresentative(z, GetT(x, y))
+
 
 #define PredictedSampleValue(z, t) (DRPS(z, t) / 2)
 #define PSV(z, t) PredictedSampleValue(z, t)
@@ -65,7 +65,7 @@ enum DIRECTION { N = 0, W, NW };
 
 /// Per Band Weight Initialization
 /// Will be updated with each pass
-int InitWeightVector(INDEX z, INDEX t)
+/* int InitWeightVector(INDEX z, INDEX t)
 {
     if (weight_vector)
     {
@@ -93,26 +93,6 @@ int InitWeightVector(INDEX z, INDEX t)
 #endif
 
     return 0;
-}
+} */
 
-void LocalDifferenceVector(INDEX z, INDEX t){
-    if(!local_difference_vector){
-        free(local_difference_vector);
-    }
-    local_difference_vector = (weight_t*) malloc(sizeof(weight_t) * C((signed) z));
-    //local_difference_vector[0] = 
-}
-
-int FindLocalSum(INDEX z, INDEX y, INDEX x);
-
-int CalculateHighResolutionSample(INDEX i);
-
-int SampleRepresentative(INDEX z, INDEX t);
-
-int DoubleResolutionSampleRepresentative(INDEX z, INDEX t);
-
-int QuantizerBinCenter(INDEX z, INDEX t);
-
-int DoubleResolutionPredictedSample(INDEX z, INDEX t);
-
-#endif
+#endif /* PREDICTOR_H */

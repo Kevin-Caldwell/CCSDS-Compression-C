@@ -1,12 +1,9 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
-#include "Math/math_functions.h"
-#include "Math/constants.h"
+#include "math/math_functions.h"
+#include "constants.h"
 #include <stdlib.h>
-
-typedef uint16_t PIXEL;
-typedef size_t INDEX;
 
 #define FRAME_SIZE(size) size.x * size.z
 #define MAP3_1(x, y, z, size) (y * FRAME_SIZE(size) + size.x * z + y)
@@ -18,7 +15,6 @@ typedef size_t INDEX;
 The data is stored as a sequence of y x-z images
 x and y are spatial variables, and z is a spectral band variable
 
-(On MCU, only partial images can be loaded)
 Range of each dimension: 1 - 2^16
 In this case: 0 - 2^16-1 
 While it is possible to translate this scale, 
@@ -37,4 +33,4 @@ PIXEL* GetFrame(image* hIMG, INDEX y);
 
 void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 
-#endif
+#endif /* IMAGE_H */

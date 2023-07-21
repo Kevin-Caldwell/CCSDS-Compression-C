@@ -1,8 +1,8 @@
 #ifndef GENERATE_IMAGE_H
 #define GENERATE_IMAGE_H
 
-#include "Math/constants.h"
-#include "image.h"
+#include "constants.h"
+#include "image_instance.h"
 
 int GenerateData(image** hIMG, dim3* dataPoints, UINT point_count);
 
