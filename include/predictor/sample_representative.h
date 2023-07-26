@@ -1,19 +1,20 @@
-#ifndef SAMPLE_REPRESENTATIVE_H
-#define SAMPLE_REPRESENTATIVE_H
+#ifndef SAMPLE_REPRESENTATIVE
+#define SAMPLE_REPRESENTATIVE
 
 #include "image_instance.h"
 #include "constants.h"
+#include "cache/cache_predictor.h"
 #include "math/linear_algebra.h"
 #include "predictor/local_differences.h"
 #include "predictor/quantizer.h"
 
+
 #define SR(hIMG, z, y, x)     SampleRepresentative(hIMG, z, y, x)
 #define SAMPLE(z,y,x) (0) // TODO
 
-extern data_t* damping;
-extern data_t* offset;
+extern data_t damping[];
+extern data_t offset[];
 
-// TODO
 data_t SampleRepresentative(image* hIMG, INDEX z, INDEX y, INDEX x);
 
 data_t DoubleResolutionSampleRepresentative(image* hIMG, INDEX z, INDEX y, INDEX x);
@@ -26,4 +27,4 @@ data_t HighResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
 
 data_t ClippedQuantizerBinCenter(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-#endif /* SAMPLE_REPRESENTATIVE_H */
+#endif /* SAMPLE_REPRESENTATIVE */

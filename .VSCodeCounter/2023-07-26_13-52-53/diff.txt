@@ -1,0 +1,45 @@
+Date : 2023-07-26 13:52:53
+Directory : /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include
+Total : 16 files,  -704 codes, -35 comments, -190 blanks, all -929 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |          2 |       -131 |         -6 |        -43 |       -180 |
+| C        |         14 |       -573 |        -29 |       -147 |       -749 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                              | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                 |         16 |       -704 |        -35 |       -190 |       -929 |
+| ..                                                                                                |         16 |       -704 |        -35 |       -190 |       -929 |
+| .. (Files)                                                                                        |          1 |         -8 |          0 |         -6 |        -14 |
+| ../Python                                                                                         |          2 |       -131 |         -6 |        -43 |       -180 |
+| ../src                                                                                            |         13 |       -565 |        -29 |       -141 |       -735 |
++---------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                          | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/Python/display_debugging.py | Python   |        -29 |          0 |        -16 |        -45 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/Python/prepare_hImage.py    | Python   |       -102 |         -6 |        -27 |       -135 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/main.c                      | C        |         -8 |          0 |         -6 |        -14 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/cache_predictor.c       | C        |        -70 |         -3 |        -14 |        -87 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/constants.c             | C        |        -20 |          0 |         -8 |        -28 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/fileio.c                | C        |        -29 |          0 |        -11 |        -40 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/generate_image.c        | C        |        -62 |        -13 |        -22 |        -97 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/image.c                 | C        |        -20 |          0 |         -4 |        -24 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/image_instance.c        | C        |         -1 |          0 |         -2 |         -3 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/linear_algebra.c        | C        |        -33 |          0 |         -9 |        -42 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/local_differences.c     | C        |        -89 |          0 |        -16 |       -105 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/local_sum.c             | C        |        -72 |         -2 |         -8 |        -82 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/predictor.c             | C        |        -21 |          0 |         -6 |        -27 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/quantizer.c             | C        |        -50 |          0 |        -13 |        -63 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/sample_representative.c | C        |        -50 |        -11 |        -18 |        -79 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/weights.c               | C        |        -48 |          0 |        -10 |        -58 |
+| Total                                                                                             |          |       -704 |        -35 |       -190 |       -929 |
++---------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

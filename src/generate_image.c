@@ -1,5 +1,8 @@
 #include "testing/generate_image.h"
 
+#include "cache/cache_predictor.h"
+#include "fileio.h"
+
 #include <stdio.h>
 
 
@@ -23,9 +26,6 @@ int GenerateData(image** hIMG, dim3* dataPoints, UINT point_count){
                         index = l;
                     }
                 }
-
-                //printf("%i, %i\n", distance, index);
-
                 SetPixel(img, i, j, k, index);
             }
         }
@@ -52,28 +52,49 @@ int TEST_1()
     image* data;
 
     dim3* points;
-    dim3 bounds;
-    bounds.x = Nx;
-    bounds.y = Ny;
-    bounds.z = Nz;
+    dim3 bounds = (dim3) {.x = Nx, .y = Ny, .z = Nz};
 
-    SpreadPoints(&points, bounds, 10);
+    SpreadPoints(&points, bounds, 10000);
+    GenerateData(&data, points, 10000);
+    printf("Generated Synthetic Data..\n");
 
-    for(int i = 0; i < 10; i++){
-        printf("{%lu, %lu, %lu}\n", points[i].x, points[i].y, points[i].z);
+    InitializePredictorCache(&global_cache, data);
+    printf("Cache Created..\n");
+    
+
+    image* predicted_values;
+    InitImage(&predicted_values, Nx,Ny,Nz);
+    printf("Running Predictor\n");
+    //CacheLocalSums(data, predicted_values);
+    RunPredictor(data, predicted_values);
+    printf("Completed Prediction\n");
+
+    SaveImageAsCSV(predicted_values, "predictor.csv");
+    for(int i = 0; i < CACHE_SPACES; i++){
+        SaveImageAsCSV(global_cache->cache_space[i], CacheFiles[i]);
     }
 
-    GenerateData(&data, points, 10);
 
-    for(int i = 0; i < Nx * Ny * Nz; i++){
-        printf("%hu ", data->data[i]);
-    }
+    DeletePredictorCache(global_cache);
 
     free(points);
-    free(data);
+    free(predicted_values);
 
     return 0;
 }
 
-//  git config --global user.email "you@example.com"
-//  git config --global user.name "Your Name"
+/*  
+    for(int i = 0; i < Nx; i++){
+        for(int j = 0; j < Ny; j++){
+            for(int k = 0; k < Nz; k++){
+                printf("%hu\t", data->data[MAP3_1(i,j,k, bounds)]);
+            }
+
+            printf("\n");
+        }
+        printf("\n");
+    }
+    printf("\n");  */
+
+  //git config --global user.email "you@example.com"
+  //git config --global user.name "Your Name"

@@ -1,5 +1,5 @@
-#ifndef MATH_FUNCTIONS_H
-#define MATH_FUNCTIONS_H
+#ifndef MATH_FUNCTIONS
+#define MATH_FUNCTIONS
 
 #include <stdlib.h>
 #include <math.h>
@@ -40,4 +40,4 @@ typedef struct dim3{
     DIM z;
 } dim3;
 
-#endif /* MATH_FUNCTIONS_H */
+#endif /* MATH_FUNCTIONS */

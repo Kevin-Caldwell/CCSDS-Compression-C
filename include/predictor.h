@@ -1,10 +1,13 @@
-#ifndef PREDICTOR_H
-#define PREDICTOR_H
+#ifndef PREDICTOR
+#define PREDICTOR
 
 #include <stdlib.h>
 #include "constants.h"
 #include "math/math_functions.h"
+#include "math/linear_algebra.h"
 #include "image.h"
+
+#include "predictor/quantizer.h"
 
 /*  s_squiggle_z(t)         Double-Resolution Predicted Sample Value
     s_hat_z(t)              Predicted Sample Value
@@ -41,27 +44,14 @@
 #define OFFSET_MIN 0
 #define OFFSET_MAX BPOW(THETA) - 1
 
-#define DRPS DoubleResolutionPredictedSample
-#define HRS CalculateHighResolutionSample
-
-
-#define PredictedSampleValue(z, t) (DRPS(z, t) / 2)
-#define PSV(z, t) PredictedSampleValue(z, t)
 
 // typedef to allow for future change
 typedef uint32_t weight_t;
 
-float damping[Nz];
-float offset[Nz];
 
+//enum DIRECTION { N = 0, W, NW };
 
-// Calculation Metrics
-weight_t *weight_vector = NULL;
-weight_t *local_difference_vector = NULL;
-
-image *hIMG;
-
-enum DIRECTION { N = 0, W, NW };
+int RunPredictor(image* hIMG, image* result);
 
 /// Per Band Weight Initialization
 /// Will be updated with each pass
@@ -95,4 +85,4 @@ enum DIRECTION { N = 0, W, NW };
     return 0;
 } */
 
-#endif /* PREDICTOR_H */
+#endif /* PREDICTOR */

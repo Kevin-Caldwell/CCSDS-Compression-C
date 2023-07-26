@@ -36,6 +36,10 @@ data_t WeightUpdateScalingExponent(INDEX z, INDEX y, INDEX x){
 }
 
 int UpdateWeights(image* hIMG, data_t* weights, INDEX z, INDEX y, INDEX x){
+    if(x == 0 && x == 0){
+        InitializeWeights(&global_cache->weights, z,y,x);
+        return 0;
+    }
     int ibweo = 0;
     for(int i = 0; i < 3; i++){
         weights[i] += (SIGN_P(DoubleResolutionPredictionError(hIMG, z,y,x)) * 

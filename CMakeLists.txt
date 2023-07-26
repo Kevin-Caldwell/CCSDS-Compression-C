@@ -10,7 +10,9 @@ include_directories(include)
 
 add_executable(CCSDS_Compression 
             main.c 
+            src/cache_predictor.c
             src/constants.c
+            src/fileio.c
             src/image_instance.c
             src/generate_image.c
             src/image.c

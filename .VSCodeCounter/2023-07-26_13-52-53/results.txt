@@ -1,0 +1,44 @@
+Date : 2023-07-26 13:52:53
+Directory : /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include
+Total : 14 files,  254 codes, 80 comments, 150 blanks, all 484 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| C        |         13 |        226 |         80 |        136 |        442 |
+| C++      |          1 |         28 |          0 |         14 |         42 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                            | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                               |         14 |        254 |         80 |        150 |        484 |
+| . (Files)                                                                                                       |          5 |         96 |         74 |         61 |        231 |
+| cache                                                                                                           |          1 |         28 |          0 |         14 |         42 |
+| math                                                                                                            |          2 |         42 |          4 |         25 |         71 |
+| predictor                                                                                                       |          5 |         79 |          2 |         45 |        126 |
+| testing                                                                                                         |          1 |          9 |          0 |          5 |         14 |
++-----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                        | language | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/cache/cache_predictor.h           | C++      |         28 |          0 |         14 |         42 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/constants.h                       | C        |         42 |         13 |         25 |         80 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/fileio.h                          | C        |          8 |          0 |          6 |         14 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/image.h                           | C        |         19 |         10 |         10 |         39 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/image_instance.h                  | C        |          5 |          0 |          4 |          9 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/math/linear_algebra.h             | C        |         15 |          0 |         12 |         27 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/math/math_functions.h             | C        |         27 |          4 |         13 |         44 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor.h                       | C        |         22 |         51 |         16 |         89 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/local_differences.h     | C        |         24 |          0 |         11 |         35 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/local_sum.h             | C        |          8 |          0 |          4 |         12 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/quantizer.h             | C        |         12 |          2 |          8 |         22 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/sample_representative.h | C        |         19 |          0 |         12 |         31 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/weights.h               | C        |         16 |          0 |         10 |         26 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/testing/generate_image.h          | C        |          9 |          0 |          5 |         14 |
+| Total                                                                                                           |          |        254 |         80 |        150 |        484 |
++-----------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

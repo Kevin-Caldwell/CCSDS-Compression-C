@@ -1,14 +1,14 @@
-#ifndef CONSTANTS_H
-#define CONSTANTS_H
+#ifndef CONSTANTS
+#define CONSTANTS
 #include "math/math_functions.h"
 
 // Comment if using Unsigned Samples
 #define UNSIGNED_SAMPLES
 
 // Image Size Constants
-#define Nx 640
-#define Ny 512
-#define Nz 640
+#define Nx 100 //640
+#define Ny 100 //512
+#define Nz 100 //640
 
 //* Uncomment if Lossless compression is required
 //#define LOSSLESS
@@ -24,7 +24,7 @@
 //#define WIDE_COLUMN
 //#define NARROW_COLUMN
 
-#define DYNAMIC_RANGE 2
+#define DYNAMIC_RANGE 30
 #define PREVIOUS_BAND_SAMPLES 3
 
 #define RESOLUTION 100
@@ -55,16 +55,10 @@ typedef size_t INDEX;
 #define D CLIP(DYNAMIC_RANGE, 2, 32)
 extern const int D_range;
 
-#ifdef UNSIGNED_SAMPLES
+
 extern const int kSmin;
 extern const int Smax;
 extern const int Smid;
-
-#else
-extern const int Smin;
-extern const int Smax;
-extern const int Smid;
-#endif
 
 extern const int P;
 #define Omega CLIP(WEIGHT_RESOLUTION, 4, 19)
@@ -82,4 +76,4 @@ extern const int vMax;
 extern const int tInc;
 
 #pragma endregion
-#endif /* CONSTANTS_H */
+#endif /* CONSTANTS */

@@ -1,12 +1,12 @@
-#ifndef IMAGE_H
-#define IMAGE_H
+#ifndef IMAGE
+#define IMAGE
 
 #include "math/math_functions.h"
 #include "constants.h"
 #include <stdlib.h>
 
-#define FRAME_SIZE(size) size.x * size.z
-#define MAP3_1(x, y, z, size) (y * FRAME_SIZE(size) + size.x * z + y)
+#define FRAME_SIZE(size) (size.x * size.y)
+#define MAP3_1(i, j, k, size) (k * FRAME_SIZE(size) + size.x * j + i)
 #define GetT(x, y) (y * Nx + x) 
 #define GetX(t) (t % Nx)
 #define GetY(t) ((int)t / Nx)
@@ -33,4 +33,6 @@ PIXEL* GetFrame(image* hIMG, INDEX y);
 
 void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 
-#endif /* IMAGE_H */
+
+
+#endif /* IMAGE */

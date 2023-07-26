@@ -1,47 +1,26 @@
 #include "predictor.h"
+#include <time.h>
+#include <stdio.h>
 
-// ! Old Functions, Not in Use anymore
-// ! New versions found in predictor folder
+int RunPredictor(image* hIMG, image* result){
+    time_t start;
+    time_t end;
+    dim3 size = hIMG->size;
+    start = time(NULL);
+    for(int i = 0; i < size.x; i++){
+        for(int j = 0; j < size.y; j++){
+            for(int k = 0; k < size.z; k++){
 
-/* int SampleRepresentative(INDEX z, INDEX t)
-{
-    if (t == 0)
-    {
-        return GetPixel(hIMG, GetX(t), GetY(t), z);
+                data_t raw_data = GetPixel(hIMG, i,j,k);
+                data_t predicted_value = MappedQuantizerIndex(hIMG, k,j,i);
+                SetPixel(result, i,j,k, predicted_value);
+                
+            }
+        }
+        
+        
     }
-
+    end = time(NULL);
+    printf("%d seconds for image\n", (int) (end - start));
     return 0;
-
 }
- */
-// Spectral Band z
-// Resolution Parameter THETA
-// damping theta_z
-// offset phi_z
-
-/* int DoubleResolutionSampleRepresentative(INDEX z, INDEX t)
-{
-    // TODO start
-    int sPrime = 0;
-    int qz = 0;
-    int mz_t = 0;
-    int s_curve = 0;
-    // TODO end
-
-    int sampleRep = 4 * (BPOW(THETA) - damping[z]) * ((sPrime * BPOW(Omega) - SIGN(qz) * mz_t * offset[z] * BPOW(Omega - THETA))) + damping[z] * s_curve - offset[z] * BPOW(Omega + 1);
-    return sampleRep / (BPOW(Omega + THETA + 1));
-} */
-
-
-// // TODO
-/* int QuantizerBinCenter(INDEX z, INDEX t)
-{
-    // TODO start
-    int s_hat = 0;
-    int q_z = 0;
-    int m_t = 0;
-    // TODO end
-
-    return CLIP(s_hat + q_z * (2 * m_t + 1), kSmin, Smax);
-} */
-

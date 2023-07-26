@@ -1,5 +1,5 @@
-#ifndef WEIGHTS_H
-#define WEIGHTS_H
+#ifndef WEIGHTS
+#define WEIGHTS
 
 #include "image.h"
 #include "math/linear_algebra.h"
@@ -19,7 +19,7 @@ data_t DoubleResolutionPredictionError(image* hIMG, INDEX z, INDEX y, INDEX x);
 
 data_t WeightUpdateScalingExponent(INDEX z, INDEX y, INDEX x);
 
-int UpdateWeights();
+int UpdateWeights(image* hIMG, data_t* weights, INDEX z, INDEX y, INDEX x);
 
 
-#endif /* WEIGHTS_H */
+#endif /* WEIGHTS */
