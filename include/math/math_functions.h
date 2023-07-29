@@ -12,6 +12,10 @@
 
 
 #define CLIP(x, min_val, max_val) ((x) < (min_val) ? (min_val) : ((x) > (max_val) ? (max_val) : (x)))
+
+#define INSIDE_INTERVAL(x, min, max)    ( min < x && x < max )
+#define OUTSIDE_INTERVAL(x, min, max)   ( min > x || x > max )
+
 #define SIGN(x) x < 0 ? -1 : (x > 0 ? 1 : 0)
 #define SIGN_P(x) x >> (sizeof(x) * 8 - 1) ? -1 : 1
 
@@ -22,13 +26,19 @@
 
 #define BPOW(x) (1 << (x))
 
+#define SQ(x) ((x)*(x))
+
+typedef size_t DIM;
+typedef unsigned int UINT;
+typedef uint16_t PIXEL;
+typedef size_t INDEX;
+
 /// Error Codes: TODO
 enum RetVal{
     OK = 0, ERROR
 };
 
-typedef size_t DIM;
-typedef unsigned int UINT;
+//typedef uint16_t PIXEL;
 
 
 /* Spatial Dimensions: x, y
@@ -39,5 +49,16 @@ typedef struct dim3{
     DIM y;
     DIM z;
 } dim3;
+
+typedef struct dim2{
+    DIM  x;
+    DIM y;
+} dim2;
+
+UINT Euclidian2(dim2 pt1, dim2 pt2);
+UINT Euclidian3(dim3 pt1, dim3 pt2);
+
+UINT Manhattan2(dim2 pt1, dim2 pt2);
+UINT Manhattan3(dim3 pt1, dim3 pt2);
 
 #endif /* MATH_FUNCTIONS */

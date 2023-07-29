@@ -5,7 +5,7 @@
 #include "constants.h"
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
-#include "image.h"
+#include "math/image.h"
 
 #include "predictor/quantizer.h"
 

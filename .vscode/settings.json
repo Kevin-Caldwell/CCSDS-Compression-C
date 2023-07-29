@@ -77,7 +77,14 @@
     "linear_algebra.h": "c",
     "fileio.h": "c",
     "predictor.h": "c",
-    "weights.h": "c"
+    "weights.h": "c",
+    "synthetic_image_generator.h": "c",
+    "limits": "c",
+    "iterator": "c",
+    "chrono": "c",
+    "random": "c",
+    "algorithm": "c",
+    "ratio": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

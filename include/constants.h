@@ -6,9 +6,9 @@
 #define UNSIGNED_SAMPLES
 
 // Image Size Constants
-#define Nx 100 //640
-#define Ny 100 //512
-#define Nz 100 //640
+#define Nx 100//640
+#define Ny 100//512
+#define Nz 100//200//640
 
 //* Uncomment if Lossless compression is required
 //#define LOSSLESS
@@ -43,10 +43,6 @@
 #else
 #define ABSOLUTE_ERROR_LIMIT 0
 #endif
-
-
-typedef uint16_t PIXEL;
-typedef size_t INDEX;
 
 
 #pragma region Do Not Touch

@@ -2,7 +2,7 @@
 #define CACHE_PREDICTOR
 
 #include "math/linear_algebra.h"
-#include "image.h"
+#include "math/image.h"
 
 enum CacheEnum{
     raw = 0,

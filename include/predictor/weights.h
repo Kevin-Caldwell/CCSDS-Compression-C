@@ -1,7 +1,7 @@
 #ifndef WEIGHTS
 #define WEIGHTS
 
-#include "image.h"
+#include "math/image.h"
 #include "math/linear_algebra.h"
 #include "predictor/quantizer.h"
 

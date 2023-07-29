@@ -19,9 +19,11 @@ add_executable(CCSDS_Compression
             src/linear_algebra.c
             src/local_differences.c
             src/local_sum.c
+            src/math_functions.c
             src/predictor.c
             src/quantizer.c
             src/sample_representative.c
+            src/synthetic_image_generator.c
             src/weights.c)
 #include_directories( ${OpenCV_INCLUDE_DIRS} )
 
@@ -30,3 +32,7 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
 #target_link_libraries(CCSDS_Compression ${OpenCV_LIBS} )
 
+find_library(MATH_LIBRARY m)
+if(MATH_LIBRARY)
+    target_link_libraries(CCSDS_Compression PUBLIC ${MATH_LIBRARY})
+endif()

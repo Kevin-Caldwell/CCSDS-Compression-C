@@ -2,11 +2,31 @@ from PIL import Image
 import csv
 import numpy as np
 import math
+import pandas as pd
+import sys
+
 
 def ReadCSV(filename):
-    with open(filename) as f:
-        reader = csv.reader(f)
-        return list(reader)
+        fulltxt = open(filename, 'r').read()
+        data = []
+        num = 0
+        for i in range(len(fulltxt)):
+            if str(fulltxt[i]).isnumeric():
+                num *= 10
+                num += int(fulltxt[i])
+            else:
+                data.append(num)
+                num = 0
+            if(i % (len(fulltxt) // 100) == 0):
+                print(f"Reading... {int(i/len(fulltxt)*100)}%", end="\r")
+
+
+        del fulltxt
+        del num
+
+        print("Finished Reading...")
+
+        return data
 
 def wavelength_to_rgb(wavelength, gamma=0.8):
 
@@ -54,14 +74,16 @@ def wavelength_to_rgb(wavelength, gamma=0.8):
     B *= 255
     return (int(R), int(G), int(B))
 
-CacheFiles = ["raw",
-  "local-sums",
-   "sample-representatives",
-   "predicted_sample",
-   "central_local_difference",
-   "predicted_central_local_difference", 
-   "clipped_quanitzer_bin_center",
-   "predictor", "quantizer_index"]
+# CacheFiles = ["raw",
+#   "local-sums",
+#    "sample-representatives",
+#    "predicted_sample",
+#    "central_local_difference",
+#    "predicted_central_local_difference", 
+#    "clipped_quanitzer_bin_center",
+#    "predictor", "quantizer_index"]
+
+CacheFiles = ["data_locale"]
 
 #file_index = 7
 
@@ -72,58 +94,41 @@ if __name__ == "__main__":
         data = ReadCSV(f"build/{CacheFiles[file_index]}.csv")
         #print(data)
 
-        Nx,Ny,Nz = int(data[0][0]), int(data[0][1]), int(data[0][2])
+        Nx,Ny,Nz = data[0], data[1], data[2]
 
-        del data[0][0]
-        del data[0][0]
-        del data[0][0]
+        del data[0]
+        del data[0]
+        del data[0]
 
 
         numbers = np.array(data, dtype=int)
-        numbers.resize((1, Nx * Ny * Nz))
+        del data
+        numbers.resize((Nx,Ny,Nz))
 
-        a = np.zeros((Nx,Ny,Nz))
-        buf = 0
-
-        for i in range(Nx):
-            for j in range(Ny):
-                for k in range(Nz):
-                    buf = numbers[0,k * Nx * Ny + j * Nx + i]
-                    if buf > 6553:
-                        a[i,j,k] = 0
-                    else:
-                        a[i,j,k] = buf
 
         print("Table Created")
 
-        del numbers
-
-        #print(numbers)
-
-        minimum = a.min()
-        maximum = a.max()
+        minimum = numbers.min()
+        maximum = numbers.max()
         number_range = 999 #maximum - minimum + 1
 
         print(maximum)
         print(minimum)
 
-        #numbers.resize((Nx,Ny,Nz), refcheck=False)
 
         print("Prepared Data..")
 
-        #print(numbers)
-        #z = 0
 
         for z in range(0, Nz, 1):
             img = Image.new( 'RGB', (Nx,Ny), "black") # Create a new black image
             pixels = img.load() # Create the pixel map
 
-            minimum = a[:,:,z].min()
-            maximum = a[:,:,z].max()
+            minimum = numbers[:,:,z].min()
+            maximum = numbers[:,:,z].max()
             number_range = maximum - minimum
             for i in range(img.size[0]):    # For every pixel:
                 for j in range(img.size[1]):
-                    v = (a[i, j, z] - minimum) / number_range * 370 + 380
+                    v = (numbers[i, j, z] - minimum) / number_range * 370 + 380
                     if(math.isnan(v)):
                         v = 0
                     d = wavelength_to_rgb(int(v))
