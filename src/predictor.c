@@ -1,4 +1,4 @@
-#include "predictor.h"
+#include "predictor/predictor.h"
 #include <time.h>
 #include <stdio.h>
 
@@ -21,6 +21,6 @@ int RunPredictor(image* hIMG, image* result){
         
     }
     end = time(NULL);
-    printf("%d seconds for image\n", (int) (end - start));
+    printf("%d seconds for image prediction.\n", (int) (end - start));
     return 0;
 }

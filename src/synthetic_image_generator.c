@@ -233,19 +233,19 @@ int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
     UINT *true_indices;
     GeneratePointLocales(points, &locales, &true_indices, point_count);
 
-    ShadeVoronoiBox3(result, (dim3){0,0,0}, result->size, points, locales, true_indices, point_count);
+    //ShadeVoronoiBox3(result, (dim3){0,0,0}, result->size, points, locales, true_indices, point_count);
 
-    // for (int i = 0; i < result->size.x; i++)
-    // {
-    //     for (int j = 0; j < result->size.y; j++)
-    //     {
-    //         for (int k = 0; k < result->size.z; k++)
-    //         {
-    //             data_t min = GetMinDistance3Locales((dim3){i, j, k}, points, locales, true_indices, point_count);
-    //             SetPixel(result, i, j, k, min);
-    //         }
-    //     }
-    // }
+    for (int i = 0; i < result->size.x; i++)
+    {
+        for (int j = 0; j < result->size.y; j++)
+        {
+            for (int k = 0; k < result->size.z; k++)
+            {
+                data_t min = GetMinDistance3Locales((dim3){i, j, k}, points, locales, true_indices, point_count);
+                SetPixel(result, i, j, k, min);
+            }
+        }
+    }
 
     free(points);
     free(locales);

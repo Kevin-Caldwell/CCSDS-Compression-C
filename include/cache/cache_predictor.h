@@ -1,5 +1,5 @@
-#ifndef CACHE_PREDICTOR
-#define CACHE_PREDICTOR
+#ifndef CACHE_PREDICTOR_H
+#define CACHE_PREDICTOR_H
 
 #include "math/linear_algebra.h"
 #include "math/image.h"
@@ -38,4 +38,4 @@ int InitializePredictorCache(PredictorCache** p_cache, image* hIMG);
 
 int DeletePredictorCache(PredictorCache* p_cache);
 
-#endif /* CACHE_PREDICTOR */
+#endif /* CACHE_PREDICTOR_H */

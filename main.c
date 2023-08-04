@@ -7,7 +7,7 @@
 int main(int argInt, char** argS){
     printf("Starting Program...\n");
 
-    TEST_1();
+    BenchmarkVoronoi();
     
     return 0;
 }

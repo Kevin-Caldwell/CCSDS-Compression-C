@@ -1,11 +1,11 @@
-#ifndef LOCAL_SUM
-#define LOCAL_SUM
+#ifndef LOCAL_SUM_H
+#define LOCAL_SUM_H
 
-#include "constants.h"
+#include "constants/constants.h"
 #include "sample_representative.h"
 #include "cache/cache_predictor.h"
 
 #define LS(hIMG, z, y, x) FindLocalSum(hIMG, z, y, x)
 data_t FindLocalSum(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-#endif /* LOCAL_SUM */
+#endif /* LOCAL_SUM_H */

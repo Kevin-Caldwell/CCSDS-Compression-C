@@ -1,8 +1,8 @@
 #ifndef SAMPLE_REPRESENTATIVE
 #define SAMPLE_REPRESENTATIVE
 
-#include "image_instance.h"
-#include "constants.h"
+#include "cache/image_instance.h"
+#include "constants/constants.h"
 #include "cache/cache_predictor.h"
 #include "math/linear_algebra.h"
 #include "predictor/local_differences.h"

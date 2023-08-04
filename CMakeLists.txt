@@ -8,23 +8,9 @@ enable_testing()
 
 include_directories(include)
 
-add_executable(CCSDS_Compression 
-            main.c 
-            src/cache_predictor.c
-            src/constants.c
-            src/fileio.c
-            src/image_instance.c
-            src/generate_image.c
-            src/image.c
-            src/linear_algebra.c
-            src/local_differences.c
-            src/local_sum.c
-            src/math_functions.c
-            src/predictor.c
-            src/quantizer.c
-            src/sample_representative.c
-            src/synthetic_image_generator.c
-            src/weights.c)
+file(GLOB C_FILES "./src/**.c")
+
+add_executable(CCSDS_Compression main.c ${C_FILES})
 #include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})

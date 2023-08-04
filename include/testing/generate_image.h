@@ -1,13 +1,13 @@
-#ifndef GENERATE_IMAGE
-#define GENERATE_IMAGE
+#ifndef GENERATE_IMAGE_H
+#define GENERATE_IMAGE_H
 
-#include "constants.h"
-#include "image_instance.h"
-#include "predictor.h"
-#include "fileio.h"
-
-int GenerateData(image** hIMG, dim3* dataPoints, UINT point_count);
+#include "constants/constants.h"
+#include "cache/image_instance.h"
+#include "predictor/predictor.h"
+#include "files/csv-io.h"
 
 int TEST_1();
 
-#endif /* GENERATE_IMAGE */
+void BenchmarkVoronoi();
+
+#endif /* GENERATE_IMAGE_H */

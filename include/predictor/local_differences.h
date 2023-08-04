@@ -1,7 +1,7 @@
 #ifndef LOCAL_DIFFERENCES
 #define LOCAL_DIFFERENCES
 
-#include "constants.h"
+#include "constants/constants.h"
 #include "math/linear_algebra.h"
 #include "math/math_functions.h"
 #include "predictor/local_sum.h"

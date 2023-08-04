@@ -1,0 +1,8 @@
+#ifndef GLOBAL_CONSTANTS_H
+#define GLOBAL_CONSTANTS_H
+
+#define GLOBAL_CONSTANTS_LOCATION           "/global.SETTINGS"
+#define PREDICTOR_CONSTANTS_LOCATION        "/predictor.SETTINGS"
+#define ENCODER_CONSTANTS_LOCATION          "/encoder.SETTINGS"
+
+#endif /* GLOBAL_CONSTANTS_H */

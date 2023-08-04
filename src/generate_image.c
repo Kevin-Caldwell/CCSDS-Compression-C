@@ -2,60 +2,76 @@
 
 #include "cache/cache_predictor.h"
 #include "testing/synthetic_image_generator.h"
-#include "fileio.h"
+#include "files/csv-io.h"
 
 #include <stdio.h>
 #include <time.h>
 
-
 int TEST_1()
 {
-    image* data;
+    image *data;
 
-    dim3 bounds = (dim3) {.x = Nx, .y = Ny, .z = Nz};
+    dim3 bounds = (dim3){.x = Nx, .y = Ny, .z = Nz};
 
     InitImage(&data, Nx, Ny, Nz);
 
     int pts = 1000;
 
-    time_t start = time(NULL);    
-    //GenerateVoronoiFlat3DNaive(data, pts);
+    time_t start = time(NULL);
+    // GenerateVoronoiFlat3DNaive(data, pts);
     time_t end = time(NULL);
 
-    printf("Generated Synthetic Data in %d seconds..\n", (int) (end - start));
-    SaveImageAsCSV(data, "data_naive.csv");
+    // printf("Generated Synthetic Data in %d seconds..\n", (int) (end - start));
+    // SaveImageAsCSV(data, "data_naive.csv");
 
-    start = time(NULL);    
+    start = time(NULL);
     GenerateVoronoiFlat3DLocal(data, pts);
     end = time(NULL);
 
-    printf("Generated Synthetic Data in %d seconds..\n", (int) (end - start));
+    printf("Generated Synthetic Data in %d seconds..\n", (int)(end - start));
     SaveImageAsCSV(data, "data_locale.csv");
 
-    //InitializePredictorCache(&global_cache, data);
-    //printf("Cache Created..\n");
-    
+    InitializePredictorCache(&global_cache, data);
+    printf("Cache Created..\n");
 
-    //image* predicted_values;
-    //InitImage(&predicted_values, Nx,Ny,Nz);
-    //printf("Running Predictor\n");
-    //CacheLocalSums(data, predicted_values);
-    //RunPredictor(data, predicted_values);
-    //printf("Completed Prediction\n");
+    image *predicted_values;
+    InitImage(&predicted_values, Nx, Ny, Nz);
+    printf("Running Predictor\n");
+    // CacheLocalSums(data, predicted_values);
+    RunPredictor(data, predicted_values);
+    printf("Completed Prediction\n");
 
-    //SaveImageAsCSV(predicted_values, "predictor.csv");
-    //for(int i = 0; i < CACHE_SPACES; i++){
-    //    SaveImageAsCSV(global_cache->cache_space[i], CacheFiles[i]);
-    //}
+    SaveImageAsCSV(predicted_values, "predictor.csv");
+    for (int i = 0; i < CACHE_SPACES; i++)
+    {
+        SaveImageAsCSV(global_cache->cache_space[i], CacheFiles[i]);
+    }
 
-
-    //DeletePredictorCache(global_cache);
-    //free(predicted_values);
+    DeletePredictorCache(global_cache);
+    free(predicted_values);
 
     return 0;
 }
 
-/*  
+void BenchmarkVoronoi()
+{
+    image *data;
+
+    dim3 bounds = (dim3){.x = Nx, .y = Ny, .z = Nz};
+
+    InitImage(&data, Nx, Ny, Nz);
+
+    int pts = 1000;
+    time_t start = time(NULL);
+    GenerateVoronoiFlat3DLocal(data, pts);
+    time_t end = time(NULL);
+
+    printf("Generated Synthetic Data in %d seconds..\n", (int)(end - start));
+    SaveImageAsCSV(data, "data_locale.csv");
+    free(data);
+}
+
+/*
     for(int i = 0; i < Nx; i++){
         for(int j = 0; j < Ny; j++){
             for(int k = 0; k < Nz; k++){
@@ -68,5 +84,5 @@ int TEST_1()
     }
     printf("\n");  */
 
-  //git config --global user.email "you@example.com"
-  //git config --global user.name "Your Name"
+// git config --global user.email "you@example.com"
+// git config --global user.name "Your Name"

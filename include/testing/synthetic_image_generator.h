@@ -1,5 +1,5 @@
-#ifndef SYNTHETIC_IMAGE_GENERATOR
-#define SYNTHETIC_IMAGE_GENERATOR
+#ifndef SYNTHETIC_IMAGE_GENERATOR_H
+#define SYNTHETIC_IMAGE_GENERATOR_H
 
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
@@ -21,4 +21,4 @@ int GenerateVoronoiFlat3DNaive(image3* result, UINT sample_points);
 
 int GenerateVoronoiFlat3DLocal(image3* result, UINT sample_points);
 
-#endif /* SYNTHETIC_IMAGE_GENERATOR */
+#endif /* SYNTHETIC_IMAGE_GENERATOR_H */

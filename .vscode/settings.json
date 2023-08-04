@@ -84,11 +84,13 @@
     "chrono": "c",
     "random": "c",
     "algorithm": "c",
-    "ratio": "c"
+    "ratio": "c",
+    "cache_predictor.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
-  "python.formatting.provider": "none"
+  "python.formatting.provider": "none",
+  "cmake.sourceDirectory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C"
 }

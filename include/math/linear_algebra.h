@@ -1,6 +1,6 @@
 #ifndef LINEAR_ALGEBRA_H
 #define LINEAR_ALGEBRA_H
-#include "constants.h"
+#include "constants/constants.h"
 #include "math_functions.h"
 
 typedef PIXEL data_t;
