@@ -4,6 +4,8 @@
 #include "testing/synthetic_image_generator.h"
 #include "files/csv-io.h"
 
+#include "encoder/header.h"
+
 #include <stdio.h>
 #include <time.h>
 
@@ -50,7 +52,13 @@ int TEST_1()
     DeletePredictorCache(global_cache);
     free(predicted_values);
 
+    
+
     return 0;
+}
+
+void TestHeader(){
+    PrepareImageMetadata();
 }
 
 void BenchmarkVoronoi()

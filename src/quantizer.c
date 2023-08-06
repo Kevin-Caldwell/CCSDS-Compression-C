@@ -6,7 +6,7 @@ data_t ClippedQuantizerBinCenter(image* hIMG, INDEX z, INDEX y, INDEX x){
         return val;
     }
 
-    val = CLIP(PredictedSample(hIMG, z,y,x) + QuantizerIndex(hIMG, z,y,x) * (2 * m_z + 1), kSmin, Smax);
+    val = CLIP(PredictedSample(hIMG, z,y,x) + QuantizerIndex(hIMG, z,y,x) * (2 * m_z + 1), kSmin, kSmax);
     UpdateCache(z,y,x, clipped_quanitzer_bin_center, val);
     return val;
 }
@@ -36,11 +36,11 @@ data_t QuantizerIndex(image* hIMG, INDEX z, INDEX y, INDEX x){
 
 data_t minTheta(image* hIMG, INDEX z, INDEX y, INDEX x){
     if(x == 0 && y == 0){
-        return MIN(PredictedSample(hIMG, z,y,x) - kSmin, Smax - PredictedSample(hIMG, z,y,x));
+        return MIN(PredictedSample(hIMG, z,y,x) - kSmin, kSmax - PredictedSample(hIMG, z,y,x));
     } else if (x > 0 || y > 0)
     {
         return  MIN((PredictedSample(hIMG, z,y,x) - kSmin + m_z)/(2 * m_z + 1), 
-                (Smax - PredictedSample(hIMG, z,y,x) + m_z)/(2 * m_z + 1));
+                (kSmax - PredictedSample(hIMG, z,y,x) + m_z)/(2 * m_z + 1));
     }
     
 }

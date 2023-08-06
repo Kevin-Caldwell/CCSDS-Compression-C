@@ -5,7 +5,7 @@
 #include "constants/constants.h"
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
-#include "math/image.h"
+#include "dst/image.h"
 
 #include "predictor/quantizer.h"
 
@@ -27,7 +27,7 @@
 
  */
 
-#define Ps(z) MIN(z, P)
+#define Ps(z) MIN(z, kP)
 
 #ifdef REDUCED_PREDICTION_MODE
 #define C(z) (unsigned int) Ps(z)

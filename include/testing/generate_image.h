@@ -5,9 +5,12 @@
 #include "cache/image_instance.h"
 #include "predictor/predictor.h"
 #include "files/csv-io.h"
+#include "files/file_IO.h"
 
 int TEST_1();
 
 void BenchmarkVoronoi();
+
+void TestHeader();
 
 #endif /* GENERATE_IMAGE_H */

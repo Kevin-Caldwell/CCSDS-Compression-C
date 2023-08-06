@@ -1,5 +1,5 @@
-#ifndef LOCAL_DIFFERENCES
-#define LOCAL_DIFFERENCES
+#ifndef LOCAL_DIFFERENCES_H
+#define LOCAL_DIFFERENCES_H
 
 #include "constants/constants.h"
 #include "math/linear_algebra.h"
@@ -8,7 +8,7 @@
 #include "predictor/sample_representative.h"
 #include "predictor/weights.h"
 
-#define Ps(z) MIN(z, P)
+#define Ps(z) MIN(z, kP)
 
 #ifdef REDUCED_PREDICTION_MODE
 #define C(z) (unsigned int) Ps(z)
@@ -31,4 +31,4 @@ int LocalDirectionVector(image* hIMG, data_t** local_direction_vector, INDEX z, 
 
 data_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-#endif /* LOCAL_DIFFERENCES */
+#endif /* LOCAL_DIFFERENCES_H */

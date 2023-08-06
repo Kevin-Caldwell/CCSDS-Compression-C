@@ -85,7 +85,8 @@
     "random": "c",
     "algorithm": "c",
     "ratio": "c",
-    "cache_predictor.h": "c"
+    "cache_predictor.h": "c",
+    "encoder_constants.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

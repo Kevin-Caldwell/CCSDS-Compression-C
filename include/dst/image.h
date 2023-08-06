@@ -1,5 +1,5 @@
-#ifndef IMAGE
-#define IMAGE
+#ifndef IMAGE_H
+#define IMAGE_H
 
 #include "math/math_functions.h"
 #include "constants/constants.h"
@@ -31,4 +31,4 @@ typedef struct image2{
 
 
 
-#endif /* IMAGE */
+#endif /* IMAGE_H */

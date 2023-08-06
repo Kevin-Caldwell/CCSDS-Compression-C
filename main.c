@@ -4,10 +4,21 @@
 
 #include "testing/generate_image.h"
 
-int main(int argInt, char** argS){
-    printf("Starting Program...\n");
+void TestingCriteria(char** argS){
+    if(argS[1][0] == '1'){
+            TEST_1();
+        } else if (argS[1][0] == '2')
+        {   
+            BenchmarkVoronoi();
+        }
+}
 
-    BenchmarkVoronoi();
-    
+int main(int argInt, char** argS){
+    if(argInt > 1){
+        TestingCriteria(argS);
+    } else{
+        TestHeader();
+    }
+
     return 0;
 }

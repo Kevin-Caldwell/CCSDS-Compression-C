@@ -3,7 +3,7 @@
 
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
-#include "math/image.h"
+#include "dst/image.h"
 
 #define INIT_ARRAY(T, count) (T*) malloc(sizeof(T) * count)
 

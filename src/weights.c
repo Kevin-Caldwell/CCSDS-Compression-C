@@ -32,7 +32,7 @@ data_t DoubleResolutionPredictionError(image* hIMG, INDEX z, INDEX y, INDEX x){
 }
 
 data_t WeightUpdateScalingExponent(INDEX z, INDEX y, INDEX x){
-    return CLIP(vMin + (y * Nx + x - Nx) / tInc, vMin, vMax) + D - Omega;
+    return CLIP(kVMin + (y * Nx + x - Nx) / kTInc, kVMin, kVMax) + D - Omega;
 }
 
 int UpdateWeights(image* hIMG, data_t* weights, INDEX z, INDEX y, INDEX x){
@@ -52,7 +52,7 @@ int UpdateWeights(image* hIMG, data_t* weights, INDEX z, INDEX y, INDEX x){
     }
 
     for(int i = 0; i < C(z); i++){
-        weights[i] = CLIP(weights[i], omega_min, omega_max);
+        weights[i] = CLIP(weights[i], kOmegaMin, kOmegaMax);
     }
     return 0;
 }

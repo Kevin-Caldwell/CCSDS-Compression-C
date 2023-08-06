@@ -4,7 +4,8 @@
 #include <inttypes.h>
 #include <stdio.h>
 
-#include "math/image.h"
+#include "dst/image.h"
+#include "files/file_IO.h"
 
 void SaveArrayAsCSV(uint16_t* data, UINT count, char* file_name);
 

@@ -59,12 +59,12 @@ data_t  PredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x){
 data_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x){
     if(x > 0 || y > 0){ // ? Substitute for t>0
         return HighResolutionPredictedSample(hIMG, z,y,x) / (BPOW(Omega + 1));
-    } else if ((x == 0 && y == 0) && P > 0 && z > 0) // ? Substitute for t == 0
+    } else if ((x == 0 && y == 0) && kP > 0 && z > 0) // ? Substitute for t == 0
     {
         return 2 * SAMPLE(z-1,y,x);
-    } else if ((x == 0 && y == 0) && (P == 0 || z == 0)) // ? Substitute for t == 0
+    } else if ((x == 0 && y == 0) && (kP == 0 || z == 0)) // ? Substitute for t == 0
     {
-        return Smid;
+        return kSmid;
     }
     UpdateWeights(hIMG, global_cache->weights, z,y,x);
     
@@ -73,7 +73,7 @@ data_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x){
 
 data_t HighResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x){
     data_t d_hat = PredictedCentralLocalDifference(hIMG, z,y,x);
-    data_t temp = CLIP(MOD(R, (d_hat + BPOW(Omega) * (LS(hIMG, z,y,x) - 4 * Smid))) + BPOW(Omega + 2) * Smid + BPOW(Omega + 1), 
-    BPOW(Omega + 2) * kSmin, BPOW(Omega+2) * Smax + BPOW(Omega+1));
+    data_t temp = CLIP(MOD(kR, (d_hat + BPOW(Omega) * (LS(hIMG, z,y,x) - 4 * kSmid))) + BPOW(Omega + 2) * kSmid + BPOW(Omega + 1), 
+    BPOW(Omega + 2) * kSmin, BPOW(Omega+2) * kSmax + BPOW(Omega+1));
     return 0;
 }

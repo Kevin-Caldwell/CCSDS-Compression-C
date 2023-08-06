@@ -1,4 +1,4 @@
-#include "math/image.h"
+#include "dst/image.h"
 
 int InitImage(image** img_p, size_t x, size_t y, size_t z){
     image* img = *img_p = (image*) malloc(sizeof(image));

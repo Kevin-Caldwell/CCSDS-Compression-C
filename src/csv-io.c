@@ -2,7 +2,7 @@
 
 void SaveArrayAsCSV(uint16_t* data, UINT count, char* file_name){
     FILE* fp;
-    fp = fopen(file_name, "w");
+    fp = F_OPEN(file_name, WRITE);
 
     char string_buffer[50];
 
@@ -11,6 +11,8 @@ void SaveArrayAsCSV(uint16_t* data, UINT count, char* file_name){
         fputs(string_buffer, fp);
     }
     fputs("%hu", fp);
+
+    F_CLOSE(fp);
 }
 
 

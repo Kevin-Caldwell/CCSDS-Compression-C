@@ -1,7 +1,7 @@
 #ifndef IMAGE_INSTANCE_H
 #define IMAGE_INSTANCE_H
 
-#include "math/image.h"
+#include "dst/image.h"
 
 #define S(hIMG, z,y,x) GetPixel(hIMG, x,y,z)
 
