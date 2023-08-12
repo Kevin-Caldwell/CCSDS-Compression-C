@@ -58,7 +58,10 @@ int TEST_1()
 }
 
 void TestHeader(){
-    PrepareImageMetadata();
+    uint8_t header[22];
+    PrepareImageMetadata(header);
+    PreparePredictorMetadata(header + 12);
+    PrepareSampleAdaptiveEntropyCoder(header + 12 + 8);
 }
 
 void BenchmarkVoronoi()

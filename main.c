@@ -17,7 +17,7 @@ int main(int argInt, char** argS){
     if(argInt > 1){
         TestingCriteria(argS);
     } else{
-        TestHeader();
+        TEST_1();
     }
 
     return 0;

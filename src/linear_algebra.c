@@ -1,7 +1,7 @@
 #include "math/linear_algebra.h"
 
-int InitVector(data_t** v, UINT len){
-    *v = (data_t*) malloc(sizeof(data_t) * len);
+int InitVector(int32_t** v, UINT len){
+    *v = (int32_t*) malloc(sizeof(int32_t) * len);
 
     return 0;
 }
@@ -25,12 +25,12 @@ int SubtractVectors(data_t* v1, data_t* v2, data_t* res, UINT size){
     return 0;
 }
 
-int InnerProduct(data_t* v1, data_t* v2, UINT size){
-    data_t* sum = 0;
+uint32_t InnerProduct(int32_t* v1, int32_t* v2, UINT size){
+    int32_t sum = 0;
     for(int i = 0; i < size; i++){
         sum += v1[i] * v2[i];
     }
-    return 0;
+    return sum;
 }
 
 

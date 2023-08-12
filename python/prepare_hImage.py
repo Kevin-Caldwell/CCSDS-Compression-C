@@ -83,7 +83,7 @@ def wavelength_to_rgb(wavelength, gamma=0.8):
 #    "clipped_quanitzer_bin_center",
 #    "predictor", "quantizer_index"]
 
-CacheFiles = ["predictor"]
+CacheFiles = ["raw", "local-sums", "predictor", "central_local_difference"]
 
 #file_index = 7
 
@@ -133,7 +133,7 @@ if __name__ == "__main__":
                         v = 0
                     d = wavelength_to_rgb(int(v))
                     pixels[i,j] = (d) # Set the colour accordingly
-            img.save(f"Python/images/{CacheFiles[file_index]}{z}.png")
+            img.save(f"python/images/{CacheFiles[file_index]}{z}.png")
             del img
     
 

@@ -1,30 +1,27 @@
 #include "predictor/local_sum.h"
 
 // ? Completed, Needs Revision
-data_t FindLocalSum(image* hIMG, INDEX z, INDEX y, INDEX x)
+uint32_t FindLocalSum(image* hIMG, INDEX z, INDEX y, INDEX x)
 {
-    data_t val = CheckCache(z,y,x,local_sums);
-    if(val != UINT16_MAX){
-        return val;
-    }
+    uint32_t val = 0;
     
 #ifdef WIDE_NEIGHBOR
     if (y > 0 &&  0 < x && x < Nx - 1)
     {
-        val = SR(hIMG, z, x - 1, y) + SR(hIMG, z, x - 1, y - 1) +
-               SR(hIMG, z, x, y - 1) + SR(hIMG, z, x + 1, y - 1);
+        val = SR(hIMG, z, y, x-1) + SR(hIMG, z, y-1, x-1) +
+               SR(hIMG, z, y-1, x) + SR(hIMG, z, y-1, x + 1);
     }
     else if (y == 0 && x > 0)
     {
-        val = 4 * SR(hIMG, z, x - 1, y);
+        val = 4 * SR(hIMG, z, y, x-1);
     }
     else if (y > 0 && x == 0)
     {
-        val = 2 * (SR(hIMG, z, x, y - 1) + SR(hIMG, z, x + 1, y - 1));
+        val = 2 * (SR(hIMG, z, y-1, x) + SR(hIMG, z, y-1, x+1));
     }
     else if (y > 0 && x == Nx - 1)
     {
-        val = SR(hIMG, z, x - 1, y) + SR(hIMG, z, x - 1, y - 1) + 2 * SR(hIMG, z, x, y - 1);
+        val = SR(hIMG, z, y, x-1) + SR(hIMG, z, y-1, x - 1) + 2 * SR(hIMG, z, y-1, x);
     } 
     else if (y == 0 && x == 0){
         val = 0;

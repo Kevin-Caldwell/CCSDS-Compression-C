@@ -86,7 +86,19 @@
     "algorithm": "c",
     "ratio": "c",
     "cache_predictor.h": "c",
-    "encoder_constants.h": "c"
+    "encoder_constants.h": "c",
+    "encoder_helper_functions.h": "c",
+    "deque": "c",
+    "string": "c",
+    "unordered_map": "c",
+    "vector": "c",
+    "__bit_reference": "c",
+    "__hash_table": "c",
+    "__split_buffer": "c",
+    "__tree": "c",
+    "ios": "c",
+    "map": "c",
+    "memory": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

@@ -1,5 +1,5 @@
-#ifndef MATH_FUNCTIONS
-#define MATH_FUNCTIONS
+#ifndef MATH_FUNCTIONS_H
+#define MATH_FUNCTIONS_H
 
 #include <stdlib.h>
 #include <math.h>
@@ -31,7 +31,7 @@
 typedef size_t DIM;
 typedef unsigned int UINT;
 typedef uint16_t PIXEL;
-typedef size_t INDEX;
+typedef uint16_t INDEX;
 
 /// Error Codes: TODO
 enum RetVal{
@@ -61,4 +61,4 @@ UINT Euclidian3(dim3 pt1, dim3 pt2);
 UINT Manhattan2(dim2 pt1, dim2 pt2);
 UINT Manhattan3(dim3 pt1, dim3 pt2);
 
-#endif /* MATH_FUNCTIONS */
+#endif /* MATH_FUNCTIONS_H */

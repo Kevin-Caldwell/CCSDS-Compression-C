@@ -14,13 +14,13 @@
 #define C(z) (unsigned int) Ps(z) + 3
 #endif
 
-int InitializeWeights(data_t** weights, INDEX z, INDEX y, INDEX x);
+int InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x);
 
 data_t DoubleResolutionPredictionError(image* hIMG, INDEX z, INDEX y, INDEX x);
 
 data_t WeightUpdateScalingExponent(INDEX z, INDEX y, INDEX x);
 
-int UpdateWeights(image* hIMG, data_t* weights, INDEX z, INDEX y, INDEX x);
+int UpdateWeights(image* hIMG, int32_t* weights, INDEX z, INDEX y, INDEX x);
 
 
 #endif /* WEIGHTS_H */

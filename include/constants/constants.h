@@ -7,7 +7,7 @@
 
 // Image Size Constants
 #define Nx ((uint16_t) 640) // 100 //640
-#define Ny ((uint16_t) 512) // 100 //512
+#define Ny ((uint16_t) 510) // 100 //512
 #define Nz ((uint16_t) 640) // 100 //640
 
 //* Uncomment if Lossless compression is required
@@ -35,7 +35,7 @@
 // 11: Narrow Column
 #define LOCAL_SUM_TYPE 0b00
 
-#define DYNAMIC_RANGE 30
+#define DYNAMIC_RANGE 14
 #define PREVIOUS_BAND_SAMPLES 3
 
 #define RESOLUTION 100

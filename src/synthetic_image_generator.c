@@ -237,6 +237,7 @@ int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
 
     for (int i = 0; i < result->size.x; i++)
     {
+        printf("Generated %d/%d of Image.\n", (int) (i+1), (int) result->size.x);
         for (int j = 0; j < result->size.y; j++)
         {
             for (int k = 0; k < result->size.z; k++)

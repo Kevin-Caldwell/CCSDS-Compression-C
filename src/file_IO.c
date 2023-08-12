@@ -22,4 +22,4 @@ size_t F_READ(void* destination, size_t size, size_t arr_length, file_t* file_st
 
 int F_CLOSE(file_t* stream){
     return fclose((FILE*) stream);
-}
+}   

@@ -23,12 +23,12 @@ enum DIRECTION { N = 0, W, NW };
 #define DLD_W(hIMG, z,y,x)    DirectionalLocalDifference(hIMG, z,y,x,W)
 #define DLD_NW(hIMG, z,y,x)   DirectionalLocalDifference(hIMG, z,y,x,NW)
 
-data_t CentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint32_t CentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-data_t DirectionalLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x, int direction);
+uint32_t DirectionalLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x, int direction);
 
-int LocalDirectionVector(image* hIMG, data_t** local_direction_vector, INDEX z, INDEX y, INDEX x);
+int LocalDirectionVector(image* hIMG, int32_t** local_direction_vector, INDEX z, INDEX y, INDEX x);
 
-data_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint32_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
 
 #endif /* LOCAL_DIFFERENCES_H */

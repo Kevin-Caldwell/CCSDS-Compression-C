@@ -1,5 +1,5 @@
-#ifndef SAMPLE_REPRESENTATIVE
-#define SAMPLE_REPRESENTATIVE
+#ifndef SAMPLE_REPRESENTATIVE_H
+#define SAMPLE_REPRESENTATIVE_H
 
 #include "cache/image_instance.h"
 #include "constants/constants.h"
@@ -9,22 +9,22 @@
 #include "predictor/quantizer.h"
 
 
-#define SR(hIMG, z, y, x)     SampleRepresentative(hIMG, z, y, x)
-#define SAMPLE(z,y,x) (0) // TODO
+#define SR(hIMG, Z, Y, X)     SampleRepresentative(hIMG, Z, Y, X)
+//#define SAMPLE(z,y,x) (0) // TODO
 
 extern data_t damping[];
 extern data_t offset[];
 
 data_t SampleRepresentative(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-data_t DoubleResolutionSampleRepresentative(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint32_t DoubleResolutionSampleRepresentative(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-data_t  PredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint16_t PredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-data_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-data_t HighResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint64_t HighResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-data_t ClippedQuantizerBinCenter(image* hIMG, INDEX z, INDEX y, INDEX x);
+uint16_t ClippedQuantizerBinCenter(image* hIMG, INDEX z, INDEX y, INDEX x);
 
-#endif /* SAMPLE_REPRESENTATIVE */
+#endif /* SAMPLE_REPRESENTATIVE_H */

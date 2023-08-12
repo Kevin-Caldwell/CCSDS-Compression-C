@@ -39,4 +39,5 @@ void SaveImageAsCSV(image* hIMG, char* file_name){
 
     sprintf(string_buffer, "%hu", hIMG->data[size.x * size.y * size.z - 1]);
     fputs(string_buffer, fp);
+    fclose(fp);
 }

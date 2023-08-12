@@ -6,7 +6,7 @@
 typedef PIXEL data_t;
 
 
-int InitVector(data_t** v, UINT len);
+int InitVector(int32_t** v, UINT len);
 
 int DeleteVector(data_t* v);
 
@@ -14,7 +14,7 @@ int AddVectors(data_t* v1, data_t* v2, data_t* res, UINT size);
 
 int SubtractVectors(data_t* v1, data_t* v2, data_t* res, UINT size);
 
-int InnerProduct(data_t* v1, data_t* v2, UINT size);
+uint32_t InnerProduct(int32_t* v1, int32_t* v2, UINT size);
 
 int ScalarProduct(data_t* v, data_t scalar, data_t* res, UINT size);
 
