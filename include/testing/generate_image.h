@@ -13,4 +13,6 @@ void BenchmarkVoronoi();
 
 void TestHeader();
 
+void ReadImage();
+
 #endif /* GENERATE_IMAGE_H */

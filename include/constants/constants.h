@@ -7,7 +7,7 @@
 
 // Image Size Constants
 #define Nx ((uint16_t) 640) // 100 //640
-#define Ny ((uint16_t) 510) // 100 //512
+#define Ny ((uint16_t) 512) // 100 //512
 #define Nz ((uint16_t) 640) // 100 //640
 
 //* Uncomment if Lossless compression is required
@@ -85,7 +85,7 @@ extern const int kOmegaMax;
 #define THETA CLIP(RESOLUTION, 0, 4)
 
 #define Da MIN(D-1, 16)
-#define m_z CLIP(Da, 1, BPOW(Da) - 1)
+#define m_z ABSOLUTE_ERROR_LIMIT
 
 extern const int kVMin;
 extern const int kVMax;

@@ -6,6 +6,8 @@
 
 #include "encoder/header.h"
 
+#include "files/csv-io.h"
+
 #include <stdio.h>
 #include <time.h>
 
@@ -57,6 +59,8 @@ int TEST_1()
     return 0;
 }
 
+
+
 void TestHeader(){
     uint8_t header[22];
     PrepareImageMetadata(header);
@@ -97,3 +101,11 @@ void BenchmarkVoronoi()
 
 // git config --global user.email "you@example.com"
 // git config --global user.name "Your Name"
+
+void ReadImage(){
+    image* img;
+    ReadImageFromCSV(&img, "data_locale.csv");
+    SaveImageAsCSV(img, "data_locale2.csv");
+    free(img->data);
+    
+}

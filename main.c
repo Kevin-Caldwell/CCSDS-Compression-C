@@ -17,7 +17,7 @@ int main(int argInt, char** argS){
     if(argInt > 1){
         TestingCriteria(argS);
     } else{
-        TEST_1();
+        ReadImage();
     }
 
     return 0;
