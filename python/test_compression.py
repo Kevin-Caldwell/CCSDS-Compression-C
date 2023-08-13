@@ -50,12 +50,12 @@ def SaveCSV(np_array_3d, output_path):
 class TestComp(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        n = 5
+        # n = 5
         # cls.data = cls.load_pic()[0:n, 0:n, 0:n]
         # cls.data = cls.load_pic()
 
         # For Checking C vs Python
-        cls.data = ReadCSV("./raw.csv")
+        cls.data = ReadCSV("../build/raw.csv")
 
         cls.Nx = cls.data.shape[0]
         cls.Ny = cls.data.shape[1]
@@ -63,15 +63,13 @@ class TestComp(unittest.TestCase):
 
     def test_predictor(self):
         python_predicted, python_residuals = comp.predictor_debug(self.data)
-        print(python_predicted)
         SaveCSV(python_predicted, "./python_predicted.csv")
         SaveCSV(python_residuals, "./python_residuals.csv")
 
-        c_predicted = ReadCSV("./c_predicted.csv")
+        c_predicted = ReadCSV("../build/predictor.csv")
         c_vs_python = c_predicted == python_predicted
         SaveCSV(c_vs_python, "./c_vs_python.csv")
         self.assertTrue((c_vs_python).all())
-        self.assertTrue(True)
 
     def test_unpredict(self):
         mapped = comp.predictor(self.data)

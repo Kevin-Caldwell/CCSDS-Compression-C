@@ -3,9 +3,13 @@ import helperlib
 
 # Parameters for Compression
 D = 16 # dynamic range, number of bits for sample size value (between 2 to 32)
-S_MIN = -1*(2**(D - 1))
-S_MAX = 2**(D - 1)
-S_MID = 0
+# S_MIN = -1*(2**(D - 1))
+# S_MAX = 2**(D - 1)
+# S_MID = 0
+
+S_MIN = 0
+S_MAX = 2**D - 1
+S_MID = 2**(D - 1)
 
 P = 2 #  number of previous bands used for prediction (between 2-15)
 W_RES = 4 # Omega, between 4 and 19
@@ -197,9 +201,8 @@ def predictor_debug(data):
                 weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
                 residuals[x, y, z] = data[x, y, z] - s_hat
                 mapped[x, y, z] = mapper(data[x, y, z] - s_hat, s_hat, s_tilde)
-
+# 
     return mapped, residuals
-
 
 # Length-Limited Golomb-Power-of-2 Codewords, aka R
 def GPO2(k, j):
