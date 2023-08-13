@@ -1,2 +1,4 @@
 build/**
 python/images/**
+python/venv/**
+python/*.csv
