@@ -82,7 +82,7 @@ int LocalDirectionVector(image* hIMG, int32_t **local_direction_vector, INDEX z,
 uint32_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x){
     uint32_t pcld;
     if(x == 0 && y == 0){
-        pcld = 0;
+        return;
     }
     int32_t* weight_vector = global_cache->weights;
     int32_t* local_direction_vector;

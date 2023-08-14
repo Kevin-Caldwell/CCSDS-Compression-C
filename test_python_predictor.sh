@@ -1,1 +1,2 @@
-python3 python/test_compression.py
+cd python
+python3 test_compression.py

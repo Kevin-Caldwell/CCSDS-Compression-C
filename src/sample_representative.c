@@ -51,17 +51,14 @@ uint16_t PredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x){
 
 uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x){
     if(x > 0 || y > 0){ // ? Substitute for t>0
-        return HighResolutionPredictedSample(hIMG, z,y,x) / (BPOW(Omega + 1));
+        uint64_t hrps = HighResolutionPredictedSample(hIMG, z,y,x) / (BPOW(Omega + 1));
+        return hrps;
     } else if ((x == 0 && y == 0) && kP > 0 && z > 0) // ? Substitute for t == 0
     {
         return 2 * S(hIMG, z-1,y,x);
     } else if ((x == 0 && y == 0) && (kP == 0 || z == 0)) // ? Substitute for t == 0
     {
         return 2 * kSmid;
-    }
-
-    if(x > 0 && y > 0){ // ! is this correct?
-        UpdateWeights(hIMG, global_cache->weights, z,y,x);
     }
     
     return 0;

@@ -28,6 +28,8 @@ SignedLongData QuantizerIndex(image* hIMG, INDEX z, INDEX y, INDEX x){
 
 uint16_t minTheta(image* hIMG, INDEX z, INDEX y, INDEX x){
     uint16_t pred_res = PredictedSample(hIMG, z,y,x);
+
+#ifndef LOSSLESS
     if(x == 0 && y == 0){
         return MIN(pred_res - kSmin, kSmax - pred_res);
     } else if (x > 0 || y > 0)
@@ -35,6 +37,9 @@ uint16_t minTheta(image* hIMG, INDEX z, INDEX y, INDEX x){
         return  MIN((pred_res - kSmin + m_z)/(2 * m_z + 1), 
                 (kSmax - pred_res + m_z)/(2 * m_z + 1));
     }
+#else
+    return MIN(pred_res - kSmin, kSmax - pred_res);
+#endif
     
 }
 
