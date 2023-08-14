@@ -1,2 +1,1 @@
-cd python
-python3 test_compression.py
+python3 python/predictor_eg.py
