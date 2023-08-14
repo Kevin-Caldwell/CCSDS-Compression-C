@@ -1,1 +1,1 @@
-python3 python/test_compression.py
+python3 python/predictor_eg.py
