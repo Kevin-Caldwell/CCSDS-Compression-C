@@ -3,3 +3,4 @@ python/images/**
 python/venv/**
 python/*.csv
 test-images/**
+python/__pycache__

@@ -24,6 +24,28 @@ void GenerateTest(dim3 size, int index){
     free(testImage);
 }
 
+void PredictImage(char* source, char* destination){
+    image* hIMG;
+    image* result;
+
+    ReadImageFromCSV(&hIMG, source);
+    printf("Read File.\n");
+
+    InitializePredictorCache(&global_cache, hIMG);
+    printf("Cache Created..\n");
+
+
+    InitImage(&result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
+    RunPredictor(hIMG, result);
+
+    SaveImageAsCSV(result, destination);
+
+    free(hIMG->data);
+    free(result->data);
+    free(hIMG);
+    free(result);
+}
+
 int TEST_1()
 {
     image *data;

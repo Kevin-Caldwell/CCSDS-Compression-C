@@ -1,0 +1,1 @@
+python3 python/test_compression.py

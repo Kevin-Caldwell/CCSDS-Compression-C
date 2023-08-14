@@ -11,6 +11,7 @@ int TEST_1();
 
 void TestHeader();
 void TestReadImage();
+void PredictImage(char* source, char* destination);
 
 void GenerateTest(dim3 size, int index);
 

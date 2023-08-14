@@ -19,22 +19,31 @@ void TestingCriteria(char **argS)
 
 int main(int argInt, char **argS)
 {
+    printf("Entered C Main.\n");
     if (argInt > 1)
     {
         if (!strcmp(argS[1], "gentest"))
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 1; i++)
             {
-                GenerateTest((dim3){640, 512, 640}, i);
+                //GenerateTest((dim3){640, 512, 640}, i);
                 GenerateTest((dim3){100, 100, 100}, i);
                 GenerateTest((dim3){3, 3, 3}, i);
             }
         }
-        if (strcmp(argS[1], "file")){
-            
+        else if (!strcmp(argS[1], "file")){
+            printf("%s\n", argS[2]);
+            char res_buf[200];
+            char s_buf[200];
+            sprintf(res_buf, "../results/CRESULT%s_predicted.csv", argS[2]);
+            sprintf(s_buf, "../test-images/TEST%s.csv", argS[2]);
+            //printf("%s\n", )
+            PredictImage(s_buf, res_buf); // /
+        } else{
+            printf("Command Not Recognized\n");
         }
     } else{
-        TEST_1();
+        PredictImage("raw.csv", "pred.csv");
     }
 
     return 0;

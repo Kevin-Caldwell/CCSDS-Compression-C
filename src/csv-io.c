@@ -47,10 +47,10 @@ void SaveImageAsCSV(image* hIMG, char* file_name){
 void ReadImageFromCSV(image** hIMG, char* file_name){
     FILE *fp;
     fp = fopen(file_name, "r");
-    dim3 size;
+    dim3 size =  {0,0,0};
     char read_buffer = 1;
 
-    char num_buffer[20];
+    char num_buffer[30];
     int buffer_ptr = 0;
 
     uint16_t num;
@@ -58,13 +58,14 @@ void ReadImageFromCSV(image** hIMG, char* file_name){
     int img_counter = 0;
 
     while(read_buffer != EOF){
-        fread(&read_buffer, sizeof(char), 1, fp);
+        size_t res = fread(&read_buffer, sizeof(char), 1, fp);
 
         if(read_buffer == ','){
 
             num_buffer[buffer_ptr] = 0;
             num  = atoi(num_buffer);
             buffer_ptr = 0;
+
             if(!size.x){
                 size.x = num;
             }
