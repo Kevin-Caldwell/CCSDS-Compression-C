@@ -2,3 +2,4 @@ build/**
 python/images/**
 python/venv/**
 python/*.csv
+test-images/**

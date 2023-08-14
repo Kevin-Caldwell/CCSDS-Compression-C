@@ -11,6 +11,19 @@
 #include <stdio.h>
 #include <time.h>
 
+void GenerateTest(dim3 size, int index){
+    char filename[100];
+    sprintf(filename, "../test-images/TEST_%lux%lux%lu_%d.csv", 
+                                        size.x, size.y, size.z, index);
+    image* testImage;
+    InitImage(&testImage, size.x, size.y, size.z);
+    GenerateVoronoiFlat3DLocal(testImage, size.x * size.y * size.z / 180000);
+
+    SaveImageAsCSV(testImage, filename);
+    free(testImage->data);
+    free(testImage);
+}
+
 int TEST_1()
 {
     image *data;
@@ -46,9 +59,11 @@ int TEST_1()
     printf("Completed Prediction\n");
 
     SaveImageAsCSV(predicted_values, "predictor.csv");
+    char filename[80];
     for (int i = 0; i < CACHE_SPACES; i++)
     {
-        SaveImageAsCSV(global_cache->cache_space[i], CacheFiles[i]);
+        sprintf(filename, "../results/%s", CacheFiles[i]);
+        SaveImageAsCSV(global_cache->cache_space[i], filename);
     }
 
     DeletePredictorCache(global_cache);
@@ -102,7 +117,7 @@ void BenchmarkVoronoi()
 // git config --global user.email "you@example.com"
 // git config --global user.name "Your Name"
 
-void ReadImage(){
+void TestReadImage(){
     image* img;
     ReadImageFromCSV(&img, "data_locale.csv");
     SaveImageAsCSV(img, "data_locale2.csv");

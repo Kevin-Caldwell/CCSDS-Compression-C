@@ -7,12 +7,6 @@
 enum CacheEnum{
     raw = 0,
     local_sums,
-    sample_representatives,
-    predicted_sample,
-    central_local_difference,
-    predicted_central_local_difference,
-    clipped_quanitzer_bin_center,
-    quantizer_index,
     CACHE_SPACES};
 
 extern char* CacheFiles[];
@@ -37,5 +31,6 @@ int UpdateCache(INDEX z, INDEX y, INDEX x, CacheEnum data_index, data_t data);
 int InitializePredictorCache(PredictorCache** p_cache, image* hIMG);
 
 int DeletePredictorCache(PredictorCache* p_cache);
+
 
 #endif /* CACHE_PREDICTOR_H */

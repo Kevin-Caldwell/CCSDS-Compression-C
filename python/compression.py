@@ -2,17 +2,13 @@ import numpy as np
 import helperlib
 
 # Parameters for Compression
-D = 16 # dynamic range, number of bits for sample size value (between 2 to 32)
-# S_MIN = -1*(2**(D - 1))
-# S_MAX = 2**(D - 1)
-# S_MID = 0
-
+D = 14 # dynamic range, number of bits for sample size value (between 2 to 32)
 S_MIN = 0
-S_MAX = 2**D - 1
+S_MAX = 2**(D) - 1
 S_MID = 2**(D - 1)
 
-P = 2 #  number of previous bands used for prediction (between 2-15)
-W_RES = 4 # Omega, between 4 and 19
+P = 3 #  number of previous bands used for prediction (between 2-15)
+W_RES = 19 # Omega, between 4 and 19
 W_MIN = -(2**(W_RES + 1)) # W_MIN and W_MAX values are used in weight updates (Equation 30)
 W_MAX = 2**(W_RES + 2) - 1
 R = 32 # User-defined parameter from max{32, 2^(D + W_RES + 1)} to 64
@@ -166,7 +162,7 @@ def predictor(data):
     mapped = np.empty_like(data)
 
     for z in range(0,Nz):
-        print("Predicting..... z =", z)
+        print(f"Predicting..... z = {z}\b")
         for y in range(0,Ny):
             for x in range(0, Nx):
                 t = y * Nx + x

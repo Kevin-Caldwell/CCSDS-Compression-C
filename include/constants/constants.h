@@ -6,9 +6,9 @@
 #define UNSIGNED_SAMPLES
 
 // Image Size Constants
-#define Nx ((uint16_t) 640) // 100 //640
-#define Ny ((uint16_t) 512) // 100 //512
-#define Nz ((uint16_t) 640) // 100 //640
+#define Nx ((uint16_t) 100) // 100 //640
+#define Ny ((uint16_t) 100) // 100 //512
+#define Nz ((uint16_t) 100) // 100 //640
 
 //* Uncomment if Lossless compression is required
 #define LOSSLESS
@@ -41,7 +41,7 @@
 #define RESOLUTION 100
 
 #define WEIGHT_RESOLUTION 19
-#define REGISTER_SIZE_PARAMETER 1
+#define REGISTER_SIZE_PARAMETER 32
 
 
 // 0: Default Weight Initialization
@@ -55,7 +55,7 @@
 #define WEIGHT_UPDATE_V_MIN -6
 #define WEIGHT_UPDATE_V_MAX 9
 // WEIGHT_UPDATE_SCALING_EXPONENT_CHANGE_INTERVAL
-#define CHANGE_INTERVAL 11
+#define CHANGE_INTERVAL 4
 
 
 #ifndef LOSSLESS

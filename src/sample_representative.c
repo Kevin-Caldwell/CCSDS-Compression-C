@@ -57,7 +57,7 @@ uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x)
         return 2 * S(hIMG, z-1,y,x);
     } else if ((x == 0 && y == 0) && (kP == 0 || z == 0)) // ? Substitute for t == 0
     {
-        return kSmid;
+        return 2 * kSmid;
     }
 
     if(x > 0 && y > 0){ // ! is this correct?

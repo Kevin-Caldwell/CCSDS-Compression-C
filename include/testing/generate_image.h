@@ -9,10 +9,11 @@
 
 int TEST_1();
 
-void BenchmarkVoronoi();
-
 void TestHeader();
+void TestReadImage();
 
-void ReadImage();
+void GenerateTest(dim3 size, int index);
+
+void BenchmarkVoronoi();
 
 #endif /* GENERATE_IMAGE_H */

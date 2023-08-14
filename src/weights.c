@@ -40,7 +40,7 @@ data_t WeightUpdateScalingExponent(INDEX z, INDEX y, INDEX x)
 
 int UpdateWeights(image *hIMG, int32_t *weights, INDEX z, INDEX y, INDEX x)
 {
-    if (x == 0 && x == 0)
+    if (x == 0 && y == 0)
     {
         InitializeWeights(&global_cache->weights, z, y, x);
         return 0;
