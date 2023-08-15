@@ -43,7 +43,7 @@ int main(int argInt, char **argS)
             printf("Command Not Recognized\n");
         }
     } else{
-        PredictImage("raw.csv", "pred.csv");
+        PredictImage("../test-images/TEST_100x100x100_0.csv", "../results/CRESULT_100x100x100_0_predicted.csv");
     }
 
     return 0;

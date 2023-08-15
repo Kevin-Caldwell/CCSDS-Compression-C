@@ -98,7 +98,9 @@
     "__tree": "c",
     "ios": "c",
     "map": "c",
-    "memory": "c"
+    "memory": "c",
+    "logs.h": "c",
+    "semaphore": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

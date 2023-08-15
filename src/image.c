@@ -11,7 +11,7 @@ int InitImage(image** img_p, size_t x, size_t y, size_t z){
 
 PIXEL GetPixel(image* hIMG, INDEX x, INDEX y, INDEX z){
     dim3 size = hIMG->size;
-    return hIMG->data[MAP3_1(x, y, z, size)];
+    return hIMG->data[MAP3_1(z, y, x, size)];
 }
 
 PIXEL* GetFrame(image* hIMG, INDEX y){

@@ -28,37 +28,36 @@ int InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x)
     return 0;
 }
 
-data_t DoubleResolutionPredictionError(image *hIMG, INDEX z, INDEX y, INDEX x)
+int32_t DoubleResolutionPredictionError(uint16_t clipped_quantizer_bin_center, 
+                                            uint32_t double_resolution_predicted_sample)
 {
-    return 2 * ClippedQuantizerBinCenter(hIMG, z, y, x) - DoubleResolutionPredictedSample(hIMG, z, y, x);
+    return 2 * (signed) clipped_quantizer_bin_center - (signed) double_resolution_predicted_sample;
 }
 
-data_t WeightUpdateScalingExponent(INDEX z, INDEX y, INDEX x)
+int32_t WeightUpdateScalingExponent(INDEX y, INDEX x)
 {
     return CLIP(kVMin + (y * Nx + x - Nx) / kTInc, kVMin, kVMax) + D - Omega;
 }
 
-int UpdateWeights(image *hIMG, int32_t *weights, INDEX z, INDEX y, INDEX x)
+int UpdateWeights(image *hIMG, int32_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error)
 {
     if (x == 0 && y == 0)
     {
+        free(global_cache->weights);
         InitializeWeights(&global_cache->weights, z, y, x);
         return 0;
     }
     int ibweo = 0;
+    int32_t scale_exp = BPOW(-1 * (WeightUpdateScalingExponent(y, x) + ibweo));
+    int32_t fac = SIGN_P(double_resolution_prediction_error) * scale_exp;
     for (int i = 0; i < 3; i++)
     {
-        weights[i] += (SIGN_P(DoubleResolutionPredictionError(hIMG, z, y, x)) *
-                           BPOW(-1 * (WeightUpdateScalingExponent(z, y, x) + ibweo) * DLD(hIMG, z, y, z, i)) +
-                       1) /
-                      2; // add 1/2
+        weights[i] += (fac * DLD(hIMG, z, y, x, i) + 1) / 2;
     }
 
     for (int i = 3; i < C(z); i++)
     {
-        weights[i] += (SIGN_P(DoubleResolutionPredictionError(hIMG, z, y, x)) *
-                           BPOW(-1 * (WeightUpdateScalingExponent(z, y, x) + ibweo) * CentralLocalDifference(hIMG, z, y, z)) +
-                       1); // add 1/2
+        weights[i] += (fac * CentralLocalDifference(hIMG, z, y, x) + 1) / 2;
     }
 
     for (int i = 0; i < C(z); i++)

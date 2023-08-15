@@ -1,16 +1,16 @@
 #include "predictor/quantizer.h"
 
-uint16_t ClippedQuantizerBinCenter(image* hIMG, INDEX z, INDEX y, INDEX x){
-    return  CLIP(PredictedSample(hIMG, z,y,x) + QuantizerIndex(hIMG, z,y,x) * (2 * m_z + 1), kSmin, kSmax);
+uint16_t ClippedQuantizerBinCenter(uint16_t predicted_sample, int32_t quantizer_index){
+    return  CLIP(predicted_sample + quantizer_index * (2 * m_z + 1), kSmin, kSmax);
 }
 
-int16_t PredictionResidual(image* hIMG, INDEX z, INDEX y, INDEX x){
-    return S(hIMG, z,y,x) - PredictedSample(hIMG, z,y,x);
+int16_t PredictionResidual(uint16_t sample_value, uint16_t predicted_sample){
+    return sample_value - predicted_sample;
 }
 
-SignedLongData QuantizerIndex(image* hIMG, INDEX z, INDEX y, INDEX x){
+int32_t QuantizerIndex(uint16_t sample_value, uint16_t predicted_sample){
 #ifdef LOSSLESS
-    return PredictionResidual(hIMG, z,y,x);
+    return PredictionResidual(sample_value, predicted_sample);
 
 #else
     SignedLongData qInd;
@@ -26,8 +26,7 @@ SignedLongData QuantizerIndex(image* hIMG, INDEX z, INDEX y, INDEX x){
 }
 
 
-uint16_t minTheta(image* hIMG, INDEX z, INDEX y, INDEX x){
-    uint16_t pred_res = PredictedSample(hIMG, z,y,x);
+uint16_t minTheta(uint32_t predicted_sample){
 
 #ifndef LOSSLESS
     if(x == 0 && y == 0){
@@ -38,24 +37,26 @@ uint16_t minTheta(image* hIMG, INDEX z, INDEX y, INDEX x){
                 (kSmax - pred_res + m_z)/(2 * m_z + 1));
     }
 #else
-    return MIN(pred_res - kSmin, kSmax - pred_res);
+    return MIN(predicted_sample - kSmin, kSmax - predicted_sample);
 #endif
     
 }
 
 
-data_t MappedQuantizerIndex(image* hIMG, INDEX z, INDEX y, INDEX x){
-    SignedLongData qz = QuantizerIndex(hIMG, z,y,x);
-    SignedLongData theta = minTheta(hIMG, z,y,x);
-    SignedLongData a = qz * (DoubleResolutionPredictedSample(hIMG, z,y,x) % 2 ? -1 : 1);
+data_t MappedQuantizerIndex(int32_t quantizer_index, 
+            int32_t predicted_sample, 
+            uint32_t double_res_predicted_sample){
 
-    if(abs(qz) > theta){
-        return abs(qz) + theta;
-    } else if (0 <= a && a >= theta)
+    SignedLongData theta = minTheta(predicted_sample);
+    SignedLongData a = quantizer_index * (double_res_predicted_sample % 2 ? -1 : 1);
+
+    if(abs(quantizer_index) > theta){
+        return abs(quantizer_index) + theta;
+    } else if (0 <= a && a <= theta)
     {
-        return 2 * abs(qz);
+        return 2 * abs(quantizer_index);
     } else{
-        return 2 * abs(qz) - 1;
+        return 2 * abs(quantizer_index) - 1;
     }
     
 }

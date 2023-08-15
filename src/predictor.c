@@ -1,31 +1,66 @@
 #include "predictor/predictor.h"
 #include <time.h>
 #include <stdio.h>
+#include <string.h>
 
-int RunPredictor(image* hIMG, image* result){
+FILE* fp;
+
+void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
+{
+    data_t raw_data = GetPixel(hIMG, x, y, z);
+    uint16_t sample_representative = SampleRepresentative(raw_data);
+    uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
+    int32_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z,y,x);
+
+    int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
+    int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);
+
+    uint16_t predicted_sample = PredictedSample(double_resolution_predicted_sample);
+    int32_t quantizer_index = QuantizerIndex(raw_data, predicted_sample);
+
+    uint16_t clipped_quantizer_bin_center = ClippedQuantizerBinCenter(predicted_sample, quantizer_index);
+    int32_t double_resolution_predicted_error = DoubleResolutionPredictionError(clipped_quantizer_bin_center,
+                                                                                double_resolution_predicted_sample);
+
+    data_t predicted_value = MappedQuantizerIndex(quantizer_index,
+                                                  predicted_sample,
+                                                  double_resolution_predicted_sample);
+    SetPixel(result, x, y, z, predicted_value);
+
+    UpdateWeights(hIMG, global_cache->weights, z, y, x, double_resolution_predicted_error);
+
+    char write_buffer[1000];
+
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld,[", x,y,z, predicted_sample, predicted_value, raw_data, high_resolution_predicted_sample);
+    for(int i = 0; i < C(z); i++){
+        sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
+    }
+    sprintf(write_buffer + strlen(write_buffer), "]\n");
+    fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
+}
+
+int RunPredictor(image *hIMG, image *result)
+{
     time_t start;
     time_t end;
     dim3 size = hIMG->size;
+
+    fp = fopen("Cdebug.LOG", "w");
+
     start = time(NULL);
-    for(int i = 0; i < size.z; i++){
-        for(int j = 0; j < size.y; j++){
-            for(int k = 0; k < size.x; k++){
-
-                if(j == 0 && k == 0){
-                    free(global_cache->weights);
-                    InitializeWeights(&(global_cache->weights), i,j,k);
-                } 
-
-                data_t raw_data = GetPixel(hIMG, k,j,i);
-                data_t predicted_value = MappedQuantizerIndex(hIMG, i,j,k);
-                SetPixel(result, k,j,i, predicted_value);
-                
+    for (int i = 0; i < size.z; i++)
+    {
+        for (int j = 0; j < size.y; j++)
+        {
+            for (int k = 0; k < size.x; k++)
+            {
+                Predict(hIMG, result, i, j, k);
             }
         }
-        printf("Generated %d/%d of Image.\n", (int) (i+1), (int) hIMG->size.x);
-        
+        printf("Generated %d/%d of Image.\n", (int)(i + 1), (int)hIMG->size.x);
     }
+    fclose(fp);
     end = time(NULL);
-    printf("%d seconds for image prediction.\n", (int) (end - start));
+    printf("%d seconds for image prediction.\n", (int)(end - start));
     return 0;
 }

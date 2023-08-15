@@ -1,20 +1,19 @@
 #include "predictor/local_differences.h"
+#include <stdio.h>
 
-
-uint32_t CentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x)
+int32_t CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x)
 {
     return 4 * SR(hIMG, z, x, y) - LS(hIMG, z, y, x);
 }
 
-
-uint32_t DirectionalLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x, int direction)
+int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction)
 {
     switch (direction)
     {
     case N:
         if (y > 0)
         {
-            return 4 * SR(hIMG, z, y-1, x) - LS(hIMG, z, y, x);
+            return 4 * SR(hIMG, z, y - 1, x) - LS(hIMG, z, y, x);
         }
         else if (y == 0)
         {
@@ -54,10 +53,11 @@ uint32_t DirectionalLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x, int 
     return 0;
 }
 
-int LocalDirectionVector(image* hIMG, int32_t **local_direction_vector, INDEX z, INDEX y, INDEX x)
+
+int LocalDirectionVector(image *hIMG, int32_t **local_direction_vector, INDEX z, INDEX y, INDEX x)
 {
     InitVector(local_direction_vector, C(z));
-    int32_t* lDV = *local_direction_vector;
+    int32_t *lDV = *local_direction_vector;
 #ifndef REDUCED_PREDICTION_MODE
 
     for (int i = N; i <= NW; i++)
@@ -65,10 +65,11 @@ int LocalDirectionVector(image* hIMG, int32_t **local_direction_vector, INDEX z,
         lDV[i] = DLD(hIMG, z, y, x, i);
     }
 
-    for (unsigned long int i = 1; i <= Ps(z); i++)
+    for (unsigned long int i = 0; i < Ps(z); i++)
     {
-        lDV[i + 2] = CentralLocalDifference(hIMG, (signed int) (z-i),y,x);
+        lDV[i + 3] = CentralLocalDifference(hIMG, (signed int)(z - i-1), y, x);
     }
+    
 
 #else
 
@@ -79,18 +80,31 @@ int LocalDirectionVector(image* hIMG, int32_t **local_direction_vector, INDEX z,
 #endif
 }
 
-uint32_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x){
+dim3 prevInd = {0,0,0};
+uint32_t prevpcld = 0;
+
+uint32_t PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x)
+{
     uint32_t pcld;
-    if(x == 0 && y == 0){
-        return;
+    if (x == 0 && y == 0)
+    {
+        return 0;
     }
-    int32_t* weight_vector = global_cache->weights;
-    int32_t* local_direction_vector;
-    
-    LocalDirectionVector(hIMG, &local_direction_vector, z,y,x);
+
+    if(prevInd.x == x && prevInd.y == y && prevInd.z == z){
+        return prevpcld;
+    }
+
+    int32_t *weight_vector = global_cache->weights;
+    int32_t *local_direction_vector;
+
+    LocalDirectionVector(hIMG, &local_direction_vector, z, y, x);
     pcld = InnerProduct(weight_vector, local_direction_vector, C(z));
 
     free(local_direction_vector);
+
+    prevpcld = pcld;
+    prevInd = (dim3) {x,y,z};
 
     return pcld;
 }

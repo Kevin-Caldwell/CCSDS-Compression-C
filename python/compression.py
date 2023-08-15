@@ -11,7 +11,7 @@ P = 3 #  number of previous bands used for prediction (between 2-15)
 W_RES = 19 # Omega, between 4 and 19
 W_MIN = -(2**(W_RES + 1)) # W_MIN and W_MAX values are used in weight updates (Equation 30)
 W_MAX = 2**(W_RES + 2) - 1
-R = 32 # User-defined parameter from max{32, 2^(D + W_RES + 1)} to 64
+R = 35 # User-defined parameter from max{32, 2^(D + W_RES + 1)} to 64
 M = 0 # Maximum Error
 
 V_MIN = -6 # V_MIN and V_MAX are user-defined parameters that control the rate at which the algorithm adapts to data statistics
@@ -121,7 +121,7 @@ def prediction(ld_vector, weight_vector, x, y, z, data):
     # Eq(39)
     s_hat = np.floor(s_tilde / 2)
 
-    return s_hat, s_tilde
+    return s_hat, s_tilde,d, hr_s
 
 def updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data):
     Nx = data.shape[0]
@@ -161,19 +161,27 @@ def predictor(data):
     Nz = data.shape[2]
     mapped = np.empty_like(data)
 
+    fp = open("debug.LOG", "w")
+
     for z in range(0,Nz):
-        print(f"Predicting..... z = {z}\b")
+        print(f"Predicting..... z = {z}", end='\r')
         for y in range(0,Ny):
             for x in range(0, Nx):
                 t = y * Nx + x
                 if t == 0:
                     weight_vector = init_weight_vector(z)
+                if x == 53 and y == 53 and z == 53:
+                    print(weight_vector)
 
                 ld_vector = local_diff_vector(x, y, z, data)
-                s_hat, s_tilde = prediction(ld_vector, weight_vector, x, y, z, data)
-                weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
+                s_hat, s_tilde,d,hrps = prediction(ld_vector, weight_vector, x, y, z, data)
                 mapped[x, y, z] = mapper(data[x, y, z] - s_hat, s_hat, s_tilde)
+                weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
 
+                fp.write(f"({x},{y},{z}),{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {hrps}, {weight_vector.astype('int64')}\n")
+                
+                
+    fp.close()
     return mapped
 
 def predictor_debug(data):
