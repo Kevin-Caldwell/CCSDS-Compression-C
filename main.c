@@ -19,7 +19,6 @@ void TestingCriteria(char **argS)
 
 int main(int argInt, char **argS)
 {
-    printf("Entered C Main.\n");
     if (argInt > 1)
     {
         if (!strcmp(argS[1], "gentest"))

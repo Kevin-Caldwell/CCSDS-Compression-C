@@ -163,7 +163,7 @@ def predictor(data):
     Nz = data.shape[2]
     mapped = np.empty_like(data)
 
-    fp = open("debug.LOG", "w")
+    fp = open("logs/python-debug.LOG", "w")
 
     for z in range(0,Nz):
         print(f"Predicting..... z = {z}", end='\r')
@@ -172,8 +172,6 @@ def predictor(data):
                 t = y * Nx + x
                 if t == 0:
                     weight_vector = init_weight_vector(z)
-                if x == 0 and y == 79 and z == 28:
-                    print(weight_vector)
 
                 ld_vector = local_diff_vector(x, y, z, data)
                 s_hat, s_tilde,d,hrps = prediction(ld_vector, weight_vector, x, y, z, data)

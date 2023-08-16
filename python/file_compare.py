@@ -6,12 +6,11 @@ def CompareResults(c_pred_file, python_pred_file):
     python_img = csv_io.ReadCSV(python_pred_file)
 
     difference = (c_img - python_img)
-    print(difference)
-
     return (difference.std())
 
 if __name__ == "__main__":
     n = len(sys.argv)
 
     if n == 3:
-        print(CompareResults(sys.argv[1], sys.argv[2]))
+        print("______Comparing C and Python______")
+        print("Error:", CompareResults(sys.argv[1], sys.argv[2]))

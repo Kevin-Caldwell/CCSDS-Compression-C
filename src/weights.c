@@ -91,10 +91,5 @@ int UpdateWeights(image *hIMG, int32_t *weights, INDEX z, INDEX y, INDEX x, int3
     {
         weights[i] = CLIP(weights[i], kOmegaMin, kOmegaMax);
     }
-
-    if (x == 70 && y == 0 && z == 29)
-    {
-        printf("exp:%d,fac:%d\n", scale_exp, fac);
-    }
     return 0;
 }

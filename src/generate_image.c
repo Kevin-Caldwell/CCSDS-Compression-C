@@ -27,6 +27,7 @@ void GenerateTest(dim3 size, int index){
 void PredictImage(char* source, char* destination){
     image* hIMG;
     image* result;
+    printf("___________C PREDICTOR____________\n");
 
     ReadImageFromCSV(&hIMG, source);
     printf("Read File.\n");

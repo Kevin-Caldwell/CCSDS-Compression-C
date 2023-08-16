@@ -4,3 +4,4 @@ python/venv/**
 python/*.csv
 test-images/**
 python/__pycache__
+logs/**

@@ -13,10 +13,6 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
         free(global_cache->weights);
         InitializeWeights(&global_cache->weights, z, y, x);
     }
-        if (x == 0 && y == 79 && z == 28)
-    {
-        int a = 0;
-    }
 
     data_t raw_data = GetPixel(hIMG, x, y, z);
     uint16_t sample_representative = SampleRepresentative(raw_data);
@@ -25,10 +21,6 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);
 
-    if (x == 0 && y == 79 && z == 28)
-    {
-        printf("%d, %d, %ld, %d\n", local_sum, predicted_central_local_difference, high_resolution_predicted_sample, kSmid);
-    }
     uint16_t predicted_sample = PredictedSample(double_resolution_predicted_sample);
     int32_t quantizer_index = QuantizerIndex(raw_data, predicted_sample);
 
@@ -45,23 +37,24 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 
     char write_buffer[1000];
 
-    // sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d,[", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample);
-    // for (int i = 0; i < C(z); i++)
-    // {
-    //     sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
-    // }
-    // sprintf(write_buffer + strlen(write_buffer), "]\n");
-    sprintf(write_buffer, "%d\n", predicted_value);
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d,[", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample);
+    for (int i = 0; i < C(z); i++)
+    {
+        sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
+    }
+    sprintf(write_buffer + strlen(write_buffer), "]\n");
+    //sprintf(write_buffer, "%d\n", predicted_value);
     fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
 }
 
 int RunPredictor(image *hIMG, image *result)
 {
+    printf("Running C Predictor.\n");
     time_t start;
     time_t end;
     dim3 size = hIMG->size;
 
-    fp = fopen("Cdebug.LOG", "w");
+    fp = fopen("../logs/c-debug.LOG", "w");
 
     start = time(NULL);
     for (int i = 0; i < size.z; i++)
@@ -73,10 +66,11 @@ int RunPredictor(image *hIMG, image *result)
                 Predict(hIMG, result, i, j, k);
             }
         }
-        printf("Generated %d/%d of Image.\n", (int)(i + 1), (int)hIMG->size.x);
+        printf("\rGenerated %d/%d of Image.", (int)(i + 1), (int)hIMG->size.x);
+        fflush(stdout);
     }
     fclose(fp);
     end = time(NULL);
-    printf("%d seconds for image prediction.\n", (int)(end - start));
+    printf("\n%d seconds for image prediction.\n", (int)(end - start));
     return 0;
 }

@@ -5,6 +5,7 @@ import csv
 
 from csv_io import ReadCSV, SaveCSV
 if __name__ == "__main__":
+    print("_________PYTHON PREDICTOR_________")
     data = ReadCSV("test-images/TEST_100x100x100_0.csv")
     Nx, Ny, Nz = data.shape
 
