@@ -1,8 +1,14 @@
 #include "predictor/quantizer.h"
 
+#ifndef LOSSLESS
 uint16_t ClippedQuantizerBinCenter(uint16_t predicted_sample, int32_t quantizer_index){
     return  CLIP(predicted_sample + quantizer_index * (2 * m_z + 1), kSmin, kSmax);
 }
+#else
+uint16_t ClippedQuantizerBinCenter(uint16_t sample_value){
+    return  sample_value;
+}
+#endif
 
 int16_t PredictionResidual(uint16_t sample_value, uint16_t predicted_sample){
     return sample_value - predicted_sample;

@@ -19,6 +19,10 @@ data_t MappedQuantizerIndex(int32_t quantizer_index,
 
 int16_t PredictionResidual(uint16_t sample_value, uint16_t predicted_sample);
 
+#ifndef LOSSLESS
 uint16_t ClippedQuantizerBinCenter(uint16_t predicted_sample, int32_t quantizer_index);
+#else
+uint16_t ClippedQuantizerBinCenter(uint16_t sample_value);
+#endif
 
 #endif /* QUANTIZER_H */

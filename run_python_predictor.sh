@@ -1,2 +1,1 @@
-cd python
-python3 predictor_eg.py
+python3 python/predictor_eg.py

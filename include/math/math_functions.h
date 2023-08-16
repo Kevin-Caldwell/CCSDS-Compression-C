@@ -17,7 +17,7 @@
 #define OUTSIDE_INTERVAL(x, min, max)   ( min > x || x > max )
 
 #define SIGN(x) x < 0 ? -1 : (x > 0 ? 1 : 0)
-#define SIGN_P(x) (x > 0 ? 1 : -1)
+#define SIGN_P(x) (x < 0 ? -1 : 1)
 
 #define MOD(x, R) ((x + BPOW(R - 1)) % BPOW(R) - BPOW(R - 1))
 

@@ -52,7 +52,10 @@ uint16_t PredictedSample(uint32_t double_resolution_predicted_sample){
 
 uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample){
     if(x > 0 || y > 0){ // ? Substitute for t>0
-        return high_resolution_predicted_sample << (Omega + 1);
+        if(x==0 && y==79 && z==28){
+            printf("%ld, %d, %ld\n", high_resolution_predicted_sample, BPOW(Omega + 1), (high_resolution_predicted_sample / (int64_t) BPOW(Omega + 1)));
+        }
+        return (high_resolution_predicted_sample / (int64_t) BPOW(Omega + 1));
     } else if ((x == 0 && y == 0) && kP > 0 && z > 0) // ? Substitute for t == 0
     {
         return 2 * S(hIMG, z-1,y,x);
@@ -68,12 +71,21 @@ int64_t HighResolutionPredictedSample(int32_t predicted_central_local_difference
     // int64_t temp = CLIP(MOD((predicted_central_local_difference + BPOW(Omega) * (local_sum - 4 * kSmid)), kR) + BPOW(Omega + 2) * kSmid + BPOW(Omega + 1), 
     // BPOW(Omega + 2) * kSmin, BPOW(Omega+2) * kSmax + BPOW(Omega+1));
     int64_t temp1 = (int64_t)predicted_central_local_difference + BPOW(Omega) * ((int64_t) local_sum - (int64_t) (4 * kSmid));
-    int64_t temp2 = temp1; //MOD(temp1, ((int64_t) kR));
+    int64_t mod = (temp1 + (1L << (kR-1))) % (1L << (kR));
+    mod = (mod < 0) ? (mod + (1L << (kR))) : mod;
+    int64_t temp2 = mod - (1L << (kR - 1));//MOD(temp1, ((int64_t) kR));
     int64_t temp3 = temp2 + (uint64_t) BPOW(Omega + 2) * (uint64_t) kSmid + (uint64_t) BPOW(Omega + 1);
+ 
+
 
     int64_t hrps_max = BPOW(Omega+2) * (int64_t) kSmax + BPOW(Omega+1);
     int64_t hrps_min = BPOW(Omega + 2) * kSmin;
 
+    if(predicted_central_local_difference == -4378040 && local_sum == 4)
+        printf("%ld, %ld, %ld\n", temp1, (1L << (kR-1L)), ((temp1 + (1L << (kR-1))) % (1L << (kR))));
+
     int64_t temp = CLIP(temp3, hrps_min, hrps_max);
+    // if(predicted_central_local_difference == -4378040 && local_sum == 4)
+    //     printf("%ld, %ld, %ld, %ld, %ld, %ld, %ld,\n", temp1, temp2, temp3, hrps_max, hrps_min, kR, temp);
     return temp;
 }

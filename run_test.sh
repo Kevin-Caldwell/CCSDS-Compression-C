@@ -2,5 +2,4 @@
 ./run_c_predictor.sh
 ./run_python_predictor.sh
 
-cd python
-python3 file_compare.py
+python3 python/file_compare.py results/CRESULT_100x100x100_0_predicted.csv results/PYTHONRESULT_100x100x100_0_predicted.csv

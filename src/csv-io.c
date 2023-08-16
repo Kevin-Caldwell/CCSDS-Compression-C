@@ -32,7 +32,7 @@ void SaveImageAsCSV(image* hIMG, char* file_name){
     for(int i = 0; i < size.x; i++){
         for(int j = 0; j < size.y; j++){
             for(int k = 0; k < size.z; k++){
-                sprintf(string_buffer, "%hu,", GetPixel(hIMG, i,j,k));
+                sprintf(string_buffer, "%hu,", GetPixel(hIMG, k,j,i));
                 fputs(string_buffer, fp);
 
             }

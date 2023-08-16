@@ -124,6 +124,8 @@ def prediction(ld_vector, weight_vector, x, y, z, data):
     return s_hat, s_tilde,d, hr_s
 
 def updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data):
+    if(x == 71 and y == 3 and z == 0):
+        f = 1
     Nx = data.shape[0]
     t = y * Nx + x
     new_weight_vector = []
@@ -132,12 +134,12 @@ def updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data):
     dr_e = 2 * data[x, y, z] - s_tilde
 
     # Eq(50) the weight update scaling exponent is calculated
-    # Using Eq(35) from older version of compression algorithm
+    # Using Eq(35) from older version of compression algorithm  
     w_exp = np.clip(V_MIN + np.floor((t - Nx) / T_INC), V_MIN, V_MAX) + D - W_RES
     base = (helperlib.sign(dr_e)) * (2**(-(w_exp)))
 
     for i in range(len(weight_vector)):
-        new_w = np.clip(weight_vector[i] + np.floor((1/2) * (base * ld_vector[i])), W_MIN, W_MAX)
+        new_w = np.clip(weight_vector[i] + np.floor((base * ld_vector[i] + 1) / 2), W_MIN, W_MAX)
         new_weight_vector.append(new_w)
 
     return np.array(new_weight_vector)
@@ -170,7 +172,7 @@ def predictor(data):
                 t = y * Nx + x
                 if t == 0:
                     weight_vector = init_weight_vector(z)
-                if x == 53 and y == 53 and z == 53:
+                if x == 0 and y == 79 and z == 28:
                     print(weight_vector)
 
                 ld_vector = local_diff_vector(x, y, z, data)
@@ -178,7 +180,7 @@ def predictor(data):
                 mapped[x, y, z] = mapper(data[x, y, z] - s_hat, s_hat, s_tilde)
                 weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
 
-                fp.write(f"({x},{y},{z}),{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {hrps}, {weight_vector.astype('int64')}\n")
+                fp.write(f"({x},{y},{z}), {ld_vector},{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {s_tilde}, {hrps}, {weight_vector.astype('int64')}\n")
                 
                 
     fp.close()

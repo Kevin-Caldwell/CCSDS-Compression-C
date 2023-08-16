@@ -16,7 +16,7 @@ const int kSmid = 0;
 #endif
 
 const int kP = CLIP(PREVIOUS_BAND_SAMPLES, 0, 15);
-const int kR = CLIP(REGISTER_SIZE_PARAMETER, MAX(32, D + Omega + 2), 64);
+const int64_t kR = CLIP(REGISTER_SIZE_PARAMETER, MAX(32, D + Omega + 2), 64);
 
 const int kVMax = CLIP(WEIGHT_UPDATE_V_MAX, -6 , 9);
 const int kVMin = CLIP(WEIGHT_UPDATE_V_MIN, -6, kVMax);

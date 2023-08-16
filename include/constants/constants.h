@@ -78,7 +78,7 @@ extern const int kSmid;
 
 extern const int kP;
 #define Omega CLIP(WEIGHT_RESOLUTION, 4, 19)
-extern const int kR;
+extern const int64_t kR;
 extern const int kOmegaMin;
 extern const int kOmegaMax;
 
