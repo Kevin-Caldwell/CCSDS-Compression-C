@@ -1,1 +1,1 @@
-python3 python/predictor_eg.py
+python3 python/predictor_eg.py $1

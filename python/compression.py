@@ -166,7 +166,7 @@ def predictor(data):
     fp = open("logs/python-debug.LOG", "w")
 
     for z in range(0,Nz):
-        print(f"Predicting..... z = {z}", end='\r')
+        print(f"Predicting..... z = {z}/{Nz}", end='\r')
         for y in range(0,Ny):
             for x in range(0, Nx):
                 t = y * Nx + x

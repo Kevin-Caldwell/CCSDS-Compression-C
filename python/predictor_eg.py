@@ -1,16 +1,25 @@
 import numpy as np
 import compression as comp
-from sklearn.metrics import mean_squared_error
+#from sklearn.metrics import mean_squared_error
 import csv
+import sys
 
 from csv_io import ReadCSV, SaveCSV
 if __name__ == "__main__":
     print("_________PYTHON PREDICTOR_________")
-    data = ReadCSV("test-images/TEST_100x100x100_0.csv")
-    Nx, Ny, Nz = data.shape
+    n = len(sys.argv)
+    if(n > 1):
+        data = ReadCSV(f"test-images/TEST{sys.argv[1]}.csv")
+        Nx, Ny, Nz = data.shape
 
-    python_predicted = comp.predictor(data)
-    SaveCSV(python_predicted, "results/PYTHONRESULT_100x100x100_0_predicted.csv")
+        python_predicted = comp.predictor(data)
+        SaveCSV(python_predicted, f"results/PYTHONRESULT{sys.argv[1]}_predicted.csv")
+    else:
+        data = ReadCSV("test-images/TEST_100x100x100_0.csv")
+        Nx, Ny, Nz = data.shape
+
+        python_predicted = comp.predictor(data)
+        SaveCSV(python_predicted, "results/PYTHONRESULT_100x100x100_0_predicted.csv")
     #data1 = ReadCSV("results/PYTHONRESULT_100x100x100_0_predicted.csv")
     #print(np.equal(data, data1).std())
     #SaveCSV(python_residuals, "./python_residuals.csv")

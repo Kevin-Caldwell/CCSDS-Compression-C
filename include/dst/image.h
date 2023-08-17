@@ -23,6 +23,7 @@ PIXEL* GetFrame(image* hIMG, INDEX y);
 
 void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 
+#define S(hIMG, z,y,x) GetPixel(hIMG, x,y,z)
 
 typedef struct image2{
     dim2 size;

@@ -5,3 +5,4 @@ python/*.csv
 test-images/**
 python/__pycache__
 logs/**
+results/**

@@ -12,32 +12,7 @@ char *CacheFiles[] = {"raw.csv",
                       "predicted_central_local_difference.csv",
                       "clipped_quanitzer_bin_center.csv", "quantizer_index.csv"};
 
-int CacheLocalSums(image *hIMG, image *local_sums)
-{
-    time_t start;
-    time_t end;
-    dim3 size = hIMG->size;
 
-    for (int i = 0; i < size.z; i++)
-    {
-        start = time(NULL);
-        for (int j = 0; j < size.x; j++)
-        {
-            for (int k = 0; k < size.y; k++)
-            { // size.y    CLIP(Nz - j, 0, size.y)
-                SetPixel(local_sums, j, k, i, FindLocalSum(hIMG, j, i, k));
-            }
-        }
-        end = time(NULL);
-        printf("Cached frame %d in %d seconds.\n", i, (int)(end - start));
-
-        /*         for(int i = 0; i < CACHE_SPACES; i++){
-                    SaveImageAsCSV(global_cache->cache_space[i], CacheFiles[i]);
-                } */
-    }
-
-    return 0;
-}
 
 int InitializePredictorCache(PredictorCache **ptr_p_cache, image *hIMG)
 {
@@ -73,15 +48,4 @@ int DeletePredictorCache(PredictorCache *p_cache)
         free(p_cache->cache_space[i]);
     }
     free(p_cache);
-}
-
-data_t CheckCache(INDEX z, INDEX y, INDEX x, CacheEnum data_index)
-{
-    return GetPixel(global_cache->cache_space[data_index], x, y, z);
-}
-
-int UpdateCache(INDEX z, INDEX y, INDEX x, CacheEnum data_index, data_t data)
-{
-    SetPixel(global_cache->cache_space[data_index], x, y, z, data);
-    return 0;
 }

@@ -73,7 +73,5 @@ uint32_t FindLocalSum(image* hIMG, INDEX z, INDEX y, INDEX x)
     }
 #endif
 
-    UpdateCache(z,y,x, local_sums, val);
-
     return val;
 }

@@ -45,46 +45,18 @@ int32_t WeightUpdateScalingExponent(INDEX y, INDEX x)
 
 int UpdateWeights(image *hIMG, int32_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error)
 {
+    float exp = exp2f(-WeightUpdateScalingExponent(y,x)) * SIGN_P(double_resolution_prediction_error);
 
-    int ibweo = 0;
-    int32_t scale_exp = (-1 * (WeightUpdateScalingExponent(y, x)));
-    int32_t fac = SIGN_P(double_resolution_prediction_error);
     for (int i = 0; i < 3; i++)
     {
-
-        int32_t val = fac * (int32_t)DLD(hIMG, z, y, x, i);
-        int32_t temp = scale_exp < 0 ? abs(val) >> abs(scale_exp) : abs(val) << abs(scale_exp);
-        val = (SIGN_P(val) * (temp)) + 1;
-        int32_t half_int = val / 2;
-
-        if (val < 0)
-        {
-            if (half_int * 2 - val)
-            {
-                half_int--;
-            }
-        }
-        weights[i] += half_int;
+        float val = floor((exp * (float) DLD(hIMG, z, y, x, i) + 1)/2);
+        weights[i] += val;
     }
 
     for (int i = 3; i < C(z); i++)
     {
-        int32_t val = fac * (int32_t)CentralLocalDifference(hIMG, z-i+2, y, x);
-        int32_t temp = scale_exp < 0 ? abs(val) >> abs(scale_exp) : abs(val) << abs(scale_exp);
-        val = (SIGN_P(val) * (temp)) + 1;
-        int32_t half_int = val / 2;
-
-        if (val < 0)
-        {
-            if (half_int * 2 - val)
-            {
-                half_int--;
-            }
-        }
-        weights[i] += half_int;
-        // int32_t val = fac * CentralLocalDifference(hIMG, z, y, x) + 1;
-
-        // weights[i] += (val) / 2;
+        float val = floor((exp * (float) CentralLocalDifference(hIMG, z-i+2, y, x) + 1)/2);
+        weights[i] += val;
     }
 
     for (int i = 0; i < C(z); i++)

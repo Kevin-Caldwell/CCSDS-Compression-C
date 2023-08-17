@@ -1,14 +1,8 @@
 #include "predictor/quantizer.h"
 
-#ifndef LOSSLESS
-uint16_t ClippedQuantizerBinCenter(uint16_t predicted_sample, int32_t quantizer_index){
-    return  CLIP(predicted_sample + quantizer_index * (2 * m_z + 1), kSmin, kSmax);
-}
-#else
 uint16_t ClippedQuantizerBinCenter(uint16_t sample_value){
     return  sample_value;
 }
-#endif
 
 int16_t PredictionResidual(uint16_t sample_value, uint16_t predicted_sample){
     return sample_value - predicted_sample;
@@ -53,8 +47,8 @@ data_t MappedQuantizerIndex(int32_t quantizer_index,
             int32_t predicted_sample, 
             uint32_t double_res_predicted_sample){
 
-    SignedLongData theta = minTheta(predicted_sample);
-    SignedLongData a = quantizer_index * (double_res_predicted_sample % 2 ? -1 : 1);
+    int32_t theta = minTheta(predicted_sample);
+    int32_t a = quantizer_index * (double_res_predicted_sample % 2 ? -1 : 1);
 
     if(abs(quantizer_index) > theta){
         return abs(quantizer_index) + theta;

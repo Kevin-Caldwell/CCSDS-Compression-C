@@ -17,6 +17,7 @@ int WithinRect3(dim3 point, dim3 top_left, dim3 bottom_right)
            (INSIDE_INTERVAL(point.z, top_left.z, bottom_right.z));
 }
 
+
 int SpreadPoint2(dim2 **points, dim2 bounds, UINT point_count)
 {
     *points = INIT_ARRAY(dim2, point_count);
@@ -29,6 +30,7 @@ int SpreadPoint2(dim2 **points, dim2 bounds, UINT point_count)
 
     return 0;
 }
+
 
 int SpreadPoint3(dim3 **points, dim3 bounds, UINT point_count)
 {
@@ -43,6 +45,7 @@ int SpreadPoint3(dim3 **points, dim3 bounds, UINT point_count)
 
     return 0;
 }
+
 
 int GenerateVoronoiFlat2D(image2 *result, UINT point_count)
 {
@@ -224,6 +227,10 @@ int ShadeVoronoiBox3(image3* img, dim3 top_right, dim3 bounds, dim3* points, UIN
     return 0;
 }
 
+
+/// @brief Faster Method for Generating Voronoi Diagrams
+/// @param result 
+/// @param point_count
 int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
 {
     dim3 *points;
@@ -237,7 +244,8 @@ int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
 
     for (int i = 0; i < result->size.x; i++)
     {
-        printf("Generated %d/%d of Image.\n", (int) (i+1), (int) result->size.x);
+        printf("Generated %d/%d of Image.\r", (int) (i+1), (int) result->size.x);
+        fflush(stdout);
         for (int j = 0; j < result->size.y; j++)
         {
             for (int k = 0; k < result->size.z; k++)
@@ -247,6 +255,8 @@ int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
             }
         }
     }
+
+    printf("\n");
 
     free(points);
     free(locales);

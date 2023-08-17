@@ -15,9 +15,10 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
     }
 
     data_t raw_data = GetPixel(hIMG, x, y, z);
-    uint16_t sample_representative = SampleRepresentative(raw_data);
     uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
+
     int32_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x);
+
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);
 
@@ -27,7 +28,6 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
     uint16_t clipped_quantizer_bin_center = ClippedQuantizerBinCenter(raw_data);
     int32_t double_resolution_predicted_error = DoubleResolutionPredictionError(clipped_quantizer_bin_center,
                                                                                 double_resolution_predicted_sample);
-
     data_t predicted_value = MappedQuantizerIndex(quantizer_index,
                                                   predicted_sample,
                                                   double_resolution_predicted_sample);
@@ -43,7 +43,6 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
         sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
     }
     sprintf(write_buffer + strlen(write_buffer), "]\n");
-    //sprintf(write_buffer, "%d\n", predicted_value);
     fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
 }
 
@@ -53,7 +52,8 @@ int RunPredictor(image *hIMG, image *result)
     time_t start;
     time_t end;
     dim3 size = hIMG->size;
-
+    
+    printf("Logging to logs/c-debug.LOG.\n");
     fp = fopen("../logs/c-debug.LOG", "w");
 
     start = time(NULL);

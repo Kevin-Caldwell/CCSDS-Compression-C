@@ -1,11 +1,13 @@
 import csv_io
 import sys
+import numpy as np
 
 def CompareResults(c_pred_file, python_pred_file):
     c_img = csv_io.ReadCSV(c_pred_file)
     python_img = csv_io.ReadCSV(python_pred_file)
 
     difference = (c_img - python_img)
+    print(np.nonzero(difference))
     return (difference.std())
 
 if __name__ == "__main__":
