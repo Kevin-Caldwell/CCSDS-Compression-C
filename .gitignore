@@ -2,7 +2,7 @@ build/**
 python/images/**
 python/venv/**
 python/*.csv
-test-images/**
 python/__pycache__
-logs/**
-results/**
+data/logs/**
+data/results/**
+data/test-images/**

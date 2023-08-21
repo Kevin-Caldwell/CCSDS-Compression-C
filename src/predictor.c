@@ -54,7 +54,7 @@ int RunPredictor(image *hIMG, image *result)
     dim3 size = hIMG->size;
     
     printf("Logging to logs/c-debug.LOG.\n");
-    fp = fopen("../logs/c-debug.LOG", "w");
+    fp = fopen("../data/logs/c-debug.LOG", "w");
 
     start = time(NULL);
     for (int i = 0; i < size.z; i++)

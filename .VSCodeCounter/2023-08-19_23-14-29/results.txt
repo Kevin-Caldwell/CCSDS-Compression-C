@@ -1,0 +1,99 @@
+Date : 2023-08-19 23:14:29
+Directory : /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C
+Total : 58 files,  2142 codes, 399 comments, 720 blanks, all 3261 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| C                |         37 |      1,315 |        330 |        481 |      2,126 |
+| Python           |          9 |        601 |         59 |        188 |        848 |
+| pip requirements |          1 |        135 |          0 |          1 |        136 |
+| C++              |          5 |         75 |          2 |         39 |        116 |
+| Shell Script     |          5 |         16 |          8 |         10 |         34 |
+| Markdown         |          1 |          0 |          0 |          1 |          1 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                              | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                 |         58 |      2,142 |        399 |        720 |      3,261 |
+| . (Files)                                                                                                         |          7 |        151 |          8 |         12 |        171 |
+| include                                                                                                           |         22 |        398 |        100 |        242 |        740 |
+| include/cache                                                                                                     |          1 |         19 |          0 |         12 |         31 |
+| include/constants                                                                                                 |          3 |         81 |         41 |         57 |        179 |
+| include/dst                                                                                                       |          1 |         24 |          0 |         12 |         36 |
+| include/encoder                                                                                                   |          4 |         56 |          1 |         26 |         83 |
+| include/files                                                                                                     |          3 |         29 |          1 |         25 |         55 |
+| include/math                                                                                                      |          2 |         55 |          5 |         32 |         92 |
+| include/predictor                                                                                                 |          6 |        105 |         52 |         57 |        214 |
+| include/testing                                                                                                   |          2 |         29 |          0 |         21 |         50 |
+| python                                                                                                            |          9 |        601 |         59 |        188 |        848 |
+| src                                                                                                               |         20 |        992 |        232 |        278 |      1,502 |
++-------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                                          | language         | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/README.md                                   | Markdown         |          0 |          0 |          1 |          1 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/build_routine.sh                            | Shell Script     |          3 |          1 |          0 |          4 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/generate_test_cases.sh                      | Shell Script     |          3 |          2 |          2 |          7 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/cache/cache_predictor.h             | C                |         19 |          0 |         12 |         31 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/constants/constants.h               | C                |         45 |         22 |         29 |         96 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/constants/encoder_constants.h       | C                |         30 |         19 |         25 |         74 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/constants/global_constants.h        | C++              |          6 |          0 |          3 |          9 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/dst/image.h                         | C                |         24 |          0 |         12 |         36 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/encoder/body.h                      | C++              |         35 |          1 |         12 |         48 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/encoder/encoder.h                   | C                |          3 |          0 |          3 |          6 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/encoder/encoder_helper_functions.h  | C                |          7 |          0 |          5 |         12 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/encoder/header.h                    | C++              |         11 |          0 |          6 |         17 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/files/csv-io.h                      | C++              |         10 |          0 |          7 |         17 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/files/file_IO.h                     | C++              |         13 |          1 |         11 |         25 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/files/logs.h                        | C                |          6 |          0 |          7 |         13 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/math/linear_algebra.h               | C                |         15 |          0 |         12 |         27 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/math/math_functions.h               | C                |         40 |          5 |         20 |         65 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/local_differences.h       | C                |         24 |          0 |         11 |         35 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/local_sum.h               | C                |          8 |          0 |          4 |         12 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/predictor.h               | C                |         22 |         51 |         16 |         89 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/quantizer.h               | C                |         13 |          0 |          6 |         19 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/sample_representative.h   | C                |         16 |          1 |         10 |         27 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/predictor/weights.h                 | C                |         22 |          0 |         10 |         32 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/testing/generate_image.h            | C                |         15 |          0 |         10 |         25 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/include/testing/synthetic_image_generator.h | C                |         14 |          0 |         11 |         25 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/compression.py                       | Python           |        266 |         25 |         80 |        371 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/csv_io.py                            | Python           |         33 |          0 |         10 |         43 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/display_debugging.py                 | Python           |         26 |          0 |         16 |         42 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/file_compare.py                      | Python           |         17 |          0 |          7 |         24 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/file_stats.py                        | Python           |         16 |          3 |          5 |         24 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/helperlib.py                         | Python           |         14 |          3 |          5 |         22 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/predictor_eg.py                      | Python           |         18 |          7 |          4 |         29 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/prepare_hImage.py                    | Python           |        100 |         10 |         30 |        140 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/python/test_compression.py                  | Python           |        111 |         11 |         31 |        153 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/requirements.txt                            | pip requirements |        135 |          0 |          1 |        136 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/run_c_predictor.sh                          | Shell Script     |          2 |          2 |          0 |          4 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/run_python_predictor.sh                     | Shell Script     |          1 |          0 |          0 |          1 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/cache_predictor.c                       | C                |         41 |          0 |         11 |         52 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/constants.c                             | C                |         20 |          0 |          8 |         28 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/csv-io.c                                | C                |         68 |          0 |         26 |         94 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/encoder_body.c                          | C                |          0 |        219 |         24 |        243 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/encoder_constants.c                     | C                |          2 |          0 |          1 |          3 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/encoder_helper.c                        | C                |         14 |          0 |          3 |         17 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/file_IO.c                               | C                |         18 |          0 |          7 |         25 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/generate_image.c                        | C                |         81 |          2 |         30 |        113 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/header.c                                | C                |         75 |          1 |         25 |        101 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/image.c                                 | C                |         21 |          2 |          4 |         27 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/linear_algebra.c                        | C                |         33 |          0 |          9 |         42 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/local_differences.c                     | C                |         85 |          0 |         15 |        100 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/local_sum.c                             | C                |         68 |          2 |          7 |         77 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/main.c                                  | C                |         41 |          1 |          8 |         50 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/math_functions.c                        | C                |         13 |          0 |          4 |         17 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/predictor.c                             | C                |         62 |          0 |         15 |         77 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/quantizer.c                             | C                |         49 |          0 |         13 |         62 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/sample_representative.c                 | C                |         33 |          1 |          8 |         42 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/synthetic_image_generator.c             | C                |        212 |          4 |         49 |        265 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/src/weights.c                               | C                |         56 |          0 |         11 |         67 |
+| /home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C/test_predictors.sh                          | Shell Script     |          7 |          3 |          8 |         18 |
+| Total                                                                                                             |                  |      2,142 |        399 |        720 |      3,261 |
++-------------------------------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

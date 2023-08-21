@@ -6,9 +6,9 @@
 #define UNSIGNED_SAMPLES
 
 // Image Size Constants
-#define Nx ((uint16_t) 100) // 100 //640
-#define Ny ((uint16_t) 100) // 100 //512
-#define Nz ((uint16_t) 100) // 100 //640
+#define Nx ((uint16_t) 640) // 100 //640
+#define Ny ((uint16_t) 512) // 100 //512
+#define Nz ((uint16_t) 640) // 100 //640
 
 //* Uncomment if Lossless compression is required
 #define LOSSLESS

@@ -3,7 +3,7 @@
 
 void GenerateTest(dim3 size, int index){
     char filename[100];
-    sprintf(filename, "../test-images/TEST_%lux%lux%lu_%d.csv", 
+    sprintf(filename, "../data/test-images/TEST_%lux%lux%lu_%d.csv", 
                                         size.x, size.y, size.z, index);
     image* testImage;
     InitImage(&testImage, size.x, size.y, size.z);
@@ -67,14 +67,12 @@ int TEST_1()
     char filename[80];
     for (int i = 0; i < CACHE_SPACES; i++)
     {
-        sprintf(filename, "../results/%s", CacheFiles[i]);
+        sprintf(filename, "../data/results/%s", CacheFiles[i]);
         SaveImageAsCSV(global_cache->cache_space[i], filename);
     }
 
     DeletePredictorCache(global_cache);
-    free(predicted_values);
-
-    
+    free(predicted_values);    
 
     return 0;
 }

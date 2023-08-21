@@ -3,6 +3,7 @@
 #define TESTING_MATH
 
 #include "testing/generate_image.h"
+#include "encoder/body.h"
 
 void TestingCriteria(char **argS)
 {
@@ -32,8 +33,8 @@ int main(int argInt, char **argS)
             char res_buf[200];
             char s_buf[200];
             
-            sprintf(res_buf, "../results/CRESULT%s_predicted.csv", argS[2]);
-            sprintf(s_buf, "../test-images/TEST%s.csv", argS[2]);
+            sprintf(res_buf, "../data/results/CRESULT%s_predicted.csv", argS[2]);
+            sprintf(s_buf, "../data/test-images/TEST%s.csv", argS[2]);
             
             PredictImage(s_buf, res_buf);
         } else{
@@ -42,7 +43,7 @@ int main(int argInt, char **argS)
     } else{
 
         // Base Case if no command line aguments are given.
-        PredictImage("../test-images/TEST_100x200x100_0.csv", "../results/CRESULT_100x200x100_0_predicted.csv");
+        PredictImage("../data/test-images/TEST_100x200x100_0.csv", "../results/CRESULT_100x200x100_0_predicted.csv");
     }
 
     return 0;

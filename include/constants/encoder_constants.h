@@ -51,7 +51,7 @@
 
 
 /***********************ENTROPY CODER***************************/
-#define UNARY_LENGTH_LIMIT BPOW(5)
+//#define UNARY_LENGTH_LIMIT BPOW(5)
 #define RESCALING_COUNTER_SIZE 1 
 #define INITIAL_COUNT_EXPONENT 1
 #define ACCUMULATOR_INITIALIZATION 0b1111
@@ -59,5 +59,15 @@
 
 
 extern const int B;
+
+/*************SAMPLE-ADAPTIVE ENTROPY CODER*********************/
+
+#define INITIAL_COUNT_EXPONENT 1
+#define ACCUMULATOR_INITIALIZATION_CONSTANT 14
+#define UNARY_LENGTH_LIMIT 8
+
+extern uint U_max;
+extern int K;
+extern int Gamma1;
 
 #endif /* ENCODER_CONSTANTS_H */

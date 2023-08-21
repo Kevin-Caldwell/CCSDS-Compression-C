@@ -163,7 +163,7 @@ def predictor(data):
     Nz = data.shape[2]
     mapped = np.empty_like(data)
 
-    fp = open("logs/python-debug.LOG", "w")
+    #fp = open("data/logs/python-debug.LOG", "w")
 
     for z in range(0,Nz):
         print(f"Predicting..... z = {z}/{Nz}", end='\r')
@@ -178,10 +178,10 @@ def predictor(data):
                 mapped[x, y, z] = mapper(data[x, y, z] - s_hat, s_hat, s_tilde)
                 weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
 
-                fp.write(f"({x},{y},{z}), {ld_vector},{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {s_tilde}, {hrps}, {weight_vector.astype('int64')}\n")
+                #fp.write(f"({x},{y},{z}), {ld_vector},{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {s_tilde}, {hrps}, {weight_vector.astype('int64')}\n")
                 
                 
-    fp.close()
+    #fp.close()
     return mapped
 
 def predictor_debug(data):
@@ -229,7 +229,7 @@ def encoder(mapped_delta):
     encoded = []
     
     for z in range(0, Nz):
-        print("Encoding..... z =", z)
+        print("Encoding..... z =", z, end='\r')
         for y in range(0,Ny):
             for x in range(0,Nx):
                 t = y * Nx + x
@@ -262,6 +262,7 @@ def encoder(mapped_delta):
                     gamma = np.floor((gamma + 1) / 2)
     
     # Omitted last codeword fill bits
+    print()
     return encoded 
 
 def increment_xyz(x, y, z, Nx, Ny, Nz):
@@ -350,7 +351,7 @@ def unmapper(mapped_delta, s_hat, s_tilde):
     else:
         return (-1)**(s_tilde + 1) * (mapped_delta + 1) / 2
 
-def unpredictor(mapped, Nx, Ny, Nz):
+def unpredictor(mapped: np.array, Nx: int, Ny: int, Nz: int) -> np.array:
     data = np.zeros_like(mapped)
 
     for z in range(0,Nz):

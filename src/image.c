@@ -1,4 +1,5 @@
 #include "dst/image.h"
+#include <unistd.h>
 
 int InitImage(image** img_p, size_t x, size_t y, size_t z){
     image* img = *img_p = (image*) malloc(sizeof(image));
@@ -10,6 +11,7 @@ int InitImage(image** img_p, size_t x, size_t y, size_t z){
 }
 
 PIXEL GetPixel(image* hIMG, INDEX x, INDEX y, INDEX z){
+    //sleep(0.005);
     dim3 size = hIMG->size;
     return hIMG->data[MAP3_1(z, y, x, size)];
 }
@@ -20,5 +22,6 @@ PIXEL* GetFrame(image* hIMG, INDEX y){
 }
 
 void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data){
+    //sleep(0.01);
     hIMG->data[MAP3_1(x, y, z, hIMG->size)] = data;
 }
