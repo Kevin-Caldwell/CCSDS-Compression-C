@@ -43,7 +43,7 @@ int main(int argInt, char **argS)
     } else{
 
         // Base Case if no command line aguments are given.
-        PredictImage("../data/test-images/TEST_100x200x100_0.csv", "../results/CRESULT_100x200x100_0_predicted.csv");
+        PredictImage("../data/test-images/TEST_100x100x100_0.csv", "../results/CRESULT_100x200x100_0_predicted.csv");
     }
 
     return 0;

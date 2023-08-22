@@ -1,1 +1,0 @@
-# CCSDS-Compression-C

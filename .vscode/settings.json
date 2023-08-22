@@ -100,7 +100,8 @@
     "map": "c",
     "memory": "c",
     "logs.h": "c",
-    "semaphore": "c"
+    "semaphore": "c",
+    "stream_encoder.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

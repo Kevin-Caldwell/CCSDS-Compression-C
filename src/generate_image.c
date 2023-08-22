@@ -1,5 +1,5 @@
 #include "testing/generate_image.h"
-
+#include "encoder/body.h"
 
 void GenerateTest(dim3 size, int index){
     char filename[100];
@@ -28,6 +28,7 @@ void PredictImage(char* source, char* destination){
 
     InitImage(&result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
     RunPredictor(hIMG, result);
+    EncodeBody(result, "out.hype", "w", 20);    
 
     SaveImageAsCSV(result, destination);
 
