@@ -9,12 +9,6 @@
 
 #define Ps(z) MIN(z, kP)
 
-#ifdef REDUCED_PREDICTION_MODE
-#define C(z) (unsigned int) Ps(z)
-#else
-#define C(z) (unsigned int) Ps(z) + 3
-#endif
-
 int InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x);
 
 int32_t DoubleResolutionPredictionError(int16_t clipped_quantizer_bin_center, 

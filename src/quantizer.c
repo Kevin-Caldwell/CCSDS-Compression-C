@@ -9,36 +9,31 @@ int16_t PredictionResidual(uint16_t sample_value, uint16_t predicted_sample){
 }
 
 int32_t QuantizerIndex(uint16_t sample_value, uint16_t predicted_sample){
-#ifdef LOSSLESS
     return PredictionResidual(sample_value, predicted_sample);
 
-#else
-    SignedLongData qInd;
-    uint16_t pred_res = PredictionResidual(hIMG, z,y,x);
-    if(x == 0 && y == 0){
-        qInd = pred_res;
-    }
-    else{
-        qInd = SIGN(pred_res) * (abs(pred_res) + m_z) / (2 * m_z + 1);
-    }
-    return qInd;
-#endif
+    // SignedLongData qInd;
+    // uint16_t pred_res = PredictionResidual(hIMG, z,y,x);
+    // if(x == 0 && y == 0){
+    //     qInd = pred_res;
+    // }
+    // else{
+    //     qInd = SIGN(pred_res) * (abs(pred_res) + m_z) / (2 * m_z + 1);
+    // }
+    // return qInd;
+
 }
 
 
 uint16_t minTheta(uint32_t predicted_sample){
 
-#ifndef LOSSLESS
-    if(x == 0 && y == 0){
-        return MIN(pred_res - kSmin, kSmax - pred_res);
-    } else if (x > 0 || y > 0)
-    {
-        return  MIN((pred_res - kSmin + m_z)/(2 * m_z + 1), 
-                (kSmax - pred_res + m_z)/(2 * m_z + 1));
-    }
-#else
+    // if(x == 0 && y == 0){
+    //     return MIN(pred_res - kSmin, kSmax - pred_res);
+    // } else if (x > 0 || y > 0)
+    // {
+    //     return  MIN((pred_res - kSmin + m_z)/(2 * m_z + 1), 
+    //             (kSmax - pred_res + m_z)/(2 * m_z + 1));
+    // }
     return MIN(predicted_sample - kSmin, kSmax - predicted_sample);
-#endif
     
 }
 

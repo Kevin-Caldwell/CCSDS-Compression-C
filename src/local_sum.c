@@ -1,77 +1,84 @@
 #include "predictor/local_sum.h"
 
 // ? Completed, Needs Revision
-uint32_t FindLocalSum(image* hIMG, INDEX z, INDEX y, INDEX x)
+uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
 {
     uint32_t val = 0;
-    
-#ifdef WIDE_NEIGHBOR
-    if (y > 0 &&  0 < x && x < Nx - 1)
-    {
-        val = SR(hIMG, z, y, x-1) + SR(hIMG, z, y-1, x-1) +
-               SR(hIMG, z, y-1, x) + SR(hIMG, z, y-1, x + 1);
-    }
-    else if (y == 0 && x > 0)
-    {
-        val = 4 * SR(hIMG, z, y, x-1);
-    }
-    else if (y > 0 && x == 0)
-    {
-        val = 2 * (SR(hIMG, z, y-1, x) + SR(hIMG, z, y-1, x+1));
-    }
-    else if (y > 0 && x == Nx - 1)
-    {
-        val = SR(hIMG, z, y, x-1) + SR(hIMG, z, y-1, x - 1) + 2 * SR(hIMG, z, y-1, x);
-    } 
-    else if (y == 0 && x == 0){
-        val = 0;
-    }
-#endif
 
-#ifdef NARROW_NEIGHBOR
-    if (y > 0 &&  0 < x && x < Nx - 1)
+    if (LOCAL_SUM_TYPE == 0)
     {
-        val = SR(z, GetT(x - 1, y)) + SR(z, GetT(x - 1, y - 1)) +
-               SR(z, GetT(x, y - 1)) + SR(z, GetT(x + 1, y - 1));
+        if (y > 0 && 0 < x && x < Nx - 1)
+        {
+            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) +
+                  SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1);
+        }
+        else if (y == 0 && x > 0)
+        {
+            val = 4 * SR(hIMG, z, y, x - 1);
+        }
+        else if (y > 0 && x == 0)
+        {
+            val = 2 * (SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1));
+        }
+        else if (y > 0 && x == Nx - 1)
+        {
+            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) + 2 * SR(hIMG, z, y - 1, x);
+        }
+        else if (y == 0 && x == 0)
+        {
+            val = 0;
+        }
     }
-    else if (y == 0 && x > 0 && z > 0)
+    else if (LOCAL_SUM_TYPE == 1)
     {
-        val = 4 * SR(z, GetT(x - 1, y));
+        if (y > 0 && 0 < x && x < Nx - 1)
+        {
+            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y-1, x - 1) +
+                  SR(hIMG, z, y-1, x) + SR(hIMG, z, y-1, x + 1);
+        }
+        else if (y == 0 && x > 0 && z > 0)
+        {
+            val = 4 * SR(hIMG, z, y, x-1);
+        }
+        else if (y > 0 && x == 0)
+        {
+            val = 2 * (SR(hIMG, z, y-1, x) + SR(hIMG, z, y - 1, x+1));
+        }
+        else if (y > 0 && x == Nx - 1)
+        {
+            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x-1) + 2 * SR(hIMG, z, y-1,x);
+        }
+        else if (y == 0 && x > 0 && z == 0)
+        {
+            /* code */
+        }
     }
-    else if (y > 0 && x == 0)
+    else if (LOCAL_SUM_TYPE == 2)
     {
-        val = 2 * (SR(z, GetT(x, y - 1)) + SR_C(z, x + 1, y - 1));
+        if (y > 0)
+        {
+            val = 4 * SR(hIMG, z, y - 1, x);
+        }
+        else if (y == 0 && x > 0)
+        {
+            val = 4 * SR(hIMG, z, y, x - 1);
+        }
     }
-    else if (y > 0 && x == Nx - 1)
+    else if (LOCAL_SUM_TYPE == 3)
     {
-        val = SR(z, GetT(x - 1, y)) + SR_C(z, x - 1, y - 1) + 2 * SR(z, GetT(x, y - 1));
-    } else if (y == 0 && x > 0 && z == 0)
-    {
-        /* code */
+        if (y > 0)
+        {
+            val = 4 * SR(hIMG, z, y - 1, x);
+        }
+        else if (y == 0 && x > 0 && z > 0)
+        {
+            val = 4 * SR(hIMG, z - 1, y, x - 1);
+        }
+        else if (y == 0 && x > 0 && z == 0)
+        {
+            val = 4 * kSmid;
+        }
     }
-    
-#endif
-
-#ifdef WIDE_COLUMN
-    if(y > 0){
-        val = 4 * SR(z,y-1,x);
-    }
-    else if(y == 0 && x > 0){
-        val = 4 * SR(z,y,x-1);
-    }
-#endif
-
-#ifdef NARROW_COLUMN
-    if(y > 0){
-        val = 4 * SR(z,y-1,x);
-    } else if (y == 0 && x > 0 && z > 0)
-    {
-        val = 4 * SR(z-1,y,x-1);
-    } else if (y == 0 && x > 0 && z == 0)
-    {
-        val = 4 * Smid;
-    }
-#endif
 
     return val;
 }

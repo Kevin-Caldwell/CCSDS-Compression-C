@@ -2,9 +2,9 @@
 
 #include "encoder/encoder_helper_functions.h"
 
-int K = CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
+int K = 14;//CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
 uint U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
-int Gamma1 = BPOW(8);
+int Gamma1 = 8;
 
 GolombInt GolombPowerTwo(uint16_t j, uint16_t k){
     uint32_t u;

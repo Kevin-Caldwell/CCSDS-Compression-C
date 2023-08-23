@@ -13,7 +13,9 @@ void PrepareImageMetadata(uint8_t* essential){
     essential[5] = (uint8_t) ((uint16_t) Nz >> 8);
     essential[6] = (uint8_t) Nz % (1 << 8);
 
-#ifdef UNSIGNED_SAMPLES
+    buf = !kUnsignedSamples;
+
+#ifdef UNSIGNED_SAMPLES // TODO FIX #DEFINE
     buf = 0;
 #else
     buf = 1;
@@ -62,7 +64,7 @@ void PreparePredictorMetadata(uint8_t* predicted_metadata){
     Encode(primary, 1, kR,                                  6);
     
     Encode(primary, 2, Omega,                               4);
-    Encode(primary, 2, CHANGE_INTERVAL - 4,                 4);
+    Encode(primary, 2, Hash_GetValue(&predictor_constants, "CHANGE_INTERVAL") - 4,                 4);
 
     Encode(primary, 3, kVMin + 6,                           4);
     Encode(primary, 3, kVMax + 6,                           4);

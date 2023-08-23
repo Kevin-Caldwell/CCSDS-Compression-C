@@ -22,6 +22,7 @@ void SaveArrayAsCSV(uint16_t* data, UINT count, char* file_name){
 void SaveImageAsCSV(image* hIMG, char* file_name){
     FILE* fp;
     fp = fopen(file_name, "w");
+    printf("%s, %d\n", file_name, (int) fp);
     dim3 size = hIMG->size;
 
     char string_buffer[50];

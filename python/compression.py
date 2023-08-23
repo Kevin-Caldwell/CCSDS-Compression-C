@@ -163,7 +163,7 @@ def predictor(data):
     Nz = data.shape[2]
     mapped = np.empty_like(data)
 
-    #fp = open("data/logs/python-debug.LOG", "w")
+    fp = open("data/logs/python-debug.LOG", "w")
 
     for z in range(0,Nz):
         print(f"Predicting..... z = {z}/{Nz}", end='\r')
@@ -178,10 +178,10 @@ def predictor(data):
                 mapped[x, y, z] = mapper(data[x, y, z] - s_hat, s_hat, s_tilde)
                 weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
 
-                #fp.write(f"({x},{y},{z}), {ld_vector},{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {s_tilde}, {hrps}, {weight_vector.astype('int64')}\n")
+                fp.write(f"({x},{y},{z}), {ld_vector},{int(data[x,y,z])}, {int(s_hat)}, {int(mapped[x,y,z])}, {d}, {s_tilde}, {hrps}, {weight_vector.astype('int64')}\n")
                 
                 
-    #fp.close()
+    fp.close()
     return mapped
 
 def predictor_debug(data):

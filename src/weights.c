@@ -1,29 +1,33 @@
 #include "predictor/weights.h"
+#include <math.h>
 
 int InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x)
 {
-    InitVector(weight_ptr, C(z));
+    InitVector(weight_ptr, C);
     int32_t *weight_vector = *weight_ptr; // TODO Turn into #define for optimization?
 
-#ifndef REDUCED_PREDICTION_MODE
-    for (int i = 0; i < 3; i++)
+    if (!PREDICTION_MODE)
     {
-        weight_vector[i] = 0;
-    }
+        for (int i = 0; i < 3; i++)
+        {
+            weight_vector[i] = 0;
+        }
 
-    weight_vector[3] = 7 * (int32_t)BPOW(Omega) / 8; // ! Source of Error
+        weight_vector[3] = 7 * (int32_t)BPOW(Omega) / 8; // ! Source of Error
 
-    for (INDEX i = 4; i < C(z); i++)
-    {
-        weight_vector[i] = weight_vector[i - 1] >> 3; // ! Watch out for Indexing Issues
+        for (INDEX i = 4; i < C; i++)
+        {
+            weight_vector[i] = weight_vector[i - 1] >> 3; // ! Watch out for Indexing Issues
+        }
     }
-#else
-    weight_vector[0] = 7 * BPOW(Omega - 3);
-    for (INDEX i = 1; i < C(z); i++)
+    else
     {
-        weight_vector[i] = weight_vector[i - 1] >> 3;
+        weight_vector[0] = 7 * BPOW(Omega - 3);
+        for (INDEX i = 1; i < C; i++)
+        {
+            weight_vector[i] = weight_vector[i - 1] >> 3;
+        }
     }
-#endif
 
     return 0;
 }
@@ -45,21 +49,22 @@ int32_t WeightUpdateScalingExponent(INDEX y, INDEX x)
 
 int UpdateWeights(image *hIMG, int32_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error)
 {
-    float exp = exp2f(-WeightUpdateScalingExponent(y,x)) * SIGN_P(double_resolution_prediction_error);
+    float scaling_exponent = -WeightUpdateScalingExponent(y, x);
+    float exp = exp2f(scaling_exponent) * SIGN_P(double_resolution_prediction_error);
 
     for (int i = 0; i < 3; i++)
     {
-        float val = floor((exp * (float) DLD(hIMG, z, y, x, i) + 1)/2);
+        float val = floor((exp * (float)DLD(hIMG, z, y, x, i) + 1) / 2);
         weights[i] += val;
     }
 
-    for (int i = 3; i < C(z); i++)
+    for (int i = 3; i < C; i++)
     {
-        float val = floor((exp * (float) CentralLocalDifference(hIMG, z-i+2, y, x) + 1)/2);
+        float val = floor((exp * (float)CentralLocalDifference(hIMG, z - i + 2, y, x) + 1) / 2);
         weights[i] += val;
     }
 
-    for (int i = 0; i < C(z); i++)
+    for (int i = 0; i < C; i++)
     {
         weights[i] = CLIP(weights[i], kOmegaMin, kOmegaMax);
     }

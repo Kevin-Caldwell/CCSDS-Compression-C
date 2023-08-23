@@ -10,12 +10,6 @@
 
 #define Ps(z) MIN(z, kP)
 
-#ifdef REDUCED_PREDICTION_MODE
-#define C(z) (unsigned int) Ps(z)
-#else
-#define C(z) (unsigned int) Ps(z) + 3
-#endif
-
 enum DIRECTION { N = 0, W, NW };
 
 #define DLD(hIMG, z,y,x,d)    DirectionalLocalDifference(hIMG, z,y,x,d)

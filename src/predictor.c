@@ -4,6 +4,7 @@
 #include <string.h>
 
 FILE *fp;
+int C = 0;
 
 void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 {
@@ -37,8 +38,8 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 
     char write_buffer[1000];
 
-    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d,[", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample);
-    for (int i = 0; i < C(z); i++)
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d, %ld, [", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+    for (int i = 0; i < C; i++)
     {
         sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
     }
@@ -48,17 +49,26 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 
 int RunPredictor(image *hIMG, image *result)
 {
+    InitalizeImageConstants(hIMG->size);
+    LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
+    InitalizePredictorConstants();
     printf("Running C Predictor.\n");
     time_t start;
     time_t end;
     dim3 size = hIMG->size;
-    
+
     printf("Logging to logs/c-debug.LOG.\n");
     fp = fopen("../data/logs/c-debug.LOG", "w");
 
     start = time(NULL);
     for (int i = 0; i < size.z; i++)
     {
+        if(!PREDICTION_MODE){
+            C = Ps(i) + 3;
+        } else{
+            C = Ps(i);
+        }
+
         for (int j = 0; j < size.y; j++)
         {
             for (int k = 0; k < size.x; k++)

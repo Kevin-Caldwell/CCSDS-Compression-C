@@ -1,8 +1,6 @@
 #include "predictor/sample_representative.h"
 #include <stdio.h>
 
-data_t offset[Nz];
-data_t damping[Nz];
 
 // TODO REMOVE, Use GetPixel instaed
 data_t SampleRepresentative(uint16_t sample_value){
@@ -28,11 +26,11 @@ uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x,
 }
 
 int64_t HighResolutionPredictedSample(int32_t predicted_central_local_difference, uint32_t local_sum){
-    int64_t temp1 = (int64_t)predicted_central_local_difference + BPOW(Omega) * ((int64_t) local_sum - (int64_t) (4 * kSmid));
+    int64_t temp1 = (int64_t)predicted_central_local_difference + (int64_t) BPOW(Omega) * ((int64_t) local_sum - (int64_t) (4 * kSmid));
     int64_t mod = (temp1 + (1L << (kR-1))) % (1L << (kR));
     mod = (mod < 0) ? (mod + (1L << (kR))) : mod;
     int64_t temp2 = mod - (1L << (kR - 1));//MOD(temp1, ((int64_t) kR));
-    int64_t temp3 = temp2 + (uint64_t) BPOW(Omega + 2) * (uint64_t) kSmid + (uint64_t) BPOW(Omega + 1);
+    int64_t temp3 = temp2 + (int64_t) BPOW(Omega + 2) * (int64_t) kSmid + (int64_t) BPOW(Omega + 1);
 
     int64_t hrps_max = BPOW(Omega+2) * (int64_t) kSmax + BPOW(Omega+1);
     int64_t hrps_min = BPOW(Omega + 2) * kSmin;

@@ -9,16 +9,14 @@
 #include <stdio.h>
 #include <time.h>
 
-
-
-int TEST_1();
-
 void TestHeader();
 void TestReadImage();
 void PredictImage(char* source, char* destination);
 
-void GenerateTest(dim3 size, int index);
+void EncodeImage(char* source, char* destination);
 
-void BenchmarkVoronoi();
+void CompressImage(char* source, char* destination);
+
+void GenerateTest(dim3 size, int index);
 
 #endif /* GENERATE_IMAGE_H */
