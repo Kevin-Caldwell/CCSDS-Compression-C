@@ -227,12 +227,16 @@ def encoder(mapped_delta):
     Ny = mapped_delta.shape[1]
     Nz = mapped_delta.shape[2]
     encoded = []
+
+    f = open("data/logs/python-encoder-debug.LOG", "w")
     
     for z in range(0, Nz):
         print("Encoding..... z =", z, end='\r')
         for y in range(0,Ny):
             for x in range(0,Nx):
                 t = y * Nx + x
+                if x==46 and y==76 and z==62:
+                    g =  1
                 
                 if t == 0:
                     gamma = 2**GAMMA_0 # Counter value
@@ -240,6 +244,7 @@ def encoder(mapped_delta):
 
                     codeword = helperlib.dec_to_bin(mapped_delta[x, y, z], D)
                     encoded += codeword
+                    f.write(str(codeword))
                     continue
 
                 # Eq(62) Set k_z, code index
@@ -252,6 +257,7 @@ def encoder(mapped_delta):
                             break
 
                 encoded += GPO2(k_z, mapped_delta[x, y, z])
+                f.write(f"({x},{y},{z}): {str(GPO2(k_z, mapped_delta[x, y, z]))}, {k_z}, {gamma}, {epsilon_z}\n")
 
                 # Update counter and accumulator values after each pixel, according to section 5.4.3.2.3
                 if (gamma < 2**GAMMA_STAR - 1):
@@ -263,6 +269,7 @@ def encoder(mapped_delta):
     
     # Omitted last codeword fill bits
     print()
+    print(f"Ratio: {int(len(encoded) / 8)}/{int(Nx * Ny * Nz * D / 8)}", (1 - len(encoded) / (Nx * Ny * Nz * D)) * 100)
     return encoded 
 
 def increment_xyz(x, y, z, Nx, Ny, Nz):
@@ -358,14 +365,19 @@ def unpredictor(mapped: np.array, Nx: int, Ny: int, Nz: int) -> np.array:
         print("Unpredicting..... z =", z)
         for y in range(0,Ny):
             for x in range(0, Nx):
+                if (x == 36 and y == 71 and z == 16):
+                    g =  1
+                
                 t = y * Nx + x
                 if t == 0:
                     weight_vector = init_weight_vector(z)
 
                 ld_vector = local_diff_vector(x, y, z, data)
-                s_hat, s_tilde = prediction(ld_vector, weight_vector, x, y, z, data)
+                s_hat, s_tilde, d, hrps = prediction(ld_vector, weight_vector, x, y, z, data)
                 delta = unmapper(mapped[x, y, z], s_hat, s_tilde)
 
                 data[x, y, z] = s_hat + delta
                 weight_vector = updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data)
+                if (x == 1 and y == 0 and z == 1):
+                    print(f"ld_vec: {ld_vector}\npredicted_sample: {s_hat}\npcld: {d}\ndelta: {delta}, weights: {weight_vector}\n")
     return data

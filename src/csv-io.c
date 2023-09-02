@@ -48,6 +48,7 @@ void SaveImageAsCSV(image* hIMG, char* file_name){
 void ReadImageFromCSV(image** hIMG, char* file_name){
     FILE *fp;
     fp = fopen(file_name, "r");
+    printf("%d\n", (int) fp);
     dim3 size =  {0,0,0};
     char read_buffer = 1;
 

@@ -23,6 +23,8 @@ PIXEL* GetFrame(image* hIMG, INDEX y);
 
 void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 
+int Image_Equals(image* img1, image* img2);
+
 #define S(hIMG, z,y,x) GetPixel(hIMG, x,y,z)
 
 typedef struct image2{

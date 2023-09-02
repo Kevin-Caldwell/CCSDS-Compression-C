@@ -37,6 +37,26 @@ uint16_t minTheta(uint32_t predicted_sample){
     
 }
 
+int32_t QuantizerIndexUnmapper(uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)
+{
+    
+    int32_t theta = minTheta(predicted_sample);
+    int a = drps % 2 ? -1 : 1;
+
+    if(mapped_delta - theta > theta){
+        if(theta == predicted_sample){
+            return mapped_delta - theta;
+        } else{
+            return theta - mapped_delta;
+        }
+    }
+    else if(mapped_delta % 2){
+        return (((drps + 1) % 2) ? (-1) : (1)) * (mapped_delta + 1) / 2;
+    } else {
+        return (((drps) % 2) ? (-1) : (1)) * (mapped_delta) / 2;
+    }
+}
+
 
 data_t MappedQuantizerIndex(int32_t quantizer_index, 
             int32_t predicted_sample, 

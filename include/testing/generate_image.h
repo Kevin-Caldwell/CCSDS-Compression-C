@@ -17,6 +17,6 @@ void EncodeImage(char* source, char* destination);
 
 void CompressImage(char* source, char* destination);
 
-void GenerateTest(dim3 size, int index);
+void GenerateVoronoiImage(dim3 size, int index, int points);
 
 #endif /* GENERATE_IMAGE_H */

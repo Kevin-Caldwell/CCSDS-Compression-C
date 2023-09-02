@@ -1,13 +1,13 @@
 #include "testing/generate_image.h"
 #include "encoder/body.h"
 
-void GenerateTest(dim3 size, int index){
+void GenerateVoronoiImage(dim3 size, int index, int points){
     char filename[100];
-    sprintf(filename, "../data/test-images/TEST_%lux%lux%lu_%d.csv", 
+    sprintf(filename, "../data/test-images/VORONOI_%lux%lux%lu_%d.csv", 
                                         size.x, size.y, size.z, index);
     image* testImage;
     InitImage(&testImage, size.x, size.y, size.z);
-    GenerateVoronoiFlat3DLocal(testImage, size.x * size.y * size.z / 180000);
+    GenerateVoronoiFlat3DLocal(testImage, points);
 
     SaveImageAsCSV(testImage, filename);
     free(testImage->data);

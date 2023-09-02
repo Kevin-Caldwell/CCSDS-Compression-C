@@ -1,0 +1,1 @@
+python3 python/mat_to_csv.py data/test-images/Indian_pines.mat indian_pines

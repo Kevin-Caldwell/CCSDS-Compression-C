@@ -9,17 +9,18 @@ if __name__ == "__main__":
     print("_________PYTHON PREDICTOR_________")
     n = len(sys.argv)
     if(n > 1):
-        data = ReadCSV(f"data/test-images/TEST{sys.argv[1]}.csv")
+        data = ReadCSV(sys.argv[1])
         Nx, Ny, Nz = data.shape
 
         python_predicted = comp.predictor(data)
-        SaveCSV(python_predicted, f"data/results/PYTHONRESULT{sys.argv[1]}_predicted.csv")
+        SaveCSV(python_predicted, sys.argv[2])
     else:
-        data = ReadCSV("data/test-images/TEST_100x100x100_0.csv")
-        Nx, Ny, Nz = data.shape
+        python_predicted = ReadCSV("data/test-images/indian_pines.csv")
+        Nx, Ny, Nz = python_predicted.shape
 
-        python_predicted = comp.predictor(data)
-        SaveCSV(python_predicted, "data/results/PYTHONRESULT_100x100x100_0_predicted.csv")
+        # python_predicted = comp.predictor(data)
+        encoded = comp.predictor(python_predicted)
+        SaveCSV(python_predicted, "data/results/PYTHONRESULT_indian_pines_predicted.csv")
     #data1 = ReadCSV("results/PYTHONRESULT_100x100x100_0_predicted.csv")
     #print(np.equal(data, data1).std())
     #SaveCSV(python_residuals, "./python_residuals.csv")

@@ -50,7 +50,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 int RunPredictor(image *hIMG, image *result)
 {
     InitalizeImageConstants(hIMG->size);
-    LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
+    LoadConstantFile(PREDICTOR_CONSTANTS_LOCATION, &predictor_constants);
     InitalizePredictorConstants();
     printf("Running C Predictor.\n");
     time_t start;
@@ -76,7 +76,9 @@ int RunPredictor(image *hIMG, image *result)
                 Predict(hIMG, result, i, j, k);
             }
         }
-        printf("\rGenerated %d/%d of Image.", (int)(i + 1), (int)hIMG->size.x);
+        time_t time_elapsed = time(NULL) - start;
+        time_t time_left = time_elapsed * (Nz - i - 1) / (i + 1);
+        printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(i + 1), (int)hIMG->size.z, time_elapsed, time_left);
         fflush(stdout);
     }
     fclose(fp);

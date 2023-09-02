@@ -4,7 +4,7 @@
 #include "constants/load_constants.h"
 
 #define GLOBAL_CONSTANTS_LOCATION           "/global.CONST"
-#define PREDICTOR_CONSTANTS_LOCATION        "/predictor.CONST"
+#define PREDICTOR_CONSTANTS_LOCATION        "../data/constants/predictor.CONST"
 #define ENCODER_CONSTANTS_LOCATION          "/encoder.CONST"
 
 extern HashTable predictor_constants;

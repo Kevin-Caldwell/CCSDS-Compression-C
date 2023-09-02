@@ -104,7 +104,9 @@
     "stream_encoder.h": "c",
     "load_constants.h": "c",
     "hash_table.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "decode.h": "c",
+    "reconstructor.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

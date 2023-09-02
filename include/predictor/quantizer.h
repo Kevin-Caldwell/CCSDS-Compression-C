@@ -12,6 +12,10 @@ data_t MappedQuantizerIndex(int32_t quantizer_index,
             int32_t predicted_sample, 
             uint32_t double_res_predicted_sample);
 
+int32_t QuantizerIndexUnmapper(uint16_t mapped_delta, 
+            uint16_t predicted_sample, 
+            int32_t drps);
+
 int16_t PredictionResidual(uint16_t sample_value, uint16_t predicted_sample);
 uint16_t ClippedQuantizerBinCenter(uint16_t sample_value);
 

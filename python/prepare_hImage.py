@@ -83,7 +83,7 @@ def wavelength_to_rgb(wavelength, gamma=0.8):
 #    "clipped_quanitzer_bin_center",
 #    "predictor", "quantizer_index"]
 
-CacheFiles = ["raw", "local-sums", "predictor", "central_local_difference"]
+CacheFiles = [[]]
 
 #file_index = 7
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     for file_index in range(len(CacheFiles)):
         print("Starting Display Image..")   
 
-        data = ReadCSV(f"build/{CacheFiles[file_index]}.csv")
+        data = ReadCSV(f"data/test-images/VORONOI_640x512x640_1000.csv")
         #print(data)
 
         Nx,Ny,Nz = data[0], data[1], data[2]
@@ -134,6 +134,7 @@ if __name__ == "__main__":
                     d = wavelength_to_rgb(int(v))
                     pixels[i,j] = (d) # Set the colour accordingly
             img.save(f"python/images/{CacheFiles[file_index]}{z}.png")
+            img.show()
             del img
     
 
