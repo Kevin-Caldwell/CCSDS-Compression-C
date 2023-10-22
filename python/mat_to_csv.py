@@ -24,4 +24,4 @@ if __name__ == "__main__":
     print(argS)
     if(len(argS) > 1):
         data = load_pic(argS[1], argS[2])
-        csv_io.SaveCSV(data, f"{argS[2]}.csv")
+        csv_io.SaveCSV(data, f"{argS[3]}.csv")
