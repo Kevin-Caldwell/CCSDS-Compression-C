@@ -9,7 +9,7 @@ S_MID = 2**(D - 1)
 
 P = 3 #  number of previous bands used for prediction (between 2-15)
 W_RES = 19 # Omega, between 4 and 19
-W_MIN = -(2**(W_RES + 1)) # W_MIN and W_MAX values are used in weight updates (Equation 30)
+W_MIN = -(2**(W_RES + 2)) # W_MIN and W_MAX values are used in weight updates (Equation 30)
 W_MAX = 2**(W_RES + 2) - 1
 R = 35 # User-defined parameter from max{32, 2^(D + W_RES + 1)} to 64
 M = 0 # Maximum Error
@@ -134,7 +134,7 @@ def updated_weight_vector(s_tilde, weight_vector, ld_vector, x, y, z, data):
     dr_e = 2 * data[x, y, z] - s_tilde
 
     # Eq(50) the weight update scaling exponent is calculated
-    # Using Eq(35) from older version of compression algorithm  
+    # Using Eq(34) from older version of compression algorithm  
     w_exp = np.clip(V_MIN + np.floor((t - Nx) / T_INC), V_MIN, V_MAX) + D - W_RES
     base = (helperlib.sign(dr_e)) * (2**(-(w_exp)))
 
