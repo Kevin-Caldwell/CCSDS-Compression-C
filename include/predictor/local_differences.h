@@ -23,6 +23,6 @@ int32_t DirectionalLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x, int d
 
 int LocalDirectionVector(image* hIMG, int32_t** local_direction_vector, INDEX z, INDEX y, INDEX x);
 
-uint32_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
+int64_t PredictedCentralLocalDifference(image* hIMG, INDEX z, INDEX y, INDEX x);
 
 #endif /* LOCAL_DIFFERENCES_H */

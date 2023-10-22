@@ -14,7 +14,7 @@ int AddVectors(data_t* v1, data_t* v2, data_t* res, UINT size);
 
 int SubtractVectors(data_t* v1, data_t* v2, data_t* res, UINT size);
 
-uint32_t InnerProduct(int32_t* v1, int32_t* v2, UINT size);
+int64_t InnerProduct(int32_t* v1, int32_t* v2, UINT size);
 
 int ScalarProduct(data_t* v, data_t scalar, data_t* res, UINT size);
 

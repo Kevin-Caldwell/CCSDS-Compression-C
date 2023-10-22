@@ -18,7 +18,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
     data_t raw_data = GetPixel(hIMG, x, y, z);
     uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
 
-    int32_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x);
+    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x);
 
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);
@@ -38,7 +38,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 
     char write_buffer[1000];
 
-    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d, %ld, [", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
     for (int i = 0; i < C; i++)
     {
         sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
