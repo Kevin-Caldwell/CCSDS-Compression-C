@@ -106,7 +106,8 @@
     "hash_table.h": "c",
     "string.h": "c",
     "decode.h": "c",
-    "reconstructor.h": "c"
+    "reconstructor.h": "c",
+    "decoder.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {
@@ -114,5 +115,6 @@
   },
   "python.formatting.provider": "none",
   "cmake.sourceDirectory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C",
-  "python.analysis.typeCheckingMode": "off"
+  "python.analysis.typeCheckingMode": "off",
+  "nvidia-smi-plus.refresh.autoRefresh": true
 }

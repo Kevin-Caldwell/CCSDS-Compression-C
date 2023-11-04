@@ -1,3 +1,22 @@
+/**
+ * encoder_constants.h
+ * @author @Kevin-Caldwell
+ * 
+ * Contains all Encoder-Specific Constants
+ * 
+ * Uses
+ *  Encoder Abstraction
+ * 
+ * Dependencies
+ *  math_functions.h
+ *  constants.h
+ * 
+ * TODO
+ *  Determine Encoder-Specific Constants
+ *  Add Effects of Constants in Comments
+ * 
+*/
+
 #ifndef ENCODER_CONSTANTS_H
 #define ENCODER_CONSTANTS_H
 

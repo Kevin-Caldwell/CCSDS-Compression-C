@@ -1,8 +1,34 @@
-#ifndef DECODE_H
-#define DECODE_H
+/**
+ * decoder.h
+ * @authors @Kevin-Caldwell
+ * 
+ * Functions for Decoding an image from a .HSP file
+ * 
+ * Features
+ *  Functions for Independently Decoding the Header and Body, or both
+ *  if necessary.
+ * 
+ * Uses
+ *  Core File of the Decoder Module
+ * 
+ * Dependencies
+ *  image.h
+ * 
+ * Internal Dependencies
+ *  stdio.h
+ *  inttypes.h
+ * 
+ * TODO
+ *  Finish Decoder_DecodeBody
+ *  Finish Decoder_DecodeHeader
+ *  Finish Decoder_DecodeImage
+*/
+
+#ifndef DECODER_H
+#define DECODER_H
 
 #include "dst/image.h"
 
 void Decoder_DecodeBody(image* predicted_samples, const char* file_name);
 
-#endif /* DECODE_H */
+#endif /* DECODER_H */

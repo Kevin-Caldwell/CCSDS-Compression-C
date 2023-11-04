@@ -3,7 +3,6 @@
 #define TESTING_MATH
 
 #include "constants/load_constants.h"
-
 #include "testing/generate_image.h"
 #include "decompressor/reconstructor.h"
 
@@ -31,10 +30,7 @@ int main(int argInt, char **argS)
     else
     {
         printf("Running Base Case.\n");
-        // Base Case if no command line aguments are given.
         PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
-        //TestReconstructor("../data/test-images/TEST_100x100x100_0.csv");
-        // EncodeImage("../data/results/CRESULT_100x100x100_0_predicted.csv", "../data/results/CRESULT_100x100x100_0_encoded.hsp");
     }
 
     return 0;

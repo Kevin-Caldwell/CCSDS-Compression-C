@@ -1,3 +1,27 @@
+/**
+ * image.h
+ * @authors @Kevin-Caldwell
+ * 
+ * Image Structure for Storing 3D bitmaps with a 
+ * maximum dynamic range of 16 bits
+ * 
+ * Features
+ *  Initialize Image
+ *  Get/Set Pixels
+ *  Image Compare
+ *  Coordinate Transform from x,y,z to t,z
+ * 
+ * Uses
+ *  Raw Data
+ *  Predicted Image
+ * 
+ * Dependencies
+ *  math_functions.h
+ *  constants.h
+ *  stdlib.h
+ * 
+*/
+
 #ifndef IMAGE_H
 #define IMAGE_H
 

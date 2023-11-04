@@ -1,3 +1,27 @@
+/**
+ * linear_algebra.h
+ * @author Kevin Caldwell
+ * 
+ * Skeleton File for Generic Vector Operations.
+ * 
+ * Features
+ *  Initialization
+ *  Deletion
+ *  Addition
+ *  Subtraction
+ *  Scalar Product
+ *  Inner Product (Dot Product)
+ * 
+ * Uses
+ *  Local Difference Vector
+ *  Weight Vector
+ * 
+ * Dependencies
+ *  constants.h
+ *  math_functions.h 
+*/
+
+
 #ifndef LINEAR_ALGEBRA_H
 #define LINEAR_ALGEBRA_H
 #include "constants/constants.h"

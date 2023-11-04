@@ -1,8 +1,23 @@
+/**
+ * encoder_helper_functions.h
+ * @author @Kevin-Caldwell
+ * 
+ * Global Functions for Encoding the image
+ * 
+ * Features
+ *  Print a byte in Binary
+ *  Encode n bit data into m bit buffer, n < 8, data < 8
+ * 
+ * Dependencies
+ *  inttypes.h
+ *  stdio.h
+*/
+
 #ifndef ENCODER_HELPER_FUNCTIONS_H
 #define ENCODER_HELPER_FUNCTIONS_H
 
 #include <inttypes.h>
-#include "stdio.h"
+#include <stdio.h>
 
 void PrintBinary(uint8_t byte);
 

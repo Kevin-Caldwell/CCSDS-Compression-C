@@ -31,7 +31,8 @@ def ReadCSV(filename):
 
     numbers = np.array(data, dtype=int)
     del data
-    numbers.resize((Nx,Ny,Nz))
+    #numbers.resize((Nx,Ny,Nz))
+    numbers = numbers.reshape((Nx,Ny,Nz))
 
     return numbers
 
