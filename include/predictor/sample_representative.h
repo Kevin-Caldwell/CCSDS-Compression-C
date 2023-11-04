@@ -21,6 +21,6 @@ uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x,
 
 uint16_t PredictedSample(uint32_t double_resolution_predicted_sample);
 
-int64_t HighResolutionPredictedSample(int32_t predicted_central_local_difference, uint32_t local_sum);
+int64_t HighResolutionPredictedSample(int64_t predicted_central_local_difference, uint32_t local_sum);
 
 #endif /* SAMPLE_REPRESENTATIVE_H */

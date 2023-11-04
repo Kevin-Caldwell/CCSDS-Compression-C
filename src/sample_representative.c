@@ -25,7 +25,7 @@ uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x,
     return 0;
 }
 
-int64_t HighResolutionPredictedSample(int32_t predicted_central_local_difference, uint32_t local_sum){
+int64_t HighResolutionPredictedSample(int64_t predicted_central_local_difference, uint32_t local_sum){
     int64_t temp1 = (int64_t)predicted_central_local_difference + (int64_t) BPOW(Omega) * ((int64_t) local_sum - (int64_t) (4 * kSmid));
     int64_t mod = (temp1 + (1L << (kR-1))) % (1L << (kR));
     mod = (mod < 0) ? (mod + (1L << (kR))) : mod;

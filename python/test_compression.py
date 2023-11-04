@@ -4,48 +4,7 @@ import compression as comp
 import scipy.io
 from sklearn.metrics import mean_squared_error
 import csv
-
-def ReadCSV(filename):
-    f = open(filename, 'r')
-    fulltxt = f.read()
-    data = []
-    num = 0
-    for i in range(len(fulltxt)):
-        if str(fulltxt[i]).isnumeric():
-            num *= 10
-            num += int(fulltxt[i])
-        else:
-            data.append(num)
-            num = 0
-        if(i % (len(fulltxt) // 100) == 0):
-            print(f"Reading... {int(i/len(fulltxt)*100)}%", end="\r")
-
-
-    f.close()
-    del fulltxt
-    del num
-
-    print("Finished Reading...")
-
-    Nx,Ny,Nz = data[0], data[1], data[2]
-
-    del data[0]
-    del data[0]
-    del data[0]
-
-
-    numbers = np.array(data, dtype=int)
-    del data
-    numbers.resize((Nx,Ny,Nz))
-
-    return numbers
-
-def SaveCSV(np_array_3d, output_path):
-    np_array_1d = np_array_3d.ravel()
-    np_array_1d = np.insert(np_array_1d, 0, np_array_3d.shape)
-    print(np_array_1d)
-    np.savetxt(output_path, np_array_1d, fmt='%i', newline=",")
-    print("CSV file saved successfully.")
+from csv_io import ReadCSV, SaveCSV
 
 class TestComp(unittest.TestCase):
     @classmethod
@@ -55,11 +14,18 @@ class TestComp(unittest.TestCase):
         # cls.data = cls.load_pic()
 
         # For Checking C vs Python
-        cls.data = ReadCSV("../build/raw.csv")
+        cls.data = ReadCSV("data/test-images/indian_pines.csv")
 
         cls.Nx = cls.data.shape[0]
         cls.Ny = cls.data.shape[1]
         cls.Nz = cls.data.shape[2]
+    
+    def test_CSV(self):
+        for z in range(self.Nz):
+            for y in range(self.Ny):
+                for x in range(self.Nx):
+                    print(str(x) + ",", str(y) + ",", str(z) + ":", self.data[x, y ,z])
+        self.assertTrue(True)
 
     def test_predictor(self):
         python_predicted, python_residuals = comp.predictor_debug(self.data)
@@ -125,7 +91,7 @@ class TestComp(unittest.TestCase):
         self.assertTrue(rmse == 0.0)
         self.assertTrue(ratio > 1)
 
-    def load_pic(file_name="images/Indian_pines.mat", header="indian_pines"):
+    def load_pic(file_name="python/images/Indian_pines.mat", header="indian_pines"):
 
         data = scipy.io.loadmat(file_name)
         data = data[header]  # data is dictionary, only take the array part
@@ -144,8 +110,6 @@ class TestComp(unittest.TestCase):
         return rmse
 
     def compression_ratio(self, data, compressed):
-        # data16int = np.array(data, dtype=np.uint16)
-        # return len(np.asarray(data16int).tobytes() * 8) / len(compressed)
         return data.size * comp.D / len(compressed)
 
 if __name__ == "__main__":

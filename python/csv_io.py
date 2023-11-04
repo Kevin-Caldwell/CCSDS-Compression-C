@@ -31,14 +31,16 @@ def ReadCSV(filename):
 
     numbers = np.array(data, dtype=int)
     del data
-    #numbers.resize((Nx,Ny,Nz))
-    numbers = numbers.reshape((Nx,Ny,Nz))
+    numbers.resize((Nz, Ny, Nx))
+    numbers = np.transpose(numbers, (2, 1, 0))
 
     return numbers
 
 def SaveCSV(np_array_3d, output_path):
+    Nx, Ny, Nz = np_array_3d.shape
+    np_array_3d = np.transpose(np_array_3d, (2, 1, 0))
     np_array_1d = np_array_3d.ravel()
-    np_array_1d = np.insert(np_array_1d, 0, np_array_3d.shape)
+    np_array_1d = np.insert(np_array_1d, 0, (Nx, Ny, Nz))
     print(np_array_1d)
     np.savetxt(output_path, np_array_1d, fmt='%i', newline=",")
     print("CSV file saved successfully.")

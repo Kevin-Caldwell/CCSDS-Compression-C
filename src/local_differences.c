@@ -80,9 +80,9 @@ int LocalDirectionVector(image *hIMG, int32_t **local_direction_vector, INDEX z,
     }
 }
 
-uint32_t PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x)
+int64_t PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x)
 {
-    uint32_t pcld;
+    int64_t pcld;
     if (x == 0 && y == 0)
     {
         return 0;
