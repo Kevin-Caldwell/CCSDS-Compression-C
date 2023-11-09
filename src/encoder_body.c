@@ -122,7 +122,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
         printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
         fflush(stdout);
     }
-    CloseStreamVarInteger(&stream);
+    CloseVarIntegerStream(&stream);
     time_t end = time(NULL);
     printf("\n%d seconds for image Encoding.\n", (int)(end - start));
     printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float) Nx * Ny * Nz * D / 8), (1 - ((float)len / ((float) Nx * Ny * Nz * D))) * 100);

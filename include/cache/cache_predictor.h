@@ -7,7 +7,7 @@
 extern char* CacheFiles[];
 
 struct PredictorCache{
-    image* cache_space[CACHE_SPACES];
+    image* cache_space[1];
     int32_t* weights;
 };
 
