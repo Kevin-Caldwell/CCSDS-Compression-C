@@ -3,6 +3,7 @@
 #include <time.h>
 
 image *sample;
+FILE *fp;
 
 void Reconstructor(image *predicted_values, image *reconstructed)
 {
@@ -34,7 +35,7 @@ void Reconstructor(image *predicted_values, image *reconstructed)
 
         time_t time_elapsed = time(NULL) - start;
         time_t time_left = time_elapsed * (Nz - z - 1) / (z + 1);
-        printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)size.x, time_elapsed, time_left);
+        printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
         fflush(stdout);
     }
     end = time(NULL);
@@ -43,10 +44,6 @@ void Reconstructor(image *predicted_values, image *reconstructed)
 
 void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x)
 {
-    if (x == 36 && y == 71 && z == 12)
-    {
-        int a = 0;
-    }
     if (x == 0 && y == 0)
     {
         free(global_cache->weights);
@@ -55,7 +52,7 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x)
     data_t mapped_data = GetPixel(mapped, x, y, z);
     uint16_t local_sum = FindLocalSum(data, z, y, x);
 
-    int32_t predicted_central_local_difference = PredictedCentralLocalDifference(data, z, y, x);
+    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(data, z, y, x);
 
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(data, z, y, x, high_resolution_predicted_sample);
@@ -65,36 +62,29 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x)
     int32_t delta = QuantizerIndexUnmapper(mapped_data,
                                            predicted_sample,
                                            double_resolution_predicted_sample);
-    uint16_t clipped_quantizer_bin_center = ClippedQuantizerBinCenter(delta);
+    uint16_t clipped_quantizer_bin_center = ClippedQuantizerBinCenter(predicted_sample + delta);
     int32_t double_resolution_predicted_error = DoubleResolutionPredictionError(clipped_quantizer_bin_center,
                                                                                 double_resolution_predicted_sample);
+    // int32_t double_resolution_predicted_error = 2 * (predicted_sample + delta) - double_resolution_predicted_error
     SetPixel(data, x, y, z, (uint16_t)predicted_sample + delta);
 
     UpdateWeights(data, global_cache->weights, z, y, x, double_resolution_predicted_error);
 
-    if (predicted_sample + delta != GetPixel(sample, x, y, z))
-    {
-        int a = 1; // 36, 71, 16
-    }
+    char write_buffer[1000];
 
-    if (x == 1 && y == 0 && z == 1)
-    {
+    // sprintf(write_buffer, "(%d,%d,%d),%d, %d, %d\n",  x, y, z, delta + predicted_sample, predicted_sample, delta);
 
-        printf("mapped: %d\n", mapped_data);
-        printf("local_sum: %d\n", local_sum);
-        printf("local_difference: %d\n", predicted_central_local_difference);
-        printf("drps: %d\n", double_resolution_predicted_sample);
-        printf("drpe: %d\n", double_resolution_predicted_error);
-        printf("predicted: %d\n", predicted_sample);
-        printf("delta: %d\n", delta);
-        printf("data: %d\n", predicted_sample + delta);
-        printf("Ground Truth: %d\n", GetPixel(sample, x, y, z));
-        printf("PRev Truth: %d\n", GetPixel(data, x - 1, y, z));
-        printf("PRev Truth000: %d\n", GetPixel(data, 0, 0, 0));
-        printf("PRev Truth100: %d\n", GetPixel(data, 1, 0, 0));
-        printf("PRev Truth200: %d\n", GetPixel(data, 2, 0, 0));
-        printf("\n");
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data, 
+        predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+
+    for (int i = 0; i < C; i++)
+    {
+        sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
     }
+    sprintf(write_buffer + strlen(write_buffer), "]\n");
+
+    sprintf(write_buffer + strlen(write_buffer), "UpdateWeights args: %d %d %d %d\n", z, y, x, double_resolution_predicted_error);
+    fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
 }
 
 void TestReconstructor(char *file_name)
@@ -115,6 +105,9 @@ void TestReconstructor(char *file_name)
     printf("Cache Created..\n");
     RunPredictor(sample_data, predicted_data);
     printf("Completed Prediction.\n");
+
+    printf("Logging to logs/c-debug.LOG.\n");
+    fp = fopen("../data/logs/c-reconstructor-debug.LOG", "w");
 
     image *reconstructed_data;
     InitImage(&reconstructed_data, sample_data->size.x, sample_data->size.y, sample_data->size.z);
@@ -137,6 +130,8 @@ void TestReconstructor(char *file_name)
     {
         printf("Reconstruction Failed at i= %d.\n", res);
     }
+
+    fclose(fp);
 
     free(sample_data->data);
     free(predicted_data->data);
