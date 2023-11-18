@@ -107,7 +107,8 @@
     "string.h": "c",
     "decode.h": "c",
     "reconstructor.h": "c",
-    "decoder.h": "c"
+    "decoder.h": "c",
+    "stddef.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {
