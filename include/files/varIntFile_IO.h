@@ -14,11 +14,12 @@
 
 #define L_SHIFT(x, s) (s < 0 ? x >> -s : x << s)
 
-#define BUFFER_SIZE 32;
+#define BUFFER_LENGTH 48
+#define BUFFER_SIZE 32
 
 typedef struct VarUnsignedIntFile{
     FILE *fs;
-    uint32_t[BUFFER_SIZE] rw_buffer;
+    uint32_t rw_buffer[BUFFER_LENGTH];
     char io_mode;
 
     int8_t bit_index;
