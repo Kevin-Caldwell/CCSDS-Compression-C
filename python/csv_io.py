@@ -12,7 +12,7 @@ def ReadCSV(filename):
         else:
             data.append(num)
             num = 0
-        if(i % (len(fulltxt) // 100) == 0):
+        if(len(fulltxt) > 100 and i % (len(fulltxt) // 100) == 0):
             print(f"Reading... {int(i/len(fulltxt)*100)}%", end="\r")
 
 
