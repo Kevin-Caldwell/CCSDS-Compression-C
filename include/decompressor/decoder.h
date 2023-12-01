@@ -31,4 +31,6 @@
 
 void Decoder_DecodeBody(image* predicted_samples, const char* file_name);
 
+void TestDecoder(char* filename);
+
 #endif /* DECODER_H */
