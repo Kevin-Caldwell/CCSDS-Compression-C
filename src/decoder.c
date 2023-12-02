@@ -3,6 +3,7 @@
 #include <inttypes.h>
 #include <stdio.h>
 #include "stream_encoder.h"
+#include "varIntFile_IO.h"
 #include "math_functions.h"
 
 int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
@@ -50,8 +51,8 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
     uint32_t k_z;
 
     FILE *log = fopen("../data/logs/c-decoder-debug.LOG", "w");
-    /* Need to Load bitstream */
-    VIFS stream;
+    VUF stream;
+    VUF_initialize(&stream, file_name, 1);
 
     time_t start = time(NULL);
     while (/*stream not empty*/) {
@@ -59,7 +60,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
             gamma = BPOW(Gamma1);
             epsilon_z = ((3 * (uint)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
             // Then read the first code word, which has len D
-            ReadStreamVarInteger(&stream, &sample, D);
+            sample = VUF_read_stack(&stream, D);
             SetPixel(predicted_samples, x, y, z, sample);
             increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z)
             continue;
@@ -83,7 +84,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
         uint32_t j;
         uint32_t q = 0;
         while (/* Stream not empty && */) {
-            ReadStreamVarInteger(&stream, &bit, 1);
+            bit = VUF_read_stack(&stream, 1);
             if (bit == 1) 
                 break;
 
@@ -93,13 +94,13 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
         }
 
         if (q == U_max) {
-            ReadStreamVarInteger(&stream, &sample, D);
+            sample = VUF_read_stack(&stream, D);
         }
         else {
             if (k_z == 0) {
                 sample = 0;
             } else {
-                ReadStreamVarInteger(&stream, &sample, k_z)
+                sample = VUF_read_stack(&stream, k_z);
             }
             sample += q * BPOW(k_z);
         }
@@ -121,7 +122,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
         }
     }
 
-    CloseVarIntegerStream(&stream);
+    VUF_close(stream);
     time_t end = time(NULL);
 }
 
