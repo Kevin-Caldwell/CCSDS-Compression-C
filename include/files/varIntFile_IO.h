@@ -12,10 +12,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define L_SHIFT(x, s) (s < 0 ? x >> -s : x << s)
+#define L_SHIFT(x, s) (s == 32 ? 0 : (s < 0 ? (unsigned) x >> -s : (unsigned) x << s))
 
-#define BUFFER_LENGTH 48
+#define BUFFER_LENGTH 6
 #define BUFFER_SIZE 32
+
+typedef enum file_modes {READ_BINARY=0, WRITE_BINARY} file_modes;
 
 typedef struct VarUnsignedIntFile{
     FILE *fs;
@@ -29,17 +31,16 @@ typedef struct VarUnsignedIntFile{
 void VUF_initialize(
     VUF* stream, 
     const char* file_name, 
-    char io_mode);
+    file_modes io_mode);
 
 void VUF_append(
     VUF* stream, 
-    uint32_t* data, 
+    uint32_t data, 
     uint32_t length);
 
 // Read One VarInt
-void VUF_rpop( 
+uint32_t VUF_read_stack(
     VUF* stream, 
-    uint32_t dump, 
     uint32_t length);
 
 void VUF_close(VUF* stream);

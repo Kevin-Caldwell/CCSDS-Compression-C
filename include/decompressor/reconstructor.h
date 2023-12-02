@@ -50,9 +50,9 @@
 extern int C;
 typedef uint32_t weight_t;
 
-void ReconstructPixel(image *hIMG, image *result, INDEX z, INDEX y, INDEX x);
+void ReconstructPixel(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, FILE* file_ptr);
 
-void Reconstructor(image* predicted_values, image* reconstructed);
+void Reconstructor(image* predicted_values, image* reconstructed, FILE* file_ptr);
 
 void TestReconstructor(char* file_name);
 

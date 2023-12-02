@@ -3,6 +3,7 @@
 
 #include <inttypes.h>
 #include <stddef.h>
+#include <stdio.h>
 
 /// File Handling Abstractions
 
