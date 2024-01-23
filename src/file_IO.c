@@ -1,7 +1,5 @@
 #include "files/file_IO.h"
 
-#include <stdio.h>
-
  const char* file_modes_str[]= {"r", "w", "a", "r+", "w+", "a+"};
 
 int Initialized(){
@@ -23,3 +21,7 @@ size_t F_READ(void* destination, size_t size, size_t arr_length, file_t* file_st
 int F_CLOSE(file_t* stream){
     return fclose((FILE*) stream);
 }   
+
+int F_EMPTY(file_t* stream) {
+    return 0;
+}

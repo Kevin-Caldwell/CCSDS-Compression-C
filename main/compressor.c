@@ -7,10 +7,22 @@
 #include "testing/generate_image.h"
 #include "decompressor/reconstructor.h"
 
+#if LOG
+#include "files/logs.h"
+#endif
+
+char DEBUG = 0;
+
 int main(int argInt, char **argS)
 {
+    #if LOG
+    Log_init();
+    #endif
+
     if (argInt > 1)
     {
+        DEBUG = argInt >= 5;
+
         if (!strcmp(argS[1], "encode"))
         {
             EncodeImage(argS[2], argS[3]);
@@ -36,6 +48,10 @@ int main(int argInt, char **argS)
         //TestReconstructor("../data/test-images/TEST_100x100x100_0.csv");
         // EncodeImage("../data/results/CRESULT_100x100x100_0_predicted.csv", "../data/results/CRESULT_100x100x100_0_encoded.hsp");
     }
+
+    #if LOG
+    Log_close();
+    #endif
 
     return 0;
 }

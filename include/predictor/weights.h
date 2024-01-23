@@ -5,7 +5,6 @@
 #include "dst/image.h"
 #include "math/linear_algebra.h"
 #include "predictor/quantizer.h"
-#include <stdio.h>
 
 #define Ps(z) MIN(z, kP)
 

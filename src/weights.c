@@ -29,7 +29,7 @@ int InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x)
         }
     }
 
-    return 0;
+    return RES_OK;
 }
 
 int32_t DoubleResolutionPredictionError(int16_t clipped_quantizer_bin_center,

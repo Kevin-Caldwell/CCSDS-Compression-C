@@ -11,12 +11,12 @@
 
 void TestHeader();
 void TestReadImage();
-void PredictImage(char* source, char* destination);
+int PredictImage(char* source, char* destination);
 
-void EncodeImage(char* source, char* destination);
+int EncodeImage(char* source, char* destination);
 
-void CompressImage(char* source, char* destination);
+int CompressImage(char* source, char* destination);
 
-void GenerateVoronoiImage(dim3 size, int index, int points);
+int GenerateVoronoiImage(dim3 size, int index, int points);
 
 #endif /* GENERATE_IMAGE_H */

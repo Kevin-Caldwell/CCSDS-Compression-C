@@ -7,6 +7,7 @@ int InitImage(image** img_p, size_t x, size_t y, size_t z){
     img->size.y = y;
     img->size.z = z;
     img->data = (PIXEL*) calloc(x * y * z, sizeof(PIXEL));
+
     return 0;
 }
 
