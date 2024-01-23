@@ -6,14 +6,10 @@
 #include <stdio.h>
 
 /// File Handling Abstractions
-
 typedef FILE file_t;
-typedef enum file_mode{READ = 0, 
-    WRITE, 
-    APPEND,
-    READ_AND_WRITE,
-    WRITING_AND_READING, 
-    APPENDING_AND_READING} FileMode;
+
+typedef enum file_mode{READ = 0, WRITE, APPEND, READ_AND_WRITE, WRITING_AND_READING, APPENDING_AND_READING} FileMode;
+
 
 extern const char* file_modes_str[];
 
@@ -35,6 +31,6 @@ size_t F_READ(
 
 int F_CLOSE(file_t* stream);
 
-
+int F_EMPTY(file_t* stream);
 
 #endif /* FILE_IO_H */

@@ -1,7 +1,8 @@
 #include "testing/generate_image.h"
 #include "encoder/body.h"
+#include "files/logs.h"
 
-void GenerateVoronoiImage(dim3 size, int index, int points){
+int GenerateVoronoiImage(dim3 size, int index, int points){
     char filename[100];
     sprintf(filename, "../data/test-images/VORONOI_%lux%lux%lu_%d.csv", 
                                         size.x, size.y, size.z, index);
@@ -12,24 +13,62 @@ void GenerateVoronoiImage(dim3 size, int index, int points){
     SaveImageAsCSV(testImage, filename);
     free(testImage->data);
     free(testImage);
+
+    return RES_OK;
 }
 
-void PredictImage(char* source, char* destination){
+int PredictImage(char* source, char* destination){
     image* hIMG;
     image* result;
+    int res;
+
     printf("___________C PREDICTOR____________\n");
 
-    ReadImageFromCSV(&hIMG, source);
-    printf("Read File.\n");
+    res = ReadImageFromCSV(&hIMG, source);
+    #if LOG
+    if(res){
+        Log_error("Unable to Read Image");
+        return res;
+    }
+    #endif
 
-    InitializePredictorCache(&global_cache, hIMG);
-    printf("Cache Created..\n");
+    res = InitializePredictorCache(&global_cache, hIMG);
+    #if LOG
+    if(res){
+        Log_error("Unable to Create Cache");
+        return res;
+    }
+    #endif
 
 
-    InitImage(&result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
-    RunPredictor(hIMG, result);
+    res = InitImage(&result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
+    #if LOG
+    if(res) {
+        Log_error("Unable to Initialize Image");
+        return res;
+    }
+    #endif
 
-    SaveImageAsCSV(result, destination);
+    #if LOG
+    Log_add("Setup Complete! Proceeding to Predictor Setup");
+    #endif
+    res = RunPredictor(hIMG, result);
+    #if LOG
+    if(res) {
+        Log_error("Predictor Error, Aborted");
+        return res;
+    }
+    #endif
+    
+
+    res = SaveImageAsCSV(result, destination);
+    #if LOG
+    if(res) {
+        Log_error("Unable to Save Image as CSV. Aborted.");
+        return res;
+    }
+    #endif
+    
 
     DeletePredictorCache(global_cache);
 
@@ -39,7 +78,7 @@ void PredictImage(char* source, char* destination){
     free(result);
 }
 
-void EncodeImage(char* source, char* destination){
+int EncodeImage(char* source, char* destination){
     image* predicted_image;
     ReadImageFromCSV(&predicted_image, source);
     LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
@@ -49,9 +88,11 @@ void EncodeImage(char* source, char* destination){
     free(predicted_image->data);
     free(predicted_image);
 
+    return RES_OK;
+
 }
 
-void CompressImage(char* source, char* destination){
+int CompressImage(char* source, char* destination){
     
 }
 

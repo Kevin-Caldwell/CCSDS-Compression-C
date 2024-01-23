@@ -1,7 +1,9 @@
+#include "constants/global_constants.h"
 #include "predictor/predictor.h"
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
+#include "files/logs.h"
 
 FILE *fp;
 int C = 0;
@@ -36,31 +38,48 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 
     UpdateWeights(hIMG, global_cache->weights, z, y, x, double_resolution_predicted_error);
 
-    char write_buffer[1000];
+    if(DEBUG) {
+        char write_buffer[1000];
 
-    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, raw_data, predicted_sample, predicted_value, predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
-    for (int i = 0; i < C; i++)
-    {
-        sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
+        sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d, %ld, [",
+            x, y, z, 
+            raw_data, predicted_sample, predicted_value, 
+            predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+
+        for (int i = 0; i < C; i++)
+        {
+            sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
+        }
+        sprintf(write_buffer + strlen(write_buffer), "]\n");
+        fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
     }
-    sprintf(write_buffer + strlen(write_buffer), "]\n");
-    fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
 }
 
 int RunPredictor(image *hIMG, image *result)
 {
+    int res;
+
     InitalizeImageConstants(hIMG->size);
-    LoadConstantFile(PREDICTOR_CONSTANTS_LOCATION, &predictor_constants);
+    res = LoadConstantFile(PREDICTOR_CONSTANTS_LOCATION, &predictor_constants);
     InitalizePredictorConstants();
-    printf("Running C Predictor.\n");
-    time_t start;
-    time_t end;
+    #if LOG
+    if(res) {
+        Log_error("Unable to load Predictor Constants");
+        return FILE_READ_ERROR;
+    }
+    #endif
+    
+
+    clock_t start, end;
     dim3 size = hIMG->size;
 
-    printf("Logging to logs/c-debug.LOG.\n");
+    #if LOG
     fp = fopen("../data/logs/c-debug.LOG", "w");
 
-    start = time(NULL);
+    Log_add("Setup Complete. Running C Predictor");
+    start = clock();
+    #endif
+
     for (int i = 0; i < size.z; i++)
     {
         if(!PREDICTION_MODE){
@@ -76,13 +95,29 @@ int RunPredictor(image *hIMG, image *result)
                 Predict(hIMG, result, i, j, k);
             }
         }
-        time_t time_elapsed = time(NULL) - start;
-        time_t time_left = time_elapsed * (Nz - i - 1) / (i + 1);
-        printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(i + 1), (int)hIMG->size.z, time_elapsed, time_left);
+
+        #if LOG
+        double time_elapsed = (double) (clock() - start) / (double) CLOCKS_PER_SEC;
+        double time_left = time_elapsed * (Nz - i - 1) / (i + 1);
+        printf("\rPredicted %d/%d of Image. (%3.1f seconds Elapsed, %3.1f seconds Left)", (int)(i + 1), (int)hIMG->size.z, time_elapsed, time_left);
         fflush(stdout);
+        #endif
     }
+
+    #if LOG
     fclose(fp);
-    end = time(NULL);
-    printf("\n%d seconds for image prediction.\n", (int)(end - start));
-    return 0;
+
+    end = clock();
+    double time_elapsed = (double) (end - start) / (double) CLOCKS_PER_SEC;
+    printf("\n%3.3f seconds for image prediction.\n", time_elapsed);
+        
+
+    char out_buff[100];
+    sprintf(out_buff, "Time taken for prediction: %3.3f seconds", time_elapsed);
+
+    Log_add(out_buff);
+    Log_add("Prediction Complete");
+    #endif
+
+    return RES_OK;
 }

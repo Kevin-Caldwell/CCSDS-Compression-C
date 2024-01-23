@@ -3,6 +3,8 @@
 
 #include <string.h>
 
+ char DEBUG = 0;
+
 int main(int argInt, char** argS){
     if(argInt > 1){
         if(!strcmp(argS[1], "generate")){

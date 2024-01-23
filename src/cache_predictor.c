@@ -1,7 +1,6 @@
 #include "cache/cache_predictor.h"
 #include "predictor/local_sum.h"
 #include <time.h>
-#include <stdio.h>
 
 PredictorCache *global_cache = NULL;
 char *CacheFiles[] = {"raw.csv",
@@ -48,4 +47,6 @@ int DeletePredictorCache(PredictorCache *p_cache)
         free(p_cache->cache_space[i]);
     }
     free(p_cache);
+
+    return 0;
 }

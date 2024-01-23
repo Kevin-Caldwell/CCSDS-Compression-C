@@ -2,9 +2,18 @@
 
 #include <string.h>
 
+#if LOG
+#include "files/logs.h"
+#endif
+
 void SaveArrayAsCSV(uint16_t* data, UINT count, char* file_name){
     FILE* fp;
     fp = F_OPEN(file_name, WRITE);
+    #if LOG
+    if(!fp){
+        Log_error("SaveArrayAsCSV: Unable to open file");
+    }
+    #endif
 
     char string_buffer[50];
 
@@ -19,11 +28,17 @@ void SaveArrayAsCSV(uint16_t* data, UINT count, char* file_name){
 
 
 
-void SaveImageAsCSV(image* hIMG, char* file_name){
+int SaveImageAsCSV(image* hIMG, char* file_name){
     FILE* fp;
-    fp = fopen(file_name, "w");
-    printf("%s, %ld\n", file_name, (int64_t) fp);
     dim3 size = hIMG->size;
+
+    fp = fopen(file_name, "w");
+    #if LOG
+    if(!fp) {
+        Log_error("SaveImageAsCSV: Unable to open file");
+        return FILE_ACCESS_ERROR;
+    }
+    #endif
 
     char string_buffer[50];
 
@@ -43,12 +58,19 @@ void SaveImageAsCSV(image* hIMG, char* file_name){
     // sprintf(string_buffer, "%hu", hIMG->data[size.x * size.y * size.z - 1]);
     // fputs(string_buffer, fp);
     fclose(fp);
+
+    return RES_OK;
 }
 
-void ReadImageFromCSV(image** hIMG, char* file_name){
+int ReadImageFromCSV(image** hIMG, char* file_name){
     FILE *fp;
     fp = fopen(file_name, "r");
-    printf("%ld\n", (int64_t) fp);
+    #if LOG
+    if(!fp) {
+        Log_error("ReadImageFromCSV: Unable to open File");
+        return FILE_ACCESS_ERROR;
+    }
+    #endif
     dim3 size =  {0,0,0};
     char read_buffer = 1;
 
@@ -92,5 +114,6 @@ void ReadImageFromCSV(image** hIMG, char* file_name){
         }
     }
 
+    return RES_OK;
 
 }

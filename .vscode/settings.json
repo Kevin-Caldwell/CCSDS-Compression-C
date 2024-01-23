@@ -107,6 +107,12 @@
     "string.h": "c",
     "decode.h": "c",
     "reconstructor.h": "c",
+    "time.h": "c",
+    "stdlib.h": "c",
+    "global_constants.h": "c",
+    "file_io.h": "c",
+    "header.h": "c",
+    "body.h": "c"
     "decoder.h": "c",
     "stddef.h": "c"
   },
