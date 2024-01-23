@@ -1,3 +1,24 @@
+/**
+ * constants.h
+ * @author @Kevin-Caldwell
+ * 
+ * A global file for constats that need to be shared between modules.
+ * 
+ * Features
+ *  Image Constants
+ *  
+ * Uses
+ *  Values used by all modules
+ * 
+ * Dependencies
+ *  math_functions.h
+ *  global_constants.h
+ * 
+ * TODO
+ *  Need to organize values into encoder_constants.h and predictor_constants.h
+ * 
+*/
+
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 #include "math/math_functions.h"

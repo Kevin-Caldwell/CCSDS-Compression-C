@@ -1,3 +1,27 @@
+/**
+ * linear_algebra.h
+ * @author Kevin Caldwell
+ * 
+ * Skeleton File for Generic Vector Operations.
+ * 
+ * Features
+ *  Initialization
+ *  Deletion
+ *  Addition
+ *  Subtraction
+ *  Scalar Product
+ *  Inner Product (Dot Product)
+ * 
+ * Uses
+ *  Local Difference Vector
+ *  Weight Vector
+ * 
+ * Dependencies
+ *  constants.h
+ *  math_functions.h 
+*/
+
+
 #ifndef LINEAR_ALGEBRA_H
 #define LINEAR_ALGEBRA_H
 #include "constants/constants.h"
@@ -14,7 +38,7 @@ int AddVectors(data_t* v1, data_t* v2, data_t* res, UINT size);
 
 int SubtractVectors(data_t* v1, data_t* v2, data_t* res, UINT size);
 
-uint32_t InnerProduct(int32_t* v1, int32_t* v2, UINT size);
+int64_t InnerProduct(int32_t* v1, int32_t* v2, UINT size);
 
 int ScalarProduct(data_t* v, data_t scalar, data_t* res, UINT size);
 

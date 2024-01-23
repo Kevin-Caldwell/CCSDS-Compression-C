@@ -20,7 +20,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
     data_t raw_data = GetPixel(hIMG, x, y, z);
     uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
 
-    int32_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x);
+    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x);
 
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);

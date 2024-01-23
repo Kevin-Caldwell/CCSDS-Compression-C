@@ -3,9 +3,9 @@
 #define TESTING_MATH
 
 #include "constants/load_constants.h"
-
 #include "testing/generate_image.h"
 #include "decompressor/reconstructor.h"
+#include "testing/test_varInt.h"
 
 #if LOG
 #include "files/logs.h"
@@ -43,10 +43,9 @@ int main(int argInt, char **argS)
     else
     {
         printf("Running Base Case.\n");
-        // Base Case if no command line aguments are given.
-        PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
-        //TestReconstructor("../data/test-images/TEST_100x100x100_0.csv");
-        // EncodeImage("../data/results/CRESULT_100x100x100_0_predicted.csv", "../data/results/CRESULT_100x100x100_0_encoded.hsp");
+        //printf("Result: %s", testVUF_Write() ? "Failed.\n" : "Passed.\n");
+        printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
+        //PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
     }
 
     #if LOG

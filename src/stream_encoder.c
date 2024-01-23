@@ -37,7 +37,7 @@ void StreamVarInteger(VIFS *stream, uint32_t data, uint32_t length)
 
 }
 
-void CloseStreamVarInteger(VIFS* stream){
+void CloseVarIntegerStream(VIFS* stream){
     free(stream->buffer);
     fclose(stream->fs);
 }

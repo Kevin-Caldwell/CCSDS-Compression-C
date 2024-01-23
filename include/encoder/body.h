@@ -1,3 +1,24 @@
+/**
+ * body.h
+ * @author @Kevin-Caldwell
+ * 
+ * Helper Functions for Encoding the body of the Compressed Image
+ * 
+ * Features
+ *  Golomb Power-of-Two
+ *  Accumulator Value
+ *  Encoding the Body of the Compressed file
+ * 
+ * Dependencies
+ *  math_functions.h
+ *  image.h
+ *  encoder_constants.h
+ *  stream_encoder.h
+ * 
+ * TODO
+ *  Validate Results
+*/
+
 #ifndef BODY_H
 #define BODY_H
 

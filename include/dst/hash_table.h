@@ -1,3 +1,28 @@
+/**
+ * hash_table.h
+ * @authors @Kevin-Caldwell
+ * 
+ * Hash Table Implementation for Storing Constants.
+ * Uses Dynamically allocated memory for storage
+ * 
+ * Dependencies
+ *  stdlib
+ *  inttypes
+ *  string
+ * 
+ * Features
+ *  Initialization
+ *  Deletion
+ *  Add Entries
+ *  Get Index
+ *  Get and Set Value
+ * 
+ * TODO
+ *  Comments
+ *  Statically Allocated Memory (Low Priority)
+ * 
+*/
+
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 

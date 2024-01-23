@@ -24,7 +24,7 @@ void InitializeVarIntStream(VIFS *stream, const char *file_name, uint32_t buffer
 
 void StreamVarInteger(VIFS *stream, uint32_t data, uint32_t length);
 
-void CloseStreamVarInteger(VIFS* stream);
+void CloseVarIntegerStream(VIFS* stream);
 
 
 

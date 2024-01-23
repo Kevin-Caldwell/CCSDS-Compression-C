@@ -113,6 +113,8 @@
     "file_io.h": "c",
     "header.h": "c",
     "body.h": "c"
+    "decoder.h": "c",
+    "stddef.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {
@@ -120,5 +122,6 @@
   },
   "python.formatting.provider": "none",
   "cmake.sourceDirectory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C",
-  "python.analysis.typeCheckingMode": "off"
+  "python.analysis.typeCheckingMode": "off",
+  "nvidia-smi-plus.refresh.autoRefresh": true
 }
