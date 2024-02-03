@@ -2,38 +2,45 @@
 
 #include <inttypes.h>
 #include <stdio.h>
-#include "stream_encoder.h"
-#include "varIntFile_IO.h"
-#include "math_functions.h"
+#include <time.h>
 
-int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
-uint U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
-int Gamma1 = 1;
+#include "encoder/stream_encoder.h"
+#include "files/varIntFile_IO.h"
+#include "math/math_functions.h"
+#include "files/varIntFile_IO.h"
+#include "constants/encoder_constants.h"
+#include "encoder/body.h"
+
+// int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
+// uint U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
+// int Gamma1 = 1;
 
 void increment_xyz(int *x, int *y, int *z, DIM Nx, DIM Ny, DIM Nz) {
-    if (x < Nx - 1) 
+    if (*x < Nx - 1) 
     {
         (*x)++;
         return;
     } 
-    else if (y < Ny - 1) 
+    else if (*y < Ny - 1) 
     {
         *x = 0;
         (*y)++;
         return;
     }
-    else if (z < Nz - 1) 
+    else if (*z < Nz - 1) 
     {
         *x = 0;
         *y = 0;
         (*z)++;
-        return
+        return;
     }
-    return
+    return;
 }
 
 
 void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
+    int data = 1;
+    int x, y, z;
     int K_ZPRIME = 0;
     if (K <= 30 - D)
     {
@@ -55,14 +62,14 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
     VUF_initialize(&stream, file_name, 1);
 
     time_t start = time(NULL);
-    while (/*stream not empty*/) {
+    while (0) { //TODO /*stream not empty*/
         if (x == 0 && y == 0) {
             gamma = BPOW(Gamma1);
             epsilon_z = ((3 * (uint)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
             // Then read the first code word, which has len D
             sample = VUF_read_stack(&stream, D);
             SetPixel(predicted_samples, x, y, z, sample);
-            increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z)
+            increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z);
             continue;
         }
 
@@ -83,7 +90,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
         int bit;
         uint32_t j;
         uint32_t q = 0;
-        while (/* Stream not empty && */) {
+        while (0) { /* Stream not empty && */
             bit = VUF_read_stack(&stream, 1);
             if (bit == 1) 
                 break;
@@ -108,7 +115,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
         SetPixel(predicted_samples, x, y, z, sample);
 
         if (!(x == sz.x - 1 && y == sz.y - 1 && z == sz.z - 1)) {
-            increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z)
+            increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z);
         } 
 
 
@@ -122,7 +129,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
         }
     }
 
-    VUF_close(stream);
+    VUF_close(&stream);
     time_t end = time(NULL);
 }
 

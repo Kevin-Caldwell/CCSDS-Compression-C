@@ -1,4 +1,6 @@
 #include "files/varIntFile_IO.h"
+#include "files/logs.h"
+#include "constants/global_constants.h"
 
 char* file_modes_arguments[] = {"rb", "wb"};
 
@@ -9,11 +11,17 @@ void _VUF_CLEAN(VUF* stream, char full){
     }
 }
 
-void VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
+int VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
     // File IO Constants
     stream->io_mode = io_mode;
     stream->fs = fopen(file_name, file_modes_arguments[io_mode]);
-    printf("stream opening: %x, %d, %s.\n", stream->fs, stream->io_mode, file_modes_arguments[stream->io_mode]);
+    #if LOG
+    if(!stream->fs){
+        Log_error("Unable to open File");
+        return FILE_ACCESS_ERROR;
+    }
+    #endif
+    //printf("stream opening: %x, %d, %s.\n", (unsigned int) stream->fs, (unsigned) stream->io_mode, file_modes_arguments[stream->io_mode]);
 
     if(io_mode == WRITE_BINARY){
         // Initialize Empty Buffer for write requests
@@ -26,9 +34,11 @@ void VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
         stream->bit_index = 0;
         stream->byte_index = 0;
     }
+
+    return RES_OK;
 }
 
-void VUF_append(VUF* stream, uint32_t data, uint32_t length){
+int VUF_append(VUF* stream, uint32_t data, uint32_t length){
     stream->bit_index += length; // Shift Bit Pointer
     uint32_t clean = (data 
         << (BUFFER_SIZE - length))
@@ -55,6 +65,8 @@ void VUF_append(VUF* stream, uint32_t data, uint32_t length){
 
         _VUF_CLEAN(stream, 0);
     }
+
+    return RES_OK;
 }
 
 uint32_t VUF_read_stack(VUF* stream, uint32_t length){
@@ -77,8 +89,10 @@ uint32_t VUF_read_stack(VUF* stream, uint32_t length){
     return varInt;
 }
 
-void VUF_close(VUF* stream){
+int VUF_close(VUF* stream){
     stream->bit_index = 0;
     stream->byte_index = 0;
     fclose(stream->fs);
+
+    return RES_OK;
 }

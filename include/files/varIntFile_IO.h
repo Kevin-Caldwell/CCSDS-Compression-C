@@ -12,7 +12,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#ifndef L_SHIFT
 #define L_SHIFT(x, s) (s == 32 ? 0 : (s < 0 ? (unsigned) x >> -s : (unsigned) x << s))
+#endif
 
 #define BUFFER_LENGTH 6
 #define BUFFER_SIZE 32
@@ -28,12 +30,12 @@ typedef struct VarUnsignedIntFile{
     int8_t byte_index;
 } VUF;
 
-void VUF_initialize(
+int VUF_initialize(
     VUF* stream, 
     const char* file_name, 
     file_modes io_mode);
 
-void VUF_append(
+int VUF_append(
     VUF* stream, 
     uint32_t data, 
     uint32_t length);
@@ -43,6 +45,6 @@ uint32_t VUF_read_stack(
     VUF* stream, 
     uint32_t length);
 
-void VUF_close(VUF* stream);
+int VUF_close(VUF* stream);
 
 #endif /* VARINTFILE_IO_H */

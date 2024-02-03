@@ -1,4 +1,6 @@
 #include "testing/test_varInt.h"
+#include "files/logs.h"
+#include "constants/global_constants.h"
 
 void printBits(size_t const size, void const * const ptr)
 {
@@ -18,8 +20,9 @@ void printBits(size_t const size, void const * const ptr)
 void print_buffer(VUF* f){
 
     for(int i = 0; i < BUFFER_LENGTH; i++){
+        printf("%d:\t", i);
         printBits(4, f->rw_buffer + i);
-        printf(" :%d\n", i);
+        printf("\n");
     }
     // for(int i = BUFFER_LENGTH - 1; i >= 0; i--){
     //     printf("%#10x :%d\n", f->rw_buffer[i], i);
@@ -31,6 +34,10 @@ void print_buffer(VUF* f){
 
 int testVUF_Write() {
 
+    #if LOG
+    Log_add("Testing VUF File Write");
+    #endif
+
     int array[] = {4, 4, 1, 23, 32, 32, 32, 5, 5, 25};
     int count = 10;
 
@@ -40,10 +47,10 @@ int testVUF_Write() {
     print_buffer(&stream);
     printf("Opened File.\n");
 
-    uint32_t bounce = 0;
+    uint32_t bounce = -1;
 
     for(int i = 0; i < count; i++){
-        printf("INDEX: %d\n", array[i]);
+        printf("Writing %d Digits of %d\n", array[i], bounce);
         VUF_append(&stream, bounce, array[i]);
         print_buffer(&stream);
         bounce = bounce ? 0 : -1;
