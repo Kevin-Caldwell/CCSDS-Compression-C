@@ -75,9 +75,9 @@ extern int D;
 
 extern int kUnsignedSamples;
 
-extern uint kSmin;
-extern uint kSmax;
-extern uint kSmid;
+extern unsigned int kSmin;
+extern unsigned int kSmax;
+extern unsigned int kSmid;
 
 extern int kP;
 extern int Omega;

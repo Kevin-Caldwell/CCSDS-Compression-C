@@ -63,9 +63,9 @@ int PREDICTION_MODE = 0;
 int D = 0;
 int Da = 0;
 
-uint kSmin = 0;
-uint kSmid = 0;
-uint kSmax = 0;
+unsigned int kSmin = 0;
+unsigned int kSmid = 0;
+unsigned int kSmax = 0;
 
 int kP = 0;
 int64_t kR = 0;

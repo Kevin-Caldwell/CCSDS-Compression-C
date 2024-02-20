@@ -12,7 +12,7 @@
 #include "encoder/body.h"
 
 // int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
-// uint U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
+// unsigned int U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
 // int Gamma1 = 1;
 
 void increment_xyz(int *x, int *y, int *z, DIM Nx, DIM Ny, DIM Nz) {

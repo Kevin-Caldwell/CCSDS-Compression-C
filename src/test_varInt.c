@@ -22,6 +22,7 @@ void print_buffer(VUF* f){
     for(int i = 0; i < BUFFER_LENGTH; i++){
         printf("%d:\t", i);
         printBits(4, f->rw_buffer + i);
+        printf("  %08X", f->rw_buffer[i]);
         printf("\n");
     }
     // for(int i = BUFFER_LENGTH - 1; i >= 0; i--){
@@ -76,7 +77,8 @@ int testVUF_Read(){
     for(int i = 0; i < count; i++){
         printf("IDNEEEX %d\n", i);
         printf("INDEX: %d\n", array[i]);
-        printf("POPPPED: %x\n", VUF_read_stack(&stream, array[i]));
+        uint32_t read = VUF_read_stack(&stream, array[i]);
+        printf("POPPPED: %08X\t%0u\n", read, read);
         print_buffer(&stream);
     }
 

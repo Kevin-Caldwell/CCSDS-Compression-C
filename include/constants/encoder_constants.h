@@ -84,7 +84,7 @@ extern const int B;
 #define ACCUMULATOR_INITIALIZATION_CONSTANT 14
 #define UNARY_LENGTH_LIMIT 8
 
-extern uint U_max;
+extern unsigned int U_max;
 extern int K;
 extern int Gamma1;
 

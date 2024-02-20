@@ -3,13 +3,13 @@
 #include "encoder/encoder_helper_functions.h"
 
 int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
-uint U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
+unsigned int U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
 int Gamma1 = 1;
 
 GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
 {
     uint32_t u;
-    uint len = 0;
+    unsigned int len = 0;
     uint32_t div = j / (BPOW(k));
     if (div < U_max)
     {
@@ -18,7 +18,7 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
         u <<= 1;
         u |= 1;
         u <<= k;
-        uint mask = (1 << k) - 1;
+        unsigned int mask = (1 << k) - 1;
         u |= (j & mask);
         len = u ? (div + 1 + k) : 1;
     }
@@ -27,7 +27,7 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
 
         u <<= UNARY_LENGTH_LIMIT;
         u <<= D;
-        uint mask = (1 << k) - 1;
+        unsigned int mask = (1 << k) - 1;
         u |= j;
         len = k + D;
     }
@@ -35,9 +35,9 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
     return (GolombInt){u, len};
 }
 
-uint InitAccumulatorValue(uint32_t z)
+unsigned int InitAccumulatorValue(uint32_t z)
 {
-    uint k_prime = (K <= 30 - D) ? K : (2 * K + D - 30);
+    unsigned int k_prime = (K <= 30 - D) ? K : (2 * K + D - 30);
     return (3 * BPOW(k_prime + 6) - 49) * Gamma1;
 }
 

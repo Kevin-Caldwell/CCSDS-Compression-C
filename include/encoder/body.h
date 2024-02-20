@@ -29,7 +29,7 @@
 #include "encoder/stream_encoder.h"
 
 extern int K;
-extern uint U_max;
+extern unsigned int U_max;
 extern int Gamma1;
 
 #define GAMMA_STAR 5
@@ -41,7 +41,7 @@ typedef struct GolombInt{
 
 GolombInt GolombPowerTwo(uint16_t j, uint16_t k);
 
-uint InitAccumulatorValue(uint32_t z);
+unsigned int InitAccumulatorValue(uint32_t z);
 
 int EncodeBody(image* hIMG, const char* file_name, const char* write_mode, int buffer_size);
 

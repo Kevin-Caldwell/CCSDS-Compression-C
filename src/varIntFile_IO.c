@@ -15,6 +15,7 @@ int VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
     // File IO Constants
     stream->io_mode = io_mode;
     stream->fs = fopen(file_name, file_modes_arguments[io_mode]);
+    printf("FILE: %d\n", (int) stream->fs);
     #if LOG
     if(!stream->fs){
         Log_error("Unable to open File");
@@ -72,12 +73,14 @@ int VUF_append(VUF* stream, uint32_t data, uint32_t length){
 uint32_t VUF_read_stack(VUF* stream, uint32_t length){
     uint32_t varInt = stream->rw_buffer[stream->byte_index] << stream->bit_index;
     stream->bit_index += length;
+    varInt >>= (BUFFER_SIZE - length);
+    printf("Reading, %08X\n", varInt);
 
     if(stream->bit_index >= BUFFER_SIZE){
-        varInt += stream->rw_buffer[stream->byte_index] >> (2 * BUFFER_SIZE - stream->bit_index);
-        
         stream->bit_index -= BUFFER_SIZE;
         stream->byte_index++;
+        
+        varInt += stream->rw_buffer[stream->byte_index] >> ((2 * BUFFER_SIZE - length) % BUFFER_SIZE);
     }
 
     if(stream->byte_index >= BUFFER_LENGTH - 1){
@@ -85,6 +88,8 @@ uint32_t VUF_read_stack(VUF* stream, uint32_t length){
         stream->byte_index = 0;
         fread(stream->rw_buffer + 1, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
     }
+
+    printf("%08X\n", varInt >> (BUFFER_SIZE - length));
 
     return varInt;
 }
