@@ -41,7 +41,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
     if(DEBUG) {
         char write_buffer[1000];
 
-        sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %d, %d, %ld, [",
+        sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
             x, y, z, 
             raw_data, predicted_sample, predicted_value, 
             predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);

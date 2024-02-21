@@ -25,3 +25,10 @@ int F_CLOSE(file_t* stream){
 int F_EMPTY(file_t* stream) {
     return 0;
 }
+
+int F_SEEK(
+    file_t* stream, 
+    long int offset
+) {
+    return fseek((FILE*) stream, offset, SEEK_SET);
+}

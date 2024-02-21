@@ -33,4 +33,9 @@ int F_CLOSE(file_t* stream);
 
 int F_EMPTY(file_t* stream);
 
+int F_SEEK(
+    file_t* stream, 
+    long int offset
+);
+
 #endif /* FILE_IO_H */

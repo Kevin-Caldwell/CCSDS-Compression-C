@@ -4,7 +4,7 @@
 
 char* file_modes_arguments[] = {"rb", "wb"};
 
-void _VUF_CLEAN(VUF* stream, char full){
+void _VUF_Clean(VUF* stream, char full){
     int start = !full;
     for(start; start < BUFFER_LENGTH; start++){
         stream->rw_buffer[start] = 0;
@@ -15,7 +15,7 @@ int VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
     // File IO Constants
     stream->io_mode = io_mode;
     stream->fs = fopen(file_name, file_modes_arguments[io_mode]);
-    printf("FILE: %d\n", (int) stream->fs);
+
     #if LOG
     if(!stream->fs){
         Log_error("Unable to open File");
@@ -28,7 +28,7 @@ int VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
         // Initialize Empty Buffer for write requests
         stream->bit_index = 0;
         stream->byte_index = 0;
-        _VUF_CLEAN(stream, 1);
+        _VUF_Clean(stream, 1);
     } else if(io_mode == READ_BINARY) {
         // Initialize Full Buffer for faster read requests
         fread(stream->rw_buffer, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
@@ -64,7 +64,7 @@ int VUF_append(VUF* stream, uint32_t data, uint32_t length){
         stream->rw_buffer[0] = stream->rw_buffer[stream->byte_index];
         stream->byte_index = 0;
 
-        _VUF_CLEAN(stream, 0);
+        _VUF_Clean(stream, 0);
     }
 
     return RES_OK;
