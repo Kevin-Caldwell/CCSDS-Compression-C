@@ -39,6 +39,11 @@ int test_UHI(){
         if(fail) break;
     }
 
+    free(baseImg.data);
+    F_CLOSE(stream.fs);
+
+    
+
     
     return fail;
 }
