@@ -1,6 +1,5 @@
 #include "testing/synthetic_image_generator.h"
 
-#include <stdio.h>
 
 #define WRI(x, point, tl, br) (INSIDE_INTERVAL(point.x, top_left.x, bottom_right, x))
 

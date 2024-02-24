@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#define TESTING_MATH
 
 #include "constants/load_constants.h"
 #include "testing/generate_image.h"
@@ -21,6 +20,10 @@ int main(int argInt, char **argS)
 
     if (argInt > 1)
     {
+    #if LOG
+        Log_add(argS[1]);
+        printf("%s", argS[1]);
+    #endif
         DEBUG = argInt >= 5;
 
         if (!strcmp(argS[1], "encode"))
@@ -43,7 +46,7 @@ int main(int argInt, char **argS)
     else
     {
         printf("Running Base Case.\n");
-        //printf("Result: %s", testVUF_Write() ? "Failed.\n" : "Passed.\n");
+        // printf("Result: %s", testVUF_Write() ? "Unsuccessful Run.\n" : "Successful Run.\n");
         printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
         //PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
     }

@@ -10,10 +10,12 @@
 extern HashTable predictor_constants;
 extern HashTable encoder_constants;
 
-
 // Updated through CLI Arguments
 extern char DEBUG;
 extern char log_file[];
+
+// #define ARM_GCC
+#define WIN_GCC
 
 #define LOG 1
 

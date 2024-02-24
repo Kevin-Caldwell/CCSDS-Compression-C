@@ -1,5 +1,4 @@
 #include "predictor/local_differences.h"
-#include <stdio.h>
 
 int32_t CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x)
 {

@@ -2,7 +2,6 @@
 #define HEADER_H
 
 #include <inttypes.h>
-#include <stdio.h>
 
 #include "constants/constants.h"
 #include "constants/encoder_constants.h"

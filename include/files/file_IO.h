@@ -8,7 +8,14 @@
 /// File Handling Abstractions
 typedef FILE file_t;
 
-typedef enum file_mode{READ = 0, WRITE, APPEND, READ_AND_WRITE, WRITING_AND_READING, APPENDING_AND_READING} FileMode;
+typedef enum file_mode{
+    READ = 0,
+    WRITE, 
+    APPEND, 
+    READ_AND_WRITE, 
+    WRITING_AND_READING, 
+    APPENDING_AND_READING
+} FileMode;
 
 
 extern const char* file_modes_str[];

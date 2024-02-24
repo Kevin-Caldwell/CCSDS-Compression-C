@@ -59,7 +59,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
     uint32_t codeword;
     uint32_t k_z;
 
-    FILE *log = fopen("../data/logs/c-encoder-debug.LOG", "w");
+    file_t *log = F_OPEN("../data/logs/c-encoder-debug.LOG", WRITE);
 
     VIFS stream;
     InitializeVarIntStream(&stream, file_name, buffer_size);
@@ -77,7 +77,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
                 if (x == 0 && y == 0)
                 {
                     gamma = BPOW(Gamma1);
-                    epsilon_z = ((3 * (uint)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
+                    epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
                     StreamVarInteger(&stream, data, D);
                     len += D;
                     fprintf(log, "%u:%d,%d\n", data, D, k_z);

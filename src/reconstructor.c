@@ -3,7 +3,6 @@
 #include <time.h>
 
 image *sample;
-//FILE *fp;
 void Reconstructor(image *predicted_values, image *reconstructed, FILE* file_ptr)
 {
     InitalizeImageConstants(predicted_values->size);
@@ -83,44 +82,44 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
     sprintf(write_buffer + strlen(write_buffer), "]\n");
 
     sprintf(write_buffer + strlen(write_buffer), "UpdateWeights args: %d %d %d %d\n", z, y, x, double_resolution_predicted_error);
-    fwrite(write_buffer, sizeof(char), strlen(write_buffer), file_ptr);
+    F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), file_ptr);
 }
 
 void TestReconstructor(char *file_name)
 {
-    FILE* file_ptr;
+    file_t* file_ptr;
 
     printf("Testing Reconstructor...\n");
-    image *sample_data;
+    image sample_data;
     ReadImageFromCSV(&sample_data, file_name);
     printf("Finished Reading Image.\n");
-    sample = sample_data;
+    sample = &sample_data;
 
-    image *predicted_data;
-    InitImage(&predicted_data, sample_data->size.x, sample_data->size.y, sample_data->size.z);
+    image predicted_data;
+    InitImage(&predicted_data, sample_data.size.x, sample_data.size.y, sample_data.size.z);
 
     printf("Running Predictor...\n");
     fflush(stdout);
-    InitializePredictorCache(&global_cache, sample_data);
+    InitializePredictorCache(&global_cache, &sample_data);
     printf("Cache Created..\n");
-    RunPredictor(sample_data, predicted_data);
+    RunPredictor(&sample_data, &predicted_data);
     printf("Completed Prediction.\n");
 
     printf("Logging to logs/c-debug.LOG.\n");
-    file_ptr = fopen("../data/logs/c-reconstructor-debug.LOG", "w");
+    file_ptr = F_OPEN("../data/logs/c-reconstructor-debug.LOG", WRITE);
 
-    image *reconstructed_data;
-    InitImage(&reconstructed_data, sample_data->size.x, sample_data->size.y, sample_data->size.z);
+    image reconstructed_data;
+    InitImage(&reconstructed_data, sample_data.size.x, sample_data.size.y, sample_data.size.z);
 
     for(int i = 0; i < sample->size.x * sample->size.y * sample->size.z; i++){
-        reconstructed_data->data[i] = 0;
+        reconstructed_data.data[i] = 0;
     }
 
     printf("Running Reconstructor...\n");
-    Reconstructor(predicted_data, reconstructed_data, file_ptr);
+    Reconstructor(&predicted_data, &reconstructed_data, file_ptr);
     printf("Completed Reconstruction.\n");
 
-    int res = Image_Equals(sample_data, reconstructed_data);
+    int res = Image_Equals(&sample_data, &reconstructed_data);
 
     if (res == INT32_MAX)
     {
@@ -131,13 +130,9 @@ void TestReconstructor(char *file_name)
         printf("Reconstruction Failed at i= %d.\n", res);
     }
 
-    fclose(file_ptr);
+    F_CLOSE(file_ptr);
 
-    free(sample_data->data);
-    free(predicted_data->data);
-    free(reconstructed_data->data);
-
-    free(sample_data);
-    free(predicted_data);
-    free(reconstructed_data);
+    free(sample_data.data);
+    free(predicted_data.data);
+    free(reconstructed_data.data);
 }

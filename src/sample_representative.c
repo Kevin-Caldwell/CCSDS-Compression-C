@@ -1,5 +1,4 @@
 #include "predictor/sample_representative.h"
-#include <stdio.h>
 
 
 // TODO REMOVE, Use GetPixel instaed

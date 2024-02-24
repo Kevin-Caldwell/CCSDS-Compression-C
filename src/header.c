@@ -1,5 +1,7 @@
 #include "encoder/header.h"
 
+#include <stdio.h>
+
 void PrepareImageMetadata(uint8_t* essential){
     uint8_t buf;
     

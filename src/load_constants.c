@@ -1,4 +1,5 @@
 #include "constants/load_constants.h"
+#include "files/file_IO.h"
 
 #include <stdio.h>
 
@@ -7,7 +8,7 @@ int LoadConstantFile(const char *file_name, HashTable *result)
     char line_buffer[KEY_LENGTH + 1 + 32];
     int constant_count = 0;
 
-    FILE *fp = fopen(file_name, "r");
+    file_t *fp = F_OPEN(file_name, READ);
     fgets(line_buffer, sizeof(char) * 10, fp);
     constant_count = atoi(line_buffer);
 
@@ -30,5 +31,5 @@ int LoadConstantFile(const char *file_name, HashTable *result)
 
         Hash_AddEntry(result, key_buffer, data_buffer);
     }
-    fclose(fp);
+    F_CLOSE(fp);
 }

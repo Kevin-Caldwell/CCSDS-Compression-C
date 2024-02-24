@@ -1,11 +1,10 @@
 #include "constants/global_constants.h"
 #include "predictor/predictor.h"
 #include <time.h>
-#include <stdio.h>
 #include <string.h>
 #include "files/logs.h"
 
-FILE *fp;
+file_t *fp;
 int C = 0;
 
 void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
@@ -51,7 +50,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
             sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
-        fwrite(write_buffer, sizeof(char), strlen(write_buffer), fp);
+        F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
     }
 }
 
@@ -74,7 +73,7 @@ int RunPredictor(image *hIMG, image *result)
     dim3 size = hIMG->size;
 
     #if LOG
-    fp = fopen("../data/logs/c-debug.LOG", "w");
+    fp = F_OPEN("../data/logs/c-debug.LOG", WRITE);
 
     Log_add("Setup Complete. Running C Predictor");
     start = clock();
@@ -105,7 +104,7 @@ int RunPredictor(image *hIMG, image *result)
     }
 
     #if LOG
-    fclose(fp);
+    F_CLOSE(fp);
 
     end = clock();
     double time_elapsed = (double) (end - start) / (double) CLOCKS_PER_SEC;

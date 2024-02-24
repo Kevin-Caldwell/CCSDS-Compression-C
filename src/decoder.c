@@ -1,7 +1,6 @@
 #include "decompressor/decoder.h"
 
 #include <inttypes.h>
-#include <stdio.h>
 #include <time.h>
 
 #include "encoder/stream_encoder.h"
@@ -57,7 +56,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
     uint32_t sample;
     uint32_t k_z;
 
-    FILE *log = fopen("../data/logs/c-decoder-debug.LOG", "w");
+    file_t *log = F_OPEN("../data/logs/c-decoder-debug.LOG", WRITE);
     VUF stream;
     VUF_initialize(&stream, file_name, 1);
 
@@ -65,7 +64,7 @@ void Decoder_DecodeBody(image* predicted_samples, const char* file_name){
     while (0) { //TODO /*stream not empty*/
         if (x == 0 && y == 0) {
             gamma = BPOW(Gamma1);
-            epsilon_z = ((3 * (uint)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
+            epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
             // Then read the first code word, which has len D
             sample = VUF_read_stack(&stream, D);
             SetPixel(predicted_samples, x, y, z, sample);

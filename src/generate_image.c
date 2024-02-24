@@ -6,13 +6,12 @@ int GenerateVoronoiImage(dim3 size, int index, int points){
     char filename[100];
     sprintf(filename, "../data/test-images/VORONOI_%lux%lux%lu_%d.csv", 
                                         size.x, size.y, size.z, index);
-    image* testImage;
+    image testImage;
     InitImage(&testImage, size.x, size.y, size.z);
-    GenerateVoronoiFlat3DLocal(testImage, points);
+    GenerateVoronoiFlat3DLocal(&testImage, points);
 
-    SaveImageAsCSV(testImage, filename);
-    free(testImage->data);
-    free(testImage);
+    SaveImageAsCSV(&testImage, filename);
+    free(testImage.data);
 
     return RES_OK;
 }
@@ -24,7 +23,7 @@ int PredictImage(char* source, char* destination){
 
     printf("___________C PREDICTOR____________\n");
 
-    res = ReadImageFromCSV(&hIMG, source);
+    res = ReadImageFromCSV(hIMG, source);
     #if LOG
     if(res){
         Log_error("Unable to Read Image");
@@ -41,7 +40,7 @@ int PredictImage(char* source, char* destination){
     #endif
 
 
-    res = InitImage(&result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
+    res = InitImage(result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
     #if LOG
     if(res) {
         Log_error("Unable to Initialize Image");
@@ -80,7 +79,7 @@ int PredictImage(char* source, char* destination){
 
 int EncodeImage(char* source, char* destination){
     image* predicted_image;
-    ReadImageFromCSV(&predicted_image, source);
+    ReadImageFromCSV(predicted_image, source);
     LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
     InitalizeImageConstants(predicted_image->size);
     InitalizePredictorConstants();
@@ -105,7 +104,7 @@ void TestHeader(){
 
 void TestReadImage(){
     image* img;
-    ReadImageFromCSV(&img, "data_locale.csv");
+    ReadImageFromCSV(img, "data_locale.csv");
     SaveImageAsCSV(img, "data_locale2.csv");
     free(img->data);
     

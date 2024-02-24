@@ -10,7 +10,8 @@
 
 #include <inttypes.h>
 #include <stdlib.h>
-#include <stdio.h>
+
+#include "files/file_IO.h"
 
 #ifndef L_SHIFT
 #define L_SHIFT(x, s) (s == 32 ? 0 : (s < 0 ? (unsigned) x >> -s : (unsigned) x << s))
@@ -22,7 +23,7 @@
 typedef enum file_modes {READ_BINARY=0, WRITE_BINARY} file_modes;
 
 typedef struct VarUnsignedIntFile{
-    FILE *fs;
+    file_t *fs;
     uint32_t rw_buffer[BUFFER_LENGTH];
     char io_mode;
 

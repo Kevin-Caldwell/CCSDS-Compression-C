@@ -3,8 +3,8 @@
 
 #include <inttypes.h>
 #include <stdlib.h>
-#include <files/file_IO.h>
-#include <dst/image.h>
+#include "files/file_IO.h"
+#include "dst/image.h"
 
 #define UHI_CACHE_LENGTH 3 // Image Size Buffer
 
@@ -23,19 +23,33 @@ int UHI_Initialize(
     FileMode file_mode
 );
 
-int UHI_WriteImage(
-    const char* filename, 
-    const image* source
-);
-
 int UHI_WritePixel(
     const UHI* stream, 
     dim3 index,
     PIXEL value
 );
 
-int UHI_ReadPixel(
+PIXEL UHI_ReadPixel(
     UHI* stream, 
     dim3 index
 );
+
+
+// Image Proxy for Limiting RAM usage
+typedef struct image_proxy{
+    dim3 size;
+    UHI* image_stream;
+} image_proxy;
+
+int InitProxyImage(
+    image_proxy* img, 
+    dim3 size, 
+    const char* file_name
+);
+
+PIXEL Proxy_GetPixel(image_proxy* hIMG, INDEX x, INDEX y, INDEX z);
+
+void Proxy_SetPixel(image_proxy* hIMG, INDEX x, INDEX y, INDEX z, PIXEL value);
+
+
 #endif /* UHI_IO_H */

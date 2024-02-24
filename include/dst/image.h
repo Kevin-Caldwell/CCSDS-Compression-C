@@ -28,6 +28,7 @@
 #include "math/math_functions.h"
 #include "constants/constants.h"
 #include <stdlib.h>
+#include "files/uhi_io.h"
 
 #define FRAME_SIZE(size) (size.x * size.y)
 #define MAP3_1(i, j, k, size) (k * FRAME_SIZE(size) + size.x * j + i)
@@ -40,7 +41,7 @@ typedef struct image{
     PIXEL* data;
 } image, image3;
 
-int InitImage(image** img_p, size_t x, size_t y, size_t z);
+int InitImage(image* img_p, size_t x, size_t y, size_t z);
 
 PIXEL GetPixel(image* hIMG, INDEX x, INDEX y, INDEX z);
 PIXEL* GetFrame(image* hIMG, INDEX y);
@@ -55,7 +56,6 @@ typedef struct image2{
     dim2 size;
     PIXEL* data;
 } image2;
-
 
 
 #endif /* IMAGE_H */

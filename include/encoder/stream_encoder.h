@@ -3,21 +3,21 @@
 
 #include <inttypes.h>
 #include <stdlib.h>
-#include <stdio.h>
+#include "files/file_IO.h"
 
 #define L_SHIFT(x, s) (s < 0 ? x >> -s : x << s)
 
 #define BUFFER_REG_SIZE 32
+#define BUFFER_LENGTH 15
 
 typedef struct VarIntFileStream
 {
-    FILE *fs;
-
-    uint32_t *buffer;
-    uint32_t buffer_size;
+    file_t *fs;
 
     int32_t bit_ptr;
     uint32_t byte_ptr;
+
+    uint32_t buffer[BUFFER_LENGTH];
 } VIFS;
 
 void InitializeVarIntStream(VIFS *stream, const char *file_name, uint32_t buffer_size);

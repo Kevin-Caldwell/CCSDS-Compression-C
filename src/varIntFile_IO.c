@@ -14,7 +14,7 @@ void _VUF_Clean(VUF* stream, char full){
 int VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
     // File IO Constants
     stream->io_mode = io_mode;
-    stream->fs = fopen(file_name, file_modes_arguments[io_mode]);
+    stream->fs = F_OPEN(file_name, io_mode);
 
     #if LOG
     if(!stream->fs){
@@ -31,7 +31,7 @@ int VUF_initialize(VUF* stream, const char* file_name, file_modes io_mode){
         _VUF_Clean(stream, 1);
     } else if(io_mode == READ_BINARY) {
         // Initialize Full Buffer for faster read requests
-        fread(stream->rw_buffer, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
+        F_READ(stream->rw_buffer, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
         stream->bit_index = 0;
         stream->byte_index = 0;
     }
@@ -58,7 +58,7 @@ int VUF_append(VUF* stream, uint32_t data, uint32_t length){
     // Fill Check
     if(stream->byte_index == BUFFER_LENGTH - 1){
         // Write entire filled buffer to File
-        fwrite(stream->rw_buffer, BUFFER_SIZE, BUFFER_LENGTH - 1, stream->fs);
+        F_WRITE(stream->rw_buffer, BUFFER_SIZE, BUFFER_LENGTH - 1, stream->fs);
 
         // Pull remaining data from Tail to Head
         stream->rw_buffer[0] = stream->rw_buffer[stream->byte_index];
@@ -86,7 +86,7 @@ uint32_t VUF_read_stack(VUF* stream, uint32_t length){
     if(stream->byte_index >= BUFFER_LENGTH - 1){
         stream->rw_buffer[0] = stream->rw_buffer[BUFFER_LENGTH - 1];
         stream->byte_index = 0;
-        fread(stream->rw_buffer + 1, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
+        F_READ(stream->rw_buffer + 1, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
     }
 
     printf("%08X\n", varInt >> (BUFFER_SIZE - length));
@@ -97,7 +97,7 @@ uint32_t VUF_read_stack(VUF* stream, uint32_t length){
 int VUF_close(VUF* stream){
     stream->bit_index = 0;
     stream->byte_index = 0;
-    fclose(stream->fs);
+    F_CLOSE(stream->fs);
 
     return RES_OK;
 }

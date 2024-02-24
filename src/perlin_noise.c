@@ -3,7 +3,6 @@
 #include "files/csv-io.h"
 #include <math.h>
 #include <string.h>
-#include <stdio.h>
 #include <time.h>
 
 typedef struct fVector3
@@ -104,7 +103,7 @@ void GeneratePerlinImage(dim3 size, int index, int length)
     sprintf(filename, "../data/test-images/PERLIN_%lux%lux%lu_%d.csv",
             size.x, size.y, size.z, index);
     image *testImage;
-    InitImage(&testImage, size.x, size.y, size.z);
+    InitImage(testImage, size.x, size.y, size.z);
     Perlin4(testImage, length);
 
     SaveImageAsCSV(testImage, filename);

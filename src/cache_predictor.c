@@ -25,7 +25,7 @@ int InitializePredictorCache(PredictorCache **ptr_p_cache, image *hIMG)
 
     for (int i = 1; i < 1; i++)
     {
-        InitImage(&p_cache->cache_space[i], x, y, z);
+        InitImage(p_cache->cache_space[i], x, y, z);
     }
     for (int j = 1; j < 1; j++)
     {

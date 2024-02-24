@@ -65,8 +65,6 @@ extern int LOCAL_SUM_TYPE;
 #define WEIGHT_EXPONENT_OFFSET_FLAG 0
 // 2^WEIGHT_UPDATE_SCALING_EXPONENT_CHANGE_INTERVAL
 
-void InitalizeImageConstants(dim3 size);
-void InitalizePredictorConstants();
 
 #pragma region Do Not Touch
 // TODO Rename ALL Constants to: kConstant
@@ -92,6 +90,9 @@ extern int C;
 extern int kVMin;
 extern int kVMax;
 extern int kTInc;
+
+void InitalizeImageConstants(dim3 size);
+void InitalizePredictorConstants();
 
 #pragma endregion
 #endif /* CONSTANTS_H */

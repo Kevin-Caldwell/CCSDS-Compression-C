@@ -6,7 +6,6 @@
 #include "files/csv-io.h"
 #include "testing/synthetic_image_generator.h"
 
-#include <stdio.h>
 #include <time.h>
 
 void TestHeader();
