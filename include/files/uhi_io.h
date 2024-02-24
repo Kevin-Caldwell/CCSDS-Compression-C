@@ -13,7 +13,7 @@ typedef struct UncompressedHyperspectralImage{
     file_t* fs;
     dim3 size;
     int32_t cache[UHI_CACHE_LENGTH]; // TODO: Pixel Caching
-} F_UHI, UHI;
+} F_UHI, UHI, uIMG;
 
 
 int UHI_Initialize(
@@ -35,21 +35,9 @@ PIXEL UHI_ReadPixel(
 );
 
 
-// Image Proxy for Limiting RAM usage
-typedef struct image_proxy{
-    dim3 size;
-    UHI* image_stream;
-} image_proxy;
+PIXEL Proxy_GetPixel(uIMG* hIMG, INDEX x, INDEX y, INDEX z);
 
-int InitProxyImage(
-    image_proxy* img, 
-    dim3 size, 
-    const char* file_name
-);
-
-PIXEL Proxy_GetPixel(image_proxy* hIMG, INDEX x, INDEX y, INDEX z);
-
-void Proxy_SetPixel(image_proxy* hIMG, INDEX x, INDEX y, INDEX z, PIXEL value);
+void Proxy_SetPixel(uIMG* hIMG, INDEX x, INDEX y, INDEX z, PIXEL value);
 
 
 #endif /* UHI_IO_H */

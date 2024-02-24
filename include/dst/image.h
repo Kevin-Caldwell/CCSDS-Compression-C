@@ -57,5 +57,4 @@ typedef struct image2{
     PIXEL* data;
 } image2;
 
-
 #endif /* IMAGE_H */

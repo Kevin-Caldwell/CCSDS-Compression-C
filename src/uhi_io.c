@@ -34,6 +34,23 @@ PIXEL UHI_ReadPixel(
     return 0;
 }
 
+int UHI_WritePixel(
+    const UHI* stream, 
+    dim3 index,
+    PIXEL value
+){
+    // Replace with Code
+}
+
 int UHI_close(UHI* stream){
     F_CLOSE(stream->fs);
+}
+
+
+PIXEL Proxy_GetPixel(uIMG* hIMG, INDEX x, INDEX y, INDEX z){
+    return UHI_ReadPixel(hIMG, (dim3) {x, y, z});
+}
+
+void Proxy_SetPixel(uIMG* hIMG, INDEX x, INDEX y, INDEX z, PIXEL value){
+    UHI_WritePixel(hIMG, (dim3) {x, y, z}, value);
 }

@@ -5,6 +5,7 @@
 #include "testing/generate_image.h"
 #include "decompressor/reconstructor.h"
 #include "testing/test_varInt.h"
+#include "testing/test_UHI.h"
 
 #if LOG
 #include "files/logs.h"
@@ -46,8 +47,9 @@ int main(int argInt, char **argS)
     else
     {
         printf("Running Base Case.\n");
+        test_UHI();
         // printf("Result: %s", testVUF_Write() ? "Unsuccessful Run.\n" : "Successful Run.\n");
-        printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
+        // printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
         //PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
     }
 
