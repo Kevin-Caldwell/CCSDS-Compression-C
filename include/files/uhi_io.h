@@ -4,7 +4,8 @@
 #include <inttypes.h>
 #include <stdlib.h>
 #include "files/file_IO.h"
-#include "dst/image.h"
+// #include "dst/image.h"
+#include "math/math_functions.h"
 
 #define UHI_CACHE_LENGTH 3 // Image Size Buffer
 

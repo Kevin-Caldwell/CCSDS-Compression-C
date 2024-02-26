@@ -112,7 +112,9 @@ void TestReconstructor(char *file_name)
     InitImage(&reconstructed_data, sample_data.size.x, sample_data.size.y, sample_data.size.z);
 
     for(int i = 0; i < sample->size.x * sample->size.y * sample->size.z; i++){
+        #ifndef MEMORY_SAVING
         reconstructed_data.data[i] = 0;
+        #endif
     }
 
     printf("Running Reconstructor...\n");
@@ -132,7 +134,9 @@ void TestReconstructor(char *file_name)
 
     F_CLOSE(file_ptr);
 
+    #ifndef MEMORY_SAVING
     free(sample_data.data);
     free(predicted_data.data);
     free(reconstructed_data.data);
+    #endif
 }

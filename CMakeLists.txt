@@ -27,3 +27,5 @@ if(MATH_LIBRARY)
     target_link_libraries(CCSDS_Compressor PUBLIC ${MATH_LIBRARY})
     target_link_libraries(CCSDS_Decompressor PUBLIC ${MATH_LIBRARY})
 endif()
+
+# add_compile_definitions(MEMORY_SAVING)

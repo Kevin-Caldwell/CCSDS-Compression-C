@@ -107,6 +107,8 @@ void GeneratePerlinImage(dim3 size, int index, int length)
     Perlin4(testImage, length);
 
     SaveImageAsCSV(testImage, filename);
+    #ifndef MEMORY_SAVING
     free(testImage->data);
     free(testImage);
+    #endif
 }

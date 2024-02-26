@@ -10,15 +10,15 @@ int test_UHI(){
     int _Ny = 100;
     int _Nz = 100;
     // Prepare Random Hyperspectral Image
-    InitImage(baseImg, _Nx, _Ny, _Nz);
+    InitImage(&baseImg, _Nx, _Ny, _Nz);
     GenerateVoronoiFlat3DNaive(&baseImg, 10);
     
-
-    UHI_Initialize(&stream, baseImg->size, "data/test-images/test.UHI", READ_AND_WRITE);
+    
+    UHI_Initialize(&stream, baseImg.size, "data/test-images/test.UHI", READ_AND_WRITE);
     for(int i = 0; i < _Nx; i++){
         for(int j = 0; j < _Ny; j++){
             for(int k = 0; k < _Nz; k++){
-                UHI_WritePixel(&stream, (dim3) {i, j, k}, GetPixel(baseImg, _Nx, _Ny, _Nz));
+                UHI_WritePixel(&stream, (dim3) {i, j, k}, GetPixel(&baseImg, _Nx, _Ny, _Nz));
             }
         }
     }
@@ -28,7 +28,7 @@ int test_UHI(){
     for(int i = 0; i < _Nx; i++){
         for(int j = 0; j < _Ny; j++){
             for(int k = 0; k < _Nz; k++){
-                if(UHI_ReadPixel(stream, (dim3) {i, j, k}) != GetPixel(baseImg, i, j, k)){
+                if(UHI_ReadPixel(&stream, (dim3) {i, j, k}) != GetPixel(&baseImg, i, j, k)){
                     fail = 1;
                 }
 
@@ -39,7 +39,9 @@ int test_UHI(){
         if(fail) break;
     }
 
+    #ifndef MEMORY_SAVING
     free(baseImg.data);
+    #endif
     F_CLOSE(stream.fs);
 
     

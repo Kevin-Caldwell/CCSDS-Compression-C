@@ -106,7 +106,12 @@ int ReadImageFromCSV(image* hIMG, char* file_name){
                 InitImage(hIMG, size.x, size.y, size.z);   
             }
             else{
+                #ifndef MEMORY_SAVING
                 (hIMG)->data[img_counter++] = num;
+                #else
+                
+                #endif
+                
                 if(img_counter == size.x * size.y * size.z){
                     break;
                 }

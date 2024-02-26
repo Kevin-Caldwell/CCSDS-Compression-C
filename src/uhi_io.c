@@ -1,4 +1,5 @@
 #include "files/uhi_io.h"
+#include "dst/image.h"
 
 int UHI_Initialize(
     UHI* stream, 

@@ -11,7 +11,9 @@ int GenerateVoronoiImage(dim3 size, int index, int points){
     GenerateVoronoiFlat3DLocal(&testImage, points);
 
     SaveImageAsCSV(&testImage, filename);
+    #ifndef MEMORY_SAVING
     free(testImage.data);
+    #endif
 
     return RES_OK;
 }
@@ -71,10 +73,12 @@ int PredictImage(char* source, char* destination){
 
     DeletePredictorCache(global_cache);
 
+    #ifndef MEMORY_SAVING
     //free(hIMG->data);
     free(result->data);
     //free(hIMG);
     free(result);
+    #endif
 }
 
 int EncodeImage(char* source, char* destination){
@@ -84,7 +88,9 @@ int EncodeImage(char* source, char* destination){
     InitalizeImageConstants(predicted_image->size);
     InitalizePredictorConstants();
     EncodeBody(predicted_image, destination, "w", 100);
+    #ifndef MEMORY_SAVING
     free(predicted_image->data);
+    #endif
     free(predicted_image);
 
     return RES_OK;
@@ -106,6 +112,8 @@ void TestReadImage(){
     image* img;
     ReadImageFromCSV(img, "data_locale.csv");
     SaveImageAsCSV(img, "data_locale2.csv");
+    #ifndef MEMORY_SAVING
     free(img->data);
+    #endif
     
 }

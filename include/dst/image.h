@@ -36,10 +36,23 @@
 #define GetX(t) (t % Nx)
 #define GetY(t) ((int)t / Nx)
 
+#define S(hIMG, z,y,x) GetPixel(hIMG, x,y,z)
+
+#if MEMORY_SAVING
+
+#include "files/uhi_io.h"
+
+typedef UHI image;
+typedef UHI image3;
+
+#else
+
 typedef struct image{
     dim3 size;
     PIXEL* data;
 } image, image3;
+
+#endif
 
 int InitImage(image* img_p, size_t x, size_t y, size_t z);
 
@@ -50,11 +63,11 @@ void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 
 int Image_Equals(image* img1, image* img2);
 
-#define S(hIMG, z,y,x) GetPixel(hIMG, x,y,z)
 
 typedef struct image2{
     dim2 size;
     PIXEL* data;
 } image2;
+
 
 #endif /* IMAGE_H */

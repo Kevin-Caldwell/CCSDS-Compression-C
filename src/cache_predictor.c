@@ -27,13 +27,13 @@ int InitializePredictorCache(PredictorCache **ptr_p_cache, image *hIMG)
     {
         InitImage(p_cache->cache_space[i], x, y, z);
     }
-    for (int j = 1; j < 1; j++)
-    {
-        for (int i = 0; i < Nx * Ny * Nz; i++)
-        {
-            p_cache->cache_space[j]->data[i] = -1;
-        }
-    }
+    // for (int j = 1; j < 1; j++)
+    // {
+    //     for (int i = 0; i < Nx * Ny * Nz; i++)
+    //     {
+    //         p_cache->cache_space[j]->data[i] = -1;
+    //     }
+    // }
 
     InitializeWeights(&p_cache->weights, 0, 0, 0);
 
