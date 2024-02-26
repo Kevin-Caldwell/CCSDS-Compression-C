@@ -14,6 +14,21 @@
 
 extern char* CacheFiles[];
 
+/**
+ * @brief Struct PredictorCache is a struct for storing 
+ * the intermediate results obtained through the predictor. 
+ * 
+ * cache_space: dynamically allocated image array for storing multiple 
+ * images
+ * 
+ * weights: dynamcially allocated int32_t array for storing the weights
+ * 
+ * @deprecated
+ * The Predictor testing has been re-implemented to accomodate more
+ * streamlined and memory-efficient debugging processes.
+ * 
+ * See predictor.c for more details
+*/
 struct PredictorCache{
     image* cache_space[1];
     int32_t* weights;

@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prepare__h_image_8py_source" xml:lang="en-US">
+<title>prepare_hImage.py</title>
+<indexterm><primary>python/prepare_hImage.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_prepare__h_image_8py_source_1l00001"/><link linkend="_namespaceprepare__h_image">00001</link> <emphasis role="keyword">from</emphasis>&#32;PIL&#32;<emphasis role="keyword">import</emphasis>&#32;Image
+<anchor xml:id="_prepare__h_image_8py_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;csv
+<anchor xml:id="_prepare__h_image_8py_source_1l00003"/>00003 <emphasis role="keyword">import</emphasis>&#32;numpy&#32;<emphasis role="keyword">as</emphasis>&#32;np
+<anchor xml:id="_prepare__h_image_8py_source_1l00004"/>00004 <emphasis role="keyword">import</emphasis>&#32;math
+<anchor xml:id="_prepare__h_image_8py_source_1l00005"/>00005 <emphasis role="keyword">import</emphasis>&#32;pandas&#32;<emphasis role="keyword">as</emphasis>&#32;pd
+<anchor xml:id="_prepare__h_image_8py_source_1l00006"/>00006 <emphasis role="keyword">import</emphasis>&#32;sys
+<anchor xml:id="_prepare__h_image_8py_source_1l00007"/>00007 
+<anchor xml:id="_prepare__h_image_8py_source_1l00008"/>00008 
+<anchor xml:id="_prepare__h_image_8py_source_1l00009"/><link linkend="_namespaceprepare__h_image_1a84c47e6bbcef028eda4c81cfa1b935ff">00009</link> <emphasis role="keyword">def&#32;</emphasis>ReadCSV(filename):
+<anchor xml:id="_prepare__h_image_8py_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fulltxt&#32;=&#32;open(filename,&#32;<emphasis role="stringliteral">&apos;r&apos;</emphasis>).read()
+<anchor xml:id="_prepare__h_image_8py_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data&#32;=&#32;[]
+<anchor xml:id="_prepare__h_image_8py_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num&#32;=&#32;0
+<anchor xml:id="_prepare__h_image_8py_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(len(fulltxt)):
+<anchor xml:id="_prepare__h_image_8py_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;str(fulltxt[i]).isnumeric():
+<anchor xml:id="_prepare__h_image_8py_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num&#32;*=&#32;10
+<anchor xml:id="_prepare__h_image_8py_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num&#32;+=&#32;int(fulltxt[i])
+<anchor xml:id="_prepare__h_image_8py_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_prepare__h_image_8py_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data.append(num)
+<anchor xml:id="_prepare__h_image_8py_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;num&#32;=&#32;0
+<anchor xml:id="_prepare__h_image_8py_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(i&#32;%&#32;(len(fulltxt)&#32;//&#32;100)&#32;==&#32;0):
+<anchor xml:id="_prepare__h_image_8py_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;Reading...&#32;{int(i/len(fulltxt)*100)}%&quot;</emphasis>,&#32;end=<emphasis role="stringliteral">&quot;\r&quot;</emphasis>)
+<anchor xml:id="_prepare__h_image_8py_source_1l00022"/>00022 
+<anchor xml:id="_prepare__h_image_8py_source_1l00023"/>00023 
+<anchor xml:id="_prepare__h_image_8py_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;fulltxt
+<anchor xml:id="_prepare__h_image_8py_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;num
+<anchor xml:id="_prepare__h_image_8py_source_1l00026"/>00026 
+<anchor xml:id="_prepare__h_image_8py_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Finished&#32;Reading...&quot;</emphasis>)
+<anchor xml:id="_prepare__h_image_8py_source_1l00028"/>00028 
+<anchor xml:id="_prepare__h_image_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;data
+<anchor xml:id="_prepare__h_image_8py_source_1l00030"/>00030 
+<anchor xml:id="_prepare__h_image_8py_source_1l00031"/><link linkend="_namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81">00031</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link>(wavelength,&#32;gamma=0.8):
+<anchor xml:id="_prepare__h_image_8py_source_1l00032"/>00032 
+<anchor xml:id="_prepare__h_image_8py_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&apos;&apos;&apos;This&#32;converts&#32;a&#32;given&#32;wavelength&#32;of&#32;light&#32;to&#32;an&#32;</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00034"/>00034 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;approximate&#32;RGB&#32;color&#32;value.&#32;The&#32;wavelength&#32;must&#32;be&#32;given</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00035"/>00035 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;in&#32;nanometers&#32;in&#32;the&#32;range&#32;from&#32;380&#32;nm&#32;through&#32;750&#32;nm</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00036"/>00036 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;(789&#32;THz&#32;through&#32;400&#32;THz).</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00037"/>00037 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Based&#32;on&#32;code&#32;by&#32;Dan&#32;Bruton</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00038"/>00038 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;http://www.physics.sfasu.edu/astro/color/spectra.html</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00039"/>00039 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&apos;&apos;&apos;</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00040"/>00040 
+<anchor xml:id="_prepare__h_image_8py_source_1l00041"/>00041 &#32;&#32;&#32;&#32;wavelength&#32;=&#32;float(wavelength)
+<anchor xml:id="_prepare__h_image_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;wavelength&#32;&gt;=&#32;380&#32;<emphasis role="keywordflow">and</emphasis>&#32;wavelength&#32;&lt;=&#32;440:
+<anchor xml:id="_prepare__h_image_8py_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attenuation&#32;=&#32;0.3&#32;+&#32;0.7&#32;*&#32;(wavelength&#32;-&#32;380)&#32;/&#32;(440&#32;-&#32;380)
+<anchor xml:id="_prepare__h_image_8py_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;((-(wavelength&#32;-&#32;440)&#32;/&#32;(440&#32;-&#32;380))&#32;*&#32;attenuation)&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;(1.0&#32;*&#32;attenuation)&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;wavelength&#32;&gt;=&#32;440&#32;<emphasis role="keywordflow">and</emphasis>&#32;wavelength&#32;&lt;=&#32;490:
+<anchor xml:id="_prepare__h_image_8py_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;((wavelength&#32;-&#32;440)&#32;/&#32;(490&#32;-&#32;440))&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;1.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;wavelength&#32;&gt;=&#32;490&#32;<emphasis role="keywordflow">and</emphasis>&#32;wavelength&#32;&lt;=&#32;510:
+<anchor xml:id="_prepare__h_image_8py_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;1.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;(-(wavelength&#32;-&#32;510)&#32;/&#32;(510&#32;-&#32;490))&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;wavelength&#32;&gt;=&#32;510&#32;<emphasis role="keywordflow">and</emphasis>&#32;wavelength&#32;&lt;=&#32;580:
+<anchor xml:id="_prepare__h_image_8py_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;((wavelength&#32;-&#32;510)&#32;/&#32;(580&#32;-&#32;510))&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;1.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;wavelength&#32;&gt;=&#32;580&#32;<emphasis role="keywordflow">and</emphasis>&#32;wavelength&#32;&lt;=&#32;645:
+<anchor xml:id="_prepare__h_image_8py_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;1.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;(-(wavelength&#32;-&#32;645)&#32;/&#32;(645&#32;-&#32;580))&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;wavelength&#32;&gt;=&#32;645&#32;<emphasis role="keywordflow">and</emphasis>&#32;wavelength&#32;&lt;=&#32;750:
+<anchor xml:id="_prepare__h_image_8py_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;attenuation&#32;=&#32;0.3&#32;+&#32;0.7&#32;*&#32;(750&#32;-&#32;wavelength)&#32;/&#32;(750&#32;-&#32;645)
+<anchor xml:id="_prepare__h_image_8py_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;(1.0&#32;*&#32;attenuation)&#32;**&#32;gamma
+<anchor xml:id="_prepare__h_image_8py_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_prepare__h_image_8py_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;R&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;G&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;B&#32;=&#32;0.0
+<anchor xml:id="_prepare__h_image_8py_source_1l00072"/>00072 &#32;&#32;&#32;&#32;R&#32;*=&#32;255
+<anchor xml:id="_prepare__h_image_8py_source_1l00073"/>00073 &#32;&#32;&#32;&#32;G&#32;*=&#32;255
+<anchor xml:id="_prepare__h_image_8py_source_1l00074"/>00074 &#32;&#32;&#32;&#32;B&#32;*=&#32;255
+<anchor xml:id="_prepare__h_image_8py_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(int(R),&#32;int(G),&#32;int(B))
+<anchor xml:id="_prepare__h_image_8py_source_1l00076"/>00076 
+<anchor xml:id="_prepare__h_image_8py_source_1l00077"/>00077 <emphasis role="comment">#&#32;CacheFiles&#32;=&#32;[&quot;raw&quot;,</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00078"/>00078 <emphasis role="comment">#&#32;&#32;&#32;&quot;local-sums&quot;,</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00079"/>00079 <emphasis role="comment">#&#32;&#32;&#32;&#32;&quot;sample-representatives&quot;,</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00080"/>00080 <emphasis role="comment">#&#32;&#32;&#32;&#32;&quot;predicted_sample&quot;,</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00081"/>00081 <emphasis role="comment">#&#32;&#32;&#32;&#32;&quot;central_local_difference&quot;,</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00082"/>00082 <emphasis role="comment">#&#32;&#32;&#32;&#32;&quot;predicted_central_local_difference&quot;,&#32;</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00083"/>00083 <emphasis role="comment">#&#32;&#32;&#32;&#32;&quot;clipped_quanitzer_bin_center&quot;,</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00084"/>00084 <emphasis role="comment">#&#32;&#32;&#32;&#32;&quot;predictor&quot;,&#32;&quot;quantizer_index&quot;]</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00085"/>00085 
+<anchor xml:id="_prepare__h_image_8py_source_1l00086"/><link linkend="_namespaceprepare__h_image_1a7e69bd3f9400dc258e83fe7ecab1e317">00086</link> CacheFiles&#32;=&#32;[[]]
+<anchor xml:id="_prepare__h_image_8py_source_1l00087"/>00087 
+<anchor xml:id="_prepare__h_image_8py_source_1l00088"/>00088 <emphasis role="comment">#file_index&#32;=&#32;7</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00089"/>00089 
+<anchor xml:id="_prepare__h_image_8py_source_1l00090"/>00090 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_prepare__h_image_8py_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;file_index&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(len(CacheFiles)):
+<anchor xml:id="_prepare__h_image_8py_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Starting&#32;Display&#32;Image..&quot;</emphasis>)&#32;&#32;&#32;
+<anchor xml:id="_prepare__h_image_8py_source_1l00093"/>00093 
+<anchor xml:id="_prepare__h_image_8py_source_1l00094"/><link linkend="_namespaceprepare__h_image_1a511ae0b1c13f95e5f08f1a0dd3da3d93">00094</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data&#32;=&#32;ReadCSV(f<emphasis role="stringliteral">&quot;data/test-images/VORONOI_640x512x640_1000.csv&quot;</emphasis>)
+<anchor xml:id="_prepare__h_image_8py_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#print(data)</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00096"/>00096 
+<anchor xml:id="_prepare__h_image_8py_source_1l00097"/><link linkend="_namespaceprepare__h_image_1a5c7e4f16622600cb52580b191565e2dd">00097</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Nx,Ny,Nz&#32;=&#32;data[0],&#32;data[1],&#32;data[2]
+<anchor xml:id="_prepare__h_image_8py_source_1l00098"/>00098 
+<anchor xml:id="_prepare__h_image_8py_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;data[0]
+<anchor xml:id="_prepare__h_image_8py_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;data[0]
+<anchor xml:id="_prepare__h_image_8py_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;data[0]
+<anchor xml:id="_prepare__h_image_8py_source_1l00102"/>00102 
+<anchor xml:id="_prepare__h_image_8py_source_1l00103"/>00103 
+<anchor xml:id="_prepare__h_image_8py_source_1l00104"/><link linkend="_namespaceprepare__h_image_1adbdde44f981e5f6df2c75332ea3f9220">00104</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;numbers&#32;=&#32;np.array(data,&#32;dtype=int)
+<anchor xml:id="_prepare__h_image_8py_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;data
+<anchor xml:id="_prepare__h_image_8py_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;numbers.resize((Nx,Ny,Nz))
+<anchor xml:id="_prepare__h_image_8py_source_1l00107"/>00107 
+<anchor xml:id="_prepare__h_image_8py_source_1l00108"/>00108 
+<anchor xml:id="_prepare__h_image_8py_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Table&#32;Created&quot;</emphasis>)
+<anchor xml:id="_prepare__h_image_8py_source_1l00110"/>00110 
+<anchor xml:id="_prepare__h_image_8py_source_1l00111"/><link linkend="_namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8">00111</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minimum&#32;=&#32;numbers.min()
+<anchor xml:id="_prepare__h_image_8py_source_1l00112"/><link linkend="_namespaceprepare__h_image_1a34ddfe7666109e00419326a0334cea67">00112</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;maximum&#32;=&#32;numbers.max()
+<anchor xml:id="_prepare__h_image_8py_source_1l00113"/><link linkend="_namespaceprepare__h_image_1a68c1363ccdf28598f4504e4b6fd6288a">00113</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;number_range&#32;=&#32;maximum&#32;-&#32;minimum&#32;+&#32;1
+<anchor xml:id="_prepare__h_image_8py_source_1l00114"/>00114 
+<anchor xml:id="_prepare__h_image_8py_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(maximum)
+<anchor xml:id="_prepare__h_image_8py_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(minimum)
+<anchor xml:id="_prepare__h_image_8py_source_1l00117"/>00117 
+<anchor xml:id="_prepare__h_image_8py_source_1l00118"/>00118 
+<anchor xml:id="_prepare__h_image_8py_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Prepared&#32;Data..&quot;</emphasis>)
+<anchor xml:id="_prepare__h_image_8py_source_1l00120"/>00120 
+<anchor xml:id="_prepare__h_image_8py_source_1l00121"/>00121 
+<anchor xml:id="_prepare__h_image_8py_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;z&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;Nz,&#32;1):
+<anchor xml:id="_prepare__h_image_8py_source_1l00123"/><link linkend="_namespaceprepare__h_image_1a86d0d51ceb4bc3bd26707520f257a5a4">00123</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;img&#32;=&#32;Image.new(&#32;<emphasis role="stringliteral">&apos;RGB&apos;</emphasis>,&#32;(Nx,Ny),&#32;<emphasis role="stringliteral">&quot;black&quot;</emphasis>)&#32;<emphasis role="comment">#&#32;Create&#32;a&#32;new&#32;black&#32;image</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00124"/><link linkend="_namespaceprepare__h_image_1a25d0e7c7655b7a5eed365b894fd5e26f">00124</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pixels&#32;=&#32;img.load()&#32;<emphasis role="comment">#&#32;Create&#32;the&#32;pixel&#32;map</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00125"/>00125 
+<anchor xml:id="_prepare__h_image_8py_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minimum&#32;=&#32;numbers[:,:,z].min()
+<anchor xml:id="_prepare__h_image_8py_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;maximum&#32;=&#32;numbers[:,:,z].max()
+<anchor xml:id="_prepare__h_image_8py_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;number_range&#32;=&#32;maximum&#32;-&#32;minimum
+<anchor xml:id="_prepare__h_image_8py_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(img.size[0]):&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;For&#32;every&#32;pixel:</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;j&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(img.size[1]):
+<anchor xml:id="_prepare__h_image_8py_source_1l00131"/><link linkend="_namespaceprepare__h_image_1ac8859e8c1ce357c4c8b37bbb1936ba1c">00131</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;v&#32;=&#32;(numbers[i,&#32;j,&#32;z]&#32;-&#32;minimum)&#32;/&#32;number_range&#32;*&#32;370&#32;+&#32;380
+<anchor xml:id="_prepare__h_image_8py_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(math.isnan(v)):
+<anchor xml:id="_prepare__h_image_8py_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;v&#32;=&#32;0
+<anchor xml:id="_prepare__h_image_8py_source_1l00134"/><link linkend="_namespaceprepare__h_image_1a1aabac6d068eef6a7bad3fdf50a05cc8">00134</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;d&#32;=&#32;<link linkend="_namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link>(int(v))
+<anchor xml:id="_prepare__h_image_8py_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pixels[i,j]&#32;=&#32;(d)&#32;<emphasis role="comment">#&#32;Set&#32;the&#32;colour&#32;accordingly</emphasis>
+<anchor xml:id="_prepare__h_image_8py_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;img.save(f<emphasis role="stringliteral">&quot;python/images/{CacheFiles[file_index]}{z}.png&quot;</emphasis>)
+<anchor xml:id="_prepare__h_image_8py_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;img.show()
+<anchor xml:id="_prepare__h_image_8py_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;del&#32;img
+<anchor xml:id="_prepare__h_image_8py_source_1l00139"/>00139 &#32;&#32;&#32;&#32;
+<anchor xml:id="_prepare__h_image_8py_source_1l00140"/>00140 
+<anchor xml:id="_prepare__h_image_8py_source_1l00141"/>00141 &#32;&#32;&#32;&#32;
+</programlisting></section>

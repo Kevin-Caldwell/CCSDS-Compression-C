@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00137" xml:lang="en-US">
+<title>include/constants/global_constants.h File Reference</title>
+<indexterm><primary>include/constants/global_constants.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;constants/load_constants.h&quot;<?linebreak?></programlisting>Include dependency graph for global_constants.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/ddd/a00138.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d14/a00139.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_a00137_1a614412df666e2cf249faa7be8d3fa841">GLOBAL_CONSTANTS_LOCATION</link>&#160;&#160;&#160;&quot;/global.CONST&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_a00137_1a7a8fe096cc3b24ddabd9b150f4f5bdd7">PREDICTOR_CONSTANTS_LOCATION</link>&#160;&#160;&#160;&quot;../data/constants/predictor.CONST&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_a00137_1ad4eebc138945aeff7dba131d420d1b51">ENCODER_CONSTANTS_LOCATION</link>&#160;&#160;&#160;&quot;/encoder.CONST&quot;</para>
+</listitem>
+            <listitem><para>#define <link linkend="_a00137_1ae53081d61f280bba7a4a6da4facdd653">WIN_GCC</link></para>
+</listitem>
+            <listitem><para>#define <link linkend="_a00137_1a159ca84d25a5487d8e81e4438725df19">LOG</link>&#160;&#160;&#160;1</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef enum <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link> <link linkend="_a00137_1ae6f57a1b4f31c934703178eaecd3d272">ERROR_CODES</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link> { <?linebreak?><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737">RES_OK</link> = 0
+, <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f">FILE_ACCESS_ERROR</link>
+, <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215">FILE_READ_ERROR</link>
+, <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a48c4ba85d5ee73f67a14a3362b9bb3cc">FILE_WRITE_ERROR</link>
+, <?linebreak?><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25ad4ce6624264e795b9dd966f44e15956c">MEM_ALLOC_ERROR</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00376">HashTable</link> <link linkend="_a00137_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00376">HashTable</link> <link linkend="_a00137_1a3c652412cc269bd4ae6155fed5f79c6f">encoder_constants</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_a00137_1a1b0cdea94de8d08c0351a24c1e84f547">DEBUG</link></para>
+</listitem>
+            <listitem><para>char <link linkend="_a00137_1a87e78d2e71f0d53d7886e1a126f39b16">log_file</link> []</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_a00137_1ad4eebc138945aeff7dba131d420d1b51"/><section>
+    <title>ENCODER_CONSTANTS_LOCATION</title>
+<indexterm><primary>ENCODER_CONSTANTS_LOCATION</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>ENCODER_CONSTANTS_LOCATION</secondary></indexterm>
+<para><computeroutput>#define ENCODER_CONSTANTS_LOCATION&#160;&#160;&#160;&quot;/encoder.CONST&quot;</computeroutput></para><para>
+Definition at line <link linkend="_a00137_source_1l00027">27</link> of file <link linkend="_a00137_source">global_constants.h</link>.</para>
+</section>
+<anchor xml:id="_a00137_1a614412df666e2cf249faa7be8d3fa841"/><section>
+    <title>GLOBAL_CONSTANTS_LOCATION</title>
+<indexterm><primary>GLOBAL_CONSTANTS_LOCATION</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>GLOBAL_CONSTANTS_LOCATION</secondary></indexterm>
+<para><computeroutput>#define GLOBAL_CONSTANTS_LOCATION&#160;&#160;&#160;&quot;/global.CONST&quot;</computeroutput></para>
+<para><link linkend="_a00137">global_constants.h</link> <formalpara><title>Author</title>
+
+<para>@Kevin-Caldwell</para>
+</formalpara>
+Contains Application-Level Constants</para>
+
+<para>Uses Log Files Constant Source Files Error Enumerations</para>
+
+<para>Dependencies Load Constants</para>
+
+<para>TODO Global Constants Consolidate all Constants under respective files </para>
+<para>
+Definition at line <link linkend="_a00137_source_1l00025">25</link> of file <link linkend="_a00137_source">global_constants.h</link>.</para>
+</section>
+<anchor xml:id="_a00137_1a159ca84d25a5487d8e81e4438725df19"/><section>
+    <title>LOG</title>
+<indexterm><primary>LOG</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>LOG</secondary></indexterm>
+<para><computeroutput>#define LOG&#160;&#160;&#160;1</computeroutput></para><para>
+Definition at line <link linkend="_a00137_source_1l00039">39</link> of file <link linkend="_a00137_source">global_constants.h</link>.</para>
+</section>
+<anchor xml:id="_a00137_1a7a8fe096cc3b24ddabd9b150f4f5bdd7"/><section>
+    <title>PREDICTOR_CONSTANTS_LOCATION</title>
+<indexterm><primary>PREDICTOR_CONSTANTS_LOCATION</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>PREDICTOR_CONSTANTS_LOCATION</secondary></indexterm>
+<para><computeroutput>#define PREDICTOR_CONSTANTS_LOCATION&#160;&#160;&#160;&quot;../data/constants/predictor.CONST&quot;</computeroutput></para><para>
+Definition at line <link linkend="_a00137_source_1l00026">26</link> of file <link linkend="_a00137_source">global_constants.h</link>.</para>
+</section>
+<anchor xml:id="_a00137_1ae53081d61f280bba7a4a6da4facdd653"/><section>
+    <title>WIN_GCC</title>
+<indexterm><primary>WIN_GCC</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>WIN_GCC</secondary></indexterm>
+<para><computeroutput>#define WIN_GCC</computeroutput></para><para>
+Definition at line <link linkend="_a00137_source_1l00037">37</link> of file <link linkend="_a00137_source">global_constants.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_a00137_1ae6f57a1b4f31c934703178eaecd3d272"/><section>
+    <title>ERROR_CODES</title>
+<indexterm><primary>ERROR_CODES</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>ERROR_CODES</secondary></indexterm>
+<para><computeroutput>typedef enum <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link> <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link></computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_a00137_1a938a8c46255e5666f6a434ca0eb87f25"/><section>
+    <title>ERROR_CODES</title>
+<indexterm><primary>ERROR_CODES</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>ERROR_CODES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>RES_OK</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>RES_OK</secondary></indexterm>
+<anchor xml:id="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737"/>RES_OK</entry><entry></entry></row><row><entry><indexterm><primary>FILE_ACCESS_ERROR</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>FILE_ACCESS_ERROR</secondary></indexterm>
+<anchor xml:id="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f"/>FILE_ACCESS_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>FILE_READ_ERROR</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>FILE_READ_ERROR</secondary></indexterm>
+<anchor xml:id="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215"/>FILE_READ_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>FILE_WRITE_ERROR</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>FILE_WRITE_ERROR</secondary></indexterm>
+<anchor xml:id="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a48c4ba85d5ee73f67a14a3362b9bb3cc"/>FILE_WRITE_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>MEM_ALLOC_ERROR</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>MEM_ALLOC_ERROR</secondary></indexterm>
+<anchor xml:id="_a00137_1a938a8c46255e5666f6a434ca0eb87f25ad4ce6624264e795b9dd966f44e15956c"/>MEM_ALLOC_ERROR</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_a00137_source_1l00041">41</link> of file <link linkend="_a00137_source">global_constants.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00137_1a1b0cdea94de8d08c0351a24c1e84f547"/><section>
+    <title>DEBUG</title>
+<indexterm><primary>DEBUG</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>DEBUG</secondary></indexterm>
+<para><computeroutput>char DEBUG<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_a00047_source_1l00014">14</link> of file <link linkend="_a00047_source">compressor.c</link>.</para>
+</section>
+<anchor xml:id="_a00137_1a3c652412cc269bd4ae6155fed5f79c6f"/><section>
+    <title>encoder_constants</title>
+<indexterm><primary>encoder_constants</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>encoder_constants</secondary></indexterm>
+<para><computeroutput><link linkend="_a00376">HashTable</link> encoder_constants<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_a00290_source_1l00056">56</link> of file <link linkend="_a00290_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_a00137_1a87e78d2e71f0d53d7886e1a126f39b16"/><section>
+    <title>log_file</title>
+<indexterm><primary>log_file</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>log_file</secondary></indexterm>
+<para><computeroutput>char log_file[]<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_a00269_source_1l00006">6</link> of file <link linkend="_a00269_source">logs.c</link>.</para>
+</section>
+<anchor xml:id="_a00137_1a3e84b5148948a9a22f804ac78d16590c"/><section>
+    <title>predictor_constants</title>
+<indexterm><primary>predictor_constants</primary><secondary>global_constants.h</secondary></indexterm>
+<indexterm><primary>global_constants.h</primary><secondary>predictor_constants</secondary></indexterm>
+<para><computeroutput><link linkend="_a00376">HashTable</link> predictor_constants<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_a00290_source_1l00055">55</link> of file <link linkend="_a00290_source">constants.c</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00014_source" xml:lang="en-US">
+<title>perlin_image.py</title>
+<indexterm><primary>python/perlin_image.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00014_source_1l00001"/><link linkend="_a00364">00001</link> <emphasis role="comment">#&#32;https://github.com/pvigier/perlin-numpy/tree/master/perlin_numpy</emphasis>
+<anchor xml:id="_a00014_source_1l00002"/>00002 
+<anchor xml:id="_a00014_source_1l00003"/>00003 <emphasis role="keyword">import</emphasis>&#32;numpy&#32;<emphasis role="keyword">as</emphasis>&#32;np
+<anchor xml:id="_a00014_source_1l00004"/>00004 
+<anchor xml:id="_a00014_source_1l00005"/><link linkend="_a00364_1a3fa1574eb32a9a437f406b678d378c99">00005</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00364_1a3fa1574eb32a9a437f406b678d378c99">interpolant</link>(t):
+<anchor xml:id="_a00014_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;t*t*t*(t*(t*6&#32;-&#32;15)&#32;+&#32;10)
+<anchor xml:id="_a00014_source_1l00007"/>00007 
+<anchor xml:id="_a00014_source_1l00008"/>00008 
+<anchor xml:id="_a00014_source_1l00009"/><link linkend="_a00364_1a8f0a805cc15da261cccfb8ee1b927e2e">00009</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00364_1a8f0a805cc15da261cccfb8ee1b927e2e">generate_perlin_noise_3d</link>(
+<anchor xml:id="_a00014_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;shape,&#32;res,&#32;tileable=(<emphasis role="keyword">False</emphasis>,&#32;<emphasis role="keyword">False</emphasis>,&#32;<emphasis role="keyword">False</emphasis>),
+<anchor xml:id="_a00014_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;interpolant=interpolant
+<anchor xml:id="_a00014_source_1l00012"/>00012 ):
+<anchor xml:id="_a00014_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;Generate&#32;a&#32;3D&#32;numpy&#32;array&#32;of&#32;perlin&#32;noise.</emphasis>
+<anchor xml:id="_a00014_source_1l00014"/>00014 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_a00014_source_1l00015"/>00015 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Args:</emphasis>
+<anchor xml:id="_a00014_source_1l00016"/>00016 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;shape:&#32;The&#32;shape&#32;of&#32;the&#32;generated&#32;array&#32;(tuple&#32;of&#32;three&#32;ints).</emphasis>
+<anchor xml:id="_a00014_source_1l00017"/>00017 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;This&#32;must&#32;be&#32;a&#32;multiple&#32;of&#32;res.</emphasis>
+<anchor xml:id="_a00014_source_1l00018"/>00018 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res:&#32;The&#32;number&#32;of&#32;periods&#32;of&#32;noise&#32;to&#32;generate&#32;along&#32;each</emphasis>
+<anchor xml:id="_a00014_source_1l00019"/>00019 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;axis&#32;(tuple&#32;of&#32;three&#32;ints).&#32;Note&#32;shape&#32;must&#32;be&#32;a&#32;multiple</emphasis>
+<anchor xml:id="_a00014_source_1l00020"/>00020 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;of&#32;res.</emphasis>
+<anchor xml:id="_a00014_source_1l00021"/>00021 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tileable:&#32;If&#32;the&#32;noise&#32;should&#32;be&#32;tileable&#32;along&#32;each&#32;axis</emphasis>
+<anchor xml:id="_a00014_source_1l00022"/>00022 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(tuple&#32;of&#32;three&#32;bools).&#32;Defaults&#32;to&#32;(False,&#32;False,&#32;False).</emphasis>
+<anchor xml:id="_a00014_source_1l00023"/>00023 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;interpolant:&#32;The&#32;interpolation&#32;function,&#32;defaults&#32;to</emphasis>
+<anchor xml:id="_a00014_source_1l00024"/>00024 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t*t*t*(t*(t*6&#32;-&#32;15)&#32;+&#32;10).</emphasis>
+<anchor xml:id="_a00014_source_1l00025"/>00025 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_a00014_source_1l00026"/>00026 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Returns:</emphasis>
+<anchor xml:id="_a00014_source_1l00027"/>00027 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A&#32;numpy&#32;array&#32;of&#32;shape&#32;shape&#32;with&#32;the&#32;generated&#32;noise.</emphasis>
+<anchor xml:id="_a00014_source_1l00028"/>00028 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_a00014_source_1l00029"/>00029 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Raises:</emphasis>
+<anchor xml:id="_a00014_source_1l00030"/>00030 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ValueError:&#32;If&#32;shape&#32;is&#32;not&#32;a&#32;multiple&#32;of&#32;res.</emphasis>
+<anchor xml:id="_a00014_source_1l00031"/>00031 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;&quot;&quot;</emphasis>
+<anchor xml:id="_a00014_source_1l00032"/>00032 &#32;&#32;&#32;&#32;delta&#32;=&#32;(res[0]&#32;/&#32;shape[0],&#32;res[1]&#32;/&#32;shape[1],&#32;res[2]&#32;/&#32;shape[2])
+<anchor xml:id="_a00014_source_1l00033"/>00033 &#32;&#32;&#32;&#32;d&#32;=&#32;(shape[0]&#32;//&#32;res[0],&#32;shape[1]&#32;//&#32;res[1],&#32;shape[2]&#32;//&#32;res[2])
+<anchor xml:id="_a00014_source_1l00034"/>00034 &#32;&#32;&#32;&#32;grid&#32;=&#32;np.mgrid[0:res[0]:delta[0],0:res[1]:delta[1],0:res[2]:delta[2]]
+<anchor xml:id="_a00014_source_1l00035"/>00035 &#32;&#32;&#32;&#32;grid&#32;=&#32;np.mgrid[0:res[0]:delta[0],0:res[1]:delta[1],0:res[2]:delta[2]]
+<anchor xml:id="_a00014_source_1l00036"/>00036 &#32;&#32;&#32;&#32;grid&#32;=&#32;grid.transpose(1,&#32;2,&#32;3,&#32;0)&#32;%&#32;1
+<anchor xml:id="_a00014_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Gradients</emphasis>
+<anchor xml:id="_a00014_source_1l00038"/>00038 &#32;&#32;&#32;&#32;theta&#32;=&#32;2*np.pi*np.random.rand(res[0]&#32;+&#32;1,&#32;res[1]&#32;+&#32;1,&#32;res[2]&#32;+&#32;1)
+<anchor xml:id="_a00014_source_1l00039"/>00039 &#32;&#32;&#32;&#32;phi&#32;=&#32;2*np.pi*np.random.rand(res[0]&#32;+&#32;1,&#32;res[1]&#32;+&#32;1,&#32;res[2]&#32;+&#32;1)
+<anchor xml:id="_a00014_source_1l00040"/>00040 &#32;&#32;&#32;&#32;gradients&#32;=&#32;np.stack(
+<anchor xml:id="_a00014_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(np.sin(phi)*np.cos(theta),&#32;np.sin(phi)*np.sin(theta),&#32;np.cos(phi)),
+<anchor xml:id="_a00014_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;axis=3
+<anchor xml:id="_a00014_source_1l00043"/>00043 &#32;&#32;&#32;&#32;)
+<anchor xml:id="_a00014_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;tileable[0]:
+<anchor xml:id="_a00014_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gradients[-1,:,:]&#32;=&#32;gradients[0,:,:]
+<anchor xml:id="_a00014_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;tileable[1]:
+<anchor xml:id="_a00014_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gradients[:,-1,:]&#32;=&#32;gradients[:,0,:]
+<anchor xml:id="_a00014_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;tileable[2]:
+<anchor xml:id="_a00014_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gradients[:,:,-1]&#32;=&#32;gradients[:,:,0]
+<anchor xml:id="_a00014_source_1l00050"/>00050 &#32;&#32;&#32;&#32;gradients&#32;=&#32;gradients.repeat(d[0],&#32;0).repeat(d[1],&#32;1).repeat(d[2],&#32;2)
+<anchor xml:id="_a00014_source_1l00051"/>00051 &#32;&#32;&#32;&#32;g000&#32;=&#32;gradients[&#32;&#32;&#32;&#32;:-d[0],&#32;&#32;&#32;&#32;:-d[1],&#32;&#32;&#32;&#32;:-d[2]]
+<anchor xml:id="_a00014_source_1l00052"/>00052 &#32;&#32;&#32;&#32;g100&#32;=&#32;gradients[d[0]:&#32;&#32;&#32;&#32;&#32;,&#32;&#32;&#32;&#32;:-d[1],&#32;&#32;&#32;&#32;:-d[2]]
+<anchor xml:id="_a00014_source_1l00053"/>00053 &#32;&#32;&#32;&#32;g010&#32;=&#32;gradients[&#32;&#32;&#32;&#32;:-d[0],d[1]:&#32;&#32;&#32;&#32;&#32;,&#32;&#32;&#32;&#32;:-d[2]]
+<anchor xml:id="_a00014_source_1l00054"/>00054 &#32;&#32;&#32;&#32;g110&#32;=&#32;gradients[d[0]:&#32;&#32;&#32;&#32;&#32;,d[1]:&#32;&#32;&#32;&#32;&#32;,&#32;&#32;&#32;&#32;:-d[2]]
+<anchor xml:id="_a00014_source_1l00055"/>00055 &#32;&#32;&#32;&#32;g001&#32;=&#32;gradients[&#32;&#32;&#32;&#32;:-d[0],&#32;&#32;&#32;&#32;:-d[1],d[2]:&#32;&#32;&#32;&#32;&#32;]
+<anchor xml:id="_a00014_source_1l00056"/>00056 &#32;&#32;&#32;&#32;g101&#32;=&#32;gradients[d[0]:&#32;&#32;&#32;&#32;&#32;,&#32;&#32;&#32;&#32;:-d[1],d[2]:&#32;&#32;&#32;&#32;&#32;]
+<anchor xml:id="_a00014_source_1l00057"/>00057 &#32;&#32;&#32;&#32;g011&#32;=&#32;gradients[&#32;&#32;&#32;&#32;:-d[0],d[1]:&#32;&#32;&#32;&#32;&#32;,d[2]:&#32;&#32;&#32;&#32;&#32;]
+<anchor xml:id="_a00014_source_1l00058"/>00058 &#32;&#32;&#32;&#32;g111&#32;=&#32;gradients[d[0]:&#32;&#32;&#32;&#32;&#32;,d[1]:&#32;&#32;&#32;&#32;&#32;,d[2]:&#32;&#32;&#32;&#32;&#32;]
+<anchor xml:id="_a00014_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Ramps</emphasis>
+<anchor xml:id="_a00014_source_1l00060"/>00060 &#32;&#32;&#32;&#32;n000&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]&#32;&#32;,&#32;grid[:,:,:,1]&#32;&#32;,&#32;grid[:,:,:,2]&#32;&#32;),&#32;axis=3)&#32;*&#32;g000,&#32;3)
+<anchor xml:id="_a00014_source_1l00061"/>00061 &#32;&#32;&#32;&#32;n100&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]-1,&#32;grid[:,:,:,1]&#32;&#32;,&#32;grid[:,:,:,2]&#32;&#32;),&#32;axis=3)&#32;*&#32;g100,&#32;3)
+<anchor xml:id="_a00014_source_1l00062"/>00062 &#32;&#32;&#32;&#32;n010&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]&#32;&#32;,&#32;grid[:,:,:,1]-1,&#32;grid[:,:,:,2]&#32;&#32;),&#32;axis=3)&#32;*&#32;g010,&#32;3)
+<anchor xml:id="_a00014_source_1l00063"/>00063 &#32;&#32;&#32;&#32;n110&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]-1,&#32;grid[:,:,:,1]-1,&#32;grid[:,:,:,2]&#32;&#32;),&#32;axis=3)&#32;*&#32;g110,&#32;3)
+<anchor xml:id="_a00014_source_1l00064"/>00064 &#32;&#32;&#32;&#32;n001&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]&#32;&#32;,&#32;grid[:,:,:,1]&#32;&#32;,&#32;grid[:,:,:,2]-1),&#32;axis=3)&#32;*&#32;g001,&#32;3)
+<anchor xml:id="_a00014_source_1l00065"/>00065 &#32;&#32;&#32;&#32;n101&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]-1,&#32;grid[:,:,:,1]&#32;&#32;,&#32;grid[:,:,:,2]-1),&#32;axis=3)&#32;*&#32;g101,&#32;3)
+<anchor xml:id="_a00014_source_1l00066"/>00066 &#32;&#32;&#32;&#32;n011&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]&#32;&#32;,&#32;grid[:,:,:,1]-1,&#32;grid[:,:,:,2]-1),&#32;axis=3)&#32;*&#32;g011,&#32;3)
+<anchor xml:id="_a00014_source_1l00067"/>00067 &#32;&#32;&#32;&#32;n111&#32;=&#32;np.sum(np.stack((grid[:,:,:,0]-1,&#32;grid[:,:,:,1]-1,&#32;grid[:,:,:,2]-1),&#32;axis=3)&#32;*&#32;g111,&#32;3)
+<anchor xml:id="_a00014_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Interpolation</emphasis>
+<anchor xml:id="_a00014_source_1l00069"/>00069 &#32;&#32;&#32;&#32;t&#32;=&#32;<link linkend="_a00364_1a3fa1574eb32a9a437f406b678d378c99">interpolant</link>(grid)
+<anchor xml:id="_a00014_source_1l00070"/>00070 &#32;&#32;&#32;&#32;n00&#32;=&#32;n000*(1-t[:,:,:,0])&#32;+&#32;t[:,:,:,0]*n100
+<anchor xml:id="_a00014_source_1l00071"/>00071 &#32;&#32;&#32;&#32;n10&#32;=&#32;n010*(1-t[:,:,:,0])&#32;+&#32;t[:,:,:,0]*n110
+<anchor xml:id="_a00014_source_1l00072"/>00072 &#32;&#32;&#32;&#32;n01&#32;=&#32;n001*(1-t[:,:,:,0])&#32;+&#32;t[:,:,:,0]*n101
+<anchor xml:id="_a00014_source_1l00073"/>00073 &#32;&#32;&#32;&#32;n11&#32;=&#32;n011*(1-t[:,:,:,0])&#32;+&#32;t[:,:,:,0]*n111
+<anchor xml:id="_a00014_source_1l00074"/>00074 &#32;&#32;&#32;&#32;n0&#32;=&#32;(1-t[:,:,:,1])*n00&#32;+&#32;t[:,:,:,1]*n10
+<anchor xml:id="_a00014_source_1l00075"/>00075 &#32;&#32;&#32;&#32;n1&#32;=&#32;(1-t[:,:,:,1])*n01&#32;+&#32;t[:,:,:,1]*n11
+<anchor xml:id="_a00014_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;((1-t[:,:,:,2])*n0&#32;+&#32;t[:,:,:,2]*n1)
+<anchor xml:id="_a00014_source_1l00077"/>00077 
+<anchor xml:id="_a00014_source_1l00078"/>00078 
+<anchor xml:id="_a00014_source_1l00079"/><link linkend="_a00364_1a8b26fa13f4dca6276805ea852aa4b62d">00079</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00364_1a8b26fa13f4dca6276805ea852aa4b62d">generate_fractal_noise_3d</link>(
+<anchor xml:id="_a00014_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;shape,&#32;res,&#32;octaves=1,&#32;persistence=0.5,&#32;lacunarity=2,
+<anchor xml:id="_a00014_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tileable=(<emphasis role="keyword">False</emphasis>,&#32;<emphasis role="keyword">False</emphasis>,&#32;<emphasis role="keyword">False</emphasis>),&#32;interpolant=interpolant
+<anchor xml:id="_a00014_source_1l00082"/>00082 ):
+<anchor xml:id="_a00014_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&quot;&quot;Generate&#32;a&#32;3D&#32;numpy&#32;array&#32;of&#32;fractal&#32;noise.</emphasis>
+<anchor xml:id="_a00014_source_1l00084"/>00084 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_a00014_source_1l00085"/>00085 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Args:</emphasis>
+<anchor xml:id="_a00014_source_1l00086"/>00086 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;shape:&#32;The&#32;shape&#32;of&#32;the&#32;generated&#32;array&#32;(tuple&#32;of&#32;three&#32;ints).</emphasis>
+<anchor xml:id="_a00014_source_1l00087"/>00087 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;This&#32;must&#32;be&#32;a&#32;multiple&#32;of&#32;lacunarity**(octaves-1)*res.</emphasis>
+<anchor xml:id="_a00014_source_1l00088"/>00088 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res:&#32;The&#32;number&#32;of&#32;periods&#32;of&#32;noise&#32;to&#32;generate&#32;along&#32;each</emphasis>
+<anchor xml:id="_a00014_source_1l00089"/>00089 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;axis&#32;(tuple&#32;of&#32;three&#32;ints).&#32;Note&#32;shape&#32;must&#32;be&#32;a&#32;multiple&#32;of</emphasis>
+<anchor xml:id="_a00014_source_1l00090"/>00090 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(lacunarity**(octaves-1)*res).</emphasis>
+<anchor xml:id="_a00014_source_1l00091"/>00091 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;octaves:&#32;The&#32;number&#32;of&#32;octaves&#32;in&#32;the&#32;noise.&#32;Defaults&#32;to&#32;1.</emphasis>
+<anchor xml:id="_a00014_source_1l00092"/>00092 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;persistence:&#32;The&#32;scaling&#32;factor&#32;between&#32;two&#32;octaves.</emphasis>
+<anchor xml:id="_a00014_source_1l00093"/>00093 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lacunarity:&#32;The&#32;frequency&#32;factor&#32;between&#32;two&#32;octaves.</emphasis>
+<anchor xml:id="_a00014_source_1l00094"/>00094 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tileable:&#32;If&#32;the&#32;noise&#32;should&#32;be&#32;tileable&#32;along&#32;each&#32;axis</emphasis>
+<anchor xml:id="_a00014_source_1l00095"/>00095 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(tuple&#32;of&#32;three&#32;bools).&#32;Defaults&#32;to&#32;(False,&#32;False,&#32;False).</emphasis>
+<anchor xml:id="_a00014_source_1l00096"/>00096 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;interpolant:&#32;The,&#32;interpolation&#32;function,&#32;defaults&#32;to</emphasis>
+<anchor xml:id="_a00014_source_1l00097"/>00097 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t*t*t*(t*(t*6&#32;-&#32;15)&#32;+&#32;10).</emphasis>
+<anchor xml:id="_a00014_source_1l00098"/>00098 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_a00014_source_1l00099"/>00099 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Returns:</emphasis>
+<anchor xml:id="_a00014_source_1l00100"/>00100 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;A&#32;numpy&#32;array&#32;of&#32;fractal&#32;noise&#32;and&#32;of&#32;shape&#32;shape&#32;generated&#32;by</emphasis>
+<anchor xml:id="_a00014_source_1l00101"/>00101 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;combining&#32;several&#32;octaves&#32;of&#32;perlin&#32;noise.</emphasis>
+<anchor xml:id="_a00014_source_1l00102"/>00102 <emphasis role="stringliteral"></emphasis>
+<anchor xml:id="_a00014_source_1l00103"/>00103 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;Raises:</emphasis>
+<anchor xml:id="_a00014_source_1l00104"/>00104 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ValueError:&#32;If&#32;shape&#32;is&#32;not&#32;a&#32;multiple&#32;of</emphasis>
+<anchor xml:id="_a00014_source_1l00105"/>00105 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(lacunarity**(octaves-1)*res).</emphasis>
+<anchor xml:id="_a00014_source_1l00106"/>00106 <emphasis role="stringliteral">&#32;&#32;&#32;&#32;&quot;&quot;&quot;</emphasis>
+<anchor xml:id="_a00014_source_1l00107"/>00107 &#32;&#32;&#32;&#32;noise&#32;=&#32;np.zeros(shape)
+<anchor xml:id="_a00014_source_1l00108"/>00108 &#32;&#32;&#32;&#32;frequency&#32;=&#32;1
+<anchor xml:id="_a00014_source_1l00109"/>00109 &#32;&#32;&#32;&#32;amplitude&#32;=&#32;1
+<anchor xml:id="_a00014_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;_&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(octaves):
+<anchor xml:id="_a00014_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;noise&#32;+=&#32;amplitude&#32;*&#32;<link linkend="_a00364_1a8f0a805cc15da261cccfb8ee1b927e2e">generate_perlin_noise_3d</link>(
+<anchor xml:id="_a00014_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;shape,
+<anchor xml:id="_a00014_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(frequency*res[0],&#32;frequency*res[1],&#32;frequency*res[2]),
+<anchor xml:id="_a00014_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tileable,
+<anchor xml:id="_a00014_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;interpolant
+<anchor xml:id="_a00014_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)
+<anchor xml:id="_a00014_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frequency&#32;*=&#32;lacunarity
+<anchor xml:id="_a00014_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;amplitude&#32;*=&#32;persistence
+<anchor xml:id="_a00014_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;noise
+</programlisting></section>

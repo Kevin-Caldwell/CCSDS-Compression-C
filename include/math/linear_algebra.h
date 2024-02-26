@@ -1,6 +1,6 @@
 /**
  * linear_algebra.h
- * @author Kevin Caldwell
+ * @authors Kevin Caldwell @BrianShTsoi
  * 
  * Skeleton File for Generic Vector Operations.
  * 

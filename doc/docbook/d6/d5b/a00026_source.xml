@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00026_source" xml:lang="en-US">
+<title>predictor_eg.py</title>
+<indexterm><primary>python/predictor_eg.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00026_source_1l00001"/><link linkend="_a00365">00001</link> <emphasis role="keyword">import</emphasis>&#32;numpy&#32;<emphasis role="keyword">as</emphasis>&#32;np
+<anchor xml:id="_a00026_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;compression&#32;<emphasis role="keyword">as</emphasis>&#32;comp
+<anchor xml:id="_a00026_source_1l00003"/>00003 <emphasis role="comment">#from&#32;sklearn.metrics&#32;import&#32;mean_squared_error</emphasis>
+<anchor xml:id="_a00026_source_1l00004"/>00004 <emphasis role="keyword">import</emphasis>&#32;csv
+<anchor xml:id="_a00026_source_1l00005"/>00005 <emphasis role="keyword">import</emphasis>&#32;sys
+<anchor xml:id="_a00026_source_1l00006"/>00006 
+<anchor xml:id="_a00026_source_1l00007"/>00007 <emphasis role="keyword">from</emphasis>&#32;csv_io&#32;<emphasis role="keyword">import</emphasis>&#32;ReadCSV,&#32;SaveCSV
+<anchor xml:id="_a00026_source_1l00008"/>00008 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_a00026_source_1l00009"/>00009 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;_________PYTHON&#32;PREDICTOR_________&quot;</emphasis>)
+<anchor xml:id="_a00026_source_1l00010"/><link linkend="_a00365_1aeab71244afb687f16d8c4f5ee9d6ef0e">00010</link> &#32;&#32;&#32;&#32;n&#32;=&#32;len(sys.argv)
+<anchor xml:id="_a00026_source_1l00011"/>00011 &#32;&#32;&#32;&#32;if(n&#32;&gt;&#32;1):
+<anchor xml:id="_a00026_source_1l00012"/><link linkend="_a00365_1a511ae0b1c13f95e5f08f1a0dd3da3d93">00012</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data&#32;=&#32;ReadCSV(sys.argv[1])
+<anchor xml:id="_a00026_source_1l00013"/><link linkend="_a00365_1a5c7e4f16622600cb52580b191565e2dd">00013</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Nx,&#32;Ny,&#32;Nz&#32;=&#32;data.shape
+<anchor xml:id="_a00026_source_1l00014"/>00014 
+<anchor xml:id="_a00026_source_1l00015"/><link linkend="_a00365_1aeaf873546abc6183d2e324ec6585d854">00015</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;python_predicted&#32;=&#32;comp.predictor(data)
+<anchor xml:id="_a00026_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SaveCSV(python_predicted,&#32;sys.argv[2])
+<anchor xml:id="_a00026_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00026_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;python_predicted&#32;=&#32;ReadCSV(<emphasis role="stringliteral">&quot;data/test-images/indian_pines.csv&quot;</emphasis>)
+<anchor xml:id="_a00026_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Nx,&#32;Ny,&#32;Nz&#32;=&#32;python_predicted.shape
+<anchor xml:id="_a00026_source_1l00020"/>00020 
+<anchor xml:id="_a00026_source_1l00021"/><link linkend="_a00365_1a2500b5ef2b732958e0d8386dfe8c200a">00021</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;=&#32;comp.predictor(python_predicted)
+<anchor xml:id="_a00026_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SaveCSV(python_predicted,&#32;<emphasis role="stringliteral">&quot;data/results/PYTHONRESULT_indian_pines_predicted.csv&quot;</emphasis>)
+</programlisting></section>

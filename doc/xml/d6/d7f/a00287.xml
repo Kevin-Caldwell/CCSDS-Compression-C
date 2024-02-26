@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d6/d7f/a00287" kind="file" language="C++">
+    <compoundname>quantizer.c</compoundname>
+    <includes refid="d1/d44/a00098" local="yes">predictor/quantizer.h</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>cache/cache_predictor.h</label>
+        <link refid="db/db6/a00074"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>math/linear_algebra.h</label>
+        <link refid="da/d1e/a00149"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>predictor/local_differences.h</label>
+        <link refid="d4/d3a/a00101"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>predictor/local_sum.h</label>
+        <link refid="df/d98/a00107"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>predictor/quantizer.h</label>
+        <link refid="d1/d44/a00098"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>predictor/sample_representative.h</label>
+        <link refid="d1/dc1/a00092"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>predictor/weights.h</label>
+        <link refid="d9/d77/a00095"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/quantizer.c</label>
+        <link refid="d6/d7f/a00287"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d6/d7f/a00287_1a9d745aa249b8a9cde3f83899b563dcc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t ClippedQuantizerBinCenter</definition>
+        <argsstring>(uint16_t sample_value)</argsstring>
+        <name>ClippedQuantizerBinCenter</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>sample_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/quantizer.c" line="3" column="10" bodyfile="src/quantizer.c" bodystart="3" bodyend="5"/>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7f/a00287_1a93be7d02ed2acce98f53818c98ac6cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t PredictionResidual</definition>
+        <argsstring>(uint16_t sample_value, uint16_t predicted_sample)</argsstring>
+        <name>PredictionResidual</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>sample_value</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>predicted_sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/quantizer.c" line="7" column="9" bodyfile="src/quantizer.c" bodystart="7" bodyend="9"/>
+        <referencedby refid="d1/d44/a00098_1afa51bec3d5dfdb41078f60b1a7c454ab" compoundref="d6/d7f/a00287" startline="11" endline="24">QuantizerIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7f/a00287_1afa51bec3d5dfdb41078f60b1a7c454ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t QuantizerIndex</definition>
+        <argsstring>(uint16_t sample_value, uint16_t predicted_sample)</argsstring>
+        <name>QuantizerIndex</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>sample_value</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>predicted_sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d1/d44/a00098" kindref="compound">quantizer.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+Functions For Quantizer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/quantizer.c" line="11" column="9" bodyfile="src/quantizer.c" bodystart="11" bodyend="24"/>
+        <references refid="d6/d7f/a00287_1a93be7d02ed2acce98f53818c98ac6cca" compoundref="d6/d7f/a00287" startline="7" endline="9">PredictionResidual</references>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t minTheta</definition>
+        <argsstring>(uint32_t predicted_sample)</argsstring>
+        <name>minTheta</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>predicted_sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/quantizer.c" line="27" column="10" bodyfile="src/quantizer.c" bodystart="27" bodyend="38"/>
+        <references refid="d9/db6/a00146_1a8329a1a244af278852519dfccd0d4814" compoundref="de/d25/a00290" startline="68">kSmax</references>
+        <references refid="d9/db6/a00146_1add3510c03fbe63c1b97c67aac517c930" compoundref="de/d25/a00290" startline="66">kSmin</references>
+        <references refid="d7/d9a/a00152_1a3acffbd305ee72dcd4593c0d8af64a4f" compoundref="d7/d9a/a00152" startline="32">MIN</references>
+        <referencedby refid="d1/d44/a00098_1a1f491e0a435427669942c932394d7c1a" compoundref="d6/d7f/a00287" startline="61" endline="77">MappedQuantizerIndex</referencedby>
+        <referencedby refid="d1/d44/a00098_1ae85d34759565d8a3ab498494786c395b" compoundref="d6/d7f/a00287" startline="40" endline="58">QuantizerIndexUnmapper</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7f/a00287_1ae85d34759565d8a3ab498494786c395b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t QuantizerIndexUnmapper</definition>
+        <argsstring>(uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)</argsstring>
+        <name>QuantizerIndexUnmapper</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>mapped_delta</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>predicted_sample</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>drps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/quantizer.c" line="40" column="9" bodyfile="src/quantizer.c" bodystart="40" bodyend="58"/>
+        <references refid="d9/db6/a00146_1add3510c03fbe63c1b97c67aac517c930" compoundref="de/d25/a00290" startline="66">kSmin</references>
+        <references refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" compoundref="d6/d7f/a00287" startline="27" endline="38">minTheta</references>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d7f/a00287_1a1f491e0a435427669942c932394d7c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref></type>
+        <definition>data_t MappedQuantizerIndex</definition>
+        <argsstring>(int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)</argsstring>
+        <name>MappedQuantizerIndex</name>
+        <param>
+          <type>int32_t</type>
+          <declname>quantizer_index</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>predicted_sample</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>double_res_predicted_sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/quantizer.c" line="61" column="8" bodyfile="src/quantizer.c" bodystart="61" bodyend="77"/>
+        <references refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" compoundref="d6/d7f/a00287" startline="27" endline="38">minTheta</references>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d44/a00098" kindref="compound">predictor/quantizer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d1/d44/a00098_1a9d745aa249b8a9cde3f83899b563dcc5" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="d6/d7f/a00287_1a9d745aa249b8a9cde3f83899b563dcc5" kindref="member">ClippedQuantizerBinCenter</ref>(uint16_t<sp/>sample_value){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/>sample_value;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d1/d44/a00098_1a93be7d02ed2acce98f53818c98ac6cca" refkind="member"><highlight class="normal">int16_t<sp/><ref refid="d6/d7f/a00287_1a93be7d02ed2acce98f53818c98ac6cca" kindref="member">PredictionResidual</ref>(uint16_t<sp/>sample_value,<sp/>uint16_t<sp/>predicted_sample){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sample_value<sp/>-<sp/>predicted_sample;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d1/d44/a00098_1afa51bec3d5dfdb41078f60b1a7c454ab" refkind="member"><highlight class="normal">int32_t<sp/><ref refid="d6/d7f/a00287_1afa51bec3d5dfdb41078f60b1a7c454ab" kindref="member">QuantizerIndex</ref>(uint16_t<sp/>sample_value,<sp/>uint16_t<sp/>predicted_sample){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d6/d7f/a00287_1a93be7d02ed2acce98f53818c98ac6cca" kindref="member">PredictionResidual</ref>(sample_value,<sp/>predicted_sample);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SignedLongData<sp/>qInd;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>uint16_t<sp/>pred_res<sp/>=<sp/>PredictionResidual(hIMG,<sp/>z,y,x);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if(x<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>y<sp/>==<sp/>0){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>qInd<sp/>=<sp/>pred_res;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>else{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>qInd<sp/>=<sp/>SIGN(pred_res)<sp/>*<sp/>(abs(pred_res)<sp/>+<sp/>m_z)<sp/>/<sp/>(2<sp/>*<sp/>m_z<sp/>+<sp/>1);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>qInd;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" refkind="member"><highlight class="normal">uint16_t<sp/><ref refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" kindref="member">minTheta</ref>(uint32_t<sp/>predicted_sample){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if(x<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>y<sp/>==<sp/>0){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/>MIN(pred_res<sp/>-<sp/>kSmin,<sp/>kSmax<sp/>-<sp/>pred_res);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}<sp/>else<sp/>if<sp/>(x<sp/>&gt;<sp/>0<sp/>||<sp/>y<sp/>&gt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>return<sp/><sp/>MIN((pred_res<sp/>-<sp/>kSmin<sp/>+<sp/>m_z)/(2<sp/>*<sp/>m_z<sp/>+<sp/>1),<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(kSmax<sp/>-<sp/>pred_res<sp/>+<sp/>m_z)/(2<sp/>*<sp/>m_z<sp/>+<sp/>1));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d7/d9a/a00152_1a3acffbd305ee72dcd4593c0d8af64a4f" kindref="member">MIN</ref>(predicted_sample<sp/>-<sp/><ref refid="d9/db6/a00146_1add3510c03fbe63c1b97c67aac517c930" kindref="member">kSmin</ref>,<sp/><ref refid="d9/db6/a00146_1a8329a1a244af278852519dfccd0d4814" kindref="member">kSmax</ref><sp/>-<sp/>predicted_sample);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="d1/d44/a00098_1ae85d34759565d8a3ab498494786c395b" refkind="member"><highlight class="normal">int32_t<sp/><ref refid="d6/d7f/a00287_1ae85d34759565d8a3ab498494786c395b" kindref="member">QuantizerIndexUnmapper</ref>(uint16_t<sp/>mapped_delta,<sp/>uint16_t<sp/>predicted_sample,<sp/>int32_t<sp/>drps)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>theta<sp/>=<sp/><ref refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" kindref="member">minTheta</ref>(predicted_sample);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>drps<sp/>%<sp/>2<sp/>?<sp/>-1<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mapped_delta<sp/>-<sp/>theta<sp/>&gt;<sp/>theta){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(theta<sp/>==<sp/>predicted_sample<sp/>-<sp/><ref refid="d9/db6/a00146_1add3510c03fbe63c1b97c67aac517c930" kindref="member">kSmin</ref>){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mapped_delta<sp/>-<sp/>theta;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>theta<sp/>-<sp/>mapped_delta;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mapped_delta<sp/>%<sp/>2){</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((drps<sp/>+<sp/>1)<sp/>%<sp/>2)<sp/>?<sp/>(-1)<sp/>:<sp/>(1))<sp/>*<sp/>(mapped_delta<sp/>+<sp/>1)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((drps)<sp/>%<sp/>2)<sp/>?<sp/>(-1)<sp/>:<sp/>(1))<sp/>*<sp/>(mapped_delta)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="d1/d44/a00098_1a1f491e0a435427669942c932394d7c1a" refkind="member"><highlight class="normal"><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref><sp/><ref refid="d6/d7f/a00287_1a1f491e0a435427669942c932394d7c1a" kindref="member">MappedQuantizerIndex</ref>(int32_t<sp/>quantizer_index,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>predicted_sample,<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>double_res_predicted_sample){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>theta<sp/>=<sp/><ref refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" kindref="member">minTheta</ref>(predicted_sample);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>a<sp/>=<sp/>quantizer_index<sp/>*<sp/>(double_res_predicted_sample<sp/>%<sp/>2<sp/>?<sp/>-1<sp/>:<sp/>1);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(abs(quantizer_index)<sp/>&gt;<sp/>theta){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>abs(quantizer_index)<sp/>+<sp/>theta;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0<sp/>&lt;=<sp/>a<sp/>&amp;&amp;<sp/>a<sp/>&lt;=<sp/>theta)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*<sp/>abs(quantizer_index);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*<sp/>abs(quantizer_index)<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/quantizer.c"/>
+  </compounddef>
+</doxygen>

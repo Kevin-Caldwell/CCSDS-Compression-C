@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reconstructor_8c_source" xml:lang="en-US">
+<title>reconstructor.c</title>
+<indexterm><primary>src/reconstructor.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_reconstructor_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_reconstructor_8h">decompressor/reconstructor.h</link>&quot;</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00002"/>00002 
+<anchor xml:id="_reconstructor_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00004"/>00004 
+<anchor xml:id="_reconstructor_8c_source_1l00005"/><link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">00005</link> <link linkend="_structimage">image</link>&#32;*<link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">sample</link>;
+<anchor xml:id="_reconstructor_8c_source_1l00006"/><link linkend="_reconstructor_8h_1ad0d5b55646a3018075f07ae472ddb312">00006</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_reconstructor_8c_1ad0d5b55646a3018075f07ae472ddb312">Reconstructor</link>(<link linkend="_structimage">image</link>&#32;*predicted_values,&#32;<link linkend="_structimage">image</link>&#32;*reconstructed,&#32;FILE*&#32;file_ptr)
+<anchor xml:id="_reconstructor_8c_source_1l00007"/>00007 {
+<anchor xml:id="_reconstructor_8c_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<link linkend="_constants_8h_1af84e7b9bd8c4fa1203b0040adf941d8d">InitalizeImageConstants</link>(predicted_values-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<link linkend="_load__constants_8h_1a5d642038360b72b886a5eb66e3efd14a">LoadConstantFile</link>(<link linkend="_global__constants_8h_1a7a8fe096cc3b24ddabd9b150f4f5bdd7">PREDICTOR_CONSTANTS_LOCATION</link>,&#32;&amp;<link linkend="_global__constants_8h_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<link linkend="_constants_8h_1a6acd65af9a2f057ad3f0891038799e5b">InitalizePredictorConstants</link>();
+<anchor xml:id="_reconstructor_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;time_t&#32;start;
+<anchor xml:id="_reconstructor_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;time_t&#32;end;
+<anchor xml:id="_reconstructor_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;size&#32;=&#32;predicted_values-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>;
+<anchor xml:id="_reconstructor_8c_source_1l00014"/>00014 
+<anchor xml:id="_reconstructor_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;start&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;z&#32;=&#32;0;&#32;z&#32;&lt;&#32;size.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>;&#32;z++)
+<anchor xml:id="_reconstructor_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_constants_8h_1aee5860bd3e62fe2734ce27a1b1038dbc">PREDICTION_MODE</link>)
+<anchor xml:id="_reconstructor_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>&#32;=&#32;<link linkend="_reconstructor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</link>(z)&#32;+&#32;3;
+<anchor xml:id="_reconstructor_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>&#32;=&#32;<link linkend="_reconstructor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</link>(z);
+<anchor xml:id="_reconstructor_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0;&#32;y&#32;&lt;&#32;size.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>;&#32;y++)
+<anchor xml:id="_reconstructor_8c_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0;&#32;x&#32;&lt;&#32;size.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>;&#32;x++)
+<anchor xml:id="_reconstructor_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_reconstructor_8c_1aeb6c4d18e6fc666235f8ef7464d1ae29">ReconstructPixel</link>(predicted_values,&#32;reconstructed,&#32;z,&#32;y,&#32;x,&#32;file_ptr);
+<anchor xml:id="_reconstructor_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00033"/>00033 
+<anchor xml:id="_reconstructor_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;time_elapsed&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>)&#32;-&#32;start;
+<anchor xml:id="_reconstructor_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;time_left&#32;=&#32;time_elapsed&#32;*&#32;(<link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>&#32;-&#32;z&#32;-&#32;1)&#32;/&#32;(z&#32;+&#32;1);
+<anchor xml:id="_reconstructor_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\rPredicted&#32;%d/%d&#32;of&#32;Image.&#32;(%ld&#32;seconds&#32;Elapsed,&#32;%ld&#32;seconds&#32;Left)&quot;</emphasis>,&#32;(<emphasis role="keywordtype">int</emphasis>)(z&#32;+&#32;1),&#32;(<emphasis role="keywordtype">int</emphasis>)size.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>,&#32;time_elapsed,&#32;time_left);
+<anchor xml:id="_reconstructor_8c_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fflush(stdout);
+<anchor xml:id="_reconstructor_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;end&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n%d&#32;seconds&#32;for&#32;image&#32;prediction.\n&quot;</emphasis>,&#32;(<emphasis role="keywordtype">int</emphasis>)(end&#32;-&#32;start));
+<anchor xml:id="_reconstructor_8c_source_1l00041"/>00041 }
+<anchor xml:id="_reconstructor_8c_source_1l00042"/>00042 
+<anchor xml:id="_reconstructor_8c_source_1l00043"/><link linkend="_reconstructor_8h_1a939a70de0c04a2c4e970e4c242ff0f21">00043</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_reconstructor_8c_1aeb6c4d18e6fc666235f8ef7464d1ae29">ReconstructPixel</link>(<link linkend="_structimage">image</link>&#32;*mapped,&#32;<link linkend="_structimage">image</link>&#32;*data,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x,&#32;FILE*&#32;file_ptr)
+<anchor xml:id="_reconstructor_8c_source_1l00044"/>00044 {
+<anchor xml:id="_reconstructor_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;0&#32;&amp;&amp;&#32;y&#32;==&#32;0)
+<anchor xml:id="_reconstructor_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;free(<link linkend="_cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669">global_cache</link>-&gt;<link linkend="_struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826">weights</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_weights_8h_1adcc753ae7048085817bd2c37b471f739">InitializeWeights</link>(&amp;<link linkend="_cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669">global_cache</link>-&gt;<link linkend="_struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826">weights</link>,&#32;z,&#32;y,&#32;x);
+<anchor xml:id="_reconstructor_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;mapped_data&#32;=&#32;<link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(mapped,&#32;x,&#32;y,&#32;z);
+<anchor xml:id="_reconstructor_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;uint16_t&#32;local_sum&#32;=&#32;<link linkend="_local__sum_8h_1a1f0a6a3443597dab4881bb94fbc35f41">FindLocalSum</link>(data,&#32;z,&#32;y,&#32;x);
+<anchor xml:id="_reconstructor_8c_source_1l00052"/>00052 
+<anchor xml:id="_reconstructor_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;int64_t&#32;predicted_central_local_difference&#32;=&#32;<link linkend="_local__differences_8h_1a36ddae4ef0f34ba3f7402469253bb6b6">PredictedCentralLocalDifference</link>(data,&#32;z,&#32;y,&#32;x);
+<anchor xml:id="_reconstructor_8c_source_1l00054"/>00054 
+<anchor xml:id="_reconstructor_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;int64_t&#32;high_resolution_predicted_sample&#32;=&#32;<link linkend="_sample__representative_8h_1a441e8d0fe639d45889aab5b88c4138f4">HighResolutionPredictedSample</link>(predicted_central_local_difference,&#32;local_sum);
+<anchor xml:id="_reconstructor_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;int32_t&#32;double_resolution_predicted_sample&#32;=&#32;<link linkend="_sample__representative_8h_1a6c60474c610dc64773816bc445efeb77">DoubleResolutionPredictedSample</link>(data,&#32;z,&#32;y,&#32;x,&#32;high_resolution_predicted_sample);
+<anchor xml:id="_reconstructor_8c_source_1l00057"/>00057 
+<anchor xml:id="_reconstructor_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;uint16_t&#32;predicted_sample&#32;=&#32;<link linkend="_sample__representative_8h_1a14cff7c59ac94b0387e8b95a433521e9">PredictedSample</link>(double_resolution_predicted_sample);
+<anchor xml:id="_reconstructor_8c_source_1l00059"/>00059 
+<anchor xml:id="_reconstructor_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;int32_t&#32;delta&#32;=&#32;<link linkend="_quantizer_8h_1ae85d34759565d8a3ab498494786c395b">QuantizerIndexUnmapper</link>(mapped_data,
+<anchor xml:id="_reconstructor_8c_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;predicted_sample,
+<anchor xml:id="_reconstructor_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double_resolution_predicted_sample);
+<anchor xml:id="_reconstructor_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;uint16_t&#32;clipped_quantizer_bin_center&#32;=&#32;<link linkend="_quantizer_8h_1a9d745aa249b8a9cde3f83899b563dcc5">ClippedQuantizerBinCenter</link>(predicted_sample&#32;+&#32;delta);
+<anchor xml:id="_reconstructor_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;int32_t&#32;double_resolution_predicted_error&#32;=&#32;<link linkend="_weights_8h_1a286baab1384ff25cf7cf4c2061f15c4c">DoubleResolutionPredictionError</link>(clipped_quantizer_bin_center,
+<anchor xml:id="_reconstructor_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;double_resolution_predicted_sample);
+<anchor xml:id="_reconstructor_8c_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;int32_t&#32;double_resolution_predicted_error&#32;=&#32;2&#32;*&#32;(predicted_sample&#32;+&#32;delta)&#32;-&#32;double_resolution_predicted_error</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<link linkend="_image_8h_1aefaa1253ccc17864ac32b9d685b821d4">SetPixel</link>(data,&#32;x,&#32;y,&#32;z,&#32;(uint16_t)predicted_sample&#32;+&#32;delta);
+<anchor xml:id="_reconstructor_8c_source_1l00068"/>00068 
+<anchor xml:id="_reconstructor_8c_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<link linkend="_weights_8h_1a805706f7af2f212bc46076319fcec535">UpdateWeights</link>(data,&#32;<link linkend="_cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669">global_cache</link>-&gt;<link linkend="_struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826">weights</link>,&#32;z,&#32;y,&#32;x,&#32;double_resolution_predicted_error);
+<anchor xml:id="_reconstructor_8c_source_1l00070"/>00070 
+<anchor xml:id="_reconstructor_8c_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;write_buffer[1000];
+<anchor xml:id="_reconstructor_8c_source_1l00072"/>00072 
+<anchor xml:id="_reconstructor_8c_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;sprintf(write_buffer,&#32;&quot;(%d,%d,%d),%d,&#32;%d,&#32;%d\n&quot;,&#32;&#32;x,&#32;y,&#32;z,&#32;delta&#32;+&#32;predicted_sample,&#32;predicted_sample,&#32;delta);</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00074"/>00074 
+<anchor xml:id="_reconstructor_8c_source_1l00075"/>00075 &#32;&#32;&#32;&#32;sprintf(write_buffer,&#32;<emphasis role="stringliteral">&quot;(%d,%d,%d),%u,&#32;%d,&#32;%d,&#32;%ld,&#32;%d,&#32;%ld,&#32;[&quot;</emphasis>,&#32;x,&#32;y,&#32;z,&#32;delta&#32;+&#32;predicted_sample,&#32;predicted_sample,&#32;mapped_data,&#32;
+<anchor xml:id="_reconstructor_8c_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;predicted_central_local_difference,&#32;double_resolution_predicted_sample,&#32;high_resolution_predicted_sample);
+<anchor xml:id="_reconstructor_8c_source_1l00077"/>00077 
+<anchor xml:id="_reconstructor_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>;&#32;i++)
+<anchor xml:id="_reconstructor_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sprintf(write_buffer&#32;+&#32;strlen(write_buffer),&#32;<emphasis role="stringliteral">&quot;%d,&quot;</emphasis>,&#32;<link linkend="_cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669">global_cache</link>-&gt;<link linkend="_struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826">weights</link>[i]);
+<anchor xml:id="_reconstructor_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00082"/>00082 &#32;&#32;&#32;&#32;sprintf(write_buffer&#32;+&#32;strlen(write_buffer),&#32;<emphasis role="stringliteral">&quot;]\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00083"/>00083 
+<anchor xml:id="_reconstructor_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;sprintf(write_buffer&#32;+&#32;strlen(write_buffer),&#32;<emphasis role="stringliteral">&quot;UpdateWeights&#32;args:&#32;%d&#32;%d&#32;%d&#32;%d\n&quot;</emphasis>,&#32;z,&#32;y,&#32;x,&#32;double_resolution_predicted_error);
+<anchor xml:id="_reconstructor_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1a94d988ea4ce93357f56c0191584246a6">F_WRITE</link>(write_buffer,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>),&#32;strlen(write_buffer),&#32;file_ptr);
+<anchor xml:id="_reconstructor_8c_source_1l00086"/>00086 }
+<anchor xml:id="_reconstructor_8c_source_1l00087"/>00087 
+<anchor xml:id="_reconstructor_8c_source_1l00088"/><link linkend="_reconstructor_8h_1aadb567bbc159d00d6334e2eb36e6e253">00088</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_reconstructor_8c_1aadb567bbc159d00d6334e2eb36e6e253">TestReconstructor</link>(<emphasis role="keywordtype">char</emphasis>&#32;*file_name)
+<anchor xml:id="_reconstructor_8c_source_1l00089"/>00089 {
+<anchor xml:id="_reconstructor_8c_source_1l00090"/>00090 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088">file_t</link>*&#32;file_ptr;
+<anchor xml:id="_reconstructor_8c_source_1l00091"/>00091 
+<anchor xml:id="_reconstructor_8c_source_1l00092"/>00092 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Testing&#32;Reconstructor...\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<link linkend="_structimage">image</link>&#32;sample_data;
+<anchor xml:id="_reconstructor_8c_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<link linkend="_csv-io_8h_1aba677341d6fd704867c56e0b5d6f3fc3">ReadImageFromCSV</link>(&amp;sample_data,&#32;file_name);
+<anchor xml:id="_reconstructor_8c_source_1l00095"/>00095 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Finished&#32;Reading&#32;Image.\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">sample</link>&#32;=&#32;&amp;sample_data;
+<anchor xml:id="_reconstructor_8c_source_1l00097"/>00097 
+<anchor xml:id="_reconstructor_8c_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<link linkend="_structimage">image</link>&#32;predicted_data;
+<anchor xml:id="_reconstructor_8c_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<link linkend="_image_8h_1a61b8047c5bba5a89979d65847e4103b1">InitImage</link>(&amp;predicted_data,&#32;sample_data.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>,&#32;sample_data.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>,&#32;sample_data.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00100"/>00100 
+<anchor xml:id="_reconstructor_8c_source_1l00101"/>00101 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Running&#32;Predictor...\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00102"/>00102 &#32;&#32;&#32;&#32;fflush(stdout);
+<anchor xml:id="_reconstructor_8c_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<link linkend="_cache__predictor_8h_1a400e6cd529a6a1ca3901be57ab88fb63">InitializePredictorCache</link>(&amp;<link linkend="_cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669">global_cache</link>,&#32;&amp;sample_data);
+<anchor xml:id="_reconstructor_8c_source_1l00104"/>00104 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Cache&#32;Created..\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<link linkend="_predictor_8h_1a4a94804509574a94d896a4164802bcd2">RunPredictor</link>(&amp;sample_data,&#32;&amp;predicted_data);
+<anchor xml:id="_reconstructor_8c_source_1l00106"/>00106 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Completed&#32;Prediction.\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00107"/>00107 
+<anchor xml:id="_reconstructor_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Logging&#32;to&#32;logs/c-debug.LOG.\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;file_ptr&#32;=&#32;<link linkend="_file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c">F_OPEN</link>(<emphasis role="stringliteral">&quot;../data/logs/c-reconstructor-debug.LOG&quot;</emphasis>,&#32;<link linkend="_file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc">WRITE</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00110"/>00110 
+<anchor xml:id="_reconstructor_8c_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<link linkend="_structimage">image</link>&#32;reconstructed_data;
+<anchor xml:id="_reconstructor_8c_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<link linkend="_image_8h_1a61b8047c5bba5a89979d65847e4103b1">InitImage</link>(&amp;reconstructed_data,&#32;sample_data.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>,&#32;sample_data.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>,&#32;sample_data.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00113"/>00113 
+<anchor xml:id="_reconstructor_8c_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">sample</link>-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>&#32;*&#32;<link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">sample</link>-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>&#32;*&#32;<link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">sample</link>-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>;&#32;i++){
+<anchor xml:id="_reconstructor_8c_source_1l00115"/>00115 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#ifndef&#32;MEMORY_SAVING</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;reconstructed_data.<link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link>[i]&#32;=&#32;0;
+<anchor xml:id="_reconstructor_8c_source_1l00117"/>00117 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endif</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00118"/>00118 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00119"/>00119 
+<anchor xml:id="_reconstructor_8c_source_1l00120"/>00120 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Running&#32;Reconstructor...\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<link linkend="_reconstructor_8c_1ad0d5b55646a3018075f07ae472ddb312">Reconstructor</link>(&amp;predicted_data,&#32;&amp;reconstructed_data,&#32;file_ptr);
+<anchor xml:id="_reconstructor_8c_source_1l00122"/>00122 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Completed&#32;Reconstruction.\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00123"/>00123 
+<anchor xml:id="_reconstructor_8c_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;res&#32;=&#32;<link linkend="_image_8h_1a1aeeb4864b63110b92099384a7a21fa8">Image_Equals</link>(&amp;sample_data,&#32;&amp;reconstructed_data);
+<anchor xml:id="_reconstructor_8c_source_1l00125"/>00125 
+<anchor xml:id="_reconstructor_8c_source_1l00126"/>00126 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(res&#32;==&#32;INT32_MAX)
+<anchor xml:id="_reconstructor_8c_source_1l00127"/>00127 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Reconstruction&#32;Success!\n&quot;</emphasis>);
+<anchor xml:id="_reconstructor_8c_source_1l00129"/>00129 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00131"/>00131 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_reconstructor_8c_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Reconstruction&#32;Failed&#32;at&#32;i=&#32;%d.\n&quot;</emphasis>,&#32;res);
+<anchor xml:id="_reconstructor_8c_source_1l00133"/>00133 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_reconstructor_8c_source_1l00134"/>00134 
+<anchor xml:id="_reconstructor_8c_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1ad62e6a72675aa7b389460e97f4e6d998">F_CLOSE</link>(file_ptr);
+<anchor xml:id="_reconstructor_8c_source_1l00136"/>00136 
+<anchor xml:id="_reconstructor_8c_source_1l00137"/>00137 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#ifndef&#32;MEMORY_SAVING</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00138"/>00138 &#32;&#32;&#32;&#32;free(sample_data.<link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00139"/>00139 &#32;&#32;&#32;&#32;free(predicted_data.<link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00140"/>00140 &#32;&#32;&#32;&#32;free(reconstructed_data.<link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link>);
+<anchor xml:id="_reconstructor_8c_source_1l00141"/>00141 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endif</emphasis>
+<anchor xml:id="_reconstructor_8c_source_1l00142"/>00142 }
+</programlisting></section>

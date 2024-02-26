@@ -1,0 +1,284 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="df/d91/a00335" kind="file" language="C++">
+    <compoundname>linear_algebra.c</compoundname>
+    <includes refid="da/d1e/a00149" local="yes">math/linear_algebra.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math/linear_algebra.h</label>
+        <link refid="da/d1e/a00149"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/linear_algebra.c</label>
+        <link refid="df/d91/a00335"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="df/d91/a00335_1ab9661c8e10293140db24d4b650785939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int InitVector</definition>
+        <argsstring>(int32_t **v, UINT len)</argsstring>
+        <name>InitVector</name>
+        <param>
+          <type>int32_t **</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/linear_algebra.c" line="3" column="5" bodyfile="src/linear_algebra.c" bodystart="3" bodyend="7"/>
+        <referencedby refid="d9/d77/a00095_1adcc753ae7048085817bd2c37b471f739" compoundref="db/dc3/a00284" startline="4" endline="33">InitializeWeights</referencedby>
+        <referencedby refid="d4/d3a/a00101_1a92b3b535f0c13d4ec28dab8b13713262" compoundref="da/de0/a00317" startline="55" endline="80">LocalDirectionVector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="df/d91/a00335_1ae000d0d19cf867f1ad39325993763205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DeleteVector</definition>
+        <argsstring>(data_t *v)</argsstring>
+        <name>DeleteVector</name>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/linear_algebra.c" line="9" column="5" bodyfile="src/linear_algebra.c" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d91/a00335_1a2765cafcf739497b0ee51e705590039a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AddVectors</definition>
+        <argsstring>(data_t *v1, data_t *v2, data_t *res, UINT size)</argsstring>
+        <name>AddVectors</name>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/linear_algebra.c" line="14" column="5" bodyfile="src/linear_algebra.c" bodystart="14" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d91/a00335_1a06b11149235c5a4fe6c877aed33f55f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SubtractVectors</definition>
+        <argsstring>(data_t *v1, data_t *v2, data_t *res, UINT size)</argsstring>
+        <name>SubtractVectors</name>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/linear_algebra.c" line="21" column="5" bodyfile="src/linear_algebra.c" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="df/d91/a00335_1a46ade3794d4b4d5cc1eaf983858507ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t InnerProduct</definition>
+        <argsstring>(int32_t *v1, int32_t *v2, UINT size)</argsstring>
+        <name>InnerProduct</name>
+        <param>
+          <type>int32_t *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/linear_algebra.c" line="28" column="9" bodyfile="src/linear_algebra.c" bodystart="28" bodyend="34"/>
+        <referencedby refid="d4/d3a/a00101_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="da/de0/a00317" startline="82" endline="99">PredictedCentralLocalDifference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="df/d91/a00335_1a2c84697470e743f7c69fffbe7e0f92bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScalarProduct</definition>
+        <argsstring>(data_t *v, data_t scalar, data_t *res, UINT size)</argsstring>
+        <name>ScalarProduct</name>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref></type>
+          <declname>scalar</declname>
+        </param>
+        <param>
+          <type><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/linear_algebra.c" line="37" column="5" bodyfile="src/linear_algebra.c" bodystart="37" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d1e/a00149" kindref="compound">math/linear_algebra.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="da/d1e/a00149_1ab9661c8e10293140db24d4b650785939" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d91/a00335_1ab9661c8e10293140db24d4b650785939" kindref="member">InitVector</ref>(int32_t**<sp/>v,<sp/><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>len){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>*v<sp/>=<sp/>(int32_t*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int32_t)<sp/>*<sp/>len);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="da/d1e/a00149_1ae000d0d19cf867f1ad39325993763205" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d91/a00335_1ae000d0d19cf867f1ad39325993763205" kindref="member">DeleteVector</ref>(<ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>free(v);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="da/d1e/a00149_1a2765cafcf739497b0ee51e705590039a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d91/a00335_1a2765cafcf739497b0ee51e705590039a" kindref="member">AddVectors</ref>(<ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v1,<sp/><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v2,<sp/><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>res,<sp/><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res[i]<sp/>=<sp/>v1[i]<sp/>+<sp/>v2[i];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="da/d1e/a00149_1a06b11149235c5a4fe6c877aed33f55f9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d91/a00335_1a06b11149235c5a4fe6c877aed33f55f9" kindref="member">SubtractVectors</ref>(<ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v1,<sp/><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v2,<sp/><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>res,<sp/><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res[i]<sp/>=<sp/>v1[i]<sp/>-<sp/>v2[i];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="da/d1e/a00149_1a46ade3794d4b4d5cc1eaf983858507ef" refkind="member"><highlight class="normal">int64_t<sp/><ref refid="df/d91/a00335_1a46ade3794d4b4d5cc1eaf983858507ef" kindref="member">InnerProduct</ref>(int32_t*<sp/>v1,<sp/>int32_t*<sp/>v2,<sp/><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++){</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>(int64_t)<sp/>v1[i]<sp/>*<sp/>v2[i];</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="da/d1e/a00149_1a2c84697470e743f7c69fffbe7e0f92bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d91/a00335_1a2c84697470e743f7c69fffbe7e0f92bc" kindref="member">ScalarProduct</ref>(<ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v,<sp/><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref><sp/>scalar,<sp/><ref refid="da/d1e/a00149_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>res,<sp/><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size){</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res[i]<sp/>=<sp/>v[i]<sp/>*<sp/>scalar;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/linear_algebra.c"/>
+  </compounddef>
+</doxygen>

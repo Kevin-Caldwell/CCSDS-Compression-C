@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d6/d38/namespacetest__compression" kind="namespace" language="Python">
+    <compoundname>test_compression</compoundname>
+    <innerclass refid="d9/d7b/classtest__compression_1_1_test_comp" prot="public">test_compression::TestComp</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python/test_compression.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

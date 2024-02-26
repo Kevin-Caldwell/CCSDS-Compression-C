@@ -1,0 +1,41 @@
+.TH "src/stream_encoder.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/stream_encoder.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'encoder/stream_encoder\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitializeVarIntStream\fP (\fBVIFS\fP *stream, const char *file_name, uint32_t buffer_size)"
+.br
+.ti -1c
+.RI "void \fBStreamVarInteger\fP (\fBVIFS\fP *stream, uint32_t data, uint32_t length)"
+.br
+.ti -1c
+.RI "void \fBCloseVarIntegerStream\fP (\fBVIFS\fP *stream)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void CloseVarIntegerStream (\fBVIFS\fP * stream)"
+
+.PP
+Definition at line \fB38\fP of file \fBstream_encoder\&.c\fP\&.
+.SS "void InitializeVarIntStream (\fBVIFS\fP * stream, const char * file_name, uint32_t buffer_size)"
+
+.PP
+Definition at line \fB3\fP of file \fBstream_encoder\&.c\fP\&.
+.SS "void StreamVarInteger (\fBVIFS\fP * stream, uint32_t data, uint32_t length)"
+
+.PP
+Definition at line \fB12\fP of file \fBstream_encoder\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

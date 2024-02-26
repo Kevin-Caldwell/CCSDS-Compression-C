@@ -1,6 +1,16 @@
 #ifndef HEADER_H
 #define HEADER_H
 
+/**
+ * header.h
+ * @author @Kevin-Caldwell
+ * 
+ * File Contains Functions for Preparing 
+ * Image, Predictor, Encoder and Entropy
+ * coder Header Sections of the 
+ * Compressed Image.
+*/
+
 #include <inttypes.h>
 
 #include "constants/constants.h"

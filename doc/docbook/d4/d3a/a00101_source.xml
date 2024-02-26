@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00101_source" xml:lang="en-US">
+<title>local_differences.h</title>
+<indexterm><primary>include/predictor/local_differences.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00101_source_1l00001"/>00001 
+<anchor xml:id="_a00101_source_1l00009"/>00009 <emphasis role="preprocessor">#ifndef&#32;LOCAL_DIFFERENCES_H</emphasis>
+<anchor xml:id="_a00101_source_1l00010"/>00010 <emphasis role="preprocessor">#define&#32;LOCAL_DIFFERENCES_H</emphasis>
+<anchor xml:id="_a00101_source_1l00011"/>00011 
+<anchor xml:id="_a00101_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00146">constants/constants.h</link>&quot;</emphasis>
+<anchor xml:id="_a00101_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00149">math/linear_algebra.h</link>&quot;</emphasis>
+<anchor xml:id="_a00101_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00152">math/math_functions.h</link>&quot;</emphasis>
+<anchor xml:id="_a00101_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00107">predictor/local_sum.h</link>&quot;</emphasis>
+<anchor xml:id="_a00101_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00092">predictor/sample_representative.h</link>&quot;</emphasis>
+<anchor xml:id="_a00101_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00095">predictor/weights.h</link>&quot;</emphasis>
+<anchor xml:id="_a00101_source_1l00018"/>00018 
+<anchor xml:id="_a00101_source_1l00019"/><link linkend="_a00101_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">00019</link> <emphasis role="preprocessor">#define&#32;Ps(z)&#32;MIN(z,&#32;kP)</emphasis>
+<anchor xml:id="_a00101_source_1l00020"/>00020 
+<anchor xml:id="_a00101_source_1l00021"/><link linkend="_a00101_1aa268a41a13430b18e933ed40207178d0">00021</link> <emphasis role="keyword">enum</emphasis>&#32;<link linkend="_a00101_1aa268a41a13430b18e933ed40207178d0">DIRECTION</link>&#32;{&#32;<link linkend="_a00101_1aa268a41a13430b18e933ed40207178d0a2c63acbe79d9f41ba6bb7766e9c37702">N</link>&#32;=&#32;0,&#32;<link linkend="_a00101_1aa268a41a13430b18e933ed40207178d0ab722ceeb601c72cd78fbd35f3581fdf7">W</link>,&#32;<link linkend="_a00101_1aa268a41a13430b18e933ed40207178d0a9b2eeb9b33247edbc638099452c6b46f">NW</link>&#32;};
+<anchor xml:id="_a00101_source_1l00022"/>00022 
+<anchor xml:id="_a00101_source_1l00023"/><link linkend="_a00101_1add0875819772a3917e5a6f648c0a3292">00023</link> <emphasis role="preprocessor">#define&#32;DLD(hIMG,&#32;z,y,x,d)&#32;&#32;&#32;&#32;DirectionalLocalDifference(hIMG,&#32;z,y,x,d)</emphasis>
+<anchor xml:id="_a00101_source_1l00024"/><link linkend="_a00101_1a21b79785d586c939ebdd71a1602e9b5c">00024</link> <emphasis role="preprocessor">#define&#32;DLD_N(hIMG,&#32;z,y,x)&#32;&#32;&#32;&#32;DirectionalLocalDifference(hIMG,&#32;z,y,x,N)</emphasis>
+<anchor xml:id="_a00101_source_1l00025"/><link linkend="_a00101_1ad68845bcfb3f6bd01382ba8a2550f21f">00025</link> <emphasis role="preprocessor">#define&#32;DLD_W(hIMG,&#32;z,y,x)&#32;&#32;&#32;&#32;DirectionalLocalDifference(hIMG,&#32;z,y,x,W)</emphasis>
+<anchor xml:id="_a00101_source_1l00026"/><link linkend="_a00101_1a05c0b8c3e6a3ae85df713a1cd5a99cd5">00026</link> <emphasis role="preprocessor">#define&#32;DLD_NW(hIMG,&#32;z,y,x)&#32;&#32;&#32;DirectionalLocalDifference(hIMG,&#32;z,y,x,NW)</emphasis>
+<anchor xml:id="_a00101_source_1l00027"/>00027 
+<anchor xml:id="_a00101_source_1l00028"/>00028 int32_t&#32;<link linkend="_a00101_1a37d2cf3f48b1b2c436f630a2b649cf52">CentralLocalDifference</link>(<link linkend="_a00380">image</link>*&#32;hIMG,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x);
+<anchor xml:id="_a00101_source_1l00029"/>00029 
+<anchor xml:id="_a00101_source_1l00030"/>00030 int32_t&#32;<link linkend="_a00101_1aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</link>(<link linkend="_a00380">image</link>*&#32;hIMG,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction);
+<anchor xml:id="_a00101_source_1l00031"/>00031 
+<anchor xml:id="_a00101_source_1l00032"/>00032 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00101_1a92b3b535f0c13d4ec28dab8b13713262">LocalDirectionVector</link>(<link linkend="_a00380">image</link>*&#32;hIMG,&#32;int32_t**&#32;local_direction_vector,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x);
+<anchor xml:id="_a00101_source_1l00033"/>00033 
+<anchor xml:id="_a00101_source_1l00034"/>00034 int64_t&#32;<link linkend="_a00101_1a36ddae4ef0f34ba3f7402469253bb6b6">PredictedCentralLocalDifference</link>(<link linkend="_a00380">image</link>*&#32;hIMG,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x);
+<anchor xml:id="_a00101_source_1l00035"/>00035 
+<anchor xml:id="_a00101_source_1l00036"/>00036 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;LOCAL_DIFFERENCES_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

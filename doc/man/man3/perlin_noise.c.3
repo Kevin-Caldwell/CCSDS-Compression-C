@@ -1,0 +1,102 @@
+.TH "src/perlin_noise.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/perlin_noise.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'testing/perlin\&.h'\fP
+.br
+\fC#include 'files/csv\-io\&.h'\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBfVector3\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBfVector3\fP \fBfVector3\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fBdot\fP (\fBfVector3\fP u, \fBfVector3\fP v)"
+.br
+.ti -1c
+.RI "\fBfVector3\fP \fBnormalize\fP (\fBfVector3\fP v)"
+.br
+.ti -1c
+.RI "float \fBinterpolate\fP (float a0, float a1, float w)"
+.br
+.ti -1c
+.RI "uint16_t \fBmapper\fP (float val)"
+.br
+.ti -1c
+.RI "\fBfVector3\fP \fBRandomizeVector\fP (int vector_x, int vector_y, int vector_z)"
+.br
+.ti -1c
+.RI "uint16_t \fBSolvePerlin4\fP (int x, int y, int z, int len, \fBdim3\fP size)"
+.br
+.ti -1c
+.RI "void \fBPerlin4\fP (\fBimage\fP *result, int cube_side)"
+.br
+.ti -1c
+.RI "void \fBGeneratePerlinImage\fP (\fBdim3\fP size, int index, int length)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBfVector3\fP \fBfVector3\fP"
+3D floating point vector 
+.SH "Function Documentation"
+.PP 
+.SS "float dot (\fBfVector3\fP u, \fBfVector3\fP v)"
+
+.PP
+Definition at line \fB16\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "void GeneratePerlinImage (\fBdim3\fP size, int index, int length)"
+
+.PP
+Definition at line \fB103\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "float interpolate (float a0, float a1, float w)"
+
+.PP
+Definition at line \fB27\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "uint16_t mapper (float val)"
+
+.PP
+Definition at line \fB32\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "\fBfVector3\fP normalize (\fBfVector3\fP v)"
+
+.PP
+Definition at line \fB21\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "void Perlin4 (\fBimage\fP * result, int cube_side)"
+
+.PP
+Definition at line \fB75\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "\fBfVector3\fP RandomizeVector (int vector_x, int vector_y, int vector_z)"
+
+.PP
+Definition at line \fB37\fP of file \fBperlin_noise\&.c\fP\&.
+.SS "uint16_t SolvePerlin4 (int x, int y, int z, int len, \fBdim3\fP size)"
+
+.PP
+Definition at line \fB50\fP of file \fBperlin_noise\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

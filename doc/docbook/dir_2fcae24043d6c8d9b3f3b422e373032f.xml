@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2fcae24043d6c8d9b3f3b422e373032f" xml:lang="en-US">
+<title>build/CMakeFiles/CCSDS_Decompressor.dir Directory Reference</title>
+<indexterm><primary>build/CMakeFiles/CCSDS_Decompressor.dir Directory Reference</primary></indexterm>
+Directory dependency graph for CCSDS_Decompressor.dir:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_2fcae24043d6c8d9b3f3b422e373032f_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_428a955cd1dcf08ef5b7d9b0293e4d17">main</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_bda9db4dee5220dce83fe6b2b34fd167">src</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

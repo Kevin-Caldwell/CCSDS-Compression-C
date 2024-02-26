@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00360" xml:lang="en-US">
+<title>generate_perlin_image Namespace Reference</title>
+<indexterm><primary>generate_perlin_image</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00360_1ac483f6ce851c9ecd9fb835ff7551737c">p</link> = perlin.perlin(1000)</para>
+</listitem>
+            <listitem><para><link linkend="_a00360_1a86d0d51ceb4bc3bd26707520f257a5a4">img</link> = p.three(100, 100, 100)</para>
+</listitem>
+            <listitem><para><link linkend="_a00360_1a943f49763dd36e31fc7ea8604fcad789">frame</link> = np.zeros(shape=(640, 512))</para>
+</listitem>
+            <listitem><para><link linkend="_a00360_1a550769bbd4e7537ff90a656f5b0c23b2">start</link> = time.clock_gettime_ns(0)</para>
+</listitem>
+            <listitem><para><link linkend="_a00360_1afb358f48b1646c750fb9da6c6585be2b">end</link> = time.clock_gettime_ns(0)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00360_1afb358f48b1646c750fb9da6c6585be2b"/><section>
+    <title>end</title>
+<indexterm><primary>end</primary><secondary>generate_perlin_image</secondary></indexterm>
+<indexterm><primary>generate_perlin_image</primary><secondary>end</secondary></indexterm>
+<para><computeroutput>end = time.clock_gettime_ns(0)</computeroutput></para><para>
+Definition at line <link linkend="_a00005_source_1l00014">14</link> of file <link linkend="_a00005_source">generate_perlin_image.py</link>.</para>
+</section>
+<anchor xml:id="_a00360_1a943f49763dd36e31fc7ea8604fcad789"/><section>
+    <title>frame</title>
+<indexterm><primary>frame</primary><secondary>generate_perlin_image</secondary></indexterm>
+<indexterm><primary>generate_perlin_image</primary><secondary>frame</secondary></indexterm>
+<para><computeroutput>frame = np.zeros(shape=(640, 512))</computeroutput></para><para>
+Definition at line <link linkend="_a00005_source_1l00009">9</link> of file <link linkend="_a00005_source">generate_perlin_image.py</link>.</para>
+</section>
+<anchor xml:id="_a00360_1a86d0d51ceb4bc3bd26707520f257a5a4"/><section>
+    <title>img</title>
+<indexterm><primary>img</primary><secondary>generate_perlin_image</secondary></indexterm>
+<indexterm><primary>generate_perlin_image</primary><secondary>img</secondary></indexterm>
+<para><computeroutput>img = p.three(100, 100, 100)</computeroutput></para><para>
+Definition at line <link linkend="_a00005_source_1l00008">8</link> of file <link linkend="_a00005_source">generate_perlin_image.py</link>.</para>
+</section>
+<anchor xml:id="_a00360_1ac483f6ce851c9ecd9fb835ff7551737c"/><section>
+    <title>p</title>
+<indexterm><primary>p</primary><secondary>generate_perlin_image</secondary></indexterm>
+<indexterm><primary>generate_perlin_image</primary><secondary>p</secondary></indexterm>
+<para><computeroutput>p = perlin.perlin(1000)</computeroutput></para><para>
+Definition at line <link linkend="_a00005_source_1l00007">7</link> of file <link linkend="_a00005_source">generate_perlin_image.py</link>.</para>
+</section>
+<anchor xml:id="_a00360_1a550769bbd4e7537ff90a656f5b0c23b2"/><section>
+    <title>start</title>
+<indexterm><primary>start</primary><secondary>generate_perlin_image</secondary></indexterm>
+<indexterm><primary>generate_perlin_image</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>start = time.clock_gettime_ns(0)</computeroutput></para><para>
+Definition at line <link linkend="_a00005_source_1l00010">10</link> of file <link linkend="_a00005_source">generate_perlin_image.py</link>.</para>
+</section>
+</section>
+</section>

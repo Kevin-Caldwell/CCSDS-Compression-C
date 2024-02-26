@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d1/d09/a00077" kind="file" language="C++">
+    <compoundname>header.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes refid="d9/db6/a00146" local="yes">constants/constants.h</includes>
+    <includes refid="d5/db1/a00140" local="yes">constants/encoder_constants.h</includes>
+    <includes refid="d2/d1f/a00083" local="yes">encoder/encoder_helper_functions.h</includes>
+    <includedby refid="df/d03/a00062" local="yes">include/testing/generate_image.h</includedby>
+    <includedby refid="dc/d50/a00332" local="yes">src/header.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>constants/encoder_constants.h</label>
+        <link refid="d5/db1/a00140"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>encoder/encoder_helper_functions.h</label>
+        <link refid="d2/d1f/a00083"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/encoder/header.h</label>
+        <link refid="d1/d09/a00077"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="7">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/encoder/header.h</label>
+        <link refid="d1/d09/a00077"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="4">
+        <label>main/image_handler.c</label>
+        <link refid="dc/dee/a00053"/>
+      </node>
+      <node id="5">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+      <node id="6">
+        <label>src/header.c</label>
+        <link refid="dc/d50/a00332"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrepareImageMetadata</definition>
+        <argsstring>(uint8_t *essential)</argsstring>
+        <name>PrepareImageMetadata</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>essential</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d1/d09/a00077" kindref="compound">header.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+File Contains Functions for Preparing Image, Predictor, Encoder and Entropy coder Header Sections of the Compressed Image. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/header.h" line="20" column="6" bodyfile="src/header.c" bodystart="5" bodyend="53" declfile="include/encoder/header.h" declline="20" declcolumn="6"/>
+        <references refid="d5/db1/a00140_1aefcba2436e62e516a63bdad51613a2e5" compoundref="de/d55/a00323" startline="3">B</references>
+        <references refid="d9/db6/a00146_1abf6d0ccec2f5157184071729f129de19" compoundref="de/d25/a00290" startline="63">D</references>
+        <references refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</references>
+        <references refid="d5/db1/a00140_1aab2a3fdc0e63fde9690b44450a35e26b" compoundref="d5/db1/a00140" startline="32">ENTROPY_CODER</references>
+        <references refid="d9/db6/a00146_1a9f28821bcbb645a7c3ab8a0228335fc5" compoundref="de/d25/a00290" startline="58">kUnsignedSamples</references>
+        <references refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" compoundref="de/d25/a00290" startline="51">Nx</references>
+        <references refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" compoundref="de/d25/a00290" startline="52">Ny</references>
+        <references refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" compoundref="de/d25/a00290" startline="53">Nz</references>
+        <references refid="d2/d1f/a00083_1aa268d136b017ba11fca74d167e36dd34" compoundref="dd/dd7/a00260" startline="3" endline="10">PrintBinary</references>
+        <references refid="d5/db1/a00140_1a7b753f7db0f750b0010df61a3046d2f2" compoundref="d5/db1/a00140" startline="39">QUANTIZER_FIDELITY_CONTROL</references>
+        <references refid="d5/db1/a00140_1ae18bded6a8507a03e0743e2fb320ab3a" compoundref="d5/db1/a00140" startline="43">SIZEOF_HEADER_ESSENTIAL</references>
+        <references refid="d5/db1/a00140_1a0f5679d9c7940eacaf7f99e2de79e5fe" compoundref="d5/db1/a00140" startline="41">TABLE_COUNT</references>
+        <referencedby refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" compoundref="d3/d07/a00305" startline="104" endline="109">TestHeader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PreparePredictorMetadata</definition>
+        <argsstring>(uint8_t *predicted_metadata)</argsstring>
+        <name>PreparePredictorMetadata</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>predicted_metadata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/header.h" line="22" column="6" bodyfile="src/header.c" bodystart="56" bodyend="96" declfile="include/encoder/header.h" declline="22" declcolumn="6"/>
+        <references refid="d5/db1/a00140_1a18ddd6c43809a62609148ee7843ed4e8" compoundref="d5/db1/a00140" startline="53">BAND_VARYING_DAMPING_FLAG</references>
+        <references refid="d5/db1/a00140_1af19c5cde04e920f045ccf275bac5b2bd" compoundref="d5/db1/a00140" startline="61">BAND_VARYING_OFFSET_FLAG</references>
+        <references refid="d5/db1/a00140_1a37bf74bce23e349834ae376bfd7d66e7" compoundref="d5/db1/a00140" startline="57">DAMPING_TABLE_FLAG</references>
+        <references refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</references>
+        <references refid="d5/db1/a00140_1affbf66e9c65fe62a8677ca4f4b61730a" compoundref="d5/db1/a00140" startline="67">FIXED_DAMPING</references>
+        <references refid="d5/db1/a00140_1a96cc7d5d38f6b98001288a9b302d6796" compoundref="d5/db1/a00140" startline="68">FIXED_OFFSET</references>
+        <references refid="df/d6a/a00119_1a27578c1b5a3ab68d8f144ed86ea72cc2" compoundref="d5/d35/a00266" startline="39" endline="42">Hash_GetValue</references>
+        <references refid="d9/db6/a00146_1a21c169290a6c782855c778bb7a0389b9" compoundref="de/d25/a00290" startline="70">kP</references>
+        <references refid="d9/db6/a00146_1a43cf89f028c6b6ad01038627b83a84c0" compoundref="de/d25/a00290" startline="71">kR</references>
+        <references refid="d9/db6/a00146_1a85fbef56eedaaa1a29a9f0c18ba53631" compoundref="de/d25/a00290" startline="73">kVMax</references>
+        <references refid="d9/db6/a00146_1a68b61249aa9c541a3ed6d1987b8c53ce" compoundref="de/d25/a00290" startline="74">kVMin</references>
+        <references refid="d9/db6/a00146_1ab11dcc700999baf22e51630cc1e0d7ed" compoundref="de/d25/a00290" startline="59">LOCAL_SUM_TYPE</references>
+        <references refid="d5/db1/a00140_1a01ae0a84ae74aeda76855e3248f8de30" compoundref="d5/db1/a00140" startline="65">OFFSET_TABLE_FLAG</references>
+        <references refid="d9/db6/a00146_1a515cdf0341e52056bcea8e46c952ee82" compoundref="de/d25/a00290" startline="77">Omega</references>
+        <references refid="d9/db6/a00146_1aee5860bd3e62fe2734ce27a1b1038dbc" compoundref="de/d25/a00290" startline="61">PREDICTION_MODE</references>
+        <references refid="d2/df5/a00137_1a3e84b5148948a9a22f804ac78d16590c" compoundref="de/d25/a00290" startline="55">predictor_constants</references>
+        <references refid="d9/db6/a00146_1a95d55ebfa2f2f1bd14867ad6a6cc9bfb" compoundref="d9/db6/a00146" startline="56">RESOLUTION</references>
+        <references refid="d5/db1/a00140_1a9591d28de78714ff84008187c0f264a5" compoundref="d5/db1/a00140" startline="45">SAMPLE_REP_FLAG</references>
+        <references refid="d9/db6/a00146_1aa88d01fdf084b6477a2a70e73c56ac5a" compoundref="d9/db6/a00146" startline="65">WEIGHT_EXPONENT_OFFSET_FLAG</references>
+        <references refid="d9/db6/a00146_1a299d67a9aa02ae3a2bd476a639a5be37" compoundref="d9/db6/a00146" startline="61">WEIGHT_INITIALIZATION</references>
+        <references refid="d5/db1/a00140_1ad2efe3db4f03ddf8a0d2494d9c643549" compoundref="d5/db1/a00140" startline="47">WEIGHT_INITIALIZATION_TABLE_FLAG</references>
+        <references refid="d5/db1/a00140_1a8b3f48be0fd9f9bee0fdaf45425a90ed" compoundref="d5/db1/a00140" startline="46">WEO_TABLE_FLAG</references>
+        <referencedby refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" compoundref="d3/d07/a00305" startline="104" endline="109">TestHeader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d1/d09/a00077_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrepareSampleAdaptiveEntropyCoder</definition>
+        <argsstring>(uint8_t *entropy_coder_metadata)</argsstring>
+        <name>PrepareSampleAdaptiveEntropyCoder</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>entropy_coder_metadata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/header.h" line="24" column="6" bodyfile="src/header.c" bodystart="98" bodyend="104" declfile="include/encoder/header.h" declline="24" declcolumn="6"/>
+        <references refid="d5/db1/a00140_1a5da5a1923a6dffb7ba9faee8b7fe7e52" compoundref="d5/db1/a00140" startline="75">ACCUMULATOR_INITIALIZATION</references>
+        <references refid="d5/db1/a00140_1aa929522bb0023aae20ed57e583c3eb62" compoundref="d5/db1/a00140" startline="76">ACCUMULATOR_INITIALIZATION_TABLE_FLAG</references>
+        <references refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</references>
+        <references refid="d5/db1/a00140_1a637670209ee0a097697896588c1cbdef" compoundref="d5/db1/a00140" startline="74">INITIAL_COUNT_EXPONENT</references>
+        <references refid="d5/db1/a00140_1ac06b5b3d7fc01cb19295b60b4421b802" compoundref="d5/db1/a00140" startline="73">RESCALING_COUNTER_SIZE</references>
+        <references refid="d5/db1/a00140_1a2dd7f6568a16cd0cf58bc9f59c6c5f3c" compoundref="d5/db1/a00140" startline="85">UNARY_LENGTH_LIMIT</references>
+        <referencedby refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" compoundref="d3/d07/a00305" startline="104" endline="109">TestHeader</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>HEADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HEADER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/db6/a00146" kindref="compound">constants/constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/db1/a00140" kindref="compound">constants/encoder_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/d1f/a00083" kindref="compound">encoder/encoder_helper_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" kindref="member">PrepareImageMetadata</ref>(uint8_t*<sp/>essential);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" kindref="member">PreparePredictorMetadata</ref>(uint8_t*<sp/>predicted_metadata);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d09/a00077_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" kindref="member">PrepareSampleAdaptiveEntropyCoder</ref>(uint8_t*<sp/>entropy_coder_metadata);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>HEADER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/encoder/header.h"/>
+  </compounddef>
+</doxygen>

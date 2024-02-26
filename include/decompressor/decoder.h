@@ -1,6 +1,6 @@
 /**
  * decoder.h
- * @authors @Kevin-Caldwell
+ * @authors @Kevin-Caldwell @BrianShTsoi
  * 
  * Functions for Decoding an image from a .HSP file
  * 

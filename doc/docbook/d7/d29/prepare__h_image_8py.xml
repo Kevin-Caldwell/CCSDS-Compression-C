@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prepare__h_image_8py" xml:lang="en-US">
+<title>python/prepare_hImage.py File Reference</title>
+<indexterm><primary>python/prepare_hImage.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceprepare__h_image">prepare_hImage</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a84c47e6bbcef028eda4c81cfa1b935ff">ReadCSV</link> (filename)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link> (wavelength, gamma=0.8)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>list <link linkend="_namespaceprepare__h_image_1a7e69bd3f9400dc258e83fe7ecab1e317">CacheFiles</link> = [[]]</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link> = <link linkend="_namespaceprepare__h_image_1a84c47e6bbcef028eda4c81cfa1b935ff">ReadCSV</link>(f&quot;data/test-images/VORONOI_640x512x640_1000.csv&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a5c7e4f16622600cb52580b191565e2dd">Nx</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1ac1452fdfd6ea1c8c005ac90bbfa62011">Ny</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1af3ec54a0e6bc4935a13fb520b7d7df6e">Nz</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1adbdde44f981e5f6df2c75332ea3f9220">numbers</link> = np.array(<link linkend="_namespaceprepare__h_image_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link>, dtype=int)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link> = numbers.min()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a34ddfe7666109e00419326a0334cea67">maximum</link> = numbers.max()</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespaceprepare__h_image_1a68c1363ccdf28598f4504e4b6fd6288a">number_range</link> = <link linkend="_namespaceprepare__h_image_1a34ddfe7666109e00419326a0334cea67">maximum</link> - <link linkend="_namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link> + 1</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a86d0d51ceb4bc3bd26707520f257a5a4">img</link> = Image.new( &apos;RGB&apos;, (<link linkend="_namespaceprepare__h_image_1a5c7e4f16622600cb52580b191565e2dd">Nx</link>,<link linkend="_namespaceprepare__h_image_1ac1452fdfd6ea1c8c005ac90bbfa62011">Ny</link>), &quot;black&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a25d0e7c7655b7a5eed365b894fd5e26f">pixels</link> = img.load()</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_namespaceprepare__h_image_1ac8859e8c1ce357c4c8b37bbb1936ba1c">v</link> = (<link linkend="_namespaceprepare__h_image_1adbdde44f981e5f6df2c75332ea3f9220">numbers</link>[i, j, z] - <link linkend="_namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link>) / <link linkend="_namespaceprepare__h_image_1a68c1363ccdf28598f4504e4b6fd6288a">number_range</link> * 370 + 380</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceprepare__h_image_1a1aabac6d068eef6a7bad3fdf50a05cc8">d</link> = <link linkend="_namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link>(int(<link linkend="_namespaceprepare__h_image_1ac8859e8c1ce357c4c8b37bbb1936ba1c">v</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

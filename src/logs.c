@@ -31,7 +31,7 @@ void Log_close() {
     F_CLOSE(log_fptr);
 }
 
-void Log_add(char* text){
+void Log_add(const char* text){
     fprintf(log_fptr, "[%s] UPDATE: %s\n", _GET_PRINT_TIME(), text);
 }
 

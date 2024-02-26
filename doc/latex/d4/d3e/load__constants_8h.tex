@@ -1,0 +1,42 @@
+\doxysection{include/constants/load\+\_\+constants.h File Reference}
+\hypertarget{load__constants_8h}{}\label{load__constants_8h}\index{include/constants/load\_constants.h@{include/constants/load\_constants.h}}
+{\ttfamily \#include "{}dst/hash\+\_\+table.\+h"{}}\newline
+Include dependency graph for load\+\_\+constants.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{load__constants_8h_a5d642038360b72b886a5eb66e3efd14a}{Load\+Constant\+File}} (const char \texorpdfstring{$\ast$}{*}file\+\_\+name, \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{load__constants_8h_a5d642038360b72b886a5eb66e3efd14a}\label{load__constants_8h_a5d642038360b72b886a5eb66e3efd14a} 
+\index{load\_constants.h@{load\_constants.h}!LoadConstantFile@{LoadConstantFile}}
+\index{LoadConstantFile@{LoadConstantFile}!load\_constants.h@{load\_constants.h}}
+\doxysubsubsection{\texorpdfstring{LoadConstantFile()}{LoadConstantFile()}}
+{\footnotesize\ttfamily int Load\+Constant\+File (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+\doxylink{load__constants_8h}{load\+\_\+constants.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Abstractions for Loading .CONST files
+
+Features Custom .CONST file format with easy-\/to-\/read Constant Parameter Storage
+
+Uses Interpreting .CONST Files to load constants for all modules Stores result in a \doxylink{struct_hash_table}{Hash\+Table} structure
+
+Dependencies \doxylink{hash__table_8h}{hash\+\_\+table.\+h}
+
+Internal Dependencies stdio.\+h
+
+TODO Add a Save\+Constant\+File Function FUNCDEF\+: int Save\+Constant\+File(const char\texorpdfstring{$\ast$}{*} file\+\_\+name, Hash\+Table\texorpdfstring{$\ast$}{*} save\+\_\+input) 
+
+Definition at line \mbox{\hyperlink{load__constants_8c_source_l00006}{6}} of file \mbox{\hyperlink{load__constants_8c_source}{load\+\_\+constants.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3

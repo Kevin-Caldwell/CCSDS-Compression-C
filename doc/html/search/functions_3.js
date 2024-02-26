@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['centrallocaldifference_0',['centrallocaldifference',['../d2/df3/local__differences_8h.html#a37d2cf3f48b1b2c436f630a2b649cf52',1,'CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x):&#160;local_differences.c'],['../d8/d97/local__differences_8c.html#a37d2cf3f48b1b2c436f630a2b649cf52',1,'CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x):&#160;local_differences.c']]],
+  ['clippedquantizerbincenter_1',['clippedquantizerbincenter',['../d1/d38/quantizer_8h.html#a9d745aa249b8a9cde3f83899b563dcc5',1,'ClippedQuantizerBinCenter(uint16_t sample_value):&#160;quantizer.c'],['../dc/df1/quantizer_8c.html#a9d745aa249b8a9cde3f83899b563dcc5',1,'ClippedQuantizerBinCenter(uint16_t sample_value):&#160;quantizer.c']]],
+  ['closevarintegerstream_2',['closevarintegerstream',['../d8/d81/stream__encoder_8h.html#afbd717a2dd8bee43593e06a3919ba72a',1,'CloseVarIntegerStream(VIFS *stream):&#160;stream_encoder.c'],['../de/d04/stream__encoder_8c.html#afbd717a2dd8bee43593e06a3919ba72a',1,'CloseVarIntegerStream(VIFS *stream):&#160;stream_encoder.c']]],
+  ['compareresults_3',['CompareResults',['../d3/d62/namespacefile__compare.html#ac7d0b484ac5bfa8e7714915a5a0868d5',1,'file_compare']]],
+  ['compressimage_4',['compressimage',['../df/d7b/generate__image_8h.html#aaa094efd7037f34ae4e485a0b97c4282',1,'CompressImage(char *source, char *destination):&#160;generate_image.c'],['../d6/d92/generate__image_8c.html#aaa094efd7037f34ae4e485a0b97c4282',1,'CompressImage(char *source, char *destination):&#160;generate_image.c']]],
+  ['compression_5fratio_5',['compression_ratio',['../d9/d7b/classtest__compression_1_1_test_comp.html#abb98cfaed1aee0349dde4e879c2ecb9e',1,'test_compression.TestComp.compression_ratio()'],['../d0/d3e/namespacefile__stats.html#a473892ba0152ef4e5eda5695d64603e2',1,'file_stats.compression_ratio()']]]
+];

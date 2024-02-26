@@ -1,0 +1,122 @@
+.TH "include/encoder/body.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/encoder/body.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include 'math/math_functions\&.h'\fP
+.br
+\fC#include 'dst/image\&.h'\fP
+.br
+\fC#include 'constants/encoder_constants\&.h'\fP
+.br
+\fC#include 'encoder/stream_encoder\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGolombInt\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGAMMA_STAR\fP   5"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBGolombInt\fP \fBGolombInt\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGolombInt\fP \fBGolombPowerTwo\fP (uint16_t j, uint16_t k)"
+.br
+.ti -1c
+.RI "unsigned int \fBInitAccumulatorValue\fP (uint32_t z)"
+.br
+.ti -1c
+.RI "int \fBEncodeBody\fP (\fBimage\fP *hIMG, const char *file_name, const char *write_mode, int buffer_size)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBK\fP"
+.br
+.ti -1c
+.RI "unsigned int \fBU_max\fP"
+.br
+.ti -1c
+.RI "int \fBGamma1\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GAMMA_STAR   5"
+
+.PP
+Definition at line \fB36\fP of file \fBbody\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBGolombInt\fP \fBGolombInt\fP"
+Package Struct for storing Compressed Data\&.
+.PP
+data: 32 bit int storing varInt Data length: bit length of the value stored in data 
+.SH "Function Documentation"
+.PP 
+.SS "int EncodeBody (\fBimage\fP * hIMG, const char * file_name, const char * write_mode, int buffer_size)"
+
+.PP
+Definition at line \fB44\fP of file \fBencoder_body\&.c\fP\&.
+.SS "\fBGolombInt\fP GolombPowerTwo (uint16_t j, uint16_t k)"
+
+.PP
+Definition at line \fB9\fP of file \fBencoder_body\&.c\fP\&.
+.SS "unsigned int InitAccumulatorValue (uint32_t z)"
+
+.PP
+Definition at line \fB38\fP of file \fBencoder_body\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int Gamma1\fC [extern]\fP"
+
+.PP
+Definition at line \fB7\fP of file \fBencoder_body\&.c\fP\&.
+.SS "int K\fC [extern]\fP"
+\fBbody\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Helper Functions for Encoding the body of the Compressed Image
+.PP
+Features Golomb Power-of-Two Accumulator Value Encoding the Body of the Compressed file
+.PP
+Dependencies \fBmath_functions\&.h\fP \fBimage\&.h\fP \fBencoder_constants\&.h\fP \fBstream_encoder\&.h\fP
+.PP
+TODO Validate Results 
+.PP
+Definition at line \fB5\fP of file \fBencoder_body\&.c\fP\&.
+.SS "unsigned int U_max\fC [extern]\fP"
+
+.PP
+Definition at line \fB6\fP of file \fBencoder_body\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

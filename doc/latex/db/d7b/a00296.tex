@@ -1,0 +1,65 @@
+\doxysection{src/sample\+\_\+representative.c File Reference}
+\hypertarget{a00296}{}\label{a00296}\index{src/sample\_representative.c@{src/sample\_representative.c}}
+{\ttfamily \#include "{}predictor/sample\+\_\+representative.\+h"{}}\newline
+Include dependency graph for sample\+\_\+representative.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\+\_\+t}} \mbox{\hyperlink{a00296_aca1581c921d082976e7f116aa52c56f0}{Sample\+Representative}} (uint16\+\_\+t sample\+\_\+value)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{a00296_a14cff7c59ac94b0387e8b95a433521e9}{Predicted\+Sample}} (uint32\+\_\+t double\+\_\+resolution\+\_\+predicted\+\_\+sample)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{a00296_a6c60474c610dc64773816bc445efeb77}{Double\+Resolution\+Predicted\+Sample}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x, int64\+\_\+t high\+\_\+resolution\+\_\+predicted\+\_\+sample)
+\item 
+int64\+\_\+t \mbox{\hyperlink{a00296_a441e8d0fe639d45889aab5b88c4138f4}{High\+Resolution\+Predicted\+Sample}} (int64\+\_\+t predicted\+\_\+central\+\_\+local\+\_\+difference, uint32\+\_\+t local\+\_\+sum)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00296_a6c60474c610dc64773816bc445efeb77}\label{a00296_a6c60474c610dc64773816bc445efeb77} 
+\index{sample\_representative.c@{sample\_representative.c}!DoubleResolutionPredictedSample@{DoubleResolutionPredictedSample}}
+\index{DoubleResolutionPredictedSample@{DoubleResolutionPredictedSample}!sample\_representative.c@{sample\_representative.c}}
+\doxysubsubsection{\texorpdfstring{DoubleResolutionPredictedSample()}{DoubleResolutionPredictedSample()}}
+{\footnotesize\ttfamily uint32\+\_\+t Double\+Resolution\+Predicted\+Sample (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x,  }\item[{int64\+\_\+t}]{high\+\_\+resolution\+\_\+predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00296_source_l00013}{13}} of file \mbox{\hyperlink{a00296_source}{sample\+\_\+representative.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{a00296_a441e8d0fe639d45889aab5b88c4138f4}\label{a00296_a441e8d0fe639d45889aab5b88c4138f4} 
+\index{sample\_representative.c@{sample\_representative.c}!HighResolutionPredictedSample@{HighResolutionPredictedSample}}
+\index{HighResolutionPredictedSample@{HighResolutionPredictedSample}!sample\_representative.c@{sample\_representative.c}}
+\doxysubsubsection{\texorpdfstring{HighResolutionPredictedSample()}{HighResolutionPredictedSample()}}
+{\footnotesize\ttfamily int64\+\_\+t High\+Resolution\+Predicted\+Sample (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{predicted\+\_\+central\+\_\+local\+\_\+difference,  }\item[{uint32\+\_\+t}]{local\+\_\+sum }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00296_source_l00027}{27}} of file \mbox{\hyperlink{a00296_source}{sample\+\_\+representative.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00296_a14cff7c59ac94b0387e8b95a433521e9}\label{a00296_a14cff7c59ac94b0387e8b95a433521e9} 
+\index{sample\_representative.c@{sample\_representative.c}!PredictedSample@{PredictedSample}}
+\index{PredictedSample@{PredictedSample}!sample\_representative.c@{sample\_representative.c}}
+\doxysubsubsection{\texorpdfstring{PredictedSample()}{PredictedSample()}}
+{\footnotesize\ttfamily uint16\+\_\+t Predicted\+Sample (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{double\+\_\+resolution\+\_\+predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00296_source_l00009}{9}} of file \mbox{\hyperlink{a00296_source}{sample\+\_\+representative.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{a00296_aca1581c921d082976e7f116aa52c56f0}\label{a00296_aca1581c921d082976e7f116aa52c56f0} 
+\index{sample\_representative.c@{sample\_representative.c}!SampleRepresentative@{SampleRepresentative}}
+\index{SampleRepresentative@{SampleRepresentative}!sample\_representative.c@{sample\_representative.c}}
+\doxysubsubsection{\texorpdfstring{SampleRepresentative()}{SampleRepresentative()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\+\_\+t}} Sample\+Representative (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00296_source_l00005}{5}} of file \mbox{\hyperlink{a00296_source}{sample\+\_\+representative.\+c}}.
+

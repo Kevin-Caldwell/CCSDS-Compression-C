@@ -1,0 +1,50 @@
+.TH "src/csv-io.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/csv-io.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'files/csv\-io\&.h'\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSaveArrayAsCSV\fP (uint16_t *data, \fBUINT\fP count, char *file_name)"
+.br
+.ti -1c
+.RI "int \fBSaveImageAsCSV\fP (\fBimage\fP *hIMG, char *file_name)"
+.br
+.ti -1c
+.RI "int \fBReadImageFromCSV\fP (\fBimage\fP *hIMG, char *file_name)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int ReadImageFromCSV (\fBimage\fP * hIMG, char * file_name)"
+
+.PP
+Definition at line \fB67\fP of file \fBcsv\-io\&.c\fP\&.
+.SS "void SaveArrayAsCSV (uint16_t * data, \fBUINT\fP count, char * file_name)"
+\fBcsv-io\&.h\fP 
+.PP
+\fBAuthors\fP
+.RS 4
+@Kevin-Caldwell and @BrianShTsoi
+.RE
+.PP
+Functions for image file read and write to CSV 
+.PP
+Definition at line \fB9\fP of file \fBcsv\-io\&.c\fP\&.
+.SS "int SaveImageAsCSV (\fBimage\fP * hIMG, char * file_name)"
+
+.PP
+Definition at line \fB31\fP of file \fBcsv\-io\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

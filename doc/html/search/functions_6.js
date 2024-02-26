@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['f_5fclose_0',['f_close',['../d9/d7f/file___i_o_8h.html#ad62e6a72675aa7b389460e97f4e6d998',1,'F_CLOSE(file_t *stream):&#160;file_IO.c'],['../d9/da2/file___i_o_8c.html#ad62e6a72675aa7b389460e97f4e6d998',1,'F_CLOSE(file_t *stream):&#160;file_IO.c']]],
+  ['f_5fempty_1',['f_empty',['../d9/d7f/file___i_o_8h.html#a4b306680e215dfe285fa220421141d38',1,'F_EMPTY(file_t *stream):&#160;file_IO.c'],['../d9/da2/file___i_o_8c.html#a4b306680e215dfe285fa220421141d38',1,'F_EMPTY(file_t *stream):&#160;file_IO.c']]],
+  ['f_5fopen_2',['f_open',['../d9/d7f/file___i_o_8h.html#a05d25080a4592a86386f6d0d3d48496c',1,'F_OPEN(const char *file_name, FileMode open_mode):&#160;file_IO.c'],['../d9/da2/file___i_o_8c.html#a05d25080a4592a86386f6d0d3d48496c',1,'F_OPEN(const char *file_name, FileMode open_mode):&#160;file_IO.c']]],
+  ['f_5fread_3',['f_read',['../d9/d7f/file___i_o_8h.html#a6d14febd2771048b4a06dd86ea17718d',1,'F_READ(void *destination, size_t size, size_t arr_length, file_t *file_stream):&#160;file_IO.c'],['../d9/da2/file___i_o_8c.html#a6d14febd2771048b4a06dd86ea17718d',1,'F_READ(void *destination, size_t size, size_t arr_length, file_t *file_stream):&#160;file_IO.c']]],
+  ['f_5fseek_4',['f_seek',['../d9/d7f/file___i_o_8h.html#a3ac9e7bef40307b69bdf5e0cb6904d83',1,'F_SEEK(file_t *stream, long int offset):&#160;file_IO.c'],['../d9/da2/file___i_o_8c.html#a3ac9e7bef40307b69bdf5e0cb6904d83',1,'F_SEEK(file_t *stream, long int offset):&#160;file_IO.c']]],
+  ['f_5fwrite_5',['f_write',['../d9/d7f/file___i_o_8h.html#a94d988ea4ce93357f56c0191584246a6',1,'F_WRITE(const void *write_ptr, size_t member_size, size_t member_count, file_t *file_ptr):&#160;file_IO.c'],['../d9/da2/file___i_o_8c.html#a94d988ea4ce93357f56c0191584246a6',1,'F_WRITE(const void *write_ptr, size_t member_size, size_t member_count, file_t *file_ptr):&#160;file_IO.c']]],
+  ['file_5finfo_6',['file_info',['../d0/d3e/namespacefile__stats.html#a5e923c6c785648e0a14fa3a4825120e9',1,'file_stats']]],
+  ['findlocalsum_7',['findlocalsum',['../d6/d9d/local__sum_8h.html#a1f0a6a3443597dab4881bb94fbc35f41',1,'FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x):&#160;local_sum.c'],['../db/d31/local__sum_8c.html#a1f0a6a3443597dab4881bb94fbc35f41',1,'FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x):&#160;local_sum.c']]]
+];

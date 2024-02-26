@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00080" xml:lang="en-US">
+<title>include/encoder/body.h File Reference</title>
+<indexterm><primary>include/encoder/body.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;inttypes.h&gt;<?linebreak?>#include &quot;math/math_functions.h&quot;<?linebreak?>#include &quot;dst/image.h&quot;<?linebreak?>#include &quot;constants/encoder_constants.h&quot;<?linebreak?>#include &quot;encoder/stream_encoder.h&quot;<?linebreak?></programlisting>Include dependency graph for body.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d53/a00081.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/d63/a00082.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_a00388">GolombInt</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_a00080_1a0bbf3cd743f1631577f828fa3d85ccf7">GAMMA_STAR</link>&#160;&#160;&#160;5</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_a00388">GolombInt</link> <link linkend="_a00080_1ab186a3d3c48b41b71d731fb1c209cae5">GolombInt</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00388">GolombInt</link> <link linkend="_a00080_1ad956397a2e57dfa4fe588564adef610f">GolombPowerTwo</link> (uint16_t j, uint16_t k)</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_a00080_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b">InitAccumulatorValue</link> (uint32_t z)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00080_1a38c7868c2a8819e7abc16148811f2e0b">EncodeBody</link> (<link linkend="_a00380">image</link> *hIMG, const char *file_name, const char *write_mode, int buffer_size)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00080_1a2689c4b3931025b79053532a5f1b0a85">K</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_a00080_1a706ff4e6123594c36b0894c248a25ff7">U_max</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_a00080_1a14069285fee7428b1929cb23a4b1561c">Gamma1</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_a00080_1a0bbf3cd743f1631577f828fa3d85ccf7"/><section>
+    <title>GAMMA_STAR</title>
+<indexterm><primary>GAMMA_STAR</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>GAMMA_STAR</secondary></indexterm>
+<para><computeroutput>#define GAMMA_STAR&#160;&#160;&#160;5</computeroutput></para><para>
+Definition at line <link linkend="_a00080_source_1l00036">36</link> of file <link linkend="_a00080_source">body.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_a00080_1ab186a3d3c48b41b71d731fb1c209cae5"/><section>
+    <title>GolombInt</title>
+<indexterm><primary>GolombInt</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>GolombInt</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_a00388">GolombInt</link> <link linkend="_a00388">GolombInt</link></computeroutput></para>
+<para>Package Struct for storing Compressed Data.</para>
+
+<para>data: 32 bit int storing varInt Data length: bit length of the value stored in data </para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00080_1a38c7868c2a8819e7abc16148811f2e0b"/><section>
+    <title>EncodeBody()</title>
+<indexterm><primary>EncodeBody</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>EncodeBody</secondary></indexterm>
+<para><computeroutput>int EncodeBody (<link linkend="_a00380">image</link> * hIMG, const char * file_name, const char * write_mode, int buffer_size)</computeroutput></para><para>
+Definition at line <link linkend="_a00272_source_1l00044">44</link> of file <link linkend="_a00272_source">encoder_body.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/dec/a00080_a38c7868c2a8819e7abc16148811f2e0b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/dec/a00080_a38c7868c2a8819e7abc16148811f2e0b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00080_1ad956397a2e57dfa4fe588564adef610f"/><section>
+    <title>GolombPowerTwo()</title>
+<indexterm><primary>GolombPowerTwo</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>GolombPowerTwo</secondary></indexterm>
+<para><computeroutput><link linkend="_a00388">GolombInt</link> GolombPowerTwo (uint16_t j, uint16_t k)</computeroutput></para><para>
+Definition at line <link linkend="_a00272_source_1l00009">9</link> of file <link linkend="_a00272_source">encoder_body.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/dec/a00080_ad956397a2e57dfa4fe588564adef610f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00080_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b"/><section>
+    <title>InitAccumulatorValue()</title>
+<indexterm><primary>InitAccumulatorValue</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>InitAccumulatorValue</secondary></indexterm>
+<para><computeroutput>unsigned int InitAccumulatorValue (uint32_t z)</computeroutput></para><para>
+Definition at line <link linkend="_a00272_source_1l00038">38</link> of file <link linkend="_a00272_source">encoder_body.c</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00080_1a14069285fee7428b1929cb23a4b1561c"/><section>
+    <title>Gamma1</title>
+<indexterm><primary>Gamma1</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>Gamma1</secondary></indexterm>
+<para><computeroutput>int Gamma1<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_a00272_source_1l00007">7</link> of file <link linkend="_a00272_source">encoder_body.c</link>.</para>
+</section>
+<anchor xml:id="_a00080_1a2689c4b3931025b79053532a5f1b0a85"/><section>
+    <title>K</title>
+<indexterm><primary>K</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>K</secondary></indexterm>
+<para><computeroutput>int K<computeroutput>[extern]</computeroutput></computeroutput></para>
+<para><link linkend="_a00080">body.h</link> <formalpara><title>Author</title>
+
+<para>@Kevin-Caldwell</para>
+</formalpara>
+Helper Functions for Encoding the body of the Compressed Image</para>
+
+<para>Features Golomb Power-of-Two Accumulator Value Encoding the Body of the Compressed file</para>
+
+<para>Dependencies <link linkend="_a00152">math_functions.h</link> <link linkend="_a00113">image.h</link> <link linkend="_a00140">encoder_constants.h</link> <link linkend="_a00086">stream_encoder.h</link></para>
+
+<para>TODO Validate Results </para>
+<para>
+Definition at line <link linkend="_a00272_source_1l00005">5</link> of file <link linkend="_a00272_source">encoder_body.c</link>.</para>
+</section>
+<anchor xml:id="_a00080_1a706ff4e6123594c36b0894c248a25ff7"/><section>
+    <title>U_max</title>
+<indexterm><primary>U_max</primary><secondary>body.h</secondary></indexterm>
+<indexterm><primary>body.h</primary><secondary>U_max</secondary></indexterm>
+<para><computeroutput>unsigned int U_max<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_a00272_source_1l00006">6</link> of file <link linkend="_a00272_source">encoder_body.c</link>.</para>
+</section>
+</section>
+</section>

@@ -1,3 +1,10 @@
+/**
+ * quantizer.h
+ * @author @Kevin-Caldwell
+ * 
+ * Functions For Quantizer 
+*/
+
 #ifndef QUANTIZER_H
 #define QUANTIZER_H
 

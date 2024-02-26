@@ -47,6 +47,21 @@ typedef UHI image3;
 
 #else
 
+/**
+ * Image Stuct for storing all the contexts of a hyperspectral 
+ * image in a linear array. 
+ * 
+ * The size member is a dim3 which contains the dimensions of 
+ * the image in the format: {Nx, Ny, Nz}
+ * The data member is a dynamically allocated array of PIXELs
+ * arranged according to the MAP3_1 Macro defined in image.h
+ * 
+ * It has only been created as a testing feature. The entire 
+ * hyperspectral image cannot be stored in RAM on an embedded
+ * device such as the STM32H7. 
+ * The UHI file structure replaces this struct when the 
+ * MEMORY_SAVING feature is enabled through CMake. 
+*/
 typedef struct image{
     dim3 size;
     PIXEL* data;
@@ -63,7 +78,9 @@ void SetPixel(image* hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 
 int Image_Equals(image* img1, image* img2);
 
-
+/**
+ * Unused Struct for 2-D images.
+*/
 typedef struct image2{
     dim2 size;
     PIXEL* data;

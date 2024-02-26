@@ -1,0 +1,71 @@
+.TH "python/prepare_hImage.py" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+python/prepare_hImage.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBprepare_hImage\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReadCSV\fP (filename)"
+.br
+.ti -1c
+.RI "\fBwavelength_to_rgb\fP (wavelength, gamma=0\&.8)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBCacheFiles\fP = [[]]"
+.br
+.ti -1c
+.RI "\fBdata\fP = \fBReadCSV\fP(f'data/test\-images/VORONOI_640x512x640_1000\&.csv')"
+.br
+.ti -1c
+.RI "\fBNx\fP"
+.br
+.ti -1c
+.RI "\fBNy\fP"
+.br
+.ti -1c
+.RI "\fBNz\fP"
+.br
+.ti -1c
+.RI "\fBnumbers\fP = np\&.array(\fBdata\fP, dtype=int)"
+.br
+.ti -1c
+.RI "\fBminimum\fP = numbers\&.min()"
+.br
+.ti -1c
+.RI "\fBmaximum\fP = numbers\&.max()"
+.br
+.ti -1c
+.RI "int \fBnumber_range\fP = \fBmaximum\fP \- \fBminimum\fP + 1"
+.br
+.ti -1c
+.RI "\fBimg\fP = Image\&.new( 'RGB', (\fBNx\fP,\fBNy\fP), 'black')"
+.br
+.ti -1c
+.RI "\fBpixels\fP = img\&.load()"
+.br
+.ti -1c
+.RI "tuple \fBv\fP = (\fBnumbers\fP[i, j, z] \- \fBminimum\fP) / \fBnumber_range\fP * 370 + 380"
+.br
+.ti -1c
+.RI "\fBd\fP = \fBwavelength_to_rgb\fP(int(\fBv\fP))"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

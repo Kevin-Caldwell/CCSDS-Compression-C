@@ -1,0 +1,56 @@
+\doxysection{image Struct Reference}
+\hypertarget{structimage}{}\label{structimage}\index{image@{image}}
+
+
+{\ttfamily \#include $<$image.\+h$>$}
+
+
+
+Collaboration diagram for image\+:
+% FIG 0
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{structimage_a92c57811a03d78e56a6e8592f96a41ad}{size}}
+\item 
+\mbox{\hyperlink{math__functions_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structimage_a53d0e0aad601020b80d8266c2d9f8462}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Image Stuct for storing all the contexts of a hyperspectral image in a linear array.
+
+The size member is a \doxylink{structdim3}{dim3} which contains the dimensions of the image in the format\+: \{Nx, Ny, Nz\} The data member is a dynamically allocated array of PIXELs arranged according to the MAP3\+\_\+1 Macro defined in \doxylink{image_8h}{image.\+h}
+
+It has only been created as a testing feature. The entire hyperspectral image cannot be stored in RAM on an embedded device such as the STM32\+H7. The UHI file structure replaces this struct when the MEMORY\+\_\+\+SAVING feature is enabled through CMake. 
+
+Definition at line \mbox{\hyperlink{image_8h_source_l00065}{65}} of file \mbox{\hyperlink{image_8h_source}{image.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structimage_a53d0e0aad601020b80d8266c2d9f8462}\label{structimage_a53d0e0aad601020b80d8266c2d9f8462} 
+\index{image@{image}!data@{data}}
+\index{data@{data}!image@{image}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{math__functions_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\texorpdfstring{$\ast$}{*} data}
+
+
+
+Definition at line \mbox{\hyperlink{image_8h_source_l00067}{67}} of file \mbox{\hyperlink{image_8h_source}{image.\+h}}.
+
+\Hypertarget{structimage_a92c57811a03d78e56a6e8592f96a41ad}\label{structimage_a92c57811a03d78e56a6e8592f96a41ad} 
+\index{image@{image}!size@{size}}
+\index{size@{size}!image@{image}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdim3}{dim3}} size}
+
+
+
+Definition at line \mbox{\hyperlink{image_8h_source_l00066}{66}} of file \mbox{\hyperlink{image_8h_source}{image.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/dst/\mbox{\hyperlink{image_8h}{image.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_hash_table" xml:lang="en-US">
+<title>HashTable Struct Reference</title>
+<indexterm><primary>HashTable</primary></indexterm>
+<para>
+<computeroutput>#include &lt;hash_table.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_struct_hash_table_1aa429745e164770f5a9545fd31ba633b1">keys</link> [<link linkend="_hash__table_8h_1ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</link>][<link linkend="_hash__table_8h_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>]</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d">data</link> [<link linkend="_hash__table_8h_1ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</link>]</para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_hash_table_1afed088663f8704004425cdae2120b9b3">len</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_hash__table_8h_source_1l00036">36</link> of file <link linkend="_hash__table_8h_source">hash_table.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>HashTable</secondary></indexterm>
+<indexterm><primary>HashTable</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>int32_t data[<link linkend="_hash__table_8h_1ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</link>]</computeroutput></para><para>
+Definition at line <link linkend="_hash__table_8h_source_1l00039">39</link> of file <link linkend="_hash__table_8h_source">hash_table.h</link>.</para>
+</section>
+<anchor xml:id="_struct_hash_table_1aa429745e164770f5a9545fd31ba633b1"/><section>
+    <title>keys</title>
+<indexterm><primary>keys</primary><secondary>HashTable</secondary></indexterm>
+<indexterm><primary>HashTable</primary><secondary>keys</secondary></indexterm>
+<para><computeroutput>char keys[<link linkend="_hash__table_8h_1ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</link>][<link linkend="_hash__table_8h_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>]</computeroutput></para><para>
+Definition at line <link linkend="_hash__table_8h_source_1l00038">38</link> of file <link linkend="_hash__table_8h_source">hash_table.h</link>.</para>
+</section>
+<anchor xml:id="_struct_hash_table_1afed088663f8704004425cdae2120b9b3"/><section>
+    <title>len</title>
+<indexterm><primary>len</primary><secondary>HashTable</secondary></indexterm>
+<indexterm><primary>HashTable</primary><secondary>len</secondary></indexterm>
+<para><computeroutput>int len</computeroutput></para><para>
+Definition at line <link linkend="_hash__table_8h_source_1l00040">40</link> of file <link linkend="_hash__table_8h_source">hash_table.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/dst/<link linkend="_hash__table_8h">hash_table.h</link></section>
+</section>

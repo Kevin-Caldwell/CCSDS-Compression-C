@@ -1,0 +1,139 @@
+.TH "include/constants/global_constants.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/constants/global_constants.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'constants/load_constants\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLOBAL_CONSTANTS_LOCATION\fP   '/global\&.CONST'"
+.br
+.ti -1c
+.RI "#define \fBPREDICTOR_CONSTANTS_LOCATION\fP   '\&.\&./data/constants/predictor\&.CONST'"
+.br
+.ti -1c
+.RI "#define \fBENCODER_CONSTANTS_LOCATION\fP   '/encoder\&.CONST'"
+.br
+.ti -1c
+.RI "#define \fBWIN_GCC\fP"
+.br
+.ti -1c
+.RI "#define \fBLOG\fP   1"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBERROR_CODES\fP \fBERROR_CODES\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBERROR_CODES\fP { \fBRES_OK\fP = 0, \fBFILE_ACCESS_ERROR\fP, \fBFILE_READ_ERROR\fP, \fBFILE_WRITE_ERROR\fP, \fBMEM_ALLOC_ERROR\fP }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBHashTable\fP \fBpredictor_constants\fP"
+.br
+.ti -1c
+.RI "\fBHashTable\fP \fBencoder_constants\fP"
+.br
+.ti -1c
+.RI "char \fBDEBUG\fP"
+.br
+.ti -1c
+.RI "char \fBlog_file\fP []"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ENCODER_CONSTANTS_LOCATION   '/encoder\&.CONST'"
+
+.PP
+Definition at line \fB27\fP of file \fBglobal_constants\&.h\fP\&.
+.SS "#define GLOBAL_CONSTANTS_LOCATION   '/global\&.CONST'"
+\fBglobal_constants\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Contains Application-Level Constants
+.PP
+Uses Log Files Constant Source Files Error Enumerations
+.PP
+Dependencies Load Constants
+.PP
+TODO Global Constants Consolidate all Constants under respective files 
+.PP
+Definition at line \fB25\fP of file \fBglobal_constants\&.h\fP\&.
+.SS "#define LOG   1"
+
+.PP
+Definition at line \fB39\fP of file \fBglobal_constants\&.h\fP\&.
+.SS "#define PREDICTOR_CONSTANTS_LOCATION   '\&.\&./data/constants/predictor\&.CONST'"
+
+.PP
+Definition at line \fB26\fP of file \fBglobal_constants\&.h\fP\&.
+.SS "#define WIN_GCC"
+
+.PP
+Definition at line \fB37\fP of file \fBglobal_constants\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBERROR_CODES\fP \fBERROR_CODES\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBERROR_CODES\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRES_OK \fP\fP
+.TP
+\fB\fIFILE_ACCESS_ERROR \fP\fP
+.TP
+\fB\fIFILE_READ_ERROR \fP\fP
+.TP
+\fB\fIFILE_WRITE_ERROR \fP\fP
+.TP
+\fB\fIMEM_ALLOC_ERROR \fP\fP
+.PP
+Definition at line \fB41\fP of file \fBglobal_constants\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char DEBUG\fC [extern]\fP"
+
+.PP
+Definition at line \fB14\fP of file \fBcompressor\&.c\fP\&.
+.SS "\fBHashTable\fP encoder_constants\fC [extern]\fP"
+
+.PP
+Definition at line \fB56\fP of file \fBconstants\&.c\fP\&.
+.SS "char log_file[]\fC [extern]\fP"
+
+.PP
+Definition at line \fB6\fP of file \fBlogs\&.c\fP\&.
+.SS "\fBHashTable\fP predictor_constants\fC [extern]\fP"
+
+.PP
+Definition at line \fB55\fP of file \fBconstants\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

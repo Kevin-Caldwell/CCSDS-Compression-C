@@ -1,0 +1,149 @@
+\doxysection{include/encoder/body.h File Reference}
+\hypertarget{a00080}{}\label{a00080}\index{include/encoder/body.h@{include/encoder/body.h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include "{}constants/encoder\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}encoder/stream\+\_\+encoder.\+h"{}}\newline
+Include dependency graph for body.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a00388}{Golomb\+Int}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00080_a0bbf3cd743f1631577f828fa3d85ccf7}{GAMMA\+\_\+\+STAR}}~5
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{a00388}{Golomb\+Int}} \mbox{\hyperlink{a00080_ab186a3d3c48b41b71d731fb1c209cae5}{Golomb\+Int}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00388}{Golomb\+Int}} \mbox{\hyperlink{a00080_ad956397a2e57dfa4fe588564adef610f}{Golomb\+Power\+Two}} (uint16\+\_\+t j, uint16\+\_\+t k)
+\item 
+unsigned int \mbox{\hyperlink{a00080_a8efd6761bcd40cdfb8e0ca4e1f39ef6b}{Init\+Accumulator\+Value}} (uint32\+\_\+t z)
+\item 
+int \mbox{\hyperlink{a00080_a38c7868c2a8819e7abc16148811f2e0b}{Encode\+Body}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, const char \texorpdfstring{$\ast$}{*}file\+\_\+name, const char \texorpdfstring{$\ast$}{*}write\+\_\+mode, int buffer\+\_\+size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00080_a2689c4b3931025b79053532a5f1b0a85}{K}}
+\item 
+unsigned int \mbox{\hyperlink{a00080_a706ff4e6123594c36b0894c248a25ff7}{U\+\_\+max}}
+\item 
+int \mbox{\hyperlink{a00080_a14069285fee7428b1929cb23a4b1561c}{Gamma1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{a00080_a0bbf3cd743f1631577f828fa3d85ccf7}\label{a00080_a0bbf3cd743f1631577f828fa3d85ccf7} 
+\index{body.h@{body.h}!GAMMA\_STAR@{GAMMA\_STAR}}
+\index{GAMMA\_STAR@{GAMMA\_STAR}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{GAMMA\_STAR}{GAMMA\_STAR}}
+{\footnotesize\ttfamily \#define GAMMA\+\_\+\+STAR~5}
+
+
+
+Definition at line \mbox{\hyperlink{a00080_source_l00036}{36}} of file \mbox{\hyperlink{a00080_source}{body.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{a00080_ab186a3d3c48b41b71d731fb1c209cae5}\label{a00080_ab186a3d3c48b41b71d731fb1c209cae5} 
+\index{body.h@{body.h}!GolombInt@{GolombInt}}
+\index{GolombInt@{GolombInt}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{GolombInt}{GolombInt}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a00388}{Golomb\+Int}} \mbox{\hyperlink{a00388}{Golomb\+Int}}}
+
+Package Struct for storing Compressed Data.
+
+data\+: 32 bit int storing var\+Int Data length\+: bit length of the value stored in data 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00080_a38c7868c2a8819e7abc16148811f2e0b}\label{a00080_a38c7868c2a8819e7abc16148811f2e0b} 
+\index{body.h@{body.h}!EncodeBody@{EncodeBody}}
+\index{EncodeBody@{EncodeBody}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{EncodeBody()}{EncodeBody()}}
+{\footnotesize\ttfamily int Encode\+Body (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{write\+\_\+mode,  }\item[{int}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00272_source_l00044}{44}} of file \mbox{\hyperlink{a00272_source}{encoder\+\_\+body.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{a00080_ad956397a2e57dfa4fe588564adef610f}\label{a00080_ad956397a2e57dfa4fe588564adef610f} 
+\index{body.h@{body.h}!GolombPowerTwo@{GolombPowerTwo}}
+\index{GolombPowerTwo@{GolombPowerTwo}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{GolombPowerTwo()}{GolombPowerTwo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00388}{Golomb\+Int}} Golomb\+Power\+Two (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{j,  }\item[{uint16\+\_\+t}]{k }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00272_source_l00009}{9}} of file \mbox{\hyperlink{a00272_source}{encoder\+\_\+body.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{a00080_a8efd6761bcd40cdfb8e0ca4e1f39ef6b}\label{a00080_a8efd6761bcd40cdfb8e0ca4e1f39ef6b} 
+\index{body.h@{body.h}!InitAccumulatorValue@{InitAccumulatorValue}}
+\index{InitAccumulatorValue@{InitAccumulatorValue}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{InitAccumulatorValue()}{InitAccumulatorValue()}}
+{\footnotesize\ttfamily unsigned int Init\+Accumulator\+Value (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00272_source_l00038}{38}} of file \mbox{\hyperlink{a00272_source}{encoder\+\_\+body.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{a00080_a14069285fee7428b1929cb23a4b1561c}\label{a00080_a14069285fee7428b1929cb23a4b1561c} 
+\index{body.h@{body.h}!Gamma1@{Gamma1}}
+\index{Gamma1@{Gamma1}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{Gamma1}{Gamma1}}
+{\footnotesize\ttfamily int Gamma1\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{a00272_source_l00007}{7}} of file \mbox{\hyperlink{a00272_source}{encoder\+\_\+body.\+c}}.
+
+\Hypertarget{a00080_a2689c4b3931025b79053532a5f1b0a85}\label{a00080_a2689c4b3931025b79053532a5f1b0a85} 
+\index{body.h@{body.h}!K@{K}}
+\index{K@{K}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily int K\hspace{0.3cm}{\ttfamily [extern]}}
+
+\doxylink{a00080}{body.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Helper Functions for Encoding the body of the Compressed Image
+
+Features Golomb Power-\/of-\/\+Two Accumulator Value Encoding the Body of the Compressed file
+
+Dependencies \doxylink{a00152}{math\+\_\+functions.\+h} \doxylink{a00113}{image.\+h} \doxylink{a00140}{encoder\+\_\+constants.\+h} \doxylink{a00086}{stream\+\_\+encoder.\+h}
+
+TODO Validate Results 
+
+Definition at line \mbox{\hyperlink{a00272_source_l00005}{5}} of file \mbox{\hyperlink{a00272_source}{encoder\+\_\+body.\+c}}.
+
+\Hypertarget{a00080_a706ff4e6123594c36b0894c248a25ff7}\label{a00080_a706ff4e6123594c36b0894c248a25ff7} 
+\index{body.h@{body.h}!U\_max@{U\_max}}
+\index{U\_max@{U\_max}!body.h@{body.h}}
+\doxysubsubsection{\texorpdfstring{U\_max}{U\_max}}
+{\footnotesize\ttfamily unsigned int U\+\_\+max\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{a00272_source_l00006}{6}} of file \mbox{\hyperlink{a00272_source}{encoder\+\_\+body.\+c}}.
+

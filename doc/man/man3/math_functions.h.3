@@ -1,0 +1,223 @@
+.TH "include/math/math_functions.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/math/math_functions.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBdim3\fP"
+.br
+.ti -1c
+.RI "struct \fBdim2\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBNULL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBCLIP\fP(x,  min_val,  max_val)   ((x) < (min_val) ? (min_val) : ((x) > (max_val) ? (max_val) : (x)))"
+.br
+.ti -1c
+.RI "#define \fBINSIDE_INTERVAL\fP(x,  min,  max)   ( min < x && x < max )"
+.br
+.ti -1c
+.RI "#define \fBOUTSIDE_INTERVAL\fP(x,  min,  max)   ( min > x || x > max )"
+.br
+.ti -1c
+.RI "#define \fBSIGN\fP(x)   x < 0 ? \-1 : (x > 0 ? 1 : 0)"
+.br
+.ti -1c
+.RI "#define \fBSIGN_P\fP(x)   (x < 0 ? \-1 : 1)"
+.br
+.ti -1c
+.RI "#define \fBMOD\fP(x,  R)   ((x + \fBBPOW\fP(R \- 1)) % \fBBPOW\fP(R) \- \fBBPOW\fP(R \- 1))"
+.br
+.ti -1c
+.RI "#define \fBMAX\fP(a,  b)   (a > b ? a : b)"
+.br
+.ti -1c
+.RI "#define \fBMIN\fP(a,  b)   (a < b ? a : b)"
+.br
+.ti -1c
+.RI "#define \fBBPOW\fP(x)   (1 << (x))"
+.br
+.ti -1c
+.RI "#define \fBSQ\fP(x)   ((x)*(x))"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef size_t \fBDIM\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBUINT\fP"
+.br
+.ti -1c
+.RI "typedef uint16_t \fBPIXEL\fP"
+.br
+.ti -1c
+.RI "typedef uint16_t \fBINDEX\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBdim3\fP \fBdim3\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBdim2\fP \fBdim2\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBRetVal\fP { \fBOK\fP = 0, \fBERROR\fP }"
+.br
+.RI "Error Codes: TODO\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUINT\fP \fBEuclidian2\fP (\fBdim2\fP pt1, \fBdim2\fP pt2)"
+.br
+.ti -1c
+.RI "\fBUINT\fP \fBEuclidian3\fP (\fBdim3\fP pt1, \fBdim3\fP pt2)"
+.br
+.ti -1c
+.RI "\fBUINT\fP \fBManhattan2\fP (\fBdim2\fP pt1, \fBdim2\fP pt2)"
+.br
+.ti -1c
+.RI "\fBUINT\fP \fBManhattan3\fP (\fBdim3\fP pt1, \fBdim3\fP pt2)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BPOW(x)   (1 << (x))"
+
+.PP
+Definition at line \fB34\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define CLIP(x, min_val, max_val)   ((x) < (min_val) ? (min_val) : ((x) > (max_val) ? (max_val) : (x)))"
+
+.PP
+Definition at line \fB21\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define INSIDE_INTERVAL(x, min, max)   ( min < x && x < max )"
+
+.PP
+Definition at line \fB23\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define MAX(a, b)   (a > b ? a : b)"
+
+.PP
+Definition at line \fB31\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define MIN(a, b)   (a < b ? a : b)"
+
+.PP
+Definition at line \fB32\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define MOD(x, R)   ((x + \fBBPOW\fP(R \- 1)) % \fBBPOW\fP(R) \- \fBBPOW\fP(R \- 1))"
+
+.PP
+Definition at line \fB29\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define NULL   0"
+\fBmath_functions\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Mathematical Helper Functions for use throughout code\&. 
+.PP
+Definition at line \fB17\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define OUTSIDE_INTERVAL(x, min, max)   ( min > x || x > max )"
+
+.PP
+Definition at line \fB24\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define SIGN(x)   x < 0 ? \-1 : (x > 0 ? 1 : 0)"
+
+.PP
+Definition at line \fB26\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define SIGN_P(x)   (x < 0 ? \-1 : 1)"
+
+.PP
+Definition at line \fB27\fP of file \fBmath_functions\&.h\fP\&.
+.SS "#define SQ(x)   ((x)*(x))"
+
+.PP
+Definition at line \fB36\fP of file \fBmath_functions\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef size_t \fBDIM\fP"
+
+.PP
+Definition at line \fB38\fP of file \fBmath_functions\&.h\fP\&.
+.SS "typedef struct \fBdim2\fP \fBdim2\fP"
+
+.SS "typedef struct \fBdim3\fP \fBdim3\fP"
+3D Dimension Struct, used to describe size and 3D-Indicies\&.
+.PP
+Spatial Dimensions: x, y Spectral Band: z 
+.SS "typedef uint16_t \fBINDEX\fP"
+
+.PP
+Definition at line \fB41\fP of file \fBmath_functions\&.h\fP\&.
+.SS "typedef uint16_t \fBPIXEL\fP"
+
+.PP
+Definition at line \fB40\fP of file \fBmath_functions\&.h\fP\&.
+.SS "typedef unsigned int \fBUINT\fP"
+
+.PP
+Definition at line \fB39\fP of file \fBmath_functions\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBRetVal\fP"
+
+.PP
+Error Codes: TODO\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOK \fP\fP
+.TP
+\fB\fIERROR \fP\fP
+.PP
+Definition at line \fB44\fP of file \fBmath_functions\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBUINT\fP Euclidian2 (\fBdim2\fP pt1, \fBdim2\fP pt2)"
+
+.PP
+Definition at line \fB3\fP of file \fBmath_functions\&.c\fP\&.
+.SS "\fBUINT\fP Euclidian3 (\fBdim3\fP pt1, \fBdim3\fP pt2)"
+
+.PP
+Definition at line \fB7\fP of file \fBmath_functions\&.c\fP\&.
+.SS "\fBUINT\fP Manhattan2 (\fBdim2\fP pt1, \fBdim2\fP pt2)"
+
+.PP
+Definition at line \fB11\fP of file \fBmath_functions\&.c\fP\&.
+.SS "\fBUINT\fP Manhattan3 (\fBdim3\fP pt1, \fBdim3\fP pt2)"
+
+.PP
+Definition at line \fB15\fP of file \fBmath_functions\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

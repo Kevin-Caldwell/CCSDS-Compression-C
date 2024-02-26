@@ -1,0 +1,54 @@
+.TH "include/encoder/header.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/encoder/header.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include 'constants/constants\&.h'\fP
+.br
+\fC#include 'constants/encoder_constants\&.h'\fP
+.br
+\fC#include 'encoder/encoder_helper_functions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPrepareImageMetadata\fP (uint8_t *essential)"
+.br
+.ti -1c
+.RI "void \fBPreparePredictorMetadata\fP (uint8_t *predicted_metadata)"
+.br
+.ti -1c
+.RI "void \fBPrepareSampleAdaptiveEntropyCoder\fP (uint8_t *entropy_coder_metadata)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void PrepareImageMetadata (uint8_t * essential)"
+\fBheader\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+File Contains Functions for Preparing Image, Predictor, Encoder and Entropy coder Header Sections of the Compressed Image\&. 
+.PP
+Definition at line \fB5\fP of file \fBheader\&.c\fP\&.
+.SS "void PreparePredictorMetadata (uint8_t * predicted_metadata)"
+
+.PP
+Definition at line \fB56\fP of file \fBheader\&.c\fP\&.
+.SS "void PrepareSampleAdaptiveEntropyCoder (uint8_t * entropy_coder_metadata)"
+
+.PP
+Definition at line \fB98\fP of file \fBheader\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

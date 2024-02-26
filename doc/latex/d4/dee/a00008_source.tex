@@ -1,0 +1,147 @@
+\doxysection{prepare\+\_\+h\+Image.\+py}
+\hypertarget{a00008_source}{}\label{a00008_source}\index{python/prepare\_hImage.py@{python/prepare\_hImage.py}}
+\mbox{\hyperlink{a00008}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00001}\mbox{\hyperlink{a00366}{00001}}\ \textcolor{keyword}{from}\ PIL\ \textcolor{keyword}{import}\ Image}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00002}00002\ \textcolor{keyword}{import}\ csv}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00003}00003\ \textcolor{keyword}{import}\ numpy\ \textcolor{keyword}{as}\ np}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00004}00004\ \textcolor{keyword}{import}\ math}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00005}00005\ \textcolor{keyword}{import}\ pandas\ \textcolor{keyword}{as}\ pd}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00006}00006\ \textcolor{keyword}{import}\ sys}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00009}\mbox{\hyperlink{a00366_a84c47e6bbcef028eda4c81cfa1b935ff}{00009}}\ \textcolor{keyword}{def\ }ReadCSV(filename):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00010}00010\ \ \ \ \ \ \ \ \ fulltxt\ =\ open(filename,\ \textcolor{stringliteral}{'r'}).read()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00011}00011\ \ \ \ \ \ \ \ \ data\ =\ []}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00012}00012\ \ \ \ \ \ \ \ \ num\ =\ 0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(len(fulltxt)):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ str(fulltxt[i]).isnumeric():}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ *=\ 10}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ +=\ int(fulltxt[i])}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data.append(num)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ =\ 0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ if(i\ \%\ (len(fulltxt)\ //\ 100)\ ==\ 0):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{"{}Reading...\ \{int(i/len(fulltxt)*100)\}\%"{}},\ end=\textcolor{stringliteral}{"{}\(\backslash\)r"{}})}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00024}00024\ \ \ \ \ \ \ \ \ del\ fulltxt}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00025}00025\ \ \ \ \ \ \ \ \ del\ num}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00027}00027\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Finished\ Reading..."{}})}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ data}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00031}\mbox{\hyperlink{a00366_a74f2b862a36db3cde75f1cc94d388c81}{00031}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00366_a74f2b862a36db3cde75f1cc94d388c81}{wavelength\_to\_rgb}}(wavelength,\ gamma=0.8):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00033}00033\ \ \ \ \ \textcolor{stringliteral}{'''This\ converts\ a\ given\ wavelength\ of\ light\ to\ an\ }}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00034}00034\ \textcolor{stringliteral}{\ \ \ \ approximate\ RGB\ color\ value.\ The\ wavelength\ must\ be\ given}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00035}00035\ \textcolor{stringliteral}{\ \ \ \ in\ nanometers\ in\ the\ range\ from\ 380\ nm\ through\ 750\ nm}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00036}00036\ \textcolor{stringliteral}{\ \ \ \ (789\ THz\ through\ 400\ THz).}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00037}00037\ \textcolor{stringliteral}{\ \ \ \ Based\ on\ code\ by\ Dan\ Bruton}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00038}00038\ \textcolor{stringliteral}{\ \ \ \ http://www.physics.sfasu.edu/astro/color/spectra.html}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00039}00039\ \textcolor{stringliteral}{\ \ \ \ '''}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00041}00041\ \ \ \ \ wavelength\ =\ float(wavelength)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}\ wavelength\ >=\ 380\ \textcolor{keywordflow}{and}\ wavelength\ <=\ 440:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00043}00043\ \ \ \ \ \ \ \ \ attenuation\ =\ 0.3\ +\ 0.7\ *\ (wavelength\ -\/\ 380)\ /\ (440\ -\/\ 380)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00044}00044\ \ \ \ \ \ \ \ \ R\ =\ ((-\/(wavelength\ -\/\ 440)\ /\ (440\ -\/\ 380))\ *\ attenuation)\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00045}00045\ \ \ \ \ \ \ \ \ G\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00046}00046\ \ \ \ \ \ \ \ \ B\ =\ (1.0\ *\ attenuation)\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{elif}\ wavelength\ >=\ 440\ \textcolor{keywordflow}{and}\ wavelength\ <=\ 490:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00048}00048\ \ \ \ \ \ \ \ \ R\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00049}00049\ \ \ \ \ \ \ \ \ G\ =\ ((wavelength\ -\/\ 440)\ /\ (490\ -\/\ 440))\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00050}00050\ \ \ \ \ \ \ \ \ B\ =\ 1.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{elif}\ wavelength\ >=\ 490\ \textcolor{keywordflow}{and}\ wavelength\ <=\ 510:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00052}00052\ \ \ \ \ \ \ \ \ R\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00053}00053\ \ \ \ \ \ \ \ \ G\ =\ 1.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00054}00054\ \ \ \ \ \ \ \ \ B\ =\ (-\/(wavelength\ -\/\ 510)\ /\ (510\ -\/\ 490))\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{elif}\ wavelength\ >=\ 510\ \textcolor{keywordflow}{and}\ wavelength\ <=\ 580:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00056}00056\ \ \ \ \ \ \ \ \ R\ =\ ((wavelength\ -\/\ 510)\ /\ (580\ -\/\ 510))\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00057}00057\ \ \ \ \ \ \ \ \ G\ =\ 1.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00058}00058\ \ \ \ \ \ \ \ \ B\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{elif}\ wavelength\ >=\ 580\ \textcolor{keywordflow}{and}\ wavelength\ <=\ 645:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00060}00060\ \ \ \ \ \ \ \ \ R\ =\ 1.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00061}00061\ \ \ \ \ \ \ \ \ G\ =\ (-\/(wavelength\ -\/\ 645)\ /\ (645\ -\/\ 580))\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00062}00062\ \ \ \ \ \ \ \ \ B\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{elif}\ wavelength\ >=\ 645\ \textcolor{keywordflow}{and}\ wavelength\ <=\ 750:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00064}00064\ \ \ \ \ \ \ \ \ attenuation\ =\ 0.3\ +\ 0.7\ *\ (750\ -\/\ wavelength)\ /\ (750\ -\/\ 645)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00065}00065\ \ \ \ \ \ \ \ \ R\ =\ (1.0\ *\ attenuation)\ **\ gamma}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00066}00066\ \ \ \ \ \ \ \ \ G\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00067}00067\ \ \ \ \ \ \ \ \ B\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00069}00069\ \ \ \ \ \ \ \ \ R\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00070}00070\ \ \ \ \ \ \ \ \ G\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00071}00071\ \ \ \ \ \ \ \ \ B\ =\ 0.0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00072}00072\ \ \ \ \ R\ *=\ 255}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00073}00073\ \ \ \ \ G\ *=\ 255}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00074}00074\ \ \ \ \ B\ *=\ 255}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ (int(R),\ int(G),\ int(B))}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00077}00077\ \textcolor{comment}{\#\ CacheFiles\ =\ ["{}raw"{},}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00078}00078\ \textcolor{comment}{\#\ \ \ "{}local-\/sums"{},}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00079}00079\ \textcolor{comment}{\#\ \ \ \ "{}sample-\/representatives"{},}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00080}00080\ \textcolor{comment}{\#\ \ \ \ "{}predicted\_sample"{},}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00081}00081\ \textcolor{comment}{\#\ \ \ \ "{}central\_local\_difference"{},}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00082}00082\ \textcolor{comment}{\#\ \ \ \ "{}predicted\_central\_local\_difference"{},\ }}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00083}00083\ \textcolor{comment}{\#\ \ \ \ "{}clipped\_quanitzer\_bin\_center"{},}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00084}00084\ \textcolor{comment}{\#\ \ \ \ "{}predictor"{},\ "{}quantizer\_index"{}]}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00086}\mbox{\hyperlink{a00366_a7e69bd3f9400dc258e83fe7ecab1e317}{00086}}\ CacheFiles\ =\ [[]]}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00088}00088\ \textcolor{comment}{\#file\_index\ =\ 7}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00090}00090\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{for}\ file\_index\ \textcolor{keywordflow}{in}\ range(len(CacheFiles)):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00092}00092\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Starting\ Display\ Image.."{}})\ \ \ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00094}\mbox{\hyperlink{a00366_a511ae0b1c13f95e5f08f1a0dd3da3d93}{00094}}\ \ \ \ \ \ \ \ \ data\ =\ ReadCSV(f\textcolor{stringliteral}{"{}data/test-\/images/VORONOI\_640x512x640\_1000.csv"{}})}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print(data)}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00097}\mbox{\hyperlink{a00366_a5c7e4f16622600cb52580b191565e2dd}{00097}}\ \ \ \ \ \ \ \ \ Nx,Ny,Nz\ =\ data[0],\ data[1],\ data[2]}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00099}00099\ \ \ \ \ \ \ \ \ del\ data[0]}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00100}00100\ \ \ \ \ \ \ \ \ del\ data[0]}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00101}00101\ \ \ \ \ \ \ \ \ del\ data[0]}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00104}\mbox{\hyperlink{a00366_adbdde44f981e5f6df2c75332ea3f9220}{00104}}\ \ \ \ \ \ \ \ \ numbers\ =\ np.array(data,\ dtype=int)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00105}00105\ \ \ \ \ \ \ \ \ del\ data}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00106}00106\ \ \ \ \ \ \ \ \ numbers.resize((Nx,Ny,Nz))}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00109}00109\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Table\ Created"{}})}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00111}\mbox{\hyperlink{a00366_a0ad48c3f647380a8559a3d2a284376d8}{00111}}\ \ \ \ \ \ \ \ \ minimum\ =\ numbers.min()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00112}\mbox{\hyperlink{a00366_a34ddfe7666109e00419326a0334cea67}{00112}}\ \ \ \ \ \ \ \ \ maximum\ =\ numbers.max()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00113}\mbox{\hyperlink{a00366_a68c1363ccdf28598f4504e4b6fd6288a}{00113}}\ \ \ \ \ \ \ \ \ number\_range\ =\ maximum\ -\/\ minimum\ +\ 1}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00115}00115\ \ \ \ \ \ \ \ \ print(maximum)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00116}00116\ \ \ \ \ \ \ \ \ print(minimum)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00119}00119\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Prepared\ Data.."{}})}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ z\ \textcolor{keywordflow}{in}\ range(0,\ Nz,\ 1):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00123}\mbox{\hyperlink{a00366_a86d0d51ceb4bc3bd26707520f257a5a4}{00123}}\ \ \ \ \ \ \ \ \ \ \ \ \ img\ =\ Image.new(\ \textcolor{stringliteral}{'RGB'},\ (Nx,Ny),\ \textcolor{stringliteral}{"{}black"{}})\ \textcolor{comment}{\#\ Create\ a\ new\ black\ image}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00124}\mbox{\hyperlink{a00366_a25d0e7c7655b7a5eed365b894fd5e26f}{00124}}\ \ \ \ \ \ \ \ \ \ \ \ \ pixels\ =\ img.load()\ \textcolor{comment}{\#\ Create\ the\ pixel\ map}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ minimum\ =\ numbers[:,:,z].min()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ maximum\ =\ numbers[:,:,z].max()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ number\_range\ =\ maximum\ -\/\ minimum}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(img.size[0]):\ \ \ \ \textcolor{comment}{\#\ For\ every\ pixel:}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ j\ \textcolor{keywordflow}{in}\ range(img.size[1]):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00131}\mbox{\hyperlink{a00366_ac8859e8c1ce357c4c8b37bbb1936ba1c}{00131}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =\ (numbers[i,\ j,\ z]\ -\/\ minimum)\ /\ number\_range\ *\ 370\ +\ 380}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if(math.isnan(v)):}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ v\ =\ 0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00134}\mbox{\hyperlink{a00366_a1aabac6d068eef6a7bad3fdf50a05cc8}{00134}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\ =\ \mbox{\hyperlink{a00366_a74f2b862a36db3cde75f1cc94d388c81}{wavelength\_to\_rgb}}(int(v))}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pixels[i,j]\ =\ (d)\ \textcolor{comment}{\#\ Set\ the\ colour\ accordingly}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ img.save(f\textcolor{stringliteral}{"{}python/images/\{CacheFiles[file\_index]\}\{z\}.png"{}})}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ img.show()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ del\ img}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00139}00139\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00141}00141\ \ \ \ \ }
+
+\end{DoxyCode}

@@ -1,0 +1,37 @@
+\doxysection{hash\+\_\+table.\+h}
+\hypertarget{hash__table_8h_source}{}\label{hash__table_8h_source}\index{include/dst/hash\_table.h@{include/dst/hash\_table.h}}
+\mbox{\hyperlink{hash__table_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00026}00026\ \textcolor{preprocessor}{\#ifndef\ HASH\_TABLE\_H}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00027}00027\ \textcolor{preprocessor}{\#define\ HASH\_TABLE\_H}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00030}00030\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00031}00031\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00033}\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{00033}}\ \textcolor{preprocessor}{\#define\ HASH\_CAPACITY\ 30}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00034}\mbox{\hyperlink{hash__table_8h_a5145aca5cb4a65b79b24d162d6fd72eb}{00034}}\ \textcolor{preprocessor}{\#define\ KEY\_LENGTH\ 30}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00036}\mbox{\hyperlink{struct_hash_table}{00036}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00038}\mbox{\hyperlink{struct_hash_table_aa429745e164770f5a9545fd31ba633b1}{00038}}\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_hash_table_aa429745e164770f5a9545fd31ba633b1}{keys}}[\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\_CAPACITY}}][\mbox{\hyperlink{hash__table_8h_a5145aca5cb4a65b79b24d162d6fd72eb}{KEY\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00039}\mbox{\hyperlink{struct_hash_table_afe6af42ae11ea67b9e6403bd99a4f99d}{00039}}\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_hash_table_afe6af42ae11ea67b9e6403bd99a4f99d}{data}}[\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\_CAPACITY}}];}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00040}\mbox{\hyperlink{struct_hash_table_afed088663f8704004425cdae2120b9b3}{00040}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_afed088663f8704004425cdae2120b9b3}{len}};}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00041}\mbox{\hyperlink{hash__table_8h_a8dea4341d1b1662a30ec89ea38da0c0c}{00041}}\ \}\ \mbox{\hyperlink{struct_hash_table}{HashTable}};}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00043}00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_aecf492d271c7b0c50c1832371fb34c84}{Hash\_InitializeHashTable}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ **hash);}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00045}00045\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_a0f96cedf42d4440115356ae74e627126}{Hash\_DeleteHashTable}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}*\ hash);}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00047}00047\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_af0c750fb9a54f590b713d6526ed263fc}{Hash\_AddEntry}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ name,\ int32\_t\ data);}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00049}00049\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_a7026562de200bd5e9813f101d9eb614b}{Hash\_GetIndex}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00051}00051\ int32\_t\ \mbox{\hyperlink{hash__table_8h_a27578c1b5a3ab68d8f144ed86ea72cc2}{Hash\_GetValue}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00053}00053\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{hash__table_8h_ae198aa5dfcbf0fa9e5fb885e34e08b0c}{Hash\_SetValue}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key,\ int32\_t\ new\_data);}
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{hash__table_8h_source_l00055}00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HASH\_TABLE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

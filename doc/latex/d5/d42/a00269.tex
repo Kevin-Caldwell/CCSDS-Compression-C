@@ -1,0 +1,134 @@
+\doxysection{src/logs.c File Reference}
+\hypertarget{a00269}{}\label{a00269}\index{src/logs.c@{src/logs.c}}
+{\ttfamily \#include "{}files/logs.\+h"{}}\newline
+{\ttfamily \#include "{}constants/global\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for logs.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00269_a89eb41300c751659cb27ad5955449bdc}{\+\_\+\+GET\+\_\+\+PRINT\+\_\+\+TIME}} ()
+\item 
+void \mbox{\hyperlink{a00269_a0b7cf426e0ba603b54206d70e4c93f04}{Log\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{a00269_ad02317523a9dd7b5180cccbc0371ac6a}{Log\+\_\+close}} ()
+\item 
+void \mbox{\hyperlink{a00269_a61353ebf0328d8bd1f61f224305e64bb}{Log\+\_\+add}} (const char \texorpdfstring{$\ast$}{*}text)
+\item 
+void \mbox{\hyperlink{a00269_ad795690a809192117add6898be812267}{Log\+\_\+error}} (char \texorpdfstring{$\ast$}{*}text)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{a00269_a87e78d2e71f0d53d7886e1a126f39b16}{log\+\_\+file}} \mbox{[}$\,$\mbox{]} = "{}data/logs/compressor.\+logs"{}
+\item 
+char \mbox{\hyperlink{a00269_a43a0859253a66e6836e73685d3dcc623}{\+\_\+time\+\_\+str}} \mbox{[}100\mbox{]}
+\item 
+\mbox{\hyperlink{a00122_aaa4f66633ab727c9d841db141c3da088}{file\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00269_a87886567426a509453e5709bb2ff785b}{log\+\_\+fptr}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00269_a89eb41300c751659cb27ad5955449bdc}\label{a00269_a89eb41300c751659cb27ad5955449bdc} 
+\index{logs.c@{logs.c}!\_GET\_PRINT\_TIME@{\_GET\_PRINT\_TIME}}
+\index{\_GET\_PRINT\_TIME@{\_GET\_PRINT\_TIME}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{\_GET\_PRINT\_TIME()}{\_GET\_PRINT\_TIME()}}
+{\footnotesize\ttfamily char \texorpdfstring{$\ast$}{*} \+\_\+\+GET\+\_\+\+PRINT\+\_\+\+TIME (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00009}{9}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{a00269_a61353ebf0328d8bd1f61f224305e64bb}\label{a00269_a61353ebf0328d8bd1f61f224305e64bb} 
+\index{logs.c@{logs.c}!Log\_add@{Log\_add}}
+\index{Log\_add@{Log\_add}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{Log\_add()}{Log\_add()}}
+{\footnotesize\ttfamily void Log\+\_\+add (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00034}{34}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{a00269_ad02317523a9dd7b5180cccbc0371ac6a}\label{a00269_ad02317523a9dd7b5180cccbc0371ac6a} 
+\index{logs.c@{logs.c}!Log\_close@{Log\_close}}
+\index{Log\_close@{Log\_close}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{Log\_close()}{Log\_close()}}
+{\footnotesize\ttfamily void Log\+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00029}{29}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{a00269_ad795690a809192117add6898be812267}\label{a00269_ad795690a809192117add6898be812267} 
+\index{logs.c@{logs.c}!Log\_error@{Log\_error}}
+\index{Log\_error@{Log\_error}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{Log\_error()}{Log\_error()}}
+{\footnotesize\ttfamily void Log\+\_\+error (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{text }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00038}{38}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{a00269_a0b7cf426e0ba603b54206d70e4c93f04}\label{a00269_a0b7cf426e0ba603b54206d70e4c93f04} 
+\index{logs.c@{logs.c}!Log\_init@{Log\_init}}
+\index{Log\_init@{Log\_init}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{Log\_init()}{Log\_init()}}
+{\footnotesize\ttfamily void Log\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00017}{17}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{a00269_a43a0859253a66e6836e73685d3dcc623}\label{a00269_a43a0859253a66e6836e73685d3dcc623} 
+\index{logs.c@{logs.c}!\_time\_str@{\_time\_str}}
+\index{\_time\_str@{\_time\_str}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{\_time\_str}{\_time\_str}}
+{\footnotesize\ttfamily char \+\_\+time\+\_\+str\mbox{[}100\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00007}{7}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+\Hypertarget{a00269_a87e78d2e71f0d53d7886e1a126f39b16}\label{a00269_a87e78d2e71f0d53d7886e1a126f39b16} 
+\index{logs.c@{logs.c}!log\_file@{log\_file}}
+\index{log\_file@{log\_file}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{log\_file}{log\_file}}
+{\footnotesize\ttfamily char log\+\_\+file\mbox{[}$\,$\mbox{]} = "{}data/logs/compressor.\+logs"{}}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00006}{6}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+
+\Hypertarget{a00269_a87886567426a509453e5709bb2ff785b}\label{a00269_a87886567426a509453e5709bb2ff785b} 
+\index{logs.c@{logs.c}!log\_fptr@{log\_fptr}}
+\index{log\_fptr@{log\_fptr}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{log\_fptr}{log\_fptr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00122_aaa4f66633ab727c9d841db141c3da088}{file\+\_\+t}}\texorpdfstring{$\ast$}{*} log\+\_\+fptr}
+
+
+
+Definition at line \mbox{\hyperlink{a00269_source_l00015}{15}} of file \mbox{\hyperlink{a00269_source}{logs.\+c}}.
+

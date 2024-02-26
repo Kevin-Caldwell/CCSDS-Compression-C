@@ -1,3 +1,11 @@
+/**
+ * local_differences.h
+ * @authors @Kevin-Caldwell @BrianShTsoi
+ * 
+ * Central and Directional Local Difference
+ * Functions and Definitions
+*/
+
 #ifndef LOCAL_DIFFERENCES_H
 #define LOCAL_DIFFERENCES_H
 

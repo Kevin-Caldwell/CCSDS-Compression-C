@@ -1,0 +1,107 @@
+\doxysection{include/testing/generate\+\_\+image.h File Reference}
+\hypertarget{a00062}{}\label{a00062}\index{include/testing/generate\_image.h@{include/testing/generate\_image.h}}
+{\ttfamily \#include "{}predictor/predictor.\+h"{}}\newline
+{\ttfamily \#include "{}encoder/header.\+h"{}}\newline
+{\ttfamily \#include "{}files/csv-\/io.\+h"{}}\newline
+{\ttfamily \#include "{}testing/synthetic\+\_\+image\+\_\+generator.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for generate\+\_\+image.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00062_a7c0526eafc78103d6067815877e28fe8}{Test\+Header}} ()
+\item 
+void \mbox{\hyperlink{a00062_aac70a37466945a2c91d42fbfb9d1dcbb}{Test\+Read\+Image}} ()
+\item 
+int \mbox{\hyperlink{a00062_a7fae527c979b4b287e1f9672c8d2c366}{Predict\+Image}} (char \texorpdfstring{$\ast$}{*}source, char \texorpdfstring{$\ast$}{*}destination)
+\item 
+int \mbox{\hyperlink{a00062_a29f9d24093c99f0e47133d90ea4286e6}{Encode\+Image}} (char \texorpdfstring{$\ast$}{*}source, char \texorpdfstring{$\ast$}{*}destination)
+\item 
+int \mbox{\hyperlink{a00062_aaa094efd7037f34ae4e485a0b97c4282}{Compress\+Image}} (char \texorpdfstring{$\ast$}{*}source, char \texorpdfstring{$\ast$}{*}destination)
+\item 
+int \mbox{\hyperlink{a00062_a450c7f9206bff8de0c177e34e6b5bcf4}{Generate\+Voronoi\+Image}} (\mbox{\hyperlink{a00404}{dim3}} size, int index, int points)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00062_aaa094efd7037f34ae4e485a0b97c4282}\label{a00062_aaa094efd7037f34ae4e485a0b97c4282} 
+\index{generate\_image.h@{generate\_image.h}!CompressImage@{CompressImage}}
+\index{CompressImage@{CompressImage}!generate\_image.h@{generate\_image.h}}
+\doxysubsubsection{\texorpdfstring{CompressImage()}{CompressImage()}}
+{\footnotesize\ttfamily int Compress\+Image (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{source,  }\item[{char \texorpdfstring{$\ast$}{*}}]{destination }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00305_source_l00100}{100}} of file \mbox{\hyperlink{a00305_source}{generate\+\_\+image.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00062_a29f9d24093c99f0e47133d90ea4286e6}\label{a00062_a29f9d24093c99f0e47133d90ea4286e6} 
+\index{generate\_image.h@{generate\_image.h}!EncodeImage@{EncodeImage}}
+\index{EncodeImage@{EncodeImage}!generate\_image.h@{generate\_image.h}}
+\doxysubsubsection{\texorpdfstring{EncodeImage()}{EncodeImage()}}
+{\footnotesize\ttfamily int Encode\+Image (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{source,  }\item[{char \texorpdfstring{$\ast$}{*}}]{destination }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00305_source_l00084}{84}} of file \mbox{\hyperlink{a00305_source}{generate\+\_\+image.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{a00062_a450c7f9206bff8de0c177e34e6b5bcf4}\label{a00062_a450c7f9206bff8de0c177e34e6b5bcf4} 
+\index{generate\_image.h@{generate\_image.h}!GenerateVoronoiImage@{GenerateVoronoiImage}}
+\index{GenerateVoronoiImage@{GenerateVoronoiImage}!generate\_image.h@{generate\_image.h}}
+\doxysubsubsection{\texorpdfstring{GenerateVoronoiImage()}{GenerateVoronoiImage()}}
+{\footnotesize\ttfamily int Generate\+Voronoi\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00404}{dim3}}}]{size,  }\item[{int}]{index,  }\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00305_source_l00005}{5}} of file \mbox{\hyperlink{a00305_source}{generate\+\_\+image.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{a00062_a7fae527c979b4b287e1f9672c8d2c366}\label{a00062_a7fae527c979b4b287e1f9672c8d2c366} 
+\index{generate\_image.h@{generate\_image.h}!PredictImage@{PredictImage}}
+\index{PredictImage@{PredictImage}!generate\_image.h@{generate\_image.h}}
+\doxysubsubsection{\texorpdfstring{PredictImage()}{PredictImage()}}
+{\footnotesize\ttfamily int Predict\+Image (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{source,  }\item[{char \texorpdfstring{$\ast$}{*}}]{destination }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00305_source_l00021}{21}} of file \mbox{\hyperlink{a00305_source}{generate\+\_\+image.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{a00062_a7c0526eafc78103d6067815877e28fe8}\label{a00062_a7c0526eafc78103d6067815877e28fe8} 
+\index{generate\_image.h@{generate\_image.h}!TestHeader@{TestHeader}}
+\index{TestHeader@{TestHeader}!generate\_image.h@{generate\_image.h}}
+\doxysubsubsection{\texorpdfstring{TestHeader()}{TestHeader()}}
+{\footnotesize\ttfamily void Test\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00305_source_l00104}{104}} of file \mbox{\hyperlink{a00305_source}{generate\+\_\+image.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 9
+\Hypertarget{a00062_aac70a37466945a2c91d42fbfb9d1dcbb}\label{a00062_aac70a37466945a2c91d42fbfb9d1dcbb} 
+\index{generate\_image.h@{generate\_image.h}!TestReadImage@{TestReadImage}}
+\index{TestReadImage@{TestReadImage}!generate\_image.h@{generate\_image.h}}
+\doxysubsubsection{\texorpdfstring{TestReadImage()}{TestReadImage()}}
+{\footnotesize\ttfamily void Test\+Read\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00305_source_l00111}{111}} of file \mbox{\hyperlink{a00305_source}{generate\+\_\+image.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 10

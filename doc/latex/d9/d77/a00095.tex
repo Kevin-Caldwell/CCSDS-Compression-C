@@ -1,0 +1,97 @@
+\doxysection{include/predictor/weights.h File Reference}
+\hypertarget{a00095}{}\label{a00095}\index{include/predictor/weights.h@{include/predictor/weights.h}}
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
+{\ttfamily \#include "{}predictor/quantizer.\+h"{}}\newline
+Include dependency graph for weights.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00095_a2fee6f8dd7f3cd3ed1ae75161294c4c4}{Ps}}(z)~\mbox{\hyperlink{a00152_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, \mbox{\hyperlink{a00146_a21c169290a6c782855c778bb7a0389b9}{kP}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00095_adcc753ae7048085817bd2c37b471f739}{Initialize\+Weights}} (int32\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}weight\+\_\+ptr, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x)
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00095_a286baab1384ff25cf7cf4c2061f15c4c}{Double\+Resolution\+Prediction\+Error}} (int16\+\_\+t clipped\+\_\+quantizer\+\_\+bin\+\_\+center, int32\+\_\+t double\+\_\+resolution\+\_\+predicted\+\_\+sample)
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00095_a17984670eb20b6ea122fb1e90a50dc75}{Weight\+Update\+Scaling\+Exponent}} (\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x)
+\item 
+int \mbox{\hyperlink{a00095_a805706f7af2f212bc46076319fcec535}{Update\+Weights}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, int32\+\_\+t \texorpdfstring{$\ast$}{*}weights, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x, int32\+\_\+t double\+\_\+resolution\+\_\+prediction\+\_\+error)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{a00095_a2fee6f8dd7f3cd3ed1ae75161294c4c4}\label{a00095_a2fee6f8dd7f3cd3ed1ae75161294c4c4} 
+\index{weights.h@{weights.h}!Ps@{Ps}}
+\index{Ps@{Ps}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{Ps}{Ps}}
+{\footnotesize\ttfamily \#define Ps(\begin{DoxyParamCaption}\item[{}]{z }\end{DoxyParamCaption})~\mbox{\hyperlink{a00152_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, \mbox{\hyperlink{a00146_a21c169290a6c782855c778bb7a0389b9}{kP}})}
+
+\doxylink{a00095}{weights.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor. 
+
+Definition at line \mbox{\hyperlink{a00095_source_l00018}{18}} of file \mbox{\hyperlink{a00095_source}{weights.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00095_a286baab1384ff25cf7cf4c2061f15c4c}\label{a00095_a286baab1384ff25cf7cf4c2061f15c4c} 
+\index{weights.h@{weights.h}!DoubleResolutionPredictionError@{DoubleResolutionPredictionError}}
+\index{DoubleResolutionPredictionError@{DoubleResolutionPredictionError}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{DoubleResolutionPredictionError()}{DoubleResolutionPredictionError()}}
+{\footnotesize\ttfamily int32\+\_\+t Double\+Resolution\+Prediction\+Error (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{clipped\+\_\+quantizer\+\_\+bin\+\_\+center,  }\item[{int32\+\_\+t}]{double\+\_\+resolution\+\_\+predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00284_source_l00035}{35}} of file \mbox{\hyperlink{a00284_source}{weights.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00095_adcc753ae7048085817bd2c37b471f739}\label{a00095_adcc753ae7048085817bd2c37b471f739} 
+\index{weights.h@{weights.h}!InitializeWeights@{InitializeWeights}}
+\index{InitializeWeights@{InitializeWeights}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{InitializeWeights()}{InitializeWeights()}}
+{\footnotesize\ttfamily int Initialize\+Weights (\begin{DoxyParamCaption}\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{weight\+\_\+ptr,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00284_source_l00004}{4}} of file \mbox{\hyperlink{a00284_source}{weights.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{a00095_a805706f7af2f212bc46076319fcec535}\label{a00095_a805706f7af2f212bc46076319fcec535} 
+\index{weights.h@{weights.h}!UpdateWeights@{UpdateWeights}}
+\index{UpdateWeights@{UpdateWeights}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{UpdateWeights()}{UpdateWeights()}}
+{\footnotesize\ttfamily int Update\+Weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{weights,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x,  }\item[{int32\+\_\+t}]{double\+\_\+resolution\+\_\+prediction\+\_\+error }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00284_source_l00050}{50}} of file \mbox{\hyperlink{a00284_source}{weights.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{a00095_a17984670eb20b6ea122fb1e90a50dc75}\label{a00095_a17984670eb20b6ea122fb1e90a50dc75} 
+\index{weights.h@{weights.h}!WeightUpdateScalingExponent@{WeightUpdateScalingExponent}}
+\index{WeightUpdateScalingExponent@{WeightUpdateScalingExponent}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{WeightUpdateScalingExponent()}{WeightUpdateScalingExponent()}}
+{\footnotesize\ttfamily int32\+\_\+t Weight\+Update\+Scaling\+Exponent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00284_source_l00041}{41}} of file \mbox{\hyperlink{a00284_source}{weights.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 7

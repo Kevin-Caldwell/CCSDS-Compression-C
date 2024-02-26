@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00098_source" xml:lang="en-US">
+<title>quantizer.h</title>
+<indexterm><primary>include/predictor/quantizer.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00098_source_1l00001"/>00001 
+<anchor xml:id="_a00098_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;QUANTIZER_H</emphasis>
+<anchor xml:id="_a00098_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;QUANTIZER_H</emphasis>
+<anchor xml:id="_a00098_source_1l00010"/>00010 
+<anchor xml:id="_a00098_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00113">dst/image.h</link>&quot;</emphasis>
+<anchor xml:id="_a00098_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00152">math/math_functions.h</link>&quot;</emphasis>
+<anchor xml:id="_a00098_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00149">math/linear_algebra.h</link>&quot;</emphasis>
+<anchor xml:id="_a00098_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00092">predictor/sample_representative.h</link>&quot;</emphasis>
+<anchor xml:id="_a00098_source_1l00015"/>00015 
+<anchor xml:id="_a00098_source_1l00016"/>00016 int32_t&#32;<link linkend="_a00098_1afa51bec3d5dfdb41078f60b1a7c454ab">QuantizerIndex</link>(uint16_t&#32;sample_value,&#32;uint16_t&#32;predicted_sample);
+<anchor xml:id="_a00098_source_1l00017"/>00017 
+<anchor xml:id="_a00098_source_1l00018"/>00018 <link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;<link linkend="_a00098_1a1f491e0a435427669942c932394d7c1a">MappedQuantizerIndex</link>(int32_t&#32;quantizer_index,&#32;
+<anchor xml:id="_a00098_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32_t&#32;predicted_sample,&#32;
+<anchor xml:id="_a00098_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;double_res_predicted_sample);
+<anchor xml:id="_a00098_source_1l00021"/>00021 
+<anchor xml:id="_a00098_source_1l00022"/>00022 int32_t&#32;<link linkend="_a00098_1ae85d34759565d8a3ab498494786c395b">QuantizerIndexUnmapper</link>(uint16_t&#32;mapped_delta,&#32;
+<anchor xml:id="_a00098_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;predicted_sample,&#32;
+<anchor xml:id="_a00098_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32_t&#32;drps);
+<anchor xml:id="_a00098_source_1l00025"/>00025 
+<anchor xml:id="_a00098_source_1l00026"/>00026 int16_t&#32;<link linkend="_a00098_1a93be7d02ed2acce98f53818c98ac6cca">PredictionResidual</link>(uint16_t&#32;sample_value,&#32;uint16_t&#32;predicted_sample);
+<anchor xml:id="_a00098_source_1l00027"/>00027 uint16_t&#32;<link linkend="_a00098_1a9d745aa249b8a9cde3f83899b563dcc5">ClippedQuantizerBinCenter</link>(uint16_t&#32;sample_value);
+<anchor xml:id="_a00098_source_1l00028"/>00028 
+<anchor xml:id="_a00098_source_1l00029"/>00029 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;QUANTIZER_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

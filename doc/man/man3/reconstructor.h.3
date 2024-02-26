@@ -1,0 +1,113 @@
+.TH "include/decompressor/reconstructor.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/decompressor/reconstructor.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'constants/constants\&.h'\fP
+.br
+\fC#include 'math/math_functions\&.h'\fP
+.br
+\fC#include 'math/linear_algebra\&.h'\fP
+.br
+\fC#include 'dst/image\&.h'\fP
+.br
+\fC#include 'predictor/quantizer\&.h'\fP
+.br
+\fC#include 'files/csv\-io\&.h'\fP
+.br
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include 'predictor/predictor\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPs\fP(z)   \fBMIN\fP(z, \fBkP\fP)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef uint32_t \fBweight_t\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBReconstructPixel\fP (\fBimage\fP *hIMG, \fBimage\fP *result, \fBINDEX\fP z, \fBINDEX\fP y, \fBINDEX\fP x, FILE *file_ptr)"
+.br
+.ti -1c
+.RI "void \fBReconstructor\fP (\fBimage\fP *predicted_values, \fBimage\fP *reconstructed, FILE *file_ptr)"
+.br
+.ti -1c
+.RI "void \fBTestReconstructor\fP (char *file_name)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBC\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define Ps(z)   \fBMIN\fP(z, \fBkP\fP)"
+\fBreconstructor\&.h\fP 
+.PP
+\fBAuthors\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Major Function Definitions of Reconstructor Module
+.PP
+Features Reconstructing an Image Reconstructing Individual Pixels Reconstructor Testing
+.PP
+Uses Validation of Predictor Output Validation of Complete Compression Output
+.PP
+Dependencies \fBconstants\&.h\fP \fBmath_functions\&.h\fP \fBlinear_algebra\&.h\fP \fBimage\&.h\fP \fBquantizer\&.h\fP \fBcsv-io\&.h\fP \fBpredictor\&.h\fP
+.PP
+inttypes\&.h
+.PP
+TODO Internal Dependencies
+.PP
+TODO Finish Reconstructor Module Test Reconstruct Pixel Reconstructor Test Reconstructor Validate Reconstructor with Python 
+.PP
+Definition at line \fB49\fP of file \fBreconstructor\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef uint32_t \fBweight_t\fP"
+
+.PP
+Definition at line \fB51\fP of file \fBreconstructor\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void Reconstructor (\fBimage\fP * predicted_values, \fBimage\fP * reconstructed, FILE * file_ptr)"
+
+.PP
+Definition at line \fB6\fP of file \fBreconstructor\&.c\fP\&.
+.SS "void ReconstructPixel (\fBimage\fP * hIMG, \fBimage\fP * result, \fBINDEX\fP z, \fBINDEX\fP y, \fBINDEX\fP x, FILE * file_ptr)"
+
+.PP
+Definition at line \fB43\fP of file \fBreconstructor\&.c\fP\&.
+.SS "void TestReconstructor (char * file_name)"
+
+.PP
+Definition at line \fB88\fP of file \fBreconstructor\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int C\fC [extern]\fP"
+
+.PP
+Definition at line \fB8\fP of file \fBpredictor\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

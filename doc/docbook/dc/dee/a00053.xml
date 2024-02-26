@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00053" xml:lang="en-US">
+<title>main/image_handler.c File Reference</title>
+<indexterm><primary>main/image_handler.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testing/generate_image.h&quot;<?linebreak?>#include &quot;testing/perlin.h&quot;<?linebreak?>#include &lt;string.h&gt;<?linebreak?></programlisting>Include dependency graph for image_handler.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/dea/a00054.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00053_1a048af25ea3eb0571ab780e44e221650e">main</link> (int argInt, char **argS)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_a00053_1a1b0cdea94de8d08c0351a24c1e84f547">DEBUG</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00053_1a048af25ea3eb0571ab780e44e221650e"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>image_handler.c</secondary></indexterm>
+<indexterm><primary>image_handler.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argInt, char ** argS)</computeroutput></para><para>
+Definition at line <link linkend="_a00053_source_1l00008">8</link> of file <link linkend="_a00053_source">image_handler.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dc/dee/a00053_a048af25ea3eb0571ab780e44e221650e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00053_1a1b0cdea94de8d08c0351a24c1e84f547"/><section>
+    <title>DEBUG</title>
+<indexterm><primary>DEBUG</primary><secondary>image_handler.c</secondary></indexterm>
+<indexterm><primary>image_handler.c</primary><secondary>DEBUG</secondary></indexterm>
+<para><computeroutput>char DEBUG = 0</computeroutput></para><para>
+Definition at line <link linkend="_a00053_source_1l00006">6</link> of file <link linkend="_a00053_source">image_handler.c</link>.</para>
+</section>
+</section>
+</section>

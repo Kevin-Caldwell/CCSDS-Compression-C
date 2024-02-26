@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d5/d42/a00269" kind="file" language="C++">
+    <compoundname>logs.c</compoundname>
+    <includes refid="de/d76/a00134" local="yes">files/logs.h</includes>
+    <includes refid="d2/df5/a00137" local="yes">constants/global_constants.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>constants/global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>files/logs.h</label>
+        <link refid="de/d76/a00134"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/logs.c</label>
+        <link refid="d5/d42/a00269"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+      <node id="12">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d5/d42/a00269_1a87e78d2e71f0d53d7886e1a126f39b16" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char log_file[]</definition>
+        <argsstring>[]</argsstring>
+        <name>log_file</name>
+        <initializer>= &quot;data/logs/compressor.logs&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="6" column="6" bodyfile="src/logs.c" bodystart="6" bodyend="-1"/>
+        <referencedby refid="de/d76/a00134_1a0b7cf426e0ba603b54206d70e4c93f04" compoundref="d5/d42/a00269" startline="17" endline="27">Log_init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d42/a00269_1a43a0859253a66e6836e73685d3dcc623" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _time_str[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>_time_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="7" column="6" bodyfile="src/logs.c" bodystart="7" bodyend="-1"/>
+        <referencedby refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" compoundref="d5/d42/a00269" startline="9" endline="13">_GET_PRINT_TIME</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" prot="public" static="no" mutable="no">
+        <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+        <definition>file_t* log_fptr</definition>
+        <argsstring></argsstring>
+        <name>log_fptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="15" column="8" bodyfile="src/logs.c" bodystart="15" bodyend="-1"/>
+        <referencedby refid="de/d76/a00134_1a61353ebf0328d8bd1f61f224305e64bb" compoundref="d5/d42/a00269" startline="34" endline="36">Log_add</referencedby>
+        <referencedby refid="de/d76/a00134_1ad02317523a9dd7b5180cccbc0371ac6a" compoundref="d5/d42/a00269" startline="29" endline="32">Log_close</referencedby>
+        <referencedby refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</referencedby>
+        <referencedby refid="de/d76/a00134_1a0b7cf426e0ba603b54206d70e4c93f04" compoundref="d5/d42/a00269" startline="17" endline="27">Log_init</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * _GET_PRINT_TIME</definition>
+        <argsstring>()</argsstring>
+        <name>_GET_PRINT_TIME</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="9" column="6" bodyfile="src/logs.c" bodystart="9" bodyend="13"/>
+        <references refid="d5/d42/a00269_1a43a0859253a66e6836e73685d3dcc623" compoundref="d5/d42/a00269" startline="7">_time_str</references>
+        <references refid="d7/d9a/a00152_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="d7/d9a/a00152" startline="17">NULL</references>
+        <referencedby refid="de/d76/a00134_1a61353ebf0328d8bd1f61f224305e64bb" compoundref="d5/d42/a00269" startline="34" endline="36">Log_add</referencedby>
+        <referencedby refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</referencedby>
+        <referencedby refid="de/d76/a00134_1a0b7cf426e0ba603b54206d70e4c93f04" compoundref="d5/d42/a00269" startline="17" endline="27">Log_init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d42/a00269_1a0b7cf426e0ba603b54206d70e4c93f04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Log_init</definition>
+        <argsstring>()</argsstring>
+        <name>Log_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="17" column="6" bodyfile="src/logs.c" bodystart="17" bodyend="27"/>
+        <references refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" compoundref="d5/d42/a00269" startline="9" endline="13">_GET_PRINT_TIME</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6af38784ef4b08f294d4a78f62181729a0" compoundref="df/dc8/a00122" startline="27">APPEND</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="d5/d42/a00269_1a87e78d2e71f0d53d7886e1a126f39b16" compoundref="d5/d42/a00269" startline="6">log_file</references>
+        <references refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" compoundref="d5/d42/a00269" startline="15">log_fptr</references>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d42/a00269_1ad02317523a9dd7b5180cccbc0371ac6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Log_close</definition>
+        <argsstring>()</argsstring>
+        <name>Log_close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="29" column="6" bodyfile="src/logs.c" bodystart="29" bodyend="32"/>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d5/d42/a00269_1a61353ebf0328d8bd1f61f224305e64bb" compoundref="d5/d42/a00269" startline="34" endline="36">Log_add</references>
+        <references refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" compoundref="d5/d42/a00269" startline="15">log_fptr</references>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d42/a00269_1a61353ebf0328d8bd1f61f224305e64bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Log_add</definition>
+        <argsstring>(const char *text)</argsstring>
+        <name>Log_add</name>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="34" column="6" bodyfile="src/logs.c" bodystart="34" bodyend="36"/>
+        <references refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" compoundref="d5/d42/a00269" startline="9" endline="13">_GET_PRINT_TIME</references>
+        <references refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" compoundref="d5/d42/a00269" startline="15">log_fptr</references>
+        <referencedby refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</referencedby>
+        <referencedby refid="de/d76/a00134_1ad02317523a9dd7b5180cccbc0371ac6a" compoundref="d5/d42/a00269" startline="29" endline="32">Log_close</referencedby>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d5/d42/a00269_1ad795690a809192117add6898be812267" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Log_error</definition>
+        <argsstring>(char *text)</argsstring>
+        <name>Log_error</name>
+        <param>
+          <type>char *</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/logs.c" line="38" column="6" bodyfile="src/logs.c" bodystart="38" bodyend="40"/>
+        <references refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" compoundref="d5/d42/a00269" startline="9" endline="13">_GET_PRINT_TIME</references>
+        <references refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" compoundref="d5/d42/a00269" startline="15">log_fptr</references>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a3e3e00c9789afb1d2f5f2c7004bd82ad" compoundref="df/da9/a00263" startline="9" endline="27">SaveArrayAsCSV</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</referencedby>
+        <referencedby refid="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" compoundref="dc/d84/a00338" startline="14" endline="40">VUF_initialize</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d76/a00134" kindref="compound">files/logs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/df5/a00137" kindref="compound">constants/global_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d2/df5/a00137_1a87e78d2e71f0d53d7886e1a126f39b16" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1a87e78d2e71f0d53d7886e1a126f39b16" kindref="member">log_file</ref>[]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;data/logs/compressor.logs&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="7" refid="d5/d42/a00269_1a43a0859253a66e6836e73685d3dcc623" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1a43a0859253a66e6836e73685d3dcc623" kindref="member">_time_str</ref>[100];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" kindref="member">_GET_PRINT_TIME</ref>(){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>rt<sp/>=<sp/>time((time_t*)<sp/><ref refid="d7/d9a/a00152_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>strftime(<ref refid="d5/d42/a00269_1a43a0859253a66e6836e73685d3dcc623" kindref="member">_time_str</ref>,<sp/>100,<sp/></highlight><highlight class="stringliteral">&quot;(%x)<sp/>%X&quot;</highlight><highlight class="normal">,<sp/>localtime(&amp;rt));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1a43a0859253a66e6836e73685d3dcc623" kindref="member">_time_str</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" refkind="member"><highlight class="normal"><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/><ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="de/d76/a00134_1a0b7cf426e0ba603b54206d70e4c93f04" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1a0b7cf426e0ba603b54206d70e4c93f04" kindref="member">Log_init</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="d5/d42/a00269_1a87e78d2e71f0d53d7886e1a126f39b16" kindref="member">log_file</ref>){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref><sp/>=<sp/>(<ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*)<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(<ref refid="d5/d42/a00269_1a87e78d2e71f0d53d7886e1a126f39b16" kindref="member">log_file</ref>,<sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6af38784ef4b08f294d4a78f62181729a0" kindref="member">APPEND</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref>)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(<ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref>,<sp/></highlight><highlight class="stringliteral">&quot;[%s]<sp/>Opened<sp/>Log\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" kindref="member">_GET_PRINT_TIME</ref>());</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;[%s]<sp/>Failed<sp/>to<sp/>Open<sp/>Log\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" kindref="member">_GET_PRINT_TIME</ref>());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="de/d76/a00134_1ad02317523a9dd7b5180cccbc0371ac6a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1ad02317523a9dd7b5180cccbc0371ac6a" kindref="member">Log_close</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d42/a00269_1a61353ebf0328d8bd1f61f224305e64bb" kindref="member">Log_add</ref>(</highlight><highlight class="stringliteral">&quot;Stopped<sp/>Logging\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(<ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="de/d76/a00134_1a61353ebf0328d8bd1f61f224305e64bb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1a61353ebf0328d8bd1f61f224305e64bb" kindref="member">Log_add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>text){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(<ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref>,<sp/></highlight><highlight class="stringliteral">&quot;[%s]<sp/>UPDATE:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" kindref="member">_GET_PRINT_TIME</ref>(),<sp/>text);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="de/d76/a00134_1ad795690a809192117add6898be812267" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d5/d42/a00269_1ad795690a809192117add6898be812267" kindref="member">Log_error</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>text){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf(<ref refid="d5/d42/a00269_1a87886567426a509453e5709bb2ff785b" kindref="member">log_fptr</ref>,<sp/></highlight><highlight class="stringliteral">&quot;[%s]<sp/>ERROR:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="d5/d42/a00269_1a89eb41300c751659cb27ad5955449bdc" kindref="member">_GET_PRINT_TIME</ref>(),<sp/>text);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/logs.c"/>
+  </compounddef>
+</doxygen>

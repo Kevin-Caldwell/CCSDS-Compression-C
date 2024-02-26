@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dc/d9c/linear__algebra_8h" kind="file" language="C++">
+    <compoundname>linear_algebra.h</compoundname>
+    <includes refid="d2/d6f/constants_8h" local="yes">constants/constants.h</includes>
+    <includes refid="d2/de2/math__functions_8h" local="yes">math_functions.h</includes>
+    <includedby refid="df/d01/cache__predictor_8h" local="yes">include/cache/cache_predictor.h</includedby>
+    <includedby refid="de/d32/reconstructor_8h" local="yes">include/decompressor/reconstructor.h</includedby>
+    <includedby refid="d2/df3/local__differences_8h" local="yes">include/predictor/local_differences.h</includedby>
+    <includedby refid="dc/d08/predictor_8h" local="yes">include/predictor/predictor.h</includedby>
+    <includedby refid="d1/d38/quantizer_8h" local="yes">include/predictor/quantizer.h</includedby>
+    <includedby refid="df/d7d/sample__representative_8h" local="yes">include/predictor/sample_representative.h</includedby>
+    <includedby refid="d2/d6a/weights_8h" local="yes">include/predictor/weights.h</includedby>
+    <includedby refid="d9/dea/synthetic__image__generator_8h" local="yes">include/testing/synthetic_image_generator.h</includedby>
+    <includedby refid="df/d91/linear__algebra_8c" local="yes">src/linear_algebra.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>global_constants.h</label>
+        <link refid="d5/ddb/global__constants_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>constants/load_constants.h</label>
+        <link refid="d4/d3e/load__constants_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dst/hash_table.h</label>
+        <link refid="d4/ddb/hash__table_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/math/linear_algebra.h</label>
+        <link refid="dc/d9c/linear__algebra_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+      <node id="5">
+        <label>math.h</label>
+      </node>
+      <node id="7">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/cache/cache_predictor.h</label>
+        <link refid="df/d01/cache__predictor_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/decompressor/reconstructor.h</label>
+        <link refid="de/d32/reconstructor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/math/linear_algebra.h</label>
+        <link refid="dc/d9c/linear__algebra_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/predictor/local_differences.h</label>
+        <link refid="d2/df3/local__differences_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/predictor/local_sum.h</label>
+        <link refid="d6/d9d/local__sum_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/predictor/predictor.h</label>
+        <link refid="dc/d08/predictor_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/predictor/quantizer.h</label>
+        <link refid="d1/d38/quantizer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/predictor/sample_representative.h</label>
+        <link refid="df/d7d/sample__representative_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/predictor/weights.h</label>
+        <link refid="d2/d6a/weights_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d7b/generate__image_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>include/testing/synthetic_image_generator.h</label>
+        <link refid="d9/dea/synthetic__image__generator_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>main/compressor.c</label>
+        <link refid="da/db2/compressor_8c"/>
+      </node>
+      <node id="9">
+        <label>main/decompressor.c</label>
+        <link refid="df/dee/decompressor_8c"/>
+      </node>
+      <node id="13">
+        <label>main/image_handler.c</label>
+        <link refid="d1/d6e/image__handler_8c"/>
+      </node>
+      <node id="21">
+        <label>src/cache_predictor.c</label>
+        <link refid="dc/d99/cache__predictor_8c"/>
+      </node>
+      <node id="14">
+        <label>src/generate_image.c</label>
+        <link refid="d6/d92/generate__image_8c"/>
+      </node>
+      <node id="26">
+        <label>src/linear_algebra.c</label>
+        <link refid="df/d91/linear__algebra_8c"/>
+      </node>
+      <node id="20">
+        <label>src/local_differences.c</label>
+        <link refid="d8/d97/local__differences_8c"/>
+      </node>
+      <node id="22">
+        <label>src/local_sum.c</label>
+        <link refid="db/d31/local__sum_8c"/>
+      </node>
+      <node id="15">
+        <label>src/predictor.c</label>
+        <link refid="db/d25/predictor_8c"/>
+      </node>
+      <node id="18">
+        <label>src/quantizer.c</label>
+        <link refid="dc/df1/quantizer_8c"/>
+      </node>
+      <node id="10">
+        <label>src/reconstructor.c</label>
+        <link refid="d6/dce/reconstructor_8c"/>
+      </node>
+      <node id="19">
+        <label>src/sample_representative.c</label>
+        <link refid="d7/d58/sample__representative_8c"/>
+      </node>
+      <node id="24">
+        <label>src/synthetic_image_generator.c</label>
+        <link refid="d5/d40/synthetic__image__generator_8c"/>
+      </node>
+      <node id="25">
+        <label>src/test_UHI.c</label>
+        <link refid="d1/dfd/test___u_h_i_8c"/>
+      </node>
+      <node id="17">
+        <label>src/weights.c</label>
+        <link refid="d0/d26/weights_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="dc/d9c/linear__algebra_8h_1ab3884a0bbfd7dee1c68c7296b669ebab" prot="public" static="no">
+        <name>AddToVector</name>
+        <param><defname>v</defname></param>
+        <param><defname>other</defname></param>
+        <param><defname>size</defname></param>
+        <initializer><ref refid="dc/d9c/linear__algebra_8h_1a2765cafcf739497b0ee51e705590039a" kindref="member">AddVectors</ref>(v, other, v, size)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="45" column="9" bodyfile="include/math/linear_algebra.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d9c/linear__algebra_8h_1a3551e792e31423caf9108ee7a990fb0b" prot="public" static="no">
+        <name>SubtractFromVector</name>
+        <param><defname>v</defname></param>
+        <param><defname>other</defname></param>
+        <param><defname>size</defname></param>
+        <initializer><ref refid="dc/d9c/linear__algebra_8h_1a06b11149235c5a4fe6c877aed33f55f9" kindref="member">SubtractVectors</ref>(v, other, v, size)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="46" column="9" bodyfile="include/math/linear_algebra.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="dc/d9c/linear__algebra_8h_1a5fe8e5a199bb90a6358cee7306d3d09d" prot="public" static="no">
+        <name>ScalarProduct_C</name>
+        <param><defname>v</defname></param>
+        <param><defname>other</defname></param>
+        <param><defname>size</defname></param>
+        <initializer><ref refid="dc/d9c/linear__algebra_8h_1a2c84697470e743f7c69fffbe7e0f92bc" kindref="member">ScalarProduct</ref>(v, other, v, size)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="47" column="9" bodyfile="include/math/linear_algebra.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" prot="public" static="no">
+        <type><ref refid="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+        <definition>typedef PIXEL data_t</definition>
+        <argsstring></argsstring>
+        <name>data_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="dc/d9c/linear__algebra_8h" kindref="compound">linear_algebra.h</ref> <simplesect kind="authors"><para>Kevin Caldwell @BrianShTsoi</para>
+</simplesect>
+Skeleton File for Generic Vector Operations.</para>
+<para>Features Initialization Deletion Addition Subtraction Scalar Product Inner Product (Dot Product)</para>
+<para>Uses Local Difference Vector Weight Vector</para>
+<para>Dependencies <ref refid="d2/d6f/constants_8h" kindref="compound">constants.h</ref> <ref refid="d2/de2/math__functions_8h" kindref="compound">math_functions.h</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="30" column="15" bodyfile="include/math/linear_algebra.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d9c/linear__algebra_8h_1ab9661c8e10293140db24d4b650785939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int InitVector</definition>
+        <argsstring>(int32_t **v, UINT len)</argsstring>
+        <name>InitVector</name>
+        <param>
+          <type>int32_t **</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="33" column="5" bodyfile="src/linear_algebra.c" bodystart="3" bodyend="7" declfile="include/math/linear_algebra.h" declline="33" declcolumn="5"/>
+        <referencedby refid="d2/d6a/weights_8h_1adcc753ae7048085817bd2c37b471f739" compoundref="d0/d26/weights_8c" startline="4" endline="33">InitializeWeights</referencedby>
+        <referencedby refid="d2/df3/local__differences_8h_1a92b3b535f0c13d4ec28dab8b13713262" compoundref="d8/d97/local__differences_8c" startline="55" endline="80">LocalDirectionVector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d9c/linear__algebra_8h_1ae000d0d19cf867f1ad39325993763205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DeleteVector</definition>
+        <argsstring>(data_t *v)</argsstring>
+        <name>DeleteVector</name>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="35" column="5" bodyfile="src/linear_algebra.c" bodystart="9" bodyend="11" declfile="include/math/linear_algebra.h" declline="35" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d9c/linear__algebra_8h_1a2765cafcf739497b0ee51e705590039a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AddVectors</definition>
+        <argsstring>(data_t *v1, data_t *v2, data_t *res, UINT size)</argsstring>
+        <name>AddVectors</name>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="37" column="5" bodyfile="src/linear_algebra.c" bodystart="14" bodyend="19" declfile="include/math/linear_algebra.h" declline="37" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d9c/linear__algebra_8h_1a06b11149235c5a4fe6c877aed33f55f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SubtractVectors</definition>
+        <argsstring>(data_t *v1, data_t *v2, data_t *res, UINT size)</argsstring>
+        <name>SubtractVectors</name>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="39" column="5" bodyfile="src/linear_algebra.c" bodystart="21" bodyend="26" declfile="include/math/linear_algebra.h" declline="39" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d9c/linear__algebra_8h_1a46ade3794d4b4d5cc1eaf983858507ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t InnerProduct</definition>
+        <argsstring>(int32_t *v1, int32_t *v2, UINT size)</argsstring>
+        <name>InnerProduct</name>
+        <param>
+          <type>int32_t *</type>
+          <declname>v1</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>v2</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="41" column="9" bodyfile="src/linear_algebra.c" bodystart="28" bodyend="34" declfile="include/math/linear_algebra.h" declline="41" declcolumn="9"/>
+        <referencedby refid="d2/df3/local__differences_8h_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="d8/d97/local__differences_8c" startline="82" endline="99">PredictedCentralLocalDifference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d9c/linear__algebra_8h_1a2c84697470e743f7c69fffbe7e0f92bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ScalarProduct</definition>
+        <argsstring>(data_t *v, data_t scalar, data_t *res, UINT size)</argsstring>
+        <name>ScalarProduct</name>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref></type>
+          <declname>scalar</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref> *</type>
+          <declname>res</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/linear_algebra.h" line="43" column="5" bodyfile="src/linear_algebra.c" bodystart="37" bodyend="42" declfile="include/math/linear_algebra.h" declline="43" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LINEAR_ALGEBRA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LINEAR_ALGEBRA_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/d6f/constants_8h" kindref="compound">constants/constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/de2/math__functions_8h" kindref="compound">math_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d9c/linear__algebra_8h_1ab9661c8e10293140db24d4b650785939" kindref="member">InitVector</ref>(int32_t**<sp/>v,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>len);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d9c/linear__algebra_8h_1ae000d0d19cf867f1ad39325993763205" kindref="member">DeleteVector</ref>(<ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d9c/linear__algebra_8h_1a2765cafcf739497b0ee51e705590039a" kindref="member">AddVectors</ref>(<ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v1,<sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v2,<sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>res,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d9c/linear__algebra_8h_1a06b11149235c5a4fe6c877aed33f55f9" kindref="member">SubtractVectors</ref>(<ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v1,<sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v2,<sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>res,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">int64_t<sp/><ref refid="dc/d9c/linear__algebra_8h_1a46ade3794d4b4d5cc1eaf983858507ef" kindref="member">InnerProduct</ref>(int32_t*<sp/>v1,<sp/>int32_t*<sp/>v2,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d9c/linear__algebra_8h_1a2c84697470e743f7c69fffbe7e0f92bc" kindref="member">ScalarProduct</ref>(<ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>v,<sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref><sp/>scalar,<sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref>*<sp/>res,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>size);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="dc/d9c/linear__algebra_8h_1ab3884a0bbfd7dee1c68c7296b669ebab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AddToVector(v,<sp/>other,<sp/>size)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AddVectors(v,<sp/>other,<sp/>v,<sp/>size)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="dc/d9c/linear__algebra_8h_1a3551e792e31423caf9108ee7a990fb0b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SubtractFromVector(v,<sp/>other,<sp/>size)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SubtractVectors(v,<sp/>other,<sp/>v,<sp/>size)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="dc/d9c/linear__algebra_8h_1a5fe8e5a199bb90a6358cee7306d3d09d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ScalarProduct_C(v,<sp/>other,<sp/>size)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ScalarProduct(v,<sp/>other,<sp/>v,<sp/>size)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>LINEAR_ALGEBRA_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/math/linear_algebra.h"/>
+  </compounddef>
+</doxygen>

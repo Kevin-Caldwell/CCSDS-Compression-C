@@ -1,0 +1,71 @@
+.TH "src/uhi_io.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/uhi_io.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'files/uhi_io\&.h'\fP
+.br
+\fC#include 'dst/image\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBUHI_Initialize\fP (\fBUHI\fP *stream, \fBdim3\fP buffer_size, const char *file_name, \fBFileMode\fP \fBfile_mode\fP)"
+.br
+.ti -1c
+.RI "int \fBUHI_WriteImage\fP (const char *filename, const \fBimage\fP *source)"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP \fBUHI_ReadPixel\fP (\fBUHI\fP *stream, \fBdim3\fP index)"
+.br
+.ti -1c
+.RI "int \fBUHI_WritePixel\fP (const \fBUHI\fP *stream, \fBdim3\fP index, \fBPIXEL\fP value)"
+.br
+.ti -1c
+.RI "int \fBUHI_close\fP (\fBUHI\fP *stream)"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP \fBProxy_GetPixel\fP (\fBuIMG\fP *hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z)"
+.br
+.ti -1c
+.RI "void \fBProxy_SetPixel\fP (\fBuIMG\fP *hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z, \fBPIXEL\fP value)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBPIXEL\fP Proxy_GetPixel (\fBuIMG\fP * hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z)"
+
+.PP
+Definition at line \fB51\fP of file \fBuhi_io\&.c\fP\&.
+.SS "void Proxy_SetPixel (\fBuIMG\fP * hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z, \fBPIXEL\fP value)"
+
+.PP
+Definition at line \fB55\fP of file \fBuhi_io\&.c\fP\&.
+.SS "int UHI_close (\fBUHI\fP * stream)"
+
+.PP
+Definition at line \fB46\fP of file \fBuhi_io\&.c\fP\&.
+.SS "int UHI_Initialize (\fBUHI\fP * stream, \fBdim3\fP buffer_size, const char * file_name, \fBFileMode\fP file_mode)"
+
+.PP
+Definition at line \fB4\fP of file \fBuhi_io\&.c\fP\&.
+.SS "\fBPIXEL\fP UHI_ReadPixel (\fBUHI\fP * stream, \fBdim3\fP index)"
+
+.PP
+Definition at line \fB27\fP of file \fBuhi_io\&.c\fP\&.
+.SS "int UHI_WriteImage (const char * filename, const \fBimage\fP * source)"
+
+.PP
+Definition at line \fB16\fP of file \fBuhi_io\&.c\fP\&.
+.SS "int UHI_WritePixel (const \fBUHI\fP * stream, \fBdim3\fP index, \fBPIXEL\fP value)"
+
+.PP
+Definition at line \fB38\fP of file \fBuhi_io\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

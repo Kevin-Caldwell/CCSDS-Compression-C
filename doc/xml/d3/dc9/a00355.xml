@@ -1,0 +1,760 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d3/dc9/a00355" kind="namespace" language="Python">
+    <compoundname>compression</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d3/dc9/a00355_1abf6d0ccec2f5157184071729f129de19" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int D</definition>
+        <argsstring></argsstring>
+        <name>D</name>
+        <qualifiedname>compression.D</qualifiedname>
+        <initializer>=  14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="5" column="1" bodyfile="python/compression.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a80970133e7290ddaa15b6d949fc99420" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_MIN</definition>
+        <argsstring></argsstring>
+        <name>S_MIN</name>
+        <qualifiedname>compression.S_MIN</qualifiedname>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="6" column="1" bodyfile="python/compression.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a04632c156a04ad172a367f2760582928" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_MAX</definition>
+        <argsstring></argsstring>
+        <name>S_MAX</name>
+        <qualifiedname>compression.S_MAX</qualifiedname>
+        <initializer>=  2**(<ref refid="d3/dc9/a00355_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>) - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="7" column="1" bodyfile="python/compression.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1af02faf18c4b6fb6841abaf0b3142cc92" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int S_MID</definition>
+        <argsstring></argsstring>
+        <name>S_MID</name>
+        <qualifiedname>compression.S_MID</qualifiedname>
+        <initializer>=  2**(<ref refid="d3/dc9/a00355_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref> - 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="8" column="1" bodyfile="python/compression.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1aef94be98e2c9e4a4dece75f60ca9792c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <qualifiedname>compression.P</qualifiedname>
+        <initializer>=  3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="10" column="1" bodyfile="python/compression.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1aa3e9a982c10101613c6a1dd1fb3279f6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int W_RES</definition>
+        <argsstring></argsstring>
+        <name>W_RES</name>
+        <qualifiedname>compression.W_RES</qualifiedname>
+        <initializer>=  19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="11" column="1" bodyfile="python/compression.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a999bcfcc11e2794539308d5015455f59" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>W_MIN</definition>
+        <argsstring></argsstring>
+        <name>W_MIN</name>
+        <qualifiedname>compression.W_MIN</qualifiedname>
+        <initializer>=  -(2**(<ref refid="d3/dc9/a00355_1aa3e9a982c10101613c6a1dd1fb3279f6" kindref="member">W_RES</ref> + 2))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="12" column="1" bodyfile="python/compression.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1add63171ca968cbd5ca4d60dfbf9a2746" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int W_MAX</definition>
+        <argsstring></argsstring>
+        <name>W_MAX</name>
+        <qualifiedname>compression.W_MAX</qualifiedname>
+        <initializer>=  2**(<ref refid="d3/dc9/a00355_1aa3e9a982c10101613c6a1dd1fb3279f6" kindref="member">W_RES</ref> + 2) - 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="13" column="1" bodyfile="python/compression.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a3d90133d3051fbc4816d02efd9566d8e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int R</definition>
+        <argsstring></argsstring>
+        <name>R</name>
+        <qualifiedname>compression.R</qualifiedname>
+        <initializer>=  35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="14" column="1" bodyfile="python/compression.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a5e78dbd5fd0fc01ba7b98dd15e27221e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int M</definition>
+        <argsstring></argsstring>
+        <name>M</name>
+        <qualifiedname>compression.M</qualifiedname>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="15" column="1" bodyfile="python/compression.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a6238c0ecdac57d88d1f30259c60238cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int V_MIN</definition>
+        <argsstring></argsstring>
+        <name>V_MIN</name>
+        <qualifiedname>compression.V_MIN</qualifiedname>
+        <initializer>=  -6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="17" column="1" bodyfile="python/compression.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1ae2de9b8731e1c54a74579610837e59c0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int V_MAX</definition>
+        <argsstring></argsstring>
+        <name>V_MAX</name>
+        <qualifiedname>compression.V_MAX</qualifiedname>
+        <initializer>=  9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="18" column="1" bodyfile="python/compression.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1aa911c208b6f29485ce4b65c73b7f72f8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int T_INC</definition>
+        <argsstring></argsstring>
+        <name>T_INC</name>
+        <qualifiedname>compression.T_INC</qualifiedname>
+        <initializer>=  2**4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="19" column="1" bodyfile="python/compression.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a633454f54a1d7f2439a65666d71f9271" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int U_MAX</definition>
+        <argsstring></argsstring>
+        <name>U_MAX</name>
+        <qualifiedname>compression.U_MAX</qualifiedname>
+        <initializer>=  8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="22" column="1" bodyfile="python/compression.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a7880c4643e340683b530ce1609a8fd47" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GAMMA_0</definition>
+        <argsstring></argsstring>
+        <name>GAMMA_0</name>
+        <qualifiedname>compression.GAMMA_0</qualifiedname>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="23" column="1" bodyfile="python/compression.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a2689c4b3931025b79053532a5f1b0a85" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int K</definition>
+        <argsstring></argsstring>
+        <name>K</name>
+        <qualifiedname>compression.K</qualifiedname>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="25" column="1" bodyfile="python/compression.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1a3272087e7728ef865ea990a98baf8395" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GAMMA_STAR</definition>
+        <argsstring></argsstring>
+        <name>GAMMA_STAR</name>
+        <qualifiedname>compression.GAMMA_STAR</qualifiedname>
+        <initializer>=  5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="26" column="1" bodyfile="python/compression.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc9/a00355_1aa92b3873c7c4a40451e43cc6b2cd53f1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int K_ZPRIME</definition>
+        <argsstring></argsstring>
+        <name>K_ZPRIME</name>
+        <qualifiedname>compression.K_ZPRIME</qualifiedname>
+        <initializer>=  <ref refid="d3/dc9/a00355_1a2689c4b3931025b79053532a5f1b0a85" kindref="member">K</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="29" column="1" bodyfile="python/compression.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d3/dc9/a00355_1a7251716b703096793ed329f6b8469300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ps</definition>
+        <argsstring>(z)</argsstring>
+        <name>Ps</name>
+        <qualifiedname>compression.Ps</qualifiedname>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="34" column="1" bodyfile="python/compression.py" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a7f0bae725f24b8dae34a48b3cbe35d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>local_sum</definition>
+        <argsstring>(x, y, z, data)</argsstring>
+        <name>local_sum</name>
+        <qualifiedname>compression.local_sum</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="38" column="1" bodyfile="python/compression.py" bodystart="38" bodyend="53"/>
+        <referencedby refid="d3/dc9/a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8" compoundref="dc/d87/a00032" startline="54" endline="80">local_diff_vector</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1" compoundref="dc/d87/a00032" startline="96" endline="125">prediction</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>local_diff_vector</definition>
+        <argsstring>(x, y, z, data)</argsstring>
+        <name>local_diff_vector</name>
+        <qualifiedname>compression.local_diff_vector</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="54" column="1" bodyfile="python/compression.py" bodystart="54" bodyend="80"/>
+        <references refid="d3/dc9/a00355_1a7f0bae725f24b8dae34a48b3cbe35d49" compoundref="dc/d87/a00032" startline="38" endline="53">local_sum</references>
+        <references refid="d4/d81/a00110_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" compoundref="d4/d81/a00110" startline="49">Ps</references>
+        <referencedby refid="d3/dc9/a00355_1a11e878c5de785af8c9c14a5a86a0354d" compoundref="dc/d87/a00032" startline="160" endline="186">predictor</referencedby>
+        <referencedby refid="d3/dc9/a00355_1ae875711385174553f6db26923ce85874" compoundref="dc/d87/a00032" startline="187" endline="211">predictor_debug</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a6ac9172b17fab1182e21fbc228069437" compoundref="dc/d87/a00032" startline="361" endline="384">unpredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>init_weight_vector</definition>
+        <argsstring>(z)</argsstring>
+        <name>init_weight_vector</name>
+        <qualifiedname>compression.init_weight_vector</qualifiedname>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="81" column="1" bodyfile="python/compression.py" bodystart="81" bodyend="95"/>
+        <references refid="d4/d81/a00110_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" compoundref="d4/d81/a00110" startline="49">Ps</references>
+        <referencedby refid="d3/dc9/a00355_1a11e878c5de785af8c9c14a5a86a0354d" compoundref="dc/d87/a00032" startline="160" endline="186">predictor</referencedby>
+        <referencedby refid="d3/dc9/a00355_1ae875711385174553f6db26923ce85874" compoundref="dc/d87/a00032" startline="187" endline="211">predictor_debug</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a6ac9172b17fab1182e21fbc228069437" compoundref="dc/d87/a00032" startline="361" endline="384">unpredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>prediction</definition>
+        <argsstring>(ld_vector, weight_vector, x, y, z, data)</argsstring>
+        <name>prediction</name>
+        <qualifiedname>compression.prediction</qualifiedname>
+        <param>
+          <type>ld_vector</type>
+          <defname>ld_vector</defname>
+        </param>
+        <param>
+          <type>weight_vector</type>
+          <defname>weight_vector</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="96" column="1" bodyfile="python/compression.py" bodystart="96" bodyend="125"/>
+        <references refid="d3/dc9/a00355_1a7f0bae725f24b8dae34a48b3cbe35d49" compoundref="dc/d87/a00032" startline="38" endline="53">local_sum</references>
+        <referencedby refid="d3/dc9/a00355_1a11e878c5de785af8c9c14a5a86a0354d" compoundref="dc/d87/a00032" startline="160" endline="186">predictor</referencedby>
+        <referencedby refid="d3/dc9/a00355_1ae875711385174553f6db26923ce85874" compoundref="dc/d87/a00032" startline="187" endline="211">predictor_debug</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a6ac9172b17fab1182e21fbc228069437" compoundref="dc/d87/a00032" startline="361" endline="384">unpredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1aff3436357165d0b07392b7d032fd13bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>updated_weight_vector</definition>
+        <argsstring>(s_tilde, weight_vector, ld_vector, x, y, z, data)</argsstring>
+        <name>updated_weight_vector</name>
+        <qualifiedname>compression.updated_weight_vector</qualifiedname>
+        <param>
+          <type>s_tilde</type>
+          <defname>s_tilde</defname>
+        </param>
+        <param>
+          <type>weight_vector</type>
+          <defname>weight_vector</defname>
+        </param>
+        <param>
+          <type>ld_vector</type>
+          <defname>ld_vector</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="126" column="1" bodyfile="python/compression.py" bodystart="126" bodyend="146"/>
+        <references refid="d7/ddb/a00361_1a081f96217f1dd709e9c15859a50e68f0" compoundref="d3/d52/a00023" startline="4" endline="10">helperlib.sign</references>
+        <referencedby refid="d3/dc9/a00355_1a11e878c5de785af8c9c14a5a86a0354d" compoundref="dc/d87/a00032" startline="160" endline="186">predictor</referencedby>
+        <referencedby refid="d3/dc9/a00355_1ae875711385174553f6db26923ce85874" compoundref="dc/d87/a00032" startline="187" endline="211">predictor_debug</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a6ac9172b17fab1182e21fbc228069437" compoundref="dc/d87/a00032" startline="361" endline="384">unpredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>mapper</definition>
+        <argsstring>(delta, s_hat, s_tilde)</argsstring>
+        <name>mapper</name>
+        <qualifiedname>compression.mapper</qualifiedname>
+        <param>
+          <type>delta</type>
+          <defname>delta</defname>
+        </param>
+        <param>
+          <type>s_hat</type>
+          <defname>s_hat</defname>
+        </param>
+        <param>
+          <type>s_tilde</type>
+          <defname>s_tilde</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="147" column="1" bodyfile="python/compression.py" bodystart="147" bodyend="159"/>
+        <referencedby refid="d3/dc9/a00355_1a11e878c5de785af8c9c14a5a86a0354d" compoundref="dc/d87/a00032" startline="160" endline="186">predictor</referencedby>
+        <referencedby refid="d3/dc9/a00355_1ae875711385174553f6db26923ce85874" compoundref="dc/d87/a00032" startline="187" endline="211">predictor_debug</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a11e878c5de785af8c9c14a5a86a0354d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>predictor</definition>
+        <argsstring>(data)</argsstring>
+        <name>predictor</name>
+        <qualifiedname>compression.predictor</qualifiedname>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="160" column="1" bodyfile="python/compression.py" bodystart="160" bodyend="186"/>
+        <references refid="d3/dc9/a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa" compoundref="dc/d87/a00032" startline="81" endline="95">init_weight_vector</references>
+        <references refid="d3/dc9/a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8" compoundref="dc/d87/a00032" startline="54" endline="80">local_diff_vector</references>
+        <references refid="d3/dc9/a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7" compoundref="dc/d87/a00032" startline="147" endline="159">mapper</references>
+        <references refid="d3/dc9/a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1" compoundref="dc/d87/a00032" startline="96" endline="125">prediction</references>
+        <references refid="d3/dc9/a00355_1aff3436357165d0b07392b7d032fd13bc" compoundref="dc/d87/a00032" startline="126" endline="146">updated_weight_vector</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1ae875711385174553f6db26923ce85874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>predictor_debug</definition>
+        <argsstring>(data)</argsstring>
+        <name>predictor_debug</name>
+        <qualifiedname>compression.predictor_debug</qualifiedname>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="187" column="1" bodyfile="python/compression.py" bodystart="187" bodyend="211"/>
+        <references refid="d3/dc9/a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa" compoundref="dc/d87/a00032" startline="81" endline="95">init_weight_vector</references>
+        <references refid="d3/dc9/a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8" compoundref="dc/d87/a00032" startline="54" endline="80">local_diff_vector</references>
+        <references refid="d3/dc9/a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7" compoundref="dc/d87/a00032" startline="147" endline="159">mapper</references>
+        <references refid="d3/dc9/a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1" compoundref="dc/d87/a00032" startline="96" endline="125">prediction</references>
+        <references refid="d3/dc9/a00355_1aff3436357165d0b07392b7d032fd13bc" compoundref="dc/d87/a00032" startline="126" endline="146">updated_weight_vector</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a6a4af5f40ce35a453cd8e214f546734f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GPO2</definition>
+        <argsstring>(k, j)</argsstring>
+        <name>GPO2</name>
+        <qualifiedname>compression.GPO2</qualifiedname>
+        <param>
+          <type>k</type>
+          <defname>k</defname>
+        </param>
+        <param>
+          <type>j</type>
+          <defname>j</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="212" column="1" bodyfile="python/compression.py" bodystart="212" bodyend="224"/>
+        <references refid="d7/ddb/a00361_1ac0d353b52829389169d73b9a9810f866" compoundref="d3/d52/a00023" startline="11" endline="17">helperlib.dec_to_bin</references>
+        <referencedby refid="d3/dc9/a00355_1ac2c565a00560593a9177b1aad41e0d3c" compoundref="dc/d87/a00032" startline="225" endline="274">encoder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1ac2c565a00560593a9177b1aad41e0d3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>encoder</definition>
+        <argsstring>(mapped_delta)</argsstring>
+        <name>encoder</name>
+        <qualifiedname>compression.encoder</qualifiedname>
+        <param>
+          <type>mapped_delta</type>
+          <defname>mapped_delta</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="225" column="1" bodyfile="python/compression.py" bodystart="225" bodyend="274"/>
+        <references refid="d7/ddb/a00361_1ac0d353b52829389169d73b9a9810f866" compoundref="d3/d52/a00023" startline="11" endline="17">helperlib.dec_to_bin</references>
+        <references refid="d3/dc9/a00355_1a6a4af5f40ce35a453cd8e214f546734f" compoundref="dc/d87/a00032" startline="212" endline="224">GPO2</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a0b0449d8b52604ab8eed2bfa8c7c4277" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>increment_xyz</definition>
+        <argsstring>(x, y, z, Nx, Ny, Nz)</argsstring>
+        <name>increment_xyz</name>
+        <qualifiedname>compression.increment_xyz</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>z</type>
+          <defname>z</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref></type>
+          <defname>Nx</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref></type>
+          <defname>Ny</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref></type>
+          <defname>Nz</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="275" column="1" bodyfile="python/compression.py" bodystart="275" bodyend="284"/>
+        <referencedby refid="d3/dc9/a00355_1a13bd9527fe572001978b40411c0868be" compoundref="dc/d87/a00032" startline="305" endline="348">decoder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a78bff45f9915c892f4cf129d2fd27f55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>inv_GPO2</definition>
+        <argsstring>(k, encoded, i)</argsstring>
+        <name>inv_GPO2</name>
+        <qualifiedname>compression.inv_GPO2</qualifiedname>
+        <param>
+          <type>k</type>
+          <defname>k</defname>
+        </param>
+        <param>
+          <type>encoded</type>
+          <defname>encoded</defname>
+        </param>
+        <param>
+          <type>i</type>
+          <defname>i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="285" column="1" bodyfile="python/compression.py" bodystart="285" bodyend="304"/>
+        <references refid="d7/ddb/a00361_1a0efb929942addc663e0c6f20aecd4ccb" compoundref="d3/d52/a00023" startline="18" endline="22">helperlib.bin_to_dec</references>
+        <referencedby refid="d3/dc9/a00355_1a13bd9527fe572001978b40411c0868be" compoundref="dc/d87/a00032" startline="305" endline="348">decoder</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a13bd9527fe572001978b40411c0868be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>decoder</definition>
+        <argsstring>(encoded, Nx, Ny, Nz)</argsstring>
+        <name>decoder</name>
+        <qualifiedname>compression.decoder</qualifiedname>
+        <param>
+          <type>encoded</type>
+          <defname>encoded</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref></type>
+          <defname>Nx</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref></type>
+          <defname>Ny</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref></type>
+          <defname>Nz</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="305" column="1" bodyfile="python/compression.py" bodystart="305" bodyend="348"/>
+        <references refid="d7/ddb/a00361_1a0efb929942addc663e0c6f20aecd4ccb" compoundref="d3/d52/a00023" startline="18" endline="22">helperlib.bin_to_dec</references>
+        <references refid="d3/dc9/a00355_1a0b0449d8b52604ab8eed2bfa8c7c4277" compoundref="dc/d87/a00032" startline="275" endline="284">increment_xyz</references>
+        <references refid="d3/dc9/a00355_1a78bff45f9915c892f4cf129d2fd27f55" compoundref="dc/d87/a00032" startline="285" endline="304">inv_GPO2</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a1f2ff95dd2ae77e1fd9c720e7873c5c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>unmapper</definition>
+        <argsstring>(mapped_delta, s_hat, s_tilde)</argsstring>
+        <name>unmapper</name>
+        <qualifiedname>compression.unmapper</qualifiedname>
+        <param>
+          <type>mapped_delta</type>
+          <defname>mapped_delta</defname>
+        </param>
+        <param>
+          <type>s_hat</type>
+          <defname>s_hat</defname>
+        </param>
+        <param>
+          <type>s_tilde</type>
+          <defname>s_tilde</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="349" column="1" bodyfile="python/compression.py" bodystart="349" bodyend="360"/>
+        <referencedby refid="d3/dc9/a00355_1a6ac9172b17fab1182e21fbc228069437" compoundref="dc/d87/a00032" startline="361" endline="384">unpredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/dc9/a00355_1a6ac9172b17fab1182e21fbc228069437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>np.array</type>
+        <definition> np.array unpredictor</definition>
+        <argsstring>(np.array mapped, int Nx, int Ny, int Nz)</argsstring>
+        <name>unpredictor</name>
+        <qualifiedname>compression.unpredictor</qualifiedname>
+        <param>
+          <type>np.array</type>
+          <declname>mapped</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Ny</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Nz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/compression.py" line="361" column="1" bodyfile="python/compression.py" bodystart="361" bodyend="384"/>
+        <references refid="d3/dc9/a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa" compoundref="dc/d87/a00032" startline="81" endline="95">init_weight_vector</references>
+        <references refid="d3/dc9/a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8" compoundref="dc/d87/a00032" startline="54" endline="80">local_diff_vector</references>
+        <references refid="d3/dc9/a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1" compoundref="dc/d87/a00032" startline="96" endline="125">prediction</references>
+        <references refid="d3/dc9/a00355_1a1f2ff95dd2ae77e1fd9c720e7873c5c6" compoundref="dc/d87/a00032" startline="349" endline="360">unmapper</references>
+        <references refid="d3/dc9/a00355_1aff3436357165d0b07392b7d032fd13bc" compoundref="dc/d87/a00032" startline="126" endline="146">updated_weight_vector</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python/compression.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

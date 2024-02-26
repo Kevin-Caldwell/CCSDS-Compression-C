@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_local__sum_8h_source" xml:lang="en-US">
+<title>local_sum.h</title>
+<indexterm><primary>include/predictor/local_sum.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_local__sum_8h_source_1l00001"/>00001 
+<anchor xml:id="_local__sum_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#ifndef&#32;LOCAL_SUM_H</emphasis>
+<anchor xml:id="_local__sum_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#define&#32;LOCAL_SUM_H</emphasis>
+<anchor xml:id="_local__sum_8h_source_1l00010"/>00010 
+<anchor xml:id="_local__sum_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_constants_8h">constants/constants.h</link>&quot;</emphasis>
+<anchor xml:id="_local__sum_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_sample__representative_8h">sample_representative.h</link>&quot;</emphasis>
+<anchor xml:id="_local__sum_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cache__predictor_8h">cache/cache_predictor.h</link>&quot;</emphasis>
+<anchor xml:id="_local__sum_8h_source_1l00014"/>00014 
+<anchor xml:id="_local__sum_8h_source_1l00015"/><link linkend="_local__sum_8h_1a010a797f4917c1fb48527b5e26827dba">00015</link> <emphasis role="preprocessor">#define&#32;LS(hIMG,&#32;z,&#32;y,&#32;x)&#32;FindLocalSum(hIMG,&#32;z,&#32;y,&#32;x)</emphasis>
+<anchor xml:id="_local__sum_8h_source_1l00016"/>00016 uint32_t&#32;<link linkend="_local__sum_8h_1a1f0a6a3443597dab4881bb94fbc35f41">FindLocalSum</link>(<link linkend="_structimage">image</link>*&#32;hIMG,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x);
+<anchor xml:id="_local__sum_8h_source_1l00017"/>00017 
+<anchor xml:id="_local__sum_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;LOCAL_SUM_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

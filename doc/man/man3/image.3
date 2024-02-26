@@ -1,0 +1,43 @@
+.TH "image" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+image
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <image\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBdim3\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP * \fBdata\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Image Stuct for storing all the contexts of a hyperspectral image in a linear array\&.
+.PP
+The size member is a \fBdim3\fP which contains the dimensions of the image in the format: {Nx, Ny, Nz} The data member is a dynamically allocated array of PIXELs arranged according to the MAP3_1 Macro defined in \fBimage\&.h\fP
+.PP
+It has only been created as a testing feature\&. The entire hyperspectral image cannot be stored in RAM on an embedded device such as the STM32H7\&. The UHI file structure replaces this struct when the MEMORY_SAVING feature is enabled through CMake\&. 
+.PP
+Definition at line \fB65\fP of file \fBimage\&.h\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "\fBPIXEL\fP* data"
+
+.PP
+Definition at line \fB67\fP of file \fBimage\&.h\fP\&.
+.SS "\fBdim3\fP size"
+
+.PP
+Definition at line \fB66\fP of file \fBimage\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

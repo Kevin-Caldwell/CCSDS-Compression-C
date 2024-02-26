@@ -1,3 +1,10 @@
+/**
+ * stream_encoder.h
+ * @author @Kevin-Caldwell
+ * 
+ * @deprecated Replaced by varIntFile_IO.h
+*/
+
 #ifndef STREAM_ENCODER_H
 #define STREAM_ENCODER_H
 

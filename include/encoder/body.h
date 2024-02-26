@@ -23,6 +23,7 @@
 #define BODY_H
 
 #include <inttypes.h>
+
 #include "math/math_functions.h"
 #include "dst/image.h"
 #include "constants/encoder_constants.h"
@@ -34,6 +35,12 @@ extern int Gamma1;
 
 #define GAMMA_STAR 5
 
+/**
+ * Package Struct for storing Compressed Data.
+ * 
+ * data: 32 bit int storing varInt Data
+ * length: bit length of the value stored in data
+*/
 typedef struct GolombInt{
     uint32_t data;
     uint32_t length;

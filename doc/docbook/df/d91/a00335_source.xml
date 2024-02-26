@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00335_source" xml:lang="en-US">
+<title>linear_algebra.c</title>
+<indexterm><primary>src/linear_algebra.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00335_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00149">math/linear_algebra.h</link>&quot;</emphasis>
+<anchor xml:id="_a00335_source_1l00002"/>00002 
+<anchor xml:id="_a00335_source_1l00003"/><link linkend="_a00149_1ab9661c8e10293140db24d4b650785939">00003</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00335_1ab9661c8e10293140db24d4b650785939">InitVector</link>(int32_t**&#32;v,&#32;<link linkend="_a00152_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;len){
+<anchor xml:id="_a00335_source_1l00004"/>00004 &#32;&#32;&#32;&#32;*v&#32;=&#32;(int32_t*)&#32;malloc(<emphasis role="keyword">sizeof</emphasis>(int32_t)&#32;*&#32;len);
+<anchor xml:id="_a00335_source_1l00005"/>00005 
+<anchor xml:id="_a00335_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_a00335_source_1l00007"/>00007 }
+<anchor xml:id="_a00335_source_1l00008"/>00008 
+<anchor xml:id="_a00335_source_1l00009"/><link linkend="_a00149_1ae000d0d19cf867f1ad39325993763205">00009</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00335_1ae000d0d19cf867f1ad39325993763205">DeleteVector</link>(<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v){
+<anchor xml:id="_a00335_source_1l00010"/>00010 &#32;&#32;&#32;&#32;free(v);
+<anchor xml:id="_a00335_source_1l00011"/>00011 }
+<anchor xml:id="_a00335_source_1l00012"/>00012 
+<anchor xml:id="_a00335_source_1l00013"/>00013 
+<anchor xml:id="_a00335_source_1l00014"/><link linkend="_a00149_1a2765cafcf739497b0ee51e705590039a">00014</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00335_1a2765cafcf739497b0ee51e705590039a">AddVectors</link>(<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v1,&#32;<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v2,&#32;<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;res,&#32;<link linkend="_a00152_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size){
+<anchor xml:id="_a00335_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++){
+<anchor xml:id="_a00335_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res[i]&#32;=&#32;v1[i]&#32;+&#32;v2[i];
+<anchor xml:id="_a00335_source_1l00017"/>00017 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00335_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_a00335_source_1l00019"/>00019 }
+<anchor xml:id="_a00335_source_1l00020"/>00020 
+<anchor xml:id="_a00335_source_1l00021"/><link linkend="_a00149_1a06b11149235c5a4fe6c877aed33f55f9">00021</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00335_1a06b11149235c5a4fe6c877aed33f55f9">SubtractVectors</link>(<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v1,&#32;<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v2,&#32;<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;res,&#32;<link linkend="_a00152_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size){
+<anchor xml:id="_a00335_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++){
+<anchor xml:id="_a00335_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res[i]&#32;=&#32;v1[i]&#32;-&#32;v2[i];
+<anchor xml:id="_a00335_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00335_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_a00335_source_1l00026"/>00026 }
+<anchor xml:id="_a00335_source_1l00027"/>00027 
+<anchor xml:id="_a00335_source_1l00028"/><link linkend="_a00149_1a46ade3794d4b4d5cc1eaf983858507ef">00028</link> int64_t&#32;<link linkend="_a00335_1a46ade3794d4b4d5cc1eaf983858507ef">InnerProduct</link>(int32_t*&#32;v1,&#32;int32_t*&#32;v2,&#32;<link linkend="_a00152_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size){
+<anchor xml:id="_a00335_source_1l00029"/>00029 &#32;&#32;&#32;&#32;int64_t&#32;sum&#32;=&#32;0;
+<anchor xml:id="_a00335_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++){
+<anchor xml:id="_a00335_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sum&#32;+=&#32;(int64_t)&#32;v1[i]&#32;*&#32;v2[i];
+<anchor xml:id="_a00335_source_1l00032"/>00032 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00335_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sum;
+<anchor xml:id="_a00335_source_1l00034"/>00034 }
+<anchor xml:id="_a00335_source_1l00035"/>00035 
+<anchor xml:id="_a00335_source_1l00036"/>00036 
+<anchor xml:id="_a00335_source_1l00037"/><link linkend="_a00149_1a2c84697470e743f7c69fffbe7e0f92bc">00037</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00335_1a2c84697470e743f7c69fffbe7e0f92bc">ScalarProduct</link>(<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v,&#32;<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;scalar,&#32;<link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;res,&#32;<link linkend="_a00152_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size){
+<anchor xml:id="_a00335_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;size;&#32;i++){
+<anchor xml:id="_a00335_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;res[i]&#32;=&#32;v[i]&#32;*&#32;scalar;
+<anchor xml:id="_a00335_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00335_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_a00335_source_1l00042"/>00042 }
+</programlisting></section>

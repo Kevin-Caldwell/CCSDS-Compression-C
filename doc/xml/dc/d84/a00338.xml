@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dc/d84/a00338" kind="file" language="C++">
+    <compoundname>varIntFile_IO.c</compoundname>
+    <includes refid="d7/d06/a00131" local="yes">files/varIntFile_IO.h</includes>
+    <includes refid="de/d76/a00134" local="yes">files/logs.h</includes>
+    <includes refid="d2/df5/a00137" local="yes">constants/global_constants.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>constants/global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>files/logs.h</label>
+        <link refid="de/d76/a00134"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>files/varIntFile_IO.h</label>
+        <link refid="d7/d06/a00131"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/varIntFile_IO.c</label>
+        <link refid="dc/d84/a00338"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d84/a00338_1adcef86e6a920a4f9ff207599aa37b7f6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* file_modes_arguments[]</definition>
+        <argsstring>[]</argsstring>
+        <name>file_modes_arguments</name>
+        <initializer>= {&quot;rb&quot;, &quot;wb&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/varIntFile_IO.c" line="5" column="6" bodyfile="src/varIntFile_IO.c" bodystart="5" bodyend="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _VUF_Clean</definition>
+        <argsstring>(VUF *stream, char full)</argsstring>
+        <name>_VUF_Clean</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>full</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/varIntFile_IO.c" line="7" column="6" bodyfile="src/varIntFile_IO.c" bodystart="7" bodyend="12"/>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <referencedby refid="d7/d06/a00131_1a744805d2f1db68081efadb9892a297e9" compoundref="dc/d84/a00338" startline="42" endline="71">VUF_append</referencedby>
+        <referencedby refid="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" compoundref="dc/d84/a00338" startline="14" endline="40">VUF_initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d84/a00338_1a07ca21a87dab6f536b7f4d69050f5602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int VUF_initialize</definition>
+        <argsstring>(VUF *stream, const char *file_name, file_modes io_mode)</argsstring>
+        <name>VUF_initialize</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref></type>
+          <declname>io_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/varIntFile_IO.c" line="14" column="5" bodyfile="src/varIntFile_IO.c" bodystart="14" bodyend="40"/>
+        <references refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" compoundref="dc/d84/a00338" startline="7" endline="12">_VUF_Clean</references>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" compoundref="d7/d06/a00131" startline="21">BUFFER_SIZE</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" compoundref="dc/d5d/a00278" startline="22" endline="24">F_READ</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" compoundref="d2/df5/a00137" startline="43">FILE_ACCESS_ERROR</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="d9/d95/a00400_1aec46119c1ac94a666f08c86543006ed0" compoundref="d7/d06/a00131" startline="35">VarUnsignedIntFile::io_mode</references>
+        <references refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</references>
+        <references refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8" compoundref="d7/d06/a00131" startline="23">READ_BINARY</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <references refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc" compoundref="d7/d06/a00131" startline="23">WRITE_BINARY</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="d3/d8b/a00059_1aaac61ccbc34855ae728a8a9d45db1105" compoundref="d8/d23/a00326" startline="65" endline="87">testVUF_Read</referencedby>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d84/a00338_1a744805d2f1db68081efadb9892a297e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int VUF_append</definition>
+        <argsstring>(VUF *stream, uint32_t data, uint32_t length)</argsstring>
+        <name>VUF_append</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/varIntFile_IO.c" line="42" column="5" bodyfile="src/varIntFile_IO.c" bodystart="42" bodyend="71"/>
+        <references refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" compoundref="dc/d84/a00338" startline="7" endline="12">_VUF_Clean</references>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" compoundref="d7/d06/a00131" startline="21">BUFFER_SIZE</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1a94d988ea4ce93357f56c0191584246a6" compoundref="dc/d5d/a00278" startline="18" endline="20">F_WRITE</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" compoundref="da/d2a/a00086" startline="15">L_SHIFT</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d84/a00338_1aafa9034f88afca6a726a84673d063889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t VUF_read_stack</definition>
+        <argsstring>(VUF *stream, uint32_t length)</argsstring>
+        <name>VUF_read_stack</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/varIntFile_IO.c" line="73" column="10" bodyfile="src/varIntFile_IO.c" bodystart="73" bodyend="95"/>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" compoundref="d7/d06/a00131" startline="21">BUFFER_SIZE</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" compoundref="dc/d5d/a00278" startline="22" endline="24">F_READ</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="d3/d8b/a00059_1aaac61ccbc34855ae728a8a9d45db1105" compoundref="d8/d23/a00326" startline="65" endline="87">testVUF_Read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d84/a00338_1ad54b8d6492e4c149c7f1232e3eda58be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int VUF_close</definition>
+        <argsstring>(VUF *stream)</argsstring>
+        <name>VUF_close</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/varIntFile_IO.c" line="97" column="5" bodyfile="src/varIntFile_IO.c" bodystart="97" bodyend="103"/>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="d3/d8b/a00059_1aaac61ccbc34855ae728a8a9d45db1105" compoundref="d8/d23/a00326" startline="65" endline="87">testVUF_Read</referencedby>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d06/a00131" kindref="compound">files/varIntFile_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d76/a00134" kindref="compound">files/logs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/df5/a00137" kindref="compound">constants/global_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="dc/d84/a00338_1adcef86e6a920a4f9ff207599aa37b7f6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="dc/d84/a00338_1adcef86e6a920a4f9ff207599aa37b7f6" kindref="member">file_modes_arguments</ref>[]<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;rb&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;wb&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" kindref="member">_VUF_Clean</ref>(<ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>full){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start<sp/>=<sp/>!full;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(start;<sp/>start<sp/>&lt;<sp/><ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>;<sp/>start++){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[start]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d84/a00338_1a07ca21a87dab6f536b7f4d69050f5602" kindref="member">VUF_initialize</ref>(<ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref><sp/>io_mode){</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>File<sp/>IO<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1aec46119c1ac94a666f08c86543006ed0" kindref="member">io_mode</ref><sp/>=<sp/>io_mode;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref><sp/>=<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(file_name,<sp/>io_mode);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!stream-&gt;<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d76/a00134_1ad795690a809192117add6898be812267" kindref="member">Log_error</ref>(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>open<sp/>File&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" kindref="member">FILE_ACCESS_ERROR</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//printf(&quot;stream<sp/>opening:<sp/>%x,<sp/>%d,<sp/>%s.\n&quot;,<sp/>(unsigned<sp/>int)<sp/>stream-&gt;fs,<sp/>(unsigned)<sp/>stream-&gt;io_mode,<sp/>file_modes_arguments[stream-&gt;io_mode]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(io_mode<sp/>==<sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc" kindref="member">WRITE_BINARY</ref>){</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Empty<sp/>Buffer<sp/>for<sp/>write<sp/>requests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" kindref="member">_VUF_Clean</ref>(stream,<sp/>1);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(io_mode<sp/>==<sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8" kindref="member">READ_BINARY</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Full<sp/>Buffer<sp/>for<sp/>faster<sp/>read<sp/>requests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" kindref="member">F_READ</ref>(stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>,<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>,<sp/><ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>,<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="d7/d06/a00131_1a744805d2f1db68081efadb9892a297e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d84/a00338_1a744805d2f1db68081efadb9892a297e9" kindref="member">VUF_append</ref>(<ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/>uint32_t<sp/>data,<sp/>uint32_t<sp/>length){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>+=<sp/>length;<sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>Bit<sp/>Pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>clean<sp/>=<sp/>(data<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(<ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>length))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;&gt;<sp/>(<ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>length);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>]<sp/>|=<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" kindref="member">L_SHIFT</ref>(clean,<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Variable<sp/>Bit<sp/>Encoding<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>&gt;=<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>)){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>shift_index<sp/>=<sp/>2<sp/>*<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[++stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>]<sp/>|=<sp/><ref refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" kindref="member">L_SHIFT</ref>(data,<sp/>shift_index);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>-=<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>Check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>==<sp/><ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref><sp/>-<sp/>1){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>entire<sp/>filled<sp/>buffer<sp/>to<sp/>File</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1a94d988ea4ce93357f56c0191584246a6" kindref="member">F_WRITE</ref>(stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>,<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>,<sp/><ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref><sp/>-<sp/>1,<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pull<sp/>remaining<sp/>data<sp/>from<sp/>Tail<sp/>to<sp/>Head</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[0]<sp/>=<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" kindref="member">_VUF_Clean</ref>(stream,<sp/>0);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="d7/d06/a00131_1aafa9034f88afca6a726a84673d063889" refkind="member"><highlight class="normal">uint32_t<sp/><ref refid="dc/d84/a00338_1aafa9034f88afca6a726a84673d063889" kindref="member">VUF_read_stack</ref>(<ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/>uint32_t<sp/>length){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>varInt<sp/>=<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>]<sp/>&lt;&lt;<sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>+=<sp/>length;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>varInt<sp/>&gt;&gt;=<sp/>(<ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>length);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Reading,<sp/>%08X\n&quot;</highlight><highlight class="normal">,<sp/>varInt);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>&gt;=<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>){</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>-=<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>++;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>varInt<sp/>+=<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>]<sp/>&gt;&gt;<sp/>((2<sp/>*<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>length)<sp/>%<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>&gt;=<sp/><ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref><sp/>-<sp/>1){</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[0]<sp/>=<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[<ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref><sp/>-<sp/>1];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" kindref="member">F_READ</ref>(stream-&gt;<ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref><sp/>+<sp/>1,<sp/><ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref>,<sp/><ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>,<sp/>stream-&gt;<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%08X\n&quot;</highlight><highlight class="normal">,<sp/>varInt<sp/>&gt;&gt;<sp/>(<ref refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" kindref="member">BUFFER_SIZE</ref><sp/>-<sp/>length));</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>varInt;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="d7/d06/a00131_1ad54b8d6492e4c149c7f1232e3eda58be" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d84/a00338_1ad54b8d6492e4c149c7f1232e3eda58be" kindref="member">VUF_close</ref>(<ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(stream-&gt;<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/varIntFile_IO.c"/>
+  </compounddef>
+</doxygen>

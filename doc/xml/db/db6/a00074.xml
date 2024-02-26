@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="db/db6/a00074" kind="file" language="C++">
+    <compoundname>cache_predictor.h</compoundname>
+    <includes refid="da/d1e/a00149" local="yes">math/linear_algebra.h</includes>
+    <includes refid="d3/d00/a00113" local="yes">dst/image.h</includes>
+    <includedby refid="df/d98/a00107" local="yes">include/predictor/local_sum.h</includedby>
+    <includedby refid="d1/dc1/a00092" local="yes">include/predictor/sample_representative.h</includedby>
+    <includedby refid="df/d95/a00299" local="yes">src/cache_predictor.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/cache/cache_predictor.h</label>
+        <link refid="db/db6/a00074"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math/linear_algebra.h</label>
+        <link refid="da/d1e/a00149"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/cache/cache_predictor.h</label>
+        <link refid="db/db6/a00074"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/decompressor/reconstructor.h</label>
+        <link refid="d4/d81/a00110"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/predictor/local_differences.h</label>
+        <link refid="d4/d3a/a00101"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/predictor/local_sum.h</label>
+        <link refid="df/d98/a00107"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>include/predictor/predictor.h</label>
+        <link refid="d0/dc2/a00104"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/predictor/quantizer.h</label>
+        <link refid="d1/d44/a00098"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/predictor/sample_representative.h</label>
+        <link refid="d1/dc1/a00092"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>include/predictor/weights.h</label>
+        <link refid="d9/d77/a00095"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="8">
+        <label>main/decompressor.c</label>
+        <link refid="d5/de0/a00050"/>
+      </node>
+      <node id="12">
+        <label>main/image_handler.c</label>
+        <link refid="dc/dee/a00053"/>
+      </node>
+      <node id="20">
+        <label>src/cache_predictor.c</label>
+        <link refid="df/d95/a00299"/>
+      </node>
+      <node id="13">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+      <node id="19">
+        <label>src/local_differences.c</label>
+        <link refid="da/de0/a00317"/>
+      </node>
+      <node id="21">
+        <label>src/local_sum.c</label>
+        <link refid="d2/d04/a00281"/>
+      </node>
+      <node id="14">
+        <label>src/predictor.c</label>
+        <link refid="d8/d8e/a00344"/>
+      </node>
+      <node id="17">
+        <label>src/quantizer.c</label>
+        <link refid="d6/d7f/a00287"/>
+      </node>
+      <node id="9">
+        <label>src/reconstructor.c</label>
+        <link refid="d3/d93/a00341"/>
+      </node>
+      <node id="18">
+        <label>src/sample_representative.c</label>
+        <link refid="db/d7b/a00296"/>
+      </node>
+      <node id="16">
+        <label>src/weights.c</label>
+        <link refid="db/dc3/a00284"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="db/d7e/a00372" prot="public">PredictorCache</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="db/db6/a00074_1a14c9bf8f6caac29a6a4f388d6e638409" prot="public" static="no">
+        <type>struct <ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref></type>
+        <definition>typedef struct PredictorCache PredictorCache</definition>
+        <argsstring></argsstring>
+        <name>PredictorCache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="36" column="29" bodyfile="include/cache/cache_predictor.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="db/db6/a00074_1a01a11e19b54bb1195243f037c3d93b7b" prot="public" static="no" extern="yes" mutable="no">
+        <type>char *</type>
+        <definition>char* CacheFiles[]</definition>
+        <argsstring>[]</argsstring>
+        <name>CacheFiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="15" column="13" bodyfile="src/cache_predictor.c" bodystart="6" bodyend="12" declfile="include/cache/cache_predictor.h" declline="15" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/db6/a00074_1a8dc01c7173e49a14ae38a59d91b9d669" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref> *</type>
+        <definition>PredictorCache* global_cache</definition>
+        <argsstring></argsstring>
+        <name>global_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="38" column="23" bodyfile="src/cache_predictor.c" bodystart="5" bodyend="-1" declfile="include/cache/cache_predictor.h" declline="38" declcolumn="23"/>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d4/d3a/a00101_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="da/de0/a00317" startline="82" endline="99">PredictedCentralLocalDifference</referencedby>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="db/db6/a00074_1a400e6cd529a6a1ca3901be57ab88fb63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int InitializePredictorCache</definition>
+        <argsstring>(PredictorCache **p_cache, image *hIMG)</argsstring>
+        <name>InitializePredictorCache</name>
+        <param>
+          <type><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref> **</type>
+          <declname>p_cache</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="40" column="5" bodyfile="src/cache_predictor.c" bodystart="16" bodyend="41" declfile="include/cache/cache_predictor.h" declline="40" declcolumn="5"/>
+        <references refid="db/d7e/a00372_1a847490dd84d456f3e80b13a3be6ddfac" compoundref="db/db6/a00074" startline="33">PredictorCache::cache_space</references>
+        <references refid="d9/d77/a00095_1adcc753ae7048085817bd2c37b471f739" compoundref="db/dc3/a00284" startline="4" endline="33">InitializeWeights</references>
+        <references refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" compoundref="d0/d39/a00314" startline="45" endline="53">InitImage</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <references refid="db/d7e/a00372_1a8ffc318fbdca60414a190de33e244826" compoundref="db/db6/a00074" startline="34">PredictorCache::weights</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/db6/a00074_1aca0d39cbaa7b58e1e75c93010c1a7750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DeletePredictorCache</definition>
+        <argsstring>(PredictorCache *p_cache)</argsstring>
+        <name>DeletePredictorCache</name>
+        <param>
+          <type><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref> *</type>
+          <declname>p_cache</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="42" column="5" bodyfile="src/cache_predictor.c" bodystart="43" bodyend="52" declfile="include/cache/cache_predictor.h" declline="42" declcolumn="5"/>
+        <references refid="db/d7e/a00372_1a847490dd84d456f3e80b13a3be6ddfac" compoundref="db/db6/a00074" startline="33">PredictorCache::cache_space</references>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Deprecated, Used as a buffer for debugging and temporary storage. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Kevin Caldwell </para>
+</simplesect>
+<xrefsect id="db/ddc/a00353_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para>No Bugs </para>
+</xrefdescription></xrefsect><xrefsect id="d0/dc3/a00354_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Large Memory Usage, ineffective for debug. </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CACHE_PREDICTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CACHE_PREDICTOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="da/d1e/a00149" kindref="compound">math/linear_algebra.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d00/a00113" kindref="compound">dst/image.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="db/db6/a00074_1a01a11e19b54bb1195243f037c3d93b7b" kindref="member">CacheFiles</ref>[];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="db/d7e/a00372" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref>{</highlight></codeline>
+<codeline lineno="33" refid="db/d7e/a00372_1a847490dd84d456f3e80b13a3be6ddfac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/><ref refid="db/d7e/a00372_1a847490dd84d456f3e80b13a3be6ddfac" kindref="member">cache_space</ref>[1];</highlight></codeline>
+<codeline lineno="34" refid="db/d7e/a00372_1a8ffc318fbdca60414a190de33e244826" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t*<sp/><ref refid="db/d7e/a00372_1a8ffc318fbdca60414a190de33e244826" kindref="member">weights</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36" refid="db/db6/a00074_1a14c9bf8f6caac29a6a4f388d6e638409" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref><sp/><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref>*<sp/><ref refid="db/db6/a00074_1a8dc01c7173e49a14ae38a59d91b9d669" kindref="member">global_cache</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/db6/a00074_1a400e6cd529a6a1ca3901be57ab88fb63" kindref="member">InitializePredictorCache</ref>(<ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref>**<sp/>p_cache,<sp/><ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>hIMG);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/db6/a00074_1aca0d39cbaa7b58e1e75c93010c1a7750" kindref="member">DeletePredictorCache</ref>(<ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref>*<sp/>p_cache);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CACHE_PREDICTOR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/cache/cache_predictor.h"/>
+  </compounddef>
+</doxygen>

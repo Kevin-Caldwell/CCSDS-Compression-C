@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d2/d1f/a00083" kind="file" language="C++">
+    <compoundname>encoder_helper_functions.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="d1/d09/a00077" local="yes">include/encoder/header.h</includedby>
+    <includedby refid="d9/dd6/a00272" local="yes">src/encoder_body.c</includedby>
+    <includedby refid="dd/dd7/a00260" local="yes">src/encoder_helper.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/encoder/encoder_helper_functions.h</label>
+        <link refid="d2/d1f/a00083"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/encoder/encoder_helper_functions.h</label>
+        <link refid="d2/d1f/a00083"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/encoder/header.h</label>
+        <link refid="d1/d09/a00077"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="5">
+        <label>main/image_handler.c</label>
+        <link refid="dc/dee/a00053"/>
+      </node>
+      <node id="8">
+        <label>src/encoder_body.c</label>
+        <link refid="d9/dd6/a00272"/>
+      </node>
+      <node id="9">
+        <label>src/encoder_helper.c</label>
+        <link refid="dd/dd7/a00260"/>
+      </node>
+      <node id="6">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+      <node id="7">
+        <label>src/header.c</label>
+        <link refid="dc/d50/a00332"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d2/d1f/a00083_1aa268d136b017ba11fca74d167e36dd34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrintBinary</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>PrintBinary</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d2/d1f/a00083" kindref="compound">encoder_helper_functions.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+Global Functions for Encoding the image</para>
+<para>Features Print a byte in Binary Encode n bit data into m bit buffer, n &lt; 8, data &lt; 8</para>
+<para>Dependencies inttypes.h stdio.h </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/encoder_helper_functions.h" line="21" column="6" bodyfile="src/encoder_helper.c" bodystart="3" bodyend="10" declfile="include/encoder/encoder_helper_functions.h" declline="21" declcolumn="6"/>
+        <referencedby refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Encode</definition>
+        <argsstring>(uint8_t *destination, uint8_t index, uint8_t data, uint8_t length)</argsstring>
+        <name>Encode</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/encoder_helper_functions.h" line="23" column="6" bodyfile="src/encoder_helper.c" bodystart="12" bodyend="17" declfile="include/encoder/encoder_helper_functions.h" declline="23" declcolumn="6"/>
+        <references refid="dd/dd7/a00260_1aa268d136b017ba11fca74d167e36dd34" compoundref="dd/dd7/a00260" startline="3" endline="10">PrintBinary</references>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+        <referencedby refid="d1/d09/a00077_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" compoundref="dc/d50/a00332" startline="98" endline="104">PrepareSampleAdaptiveEntropyCoder</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ENCODER_HELPER_FUNCTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENCODER_HELPER_FUNCTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/d1f/a00083_1aa268d136b017ba11fca74d167e36dd34" kindref="member">PrintBinary</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(uint8_t*<sp/>destination,<sp/>uint8_t<sp/>index,<sp/>uint8_t<sp/>data,<sp/>uint8_t<sp/>length);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ENCODER_HELPER_FUNCTIONS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/encoder/encoder_helper_functions.h"/>
+  </compounddef>
+</doxygen>

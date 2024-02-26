@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['main_0',['main',['../d1/d3a/_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../da/db2/compressor_8c.html#a048af25ea3eb0571ab780e44e221650e',1,'main(int argInt, char **argS):&#160;compressor.c'],['../df/dee/decompressor_8c.html#a048af25ea3eb0571ab780e44e221650e',1,'main(int argInt, char **argS):&#160;decompressor.c'],['../d1/d6e/image__handler_8c.html#a048af25ea3eb0571ab780e44e221650e',1,'main(int argInt, char **argS):&#160;image_handler.c']]],
+  ['manhattan2_1',['manhattan2',['../d2/de2/math__functions_8h.html#adf11110e70a4ca4a966622288d194681',1,'Manhattan2(dim2 pt1, dim2 pt2):&#160;math_functions.c'],['../d3/d2d/math__functions_8c.html#adf11110e70a4ca4a966622288d194681',1,'Manhattan2(dim2 pt1, dim2 pt2):&#160;math_functions.c']]],
+  ['manhattan3_2',['manhattan3',['../d2/de2/math__functions_8h.html#ace80df346398f6e153166e87cee41d47',1,'Manhattan3(dim3 pt1, dim3 pt2):&#160;math_functions.c'],['../d3/d2d/math__functions_8c.html#ace80df346398f6e153166e87cee41d47',1,'Manhattan3(dim3 pt1, dim3 pt2):&#160;math_functions.c']]],
+  ['mappedquantizerindex_3',['mappedquantizerindex',['../d1/d38/quantizer_8h.html#a1f491e0a435427669942c932394d7c1a',1,'MappedQuantizerIndex(int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample):&#160;quantizer.c'],['../dc/df1/quantizer_8c.html#a1f491e0a435427669942c932394d7c1a',1,'MappedQuantizerIndex(int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample):&#160;quantizer.c']]],
+  ['mapper_4',['mapper',['../d0/d0c/namespacecompression.html#a37ffa8d9496cef9a8e698c70ada1b0a7',1,'compression.mapper()'],['../d1/d32/perlin__noise_8c.html#a5641d0f9a07f405360fc111bf0e3e7d4',1,'mapper(float val):&#160;perlin_noise.c']]],
+  ['mintheta_5',['minTheta',['../dc/df1/quantizer_8c.html#ae831d86258458d0a68d3d2143db43d19',1,'quantizer.c']]]
+];

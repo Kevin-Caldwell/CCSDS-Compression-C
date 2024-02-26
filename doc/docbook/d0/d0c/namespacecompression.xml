@@ -1,0 +1,507 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacecompression" xml:lang="en-US">
+<title>compression Namespace Reference</title>
+<indexterm><primary>compression</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacecompression_1a7251716b703096793ed329f6b8469300">Ps</link> (z)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link> (x, y, z, data)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a49ef318f74fbe8e8dd91da6f85f2c3e8">local_diff_vector</link> (x, y, z, data)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a49c6c06e2ea0cfc20fce6d6edb0c72fa">init_weight_vector</link> (z)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a148cf1e7cc2fd2f23b569009afd6d3c1">prediction</link> (ld_vector, weight_vector, x, y, z, data)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1aff3436357165d0b07392b7d032fd13bc">updated_weight_vector</link> (s_tilde, weight_vector, ld_vector, x, y, z, data)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a37ffa8d9496cef9a8e698c70ada1b0a7">mapper</link> (delta, s_hat, s_tilde)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a11e878c5de785af8c9c14a5a86a0354d">predictor</link> (data)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1ae875711385174553f6db26923ce85874">predictor_debug</link> (data)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a6a4af5f40ce35a453cd8e214f546734f">GPO2</link> (k, j)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1ac2c565a00560593a9177b1aad41e0d3c">encoder</link> (mapped_delta)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a0b0449d8b52604ab8eed2bfa8c7c4277">increment_xyz</link> (x, y, z, <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>, <link linkend="_constants_8h_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>, <link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a78bff45f9915c892f4cf129d2fd27f55">inv_GPO2</link> (k, encoded, i)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a13bd9527fe572001978b40411c0868be">decoder</link> (encoded, <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>, <link linkend="_constants_8h_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>, <link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a1f2ff95dd2ae77e1fd9c720e7873c5c6">unmapper</link> (mapped_delta, s_hat, s_tilde)</para>
+</listitem>
+            <listitem><para>np.array <link linkend="_namespacecompression_1a6ac9172b17fab1182e21fbc228069437">unpredictor</link> (np.array mapped, int <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>, int <link linkend="_constants_8h_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>, int <link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_namespacecompression_1abf6d0ccec2f5157184071729f129de19">D</link> = 14</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a80970133e7290ddaa15b6d949fc99420">S_MIN</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a04632c156a04ad172a367f2760582928">S_MAX</link> = 2**(<link linkend="_namespacecompression_1abf6d0ccec2f5157184071729f129de19">D</link>) - 1</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1af02faf18c4b6fb6841abaf0b3142cc92">S_MID</link> = 2**(<link linkend="_namespacecompression_1abf6d0ccec2f5157184071729f129de19">D</link> - 1)</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1aef94be98e2c9e4a4dece75f60ca9792c">P</link> = 3</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6">W_RES</link> = 19</para>
+</listitem>
+            <listitem><para><link linkend="_namespacecompression_1a999bcfcc11e2794539308d5015455f59">W_MIN</link> = -(2**(<link linkend="_namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6">W_RES</link> + 2))</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1add63171ca968cbd5ca4d60dfbf9a2746">W_MAX</link> = 2**(<link linkend="_namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6">W_RES</link> + 2) - 1</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a3d90133d3051fbc4816d02efd9566d8e">R</link> = 35</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a5e78dbd5fd0fc01ba7b98dd15e27221e">M</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a6238c0ecdac57d88d1f30259c60238cc">V_MIN</link> = -6</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1ae2de9b8731e1c54a74579610837e59c0">V_MAX</link> = 9</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1aa911c208b6f29485ce4b65c73b7f72f8">T_INC</link> = 2**4</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a633454f54a1d7f2439a65666d71f9271">U_MAX</link> = 8</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a7880c4643e340683b530ce1609a8fd47">GAMMA_0</link> = 1</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a2689c4b3931025b79053532a5f1b0a85">K</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1a3272087e7728ef865ea990a98baf8395">GAMMA_STAR</link> = 5</para>
+</listitem>
+            <listitem><para>int <link linkend="_namespacecompression_1aa92b3873c7c4a40451e43cc6b2cd53f1">K_ZPRIME</link> = <link linkend="_namespacecompression_1a2689c4b3931025b79053532a5f1b0a85">K</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacecompression_1a13bd9527fe572001978b40411c0868be"/><section>
+    <title>decoder()</title>
+<indexterm><primary>decoder</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>decoder</secondary></indexterm>
+<para><computeroutput>decoder ( encoded,  Nx,  Ny,  Nz)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00305">305</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a13bd9527fe572001978b40411c0868be_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1ac2c565a00560593a9177b1aad41e0d3c"/><section>
+    <title>encoder()</title>
+<indexterm><primary>encoder</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>encoder</secondary></indexterm>
+<para><computeroutput>encoder ( mapped_delta)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00225">225</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_ac2c565a00560593a9177b1aad41e0d3c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a6a4af5f40ce35a453cd8e214f546734f"/><section>
+    <title>GPO2()</title>
+<indexterm><primary>GPO2</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>GPO2</secondary></indexterm>
+<para><computeroutput>GPO2 ( k,  j)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00212">212</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a6a4af5f40ce35a453cd8e214f546734f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a6a4af5f40ce35a453cd8e214f546734f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a0b0449d8b52604ab8eed2bfa8c7c4277"/><section>
+    <title>increment_xyz()</title>
+<indexterm><primary>increment_xyz</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>increment_xyz</secondary></indexterm>
+<para><computeroutput>increment_xyz ( x,  y,  z,  Nx,  Ny,  Nz)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00275">275</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a0b0449d8b52604ab8eed2bfa8c7c4277_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a49c6c06e2ea0cfc20fce6d6edb0c72fa"/><section>
+    <title>init_weight_vector()</title>
+<indexterm><primary>init_weight_vector</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>init_weight_vector</secondary></indexterm>
+<para><computeroutput>init_weight_vector ( z)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00081">81</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a49c6c06e2ea0cfc20fce6d6edb0c72fa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a78bff45f9915c892f4cf129d2fd27f55"/><section>
+    <title>inv_GPO2()</title>
+<indexterm><primary>inv_GPO2</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>inv_GPO2</secondary></indexterm>
+<para><computeroutput>inv_GPO2 ( k,  encoded,  i)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00285">285</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a78bff45f9915c892f4cf129d2fd27f55_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a78bff45f9915c892f4cf129d2fd27f55_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a49ef318f74fbe8e8dd91da6f85f2c3e8"/><section>
+    <title>local_diff_vector()</title>
+<indexterm><primary>local_diff_vector</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>local_diff_vector</secondary></indexterm>
+<para><computeroutput>local_diff_vector ( x,  y,  z,  data)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00054">54</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a49ef318f74fbe8e8dd91da6f85f2c3e8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a49ef318f74fbe8e8dd91da6f85f2c3e8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a7f0bae725f24b8dae34a48b3cbe35d49"/><section>
+    <title>local_sum()</title>
+<indexterm><primary>local_sum</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>local_sum</secondary></indexterm>
+<para><computeroutput>local_sum ( x,  y,  z,  data)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00038">38</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a7f0bae725f24b8dae34a48b3cbe35d49_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a37ffa8d9496cef9a8e698c70ada1b0a7"/><section>
+    <title>mapper()</title>
+<indexterm><primary>mapper</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>mapper</secondary></indexterm>
+<para><computeroutput>mapper ( delta,  s_hat,  s_tilde)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00147">147</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a37ffa8d9496cef9a8e698c70ada1b0a7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a148cf1e7cc2fd2f23b569009afd6d3c1"/><section>
+    <title>prediction()</title>
+<indexterm><primary>prediction</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>prediction</secondary></indexterm>
+<para><computeroutput>prediction ( ld_vector,  weight_vector,  x,  y,  z,  data)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00096">96</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a148cf1e7cc2fd2f23b569009afd6d3c1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a148cf1e7cc2fd2f23b569009afd6d3c1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a11e878c5de785af8c9c14a5a86a0354d"/><section>
+    <title>predictor()</title>
+<indexterm><primary>predictor</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>predictor</secondary></indexterm>
+<para><computeroutput>predictor ( data)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00160">160</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a11e878c5de785af8c9c14a5a86a0354d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1ae875711385174553f6db26923ce85874"/><section>
+    <title>predictor_debug()</title>
+<indexterm><primary>predictor_debug</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>predictor_debug</secondary></indexterm>
+<para><computeroutput>predictor_debug ( data)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00187">187</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_ae875711385174553f6db26923ce85874_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a7251716b703096793ed329f6b8469300"/><section>
+    <title>Ps()</title>
+<indexterm><primary>Ps</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>Ps</secondary></indexterm>
+<para><computeroutput>Ps ( z)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00034">34</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a1f2ff95dd2ae77e1fd9c720e7873c5c6"/><section>
+    <title>unmapper()</title>
+<indexterm><primary>unmapper</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>unmapper</secondary></indexterm>
+<para><computeroutput>unmapper ( mapped_delta,  s_hat,  s_tilde)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00349">349</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a1f2ff95dd2ae77e1fd9c720e7873c5c6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1a6ac9172b17fab1182e21fbc228069437"/><section>
+    <title>unpredictor()</title>
+<indexterm><primary>unpredictor</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>unpredictor</secondary></indexterm>
+<para><computeroutput> np.array unpredictor (np.array mapped, int Nx, int Ny, int Nz)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00361">361</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_a6ac9172b17fab1182e21fbc228069437_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacecompression_1aff3436357165d0b07392b7d032fd13bc"/><section>
+    <title>updated_weight_vector()</title>
+<indexterm><primary>updated_weight_vector</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>updated_weight_vector</secondary></indexterm>
+<para><computeroutput>updated_weight_vector ( s_tilde,  weight_vector,  ld_vector,  x,  y,  z,  data)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00126">126</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_aff3436357165d0b07392b7d032fd13bc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d0c/namespacecompression_aff3436357165d0b07392b7d032fd13bc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacecompression_1abf6d0ccec2f5157184071729f129de19"/><section>
+    <title>D</title>
+<indexterm><primary>D</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>D</secondary></indexterm>
+<para><computeroutput>int D = 14</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00005">5</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a7880c4643e340683b530ce1609a8fd47"/><section>
+    <title>GAMMA_0</title>
+<indexterm><primary>GAMMA_0</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>GAMMA_0</secondary></indexterm>
+<para><computeroutput>int GAMMA_0 = 1</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00023">23</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a3272087e7728ef865ea990a98baf8395"/><section>
+    <title>GAMMA_STAR</title>
+<indexterm><primary>GAMMA_STAR</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>GAMMA_STAR</secondary></indexterm>
+<para><computeroutput>int GAMMA_STAR = 5</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00026">26</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a2689c4b3931025b79053532a5f1b0a85"/><section>
+    <title>K</title>
+<indexterm><primary>K</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>K</secondary></indexterm>
+<para><computeroutput>int K = 0</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00025">25</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1aa92b3873c7c4a40451e43cc6b2cd53f1"/><section>
+    <title>K_ZPRIME</title>
+<indexterm><primary>K_ZPRIME</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>K_ZPRIME</secondary></indexterm>
+<para><computeroutput>int K_ZPRIME = <link linkend="_namespacecompression_1a2689c4b3931025b79053532a5f1b0a85">K</link></computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00029">29</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a5e78dbd5fd0fc01ba7b98dd15e27221e"/><section>
+    <title>M</title>
+<indexterm><primary>M</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>M</secondary></indexterm>
+<para><computeroutput>int M = 0</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00015">15</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1aef94be98e2c9e4a4dece75f60ca9792c"/><section>
+    <title>P</title>
+<indexterm><primary>P</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>P</secondary></indexterm>
+<para><computeroutput>int P = 3</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00010">10</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a3d90133d3051fbc4816d02efd9566d8e"/><section>
+    <title>R</title>
+<indexterm><primary>R</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>R</secondary></indexterm>
+<para><computeroutput>int R = 35</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00014">14</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a04632c156a04ad172a367f2760582928"/><section>
+    <title>S_MAX</title>
+<indexterm><primary>S_MAX</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>S_MAX</secondary></indexterm>
+<para><computeroutput>int S_MAX = 2**(<link linkend="_namespacecompression_1abf6d0ccec2f5157184071729f129de19">D</link>) - 1</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00007">7</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1af02faf18c4b6fb6841abaf0b3142cc92"/><section>
+    <title>S_MID</title>
+<indexterm><primary>S_MID</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>S_MID</secondary></indexterm>
+<para><computeroutput>int S_MID = 2**(<link linkend="_namespacecompression_1abf6d0ccec2f5157184071729f129de19">D</link> - 1)</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00008">8</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a80970133e7290ddaa15b6d949fc99420"/><section>
+    <title>S_MIN</title>
+<indexterm><primary>S_MIN</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>S_MIN</secondary></indexterm>
+<para><computeroutput>int S_MIN = 0</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00006">6</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1aa911c208b6f29485ce4b65c73b7f72f8"/><section>
+    <title>T_INC</title>
+<indexterm><primary>T_INC</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>T_INC</secondary></indexterm>
+<para><computeroutput>int T_INC = 2**4</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00019">19</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a633454f54a1d7f2439a65666d71f9271"/><section>
+    <title>U_MAX</title>
+<indexterm><primary>U_MAX</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>U_MAX</secondary></indexterm>
+<para><computeroutput>int U_MAX = 8</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00022">22</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1ae2de9b8731e1c54a74579610837e59c0"/><section>
+    <title>V_MAX</title>
+<indexterm><primary>V_MAX</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>V_MAX</secondary></indexterm>
+<para><computeroutput>int V_MAX = 9</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00018">18</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a6238c0ecdac57d88d1f30259c60238cc"/><section>
+    <title>V_MIN</title>
+<indexterm><primary>V_MIN</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>V_MIN</secondary></indexterm>
+<para><computeroutput>int V_MIN = -6</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00017">17</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1add63171ca968cbd5ca4d60dfbf9a2746"/><section>
+    <title>W_MAX</title>
+<indexterm><primary>W_MAX</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>W_MAX</secondary></indexterm>
+<para><computeroutput>int W_MAX = 2**(<link linkend="_namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6">W_RES</link> + 2) - 1</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00013">13</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1a999bcfcc11e2794539308d5015455f59"/><section>
+    <title>W_MIN</title>
+<indexterm><primary>W_MIN</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>W_MIN</secondary></indexterm>
+<para><computeroutput>W_MIN = -(2**(<link linkend="_namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6">W_RES</link> + 2))</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00012">12</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+<anchor xml:id="_namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6"/><section>
+    <title>W_RES</title>
+<indexterm><primary>W_RES</primary><secondary>compression</secondary></indexterm>
+<indexterm><primary>compression</primary><secondary>W_RES</secondary></indexterm>
+<para><computeroutput>int W_RES = 19</computeroutput></para><para>
+Definition at line <link linkend="_compression_8py_source_1l00011">11</link> of file <link linkend="_compression_8py_source">compression.py</link>.</para>
+</section>
+</section>
+</section>

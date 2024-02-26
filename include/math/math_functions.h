@@ -1,3 +1,10 @@
+/**
+ * math_functions.h
+ * @author @Kevin-Caldwell
+ * 
+ * Mathematical Helper Functions for use throughout code.
+*/
+
 #ifndef MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
 
@@ -41,8 +48,12 @@ enum RetVal{
 //typedef uint16_t PIXEL;
 
 
-/* Spatial Dimensions: x, y
-Spectral Band: z
+/**
+ * 3D Dimension Struct, used to describe size 
+ * and 3D-Indicies.
+ * 
+ * Spatial Dimensions: x, y
+ * Spectral Band: z
 */
 typedef struct dim3{
     DIM x;

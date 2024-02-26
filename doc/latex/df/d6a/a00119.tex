@@ -1,0 +1,155 @@
+\doxysection{include/dst/hash\+\_\+table.h File Reference}
+\hypertarget{a00119}{}\label{a00119}\index{include/dst/hash\_table.h@{include/dst/hash\_table.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for hash\+\_\+table.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a00376}{Hash\+Table}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00119_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\+\_\+\+CAPACITY}}~30
+\item 
+\#define \mbox{\hyperlink{a00119_a5145aca5cb4a65b79b24d162d6fd72eb}{KEY\+\_\+\+LENGTH}}~30
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{a00376}{Hash\+Table}} \mbox{\hyperlink{a00119_a8dea4341d1b1662a30ec89ea38da0c0c}{Hash\+Table}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00119_aecf492d271c7b0c50c1832371fb34c84}{Hash\+\_\+\+Initialize\+Hash\+Table}} (\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}hash)
+\item 
+int \mbox{\hyperlink{a00119_a0f96cedf42d4440115356ae74e627126}{Hash\+\_\+\+Delete\+Hash\+Table}} (\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}hash)
+\item 
+int \mbox{\hyperlink{a00119_af0c750fb9a54f590b713d6526ed263fc}{Hash\+\_\+\+Add\+Entry}} (\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}hash, const char \texorpdfstring{$\ast$}{*}name, int32\+\_\+t data)
+\item 
+int \mbox{\hyperlink{a00119_a7026562de200bd5e9813f101d9eb614b}{Hash\+\_\+\+Get\+Index}} (\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}hash, const char \texorpdfstring{$\ast$}{*}key)
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00119_a27578c1b5a3ab68d8f144ed86ea72cc2}{Hash\+\_\+\+Get\+Value}} (\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}hash, const char \texorpdfstring{$\ast$}{*}key)
+\item 
+int \mbox{\hyperlink{a00119_ae198aa5dfcbf0fa9e5fb885e34e08b0c}{Hash\+\_\+\+Set\+Value}} (\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}hash, const char \texorpdfstring{$\ast$}{*}key, int32\+\_\+t new\+\_\+data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{a00119_ac5ff60f58cdc7ee42543e2812a8cae47}\label{a00119_ac5ff60f58cdc7ee42543e2812a8cae47} 
+\index{hash\_table.h@{hash\_table.h}!HASH\_CAPACITY@{HASH\_CAPACITY}}
+\index{HASH\_CAPACITY@{HASH\_CAPACITY}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{HASH\_CAPACITY}{HASH\_CAPACITY}}
+{\footnotesize\ttfamily \#define HASH\+\_\+\+CAPACITY~30}
+
+\doxylink{a00119}{hash\+\_\+table.\+h} \begin{DoxyAuthor}{Authors}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Hash Table Implementation for Storing Constants. Uses Dynamically allocated memory for storage
+
+Dependencies stdlib inttypes string
+
+Features Initialization Deletion Add Entries Get Index Get and Set Value
+
+TODO Comments Statically Allocated Memory (High Priority) 
+
+Definition at line \mbox{\hyperlink{a00119_source_l00033}{33}} of file \mbox{\hyperlink{a00119_source}{hash\+\_\+table.\+h}}.
+
+\Hypertarget{a00119_a5145aca5cb4a65b79b24d162d6fd72eb}\label{a00119_a5145aca5cb4a65b79b24d162d6fd72eb} 
+\index{hash\_table.h@{hash\_table.h}!KEY\_LENGTH@{KEY\_LENGTH}}
+\index{KEY\_LENGTH@{KEY\_LENGTH}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{KEY\_LENGTH}{KEY\_LENGTH}}
+{\footnotesize\ttfamily \#define KEY\+\_\+\+LENGTH~30}
+
+
+
+Definition at line \mbox{\hyperlink{a00119_source_l00034}{34}} of file \mbox{\hyperlink{a00119_source}{hash\+\_\+table.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{a00119_a8dea4341d1b1662a30ec89ea38da0c0c}\label{a00119_a8dea4341d1b1662a30ec89ea38da0c0c} 
+\index{hash\_table.h@{hash\_table.h}!HashTable@{HashTable}}
+\index{HashTable@{HashTable}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{HashTable}{HashTable}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a00376}{Hash\+Table}} \mbox{\hyperlink{a00376}{Hash\+Table}}}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00119_af0c750fb9a54f590b713d6526ed263fc}\label{a00119_af0c750fb9a54f590b713d6526ed263fc} 
+\index{hash\_table.h@{hash\_table.h}!Hash\_AddEntry@{Hash\_AddEntry}}
+\index{Hash\_AddEntry@{Hash\_AddEntry}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{Hash\_AddEntry()}{Hash\_AddEntry()}}
+{\footnotesize\ttfamily int Hash\+\_\+\+Add\+Entry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{hash,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{name,  }\item[{int32\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00266_source_l00015}{15}} of file \mbox{\hyperlink{a00266_source}{hash\+\_\+table.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00119_a0f96cedf42d4440115356ae74e627126}\label{a00119_a0f96cedf42d4440115356ae74e627126} 
+\index{hash\_table.h@{hash\_table.h}!Hash\_DeleteHashTable@{Hash\_DeleteHashTable}}
+\index{Hash\_DeleteHashTable@{Hash\_DeleteHashTable}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{Hash\_DeleteHashTable()}{Hash\_DeleteHashTable()}}
+{\footnotesize\ttfamily int Hash\+\_\+\+Delete\+Hash\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{hash }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00266_source_l00010}{10}} of file \mbox{\hyperlink{a00266_source}{hash\+\_\+table.\+c}}.
+
+\Hypertarget{a00119_a7026562de200bd5e9813f101d9eb614b}\label{a00119_a7026562de200bd5e9813f101d9eb614b} 
+\index{hash\_table.h@{hash\_table.h}!Hash\_GetIndex@{Hash\_GetIndex}}
+\index{Hash\_GetIndex@{Hash\_GetIndex}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{Hash\_GetIndex()}{Hash\_GetIndex()}}
+{\footnotesize\ttfamily int Hash\+\_\+\+Get\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{hash,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00266_source_l00026}{26}} of file \mbox{\hyperlink{a00266_source}{hash\+\_\+table.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{a00119_a27578c1b5a3ab68d8f144ed86ea72cc2}\label{a00119_a27578c1b5a3ab68d8f144ed86ea72cc2} 
+\index{hash\_table.h@{hash\_table.h}!Hash\_GetValue@{Hash\_GetValue}}
+\index{Hash\_GetValue@{Hash\_GetValue}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{Hash\_GetValue()}{Hash\_GetValue()}}
+{\footnotesize\ttfamily int32\+\_\+t Hash\+\_\+\+Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{hash,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00266_source_l00039}{39}} of file \mbox{\hyperlink{a00266_source}{hash\+\_\+table.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{a00119_aecf492d271c7b0c50c1832371fb34c84}\label{a00119_aecf492d271c7b0c50c1832371fb34c84} 
+\index{hash\_table.h@{hash\_table.h}!Hash\_InitializeHashTable@{Hash\_InitializeHashTable}}
+\index{Hash\_InitializeHashTable@{Hash\_InitializeHashTable}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{Hash\_InitializeHashTable()}{Hash\_InitializeHashTable()}}
+{\footnotesize\ttfamily int Hash\+\_\+\+Initialize\+Hash\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{hash }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00266_source_l00003}{3}} of file \mbox{\hyperlink{a00266_source}{hash\+\_\+table.\+c}}.
+
+\Hypertarget{a00119_ae198aa5dfcbf0fa9e5fb885e34e08b0c}\label{a00119_ae198aa5dfcbf0fa9e5fb885e34e08b0c} 
+\index{hash\_table.h@{hash\_table.h}!Hash\_SetValue@{Hash\_SetValue}}
+\index{Hash\_SetValue@{Hash\_SetValue}!hash\_table.h@{hash\_table.h}}
+\doxysubsubsection{\texorpdfstring{Hash\_SetValue()}{Hash\_SetValue()}}
+{\footnotesize\ttfamily int Hash\+\_\+\+Set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00376}{Hash\+Table}} \texorpdfstring{$\ast$}{*}}]{hash,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{key,  }\item[{int32\+\_\+t}]{new\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00266_source_l00044}{44}} of file \mbox{\hyperlink{a00266_source}{hash\+\_\+table.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 6

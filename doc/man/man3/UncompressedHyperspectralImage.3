@@ -1,0 +1,52 @@
+.TH "UncompressedHyperspectralImage" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UncompressedHyperspectralImage
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <uhi_io\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBfile_t\fP * \fBfs\fP"
+.br
+.ti -1c
+.RI "\fBdim3\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "int32_t \fBcache\fP [\fBUHI_CACHE_LENGTH\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stores UHI file streams\&.
+.PP
+File format designed to store 16 bit pixel data for Hyperspectral Images\&. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values\&.
+.PP
+Designed to be a more RAM-friendly alternative to the image struct defined in \fBimage\&.h\fP\&. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program\&.
+.PP
+fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array 
+.PP
+Definition at line \fB42\fP of file \fBuhi_io\&.h\fP\&.
+.SH "Field Documentation"
+.PP 
+.SS "int32_t cache[\fBUHI_CACHE_LENGTH\fP]"
+
+.PP
+Definition at line \fB45\fP of file \fBuhi_io\&.h\fP\&.
+.SS "\fBfile_t\fP* fs"
+
+.PP
+Definition at line \fB43\fP of file \fBuhi_io\&.h\fP\&.
+.SS "\fBdim3\fP size"
+
+.PP
+Definition at line \fB44\fP of file \fBuhi_io\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

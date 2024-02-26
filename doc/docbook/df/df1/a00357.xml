@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00357" xml:lang="en-US">
+<title>display_debugging Namespace Reference</title>
+<indexterm><primary>display_debugging</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00357_1a225e5b2e6406c2700aa6a6c884994dc3">display_images</link> (i)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>list <link linkend="_a00357_1a7e69bd3f9400dc258e83fe7ecab1e317">CacheFiles</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00357_1ac3eb632b1a788eb448ac9474d94a2436">num_images</link> = len(<link linkend="_a00357_1a7e69bd3f9400dc258e83fe7ecab1e317">CacheFiles</link>)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00357_1a74742cb5c8e2ac354a60cb73383d8176">rows</link> = 2 if <link linkend="_a00357_1ac3eb632b1a788eb448ac9474d94a2436">num_images</link> &gt; 5 else 1</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_a00357_1aaed057ed424ced7429016ec18c2edbb6">cols</link> = (<link linkend="_a00357_1ac3eb632b1a788eb448ac9474d94a2436">num_images</link> + 1) // 2</para>
+</listitem>
+            <listitem><para><link linkend="_a00357_1a64aa603bc3c6c1587e7c6542452481ac">fig</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00357_1addecde06ced656af71c7c68c4e780fe8">axes</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00357_1a574732c04d57514f219fc914fdcb54e5">figsize</link></para>
+</listitem>
+            <listitem><para>list <link linkend="_a00357_1a09fdf86df724fb528e53a740e45fb686">images</link> = []</para>
+</listitem>
+            <listitem><para><link linkend="_a00357_1a4c913b7a4b89c523eb5240af5d344082">anim</link> = FuncAnimation(<link linkend="_a00357_1a64aa603bc3c6c1587e7c6542452481ac">fig</link>, <link linkend="_a00357_1a225e5b2e6406c2700aa6a6c884994dc3">display_images</link>, frames = 100, interval=1000)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00357_1a225e5b2e6406c2700aa6a6c884994dc3"/><section>
+    <title>display_images()</title>
+<indexterm><primary>display_images</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>display_images</secondary></indexterm>
+<para><computeroutput>display_images ( i)</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00017">17</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00357_1a4c913b7a4b89c523eb5240af5d344082"/><section>
+    <title>anim</title>
+<indexterm><primary>anim</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>anim</secondary></indexterm>
+<para><computeroutput>anim = FuncAnimation(<link linkend="_a00357_1a64aa603bc3c6c1587e7c6542452481ac">fig</link>, <link linkend="_a00357_1a225e5b2e6406c2700aa6a6c884994dc3">display_images</link>, frames = 100, interval=1000)</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00041">41</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1addecde06ced656af71c7c68c4e780fe8"/><section>
+    <title>axes</title>
+<indexterm><primary>axes</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>axes</secondary></indexterm>
+<para><computeroutput>axes</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00011">11</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1a7e69bd3f9400dc258e83fe7ecab1e317"/><section>
+    <title>CacheFiles</title>
+<indexterm><primary>CacheFiles</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>CacheFiles</secondary></indexterm>
+<para><computeroutput>list CacheFiles</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">00001 =&#32;&#32;[<emphasis role="stringliteral">&quot;raw&quot;</emphasis>,
+00002 &#32;&#32;&#32;<emphasis role="stringliteral">&quot;predictor&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;local-sums&quot;</emphasis>]
+</programlisting><para>
+Definition at line <link linkend="_a00017_source_1l00004">4</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1aaed057ed424ced7429016ec18c2edbb6"/><section>
+    <title>cols</title>
+<indexterm><primary>cols</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>cols</secondary></indexterm>
+<para><computeroutput>cols = (<link linkend="_a00357_1ac3eb632b1a788eb448ac9474d94a2436">num_images</link> + 1) // 2</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00009">9</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1a64aa603bc3c6c1587e7c6542452481ac"/><section>
+    <title>fig</title>
+<indexterm><primary>fig</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>fig</secondary></indexterm>
+<para><computeroutput>fig</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00011">11</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1a574732c04d57514f219fc914fdcb54e5"/><section>
+    <title>figsize</title>
+<indexterm><primary>figsize</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>figsize</secondary></indexterm>
+<para><computeroutput>figsize</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00011">11</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1a09fdf86df724fb528e53a740e45fb686"/><section>
+    <title>images</title>
+<indexterm><primary>images</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>images</secondary></indexterm>
+<para><computeroutput>list images = []</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00015">15</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1ac3eb632b1a788eb448ac9474d94a2436"/><section>
+    <title>num_images</title>
+<indexterm><primary>num_images</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>num_images</secondary></indexterm>
+<para><computeroutput>num_images = len(<link linkend="_a00357_1a7e69bd3f9400dc258e83fe7ecab1e317">CacheFiles</link>)</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00007">7</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+<anchor xml:id="_a00357_1a74742cb5c8e2ac354a60cb73383d8176"/><section>
+    <title>rows</title>
+<indexterm><primary>rows</primary><secondary>display_debugging</secondary></indexterm>
+<indexterm><primary>display_debugging</primary><secondary>rows</secondary></indexterm>
+<para><computeroutput>rows = 2 if <link linkend="_a00357_1ac3eb632b1a788eb448ac9474d94a2436">num_images</link> &gt; 5 else 1</computeroutput></para><para>
+Definition at line <link linkend="_a00017_source_1l00008">8</link> of file <link linkend="_a00017_source">display_debugging.py</link>.</para>
+</section>
+</section>
+</section>

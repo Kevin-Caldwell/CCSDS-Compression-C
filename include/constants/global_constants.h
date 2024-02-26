@@ -1,3 +1,22 @@
+/**
+ * global_constants.h
+ * @author @Kevin-Caldwell
+ * 
+ * Contains Application-Level Constants
+ * 
+ * Uses
+ *  Log Files
+ *  Constant Source Files
+ *  Error Enumerations
+ *  
+ * Dependencies
+ *  Load Constants
+ * 
+ * TODO
+ *  Global Constants
+ *  Consolidate all Constants under respective files
+*/
+
 #ifndef GLOBAL_CONSTANTS_H
 #define GLOBAL_CONSTANTS_H
 

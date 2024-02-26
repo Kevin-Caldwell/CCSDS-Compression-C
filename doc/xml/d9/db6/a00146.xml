@@ -1,0 +1,1013 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d9/db6/a00146" kind="file" language="C++">
+    <compoundname>constants.h</compoundname>
+    <includes refid="d7/d9a/a00152" local="yes">math/math_functions.h</includes>
+    <includes refid="d2/df5/a00137" local="yes">global_constants.h</includes>
+    <includedby refid="d5/db1/a00140" local="yes">include/constants/encoder_constants.h</includedby>
+    <includedby refid="d4/d81/a00110" local="yes">include/decompressor/reconstructor.h</includedby>
+    <includedby refid="d3/d00/a00113" local="yes">include/dst/image.h</includedby>
+    <includedby refid="d1/d09/a00077" local="yes">include/encoder/header.h</includedby>
+    <includedby refid="da/d1e/a00149" local="yes">include/math/linear_algebra.h</includedby>
+    <includedby refid="d4/d3a/a00101" local="yes">include/predictor/local_differences.h</includedby>
+    <includedby refid="df/d98/a00107" local="yes">include/predictor/local_sum.h</includedby>
+    <includedby refid="d0/dc2/a00104" local="yes">include/predictor/predictor.h</includedby>
+    <includedby refid="d1/dc1/a00092" local="yes">include/predictor/sample_representative.h</includedby>
+    <includedby refid="d9/d77/a00095" local="yes">include/predictor/weights.h</includedby>
+    <includedby refid="de/d25/a00290" local="yes">src/constants.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17">
+        <label>include/cache/cache_predictor.h</label>
+        <link refid="db/db6/a00074"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/constants/encoder_constants.h</label>
+        <link refid="d5/db1/a00140"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>include/decompressor/decoder.h</label>
+        <link refid="d3/d00/a00785"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>include/decompressor/reconstructor.h</label>
+        <link refid="d4/d81/a00110"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/encoder/body.h</label>
+        <link refid="da/dec/a00080"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/encoder/header.h</label>
+        <link refid="d1/d09/a00077"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>include/files/csv-io.h</label>
+        <link refid="dc/dfe/a00125"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>include/math/linear_algebra.h</label>
+        <link refid="da/d1e/a00149"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>include/predictor/local_differences.h</label>
+        <link refid="d4/d3a/a00101"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>include/predictor/local_sum.h</label>
+        <link refid="df/d98/a00107"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>include/predictor/predictor.h</label>
+        <link refid="d0/dc2/a00104"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>include/predictor/quantizer.h</label>
+        <link refid="d1/d44/a00098"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>include/predictor/sample_representative.h</label>
+        <link refid="d1/dc1/a00092"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>include/predictor/weights.h</label>
+        <link refid="d9/d77/a00095"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>include/testing/perlin.h</label>
+        <link refid="da/d24/a00068"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>include/testing/synthetic_image_generator.h</label>
+        <link refid="de/de1/a00065"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="14">
+        <label>main/decompressor.c</label>
+        <link refid="d5/de0/a00050"/>
+      </node>
+      <node id="10">
+        <label>main/image_handler.c</label>
+        <link refid="dc/dee/a00053"/>
+      </node>
+      <node id="29">
+        <label>src/cache_predictor.c</label>
+        <link refid="df/d95/a00299"/>
+      </node>
+      <node id="43">
+        <label>src/constants.c</label>
+        <link refid="de/d25/a00290"/>
+      </node>
+      <node id="33">
+        <label>src/csv-io.c</label>
+        <link refid="df/da9/a00263"/>
+      </node>
+      <node id="4">
+        <label>src/decoder.c</label>
+        <link refid="d1/dc6/a00347"/>
+      </node>
+      <node id="5">
+        <label>src/encoder_body.c</label>
+        <link refid="d9/dd6/a00272"/>
+      </node>
+      <node id="12">
+        <label>src/encoder_constants.c</label>
+        <link refid="de/d55/a00323"/>
+      </node>
+      <node id="6">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+      <node id="11">
+        <label>src/header.c</label>
+        <link refid="dc/d50/a00332"/>
+      </node>
+      <node id="39">
+        <label>src/image.c</label>
+        <link refid="d0/d39/a00314"/>
+      </node>
+      <node id="42">
+        <label>src/linear_algebra.c</label>
+        <link refid="df/d91/a00335"/>
+      </node>
+      <node id="28">
+        <label>src/local_differences.c</label>
+        <link refid="da/de0/a00317"/>
+      </node>
+      <node id="30">
+        <label>src/local_sum.c</label>
+        <link refid="d2/d04/a00281"/>
+      </node>
+      <node id="34">
+        <label>src/perlin_noise.c</label>
+        <link refid="d0/d61/a00302"/>
+      </node>
+      <node id="23">
+        <label>src/predictor.c</label>
+        <link refid="d8/d8e/a00344"/>
+      </node>
+      <node id="26">
+        <label>src/quantizer.c</label>
+        <link refid="d6/d7f/a00287"/>
+      </node>
+      <node id="15">
+        <label>src/reconstructor.c</label>
+        <link refid="d3/d93/a00341"/>
+      </node>
+      <node id="27">
+        <label>src/sample_representative.c</label>
+        <link refid="db/d7b/a00296"/>
+      </node>
+      <node id="37">
+        <label>src/synthetic_image_generator.c</label>
+        <link refid="dd/d4e/a00329"/>
+      </node>
+      <node id="38">
+        <label>src/test_UHI.c</label>
+        <link refid="d3/d5e/a00275"/>
+      </node>
+      <node id="40">
+        <label>src/uhi_io.c</label>
+        <link refid="d1/d5d/a00311"/>
+      </node>
+      <node id="25">
+        <label>src/weights.c</label>
+        <link refid="db/dc3/a00284"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d9/db6/a00146_1aa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
+        <name>TRUE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d9/db6/a00146" kindref="compound">constants.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+A global file for constats that need to be shared between modules.</para>
+<para>Features Image Constants</para>
+<para>Uses Values used by all modules</para>
+<para>Dependencies <ref refid="d7/d9a/a00152" kindref="compound">math_functions.h</ref> <ref refid="d2/df5/a00137" kindref="compound">global_constants.h</ref></para>
+<para>TODO Need to organize values into <ref refid="d5/db1/a00140" kindref="compound">encoder_constants.h</ref> and predictor_constants.h </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="27" column="9" bodyfile="include/constants/constants.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/db6/a00146_1aa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
+        <name>FALSE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="28" column="9" bodyfile="include/constants/constants.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/db6/a00146_1a7f5757914e027b5d5df1f4bacd8278da" prot="public" static="no">
+        <name>DYNAMIC_RANGE</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="53" column="9" bodyfile="include/constants/constants.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/db6/a00146_1a873424d1abe8e9f914630b82435f02aa" prot="public" static="no">
+        <name>PREVIOUS_BAND_SAMPLES</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="54" column="9" bodyfile="include/constants/constants.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/db6/a00146_1a95d55ebfa2f2f1bd14867ad6a6cc9bfb" prot="public" static="no">
+        <name>RESOLUTION</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="56" column="9" bodyfile="include/constants/constants.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/db6/a00146_1a299d67a9aa02ae3a2bd476a639a5be37" prot="public" static="no">
+        <name>WEIGHT_INITIALIZATION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="61" column="9" bodyfile="include/constants/constants.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d9/db6/a00146_1aa88d01fdf084b6477a2a70e73c56ac5a" prot="public" static="no">
+        <name>WEIGHT_EXPONENT_OFFSET_FLAG</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="65" column="9" bodyfile="include/constants/constants.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int Nx</definition>
+        <argsstring></argsstring>
+        <name>Nx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="31" column="12" bodyfile="src/constants.c" bodystart="51" bodyend="-1" declfile="include/constants/constants.h" declline="31" declcolumn="12"/>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+        <referencedby refid="df/d98/a00107_1a1f0a6a3443597dab4881bb94fbc35f41" compoundref="d2/d04/a00281" startline="4" endline="84">FindLocalSum</referencedby>
+        <referencedby refid="d1/dc6/a00347_1aeb5d9c2d8630941218ec7b26a666bd61" compoundref="d1/dc6/a00347" startline="17" endline="37">increment_xyz</referencedby>
+        <referencedby refid="d9/db6/a00146_1af84e7b9bd8c4fa1203b0040adf941d8d" compoundref="de/d25/a00290" startline="3" endline="8">InitalizeImageConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+        <referencedby refid="d9/d77/a00095_1a17984670eb20b6ea122fb1e90a50dc75" compoundref="db/dc3/a00284" startline="41" endline="48">WeightUpdateScalingExponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int Ny</definition>
+        <argsstring></argsstring>
+        <name>Ny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="32" column="12" bodyfile="src/constants.c" bodystart="52" bodyend="-1" declfile="include/constants/constants.h" declline="32" declcolumn="12"/>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+        <referencedby refid="d1/dc6/a00347_1aeb5d9c2d8630941218ec7b26a666bd61" compoundref="d1/dc6/a00347" startline="17" endline="37">increment_xyz</referencedby>
+        <referencedby refid="d9/db6/a00146_1af84e7b9bd8c4fa1203b0040adf941d8d" compoundref="de/d25/a00290" startline="3" endline="8">InitalizeImageConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int Nz</definition>
+        <argsstring></argsstring>
+        <name>Nz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="33" column="12" bodyfile="src/constants.c" bodystart="53" bodyend="-1" declfile="include/constants/constants.h" declline="33" declcolumn="12"/>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+        <referencedby refid="d1/dc6/a00347_1aeb5d9c2d8630941218ec7b26a666bd61" compoundref="d1/dc6/a00347" startline="17" endline="37">increment_xyz</referencedby>
+        <referencedby refid="d9/db6/a00146_1af84e7b9bd8c4fa1203b0040adf941d8d" compoundref="de/d25/a00290" startline="3" endline="8">InitalizeImageConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+        <referencedby refid="d4/d81/a00110_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d3/d93/a00341" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a7616eb54bbcdaa3da50f879837bbe020" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int LOSSLESS</definition>
+        <argsstring></argsstring>
+        <name>LOSSLESS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="35" column="12" declfile="include/constants/constants.h" declline="35" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1aee5860bd3e62fe2734ce27a1b1038dbc" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int PREDICTION_MODE</definition>
+        <argsstring></argsstring>
+        <name>PREDICTION_MODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="45" column="12" bodyfile="src/constants.c" bodystart="61" bodyend="-1" declfile="include/constants/constants.h" declline="45" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d9/d77/a00095_1adcc753ae7048085817bd2c37b471f739" compoundref="db/dc3/a00284" startline="4" endline="33">InitializeWeights</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+        <referencedby refid="d4/d81/a00110_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d3/d93/a00341" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1ab11dcc700999baf22e51630cc1e0d7ed" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int LOCAL_SUM_TYPE</definition>
+        <argsstring></argsstring>
+        <name>LOCAL_SUM_TYPE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="51" column="12" bodyfile="src/constants.c" bodystart="59" bodyend="-1" declfile="include/constants/constants.h" declline="51" declcolumn="12"/>
+        <referencedby refid="df/d98/a00107_1a1f0a6a3443597dab4881bb94fbc35f41" compoundref="d2/d04/a00281" startline="4" endline="84">FindLocalSum</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1abf6d0ccec2f5157184071729f129de19" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int D</definition>
+        <argsstring></argsstring>
+        <name>D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="72" column="12" bodyfile="src/constants.c" bodystart="63" bodyend="-1" declfile="include/constants/constants.h" declline="72" declcolumn="12"/>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+        <referencedby refid="da/dec/a00080_1ad956397a2e57dfa4fe588564adef610f" compoundref="d9/dd6/a00272" startline="9" endline="36">GolombPowerTwo</referencedby>
+        <referencedby refid="da/dec/a00080_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b" compoundref="d9/dd6/a00272" startline="38" endline="42">InitAccumulatorValue</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+        <referencedby refid="d9/d77/a00095_1a17984670eb20b6ea122fb1e90a50dc75" compoundref="db/dc3/a00284" startline="41" endline="48">WeightUpdateScalingExponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a9f28821bcbb645a7c3ab8a0228335fc5" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kUnsignedSamples</definition>
+        <argsstring></argsstring>
+        <name>kUnsignedSamples</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="74" column="12" bodyfile="src/constants.c" bodystart="58" bodyend="-1" declfile="include/constants/constants.h" declline="74" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1add3510c03fbe63c1b97c67aac517c930" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int kSmin</definition>
+        <argsstring></argsstring>
+        <name>kSmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="76" column="21" bodyfile="src/constants.c" bodystart="66" bodyend="-1" declfile="include/constants/constants.h" declline="76" declcolumn="21"/>
+        <referencedby refid="d1/dc1/a00092_1a441e8d0fe639d45889aab5b88c4138f4" compoundref="db/d7b/a00296" startline="27" endline="39">HighResolutionPredictedSample</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" compoundref="d6/d7f/a00287" startline="27" endline="38">minTheta</referencedby>
+        <referencedby refid="d1/d44/a00098_1ae85d34759565d8a3ab498494786c395b" compoundref="d6/d7f/a00287" startline="40" endline="58">QuantizerIndexUnmapper</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a8329a1a244af278852519dfccd0d4814" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int kSmax</definition>
+        <argsstring></argsstring>
+        <name>kSmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="77" column="21" bodyfile="src/constants.c" bodystart="68" bodyend="-1" declfile="include/constants/constants.h" declline="77" declcolumn="21"/>
+        <referencedby refid="d1/dc1/a00092_1a441e8d0fe639d45889aab5b88c4138f4" compoundref="db/d7b/a00296" startline="27" endline="39">HighResolutionPredictedSample</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d6/d7f/a00287_1ae831d86258458d0a68d3d2143db43d19" compoundref="d6/d7f/a00287" startline="27" endline="38">minTheta</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a0dca58ddf3108a022c36b549baa6ec46" prot="public" static="no" extern="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int kSmid</definition>
+        <argsstring></argsstring>
+        <name>kSmid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="78" column="21" bodyfile="src/constants.c" bodystart="67" bodyend="-1" declfile="include/constants/constants.h" declline="78" declcolumn="21"/>
+        <referencedby refid="d1/dc1/a00092_1a6c60474c610dc64773816bc445efeb77" compoundref="db/d7b/a00296" startline="13" endline="25">DoubleResolutionPredictedSample</referencedby>
+        <referencedby refid="df/d98/a00107_1a1f0a6a3443597dab4881bb94fbc35f41" compoundref="d2/d04/a00281" startline="4" endline="84">FindLocalSum</referencedby>
+        <referencedby refid="d1/dc1/a00092_1a441e8d0fe639d45889aab5b88c4138f4" compoundref="db/d7b/a00296" startline="27" endline="39">HighResolutionPredictedSample</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a21c169290a6c782855c778bb7a0389b9" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kP</definition>
+        <argsstring></argsstring>
+        <name>kP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="80" column="12" bodyfile="src/constants.c" bodystart="70" bodyend="-1" declfile="include/constants/constants.h" declline="80" declcolumn="12"/>
+        <referencedby refid="d1/dc1/a00092_1a6c60474c610dc64773816bc445efeb77" compoundref="db/d7b/a00296" startline="13" endline="25">DoubleResolutionPredictedSample</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a515cdf0341e52056bcea8e46c952ee82" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int Omega</definition>
+        <argsstring></argsstring>
+        <name>Omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="81" column="12" bodyfile="src/constants.c" bodystart="77" bodyend="-1" declfile="include/constants/constants.h" declline="81" declcolumn="12"/>
+        <referencedby refid="d1/dc1/a00092_1a6c60474c610dc64773816bc445efeb77" compoundref="db/d7b/a00296" startline="13" endline="25">DoubleResolutionPredictedSample</referencedby>
+        <referencedby refid="d1/dc1/a00092_1a441e8d0fe639d45889aab5b88c4138f4" compoundref="db/d7b/a00296" startline="27" endline="39">HighResolutionPredictedSample</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d9/d77/a00095_1adcc753ae7048085817bd2c37b471f739" compoundref="db/dc3/a00284" startline="4" endline="33">InitializeWeights</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+        <referencedby refid="d9/d77/a00095_1a17984670eb20b6ea122fb1e90a50dc75" compoundref="db/dc3/a00284" startline="41" endline="48">WeightUpdateScalingExponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a43cf89f028c6b6ad01038627b83a84c0" prot="public" static="no" extern="yes" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t kR</definition>
+        <argsstring></argsstring>
+        <name>kR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="82" column="16" bodyfile="src/constants.c" bodystart="71" bodyend="-1" declfile="include/constants/constants.h" declline="82" declcolumn="16"/>
+        <referencedby refid="d1/dc1/a00092_1a441e8d0fe639d45889aab5b88c4138f4" compoundref="db/d7b/a00296" startline="27" endline="39">HighResolutionPredictedSample</referencedby>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1afe552e4b168b0821a5cb40ca9f8df744" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kOmegaMin</definition>
+        <argsstring></argsstring>
+        <name>kOmegaMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="83" column="12" bodyfile="src/constants.c" bodystart="78" bodyend="-1" declfile="include/constants/constants.h" declline="83" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d9/d77/a00095_1a805706f7af2f212bc46076319fcec535" compoundref="db/dc3/a00284" startline="50" endline="72">UpdateWeights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a919504d752286a3ecacfab4792035e7c" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kOmegaMax</definition>
+        <argsstring></argsstring>
+        <name>kOmegaMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="84" column="12" bodyfile="src/constants.c" bodystart="79" bodyend="-1" declfile="include/constants/constants.h" declline="84" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d9/d77/a00095_1a805706f7af2f212bc46076319fcec535" compoundref="db/dc3/a00284" startline="50" endline="72">UpdateWeights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a277c6f02ad4604307ae5ed6d8e4f9630" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int Da</definition>
+        <argsstring></argsstring>
+        <name>Da</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="86" column="12" bodyfile="src/constants.c" bodystart="64" bodyend="-1" declfile="include/constants/constants.h" declline="86" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1ac27421de69856578bf77ce84bfa82974" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int m_z</definition>
+        <argsstring></argsstring>
+        <name>m_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="87" column="12" bodyfile="src/constants.c" bodystart="81" bodyend="-1" declfile="include/constants/constants.h" declline="87" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a5464533d23b59ba11030432e73528730" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="88" column="12" bodyfile="src/predictor.c" bodystart="8" bodyend="-1" declfile="include/constants/constants.h" declline="88" declcolumn="12"/>
+        <referencedby refid="d9/d77/a00095_1adcc753ae7048085817bd2c37b471f739" compoundref="db/dc3/a00284" startline="4" endline="33">InitializeWeights</referencedby>
+        <referencedby refid="d4/d3a/a00101_1a92b3b535f0c13d4ec28dab8b13713262" compoundref="da/de0/a00317" startline="55" endline="80">LocalDirectionVector</referencedby>
+        <referencedby refid="d4/d3a/a00101_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="da/de0/a00317" startline="82" endline="99">PredictedCentralLocalDifference</referencedby>
+        <referencedby refid="d4/d81/a00110_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d3/d93/a00341" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+        <referencedby refid="d9/d77/a00095_1a805706f7af2f212bc46076319fcec535" compoundref="db/dc3/a00284" startline="50" endline="72">UpdateWeights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a68b61249aa9c541a3ed6d1987b8c53ce" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kVMin</definition>
+        <argsstring></argsstring>
+        <name>kVMin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="90" column="12" bodyfile="src/constants.c" bodystart="74" bodyend="-1" declfile="include/constants/constants.h" declline="90" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+        <referencedby refid="d9/d77/a00095_1a17984670eb20b6ea122fb1e90a50dc75" compoundref="db/dc3/a00284" startline="41" endline="48">WeightUpdateScalingExponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a85fbef56eedaaa1a29a9f0c18ba53631" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kVMax</definition>
+        <argsstring></argsstring>
+        <name>kVMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="91" column="12" bodyfile="src/constants.c" bodystart="73" bodyend="-1" declfile="include/constants/constants.h" declline="91" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+        <referencedby refid="d9/d77/a00095_1a17984670eb20b6ea122fb1e90a50dc75" compoundref="db/dc3/a00284" startline="41" endline="48">WeightUpdateScalingExponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db6/a00146_1a2481969fa62464bdc5889190f3e10f31" prot="public" static="no" extern="yes" mutable="no">
+        <type>int</type>
+        <definition>int kTInc</definition>
+        <argsstring></argsstring>
+        <name>kTInc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="92" column="12" bodyfile="src/constants.c" bodystart="75" bodyend="-1" declfile="include/constants/constants.h" declline="92" declcolumn="12"/>
+        <referencedby refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</referencedby>
+        <referencedby refid="d9/d77/a00095_1a17984670eb20b6ea122fb1e90a50dc75" compoundref="db/dc3/a00284" startline="41" endline="48">WeightUpdateScalingExponent</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d9/db6/a00146_1af84e7b9bd8c4fa1203b0040adf941d8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitalizeImageConstants</definition>
+        <argsstring>(dim3 size)</argsstring>
+        <name>InitalizeImageConstants</name>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="94" column="6" bodyfile="src/constants.c" bodystart="3" bodyend="8" declfile="include/constants/constants.h" declline="94" declcolumn="6"/>
+        <references refid="de/d25/a00290_1abfda77b016218238359bcc3e5c1600b0" compoundref="de/d25/a00290" startline="51">Nx</references>
+        <references refid="de/d25/a00290_1adcc9183c4659dc09e04e5ede1d79215b" compoundref="de/d25/a00290" startline="52">Ny</references>
+        <references refid="de/d25/a00290_1a7a7576e08f5980d322da5f48c7385edc" compoundref="de/d25/a00290" startline="53">Nz</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="df/d03/a00062_1a29f9d24093c99f0e47133d90ea4286e6" compoundref="d3/d07/a00305" startline="84" endline="98">EncodeImage</referencedby>
+        <referencedby refid="d4/d81/a00110_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d3/d93/a00341" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitalizePredictorConstants</definition>
+        <argsstring>()</argsstring>
+        <name>InitalizePredictorConstants</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/constants/constants.h" line="95" column="6" bodyfile="src/constants.c" bodystart="12" bodyend="47" declfile="include/constants/constants.h" declline="95" declcolumn="6"/>
+        <references refid="d7/d9a/a00152_1a60b4b9f1152371307ebadc232149699c" compoundref="d7/d9a/a00152" startline="34">BPOW</references>
+        <references refid="de/d25/a00290_1abf6d0ccec2f5157184071729f129de19" compoundref="de/d25/a00290" startline="63">D</references>
+        <references refid="de/d25/a00290_1a277c6f02ad4604307ae5ed6d8e4f9630" compoundref="de/d25/a00290" startline="64">Da</references>
+        <references refid="de/d25/a00290_1a45cfb0527526c2a0aec021d50a279091" compoundref="de/d25/a00290" startline="10">GET_PCONST</references>
+        <references refid="de/d25/a00290_1a919504d752286a3ecacfab4792035e7c" compoundref="de/d25/a00290" startline="79">kOmegaMax</references>
+        <references refid="de/d25/a00290_1afe552e4b168b0821a5cb40ca9f8df744" compoundref="de/d25/a00290" startline="78">kOmegaMin</references>
+        <references refid="de/d25/a00290_1a21c169290a6c782855c778bb7a0389b9" compoundref="de/d25/a00290" startline="70">kP</references>
+        <references refid="de/d25/a00290_1a43cf89f028c6b6ad01038627b83a84c0" compoundref="de/d25/a00290" startline="71">kR</references>
+        <references refid="de/d25/a00290_1a8329a1a244af278852519dfccd0d4814" compoundref="de/d25/a00290" startline="68">kSmax</references>
+        <references refid="de/d25/a00290_1a0dca58ddf3108a022c36b549baa6ec46" compoundref="de/d25/a00290" startline="67">kSmid</references>
+        <references refid="de/d25/a00290_1add3510c03fbe63c1b97c67aac517c930" compoundref="de/d25/a00290" startline="66">kSmin</references>
+        <references refid="de/d25/a00290_1a2481969fa62464bdc5889190f3e10f31" compoundref="de/d25/a00290" startline="75">kTInc</references>
+        <references refid="de/d25/a00290_1a9f28821bcbb645a7c3ab8a0228335fc5" compoundref="de/d25/a00290" startline="58">kUnsignedSamples</references>
+        <references refid="de/d25/a00290_1a85fbef56eedaaa1a29a9f0c18ba53631" compoundref="de/d25/a00290" startline="73">kVMax</references>
+        <references refid="de/d25/a00290_1a68b61249aa9c541a3ed6d1987b8c53ce" compoundref="de/d25/a00290" startline="74">kVMin</references>
+        <references refid="de/d25/a00290_1ab11dcc700999baf22e51630cc1e0d7ed" compoundref="de/d25/a00290" startline="59">LOCAL_SUM_TYPE</references>
+        <references refid="de/d25/a00290_1ac27421de69856578bf77ce84bfa82974" compoundref="de/d25/a00290" startline="81">m_z</references>
+        <references refid="d7/d9a/a00152_1a3acffbd305ee72dcd4593c0d8af64a4f" compoundref="d7/d9a/a00152" startline="32">MIN</references>
+        <references refid="de/d25/a00290_1a515cdf0341e52056bcea8e46c952ee82" compoundref="de/d25/a00290" startline="77">Omega</references>
+        <references refid="de/d25/a00290_1aee5860bd3e62fe2734ce27a1b1038dbc" compoundref="de/d25/a00290" startline="61">PREDICTION_MODE</references>
+        <referencedby refid="df/d03/a00062_1a29f9d24093c99f0e47133d90ea4286e6" compoundref="d3/d07/a00305" startline="84" endline="98">EncodeImage</referencedby>
+        <referencedby refid="d4/d81/a00110_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d3/d93/a00341" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONSTANTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d9a/a00152" kindref="compound">math/math_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/df5/a00137" kindref="compound">global_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d9/db6/a00146_1aa8cecfc5c5c054d2875c03e77b7be15d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRUE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d9/db6/a00146_1aa93f0eb578d23995850d61f7d61c55c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FALSE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Image<sp/>Size<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a7616eb54bbcdaa3da50f879837bbe020" kindref="member">LOSSLESS</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Predictor<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Comment<sp/>if<sp/>using<sp/>Full<sp/>Prediction<sp/>Mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>REDUCED_PREDICTION_MODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>0:<sp/>Full<sp/>Prediction<sp/>Mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1:<sp/>Reduced<sp/>Prediction<sp/>Mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1aee5860bd3e62fe2734ce27a1b1038dbc" kindref="member">PREDICTION_MODE</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>00:<sp/>Wide<sp/>Neighbor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>01:<sp/>Narrow<sp/>Neighbor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>10:<sp/>Wide<sp/>Column</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>11:<sp/>Narrow<sp/>Column</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1ab11dcc700999baf22e51630cc1e0d7ed" kindref="member">LOCAL_SUM_TYPE</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="d9/db6/a00146_1a7f5757914e027b5d5df1f4bacd8278da" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DYNAMIC_RANGE<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="d9/db6/a00146_1a873424d1abe8e9f914630b82435f02aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PREVIOUS_BAND_SAMPLES<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="d9/db6/a00146_1a95d55ebfa2f2f1bd14867ad6a6cc9bfb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RESOLUTION<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>0:<sp/>Default<sp/>Weight<sp/>Initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1:<sp/>Custom<sp/>Weight<sp/>Initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="d9/db6/a00146_1a299d67a9aa02ae3a2bd476a639a5be37" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WEIGHT_INITIALIZATION<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/>0:<sp/>WEO<sp/>values<sp/>are<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1:<sp/>WEO<sp/>values<sp/>can<sp/>be<sp/>non-zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="d9/db6/a00146_1aa88d01fdf084b6477a2a70e73c56ac5a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>WEIGHT_EXPONENT_OFFSET_FLAG<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2^WEIGHT_UPDATE_SCALING_EXPONENT_CHANGE_INTERVAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>region<sp/>Do<sp/>Not<sp/>Touch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO<sp/>Rename<sp/>ALL<sp/>Constants<sp/>to:<sp/>kConstant</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a9f28821bcbb645a7c3ab8a0228335fc5" kindref="member">kUnsignedSamples</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1add3510c03fbe63c1b97c67aac517c930" kindref="member">kSmin</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a8329a1a244af278852519dfccd0d4814" kindref="member">kSmax</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a0dca58ddf3108a022c36b549baa6ec46" kindref="member">kSmid</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a21c169290a6c782855c778bb7a0389b9" kindref="member">kP</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a515cdf0341e52056bcea8e46c952ee82" kindref="member">Omega</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>int64_t<sp/><ref refid="d9/db6/a00146_1a43cf89f028c6b6ad01038627b83a84c0" kindref="member">kR</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1afe552e4b168b0821a5cb40ca9f8df744" kindref="member">kOmegaMin</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a919504d752286a3ecacfab4792035e7c" kindref="member">kOmegaMax</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a277c6f02ad4604307ae5ed6d8e4f9630" kindref="member">Da</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1ac27421de69856578bf77ce84bfa82974" kindref="member">m_z</ref>;<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a5464533d23b59ba11030432e73528730" kindref="member">C</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a68b61249aa9c541a3ed6d1987b8c53ce" kindref="member">kVMin</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a85fbef56eedaaa1a29a9f0c18ba53631" kindref="member">kVMax</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a2481969fa62464bdc5889190f3e10f31" kindref="member">kTInc</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1af84e7b9bd8c4fa1203b0040adf941d8d" kindref="member">InitalizeImageConstants</ref>(<ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>size);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" kindref="member">InitalizePredictorConstants</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>CONSTANTS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/constants/constants.h"/>
+  </compounddef>
+</doxygen>

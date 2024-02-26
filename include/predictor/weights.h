@@ -1,3 +1,12 @@
+/**
+ * weights.h
+ * @author @Kevin-Caldwell
+ * 
+ * Functions for Initializing, Calculating
+ * and Updating Weights for Predictor and 
+ * Reconstructor.
+*/
+
 #ifndef WEIGHTS_H
 #define WEIGHTS_H
 

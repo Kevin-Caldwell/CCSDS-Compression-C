@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_local__differences_8c" xml:lang="en-US">
+<title>src/local_differences.c File Reference</title>
+<indexterm><primary>src/local_differences.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;predictor/local_differences.h&quot;<?linebreak?></programlisting>Include dependency graph for local_differences.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/dac/local__differences_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int32_t <link linkend="_local__differences_8c_1a37d2cf3f48b1b2c436f630a2b649cf52">CentralLocalDifference</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_local__differences_8c_1aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, int direction)</para>
+</listitem>
+            <listitem><para>int <link linkend="_local__differences_8c_1a92b3b535f0c13d4ec28dab8b13713262">LocalDirectionVector</link> (<link linkend="_structimage">image</link> *hIMG, int32_t **local_direction_vector, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_local__differences_8c_1a36ddae4ef0f34ba3f7402469253bb6b6">PredictedCentralLocalDifference</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_local__differences_8c_1a37d2cf3f48b1b2c436f630a2b649cf52"/><section>
+    <title>CentralLocalDifference()</title>
+<indexterm><primary>CentralLocalDifference</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>CentralLocalDifference</secondary></indexterm>
+<para><computeroutput>int32_t CentralLocalDifference (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</computeroutput></para><para>
+Definition at line <link linkend="_local__differences_8c_source_1l00003">3</link> of file <link linkend="_local__differences_8c_source">local_differences.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d97/local__differences_8c_a37d2cf3f48b1b2c436f630a2b649cf52_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_local__differences_8c_1aa1779fb92c191cde51766275baaf7591"/><section>
+    <title>DirectionalLocalDifference()</title>
+<indexterm><primary>DirectionalLocalDifference</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>DirectionalLocalDifference</secondary></indexterm>
+<para><computeroutput>int32_t DirectionalLocalDifference (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, int direction)</computeroutput></para><para>
+Definition at line <link linkend="_local__differences_8c_source_1l00008">8</link> of file <link linkend="_local__differences_8c_source">local_differences.c</link>.</para>
+</section>
+<anchor xml:id="_local__differences_8c_1a92b3b535f0c13d4ec28dab8b13713262"/><section>
+    <title>LocalDirectionVector()</title>
+<indexterm><primary>LocalDirectionVector</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>LocalDirectionVector</secondary></indexterm>
+<para><computeroutput>int LocalDirectionVector (<link linkend="_structimage">image</link> * hIMG, int32_t ** local_direction_vector, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</computeroutput></para><para>
+Definition at line <link linkend="_local__differences_8c_source_1l00055">55</link> of file <link linkend="_local__differences_8c_source">local_differences.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d97/local__differences_8c_a92b3b535f0c13d4ec28dab8b13713262_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d97/local__differences_8c_a92b3b535f0c13d4ec28dab8b13713262_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_local__differences_8c_1a36ddae4ef0f34ba3f7402469253bb6b6"/><section>
+    <title>PredictedCentralLocalDifference()</title>
+<indexterm><primary>PredictedCentralLocalDifference</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>PredictedCentralLocalDifference</secondary></indexterm>
+<para><computeroutput>int64_t PredictedCentralLocalDifference (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</computeroutput></para><para>
+Definition at line <link linkend="_local__differences_8c_source_1l00082">82</link> of file <link linkend="_local__differences_8c_source">local_differences.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d97/local__differences_8c_a36ddae4ef0f34ba3f7402469253bb6b6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d97/local__differences_8c_a36ddae4ef0f34ba3f7402469253bb6b6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

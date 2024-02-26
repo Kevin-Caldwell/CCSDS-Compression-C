@@ -1,0 +1,140 @@
+.TH "prepare_hImage" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+prepare_hImage
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReadCSV\fP (filename)"
+.br
+.ti -1c
+.RI "\fBwavelength_to_rgb\fP (wavelength, gamma=0\&.8)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBCacheFiles\fP = [[]]"
+.br
+.ti -1c
+.RI "\fBdata\fP = \fBReadCSV\fP(f'data/test\-images/VORONOI_640x512x640_1000\&.csv')"
+.br
+.ti -1c
+.RI "\fBNx\fP"
+.br
+.ti -1c
+.RI "\fBNy\fP"
+.br
+.ti -1c
+.RI "\fBNz\fP"
+.br
+.ti -1c
+.RI "\fBnumbers\fP = np\&.array(\fBdata\fP, dtype=int)"
+.br
+.ti -1c
+.RI "\fBminimum\fP = numbers\&.min()"
+.br
+.ti -1c
+.RI "\fBmaximum\fP = numbers\&.max()"
+.br
+.ti -1c
+.RI "int \fBnumber_range\fP = \fBmaximum\fP \- \fBminimum\fP + 1"
+.br
+.ti -1c
+.RI "\fBimg\fP = Image\&.new( 'RGB', (\fBNx\fP,\fBNy\fP), 'black')"
+.br
+.ti -1c
+.RI "\fBpixels\fP = img\&.load()"
+.br
+.ti -1c
+.RI "tuple \fBv\fP = (\fBnumbers\fP[i, j, z] \- \fBminimum\fP) / \fBnumber_range\fP * 370 + 380"
+.br
+.ti -1c
+.RI "\fBd\fP = \fBwavelength_to_rgb\fP(int(\fBv\fP))"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "ReadCSV ( filename)"
+
+.PP
+Definition at line \fB9\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "wavelength_to_rgb ( wavelength,  gamma = \fC0\&.8\fP)"
+
+.PP
+.nf
+This converts a given wavelength of light to an 
+approximate RGB color value\&. The wavelength must be given
+in nanometers in the range from 380 nm through 750 nm
+(789 THz through 400 THz)\&.
+Based on code by Dan Bruton
+http://www\&.physics\&.sfasu\&.edu/astro/color/spectra\&.html
+
+.fi
+.PP
+ 
+.PP
+Definition at line \fB31\fP of file \fBprepare_hImage\&.py\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "list CacheFiles = [[]]"
+
+.PP
+Definition at line \fB86\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "d = \fBwavelength_to_rgb\fP(int(\fBv\fP))"
+
+.PP
+Definition at line \fB134\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "data = \fBReadCSV\fP(f'data/test\-images/VORONOI_640x512x640_1000\&.csv')"
+
+.PP
+Definition at line \fB94\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "img = Image\&.new( 'RGB', (\fBNx\fP,\fBNy\fP), 'black')"
+
+.PP
+Definition at line \fB123\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "maximum = numbers\&.max()"
+
+.PP
+Definition at line \fB112\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "minimum = numbers\&.min()"
+
+.PP
+Definition at line \fB111\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "number_range = \fBmaximum\fP \- \fBminimum\fP + 1"
+
+.PP
+Definition at line \fB113\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "numbers = np\&.array(\fBdata\fP, dtype=int)"
+
+.PP
+Definition at line \fB104\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "Nx"
+
+.PP
+Definition at line \fB97\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "Ny"
+
+.PP
+Definition at line \fB97\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "Nz"
+
+.PP
+Definition at line \fB97\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "pixels = img\&.load()"
+
+.PP
+Definition at line \fB124\fP of file \fBprepare_hImage\&.py\fP\&.
+.SS "int v = (\fBnumbers\fP[i, j, z] \- \fBminimum\fP) / \fBnumber_range\fP * 370 + 380"
+
+.PP
+Definition at line \fB131\fP of file \fBprepare_hImage\&.py\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00287_source" xml:lang="en-US">
+<title>quantizer.c</title>
+<indexterm><primary>src/quantizer.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00287_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00098">predictor/quantizer.h</link>&quot;</emphasis>
+<anchor xml:id="_a00287_source_1l00002"/>00002 
+<anchor xml:id="_a00287_source_1l00003"/><link linkend="_a00098_1a9d745aa249b8a9cde3f83899b563dcc5">00003</link> uint16_t&#32;<link linkend="_a00287_1a9d745aa249b8a9cde3f83899b563dcc5">ClippedQuantizerBinCenter</link>(uint16_t&#32;sample_value){
+<anchor xml:id="_a00287_source_1l00004"/>00004 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;&#32;sample_value;
+<anchor xml:id="_a00287_source_1l00005"/>00005 }
+<anchor xml:id="_a00287_source_1l00006"/>00006 
+<anchor xml:id="_a00287_source_1l00007"/><link linkend="_a00098_1a93be7d02ed2acce98f53818c98ac6cca">00007</link> int16_t&#32;<link linkend="_a00287_1a93be7d02ed2acce98f53818c98ac6cca">PredictionResidual</link>(uint16_t&#32;sample_value,&#32;uint16_t&#32;predicted_sample){
+<anchor xml:id="_a00287_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sample_value&#32;-&#32;predicted_sample;
+<anchor xml:id="_a00287_source_1l00009"/>00009 }
+<anchor xml:id="_a00287_source_1l00010"/>00010 
+<anchor xml:id="_a00287_source_1l00011"/><link linkend="_a00098_1afa51bec3d5dfdb41078f60b1a7c454ab">00011</link> int32_t&#32;<link linkend="_a00287_1afa51bec3d5dfdb41078f60b1a7c454ab">QuantizerIndex</link>(uint16_t&#32;sample_value,&#32;uint16_t&#32;predicted_sample){
+<anchor xml:id="_a00287_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_a00287_1a93be7d02ed2acce98f53818c98ac6cca">PredictionResidual</link>(sample_value,&#32;predicted_sample);
+<anchor xml:id="_a00287_source_1l00013"/>00013 
+<anchor xml:id="_a00287_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;SignedLongData&#32;qInd;</emphasis>
+<anchor xml:id="_a00287_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;uint16_t&#32;pred_res&#32;=&#32;PredictionResidual(hIMG,&#32;z,y,x);</emphasis>
+<anchor xml:id="_a00287_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if(x&#32;==&#32;0&#32;&amp;&amp;&#32;y&#32;==&#32;0){</emphasis>
+<anchor xml:id="_a00287_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;qInd&#32;=&#32;pred_res;</emphasis>
+<anchor xml:id="_a00287_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;}</emphasis>
+<anchor xml:id="_a00287_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;else{</emphasis>
+<anchor xml:id="_a00287_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;qInd&#32;=&#32;SIGN(pred_res)&#32;*&#32;(abs(pred_res)&#32;+&#32;m_z)&#32;/&#32;(2&#32;*&#32;m_z&#32;+&#32;1);</emphasis>
+<anchor xml:id="_a00287_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;}</emphasis>
+<anchor xml:id="_a00287_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;return&#32;qInd;</emphasis>
+<anchor xml:id="_a00287_source_1l00023"/>00023 
+<anchor xml:id="_a00287_source_1l00024"/>00024 }
+<anchor xml:id="_a00287_source_1l00025"/>00025 
+<anchor xml:id="_a00287_source_1l00026"/>00026 
+<anchor xml:id="_a00287_source_1l00027"/><link linkend="_a00287_1ae831d86258458d0a68d3d2143db43d19">00027</link> uint16_t&#32;<link linkend="_a00287_1ae831d86258458d0a68d3d2143db43d19">minTheta</link>(uint32_t&#32;predicted_sample){
+<anchor xml:id="_a00287_source_1l00028"/>00028 
+<anchor xml:id="_a00287_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if(x&#32;==&#32;0&#32;&amp;&amp;&#32;y&#32;==&#32;0){</emphasis>
+<anchor xml:id="_a00287_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;return&#32;MIN(pred_res&#32;-&#32;kSmin,&#32;kSmax&#32;-&#32;pred_res);</emphasis>
+<anchor xml:id="_a00287_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;}&#32;else&#32;if&#32;(x&#32;&gt;&#32;0&#32;||&#32;y&#32;&gt;&#32;0)</emphasis>
+<anchor xml:id="_a00287_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;{</emphasis>
+<anchor xml:id="_a00287_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;return&#32;&#32;MIN((pred_res&#32;-&#32;kSmin&#32;+&#32;m_z)/(2&#32;*&#32;m_z&#32;+&#32;1),&#32;</emphasis>
+<anchor xml:id="_a00287_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(kSmax&#32;-&#32;pred_res&#32;+&#32;m_z)/(2&#32;*&#32;m_z&#32;+&#32;1));</emphasis>
+<anchor xml:id="_a00287_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;}</emphasis>
+<anchor xml:id="_a00287_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_a00152_1a3acffbd305ee72dcd4593c0d8af64a4f">MIN</link>(predicted_sample&#32;-&#32;<link linkend="_a00146_1add3510c03fbe63c1b97c67aac517c930">kSmin</link>,&#32;<link linkend="_a00146_1a8329a1a244af278852519dfccd0d4814">kSmax</link>&#32;-&#32;predicted_sample);
+<anchor xml:id="_a00287_source_1l00037"/>00037 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00287_source_1l00038"/>00038 }
+<anchor xml:id="_a00287_source_1l00039"/>00039 
+<anchor xml:id="_a00287_source_1l00040"/><link linkend="_a00098_1ae85d34759565d8a3ab498494786c395b">00040</link> int32_t&#32;<link linkend="_a00287_1ae85d34759565d8a3ab498494786c395b">QuantizerIndexUnmapper</link>(uint16_t&#32;mapped_delta,&#32;uint16_t&#32;predicted_sample,&#32;int32_t&#32;drps)
+<anchor xml:id="_a00287_source_1l00041"/>00041 {
+<anchor xml:id="_a00287_source_1l00042"/>00042 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00287_source_1l00043"/>00043 &#32;&#32;&#32;&#32;int32_t&#32;theta&#32;=&#32;<link linkend="_a00287_1ae831d86258458d0a68d3d2143db43d19">minTheta</link>(predicted_sample);
+<anchor xml:id="_a00287_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;a&#32;=&#32;drps&#32;%&#32;2&#32;?&#32;-1&#32;:&#32;1;
+<anchor xml:id="_a00287_source_1l00045"/>00045 
+<anchor xml:id="_a00287_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(mapped_delta&#32;-&#32;theta&#32;&gt;&#32;theta){
+<anchor xml:id="_a00287_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(theta&#32;==&#32;predicted_sample&#32;-&#32;<link linkend="_a00146_1add3510c03fbe63c1b97c67aac517c930">kSmin</link>){
+<anchor xml:id="_a00287_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;mapped_delta&#32;-&#32;theta;
+<anchor xml:id="_a00287_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_a00287_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;theta&#32;-&#32;mapped_delta;
+<anchor xml:id="_a00287_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00287_source_1l00052"/>00052 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00287_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(mapped_delta&#32;%&#32;2){
+<anchor xml:id="_a00287_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(((drps&#32;+&#32;1)&#32;%&#32;2)&#32;?&#32;(-1)&#32;:&#32;(1))&#32;*&#32;(mapped_delta&#32;+&#32;1)&#32;/&#32;2;
+<anchor xml:id="_a00287_source_1l00055"/>00055 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_a00287_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(((drps)&#32;%&#32;2)&#32;?&#32;(-1)&#32;:&#32;(1))&#32;*&#32;(mapped_delta)&#32;/&#32;2;
+<anchor xml:id="_a00287_source_1l00057"/>00057 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00287_source_1l00058"/>00058 }
+<anchor xml:id="_a00287_source_1l00059"/>00059 
+<anchor xml:id="_a00287_source_1l00060"/>00060 
+<anchor xml:id="_a00287_source_1l00061"/><link linkend="_a00098_1a1f491e0a435427669942c932394d7c1a">00061</link> <link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;<link linkend="_a00287_1a1f491e0a435427669942c932394d7c1a">MappedQuantizerIndex</link>(int32_t&#32;quantizer_index,&#32;
+<anchor xml:id="_a00287_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32_t&#32;predicted_sample,&#32;
+<anchor xml:id="_a00287_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;double_res_predicted_sample){
+<anchor xml:id="_a00287_source_1l00064"/>00064 
+<anchor xml:id="_a00287_source_1l00065"/>00065 &#32;&#32;&#32;&#32;int32_t&#32;theta&#32;=&#32;<link linkend="_a00287_1ae831d86258458d0a68d3d2143db43d19">minTheta</link>(predicted_sample);
+<anchor xml:id="_a00287_source_1l00066"/>00066 &#32;&#32;&#32;&#32;int32_t&#32;a&#32;=&#32;quantizer_index&#32;*&#32;(double_res_predicted_sample&#32;%&#32;2&#32;?&#32;-1&#32;:&#32;1);
+<anchor xml:id="_a00287_source_1l00067"/>00067 
+<anchor xml:id="_a00287_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(abs(quantizer_index)&#32;&gt;&#32;theta){
+<anchor xml:id="_a00287_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;abs(quantizer_index)&#32;+&#32;theta;
+<anchor xml:id="_a00287_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(0&#32;&lt;=&#32;a&#32;&amp;&amp;&#32;a&#32;&lt;=&#32;theta)
+<anchor xml:id="_a00287_source_1l00071"/>00071 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_a00287_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2&#32;*&#32;abs(quantizer_index);
+<anchor xml:id="_a00287_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_a00287_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2&#32;*&#32;abs(quantizer_index)&#32;-&#32;1;
+<anchor xml:id="_a00287_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00287_source_1l00076"/>00076 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00287_source_1l00077"/>00077 }
+</programlisting></section>

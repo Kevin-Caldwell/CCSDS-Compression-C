@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00044_source" xml:lang="en-US">
+<title>image_test.py</title>
+<indexterm><primary>python/image_test.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00044_source_1l00001"/><link linkend="_a00362">00001</link> <emphasis role="keyword">from</emphasis>&#32;mat_to_csv&#32;<emphasis role="keyword">import</emphasis>&#32;load_pic
+<anchor xml:id="_a00044_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;matplotlib.pyplot&#32;<emphasis role="keyword">as</emphasis>&#32;plt
+<anchor xml:id="_a00044_source_1l00003"/>00003 
+<anchor xml:id="_a00044_source_1l00004"/><link linkend="_a00362_1a0b47ce0c13c56f95ba8759974d6e722b">00004</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00362_1a0b47ce0c13c56f95ba8759974d6e722b">load_indian_pines</link>():
+<anchor xml:id="_a00044_source_1l00005"/>00005 &#32;&#32;&#32;&#32;ip&#32;=&#32;load_pic(<emphasis role="stringliteral">&quot;data/test-images/Indian_pines.mat&quot;</emphasis>)
+<anchor xml:id="_a00044_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ip
+<anchor xml:id="_a00044_source_1l00007"/>00007 
+<anchor xml:id="_a00044_source_1l00008"/>00008 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_a00044_source_1l00009"/><link linkend="_a00362_1afd65cf072a93c93ad52b9f25b341e10b">00009</link> &#32;&#32;&#32;&#32;ip&#32;=&#32;<link linkend="_a00362_1a0b47ce0c13c56f95ba8759974d6e722b">load_indian_pines</link>()
+<anchor xml:id="_a00044_source_1l00010"/><link linkend="_a00362_1aaeb5d6c0725676dbf8a8b57680213cb9">00010</link> &#32;&#32;&#32;&#32;wavelength&#32;=&#32;ip[0,&#32;10,&#32;:]
+<anchor xml:id="_a00044_source_1l00011"/>00011 
+<anchor xml:id="_a00044_source_1l00012"/>00012 &#32;&#32;&#32;&#32;plt.plot(wavelength)
+<anchor xml:id="_a00044_source_1l00013"/>00013 &#32;&#32;&#32;&#32;plt.show()&#32;
+<anchor xml:id="_a00044_source_1l00014"/>00014 
+</programlisting></section>

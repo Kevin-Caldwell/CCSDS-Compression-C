@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d1/d6e/image__handler_8c" kind="file" language="C++">
+    <compoundname>image_handler.c</compoundname>
+    <includes refid="df/d7b/generate__image_8h" local="yes">testing/generate_image.h</includes>
+    <includes refid="d1/d9c/perlin_8h" local="yes">testing/perlin.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="21">
+        <label>cache/cache_predictor.h</label>
+        <link refid="df/d01/cache__predictor_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>constants/encoder_constants.h</label>
+        <link refid="d7/ddb/encoder__constants_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>global_constants.h</label>
+        <link refid="d5/ddb/global__constants_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>constants/load_constants.h</label>
+        <link refid="d4/d3e/load__constants_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dst/hash_table.h</label>
+        <link refid="d4/ddb/hash__table_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dst/image.h</label>
+        <link refid="d5/db2/image_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>encoder/encoder_helper_functions.h</label>
+        <link refid="d4/d25/encoder__helper__functions_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>encoder/header.h</label>
+        <link refid="df/dcb/header_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>files/csv-io.h</label>
+        <link refid="d6/d51/csv-io_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>files/file_IO.h</label>
+        <link refid="d9/d7f/file___i_o_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>files/uhi_io.h</label>
+        <link refid="d8/d60/uhi__io_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>math/linear_algebra.h</label>
+        <link refid="dc/d9c/linear__algebra_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>predictor/local_differences.h</label>
+        <link refid="d2/df3/local__differences_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>predictor/local_sum.h</label>
+        <link refid="d6/d9d/local__sum_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>predictor/predictor.h</label>
+        <link refid="dc/d08/predictor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>predictor/quantizer.h</label>
+        <link refid="d1/d38/quantizer_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>predictor/sample_representative.h</label>
+        <link refid="df/d7d/sample__representative_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>predictor/weights.h</label>
+        <link refid="d2/d6a/weights_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>testing/generate_image.h</label>
+        <link refid="df/d7b/generate__image_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>testing/perlin.h</label>
+        <link refid="d1/d9c/perlin_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>testing/synthetic_image_generator.h</label>
+        <link refid="d9/dea/synthetic__image__generator_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>main/image_handler.c</label>
+        <link refid="d1/d6e/image__handler_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>inttypes.h</label>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="9">
+        <label>stddef.h</label>
+      </node>
+      <node id="18">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>string.h</label>
+      </node>
+      <node id="30">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d1/d6e/image__handler_8c_1a1b0cdea94de8d08c0351a24c1e84f547" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char DEBUG</definition>
+        <argsstring></argsstring>
+        <name>DEBUG</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/image_handler.c" line="6" column="7" bodyfile="main/image_handler.c" bodystart="6" bodyend="-1"/>
+        <referencedby refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="db/d25/predictor_8c" startline="10" endline="55">Predict</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d6e/image__handler_8c_1a048af25ea3eb0571ab780e44e221650e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argInt, char **argS)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argInt</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argS</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/image_handler.c" line="8" column="5" bodyfile="main/image_handler.c" bodystart="8" bodyend="20"/>
+        <references refid="d1/d9c/perlin_8h_1a6d727efa497a4b992c90483602583515" compoundref="d1/d32/perlin__noise_8c" startline="103" endline="117">GeneratePerlinImage</references>
+        <references refid="df/d7b/generate__image_8h_1a450c7f9206bff8de0c177e34e6b5bcf4" compoundref="d6/d92/generate__image_8c" startline="5" endline="19">GenerateVoronoiImage</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="df/d7b/generate__image_8h" kindref="compound">testing/generate_image.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d9c/perlin_8h" kindref="compound">testing/perlin.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d1/d6e/image__handler_8c_1a1b0cdea94de8d08c0351a24c1e84f547" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/image__handler_8c_1a1b0cdea94de8d08c0351a24c1e84f547" kindref="member">DEBUG</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d1/d6e/image__handler_8c_1a048af25ea3eb0571ab780e44e221650e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/d6e/image__handler_8c_1a048af25ea3eb0571ab780e44e221650e" kindref="member">main</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argInt,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argS){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(argInt<sp/>&gt;<sp/>1){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!strcmp(argS[1],<sp/></highlight><highlight class="stringliteral">&quot;generate&quot;</highlight><highlight class="normal">)){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!strcmp(argS[2],<sp/></highlight><highlight class="stringliteral">&quot;voronoi&quot;</highlight><highlight class="normal">)){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/d7b/generate__image_8h_1a450c7f9206bff8de0c177e34e6b5bcf4" kindref="member">GenerateVoronoiImage</ref>((<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref>)<sp/>{atoi(argS[3]),<sp/>atoi(argS[4]),<sp/>atoi(argS[5])},<sp/>atoi(argS[6]),<sp/>atoi(argS[7]));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!strcmp(argS[2],<sp/></highlight><highlight class="stringliteral">&quot;perlin&quot;</highlight><highlight class="normal">)){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/d9c/perlin_8h_1a6d727efa497a4b992c90483602583515" kindref="member">GeneratePerlinImage</ref>((<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref>)<sp/>{atoi(argS[3]),<sp/>atoi(argS[4]),<sp/>atoi(argS[5])},<sp/>atoi(argS[6]),<sp/>atoi(argS[7]));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d1/d9c/perlin_8h_1a6d727efa497a4b992c90483602583515" kindref="member">GeneratePerlinImage</ref>((<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref>)<sp/>{100,<sp/>100,<sp/>100},<sp/>0,<sp/>10);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="main/image_handler.c"/>
+  </compounddef>
+</doxygen>

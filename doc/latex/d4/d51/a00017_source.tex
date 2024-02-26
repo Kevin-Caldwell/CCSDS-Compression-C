@@ -1,0 +1,48 @@
+\doxysection{display\+\_\+debugging.\+py}
+\hypertarget{a00017_source}{}\label{a00017_source}\index{python/display\_debugging.py@{python/display\_debugging.py}}
+\mbox{\hyperlink{a00017}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00001}\mbox{\hyperlink{a00357}{00001}}\ \textcolor{keyword}{import}\ matplotlib.pyplot\ \textcolor{keyword}{as}\ plt}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00002}00002\ \textcolor{keyword}{from}\ matplotlib.animation\ \textcolor{keyword}{import}\ FuncAnimation}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00004}\mbox{\hyperlink{a00357_a7e69bd3f9400dc258e83fe7ecab1e317}{00004}}\ CacheFiles\ =\ [\textcolor{stringliteral}{"{}raw"{}},}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00005}00005\ \ \ \ \textcolor{stringliteral}{"{}predictor"{}},\ \textcolor{stringliteral}{"{}local-\/sums"{}}]}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00007}\mbox{\hyperlink{a00357_ac3eb632b1a788eb448ac9474d94a2436}{00007}}\ num\_images\ =\ len(CacheFiles)}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00008}\mbox{\hyperlink{a00357_a74742cb5c8e2ac354a60cb73383d8176}{00008}}\ rows\ =\ 2\ \textcolor{keywordflow}{if}\ num\_images\ >\ 5\ \textcolor{keywordflow}{else}\ 1}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00009}\mbox{\hyperlink{a00357_aaed057ed424ced7429016ec18c2edbb6}{00009}}\ cols\ =\ (num\_images\ +\ 1)\ //\ 2}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00011}\mbox{\hyperlink{a00357_addecde06ced656af71c7c68c4e780fe8}{00011}}\ fig,\ axes\ =\ plt.subplots(rows,\ cols,\ figsize=(10,\ 5))}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00012}00012\ fig.tight\_layout()}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00015}\mbox{\hyperlink{a00357_a09fdf86df724fb528e53a740e45fb686}{00015}}\ images\ =\ []}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00017}\mbox{\hyperlink{a00357_a225e5b2e6406c2700aa6a6c884994dc3}{00017}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00357_a225e5b2e6406c2700aa6a6c884994dc3}{display\_images}}(i):}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00018}00018\ \ \ \ \ images\ =\ []}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00019}00019\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{for}\ filename\ \textcolor{keywordflow}{in}\ CacheFiles:}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00021}00021\ \ \ \ \ \ \ \ \ images.append(plt.imread(f\textcolor{stringliteral}{'Python/images/\{filename\}\{i\}.png'}))}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{if}\ num\_images\ >\ 10:}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00024}00024\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Error:\ Maximum\ 10\ images\ can\ be\ displayed."{}})}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{for}\ i,\ ax\ \textcolor{keywordflow}{in}\ enumerate(axes.flat):}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ i\ <\ num\_images:}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ ax.imshow(images[i])}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ ax.axis(\textcolor{stringliteral}{'off'})}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ ax.axis(\textcolor{stringliteral}{'off'})}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00035}00035\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00039}00039\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{a00017_source_l00041}\mbox{\hyperlink{a00357_a4c913b7a4b89c523eb5240af5d344082}{00041}}\ \ \ \ \ anim\ =\ FuncAnimation(fig,\ display\_images,\ frames\ =\ 100,\ interval=1000)}
+\DoxyCodeLine{\Hypertarget{a00017_source_l00042}00042\ \ \ \ \ plt.show()}
+
+\end{DoxyCode}

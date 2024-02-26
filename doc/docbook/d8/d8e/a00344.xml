@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00344" xml:lang="en-US">
+<title>src/predictor.c File Reference</title>
+<indexterm><primary>src/predictor.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;constants/global_constants.h&quot;<?linebreak?>#include &quot;predictor/predictor.h&quot;<?linebreak?>#include &lt;time.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &quot;files/logs.h&quot;<?linebreak?></programlisting>Include dependency graph for predictor.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d48/a00345.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_a00344_1a498daa18fb3529e8fffc3fff08e6bef6">Predict</link> (<link linkend="_a00380">image</link> *hIMG, <link linkend="_a00380">image</link> *result, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00344_1a4a94804509574a94d896a4164802bcd2">RunPredictor</link> (<link linkend="_a00380">image</link> *hIMG, <link linkend="_a00380">image</link> *result)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00122_1aaa4f66633ab727c9d841db141c3da088">file_t</link> * <link linkend="_a00344_1a75189a35b23b0d484e74e07e0c237cd1">fp</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_a00344_1a5464533d23b59ba11030432e73528730">C</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00344_1a498daa18fb3529e8fffc3fff08e6bef6"/><section>
+    <title>Predict()</title>
+<indexterm><primary>Predict</primary><secondary>predictor.c</secondary></indexterm>
+<indexterm><primary>predictor.c</primary><secondary>Predict</secondary></indexterm>
+<para><computeroutput>void Predict (<link linkend="_a00380">image</link> * hIMG, <link linkend="_a00380">image</link> * result, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</computeroutput></para><para>
+Definition at line <link linkend="_a00344_source_1l00010">10</link> of file <link linkend="_a00344_source">predictor.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d8e/a00344_a498daa18fb3529e8fffc3fff08e6bef6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d8e/a00344_a498daa18fb3529e8fffc3fff08e6bef6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00344_1a4a94804509574a94d896a4164802bcd2"/><section>
+    <title>RunPredictor()</title>
+<indexterm><primary>RunPredictor</primary><secondary>predictor.c</secondary></indexterm>
+<indexterm><primary>predictor.c</primary><secondary>RunPredictor</secondary></indexterm>
+<para><computeroutput>int RunPredictor (<link linkend="_a00380">image</link> * hIMG, <link linkend="_a00380">image</link> * result)</computeroutput></para><para>
+Definition at line <link linkend="_a00344_source_1l00057">57</link> of file <link linkend="_a00344_source">predictor.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d8e/a00344_a4a94804509574a94d896a4164802bcd2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d8e/a00344_a4a94804509574a94d896a4164802bcd2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00344_1a5464533d23b59ba11030432e73528730"/><section>
+    <title>C</title>
+<indexterm><primary>C</primary><secondary>predictor.c</secondary></indexterm>
+<indexterm><primary>predictor.c</primary><secondary>C</secondary></indexterm>
+<para><computeroutput>int C = 0</computeroutput></para><para>
+Definition at line <link linkend="_a00344_source_1l00008">8</link> of file <link linkend="_a00344_source">predictor.c</link>.</para>
+</section>
+<anchor xml:id="_a00344_1a75189a35b23b0d484e74e07e0c237cd1"/><section>
+    <title>fp</title>
+<indexterm><primary>fp</primary><secondary>predictor.c</secondary></indexterm>
+<indexterm><primary>predictor.c</primary><secondary>fp</secondary></indexterm>
+<para><computeroutput><link linkend="_a00122_1aaa4f66633ab727c9d841db141c3da088">file_t</link>* fp</computeroutput></para><para>
+Definition at line <link linkend="_a00344_source_1l00007">7</link> of file <link linkend="_a00344_source">predictor.c</link>.</para>
+</section>
+</section>
+</section>

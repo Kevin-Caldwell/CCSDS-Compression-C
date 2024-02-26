@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00290_source" xml:lang="en-US">
+<title>constants.c</title>
+<indexterm><primary>src/constants.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00290_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00146">constants/constants.h</link>&quot;</emphasis>
+<anchor xml:id="_a00290_source_1l00002"/>00002 
+<anchor xml:id="_a00290_source_1l00003"/><link linkend="_a00146_1af84e7b9bd8c4fa1203b0040adf941d8d">00003</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_a00290_1af84e7b9bd8c4fa1203b0040adf941d8d">InitalizeImageConstants</link>(<link linkend="_a00404">dim3</link>&#32;size)
+<anchor xml:id="_a00290_source_1l00004"/>00004 {
+<anchor xml:id="_a00290_source_1l00005"/>00005 &#32;&#32;&#32;&#32;<link linkend="_a00290_1abfda77b016218238359bcc3e5c1600b0">Nx</link>&#32;=&#32;size.<link linkend="_a00404_1a098d7fd50051a60dd6764a3b94978064">x</link>;
+<anchor xml:id="_a00290_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<link linkend="_a00290_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>&#32;=&#32;size.<link linkend="_a00404_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>;
+<anchor xml:id="_a00290_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>&#32;=&#32;size.<link linkend="_a00404_1a369004c0d58468e2b5a09c22d6608e1b">z</link>;
+<anchor xml:id="_a00290_source_1l00008"/>00008 }
+<anchor xml:id="_a00290_source_1l00009"/>00009 
+<anchor xml:id="_a00290_source_1l00010"/><link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">00010</link> <emphasis role="preprocessor">#define&#32;GET_PCONST(x)&#32;(Hash_GetValue(&amp;predictor_constants,&#32;x))</emphasis>
+<anchor xml:id="_a00290_source_1l00011"/>00011 
+<anchor xml:id="_a00290_source_1l00012"/><link linkend="_a00146_1a6acd65af9a2f057ad3f0891038799e5b">00012</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_a00290_1a6acd65af9a2f057ad3f0891038799e5b">InitalizePredictorConstants</link>()
+<anchor xml:id="_a00290_source_1l00013"/>00013 {
+<anchor xml:id="_a00290_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a2481969fa62464bdc5889190f3e10f31">kTInc</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;CHANGE_INTERVAL&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a68b61249aa9c541a3ed6d1987b8c53ce">kVMin</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;WEIGHT_UPDATE_V_MIN&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a85fbef56eedaaa1a29a9f0c18ba53631">kVMax</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;WEIGHT_UPDATE_V_MAX&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00017"/>00017 
+<anchor xml:id="_a00290_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a9f28821bcbb645a7c3ab8a0228335fc5">kUnsignedSamples</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;UNSIGNED_SAMPLES&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;D&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a277c6f02ad4604307ae5ed6d8e4f9630">Da</link>&#32;=&#32;<link linkend="_a00152_1a3acffbd305ee72dcd4593c0d8af64a4f">MIN</link>(<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;1,&#32;16);
+<anchor xml:id="_a00290_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<link linkend="_a00290_1add3510c03fbe63c1b97c67aac517c930">kSmin</link>&#32;=&#32;-<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;1);
+<anchor xml:id="_a00290_source_1l00022"/>00022 
+<anchor xml:id="_a00290_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_a00290_1a9f28821bcbb645a7c3ab8a0228335fc5">kUnsignedSamples</link>)
+<anchor xml:id="_a00290_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_a00290_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00290_1add3510c03fbe63c1b97c67aac517c930">kSmin</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00290_1a8329a1a244af278852519dfccd0d4814">kSmax</link>&#32;=&#32;<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>)&#32;-&#32;1;
+<anchor xml:id="_a00290_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00290_1a0dca58ddf3108a022c36b549baa6ec46">kSmid</link>&#32;=&#32;<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;1);
+<anchor xml:id="_a00290_source_1l00028"/>00028 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00290_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_a00290_source_1l00030"/>00030 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_a00290_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00290_1add3510c03fbe63c1b97c67aac517c930">kSmin</link>&#32;=&#32;-<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;1);
+<anchor xml:id="_a00290_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00290_1a8329a1a244af278852519dfccd0d4814">kSmax</link>&#32;=&#32;<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>)&#32;-&#32;1;
+<anchor xml:id="_a00290_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00290_1a0dca58ddf3108a022c36b549baa6ec46">kSmid</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00034"/>00034 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00290_source_1l00035"/>00035 
+<anchor xml:id="_a00290_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<link linkend="_a00290_1aee5860bd3e62fe2734ce27a1b1038dbc">PREDICTION_MODE</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;PREDICTION_MODE&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a21c169290a6c782855c778bb7a0389b9">kP</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;P&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a43cf89f028c6b6ad01038627b83a84c0">kR</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;REGISTER_SIZE_PARAMETER&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00039"/>00039 
+<anchor xml:id="_a00290_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;WEIGHT_RESOLUTION&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00041"/>00041 
+<anchor xml:id="_a00290_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<link linkend="_a00290_1afe552e4b168b0821a5cb40ca9f8df744">kOmegaMin</link>&#32;=&#32;-(<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>&#32;+&#32;2));
+<anchor xml:id="_a00290_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<link linkend="_a00290_1a919504d752286a3ecacfab4792035e7c">kOmegaMax</link>&#32;=&#32;<link linkend="_a00152_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_a00290_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>&#32;+&#32;2)&#32;-&#32;1;
+<anchor xml:id="_a00290_source_1l00044"/>00044 
+<anchor xml:id="_a00290_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<link linkend="_a00290_1ab11dcc700999baf22e51630cc1e0d7ed">LOCAL_SUM_TYPE</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;LOCAL_SUM_TYPE&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<link linkend="_a00290_1ac27421de69856578bf77ce84bfa82974">m_z</link>&#32;=&#32;<link linkend="_a00290_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(<emphasis role="stringliteral">&quot;ABSOLUTE_ERROR_LIMIT&quot;</emphasis>);
+<anchor xml:id="_a00290_source_1l00047"/>00047 }
+<anchor xml:id="_a00290_source_1l00048"/>00048 
+<anchor xml:id="_a00290_source_1l00049"/>00049 <emphasis role="preprocessor">#pragma&#32;region&#32;Do&#32;Not&#32;Touch</emphasis>
+<anchor xml:id="_a00290_source_1l00050"/>00050 
+<anchor xml:id="_a00290_source_1l00051"/><link linkend="_a00146_1abfda77b016218238359bcc3e5c1600b0">00051</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1abfda77b016218238359bcc3e5c1600b0">Nx</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00052"/><link linkend="_a00146_1adcc9183c4659dc09e04e5ede1d79215b">00052</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00053"/><link linkend="_a00146_1a7a7576e08f5980d322da5f48c7385edc">00053</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00054"/>00054 
+<anchor xml:id="_a00290_source_1l00055"/><link linkend="_a00137_1a3e84b5148948a9a22f804ac78d16590c">00055</link> <link linkend="_a00376">HashTable</link>&#32;<link linkend="_a00290_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link>;
+<anchor xml:id="_a00290_source_1l00056"/><link linkend="_a00137_1a3c652412cc269bd4ae6155fed5f79c6f">00056</link> <link linkend="_a00376">HashTable</link>&#32;<link linkend="_a00290_1a3c652412cc269bd4ae6155fed5f79c6f">encoder_constants</link>;
+<anchor xml:id="_a00290_source_1l00057"/>00057 
+<anchor xml:id="_a00290_source_1l00058"/><link linkend="_a00146_1a9f28821bcbb645a7c3ab8a0228335fc5">00058</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a9f28821bcbb645a7c3ab8a0228335fc5">kUnsignedSamples</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00059"/><link linkend="_a00146_1ab11dcc700999baf22e51630cc1e0d7ed">00059</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1ab11dcc700999baf22e51630cc1e0d7ed">LOCAL_SUM_TYPE</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00060"/>00060 
+<anchor xml:id="_a00290_source_1l00061"/><link linkend="_a00146_1aee5860bd3e62fe2734ce27a1b1038dbc">00061</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1aee5860bd3e62fe2734ce27a1b1038dbc">PREDICTION_MODE</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00062"/>00062 
+<anchor xml:id="_a00290_source_1l00063"/><link linkend="_a00146_1abf6d0ccec2f5157184071729f129de19">00063</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00064"/><link linkend="_a00146_1a277c6f02ad4604307ae5ed6d8e4f9630">00064</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a277c6f02ad4604307ae5ed6d8e4f9630">Da</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00065"/>00065 
+<anchor xml:id="_a00290_source_1l00066"/><link linkend="_a00146_1add3510c03fbe63c1b97c67aac517c930">00066</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1add3510c03fbe63c1b97c67aac517c930">kSmin</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00067"/><link linkend="_a00146_1a0dca58ddf3108a022c36b549baa6ec46">00067</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a0dca58ddf3108a022c36b549baa6ec46">kSmid</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00068"/><link linkend="_a00146_1a8329a1a244af278852519dfccd0d4814">00068</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a8329a1a244af278852519dfccd0d4814">kSmax</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00069"/>00069 
+<anchor xml:id="_a00290_source_1l00070"/><link linkend="_a00146_1a21c169290a6c782855c778bb7a0389b9">00070</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a21c169290a6c782855c778bb7a0389b9">kP</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00071"/><link linkend="_a00146_1a43cf89f028c6b6ad01038627b83a84c0">00071</link> int64_t&#32;<link linkend="_a00290_1a43cf89f028c6b6ad01038627b83a84c0">kR</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00072"/>00072 
+<anchor xml:id="_a00290_source_1l00073"/><link linkend="_a00146_1a85fbef56eedaaa1a29a9f0c18ba53631">00073</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a85fbef56eedaaa1a29a9f0c18ba53631">kVMax</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00074"/><link linkend="_a00146_1a68b61249aa9c541a3ed6d1987b8c53ce">00074</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a68b61249aa9c541a3ed6d1987b8c53ce">kVMin</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00075"/><link linkend="_a00146_1a2481969fa62464bdc5889190f3e10f31">00075</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a2481969fa62464bdc5889190f3e10f31">kTInc</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00076"/>00076 
+<anchor xml:id="_a00290_source_1l00077"/><link linkend="_a00146_1a515cdf0341e52056bcea8e46c952ee82">00077</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00078"/><link linkend="_a00146_1afe552e4b168b0821a5cb40ca9f8df744">00078</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1afe552e4b168b0821a5cb40ca9f8df744">kOmegaMin</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00079"/><link linkend="_a00146_1a919504d752286a3ecacfab4792035e7c">00079</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1a919504d752286a3ecacfab4792035e7c">kOmegaMax</link>&#32;=&#32;0;
+<anchor xml:id="_a00290_source_1l00080"/>00080 
+<anchor xml:id="_a00290_source_1l00081"/><link linkend="_a00146_1ac27421de69856578bf77ce84bfa82974">00081</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00290_1ac27421de69856578bf77ce84bfa82974">m_z</link>;
+<anchor xml:id="_a00290_source_1l00082"/>00082 
+<anchor xml:id="_a00290_source_1l00083"/>00083 <emphasis role="preprocessor">#pragma&#32;endregion</emphasis>
+</programlisting></section>

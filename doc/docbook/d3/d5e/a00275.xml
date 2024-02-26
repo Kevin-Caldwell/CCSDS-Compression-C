@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00275" xml:lang="en-US">
+<title>src/test_UHI.c File Reference</title>
+<indexterm><primary>src/test_UHI.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testing/test_UHI.h&quot;<?linebreak?>#include &quot;testing/synthetic_image_generator.h&quot;<?linebreak?></programlisting>Include dependency graph for test_UHI.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dc/d28/a00276.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00275_1a24aa285f65de829c8a9791d901405626">test_UHI</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00275_1a24aa285f65de829c8a9791d901405626"/><section>
+    <title>test_UHI()</title>
+<indexterm><primary>test_UHI</primary><secondary>test_UHI.c</secondary></indexterm>
+<indexterm><primary>test_UHI.c</primary><secondary>test_UHI</secondary></indexterm>
+<para><computeroutput>int test_UHI ( )</computeroutput></para><para>
+Definition at line <link linkend="_a00275_source_1l00005">5</link> of file <link linkend="_a00275_source">test_UHI.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/d5e/a00275_a24aa285f65de829c8a9791d901405626_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/d5e/a00275_a24aa285f65de829c8a9791d901405626_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00041" xml:lang="en-US">
+<title>python/csv_io.py File Reference</title>
+<indexterm><primary>python/csv_io.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_a00356">csv_io</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00356_1a84c47e6bbcef028eda4c81cfa1b935ff">ReadCSV</link> (filename)</para>
+</listitem>
+            <listitem><para><link linkend="_a00356_1af953609f65420e99a9c283dfa65c5453">SaveCSV</link> (np_array_3d, output_path)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

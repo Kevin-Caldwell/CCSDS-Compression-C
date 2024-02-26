@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test___u_h_i_8c_source" xml:lang="en-US">
+<title>test_UHI.c</title>
+<indexterm><primary>src/test_UHI.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_test___u_h_i_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_test___u_h_i_8h">testing/test_UHI.h</link>&quot;</emphasis>
+<anchor xml:id="_test___u_h_i_8c_source_1l00002"/>00002 
+<anchor xml:id="_test___u_h_i_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_synthetic__image__generator_8h">testing/synthetic_image_generator.h</link>&quot;</emphasis>
+<anchor xml:id="_test___u_h_i_8c_source_1l00004"/>00004 
+<anchor xml:id="_test___u_h_i_8c_source_1l00005"/><link linkend="_test___u_h_i_8h_1a24aa285f65de829c8a9791d901405626">00005</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_test___u_h_i_8c_1a24aa285f65de829c8a9791d901405626">test_UHI</link>(){
+<anchor xml:id="_test___u_h_i_8c_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<link linkend="_struct_uncompressed_hyperspectral_image">UHI</link>&#32;stream;
+<anchor xml:id="_test___u_h_i_8c_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<link linkend="_structimage">image</link>&#32;baseImg;
+<anchor xml:id="_test___u_h_i_8c_source_1l00008"/>00008 
+<anchor xml:id="_test___u_h_i_8c_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;_Nx&#32;=&#32;100;
+<anchor xml:id="_test___u_h_i_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;_Ny&#32;=&#32;100;
+<anchor xml:id="_test___u_h_i_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;_Nz&#32;=&#32;100;
+<anchor xml:id="_test___u_h_i_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Prepare&#32;Random&#32;Hyperspectral&#32;Image</emphasis>
+<anchor xml:id="_test___u_h_i_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<link linkend="_image_8h_1a61b8047c5bba5a89979d65847e4103b1">InitImage</link>(&amp;baseImg,&#32;_Nx,&#32;_Ny,&#32;_Nz);
+<anchor xml:id="_test___u_h_i_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<link linkend="_synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa">GenerateVoronoiFlat3DNaive</link>(&amp;baseImg,&#32;10);
+<anchor xml:id="_test___u_h_i_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;
+<anchor xml:id="_test___u_h_i_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;
+<anchor xml:id="_test___u_h_i_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<link linkend="_uhi__io_8h_1a6114b6569fbd42d5a3fa05f4cd82cc7e">UHI_Initialize</link>(&amp;stream,&#32;baseImg.<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>,&#32;<emphasis role="stringliteral">&quot;data/test-images/test.UHI&quot;</emphasis>,&#32;<link linkend="_file___i_o_8h_1a588666511dde277029c4c5afc30782a6a8766471eed07b5c5db8f7e9b5bf0e13e">READ_AND_WRITE</link>);
+<anchor xml:id="_test___u_h_i_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;_Nx;&#32;i++){
+<anchor xml:id="_test___u_h_i_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;_Ny;&#32;j++){
+<anchor xml:id="_test___u_h_i_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;&#32;_Nz;&#32;k++){
+<anchor xml:id="_test___u_h_i_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_uhi__io_8h_1a88066808c0a718f67bd50a325cdb5721">UHI_WritePixel</link>(&amp;stream,&#32;(<link linkend="_structdim3">dim3</link>)&#32;{i,&#32;j,&#32;k},&#32;<link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(&amp;baseImg,&#32;_Nx,&#32;_Ny,&#32;_Nz));
+<anchor xml:id="_test___u_h_i_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00025"/>00025 
+<anchor xml:id="_test___u_h_i_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;fail&#32;=&#32;0;
+<anchor xml:id="_test___u_h_i_8c_source_1l00027"/>00027 
+<anchor xml:id="_test___u_h_i_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;_Nx;&#32;i++){
+<anchor xml:id="_test___u_h_i_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;_Ny;&#32;j++){
+<anchor xml:id="_test___u_h_i_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;&#32;_Nz;&#32;k++){
+<anchor xml:id="_test___u_h_i_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_uhi__io_8h_1ad7fd2d84633ee6e0355a950deeacd220">UHI_ReadPixel</link>(&amp;stream,&#32;(<link linkend="_structdim3">dim3</link>)&#32;{i,&#32;j,&#32;k})&#32;!=&#32;<link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(&amp;baseImg,&#32;i,&#32;j,&#32;k)){
+<anchor xml:id="_test___u_h_i_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fail&#32;=&#32;1;
+<anchor xml:id="_test___u_h_i_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00034"/>00034 
+<anchor xml:id="_test___u_h_i_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fail)&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_test___u_h_i_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fail)&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_test___u_h_i_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fail)&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_test___u_h_i_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_test___u_h_i_8c_source_1l00041"/>00041 
+<anchor xml:id="_test___u_h_i_8c_source_1l00042"/>00042 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#ifndef&#32;MEMORY_SAVING</emphasis>
+<anchor xml:id="_test___u_h_i_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;free(baseImg.<link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link>);
+<anchor xml:id="_test___u_h_i_8c_source_1l00044"/>00044 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endif</emphasis>
+<anchor xml:id="_test___u_h_i_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1ad62e6a72675aa7b389460e97f4e6d998">F_CLOSE</link>(stream.<link linkend="_struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff">fs</link>);
+<anchor xml:id="_test___u_h_i_8c_source_1l00046"/>00046 
+<anchor xml:id="_test___u_h_i_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;
+<anchor xml:id="_test___u_h_i_8c_source_1l00048"/>00048 
+<anchor xml:id="_test___u_h_i_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;
+<anchor xml:id="_test___u_h_i_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;fail;
+<anchor xml:id="_test___u_h_i_8c_source_1l00051"/>00051 }
+</programlisting></section>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_image__handler_8c_source" xml:lang="en-US">
+<title>image_handler.c</title>
+<indexterm><primary>main/image_handler.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_image__handler_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_generate__image_8h">testing/generate_image.h</link>&quot;</emphasis>
+<anchor xml:id="_image__handler_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_perlin_8h">testing/perlin.h</link>&quot;</emphasis>
+<anchor xml:id="_image__handler_8c_source_1l00003"/>00003 
+<anchor xml:id="_image__handler_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="_image__handler_8c_source_1l00005"/>00005 
+<anchor xml:id="_image__handler_8c_source_1l00006"/><link linkend="_image__handler_8c_1a1b0cdea94de8d08c0351a24c1e84f547">00006</link> &#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_image__handler_8c_1a1b0cdea94de8d08c0351a24c1e84f547">DEBUG</link>&#32;=&#32;0;
+<anchor xml:id="_image__handler_8c_source_1l00007"/>00007 
+<anchor xml:id="_image__handler_8c_source_1l00008"/><link linkend="_image__handler_8c_1a048af25ea3eb0571ab780e44e221650e">00008</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_image__handler_8c_1a048af25ea3eb0571ab780e44e221650e">main</link>(<emphasis role="keywordtype">int</emphasis>&#32;argInt,&#32;<emphasis role="keywordtype">char</emphasis>**&#32;argS){
+<anchor xml:id="_image__handler_8c_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(argInt&#32;&gt;&#32;1){
+<anchor xml:id="_image__handler_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!strcmp(argS[1],&#32;<emphasis role="stringliteral">&quot;generate&quot;</emphasis>)){
+<anchor xml:id="_image__handler_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!strcmp(argS[2],&#32;<emphasis role="stringliteral">&quot;voronoi&quot;</emphasis>)){
+<anchor xml:id="_image__handler_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_generate__image_8h_1a450c7f9206bff8de0c177e34e6b5bcf4">GenerateVoronoiImage</link>((<link linkend="_structdim3">dim3</link>)&#32;{atoi(argS[3]),&#32;atoi(argS[4]),&#32;atoi(argS[5])},&#32;atoi(argS[6]),&#32;atoi(argS[7]));
+<anchor xml:id="_image__handler_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">if</emphasis>(!strcmp(argS[2],&#32;<emphasis role="stringliteral">&quot;perlin&quot;</emphasis>)){
+<anchor xml:id="_image__handler_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_perlin_8h_1a6d727efa497a4b992c90483602583515">GeneratePerlinImage</link>((<link linkend="_structdim3">dim3</link>)&#32;{atoi(argS[3]),&#32;atoi(argS[4]),&#32;atoi(argS[5])},&#32;atoi(argS[6]),&#32;atoi(argS[7]));
+<anchor xml:id="_image__handler_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_image__handler_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;
+<anchor xml:id="_image__handler_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_image__handler_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_perlin_8h_1a6d727efa497a4b992c90483602583515">GeneratePerlinImage</link>((<link linkend="_structdim3">dim3</link>)&#32;{100,&#32;100,&#32;100},&#32;0,&#32;10);
+<anchor xml:id="_image__handler_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_image__handler_8c_source_1l00020"/>00020 }
+</programlisting></section>

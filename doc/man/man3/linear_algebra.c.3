@@ -1,0 +1,62 @@
+.TH "src/linear_algebra.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/linear_algebra.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'math/linear_algebra\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBInitVector\fP (int32_t **v, \fBUINT\fP len)"
+.br
+.ti -1c
+.RI "int \fBDeleteVector\fP (\fBdata_t\fP *v)"
+.br
+.ti -1c
+.RI "int \fBAddVectors\fP (\fBdata_t\fP *v1, \fBdata_t\fP *v2, \fBdata_t\fP *res, \fBUINT\fP size)"
+.br
+.ti -1c
+.RI "int \fBSubtractVectors\fP (\fBdata_t\fP *v1, \fBdata_t\fP *v2, \fBdata_t\fP *res, \fBUINT\fP size)"
+.br
+.ti -1c
+.RI "int64_t \fBInnerProduct\fP (int32_t *v1, int32_t *v2, \fBUINT\fP size)"
+.br
+.ti -1c
+.RI "int \fBScalarProduct\fP (\fBdata_t\fP *v, \fBdata_t\fP scalar, \fBdata_t\fP *res, \fBUINT\fP size)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int AddVectors (\fBdata_t\fP * v1, \fBdata_t\fP * v2, \fBdata_t\fP * res, \fBUINT\fP size)"
+
+.PP
+Definition at line \fB14\fP of file \fBlinear_algebra\&.c\fP\&.
+.SS "int DeleteVector (\fBdata_t\fP * v)"
+
+.PP
+Definition at line \fB9\fP of file \fBlinear_algebra\&.c\fP\&.
+.SS "int InitVector (int32_t ** v, \fBUINT\fP len)"
+
+.PP
+Definition at line \fB3\fP of file \fBlinear_algebra\&.c\fP\&.
+.SS "int64_t InnerProduct (int32_t * v1, int32_t * v2, \fBUINT\fP size)"
+
+.PP
+Definition at line \fB28\fP of file \fBlinear_algebra\&.c\fP\&.
+.SS "int ScalarProduct (\fBdata_t\fP * v, \fBdata_t\fP scalar, \fBdata_t\fP * res, \fBUINT\fP size)"
+
+.PP
+Definition at line \fB37\fP of file \fBlinear_algebra\&.c\fP\&.
+.SS "int SubtractVectors (\fBdata_t\fP * v1, \fBdata_t\fP * v2, \fBdata_t\fP * res, \fBUINT\fP size)"
+
+.PP
+Definition at line \fB21\fP of file \fBlinear_algebra\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

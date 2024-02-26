@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d7/d06/a00131" kind="file" language="C++">
+    <compoundname>varIntFile_IO.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="df/dc8/a00122" local="yes">files/file_IO.h</includes>
+    <includedby refid="d3/d8b/a00059" local="yes">include/testing/test_varInt.h</includedby>
+    <includedby refid="d1/dc6/a00347" local="yes">src/decoder.c</includedby>
+    <includedby refid="dc/d84/a00338" local="yes">src/varIntFile_IO.c</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/files/varIntFile_IO.h</label>
+        <link refid="d7/d06/a00131"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/files/varIntFile_IO.h</label>
+        <link refid="d7/d06/a00131"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/testing/test_varInt.h</label>
+        <link refid="d3/d8b/a00059"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="5">
+        <label>src/decoder.c</label>
+        <link refid="d1/dc6/a00347"/>
+      </node>
+      <node id="4">
+        <label>src/test_varInt.c</label>
+        <link refid="d8/d23/a00326"/>
+      </node>
+      <node id="6">
+        <label>src/varIntFile_IO.c</label>
+        <link refid="dc/d84/a00338"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d9/d95/a00400" prot="public">VarUnsignedIntFile</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d7/d06/a00131_1abc23dc7967a47b4db3efff8237ef3a2f" prot="public" static="no">
+        <name>L_SHIFT</name>
+        <param><defname>x</defname></param>
+        <param><defname>s</defname></param>
+        <initializer>(s == 32 ? 0 : (s &lt; 0 ? (unsigned) x &gt;&gt; -s : (unsigned) x &lt;&lt; s))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="17" column="9" bodyfile="include/files/varIntFile_IO.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d7/d06/a00131_1af7b7dc9a200cb1404c280bd500fd1551" prot="public" static="no">
+        <name>BUFFER_LENGTH</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="20" column="9" bodyfile="include/files/varIntFile_IO.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" prot="public" static="no">
+        <name>BUFFER_SIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="21" column="9" bodyfile="include/files/varIntFile_IO.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" prot="public" static="no" strong="no">
+        <type></type>
+        <name>file_modes</name>
+        <enumvalue id="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8" prot="public">
+          <name>READ_BINARY</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc" prot="public">
+          <name>WRITE_BINARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="23" column="1" bodyfile="include/files/varIntFile_IO.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d7/d06/a00131_1a260a6f6af9275cf2bfbc28e6a687710b" prot="public" static="no">
+        <type>enum <ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref></type>
+        <definition>typedef enum file_modes file_modes</definition>
+        <argsstring></argsstring>
+        <name>file_modes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="23" column="35"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" prot="public" static="no">
+        <type>struct <ref refid="d9/d95/a00400" kindref="compound">VarUnsignedIntFile</ref></type>
+        <definition>typedef struct VarUnsignedIntFile VUF</definition>
+        <argsstring></argsstring>
+        <name>VUF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manages VUF files.</para>
+<para>Variable Unsigned Files are designed to store integers of all sizes less than 32 bits and greater than 0 bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="39" column="5"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int VUF_initialize</definition>
+        <argsstring>(VUF *stream, const char *file_name, file_modes io_mode)</argsstring>
+        <name>VUF_initialize</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref></type>
+          <declname>io_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="41" column="5" bodyfile="src/varIntFile_IO.c" bodystart="14" bodyend="40" declfile="include/files/varIntFile_IO.h" declline="41" declcolumn="5"/>
+        <references refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" compoundref="dc/d84/a00338" startline="7" endline="12">_VUF_Clean</references>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" compoundref="d7/d06/a00131" startline="21">BUFFER_SIZE</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" compoundref="dc/d5d/a00278" startline="22" endline="24">F_READ</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" compoundref="d2/df5/a00137" startline="43">FILE_ACCESS_ERROR</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="d9/d95/a00400_1aec46119c1ac94a666f08c86543006ed0" compoundref="d7/d06/a00131" startline="35">VarUnsignedIntFile::io_mode</references>
+        <references refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</references>
+        <references refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8" compoundref="d7/d06/a00131" startline="23">READ_BINARY</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <references refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc" compoundref="d7/d06/a00131" startline="23">WRITE_BINARY</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="d3/d8b/a00059_1aaac61ccbc34855ae728a8a9d45db1105" compoundref="d8/d23/a00326" startline="65" endline="87">testVUF_Read</referencedby>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/d06/a00131_1a744805d2f1db68081efadb9892a297e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int VUF_append</definition>
+        <argsstring>(VUF *stream, uint32_t data, uint32_t length)</argsstring>
+        <name>VUF_append</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="46" column="5" bodyfile="src/varIntFile_IO.c" bodystart="42" bodyend="71" declfile="include/files/varIntFile_IO.h" declline="46" declcolumn="5"/>
+        <references refid="dc/d84/a00338_1ab232dbf9e1e9abf226e94b02fe510da4" compoundref="dc/d84/a00338" startline="7" endline="12">_VUF_Clean</references>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" compoundref="d7/d06/a00131" startline="21">BUFFER_SIZE</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1a94d988ea4ce93357f56c0191584246a6" compoundref="dc/d5d/a00278" startline="18" endline="20">F_WRITE</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" compoundref="da/d2a/a00086" startline="15">L_SHIFT</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/d06/a00131_1aafa9034f88afca6a726a84673d063889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t VUF_read_stack</definition>
+        <argsstring>(VUF *stream, uint32_t length)</argsstring>
+        <name>VUF_read_stack</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="52" column="10" bodyfile="src/varIntFile_IO.c" bodystart="73" bodyend="95" declfile="include/files/varIntFile_IO.h" declline="52" declcolumn="10"/>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" compoundref="d7/d06/a00131" startline="21">BUFFER_SIZE</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" compoundref="dc/d5d/a00278" startline="22" endline="24">F_READ</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" compoundref="d7/d06/a00131" startline="34">VarUnsignedIntFile::rw_buffer</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="d3/d8b/a00059_1aaac61ccbc34855ae728a8a9d45db1105" compoundref="d8/d23/a00326" startline="65" endline="87">testVUF_Read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/d06/a00131_1ad54b8d6492e4c149c7f1232e3eda58be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int VUF_close</definition>
+        <argsstring>(VUF *stream)</argsstring>
+        <name>VUF_close</name>
+        <param>
+          <type><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/varIntFile_IO.h" line="56" column="5" bodyfile="src/varIntFile_IO.c" bodystart="97" bodyend="103" declfile="include/files/varIntFile_IO.h" declline="56" declcolumn="5"/>
+        <references refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" compoundref="d7/d06/a00131" startline="37">VarUnsignedIntFile::bit_index</references>
+        <references refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" compoundref="d7/d06/a00131" startline="38">VarUnsignedIntFile::byte_index</references>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d7/d06/a00131" startline="33">VarUnsignedIntFile::fs</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="d3/d8b/a00059_1aaac61ccbc34855ae728a8a9d45db1105" compoundref="d8/d23/a00326" startline="65" endline="87">testVUF_Read</referencedby>
+        <referencedby refid="d3/d8b/a00059_1af925d49ae82dafea37f82c0d044a6308" compoundref="d8/d23/a00326" startline="36" endline="63">testVUF_Write</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>File Input/Output for Variable-Length Words. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>Kevin Caldwell </para>
+</simplesect>
+<xrefsect id="db/ddc/a00353_1_bug000002"><xreftitle>Bug</xreftitle><xrefdescription><para>Unknown, Needs Testing </para>
+</xrefdescription></xrefsect></para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>VARINTFILE_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VARINTFILE_IO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="df/dc8/a00122" kindref="compound">files/file_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>L_SHIFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d7/d06/a00131_1abc23dc7967a47b4db3efff8237ef3a2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>L_SHIFT(x,<sp/>s)<sp/>(s<sp/>==<sp/>32<sp/>?<sp/>0<sp/>:<sp/>(s<sp/>&lt;<sp/>0<sp/>?<sp/>(unsigned)<sp/>x<sp/>&gt;&gt;<sp/>-s<sp/>:<sp/>(unsigned)<sp/>x<sp/>&lt;&lt;<sp/>s))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d7/d06/a00131_1af7b7dc9a200cb1404c280bd500fd1551" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_LENGTH<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d7/d06/a00131_1a6b20d41d6252e9871430c242cb1a56e7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_SIZE<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref><sp/>{<ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8" kindref="member">READ_BINARY</ref>=0,<sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc" kindref="member">WRITE_BINARY</ref>}<sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="d9/d95/a00400" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d9/d95/a00400" kindref="compound">VarUnsignedIntFile</ref>{</highlight></codeline>
+<codeline lineno="33" refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref><sp/>*<ref refid="d9/d95/a00400_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>;</highlight></codeline>
+<codeline lineno="34" refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="d9/d95/a00400_1ab4d491f08cdd6da71b95cf04059412c6" kindref="member">rw_buffer</ref>[<ref refid="d7/d06/a00131_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="35" refid="d9/d95/a00400_1aec46119c1ac94a666f08c86543006ed0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d9/d95/a00400_1aec46119c1ac94a666f08c86543006ed0" kindref="member">io_mode</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="d9/d95/a00400_1a97194a18c4b1d8f274a42c431ebab9e4" kindref="member">bit_index</ref>;</highlight></codeline>
+<codeline lineno="38" refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="d9/d95/a00400_1a655357dd976f916aed3eb30bc0a694d9" kindref="member">byte_index</ref>;</highlight></codeline>
+<codeline lineno="39" refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" refkind="member"><highlight class="normal">}<sp/><ref refid="d7/d06/a00131_1aaee745b08a71023fc4d3bde412bdc006" kindref="member">VUF</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" kindref="member">VUF_initialize</ref>(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d06/a00131_1a65ff8d4f12985f7d5210a0688be998dc" kindref="member">file_modes</ref><sp/>io_mode);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d06/a00131_1a744805d2f1db68081efadb9892a297e9" kindref="member">VUF_append</ref>(</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>data,<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Read<sp/>One<sp/>VarInt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">uint32_t<sp/><ref refid="d7/d06/a00131_1aafa9034f88afca6a726a84673d063889" kindref="member">VUF_read_stack</ref>(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/d06/a00131_1ad54b8d6492e4c149c7f1232e3eda58be" kindref="member">VUF_close</ref>(<ref refid="d9/d95/a00400" kindref="compound">VUF</ref>*<sp/>stream);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>VARINTFILE_IO_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/files/varIntFile_IO.h"/>
+  </compounddef>
+</doxygen>

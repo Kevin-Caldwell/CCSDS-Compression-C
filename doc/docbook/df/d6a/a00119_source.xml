@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00119_source" xml:lang="en-US">
+<title>hash_table.h</title>
+<indexterm><primary>include/dst/hash_table.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00119_source_1l00001"/>00001 
+<anchor xml:id="_a00119_source_1l00026"/>00026 <emphasis role="preprocessor">#ifndef&#32;HASH_TABLE_H</emphasis>
+<anchor xml:id="_a00119_source_1l00027"/>00027 <emphasis role="preprocessor">#define&#32;HASH_TABLE_H</emphasis>
+<anchor xml:id="_a00119_source_1l00028"/>00028 
+<anchor xml:id="_a00119_source_1l00029"/>00029 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+<anchor xml:id="_a00119_source_1l00030"/>00030 <emphasis role="preprocessor">#include&#32;&lt;inttypes.h&gt;</emphasis>
+<anchor xml:id="_a00119_source_1l00031"/>00031 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="_a00119_source_1l00032"/>00032 
+<anchor xml:id="_a00119_source_1l00033"/><link linkend="_a00119_1ac5ff60f58cdc7ee42543e2812a8cae47">00033</link> <emphasis role="preprocessor">#define&#32;HASH_CAPACITY&#32;30</emphasis>
+<anchor xml:id="_a00119_source_1l00034"/><link linkend="_a00119_1a5145aca5cb4a65b79b24d162d6fd72eb">00034</link> <emphasis role="preprocessor">#define&#32;KEY_LENGTH&#32;30</emphasis>
+<anchor xml:id="_a00119_source_1l00035"/>00035 
+<anchor xml:id="_a00119_source_1l00036"/><link linkend="_a00376">00036</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_a00376">HashTable</link>
+<anchor xml:id="_a00119_source_1l00037"/>00037 {
+<anchor xml:id="_a00119_source_1l00038"/><link linkend="_a00376_1aa429745e164770f5a9545fd31ba633b1">00038</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_a00376_1aa429745e164770f5a9545fd31ba633b1">keys</link>[<link linkend="_a00119_1ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</link>][<link linkend="_a00119_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>];
+<anchor xml:id="_a00119_source_1l00039"/><link linkend="_a00376_1afe6af42ae11ea67b9e6403bd99a4f99d">00039</link> &#32;&#32;&#32;&#32;int32_t&#32;<link linkend="_a00376_1afe6af42ae11ea67b9e6403bd99a4f99d">data</link>[<link linkend="_a00119_1ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</link>];
+<anchor xml:id="_a00119_source_1l00040"/><link linkend="_a00376_1afed088663f8704004425cdae2120b9b3">00040</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00376_1afed088663f8704004425cdae2120b9b3">len</link>;
+<anchor xml:id="_a00119_source_1l00041"/><link linkend="_a00119_1a8dea4341d1b1662a30ec89ea38da0c0c">00041</link> }&#32;<link linkend="_a00376">HashTable</link>;
+<anchor xml:id="_a00119_source_1l00042"/>00042 
+<anchor xml:id="_a00119_source_1l00043"/>00043 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00119_1aecf492d271c7b0c50c1832371fb34c84">Hash_InitializeHashTable</link>(<link linkend="_a00376">HashTable</link>&#32;**hash);
+<anchor xml:id="_a00119_source_1l00044"/>00044 
+<anchor xml:id="_a00119_source_1l00045"/>00045 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00119_1a0f96cedf42d4440115356ae74e627126">Hash_DeleteHashTable</link>(<link linkend="_a00376">HashTable</link>*&#32;hash);
+<anchor xml:id="_a00119_source_1l00046"/>00046 
+<anchor xml:id="_a00119_source_1l00047"/>00047 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00119_1af0c750fb9a54f590b713d6526ed263fc">Hash_AddEntry</link>(<link linkend="_a00376">HashTable</link>&#32;*hash,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;name,&#32;int32_t&#32;data);
+<anchor xml:id="_a00119_source_1l00048"/>00048 
+<anchor xml:id="_a00119_source_1l00049"/>00049 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00119_1a7026562de200bd5e9813f101d9eb614b">Hash_GetIndex</link>(<link linkend="_a00376">HashTable</link>&#32;*hash,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*key);
+<anchor xml:id="_a00119_source_1l00050"/>00050 
+<anchor xml:id="_a00119_source_1l00051"/>00051 int32_t&#32;<link linkend="_a00119_1a27578c1b5a3ab68d8f144ed86ea72cc2">Hash_GetValue</link>(<link linkend="_a00376">HashTable</link>&#32;*hash,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*key);
+<anchor xml:id="_a00119_source_1l00052"/>00052 
+<anchor xml:id="_a00119_source_1l00053"/>00053 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00119_1ae198aa5dfcbf0fa9e5fb885e34e08b0c">Hash_SetValue</link>(<link linkend="_a00376">HashTable</link>&#32;*hash,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*key,&#32;int32_t&#32;new_data);
+<anchor xml:id="_a00119_source_1l00054"/>00054 
+<anchor xml:id="_a00119_source_1l00055"/>00055 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HASH_TABLE_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

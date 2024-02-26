@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d0/d89/a00071" kind="file" language="C++">
+    <compoundname>test_UHI.h</compoundname>
+    <includes refid="d1/d88/a00128" local="yes">files/uhi_io.h</includes>
+    <includedby refid="d6/d2d/a00047" local="yes">main/compressor.c</includedby>
+    <includedby refid="d3/d5e/a00275" local="yes">src/test_UHI.c</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/testing/test_UHI.h</label>
+        <link refid="d0/d89/a00071"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+      <node id="9">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/testing/test_UHI.h</label>
+        <link refid="d0/d89/a00071"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="3">
+        <label>src/test_UHI.c</label>
+        <link refid="d3/d5e/a00275"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int test_UHI</definition>
+        <argsstring>()</argsstring>
+        <name>test_UHI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/test_UHI.h" line="6" column="5" bodyfile="src/test_UHI.c" bodystart="5" bodyend="51" declfile="include/testing/test_UHI.h" declline="6" declcolumn="5"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d1/d88/a00128" startline="43">UncompressedHyperspectralImage::fs</references>
+        <references refid="de/de1/a00065_1a1f64360c2baa3b6c2ab3589a5d25deaa" compoundref="dd/d4e/a00329" startline="88" endline="107">GenerateVoronoiFlat3DNaive</references>
+        <references refid="d3/d00/a00113_1a78477801fe183cdf32e60df1c92b7320" compoundref="d0/d39/a00314" startline="55" endline="59">GetPixel</references>
+        <references refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" compoundref="d0/d39/a00314" startline="45" endline="53">InitImage</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6a8766471eed07b5c5db8f7e9b5bf0e13e" compoundref="df/dc8/a00122" startline="28">READ_AND_WRITE</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <references refid="d1/d88/a00128_1a6114b6569fbd42d5a3fa05f4cd82cc7e" compoundref="d1/d5d/a00311" startline="4" endline="14">UHI_Initialize</references>
+        <references refid="d1/d88/a00128_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d1/d5d/a00311" startline="27" endline="36">UHI_ReadPixel</references>
+        <references refid="d1/d88/a00128_1a88066808c0a718f67bd50a325cdb5721" compoundref="d1/d5d/a00311" startline="38" endline="44">UHI_WritePixel</references>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TEST_UHI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_UHI_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d88/a00128" kindref="compound">files/uhi_io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" kindref="member">test_UHI</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TEST_UHS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/testing/test_UHI.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+\doxysection{include/predictor/predictor.h File Reference}
+\hypertarget{predictor_8h}{}\label{predictor_8h}\index{include/predictor/predictor.h@{include/predictor/predictor.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
+{\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include "{}predictor/quantizer.\+h"{}}\newline
+Include dependency graph for predictor.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{predictor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}{Ps}}(z)~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, \mbox{\hyperlink{constants_8h_a21c169290a6c782855c778bb7a0389b9}{kP}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{predictor_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{predictor_8h_a4a94804509574a94d896a4164802bcd2}{Run\+Predictor}} (\mbox{\hyperlink{structimage}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{structimage}{image}} \texorpdfstring{$\ast$}{*}result)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{predictor_8h_a5464533d23b59ba11030432e73528730}{C}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{predictor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}\label{predictor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4} 
+\index{predictor.h@{predictor.h}!Ps@{Ps}}
+\index{Ps@{Ps}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{Ps}{Ps}}
+{\footnotesize\ttfamily \#define Ps(\begin{DoxyParamCaption}\item[{}]{z }\end{DoxyParamCaption})~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, \mbox{\hyperlink{constants_8h_a21c169290a6c782855c778bb7a0389b9}{kP}})}
+
+\doxylink{predictor_8h}{predictor.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Top Level Function(s) for Running Predictor on a Hyperspectral Image. Returns a predicted Hyperspectral Image. 
+
+Definition at line \mbox{\hyperlink{predictor_8h_source_l00021}{21}} of file \mbox{\hyperlink{predictor_8h_source}{predictor.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{predictor_8h_ad4115f40f38a206246691fa2c1d1c9db}\label{predictor_8h_ad4115f40f38a206246691fa2c1d1c9db} 
+\index{predictor.h@{predictor.h}!weight\_t@{weight\_t}}
+\index{weight\_t@{weight\_t}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{weight\_t}{weight\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{reconstructor_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}}}
+
+
+
+Definition at line \mbox{\hyperlink{predictor_8h_source_l00026}{26}} of file \mbox{\hyperlink{predictor_8h_source}{predictor.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{predictor_8h_a4a94804509574a94d896a4164802bcd2}\label{predictor_8h_a4a94804509574a94d896a4164802bcd2} 
+\index{predictor.h@{predictor.h}!RunPredictor@{RunPredictor}}
+\index{RunPredictor@{RunPredictor}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{RunPredictor()}{RunPredictor()}}
+{\footnotesize\ttfamily int Run\+Predictor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structimage}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{structimage}{image}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{predictor_8c_source_l00057}{57}} of file \mbox{\hyperlink{predictor_8c_source}{predictor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{predictor_8h_a5464533d23b59ba11030432e73528730}\label{predictor_8h_a5464533d23b59ba11030432e73528730} 
+\index{predictor.h@{predictor.h}!C@{C}}
+\index{C@{C}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily int C\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{predictor_8c_source_l00008}{8}} of file \mbox{\hyperlink{predictor_8c_source}{predictor.\+c}}.
+

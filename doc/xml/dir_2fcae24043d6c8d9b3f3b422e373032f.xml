@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_2fcae24043d6c8d9b3f3b422e373032f" kind="dir">
+    <compoundname>build/CMakeFiles/CCSDS_Decompressor.dir</compoundname>
+    <innerdir refid="dir_428a955cd1dcf08ef5b7d9b0293e4d17">build/CMakeFiles/CCSDS_Decompressor.dir/main</innerdir>
+    <innerdir refid="dir_bda9db4dee5220dce83fe6b2b34fd167">build/CMakeFiles/CCSDS_Decompressor.dir/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/CCSDS_Decompressor.dir/"/>
+  </compounddef>
+</doxygen>

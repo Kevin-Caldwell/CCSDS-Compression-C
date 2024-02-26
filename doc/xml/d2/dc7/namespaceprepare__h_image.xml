@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d2/dc7/namespaceprepare__h_image" kind="namespace" language="Python">
+    <compoundname>prepare_hImage</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a7e69bd3f9400dc258e83fe7ecab1e317" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list CacheFiles</definition>
+        <argsstring></argsstring>
+        <name>CacheFiles</name>
+        <qualifiedname>prepare_hImage.CacheFiles</qualifiedname>
+        <initializer>=  [[]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="86" column="1" bodyfile="python/prepare_hImage.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a511ae0b1c13f95e5f08f1a0dd3da3d93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>prepare_hImage.data</qualifiedname>
+        <initializer>=  <ref refid="d2/dc7/namespaceprepare__h_image_1a84c47e6bbcef028eda4c81cfa1b935ff" kindref="member">ReadCSV</ref>(f&quot;data/test-images/VORONOI_640x512x640_1000.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="94" column="1" bodyfile="python/prepare_hImage.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a5c7e4f16622600cb52580b191565e2dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Nx</definition>
+        <argsstring></argsstring>
+        <name>Nx</name>
+        <qualifiedname>prepare_hImage.Nx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="97" column="1" bodyfile="python/prepare_hImage.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1ac1452fdfd6ea1c8c005ac90bbfa62011" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Ny</definition>
+        <argsstring></argsstring>
+        <name>Ny</name>
+        <qualifiedname>prepare_hImage.Ny</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="97" column="1" bodyfile="python/prepare_hImage.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1af3ec54a0e6bc4935a13fb520b7d7df6e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Nz</definition>
+        <argsstring></argsstring>
+        <name>Nz</name>
+        <qualifiedname>prepare_hImage.Nz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="97" column="1" bodyfile="python/prepare_hImage.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1adbdde44f981e5f6df2c75332ea3f9220" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>numbers</definition>
+        <argsstring></argsstring>
+        <name>numbers</name>
+        <qualifiedname>prepare_hImage.numbers</qualifiedname>
+        <initializer>=  np.array(<ref refid="d2/dc7/namespaceprepare__h_image_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kindref="member">data</ref>, dtype=int)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="104" column="1" bodyfile="python/prepare_hImage.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>minimum</definition>
+        <argsstring></argsstring>
+        <name>minimum</name>
+        <qualifiedname>prepare_hImage.minimum</qualifiedname>
+        <initializer>=  numbers.min()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="111" column="1" bodyfile="python/prepare_hImage.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a34ddfe7666109e00419326a0334cea67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>maximum</definition>
+        <argsstring></argsstring>
+        <name>maximum</name>
+        <qualifiedname>prepare_hImage.maximum</qualifiedname>
+        <initializer>=  numbers.max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="112" column="1" bodyfile="python/prepare_hImage.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a68c1363ccdf28598f4504e4b6fd6288a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>number_range</definition>
+        <argsstring></argsstring>
+        <name>number_range</name>
+        <qualifiedname>prepare_hImage.number_range</qualifiedname>
+        <initializer>=  <ref refid="d2/dc7/namespaceprepare__h_image_1a34ddfe7666109e00419326a0334cea67" kindref="member">maximum</ref> - <ref refid="d2/dc7/namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8" kindref="member">minimum</ref> + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="113" column="1" bodyfile="python/prepare_hImage.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a86d0d51ceb4bc3bd26707520f257a5a4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>img</definition>
+        <argsstring></argsstring>
+        <name>img</name>
+        <qualifiedname>prepare_hImage.img</qualifiedname>
+        <initializer>=  Image.new( &apos;RGB&apos;, (<ref refid="d2/dc7/namespaceprepare__h_image_1a5c7e4f16622600cb52580b191565e2dd" kindref="member">Nx</ref>,<ref refid="d2/dc7/namespaceprepare__h_image_1ac1452fdfd6ea1c8c005ac90bbfa62011" kindref="member">Ny</ref>), &quot;black&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="123" column="1" bodyfile="python/prepare_hImage.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a25d0e7c7655b7a5eed365b894fd5e26f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>pixels</definition>
+        <argsstring></argsstring>
+        <name>pixels</name>
+        <qualifiedname>prepare_hImage.pixels</qualifiedname>
+        <initializer>=  img.load()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="124" column="1" bodyfile="python/prepare_hImage.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1ac8859e8c1ce357c4c8b37bbb1936ba1c" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>int v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <qualifiedname>prepare_hImage.v</qualifiedname>
+        <initializer>=  (<ref refid="d2/dc7/namespaceprepare__h_image_1adbdde44f981e5f6df2c75332ea3f9220" kindref="member">numbers</ref>[i, j, z] - <ref refid="d2/dc7/namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8" kindref="member">minimum</ref>) / <ref refid="d2/dc7/namespaceprepare__h_image_1a68c1363ccdf28598f4504e4b6fd6288a" kindref="member">number_range</ref> * 370 + 380</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="131" column="1" bodyfile="python/prepare_hImage.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d2/dc7/namespaceprepare__h_image_1a1aabac6d068eef6a7bad3fdf50a05cc8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <qualifiedname>prepare_hImage.d</qualifiedname>
+        <initializer>=  <ref refid="d2/dc7/namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81" kindref="member">wavelength_to_rgb</ref>(int(<ref refid="d2/dc7/namespaceprepare__h_image_1ac8859e8c1ce357c4c8b37bbb1936ba1c" kindref="member">v</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="134" column="1" bodyfile="python/prepare_hImage.py" bodystart="134" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d2/dc7/namespaceprepare__h_image_1a84c47e6bbcef028eda4c81cfa1b935ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ReadCSV</definition>
+        <argsstring>(filename)</argsstring>
+        <name>ReadCSV</name>
+        <qualifiedname>prepare_hImage.ReadCSV</qualifiedname>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="9" column="1" bodyfile="python/prepare_hImage.py" bodystart="9" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/dc7/namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wavelength_to_rgb</definition>
+        <argsstring>(wavelength, gamma=0.8)</argsstring>
+        <name>wavelength_to_rgb</name>
+        <qualifiedname>prepare_hImage.wavelength_to_rgb</qualifiedname>
+        <param>
+          <type>wavelength</type>
+          <defname>wavelength</defname>
+        </param>
+        <param>
+          <type>gamma</type>
+          <defname>gamma</defname>
+          <defval>0.8</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This converts a given wavelength of light to an 
+approximate RGB color value. The wavelength must be given
+in nanometers in the range from 380 nm through 750 nm
+(789 THz through 400 THz).
+Based on code by Dan Bruton
+http://www.physics.sfasu.edu/astro/color/spectra.html
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/prepare_hImage.py" line="31" column="1" bodyfile="python/prepare_hImage.py" bodystart="31" bodyend="85"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python/prepare_hImage.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

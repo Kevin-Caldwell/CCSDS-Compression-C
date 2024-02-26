@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_logs_8c" xml:lang="en-US">
+<title>src/logs.c File Reference</title>
+<indexterm><primary>src/logs.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;files/logs.h&quot;<?linebreak?>#include &quot;constants/global_constants.h&quot;<?linebreak?>#include &lt;time.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?></programlisting>Include dependency graph for logs.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/db1/logs_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_logs_8c_1a89eb41300c751659cb27ad5955449bdc">_GET_PRINT_TIME</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_logs_8c_1a0b7cf426e0ba603b54206d70e4c93f04">Log_init</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_logs_8c_1ad02317523a9dd7b5180cccbc0371ac6a">Log_close</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_logs_8c_1a61353ebf0328d8bd1f61f224305e64bb">Log_add</link> (const char *text)</para>
+</listitem>
+            <listitem><para>void <link linkend="_logs_8c_1ad795690a809192117add6898be812267">Log_error</link> (char *text)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_logs_8c_1a87e78d2e71f0d53d7886e1a126f39b16">log_file</link> [] = &quot;data/logs/compressor.logs&quot;</para>
+</listitem>
+            <listitem><para>char <link linkend="_logs_8c_1a43a0859253a66e6836e73685d3dcc623">_time_str</link> [100]</para>
+</listitem>
+            <listitem><para><link linkend="_file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088">file_t</link> * <link linkend="_logs_8c_1a87886567426a509453e5709bb2ff785b">log_fptr</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_logs_8c_1a89eb41300c751659cb27ad5955449bdc"/><section>
+    <title>_GET_PRINT_TIME()</title>
+<indexterm><primary>_GET_PRINT_TIME</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>_GET_PRINT_TIME</secondary></indexterm>
+<para><computeroutput>char * _GET_PRINT_TIME ( )</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00009">9</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_a89eb41300c751659cb27ad5955449bdc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_logs_8c_1a61353ebf0328d8bd1f61f224305e64bb"/><section>
+    <title>Log_add()</title>
+<indexterm><primary>Log_add</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>Log_add</secondary></indexterm>
+<para><computeroutput>void Log_add (const char * text)</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00034">34</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_a61353ebf0328d8bd1f61f224305e64bb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_a61353ebf0328d8bd1f61f224305e64bb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_logs_8c_1ad02317523a9dd7b5180cccbc0371ac6a"/><section>
+    <title>Log_close()</title>
+<indexterm><primary>Log_close</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>Log_close</secondary></indexterm>
+<para><computeroutput>void Log_close ( )</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00029">29</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_ad02317523a9dd7b5180cccbc0371ac6a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_ad02317523a9dd7b5180cccbc0371ac6a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_logs_8c_1ad795690a809192117add6898be812267"/><section>
+    <title>Log_error()</title>
+<indexterm><primary>Log_error</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>Log_error</secondary></indexterm>
+<para><computeroutput>void Log_error (char * text)</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00038">38</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_ad795690a809192117add6898be812267_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_ad795690a809192117add6898be812267_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_logs_8c_1a0b7cf426e0ba603b54206d70e4c93f04"/><section>
+    <title>Log_init()</title>
+<indexterm><primary>Log_init</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>Log_init</secondary></indexterm>
+<para><computeroutput>void Log_init ( )</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00017">17</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_a0b7cf426e0ba603b54206d70e4c93f04_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d02/logs_8c_a0b7cf426e0ba603b54206d70e4c93f04_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_logs_8c_1a43a0859253a66e6836e73685d3dcc623"/><section>
+    <title>_time_str</title>
+<indexterm><primary>_time_str</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>_time_str</secondary></indexterm>
+<para><computeroutput>char _time_str[100]</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00007">7</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+</section>
+<anchor xml:id="_logs_8c_1a87e78d2e71f0d53d7886e1a126f39b16"/><section>
+    <title>log_file</title>
+<indexterm><primary>log_file</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>log_file</secondary></indexterm>
+<para><computeroutput>char log_file[] = &quot;data/logs/compressor.logs&quot;</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00006">6</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+</section>
+<anchor xml:id="_logs_8c_1a87886567426a509453e5709bb2ff785b"/><section>
+    <title>log_fptr</title>
+<indexterm><primary>log_fptr</primary><secondary>logs.c</secondary></indexterm>
+<indexterm><primary>logs.c</primary><secondary>log_fptr</secondary></indexterm>
+<para><computeroutput><link linkend="_file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088">file_t</link>* log_fptr</computeroutput></para><para>
+Definition at line <link linkend="_logs_8c_source_1l00015">15</link> of file <link linkend="_logs_8c_source">logs.c</link>.</para>
+</section>
+</section>
+</section>

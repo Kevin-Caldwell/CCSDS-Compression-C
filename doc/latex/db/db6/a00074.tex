@@ -1,0 +1,118 @@
+\doxysection{include/cache/cache\+\_\+predictor.h File Reference}
+\hypertarget{a00074}{}\label{a00074}\index{include/cache/cache\_predictor.h@{include/cache/cache\_predictor.h}}
+
+
+Deprecated, Used as a buffer for debugging and temporary storage.  
+
+
+{\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+Include dependency graph for cache\+\_\+predictor.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a00372}{Predictor\+Cache}}
+\begin{DoxyCompactList}\small\item\em Struct \doxylink{a00372}{Predictor\+Cache} is a struct for storing the intermediate results obtained through the predictor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{a00372}{Predictor\+Cache}} \mbox{\hyperlink{a00074_a14c9bf8f6caac29a6a4f388d6e638409}{Predictor\+Cache}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00074_a400e6cd529a6a1ca3901be57ab88fb63}{Initialize\+Predictor\+Cache}} (\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+\_\+cache, \mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG)
+\item 
+int \mbox{\hyperlink{a00074_aca0d39cbaa7b58e1e75c93010c1a7750}{Delete\+Predictor\+Cache}} (\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}p\+\_\+cache)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00074_a01a11e19b54bb1195243f037c3d93b7b}{Cache\+Files}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00074_a8dc01c7173e49a14ae38a59d91b9d669}{global\+\_\+cache}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Deprecated, Used as a buffer for debugging and temporary storage. 
+
+\begin{DoxyAuthor}{Authors}
+Kevin Caldwell 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{a00353__bug000001}{Bug}}]No Bugs \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{a00354__deprecated000001}{Deprecated}}]Large Memory Usage, ineffective for debug. \end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{a00074_source}{cache\+\_\+predictor.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{a00074_a14c9bf8f6caac29a6a4f388d6e638409}\label{a00074_a14c9bf8f6caac29a6a4f388d6e638409} 
+\index{cache\_predictor.h@{cache\_predictor.h}!PredictorCache@{PredictorCache}}
+\index{PredictorCache@{PredictorCache}!cache\_predictor.h@{cache\_predictor.h}}
+\doxysubsubsection{\texorpdfstring{PredictorCache}{PredictorCache}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a00372}{Predictor\+Cache}} \mbox{\hyperlink{a00372}{Predictor\+Cache}}}
+
+
+
+Definition at line \mbox{\hyperlink{a00074_source_l00036}{36}} of file \mbox{\hyperlink{a00074_source}{cache\+\_\+predictor.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00074_aca0d39cbaa7b58e1e75c93010c1a7750}\label{a00074_aca0d39cbaa7b58e1e75c93010c1a7750} 
+\index{cache\_predictor.h@{cache\_predictor.h}!DeletePredictorCache@{DeletePredictorCache}}
+\index{DeletePredictorCache@{DeletePredictorCache}!cache\_predictor.h@{cache\_predictor.h}}
+\doxysubsubsection{\texorpdfstring{DeletePredictorCache()}{DeletePredictorCache()}}
+{\footnotesize\ttfamily int Delete\+Predictor\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+cache }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00043}{43}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00074_a400e6cd529a6a1ca3901be57ab88fb63}\label{a00074_a400e6cd529a6a1ca3901be57ab88fb63} 
+\index{cache\_predictor.h@{cache\_predictor.h}!InitializePredictorCache@{InitializePredictorCache}}
+\index{InitializePredictorCache@{InitializePredictorCache}!cache\_predictor.h@{cache\_predictor.h}}
+\doxysubsubsection{\texorpdfstring{InitializePredictorCache()}{InitializePredictorCache()}}
+{\footnotesize\ttfamily int Initialize\+Predictor\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+\_\+cache,  }\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00016}{16}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{a00074_a01a11e19b54bb1195243f037c3d93b7b}\label{a00074_a01a11e19b54bb1195243f037c3d93b7b} 
+\index{cache\_predictor.h@{cache\_predictor.h}!CacheFiles@{CacheFiles}}
+\index{CacheFiles@{CacheFiles}!cache\_predictor.h@{cache\_predictor.h}}
+\doxysubsubsection{\texorpdfstring{CacheFiles}{CacheFiles}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} Cache\+Files\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00006}{6}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+
+\Hypertarget{a00074_a8dc01c7173e49a14ae38a59d91b9d669}\label{a00074_a8dc01c7173e49a14ae38a59d91b9d669} 
+\index{cache\_predictor.h@{cache\_predictor.h}!global\_cache@{global\_cache}}
+\index{global\_cache@{global\_cache}!cache\_predictor.h@{cache\_predictor.h}}
+\doxysubsubsection{\texorpdfstring{global\_cache}{global\_cache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00372}{Predictor\+Cache}}\texorpdfstring{$\ast$}{*} global\+\_\+cache\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00005}{5}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+

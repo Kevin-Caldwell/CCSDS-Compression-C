@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_encoder__body_8c_source" xml:lang="en-US">
+<title>encoder_body.c</title>
+<indexterm><primary>src/encoder_body.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_encoder__body_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_body_8h">encoder/body.h</link>&quot;</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_encoder__helper__functions_8h">encoder/encoder_helper_functions.h</link>&quot;</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00004"/>00004 
+<anchor xml:id="_encoder__body_8c_source_1l00005"/><link linkend="_encoder__constants_8h_1a2689c4b3931025b79053532a5f1b0a85">00005</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>&#32;=&#32;0;&#32;<emphasis role="comment">//&#32;CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT,&#32;0,&#32;MIN(D-2,&#32;14));</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00006"/><link linkend="_encoder__constants_8h_1a706ff4e6123594c36b0894c248a25ff7">00006</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_encoder__body_8c_1a706ff4e6123594c36b0894c248a25ff7">U_max</link>&#32;=&#32;<link linkend="_math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e">CLIP</link>(<link linkend="_encoder__constants_8h_1a2dd7f6568a16cd0cf58bc9f59c6c5f3c">UNARY_LENGTH_LIMIT</link>,&#32;8,&#32;32);
+<anchor xml:id="_encoder__body_8c_source_1l00007"/><link linkend="_encoder__constants_8h_1a14069285fee7428b1929cb23a4b1561c">00007</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_encoder__body_8c_1a14069285fee7428b1929cb23a4b1561c">Gamma1</link>&#32;=&#32;1;
+<anchor xml:id="_encoder__body_8c_source_1l00008"/>00008 
+<anchor xml:id="_encoder__body_8c_source_1l00009"/><link linkend="_body_8h_1ad956397a2e57dfa4fe588564adef610f">00009</link> <link linkend="_struct_golomb_int">GolombInt</link>&#32;<link linkend="_encoder__body_8c_1ad956397a2e57dfa4fe588564adef610f">GolombPowerTwo</link>(uint16_t&#32;j,&#32;uint16_t&#32;k)
+<anchor xml:id="_encoder__body_8c_source_1l00010"/>00010 {
+<anchor xml:id="_encoder__body_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;uint32_t&#32;u;
+<anchor xml:id="_encoder__body_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;len&#32;=&#32;0;
+<anchor xml:id="_encoder__body_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;uint32_t&#32;div&#32;=&#32;j&#32;/&#32;(<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(k));
+<anchor xml:id="_encoder__body_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(div&#32;&lt;&#32;<link linkend="_encoder__body_8c_1a706ff4e6123594c36b0894c248a25ff7">U_max</link>)
+<anchor xml:id="_encoder__body_8c_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00016"/>00016 
+<anchor xml:id="_encoder__body_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;&lt;&lt;=&#32;div;
+<anchor xml:id="_encoder__body_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;&lt;&lt;=&#32;1;
+<anchor xml:id="_encoder__body_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;|=&#32;1;
+<anchor xml:id="_encoder__body_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;&lt;&lt;=&#32;k;
+<anchor xml:id="_encoder__body_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;mask&#32;=&#32;(1&#32;&lt;&lt;&#32;k)&#32;-&#32;1;
+<anchor xml:id="_encoder__body_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;|=&#32;(j&#32;&amp;&#32;mask);
+<anchor xml:id="_encoder__body_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;len&#32;=&#32;u&#32;?&#32;(div&#32;+&#32;1&#32;+&#32;k)&#32;:&#32;1;
+<anchor xml:id="_encoder__body_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00027"/>00027 
+<anchor xml:id="_encoder__body_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;&lt;&lt;=&#32;<link linkend="_encoder__constants_8h_1a2dd7f6568a16cd0cf58bc9f59c6c5f3c">UNARY_LENGTH_LIMIT</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;&lt;&lt;=&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;mask&#32;=&#32;(1&#32;&lt;&lt;&#32;k)&#32;-&#32;1;
+<anchor xml:id="_encoder__body_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;|=&#32;j;
+<anchor xml:id="_encoder__body_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;len&#32;=&#32;k&#32;+&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00034"/>00034 
+<anchor xml:id="_encoder__body_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<link linkend="_struct_golomb_int">GolombInt</link>){u,&#32;len};
+<anchor xml:id="_encoder__body_8c_source_1l00036"/>00036 }
+<anchor xml:id="_encoder__body_8c_source_1l00037"/>00037 
+<anchor xml:id="_encoder__body_8c_source_1l00038"/><link linkend="_body_8h_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b">00038</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_encoder__body_8c_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b">InitAccumulatorValue</link>(uint32_t&#32;z)
+<anchor xml:id="_encoder__body_8c_source_1l00039"/>00039 {
+<anchor xml:id="_encoder__body_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;k_prime&#32;=&#32;(<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>&#32;&lt;=&#32;30&#32;-&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>)&#32;?&#32;<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>&#32;:&#32;(2&#32;*&#32;<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>&#32;+&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;30);
+<anchor xml:id="_encoder__body_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(3&#32;*&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(k_prime&#32;+&#32;6)&#32;-&#32;49)&#32;*&#32;<link linkend="_encoder__body_8c_1a14069285fee7428b1929cb23a4b1561c">Gamma1</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00042"/>00042 }
+<anchor xml:id="_encoder__body_8c_source_1l00043"/>00043 
+<anchor xml:id="_encoder__body_8c_source_1l00044"/><link linkend="_body_8h_1a38c7868c2a8819e7abc16148811f2e0b">00044</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_encoder__body_8c_1a38c7868c2a8819e7abc16148811f2e0b">EncodeBody</link>(<link linkend="_structimage">image</link>&#32;*hIMG,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file_name,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*write_mode,&#32;<emphasis role="keywordtype">int</emphasis>&#32;buffer_size)
+<anchor xml:id="_encoder__body_8c_source_1l00045"/>00045 {
+<anchor xml:id="_encoder__body_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;K_ZPRIME&#32;=&#32;0;
+<anchor xml:id="_encoder__body_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>&#32;&lt;=&#32;30&#32;-&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>)
+<anchor xml:id="_encoder__body_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;K_ZPRIME&#32;=&#32;<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;K_ZPRIME&#32;=&#32;2&#32;*&#32;<link linkend="_encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85">K</link>&#32;+&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;30;
+<anchor xml:id="_encoder__body_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;sz&#32;=&#32;hIMG-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00056"/>00056 
+<anchor xml:id="_encoder__body_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;uint32_t&#32;gamma;
+<anchor xml:id="_encoder__body_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;uint32_t&#32;epsilon_z;
+<anchor xml:id="_encoder__body_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;uint32_t&#32;codeword;
+<anchor xml:id="_encoder__body_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;uint32_t&#32;k_z;
+<anchor xml:id="_encoder__body_8c_source_1l00061"/>00061 
+<anchor xml:id="_encoder__body_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088">file_t</link>&#32;*log&#32;=&#32;<link linkend="_file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c">F_OPEN</link>(<emphasis role="stringliteral">&quot;../data/logs/c-encoder-debug.LOG&quot;</emphasis>,&#32;<link linkend="_file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc">WRITE</link>);
+<anchor xml:id="_encoder__body_8c_source_1l00063"/>00063 
+<anchor xml:id="_encoder__body_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<link linkend="_struct_var_int_file_stream">VIFS</link>&#32;stream;
+<anchor xml:id="_encoder__body_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<link linkend="_stream__encoder_8h_1a0db4a8ab23a4af63c99d5fbfca9073eb">InitializeVarIntStream</link>(&amp;stream,&#32;file_name,&#32;buffer_size);
+<anchor xml:id="_encoder__body_8c_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">long</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;len&#32;=&#32;0;
+<anchor xml:id="_encoder__body_8c_source_1l00067"/>00067 
+<anchor xml:id="_encoder__body_8c_source_1l00068"/>00068 &#32;&#32;&#32;&#32;time_t&#32;start&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>);
+<anchor xml:id="_encoder__body_8c_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;z&#32;=&#32;0;&#32;z&#32;&lt;&#32;sz.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>;&#32;z++)
+<anchor xml:id="_encoder__body_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0;&#32;y&#32;&lt;&#32;sz.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>;&#32;y++)
+<anchor xml:id="_encoder__body_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0;&#32;x&#32;&lt;&#32;sz.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>;&#32;x++)
+<anchor xml:id="_encoder__body_8c_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00075"/>00075 
+<anchor xml:id="_encoder__body_8c_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;data&#32;=&#32;<link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(hIMG,&#32;x,&#32;y,&#32;z);
+<anchor xml:id="_encoder__body_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;0&#32;&amp;&amp;&#32;y&#32;==&#32;0)
+<anchor xml:id="_encoder__body_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_encoder__body_8c_1a14069285fee7428b1929cb23a4b1561c">Gamma1</link>);
+<anchor xml:id="_encoder__body_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;((3&#32;*&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;int)<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(K_ZPRIME&#32;+&#32;6)&#32;-&#32;49)&#32;*&#32;gamma)&#32;/&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(7);
+<anchor xml:id="_encoder__body_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stream__encoder_8h_1a8b42309d51939ee46f5f0d348fbbcbc0">StreamVarInteger</link>(&amp;stream,&#32;data,&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>);
+<anchor xml:id="_encoder__body_8c_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;len&#32;+=&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fprintf(log,&#32;<emphasis role="stringliteral">&quot;%u:%d,%d\n&quot;</emphasis>,&#32;data,&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>,&#32;k_z);
+<anchor xml:id="_encoder__body_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="_encoder__body_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00086"/>00086 
+<anchor xml:id="_encoder__body_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(2&#32;*&#32;gamma&#32;&gt;&#32;epsilon_z&#32;+&#32;(<emphasis role="keywordtype">int</emphasis>)(((<emphasis role="keywordtype">float</emphasis>)49&#32;*&#32;gamma)&#32;/&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(7)))
+<anchor xml:id="_encoder__body_8c_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;k_z&#32;=&#32;0;
+<anchor xml:id="_encoder__body_8c_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_encoder__body_8c_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>;&#32;i&#32;&gt;=&#32;0;&#32;i--)
+<anchor xml:id="_encoder__body_8c_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((gamma&#32;*&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(i))&#32;&lt;=&#32;(epsilon_z&#32;+&#32;((49u&#32;*&#32;gamma)&#32;&gt;&gt;&#32;7)))
+<anchor xml:id="_encoder__body_8c_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;k_z&#32;=&#32;i;
+<anchor xml:id="_encoder__body_8c_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_encoder__body_8c_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00102"/>00102 
+<anchor xml:id="_encoder__body_8c_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_golomb_int">GolombInt</link>&#32;res&#32;=&#32;<link linkend="_encoder__body_8c_1ad956397a2e57dfa4fe588564adef610f">GolombPowerTwo</link>(data,&#32;k_z);
+<anchor xml:id="_encoder__body_8c_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;len&#32;+=&#32;res.<link linkend="_struct_golomb_int_1aebb70c2aab3407a9f05334c47131a43b">length</link>;
+<anchor xml:id="_encoder__body_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fprintf(log,&#32;<emphasis role="stringliteral">&quot;(%d,&#32;%d,&#32;%d)&#32;%u:%d,&#32;%d,&#32;%d,&#32;%d\n&quot;</emphasis>,&#32;x,&#32;y,&#32;z,&#32;res.<link linkend="_struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641">data</link>,&#32;res.<link linkend="_struct_golomb_int_1aebb70c2aab3407a9f05334c47131a43b">length</link>,&#32;k_z,&#32;gamma,&#32;epsilon_z);
+<anchor xml:id="_encoder__body_8c_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_stream__encoder_8h_1a8b42309d51939ee46f5f0d348fbbcbc0">StreamVarInteger</link>(&amp;stream,&#32;res.<link linkend="_struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641">data</link>,&#32;res.<link linkend="_struct_golomb_int_1aebb70c2aab3407a9f05334c47131a43b">length</link>);
+<anchor xml:id="_encoder__body_8c_source_1l00107"/>00107 
+<anchor xml:id="_encoder__body_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gamma&#32;&lt;&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_body_8h_1a0bbf3cd743f1631577f828fa3d85ccf7">GAMMA_STAR</link>)&#32;-&#32;1)
+<anchor xml:id="_encoder__body_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;+=&#32;data;
+<anchor xml:id="_encoder__body_8c_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma++;
+<anchor xml:id="_encoder__body_8c_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gamma&#32;==&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_body_8h_1a0bbf3cd743f1631577f828fa3d85ccf7">GAMMA_STAR</link>)&#32;-&#32;1)
+<anchor xml:id="_encoder__body_8c_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_encoder__body_8c_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;(epsilon_z&#32;+&#32;data&#32;+&#32;1)&#32;/&#32;2;
+<anchor xml:id="_encoder__body_8c_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;(gamma&#32;+&#32;1)&#32;/&#32;2;
+<anchor xml:id="_encoder__body_8c_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;time_elapsed&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>)&#32;-&#32;start;
+<anchor xml:id="_encoder__body_8c_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;time_left&#32;=&#32;time_elapsed&#32;*&#32;(<link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>&#32;-&#32;z&#32;-&#32;1)&#32;/&#32;(z&#32;+&#32;1);
+<anchor xml:id="_encoder__body_8c_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\rEncoded&#32;%d/%d&#32;of&#32;Image.&#32;(%ld&#32;seconds&#32;Elapsed,&#32;%ld&#32;seconds&#32;Left)&quot;</emphasis>,&#32;(<emphasis role="keywordtype">int</emphasis>)(z&#32;+&#32;1),&#32;(<emphasis role="keywordtype">int</emphasis>)hIMG-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>,&#32;time_elapsed,&#32;time_left);
+<anchor xml:id="_encoder__body_8c_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fflush(stdout);
+<anchor xml:id="_encoder__body_8c_source_1l00124"/>00124 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_encoder__body_8c_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<link linkend="_stream__encoder_8h_1afbd717a2dd8bee43593e06a3919ba72a">CloseVarIntegerStream</link>(&amp;stream);
+<anchor xml:id="_encoder__body_8c_source_1l00126"/>00126 &#32;&#32;&#32;&#32;time_t&#32;end&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>);
+<anchor xml:id="_encoder__body_8c_source_1l00127"/>00127 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n%d&#32;seconds&#32;for&#32;image&#32;Encoding.\n&quot;</emphasis>,&#32;(<emphasis role="keywordtype">int</emphasis>)(end&#32;-&#32;start));
+<anchor xml:id="_encoder__body_8c_source_1l00128"/>00128 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;%ld&#32;/&#32;%ld&#32;bytes=%2.f%%&#32;Compression\n&quot;</emphasis>,&#32;len&#32;/&#32;8,&#32;(<emphasis role="keywordtype">long</emphasis>)((<emphasis role="keywordtype">float</emphasis>)&#32;<link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>&#32;*&#32;<link linkend="_constants_8h_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>&#32;*&#32;<link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>&#32;*&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;/&#32;8),&#32;(1&#32;-&#32;((<emphasis role="keywordtype">float</emphasis>)len&#32;/&#32;((<emphasis role="keywordtype">float</emphasis>)&#32;<link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>&#32;*&#32;<link linkend="_constants_8h_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>&#32;*&#32;<link linkend="_constants_8h_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>&#32;*&#32;<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>)))&#32;*&#32;100);
+<anchor xml:id="_encoder__body_8c_source_1l00129"/>00129 
+<anchor xml:id="_encoder__body_8c_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_encoder__body_8c_source_1l00131"/>00131 }
+</programlisting></section>

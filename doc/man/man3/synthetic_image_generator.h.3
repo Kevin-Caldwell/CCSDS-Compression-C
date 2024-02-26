@@ -1,0 +1,98 @@
+.TH "include/testing/synthetic_image_generator.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/testing/synthetic_image_generator.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'math/math_functions\&.h'\fP
+.br
+\fC#include 'math/linear_algebra\&.h'\fP
+.br
+\fC#include 'dst/image\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBINIT_ARRAY\fP(T,  count)   (T*) malloc(sizeof(T) * count)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBWithinRect2\fP (\fBdim2\fP point, \fBdim2\fP top_left, \fBdim2\fP bottom_right)"
+.br
+.ti -1c
+.RI "int \fBWithinRect3\fP (\fBdim3\fP point, \fBdim3\fP top_left, \fBdim3\fP bottom_right)"
+.br
+.ti -1c
+.RI "int \fBSpreadPoint2\fP (\fBdim2\fP **points, \fBdim2\fP bounds, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBSpreadPoint3\fP (\fBdim3\fP **points, \fBdim3\fP bounds, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiFlat2D\fP (\fBimage2\fP *result, \fBUINT\fP sample_points)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiFlat3DNaive\fP (\fBimage3\fP *result, \fBUINT\fP sample_points)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiFlat3DLocal\fP (\fBimage3\fP *result, \fBUINT\fP sample_points)"
+.br
+.RI "Faster Method for Generating Voronoi Diagrams\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define INIT_ARRAY(T, count)   (T*) malloc(sizeof(T) * count)"
+
+.PP
+Definition at line \fB8\fP of file \fBsynthetic_image_generator\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int GenerateVoronoiFlat2D (\fBimage2\fP * result, \fBUINT\fP sample_points)"
+
+.PP
+Definition at line \fB49\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int GenerateVoronoiFlat3DLocal (\fBimage3\fP * result, \fBUINT\fP point_count)"
+
+.PP
+Faster Method for Generating Voronoi Diagrams\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP 
+.br
+\fIpoint_count\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB233\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int GenerateVoronoiFlat3DNaive (\fBimage3\fP * result, \fBUINT\fP sample_points)"
+
+.PP
+Definition at line \fB88\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int SpreadPoint2 (\fBdim2\fP ** points, \fBdim2\fP bounds, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB20\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int SpreadPoint3 (\fBdim3\fP ** points, \fBdim3\fP bounds, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB34\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int WithinRect2 (\fBdim2\fP point, \fBdim2\fP top_left, \fBdim2\fP bottom_right)"
+
+.PP
+Definition at line \fB6\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int WithinRect3 (\fBdim3\fP point, \fBdim3\fP top_left, \fBdim3\fP bottom_right)"
+
+.PP
+Definition at line \fB12\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

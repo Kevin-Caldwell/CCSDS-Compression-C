@@ -1,0 +1,28 @@
+\doxysection{cache\+\_\+predictor.\+h}
+\hypertarget{a00074_source}{}\label{a00074_source}\index{include/cache/cache\_predictor.h@{include/cache/cache\_predictor.h}}
+\mbox{\hyperlink{a00074}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00009}00009\ \textcolor{preprocessor}{\#ifndef\ CACHE\_PREDICTOR\_H}}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00010}00010\ \textcolor{preprocessor}{\#define\ CACHE\_PREDICTOR\_H}}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00149}{math/linear\_algebra.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00113}{dst/image.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00015}00015\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{a00074_a01a11e19b54bb1195243f037c3d93b7b}{CacheFiles}}[];}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00032}\mbox{\hyperlink{a00372}{00032}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{a00372}{PredictorCache}}\{}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00033}\mbox{\hyperlink{a00372_a847490dd84d456f3e80b13a3be6ddfac}{00033}}\ \ \ \ \ \mbox{\hyperlink{a00380}{image}}*\ \mbox{\hyperlink{a00372_a847490dd84d456f3e80b13a3be6ddfac}{cache\_space}}[1];}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00034}\mbox{\hyperlink{a00372_a8ffc318fbdca60414a190de33e244826}{00034}}\ \ \ \ \ int32\_t*\ \mbox{\hyperlink{a00372_a8ffc318fbdca60414a190de33e244826}{weights}};}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00035}00035\ \};}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00036}\mbox{\hyperlink{a00074_a14c9bf8f6caac29a6a4f388d6e638409}{00036}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{a00372}{PredictorCache}}\ \mbox{\hyperlink{a00372}{PredictorCache}};}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00038}00038\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{a00372}{PredictorCache}}*\ \mbox{\hyperlink{a00074_a8dc01c7173e49a14ae38a59d91b9d669}{global\_cache}};}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00040}00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00074_a400e6cd529a6a1ca3901be57ab88fb63}{InitializePredictorCache}}(\mbox{\hyperlink{a00372}{PredictorCache}}**\ p\_cache,\ \mbox{\hyperlink{a00380}{image}}*\ hIMG);}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00042}00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00074_aca0d39cbaa7b58e1e75c93010c1a7750}{DeletePredictorCache}}(\mbox{\hyperlink{a00372}{PredictorCache}}*\ p\_cache);}
+\DoxyCodeLine{\Hypertarget{a00074_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{a00074_source_l00044}00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CACHE\_PREDICTOR\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

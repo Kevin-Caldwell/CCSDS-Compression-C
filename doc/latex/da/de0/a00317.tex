@@ -1,0 +1,69 @@
+\doxysection{src/local\+\_\+differences.c File Reference}
+\hypertarget{a00317}{}\label{a00317}\index{src/local\_differences.c@{src/local\_differences.c}}
+{\ttfamily \#include "{}predictor/local\+\_\+differences.\+h"{}}\newline
+Include dependency graph for local\+\_\+differences.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00317_a37d2cf3f48b1b2c436f630a2b649cf52}{Central\+Local\+Difference}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x)
+\item 
+int32\+\_\+t \mbox{\hyperlink{a00317_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x, int direction)
+\item 
+int \mbox{\hyperlink{a00317_a92b3b535f0c13d4ec28dab8b13713262}{Local\+Direction\+Vector}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, int32\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}local\+\_\+direction\+\_\+vector, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x)
+\item 
+int64\+\_\+t \mbox{\hyperlink{a00317_a36ddae4ef0f34ba3f7402469253bb6b6}{Predicted\+Central\+Local\+Difference}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00317_a37d2cf3f48b1b2c436f630a2b649cf52}\label{a00317_a37d2cf3f48b1b2c436f630a2b649cf52} 
+\index{local\_differences.c@{local\_differences.c}!CentralLocalDifference@{CentralLocalDifference}}
+\index{CentralLocalDifference@{CentralLocalDifference}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{CentralLocalDifference()}{CentralLocalDifference()}}
+{\footnotesize\ttfamily int32\+\_\+t Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00317_source_l00003}{3}} of file \mbox{\hyperlink{a00317_source}{local\+\_\+differences.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{a00317_aa1779fb92c191cde51766275baaf7591}\label{a00317_aa1779fb92c191cde51766275baaf7591} 
+\index{local\_differences.c@{local\_differences.c}!DirectionalLocalDifference@{DirectionalLocalDifference}}
+\index{DirectionalLocalDifference@{DirectionalLocalDifference}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{DirectionalLocalDifference()}{DirectionalLocalDifference()}}
+{\footnotesize\ttfamily int32\+\_\+t Directional\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00317_source_l00008}{8}} of file \mbox{\hyperlink{a00317_source}{local\+\_\+differences.\+c}}.
+
+\Hypertarget{a00317_a92b3b535f0c13d4ec28dab8b13713262}\label{a00317_a92b3b535f0c13d4ec28dab8b13713262} 
+\index{local\_differences.c@{local\_differences.c}!LocalDirectionVector@{LocalDirectionVector}}
+\index{LocalDirectionVector@{LocalDirectionVector}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{LocalDirectionVector()}{LocalDirectionVector()}}
+{\footnotesize\ttfamily int Local\+Direction\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{local\+\_\+direction\+\_\+vector,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00317_source_l00055}{55}} of file \mbox{\hyperlink{a00317_source}{local\+\_\+differences.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{a00317_a36ddae4ef0f34ba3f7402469253bb6b6}\label{a00317_a36ddae4ef0f34ba3f7402469253bb6b6} 
+\index{local\_differences.c@{local\_differences.c}!PredictedCentralLocalDifference@{PredictedCentralLocalDifference}}
+\index{PredictedCentralLocalDifference@{PredictedCentralLocalDifference}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{PredictedCentralLocalDifference()}{PredictedCentralLocalDifference()}}
+{\footnotesize\ttfamily int64\+\_\+t Predicted\+Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00317_source_l00082}{82}} of file \mbox{\hyperlink{a00317_source}{local\+\_\+differences.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5

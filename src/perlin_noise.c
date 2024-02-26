@@ -5,6 +5,9 @@
 #include <string.h>
 #include <time.h>
 
+/**
+ * 3D floating point vector
+*/
 typedef struct fVector3
 {
     float x, y, z;

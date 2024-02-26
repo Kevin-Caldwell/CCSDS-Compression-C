@@ -1,3 +1,16 @@
+/**
+ * file_IO.h
+ * @author @Kevin-Caldwell
+ * 
+ * Abstracted Functions for File IO. 
+ * Implementation in file_IO.c should 
+ * be adapted to fit the respective 
+ * file system. 
+ * 
+ * The datatype used throughout the code
+ * is file_t. 
+*/
+
 #ifndef FILE_IO_H
 #define FILE_IO_H
 

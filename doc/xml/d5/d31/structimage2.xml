@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d5/d31/structimage2" kind="struct" language="C++" prot="public">
+    <compoundname>image2</compoundname>
+    <includes refid="d5/db2/image_8h" local="no">image.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d31/structimage2_1af773904b63569ed8472a1814b0f9e2af" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+        <definition>dim2 size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>image2::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="85" column="10" bodyfile="include/dst/image.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" compoundref="d5/d40/synthetic__image__generator_8c" startline="49" endline="68">GenerateVoronoiFlat2D</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref> *</type>
+        <definition>PIXEL* data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>image2::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="86" column="11" bodyfile="include/dst/image.h" bodystart="86" bodyend="-1"/>
+        <referencedby refid="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" compoundref="d5/d40/synthetic__image__generator_8c" startline="49" endline="68">GenerateVoronoiFlat2D</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" compoundref="dd/dee/test__compression_8py" startline="62" endline="68">TestComp.test_compression_algo</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" compoundref="dd/dee/test__compression_8py" startline="23" endline="29">TestComp.test_CSV</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" compoundref="dd/dee/test__compression_8py" startline="57" endline="61">TestComp.test_decompress</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a6f8e687cf87f06f265f8345e025fd290" compoundref="dd/dee/test__compression_8py" startline="30" endline="39">TestComp.test_predictor</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" compoundref="dd/dee/test__compression_8py" startline="69" endline="78">TestComp.test_rmse</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" compoundref="dd/dee/test__compression_8py" startline="40" endline="44">TestComp.test_unpredict</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Unused Struct for 2-D images. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>dim2</label>
+        <link refid="dd/dec/structdim2"/>
+      </node>
+      <node id="1">
+        <label>image2</label>
+        <link refid="d5/d31/structimage2"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/dst/image.h" line="84" column="1" bodyfile="include/dst/image.h" bodystart="84" bodyend="87"/>
+    <listofallmembers>
+      <member refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" prot="public" virt="non-virtual"><scope>image2</scope><name>data</name></member>
+      <member refid="d5/d31/structimage2_1af773904b63569ed8472a1814b0f9e2af" prot="public" virt="non-virtual"><scope>image2</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

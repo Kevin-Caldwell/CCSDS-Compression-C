@@ -1,0 +1,49 @@
+\doxysection{uhi\+\_\+io.\+h}
+\hypertarget{uhi__io_8h_source}{}\label{uhi__io_8h_source}\index{include/files/uhi\_io.h@{include/files/uhi\_io.h}}
+\mbox{\hyperlink{uhi__io_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00014}00014\ \textcolor{preprocessor}{\#ifndef\ UHI\_IO\_H}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00015}00015\ \textcolor{preprocessor}{\#define\ UHI\_IO\_H}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{file___i_o_8h}{files/file\_IO.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math__functions_8h}{math/math\_functions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00022}\mbox{\hyperlink{uhi__io_8h_a6aba86f49a9e77ca452352dd1ef8d4af}{00022}}\ \textcolor{preprocessor}{\#define\ UHI\_CACHE\_LENGTH\ 3\ }\textcolor{comment}{//\ Image\ Size\ Buffer}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00042}\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{00042}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UncompressedHyperspectralImage}}\{}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00043}\mbox{\hyperlink{struct_uncompressed_hyperspectral_image_ab10afab4dbcbfc99227c63ee0ae694ff}{00043}}\ \ \ \ \ \mbox{\hyperlink{file___i_o_8h_aaa4f66633ab727c9d841db141c3da088}{file\_t}}*\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image_ab10afab4dbcbfc99227c63ee0ae694ff}{fs}};}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00044}\mbox{\hyperlink{struct_uncompressed_hyperspectral_image_a92c57811a03d78e56a6e8592f96a41ad}{00044}}\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image_a92c57811a03d78e56a6e8592f96a41ad}{size}};}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00045}\mbox{\hyperlink{struct_uncompressed_hyperspectral_image_ad6ee0d6e06c4b67239464b59d806f72c}{00045}}\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image_ad6ee0d6e06c4b67239464b59d806f72c}{cache}}[\mbox{\hyperlink{uhi__io_8h_a6aba86f49a9e77ca452352dd1ef8d4af}{UHI\_CACHE\_LENGTH}}];\ \textcolor{comment}{//\ TODO:\ Pixel\ Caching}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00046}\mbox{\hyperlink{uhi__io_8h_aabf4f060c3ec7817f143c3cbf63ba0c0}{00046}}\ \}\ \mbox{\hyperlink{uhi__io_8h_aabf4f060c3ec7817f143c3cbf63ba0c0}{F\_UHI}},\ \mbox{\hyperlink{uhi__io_8h_ac3e22f6af3f1d9eb75f08f122711569b}{UHI}},\ \mbox{\hyperlink{uhi__io_8h_a73f9b90ad8f0d9cbe39332bdca2c1aa7}{uIMG}};}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00049}00049\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{uhi__io_8h_a6114b6569fbd42d5a3fa05f4cd82cc7e}{UHI\_Initialize}}(}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}}*\ stream,\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ buffer\_size,}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ file\_name,\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{file___i_o_8h_abf7662b304505130b2e87a944038aff0}{FileMode}}\ \mbox{\hyperlink{file___i_o_8h_a588666511dde277029c4c5afc30782a6}{file\_mode}}}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00054}00054\ );}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00056}00056\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{uhi__io_8h_a88066808c0a718f67bd50a325cdb5721}{UHI\_WritePixel}}(}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00057}00057\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}}*\ stream,\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ index,}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{math__functions_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ value}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00060}00060\ );}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00062}00062\ \mbox{\hyperlink{math__functions_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ \mbox{\hyperlink{uhi__io_8h_ad7fd2d84633ee6e0355a950deeacd220}{UHI\_ReadPixel}}(}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}}*\ stream,\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ index}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00065}00065\ );}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00068}00068\ \mbox{\hyperlink{math__functions_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ \mbox{\hyperlink{uhi__io_8h_aad573fb88befb1cd5c553c20a32027a9}{Proxy\_GetPixel}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{uIMG}}*\ hIMG,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ x,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ y,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ z);}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00070}00070\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{uhi__io_8h_a1ec6bacb78062b9b8dde4cf3e3eeb923}{Proxy\_SetPixel}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{uIMG}}*\ hIMG,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ x,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ y,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ z,\ \mbox{\hyperlink{math__functions_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ value);}
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{uhi__io_8h_source_l00073}00073\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ UHI\_IO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

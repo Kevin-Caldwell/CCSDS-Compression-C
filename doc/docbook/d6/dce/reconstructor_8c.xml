@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_reconstructor_8c" xml:lang="en-US">
+<title>src/reconstructor.c File Reference</title>
+<indexterm><primary>src/reconstructor.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;decompressor/reconstructor.h&quot;<?linebreak?>#include &lt;time.h&gt;<?linebreak?></programlisting>Include dependency graph for reconstructor.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/dd0/reconstructor_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_reconstructor_8c_1ad0d5b55646a3018075f07ae472ddb312">Reconstructor</link> (<link linkend="_structimage">image</link> *predicted_values, <link linkend="_structimage">image</link> *reconstructed, FILE *file_ptr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_reconstructor_8c_1aeb6c4d18e6fc666235f8ef7464d1ae29">ReconstructPixel</link> (<link linkend="_structimage">image</link> *mapped, <link linkend="_structimage">image</link> *data, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, FILE *file_ptr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_reconstructor_8c_1aadb567bbc159d00d6334e2eb36e6e253">TestReconstructor</link> (char *file_name)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structimage">image</link> * <link linkend="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545">sample</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_reconstructor_8c_1ad0d5b55646a3018075f07ae472ddb312"/><section>
+    <title>Reconstructor()</title>
+<indexterm><primary>Reconstructor</primary><secondary>reconstructor.c</secondary></indexterm>
+<indexterm><primary>reconstructor.c</primary><secondary>Reconstructor</secondary></indexterm>
+<para><computeroutput>void Reconstructor (<link linkend="_structimage">image</link> * predicted_values, <link linkend="_structimage">image</link> * reconstructed, FILE * file_ptr)</computeroutput></para><para>
+Definition at line <link linkend="_reconstructor_8c_source_1l00006">6</link> of file <link linkend="_reconstructor_8c_source">reconstructor.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/dce/reconstructor_8c_ad0d5b55646a3018075f07ae472ddb312_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/dce/reconstructor_8c_ad0d5b55646a3018075f07ae472ddb312_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_reconstructor_8c_1aeb6c4d18e6fc666235f8ef7464d1ae29"/><section>
+    <title>ReconstructPixel()</title>
+<indexterm><primary>ReconstructPixel</primary><secondary>reconstructor.c</secondary></indexterm>
+<indexterm><primary>reconstructor.c</primary><secondary>ReconstructPixel</secondary></indexterm>
+<para><computeroutput>void ReconstructPixel (<link linkend="_structimage">image</link> * mapped, <link linkend="_structimage">image</link> * data, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, FILE * file_ptr)</computeroutput></para><para>
+Definition at line <link linkend="_reconstructor_8c_source_1l00043">43</link> of file <link linkend="_reconstructor_8c_source">reconstructor.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/dce/reconstructor_8c_aeb6c4d18e6fc666235f8ef7464d1ae29_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/dce/reconstructor_8c_aeb6c4d18e6fc666235f8ef7464d1ae29_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_reconstructor_8c_1aadb567bbc159d00d6334e2eb36e6e253"/><section>
+    <title>TestReconstructor()</title>
+<indexterm><primary>TestReconstructor</primary><secondary>reconstructor.c</secondary></indexterm>
+<indexterm><primary>reconstructor.c</primary><secondary>TestReconstructor</secondary></indexterm>
+<para><computeroutput>void TestReconstructor (char * file_name)</computeroutput></para><para>
+Definition at line <link linkend="_reconstructor_8c_source_1l00088">88</link> of file <link linkend="_reconstructor_8c_source">reconstructor.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/dce/reconstructor_8c_aadb567bbc159d00d6334e2eb36e6e253_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/dce/reconstructor_8c_aadb567bbc159d00d6334e2eb36e6e253_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_reconstructor_8c_1af83a02e01aaaa90418285249879dd545"/><section>
+    <title>sample</title>
+<indexterm><primary>sample</primary><secondary>reconstructor.c</secondary></indexterm>
+<indexterm><primary>reconstructor.c</primary><secondary>sample</secondary></indexterm>
+<para><computeroutput><link linkend="_structimage">image</link>* sample</computeroutput></para><para>
+Definition at line <link linkend="_reconstructor_8c_source_1l00005">5</link> of file <link linkend="_reconstructor_8c_source">reconstructor.c</link>.</para>
+</section>
+</section>
+</section>

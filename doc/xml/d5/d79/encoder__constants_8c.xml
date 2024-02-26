@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d5/d79/encoder__constants_8c" kind="file" language="C++">
+    <compoundname>encoder_constants.c</compoundname>
+    <includes refid="d7/ddb/encoder__constants_8h" local="yes">constants/encoder_constants.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>constants/encoder_constants.h</label>
+        <link refid="d7/ddb/encoder__constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>global_constants.h</label>
+        <link refid="d5/ddb/global__constants_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d4/d3e/load__constants_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="d4/ddb/hash__table_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/encoder_constants.c</label>
+        <link refid="d5/d79/encoder__constants_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+      <node id="5">
+        <label>math.h</label>
+      </node>
+      <node id="7">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d5/d79/encoder__constants_8c_1aefcba2436e62e516a63bdad51613a2e5" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <initializer>= <ref refid="d2/de2/math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e" kindref="member">CLIP</ref>(<ref refid="d7/ddb/encoder__constants_8h_1ad01e1c682be1b33d6ea8287bb7d5fff5" kindref="member">OUTPUT_WORD_SIZE</ref>, 1, 8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/encoder_constants.c" line="3" column="11" bodyfile="src/encoder_constants.c" bodystart="3" bodyend="-1"/>
+        <referencedby refid="df/dcb/header_8h_1ac726367a97f26d89d0e2a44763f43448" compoundref="df/db9/header_8c" startline="5" endline="53">PrepareImageMetadata</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/ddb/encoder__constants_8h" kindref="compound">constants/encoder_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d7/ddb/encoder__constants_8h_1aefcba2436e62e516a63bdad51613a2e5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d5/d79/encoder__constants_8c_1aefcba2436e62e516a63bdad51613a2e5" kindref="member">B</ref><sp/>=<sp/><ref refid="d2/de2/math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e" kindref="member">CLIP</ref>(<ref refid="d7/ddb/encoder__constants_8h_1ad01e1c682be1b33d6ea8287bb7d5fff5" kindref="member">OUTPUT_WORD_SIZE</ref>,<sp/>1,<sp/>8);</highlight></codeline>
+    </programlisting>
+    <location file="src/encoder_constants.c"/>
+  </compounddef>
+</doxygen>

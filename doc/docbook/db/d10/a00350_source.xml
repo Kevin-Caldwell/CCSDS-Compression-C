@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00350_source" xml:lang="en-US">
+<title>load_constants.c</title>
+<indexterm><primary>src/load_constants.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00350_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00143">constants/load_constants.h</link>&quot;</emphasis>
+<anchor xml:id="_a00350_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00122">files/file_IO.h</link>&quot;</emphasis>
+<anchor xml:id="_a00350_source_1l00003"/>00003 
+<anchor xml:id="_a00350_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="_a00350_source_1l00005"/>00005 
+<anchor xml:id="_a00350_source_1l00006"/><link linkend="_a00143_1a5d642038360b72b886a5eb66e3efd14a">00006</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00350_1a5d642038360b72b886a5eb66e3efd14a">LoadConstantFile</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*file_name,&#32;<link linkend="_a00376">HashTable</link>&#32;*result)
+<anchor xml:id="_a00350_source_1l00007"/>00007 {
+<anchor xml:id="_a00350_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;line_buffer[<link linkend="_a00119_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>&#32;+&#32;1&#32;+&#32;32];
+<anchor xml:id="_a00350_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;constant_count&#32;=&#32;0;
+<anchor xml:id="_a00350_source_1l00010"/>00010 
+<anchor xml:id="_a00350_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<link linkend="_a00122_1aaa4f66633ab727c9d841db141c3da088">file_t</link>&#32;*<link linkend="_a00344_1a75189a35b23b0d484e74e07e0c237cd1">fp</link>&#32;=&#32;<link linkend="_a00122_1a05d25080a4592a86386f6d0d3d48496c">F_OPEN</link>(file_name,&#32;<link linkend="_a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6">READ</link>);
+<anchor xml:id="_a00350_source_1l00012"/>00012 &#32;&#32;&#32;&#32;fgets(line_buffer,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>)&#32;*&#32;10,&#32;<link linkend="_a00344_1a75189a35b23b0d484e74e07e0c237cd1">fp</link>);
+<anchor xml:id="_a00350_source_1l00013"/>00013 &#32;&#32;&#32;&#32;constant_count&#32;=&#32;atoi(line_buffer);
+<anchor xml:id="_a00350_source_1l00014"/>00014 
+<anchor xml:id="_a00350_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;key_buffer[<link linkend="_a00119_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>];
+<anchor xml:id="_a00350_source_1l00016"/>00016 &#32;&#32;&#32;&#32;int32_t&#32;data_buffer;
+<anchor xml:id="_a00350_source_1l00017"/>00017 
+<anchor xml:id="_a00350_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;constant_count;&#32;i++)
+<anchor xml:id="_a00350_source_1l00019"/>00019 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_a00350_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fgets(line_buffer,&#32;<emphasis role="keyword">sizeof</emphasis>(<emphasis role="keywordtype">char</emphasis>)&#32;*&#32;(<link linkend="_a00119_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>&#32;+&#32;1&#32;+&#32;32),&#32;<link linkend="_a00344_1a75189a35b23b0d484e74e07e0c237cd1">fp</link>);
+<anchor xml:id="_a00350_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*token&#32;=&#32;strtok(line_buffer,&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>);
+<anchor xml:id="_a00350_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(token)
+<anchor xml:id="_a00350_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_a00350_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;strncpy(key_buffer,&#32;token,&#32;<link linkend="_a00119_1a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</link>);
+<anchor xml:id="_a00350_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00350_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;token&#32;=&#32;strtok(<link linkend="_a00152_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>,&#32;<emphasis role="stringliteral">&quot;:&quot;</emphasis>);
+<anchor xml:id="_a00350_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(token)
+<anchor xml:id="_a00350_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_a00350_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data_buffer&#32;=&#32;atoi(token);
+<anchor xml:id="_a00350_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00350_source_1l00031"/>00031 
+<anchor xml:id="_a00350_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_a00119_1af0c750fb9a54f590b713d6526ed263fc">Hash_AddEntry</link>(result,&#32;key_buffer,&#32;data_buffer);
+<anchor xml:id="_a00350_source_1l00033"/>00033 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_a00350_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<link linkend="_a00122_1ad62e6a72675aa7b389460e97f4e6d998">F_CLOSE</link>(<link linkend="_a00344_1a75189a35b23b0d484e74e07e0c237cd1">fp</link>);
+<anchor xml:id="_a00350_source_1l00035"/>00035 }
+</programlisting></section>

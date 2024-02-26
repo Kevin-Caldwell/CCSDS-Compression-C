@@ -1,0 +1,104 @@
+\doxysection{src/quantizer.c File Reference}
+\hypertarget{quantizer_8c}{}\label{quantizer_8c}\index{src/quantizer.c@{src/quantizer.c}}
+{\ttfamily \#include "{}predictor/quantizer.\+h"{}}\newline
+Include dependency graph for quantizer.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{quantizer_8c_a9d745aa249b8a9cde3f83899b563dcc5}{Clipped\+Quantizer\+Bin\+Center}} (uint16\+\_\+t sample\+\_\+value)
+\item 
+int16\+\_\+t \mbox{\hyperlink{quantizer_8c_a93be7d02ed2acce98f53818c98ac6cca}{Prediction\+Residual}} (uint16\+\_\+t sample\+\_\+value, uint16\+\_\+t predicted\+\_\+sample)
+\item 
+int32\+\_\+t \mbox{\hyperlink{quantizer_8c_afa51bec3d5dfdb41078f60b1a7c454ab}{Quantizer\+Index}} (uint16\+\_\+t sample\+\_\+value, uint16\+\_\+t predicted\+\_\+sample)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{quantizer_8c_ae831d86258458d0a68d3d2143db43d19}{min\+Theta}} (uint32\+\_\+t predicted\+\_\+sample)
+\item 
+int32\+\_\+t \mbox{\hyperlink{quantizer_8c_ae85d34759565d8a3ab498494786c395b}{Quantizer\+Index\+Unmapper}} (uint16\+\_\+t mapped\+\_\+delta, uint16\+\_\+t predicted\+\_\+sample, int32\+\_\+t drps)
+\item 
+\mbox{\hyperlink{linear__algebra_8h_a5acabcf9a2b0d843de53680562e2f639}{data\+\_\+t}} \mbox{\hyperlink{quantizer_8c_a1f491e0a435427669942c932394d7c1a}{Mapped\+Quantizer\+Index}} (int32\+\_\+t quantizer\+\_\+index, int32\+\_\+t predicted\+\_\+sample, uint32\+\_\+t double\+\_\+res\+\_\+predicted\+\_\+sample)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{quantizer_8c_a9d745aa249b8a9cde3f83899b563dcc5}\label{quantizer_8c_a9d745aa249b8a9cde3f83899b563dcc5} 
+\index{quantizer.c@{quantizer.c}!ClippedQuantizerBinCenter@{ClippedQuantizerBinCenter}}
+\index{ClippedQuantizerBinCenter@{ClippedQuantizerBinCenter}!quantizer.c@{quantizer.c}}
+\doxysubsubsection{\texorpdfstring{ClippedQuantizerBinCenter()}{ClippedQuantizerBinCenter()}}
+{\footnotesize\ttfamily uint16\+\_\+t Clipped\+Quantizer\+Bin\+Center (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{quantizer_8c_source_l00003}{3}} of file \mbox{\hyperlink{quantizer_8c_source}{quantizer.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{quantizer_8c_a1f491e0a435427669942c932394d7c1a}\label{quantizer_8c_a1f491e0a435427669942c932394d7c1a} 
+\index{quantizer.c@{quantizer.c}!MappedQuantizerIndex@{MappedQuantizerIndex}}
+\index{MappedQuantizerIndex@{MappedQuantizerIndex}!quantizer.c@{quantizer.c}}
+\doxysubsubsection{\texorpdfstring{MappedQuantizerIndex()}{MappedQuantizerIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{linear__algebra_8h_a5acabcf9a2b0d843de53680562e2f639}{data\+\_\+t}} Mapped\+Quantizer\+Index (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{quantizer\+\_\+index,  }\item[{int32\+\_\+t}]{predicted\+\_\+sample,  }\item[{uint32\+\_\+t}]{double\+\_\+res\+\_\+predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{quantizer_8c_source_l00061}{61}} of file \mbox{\hyperlink{quantizer_8c_source}{quantizer.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{quantizer_8c_ae831d86258458d0a68d3d2143db43d19}\label{quantizer_8c_ae831d86258458d0a68d3d2143db43d19} 
+\index{quantizer.c@{quantizer.c}!minTheta@{minTheta}}
+\index{minTheta@{minTheta}!quantizer.c@{quantizer.c}}
+\doxysubsubsection{\texorpdfstring{minTheta()}{minTheta()}}
+{\footnotesize\ttfamily uint16\+\_\+t min\+Theta (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{quantizer_8c_source_l00027}{27}} of file \mbox{\hyperlink{quantizer_8c_source}{quantizer.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{quantizer_8c_a93be7d02ed2acce98f53818c98ac6cca}\label{quantizer_8c_a93be7d02ed2acce98f53818c98ac6cca} 
+\index{quantizer.c@{quantizer.c}!PredictionResidual@{PredictionResidual}}
+\index{PredictionResidual@{PredictionResidual}!quantizer.c@{quantizer.c}}
+\doxysubsubsection{\texorpdfstring{PredictionResidual()}{PredictionResidual()}}
+{\footnotesize\ttfamily int16\+\_\+t Prediction\+Residual (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value,  }\item[{uint16\+\_\+t}]{predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{quantizer_8c_source_l00007}{7}} of file \mbox{\hyperlink{quantizer_8c_source}{quantizer.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{quantizer_8c_afa51bec3d5dfdb41078f60b1a7c454ab}\label{quantizer_8c_afa51bec3d5dfdb41078f60b1a7c454ab} 
+\index{quantizer.c@{quantizer.c}!QuantizerIndex@{QuantizerIndex}}
+\index{QuantizerIndex@{QuantizerIndex}!quantizer.c@{quantizer.c}}
+\doxysubsubsection{\texorpdfstring{QuantizerIndex()}{QuantizerIndex()}}
+{\footnotesize\ttfamily int32\+\_\+t Quantizer\+Index (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value,  }\item[{uint16\+\_\+t}]{predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+\doxylink{quantizer_8h}{quantizer.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Functions For Quantizer 
+
+Definition at line \mbox{\hyperlink{quantizer_8c_source_l00011}{11}} of file \mbox{\hyperlink{quantizer_8c_source}{quantizer.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{quantizer_8c_ae85d34759565d8a3ab498494786c395b}\label{quantizer_8c_ae85d34759565d8a3ab498494786c395b} 
+\index{quantizer.c@{quantizer.c}!QuantizerIndexUnmapper@{QuantizerIndexUnmapper}}
+\index{QuantizerIndexUnmapper@{QuantizerIndexUnmapper}!quantizer.c@{quantizer.c}}
+\doxysubsubsection{\texorpdfstring{QuantizerIndexUnmapper()}{QuantizerIndexUnmapper()}}
+{\footnotesize\ttfamily int32\+\_\+t Quantizer\+Index\+Unmapper (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mapped\+\_\+delta,  }\item[{uint16\+\_\+t}]{predicted\+\_\+sample,  }\item[{int32\+\_\+t}]{drps }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{quantizer_8c_source_l00040}{40}} of file \mbox{\hyperlink{quantizer_8c_source}{quantizer.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9

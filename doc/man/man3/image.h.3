@@ -1,0 +1,159 @@
+.TH "include/dst/image.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/dst/image.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'math/math_functions\&.h'\fP
+.br
+\fC#include 'constants/constants\&.h'\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'files/uhi_io\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBimage\fP"
+.br
+.ti -1c
+.RI "struct \fBimage2\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFRAME_SIZE\fP(size)   (size\&.x * size\&.y)"
+.br
+.ti -1c
+.RI "#define \fBMAP3_1\fP(i,  j,  k,  size)   (k * \fBFRAME_SIZE\fP(size) + size\&.x * j + i)"
+.br
+.ti -1c
+.RI "#define \fBGetT\fP(x,  y)   (y * \fBNx\fP + x)"
+.br
+.ti -1c
+.RI "#define \fBGetX\fP(t)   (t % \fBNx\fP)"
+.br
+.ti -1c
+.RI "#define \fBGetY\fP(t)   ((int)t / \fBNx\fP)"
+.br
+.ti -1c
+.RI "#define \fBS\fP(hIMG,  z,  y,  x)   \fBGetPixel\fP(hIMG, x,y,z)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBimage\fP \fBimage\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBimage\fP \fBimage3\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBimage2\fP \fBimage2\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBInitImage\fP (\fBimage\fP *img_p, size_t x, size_t y, size_t z)"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP \fBGetPixel\fP (\fBimage\fP *hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z)"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP * \fBGetFrame\fP (\fBimage\fP *hIMG, \fBINDEX\fP y)"
+.br
+.ti -1c
+.RI "void \fBSetPixel\fP (\fBimage\fP *hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z, \fBPIXEL\fP data)"
+.br
+.ti -1c
+.RI "int \fBImage_Equals\fP (\fBimage\fP *img1, \fBimage\fP *img2)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FRAME_SIZE(size)   (size\&.x * size\&.y)"
+\fBimage\&.h\fP 
+.PP
+\fBAuthors\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Image Structure for Storing 3D bitmaps with a maximum dynamic range of 16 bits
+.PP
+Features Initialize Image Get/Set Pixels Image Compare Coordinate Transform from x,y,z to t,z
+.PP
+Uses Raw Data Predicted Image
+.PP
+Dependencies \fBmath_functions\&.h\fP \fBconstants\&.h\fP stdlib\&.h 
+.br
+ 
+.PP
+Definition at line \fB33\fP of file \fBimage\&.h\fP\&.
+.SS "#define GetT(x, y)   (y * \fBNx\fP + x)"
+
+.PP
+Definition at line \fB35\fP of file \fBimage\&.h\fP\&.
+.SS "#define GetX(t)   (t % \fBNx\fP)"
+
+.PP
+Definition at line \fB36\fP of file \fBimage\&.h\fP\&.
+.SS "#define GetY(t)   ((int)t / \fBNx\fP)"
+
+.PP
+Definition at line \fB37\fP of file \fBimage\&.h\fP\&.
+.SS "#define MAP3_1(i, j, k, size)   (k * \fBFRAME_SIZE\fP(size) + size\&.x * j + i)"
+
+.PP
+Definition at line \fB34\fP of file \fBimage\&.h\fP\&.
+.SS "#define S(hIMG, z, y, x)   \fBGetPixel\fP(hIMG, x,y,z)"
+
+.PP
+Definition at line \fB39\fP of file \fBimage\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBimage\fP \fBimage\fP"
+Image Stuct for storing all the contexts of a hyperspectral image in a linear array\&.
+.PP
+The size member is a \fBdim3\fP which contains the dimensions of the image in the format: {Nx, Ny, Nz} The data member is a dynamically allocated array of PIXELs arranged according to the MAP3_1 Macro defined in \fBimage\&.h\fP
+.PP
+It has only been created as a testing feature\&. The entire hyperspectral image cannot be stored in RAM on an embedded device such as the STM32H7\&. The UHI file structure replaces this struct when the MEMORY_SAVING feature is enabled through CMake\&. 
+.SS "typedef struct \fBimage2\fP \fBimage2\fP"
+Unused Struct for 2-D images\&. 
+.SS "typedef struct \fBimage\fP \fBimage3\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBPIXEL\fP * GetFrame (\fBimage\fP * hIMG, \fBINDEX\fP y)"
+
+.PP
+Definition at line \fB61\fP of file \fBimage\&.c\fP\&.
+.SS "\fBPIXEL\fP GetPixel (\fBimage\fP * hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z)"
+
+.PP
+Definition at line \fB55\fP of file \fBimage\&.c\fP\&.
+.SS "int Image_Equals (\fBimage\fP * img1, \fBimage\fP * img2)"
+
+.PP
+Definition at line \fB71\fP of file \fBimage\&.c\fP\&.
+.SS "int InitImage (\fBimage\fP * img_p, size_t x, size_t y, size_t z)"
+
+.PP
+Definition at line \fB45\fP of file \fBimage\&.c\fP\&.
+.SS "void SetPixel (\fBimage\fP * hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z, \fBPIXEL\fP data)"
+
+.PP
+Definition at line \fB66\fP of file \fBimage\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

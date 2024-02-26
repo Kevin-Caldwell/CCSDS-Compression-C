@@ -1,0 +1,29 @@
+\doxysection{run\+\_\+predictor.\+py}
+\hypertarget{run__predictor_8py_source}{}\label{run__predictor_8py_source}\index{python/run\_predictor.py@{python/run\_predictor.py}}
+\mbox{\hyperlink{run__predictor_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00001}\mbox{\hyperlink{namespacerun__predictor}{00001}}\ \textcolor{keyword}{import}\ numpy\ \textcolor{keyword}{as}\ np}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00002}00002\ \textcolor{keyword}{import}\ compression\ \textcolor{keyword}{as}\ comp}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00003}00003\ \textcolor{comment}{\#from\ sklearn.metrics\ import\ mean\_squared\_error}}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00004}00004\ \textcolor{keyword}{import}\ csv}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00005}00005\ \textcolor{keyword}{import}\ sys}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00007}00007\ \textcolor{keyword}{from}\ csv\_io\ \textcolor{keyword}{import}\ ReadCSV,\ SaveCSV}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00008}00008\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00009}00009\ \ \ \ \ print(\textcolor{stringliteral}{"{}\_\_\_\_\_\_\_\_\_PYTHON\ PREDICTOR\_\_\_\_\_\_\_\_\_"{}})}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00010}\mbox{\hyperlink{namespacerun__predictor_aeab71244afb687f16d8c4f5ee9d6ef0e}{00010}}\ \ \ \ \ n\ =\ len(sys.argv)}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00011}00011\ \ \ \ \ if(n\ >\ 1):}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00012}\mbox{\hyperlink{namespacerun__predictor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{00012}}\ \ \ \ \ \ \ \ \ data\ =\ ReadCSV(sys.argv[1])}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00013}\mbox{\hyperlink{namespacerun__predictor_a5c7e4f16622600cb52580b191565e2dd}{00013}}\ \ \ \ \ \ \ \ \ Nx,\ Ny,\ Nz\ =\ data.shape}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00015}\mbox{\hyperlink{namespacerun__predictor_aeaf873546abc6183d2e324ec6585d854}{00015}}\ \ \ \ \ \ \ \ \ python\_predicted\ =\ comp.predictor(data)}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00016}00016\ \ \ \ \ \ \ \ \ SaveCSV(python\_predicted,\ sys.argv[2])}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00018}00018\ \ \ \ \ \ \ \ \ python\_predicted\ =\ ReadCSV(\textcolor{stringliteral}{"{}data/test-\/images/indian\_pines.csv"{}})}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00019}00019\ \ \ \ \ \ \ \ \ Nx,\ Ny,\ Nz\ =\ python\_predicted.shape}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00021}00021\ \ \ \ \ \ \ \ \ python\_predicted\ =\ comp.predictor(data)}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ encoded\ =\ comp.predictor(python\_predicted)}}
+\DoxyCodeLine{\Hypertarget{run__predictor_8py_source_l00023}00023\ \ \ \ \ \ \ \ \ SaveCSV(python\_predicted,\ \textcolor{stringliteral}{"{}data/results/PYTHONRESULT\_indian\_pines\_predicted.csv"{}})}
+
+\end{DoxyCode}

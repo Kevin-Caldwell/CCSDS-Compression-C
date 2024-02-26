@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00785" xml:lang="en-US">
+<title>include/decompressor/decoder.h File Reference</title>
+<indexterm><primary>include/decompressor/decoder.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;dst/image.h&quot;<?linebreak?></programlisting>Include dependency graph for decoder.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d7d/a00786.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d8/d7f/a00787.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8">Decoder_DecodeBody</link> (<link linkend="_a00380">image</link> *predicted_samples, const char *file_name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00785_1a760ca18536e4e5b09a2cad3509f700ba">TestDecoder</link> (char *filename)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8"/><section>
+    <title>Decoder_DecodeBody()</title>
+<indexterm><primary>Decoder_DecodeBody</primary><secondary>decoder.h</secondary></indexterm>
+<indexterm><primary>decoder.h</primary><secondary>Decoder_DecodeBody</secondary></indexterm>
+<para><computeroutput>void Decoder_DecodeBody (<link linkend="_a00380">image</link> * predicted_samples, const char * file_name)</computeroutput></para>
+<para>decoder.h <formalpara><title>Authors</title>
+
+<para>@Kevin-Caldwell @BrianShTsoi</para>
+</formalpara>
+Functions for Decoding an image from a .HSP file</para>
+
+<para>Features Functions for Independently Decoding the Header and Body, or both if necessary.</para>
+
+<para>Uses Core File of the Decoder Module</para>
+
+<para>Dependencies <link linkend="_a00113">image.h</link></para>
+
+<para>Internal Dependencies stdio.h inttypes.h</para>
+
+<para>TODO Finish Decoder_DecodeBody Finish Decoder_DecodeHeader Finish Decoder_DecodeImage </para>
+<para>
+Definition at line <link linkend="_a00347_source_1l00040">40</link> of file <link linkend="_a00347_source">decoder.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/d00/a00785_aed4e95d0c6d50bc3f99264337e2f9fb8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00785_1a760ca18536e4e5b09a2cad3509f700ba"/><section>
+    <title>TestDecoder()</title>
+<indexterm><primary>TestDecoder</primary><secondary>decoder.h</secondary></indexterm>
+<indexterm><primary>decoder.h</primary><secondary>TestDecoder</secondary></indexterm>
+<para><computeroutput>void TestDecoder (char * filename)</computeroutput></para><para>
+Definition at line <link linkend="_a00347_source_1l00135">135</link> of file <link linkend="_a00347_source">decoder.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/d00/a00785_a760ca18536e4e5b09a2cad3509f700ba_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

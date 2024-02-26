@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d9/d7b/classtest__compression_1_1_test_comp" kind="class" language="Python" prot="public">
+    <compoundname>test_compression::TestComp</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">TestCase</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <qualifiedname>test_compression.TestComp.data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="17" column="1" bodyfile="python/test_compression.py" bodystart="17" bodyend="-1"/>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" compoundref="dd/dee/test__compression_8py" startline="62" endline="68">TestComp.test_compression_algo</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" compoundref="dd/dee/test__compression_8py" startline="23" endline="29">TestComp.test_CSV</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" compoundref="dd/dee/test__compression_8py" startline="57" endline="61">TestComp.test_decompress</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a6f8e687cf87f06f265f8345e025fd290" compoundref="dd/dee/test__compression_8py" startline="30" endline="39">TestComp.test_predictor</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" compoundref="dd/dee/test__compression_8py" startline="69" endline="78">TestComp.test_rmse</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" compoundref="dd/dee/test__compression_8py" startline="40" endline="44">TestComp.test_unpredict</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Nx</definition>
+        <argsstring></argsstring>
+        <name>Nx</name>
+        <qualifiedname>test_compression.TestComp.Nx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="19" column="1" bodyfile="python/test_compression.py" bodystart="19" bodyend="-1"/>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" compoundref="dd/dee/test__compression_8py" startline="62" endline="68">TestComp.test_compression_algo</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" compoundref="dd/dee/test__compression_8py" startline="23" endline="29">TestComp.test_CSV</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" compoundref="dd/dee/test__compression_8py" startline="57" endline="61">TestComp.test_decompress</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" compoundref="dd/dee/test__compression_8py" startline="69" endline="78">TestComp.test_rmse</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" compoundref="dd/dee/test__compression_8py" startline="40" endline="44">TestComp.test_unpredict</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Ny</definition>
+        <argsstring></argsstring>
+        <name>Ny</name>
+        <qualifiedname>test_compression.TestComp.Ny</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="20" column="1" bodyfile="python/test_compression.py" bodystart="20" bodyend="-1"/>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" compoundref="dd/dee/test__compression_8py" startline="62" endline="68">TestComp.test_compression_algo</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" compoundref="dd/dee/test__compression_8py" startline="23" endline="29">TestComp.test_CSV</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" compoundref="dd/dee/test__compression_8py" startline="57" endline="61">TestComp.test_decompress</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" compoundref="dd/dee/test__compression_8py" startline="69" endline="78">TestComp.test_rmse</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" compoundref="dd/dee/test__compression_8py" startline="40" endline="44">TestComp.test_unpredict</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Nz</definition>
+        <argsstring></argsstring>
+        <name>Nz</name>
+        <qualifiedname>test_compression.TestComp.Nz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="21" column="1" bodyfile="python/test_compression.py" bodystart="21" bodyend="-1"/>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" compoundref="dd/dee/test__compression_8py" startline="62" endline="68">TestComp.test_compression_algo</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" compoundref="dd/dee/test__compression_8py" startline="23" endline="29">TestComp.test_CSV</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" compoundref="dd/dee/test__compression_8py" startline="57" endline="61">TestComp.test_decompress</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" compoundref="dd/dee/test__compression_8py" startline="69" endline="78">TestComp.test_rmse</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" compoundref="dd/dee/test__compression_8py" startline="40" endline="44">TestComp.test_unpredict</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1ac86c73ff4bb09de46d20296fcbcbd1af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>setUpClass</definition>
+        <argsstring>(cls)</argsstring>
+        <name>setUpClass</name>
+        <qualifiedname>test_compression.TestComp.setUpClass</qualifiedname>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="11" column="1" bodyfile="python/test_compression.py" bodystart="11" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_CSV</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_CSV</name>
+        <qualifiedname>test_compression.TestComp.test_CSV</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="23" column="1" bodyfile="python/test_compression.py" bodystart="23" bodyend="29"/>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" compoundref="dd/dee/test__compression_8py" startline="19">TestComp.Nx</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" compoundref="dd/dee/test__compression_8py" startline="20">TestComp.Ny</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" compoundref="dd/dee/test__compression_8py" startline="21">TestComp.Nz</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a6f8e687cf87f06f265f8345e025fd290" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_predictor</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_predictor</name>
+        <qualifiedname>test_compression.TestComp.test_predictor</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="30" column="1" bodyfile="python/test_compression.py" bodystart="30" bodyend="39"/>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_unpredict</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_unpredict</name>
+        <qualifiedname>test_compression.TestComp.test_unpredict</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="40" column="1" bodyfile="python/test_compression.py" bodystart="40" bodyend="44"/>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" compoundref="dd/dee/test__compression_8py" startline="19">TestComp.Nx</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" compoundref="dd/dee/test__compression_8py" startline="20">TestComp.Ny</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" compoundref="dd/dee/test__compression_8py" startline="21">TestComp.Nz</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a9dd048a6a37c5628aa57a9301fe0e6a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_inv_GPO2</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_inv_GPO2</name>
+        <qualifiedname>test_compression.TestComp.test_inv_GPO2</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="45" column="1" bodyfile="python/test_compression.py" bodystart="45" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_decompress</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_decompress</name>
+        <qualifiedname>test_compression.TestComp.test_decompress</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="57" column="1" bodyfile="python/test_compression.py" bodystart="57" bodyend="61"/>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" compoundref="dd/dee/test__compression_8py" startline="19">TestComp.Nx</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" compoundref="dd/dee/test__compression_8py" startline="20">TestComp.Ny</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" compoundref="dd/dee/test__compression_8py" startline="21">TestComp.Nz</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_compression_algo</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_compression_algo</name>
+        <qualifiedname>test_compression.TestComp.test_compression_algo</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="62" column="1" bodyfile="python/test_compression.py" bodystart="62" bodyend="68"/>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" compoundref="dd/dee/test__compression_8py" startline="19">TestComp.Nx</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" compoundref="dd/dee/test__compression_8py" startline="20">TestComp.Ny</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" compoundref="dd/dee/test__compression_8py" startline="21">TestComp.Nz</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_rmse</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_rmse</name>
+        <qualifiedname>test_compression.TestComp.test_rmse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="69" column="1" bodyfile="python/test_compression.py" bodystart="69" bodyend="78"/>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" compoundref="dd/dee/test__compression_8py" startline="19">TestComp.Nx</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" compoundref="dd/dee/test__compression_8py" startline="20">TestComp.Ny</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" compoundref="dd/dee/test__compression_8py" startline="21">TestComp.Nz</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1acab599e43f76a42446f7d128db6142f5" compoundref="dd/dee/test__compression_8py" startline="102" endline="111">TestComp.rmse</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>test_compression_ratio</definition>
+        <argsstring>(self)</argsstring>
+        <name>test_compression_ratio</name>
+        <qualifiedname>test_compression.TestComp.test_compression_ratio</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="79" column="1" bodyfile="python/test_compression.py" bodystart="79" bodyend="93"/>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1abb98cfaed1aee0349dde4e879c2ecb9e" compoundref="dd/dee/test__compression_8py" startline="112" endline="114">TestComp.compression_ratio</references>
+        <references refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" compoundref="d4/ddb/hash__table_8h" startline="39">HashTable::data</references>
+        <references refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="67">image::data</references>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" compoundref="d0/d77/body_8h" startline="45">GolombInt::data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" compoundref="dd/dee/test__compression_8py" startline="17">TestComp.data</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" compoundref="dd/dee/test__compression_8py" startline="19">TestComp.Nx</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" compoundref="dd/dee/test__compression_8py" startline="20">TestComp.Ny</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" compoundref="dd/dee/test__compression_8py" startline="21">TestComp.Nz</references>
+        <references refid="d9/d7b/classtest__compression_1_1_test_comp_1acab599e43f76a42446f7d128db6142f5" compoundref="dd/dee/test__compression_8py" startline="102" endline="111">TestComp.rmse</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1a1a455a23bafc82e59390728276776d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>load_pic</definition>
+        <argsstring>(file_name=&quot;python/images/Indian_pines.mat&quot;, header=&quot;indian_pines&quot;)</argsstring>
+        <name>load_pic</name>
+        <qualifiedname>test_compression.TestComp.load_pic</qualifiedname>
+        <param>
+          <type>file_name</type>
+          <defname>file_name</defname>
+          <defval>&quot;python/images/Indian_pines.mat&quot;</defval>
+        </param>
+        <param>
+          <type>header</type>
+          <defname>header</defname>
+          <defval>&quot;indian_pines&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="94" column="1" bodyfile="python/test_compression.py" bodystart="94" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1acab599e43f76a42446f7d128db6142f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>rmse</definition>
+        <argsstring>(self, data, decompressed)</argsstring>
+        <name>rmse</name>
+        <qualifiedname>test_compression.TestComp.rmse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kindref="member">data</ref></type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>decompressed</type>
+          <defname>decompressed</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="102" column="1" bodyfile="python/test_compression.py" bodystart="102" bodyend="111"/>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" compoundref="dd/dee/test__compression_8py" startline="69" endline="78">TestComp.test_rmse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/d7b/classtest__compression_1_1_test_comp_1abb98cfaed1aee0349dde4e879c2ecb9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>compression_ratio</definition>
+        <argsstring>(self, data, compressed)</argsstring>
+        <name>compression_ratio</name>
+        <qualifiedname>test_compression.TestComp.compression_ratio</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kindref="member">data</ref></type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>compressed</type>
+          <defname>compressed</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/test_compression.py" line="112" column="1" bodyfile="python/test_compression.py" bodystart="112" bodyend="114"/>
+        <referencedby refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" compoundref="dd/dee/test__compression_8py" startline="79" endline="93">TestComp.test_compression_ratio</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TestComp</label>
+        <link refid="d9/d7b/classtest__compression_1_1_test_comp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestCase</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>TestComp</label>
+        <link refid="d9/d7b/classtest__compression_1_1_test_comp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TestCase</label>
+      </node>
+    </collaborationgraph>
+    <location file="python/test_compression.py" line="9" column="1" bodyfile="python/test_compression.py" bodystart="9" bodyend="114"/>
+    <listofallmembers>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1abb98cfaed1aee0349dde4e879c2ecb9e" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>compression_ratio</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>data</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a1a455a23bafc82e59390728276776d89" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>load_pic</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>Nx</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>Ny</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>Nz</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1acab599e43f76a42446f7d128db6142f5" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>rmse</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1ac86c73ff4bb09de46d20296fcbcbd1af" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>setUpClass</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_compression_algo</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_compression_ratio</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_CSV</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_decompress</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a9dd048a6a37c5628aa57a9301fe0e6a3" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_inv_GPO2</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a6f8e687cf87f06f265f8345e025fd290" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_predictor</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_rmse</name></member>
+      <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" prot="public" virt="non-virtual"><scope>test_compression::TestComp</scope><name>test_unpredict</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

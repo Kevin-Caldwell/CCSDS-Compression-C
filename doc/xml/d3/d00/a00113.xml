@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d3/d00/a00113" kind="file" language="C++">
+    <compoundname>image.h</compoundname>
+    <includes refid="d7/d9a/a00152" local="yes">math/math_functions.h</includes>
+    <includes refid="d9/db6/a00146" local="yes">constants/constants.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="d1/d88/a00128" local="yes">files/uhi_io.h</includes>
+    <includedby refid="db/db6/a00074" local="yes">include/cache/cache_predictor.h</includedby>
+    <includedby refid="d3/d00/a00785" local="yes">include/decompressor/decoder.h</includedby>
+    <includedby refid="d4/d81/a00110" local="yes">include/decompressor/reconstructor.h</includedby>
+    <includedby refid="da/dec/a00080" local="yes">include/encoder/body.h</includedby>
+    <includedby refid="dc/dfe/a00125" local="yes">include/files/csv-io.h</includedby>
+    <includedby refid="d0/dc2/a00104" local="yes">include/predictor/predictor.h</includedby>
+    <includedby refid="d1/d44/a00098" local="yes">include/predictor/quantizer.h</includedby>
+    <includedby refid="d1/dc1/a00092" local="yes">include/predictor/sample_representative.h</includedby>
+    <includedby refid="d9/d77/a00095" local="yes">include/predictor/weights.h</includedby>
+    <includedby refid="da/d24/a00068" local="yes">include/testing/perlin.h</includedby>
+    <includedby refid="de/de1/a00065" local="yes">include/testing/synthetic_image_generator.h</includedby>
+    <includedby refid="d0/d39/a00314" local="yes">src/image.c</includedby>
+    <includedby refid="d1/d5d/a00311" local="yes">src/uhi_io.c</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="14">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/cache/cache_predictor.h</label>
+        <link refid="db/db6/a00074"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>include/decompressor/decoder.h</label>
+        <link refid="d3/d00/a00785"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/decompressor/reconstructor.h</label>
+        <link refid="d4/d81/a00110"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>include/encoder/body.h</label>
+        <link refid="da/dec/a00080"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>include/files/csv-io.h</label>
+        <link refid="dc/dfe/a00125"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/predictor/local_differences.h</label>
+        <link refid="d4/d3a/a00101"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/predictor/local_sum.h</label>
+        <link refid="df/d98/a00107"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>include/predictor/predictor.h</label>
+        <link refid="d0/dc2/a00104"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/predictor/quantizer.h</label>
+        <link refid="d1/d44/a00098"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/predictor/sample_representative.h</label>
+        <link refid="d1/dc1/a00092"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>include/predictor/weights.h</label>
+        <link refid="d9/d77/a00095"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>include/testing/perlin.h</label>
+        <link refid="da/d24/a00068"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>include/testing/synthetic_image_generator.h</label>
+        <link refid="de/de1/a00065"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="9">
+        <label>main/decompressor.c</label>
+        <link refid="d5/de0/a00050"/>
+      </node>
+      <node id="13">
+        <label>main/image_handler.c</label>
+        <link refid="dc/dee/a00053"/>
+      </node>
+      <node id="21">
+        <label>src/cache_predictor.c</label>
+        <link refid="df/d95/a00299"/>
+      </node>
+      <node id="28">
+        <label>src/csv-io.c</label>
+        <link refid="df/da9/a00263"/>
+      </node>
+      <node id="24">
+        <label>src/decoder.c</label>
+        <link refid="d1/dc6/a00347"/>
+      </node>
+      <node id="26">
+        <label>src/encoder_body.c</label>
+        <link refid="d9/dd6/a00272"/>
+      </node>
+      <node id="14">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+      <node id="34">
+        <label>src/image.c</label>
+        <link refid="d0/d39/a00314"/>
+      </node>
+      <node id="20">
+        <label>src/local_differences.c</label>
+        <link refid="da/de0/a00317"/>
+      </node>
+      <node id="22">
+        <label>src/local_sum.c</label>
+        <link refid="d2/d04/a00281"/>
+      </node>
+      <node id="29">
+        <label>src/perlin_noise.c</label>
+        <link refid="d0/d61/a00302"/>
+      </node>
+      <node id="15">
+        <label>src/predictor.c</label>
+        <link refid="d8/d8e/a00344"/>
+      </node>
+      <node id="18">
+        <label>src/quantizer.c</label>
+        <link refid="d6/d7f/a00287"/>
+      </node>
+      <node id="10">
+        <label>src/reconstructor.c</label>
+        <link refid="d3/d93/a00341"/>
+      </node>
+      <node id="19">
+        <label>src/sample_representative.c</label>
+        <link refid="db/d7b/a00296"/>
+      </node>
+      <node id="32">
+        <label>src/synthetic_image_generator.c</label>
+        <link refid="dd/d4e/a00329"/>
+      </node>
+      <node id="33">
+        <label>src/test_UHI.c</label>
+        <link refid="d3/d5e/a00275"/>
+      </node>
+      <node id="35">
+        <label>src/uhi_io.c</label>
+        <link refid="d1/d5d/a00311"/>
+      </node>
+      <node id="17">
+        <label>src/weights.c</label>
+        <link refid="db/dc3/a00284"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d8/ddd/a00380" prot="public">image</innerclass>
+    <innerclass refid="d2/d56/a00384" prot="public">image2</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d3/d00/a00113_1acaccd9f1398a726f32adffb1f78d6761" prot="public" static="no">
+        <name>FRAME_SIZE</name>
+        <param><defname>size</defname></param>
+        <initializer>(size.x * size.y)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d3/d00/a00113" kindref="compound">image.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell</para>
+</simplesect>
+Image Structure for Storing 3D bitmaps with a maximum dynamic range of 16 bits</para>
+<para>Features Initialize Image Get/Set Pixels Image Compare Coordinate Transform from x,y,z to t,z</para>
+<para>Uses Raw Data Predicted Image</para>
+<para>Dependencies <ref refid="d7/d9a/a00152" kindref="compound">math_functions.h</ref> <ref refid="d9/db6/a00146" kindref="compound">constants.h</ref> stdlib.h <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="33" column="9" bodyfile="include/dst/image.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d00/a00113_1a38f6fc4c8999b95f1f75294a52c32e4c" prot="public" static="no">
+        <name>MAP3_1</name>
+        <param><defname>i</defname></param>
+        <param><defname>j</defname></param>
+        <param><defname>k</defname></param>
+        <param><defname>size</defname></param>
+        <initializer>(k * <ref refid="d3/d00/a00113_1acaccd9f1398a726f32adffb1f78d6761" kindref="member">FRAME_SIZE</ref>(size) + size.x * j + i)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="34" column="9" bodyfile="include/dst/image.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d00/a00113_1af6434ff11f3bef292960119c16edba32" prot="public" static="no">
+        <name>GetT</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>(y * <ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref> + x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="35" column="9" bodyfile="include/dst/image.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d00/a00113_1a603ad8850d10b60de148b716ae22f3cd" prot="public" static="no">
+        <name>GetX</name>
+        <param><defname>t</defname></param>
+        <initializer>(t % <ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="36" column="9" bodyfile="include/dst/image.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d00/a00113_1a9d63a43992ec07d97e149afe470eb02d" prot="public" static="no">
+        <name>GetY</name>
+        <param><defname>t</defname></param>
+        <initializer>((int)t / <ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="37" column="9" bodyfile="include/dst/image.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d00/a00113_1a582f5034cfb025614b418984a00e2e5c" prot="public" static="no">
+        <name>S</name>
+        <param><defname>hIMG</defname></param>
+        <param><defname>z</defname></param>
+        <param><defname>y</defname></param>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="d3/d00/a00113_1a78477801fe183cdf32e60df1c92b7320" kindref="member">GetPixel</ref>(hIMG, x,y,z)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="39" column="9" bodyfile="include/dst/image.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d3/d00/a00113_1a183300a528553b66677f173c07c7170e" prot="public" static="no">
+        <type>struct <ref refid="d8/ddd/a00380" kindref="compound">image</ref></type>
+        <definition>typedef struct image image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Image Stuct for storing all the contexts of a hyperspectral image in a linear array.</para>
+<para>The size member is a <ref refid="d9/de6/a00404" kindref="compound">dim3</ref> which contains the dimensions of the image in the format: {Nx, Ny, Nz} The data member is a dynamically allocated array of PIXELs arranged according to the MAP3_1 Macro defined in <ref refid="d3/d00/a00113" kindref="compound">image.h</ref></para>
+<para>It has only been created as a testing feature. The entire hyperspectral image cannot be stored in RAM on an embedded device such as the STM32H7. The UHI file structure replaces this struct when the MEMORY_SAVING feature is enabled through CMake. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="68" column="7"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d00/a00113_1a030ee2c64e93fe5ac9b39ad83ac47daa" prot="public" static="no">
+        <type>struct <ref refid="d8/ddd/a00380" kindref="compound">image</ref></type>
+        <definition>typedef struct image image3</definition>
+        <argsstring></argsstring>
+        <name>image3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="68" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d00/a00113_1a64ee4969f267712e06a948fdf5bfe902" prot="public" static="no">
+        <type>struct <ref refid="d2/d56/a00384" kindref="compound">image2</ref></type>
+        <definition>typedef struct image2 image2</definition>
+        <argsstring></argsstring>
+        <name>image2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unused Struct for 2-D images. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="87" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int InitImage</definition>
+        <argsstring>(image *img_p, size_t x, size_t y, size_t z)</argsstring>
+        <name>InitImage</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>img_p</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="72" column="5" bodyfile="src/image.c" bodystart="45" bodyend="53" declfile="include/dst/image.h" declline="72" declcolumn="5"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="da/d24/a00068_1a6d727efa497a4b992c90483602583515" compoundref="d0/d61/a00302" startline="103" endline="117">GeneratePerlinImage</referencedby>
+        <referencedby refid="df/d03/a00062_1a450c7f9206bff8de0c177e34e6b5bcf4" compoundref="d3/d07/a00305" startline="5" endline="19">GenerateVoronoiImage</referencedby>
+        <referencedby refid="db/db6/a00074_1a400e6cd529a6a1ca3901be57ab88fb63" compoundref="df/d95/a00299" startline="16" endline="41">InitializePredictorCache</referencedby>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</referencedby>
+        <referencedby refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" compoundref="d3/d5e/a00275" startline="5" endline="51">test_UHI</referencedby>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/d00/a00113_1a78477801fe183cdf32e60df1c92b7320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+        <definition>PIXEL GetPixel</definition>
+        <argsstring>(image *hIMG, INDEX x, INDEX y, INDEX z)</argsstring>
+        <name>GetPixel</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="74" column="7" bodyfile="src/image.c" bodystart="55" bodyend="59" declfile="include/dst/image.h" declline="74" declcolumn="7"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="d3/d00/a00113_1a38f6fc4c8999b95f1f75294a52c32e4c" compoundref="d3/d00/a00113" startline="34">MAP3_1</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</referencedby>
+        <referencedby refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" compoundref="d3/d5e/a00275" startline="5" endline="51">test_UHI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/d00/a00113_1a5a1ef1e96ecb20d081d2e7e75e2996e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref> *</type>
+        <definition>PIXEL * GetFrame</definition>
+        <argsstring>(image *hIMG, INDEX y)</argsstring>
+        <name>GetFrame</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="75" column="7" bodyfile="src/image.c" bodystart="61" bodyend="64" declfile="include/dst/image.h" declline="75" declcolumn="7"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="d3/d00/a00113_1acaccd9f1398a726f32adffb1f78d6761" compoundref="d3/d00/a00113" startline="33">FRAME_SIZE</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+      </memberdef>
+      <memberdef kind="function" id="d3/d00/a00113_1aefaa1253ccc17864ac32b9d685b821d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetPixel</definition>
+        <argsstring>(image *hIMG, INDEX x, INDEX y, INDEX z, PIXEL data)</argsstring>
+        <name>SetPixel</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="77" column="6" bodyfile="src/image.c" bodystart="66" bodyend="69" declfile="include/dst/image.h" declline="77" declcolumn="6"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="d3/d00/a00113_1a38f6fc4c8999b95f1f75294a52c32e4c" compoundref="d3/d00/a00113" startline="34">MAP3_1</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="de/de1/a00065_1a5561acefba71d729426452c73bb402dd" compoundref="dd/d4e/a00329" startline="233" endline="264">GenerateVoronoiFlat3DLocal</referencedby>
+        <referencedby refid="de/de1/a00065_1a1f64360c2baa3b6c2ab3589a5d25deaa" compoundref="dd/d4e/a00329" startline="88" endline="107">GenerateVoronoiFlat3DNaive</referencedby>
+        <referencedby refid="da/d24/a00068_1a573b5b9f4a318d5723b22ecfe2eaa87a" compoundref="d0/d61/a00302" startline="75" endline="101">Perlin4</referencedby>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+        <referencedby refid="dd/d4e/a00329_1a7f533fab0007b8e388232d9fb654ae06" compoundref="dd/d4e/a00329" startline="170" endline="227">ShadeVoronoiBox3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d3/d00/a00113_1a1aeeb4864b63110b92099384a7a21fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Image_Equals</definition>
+        <argsstring>(image *img1, image *img2)</argsstring>
+        <name>Image_Equals</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>img1</declname>
+        </param>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>img2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/dst/image.h" line="79" column="5" bodyfile="src/image.c" bodystart="71" bodyend="85" declfile="include/dst/image.h" declline="79" declcolumn="5"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IMAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IMAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d9a/a00152" kindref="compound">math/math_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d9/db6/a00146" kindref="compound">constants/constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d88/a00128" kindref="compound">files/uhi_io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="d3/d00/a00113_1acaccd9f1398a726f32adffb1f78d6761" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FRAME_SIZE(size)<sp/>(size.x<sp/>*<sp/>size.y)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="d3/d00/a00113_1a38f6fc4c8999b95f1f75294a52c32e4c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAP3_1(i,<sp/>j,<sp/>k,<sp/>size)<sp/>(k<sp/>*<sp/>FRAME_SIZE(size)<sp/>+<sp/>size.x<sp/>*<sp/>j<sp/>+<sp/>i)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="d3/d00/a00113_1af6434ff11f3bef292960119c16edba32" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GetT(x,<sp/>y)<sp/>(y<sp/>*<sp/>Nx<sp/>+<sp/>x)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d3/d00/a00113_1a603ad8850d10b60de148b716ae22f3cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GetX(t)<sp/>(t<sp/>%<sp/>Nx)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="d3/d00/a00113_1a9d63a43992ec07d97e149afe470eb02d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GetY(t)<sp/>((int)t<sp/>/<sp/>Nx)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="d3/d00/a00113_1a582f5034cfb025614b418984a00e2e5c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S(hIMG,<sp/>z,y,x)<sp/>GetPixel(hIMG,<sp/>x,y,z)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MEMORY_SAVING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d88/a00128" kindref="compound">files/uhi_io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d9/da1/a00396" kindref="compound">UHI</ref><sp/><ref refid="d8/ddd/a00380" kindref="compound">image</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="d9/da1/a00396" kindref="compound">UHI</ref><sp/><ref refid="d3/d00/a00113_1a030ee2c64e93fe5ac9b39ad83ac47daa" kindref="member">image3</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="d8/ddd/a00380" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d8/ddd/a00380" kindref="compound">image</ref>{</highlight></codeline>
+<codeline lineno="66" refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/><ref refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="67" refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref>*<sp/><ref refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="68" refid="d3/d00/a00113_1a183300a528553b66677f173c07c7170e" refkind="member"><highlight class="normal">}<sp/><ref refid="d8/ddd/a00380" kindref="compound">image</ref>,<sp/><ref refid="d3/d00/a00113_1a030ee2c64e93fe5ac9b39ad83ac47daa" kindref="member">image3</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" kindref="member">InitImage</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>img_p,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>z);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/><ref refid="d3/d00/a00113_1a78477801fe183cdf32e60df1c92b7320" kindref="member">GetPixel</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>hIMG,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>x,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>y,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>z);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref>*<sp/><ref refid="d3/d00/a00113_1a5a1ef1e96ecb20d081d2e7e75e2996e2" kindref="member">GetFrame</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>hIMG,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>y);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d00/a00113_1aefaa1253ccc17864ac32b9d685b821d4" kindref="member">SetPixel</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>hIMG,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>x,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>y,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>z,<sp/><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/>data);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d00/a00113_1a1aeeb4864b63110b92099384a7a21fa8" kindref="member">Image_Equals</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>img1,<sp/><ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>img2);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="d2/d56/a00384" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/d56/a00384" kindref="compound">image2</ref>{</highlight></codeline>
+<codeline lineno="85" refid="d2/d56/a00384_1af773904b63569ed8472a1814b0f9e2af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/dea/a00408" kindref="compound">dim2</ref><sp/><ref refid="d2/d56/a00384_1af773904b63569ed8472a1814b0f9e2af" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="86" refid="d2/d56/a00384_1a53d0e0aad601020b80d8266c2d9f8462" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref>*<sp/><ref refid="d2/d56/a00384_1a53d0e0aad601020b80d8266c2d9f8462" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="87" refid="d3/d00/a00113_1a64ee4969f267712e06a948fdf5bfe902" refkind="member"><highlight class="normal">}<sp/><ref refid="d2/d56/a00384" kindref="compound">image2</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>IMAGE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/dst/image.h"/>
+  </compounddef>
+</doxygen>

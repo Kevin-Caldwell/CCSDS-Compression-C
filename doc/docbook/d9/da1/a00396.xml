@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00396" xml:lang="en-US">
+<title>UncompressedHyperspectralImage Struct Reference</title>
+<indexterm><primary>UncompressedHyperspectralImage</primary></indexterm>
+<para>
+<computeroutput>#include &lt;uhi_io.h&gt;</computeroutput>
+</para>
+Collaboration diagram for UncompressedHyperspectralImage:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dad/a00394.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00122_1aaa4f66633ab727c9d841db141c3da088">file_t</link> * <link linkend="_a00396_1ab10afab4dbcbfc99227c63ee0ae694ff">fs</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00404">dim3</link> <link linkend="_a00396_1a92c57811a03d78e56a6e8592f96a41ad">size</link></para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_a00396_1ad6ee0d6e06c4b67239464b59d806f72c">cache</link> [<link linkend="_a00128_1a6aba86f49a9e77ca452352dd1ef8d4af">UHI_CACHE_LENGTH</link>]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Stores UHI file streams.</para>
+
+<para>File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.</para>
+
+<para>Designed to be a more RAM-friendly alternative to the image struct defined in <link linkend="_a00113">image.h</link>. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.</para>
+
+<para>fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array </para>
+<para>
+Definition at line <link linkend="_a00128_source_1l00042">42</link> of file <link linkend="_a00128_source">uhi_io.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_a00396_1ad6ee0d6e06c4b67239464b59d806f72c"/><section>
+    <title>cache</title>
+<indexterm><primary>cache</primary><secondary>UncompressedHyperspectralImage</secondary></indexterm>
+<indexterm><primary>UncompressedHyperspectralImage</primary><secondary>cache</secondary></indexterm>
+<para><computeroutput>int32_t cache[<link linkend="_a00128_1a6aba86f49a9e77ca452352dd1ef8d4af">UHI_CACHE_LENGTH</link>]</computeroutput></para><para>
+Definition at line <link linkend="_a00128_source_1l00045">45</link> of file <link linkend="_a00128_source">uhi_io.h</link>.</para>
+</section>
+<anchor xml:id="_a00396_1ab10afab4dbcbfc99227c63ee0ae694ff"/><section>
+    <title>fs</title>
+<indexterm><primary>fs</primary><secondary>UncompressedHyperspectralImage</secondary></indexterm>
+<indexterm><primary>UncompressedHyperspectralImage</primary><secondary>fs</secondary></indexterm>
+<para><computeroutput><link linkend="_a00122_1aaa4f66633ab727c9d841db141c3da088">file_t</link>* fs</computeroutput></para><para>
+Definition at line <link linkend="_a00128_source_1l00043">43</link> of file <link linkend="_a00128_source">uhi_io.h</link>.</para>
+</section>
+<anchor xml:id="_a00396_1a92c57811a03d78e56a6e8592f96a41ad"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>UncompressedHyperspectralImage</secondary></indexterm>
+<indexterm><primary>UncompressedHyperspectralImage</primary><secondary>size</secondary></indexterm>
+<para><computeroutput><link linkend="_a00404">dim3</link> size</computeroutput></para><para>
+Definition at line <link linkend="_a00128_source_1l00044">44</link> of file <link linkend="_a00128_source">uhi_io.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/files/<link linkend="_a00128">uhi_io.h</link></section>
+</section>

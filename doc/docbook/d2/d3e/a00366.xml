@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00366" xml:lang="en-US">
+<title>prepare_hImage Namespace Reference</title>
+<indexterm><primary>prepare_hImage</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00366_1a84c47e6bbcef028eda4c81cfa1b935ff">ReadCSV</link> (filename)</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link> (wavelength, gamma=0.8)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>list <link linkend="_a00366_1a7e69bd3f9400dc258e83fe7ecab1e317">CacheFiles</link> = [[]]</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link> = <link linkend="_a00366_1a84c47e6bbcef028eda4c81cfa1b935ff">ReadCSV</link>(f&quot;data/test-images/VORONOI_640x512x640_1000.csv&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a5c7e4f16622600cb52580b191565e2dd">Nx</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1ac1452fdfd6ea1c8c005ac90bbfa62011">Ny</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1af3ec54a0e6bc4935a13fb520b7d7df6e">Nz</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1adbdde44f981e5f6df2c75332ea3f9220">numbers</link> = np.array(<link linkend="_a00366_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link>, dtype=int)</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link> = numbers.min()</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a34ddfe7666109e00419326a0334cea67">maximum</link> = numbers.max()</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00366_1a68c1363ccdf28598f4504e4b6fd6288a">number_range</link> = <link linkend="_a00366_1a34ddfe7666109e00419326a0334cea67">maximum</link> - <link linkend="_a00366_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link> + 1</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a86d0d51ceb4bc3bd26707520f257a5a4">img</link> = Image.new( &apos;RGB&apos;, (<link linkend="_a00366_1a5c7e4f16622600cb52580b191565e2dd">Nx</link>,<link linkend="_a00366_1ac1452fdfd6ea1c8c005ac90bbfa62011">Ny</link>), &quot;black&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a25d0e7c7655b7a5eed365b894fd5e26f">pixels</link> = img.load()</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_a00366_1ac8859e8c1ce357c4c8b37bbb1936ba1c">v</link> = (<link linkend="_a00366_1adbdde44f981e5f6df2c75332ea3f9220">numbers</link>[i, j, z] - <link linkend="_a00366_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link>) / <link linkend="_a00366_1a68c1363ccdf28598f4504e4b6fd6288a">number_range</link> * 370 + 380</para>
+</listitem>
+            <listitem><para><link linkend="_a00366_1a1aabac6d068eef6a7bad3fdf50a05cc8">d</link> = <link linkend="_a00366_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link>(int(<link linkend="_a00366_1ac8859e8c1ce357c4c8b37bbb1936ba1c">v</link>))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00366_1a84c47e6bbcef028eda4c81cfa1b935ff"/><section>
+    <title>ReadCSV()</title>
+<indexterm><primary>ReadCSV</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>ReadCSV</secondary></indexterm>
+<para><computeroutput>ReadCSV ( filename)</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00009">9</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a74f2b862a36db3cde75f1cc94d388c81"/><section>
+    <title>wavelength_to_rgb()</title>
+<indexterm><primary>wavelength_to_rgb</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>wavelength_to_rgb</secondary></indexterm>
+<para><computeroutput>wavelength_to_rgb ( wavelength,  gamma = <computeroutput>0.8</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>This converts a given wavelength of light to an 
+approximate RGB color value. The wavelength must be given
+in nanometers in the range from 380 nm through 750 nm
+(789 THz through 400 THz).
+Based on code by Dan Bruton
+http://www.physics.sfasu.edu/astro/color/spectra.html
+</computeroutput></literallayout> </para>
+<para>
+Definition at line <link linkend="_a00008_source_1l00031">31</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00366_1a7e69bd3f9400dc258e83fe7ecab1e317"/><section>
+    <title>CacheFiles</title>
+<indexterm><primary>CacheFiles</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>CacheFiles</secondary></indexterm>
+<para><computeroutput>list CacheFiles = [[]]</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00086">86</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a1aabac6d068eef6a7bad3fdf50a05cc8"/><section>
+    <title>d</title>
+<indexterm><primary>d</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>d</secondary></indexterm>
+<para><computeroutput>d = <link linkend="_a00366_1a74f2b862a36db3cde75f1cc94d388c81">wavelength_to_rgb</link>(int(<link linkend="_a00366_1ac8859e8c1ce357c4c8b37bbb1936ba1c">v</link>))</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00134">134</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a511ae0b1c13f95e5f08f1a0dd3da3d93"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>data = <link linkend="_a00366_1a84c47e6bbcef028eda4c81cfa1b935ff">ReadCSV</link>(f&quot;data/test-images/VORONOI_640x512x640_1000.csv&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00094">94</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a86d0d51ceb4bc3bd26707520f257a5a4"/><section>
+    <title>img</title>
+<indexterm><primary>img</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>img</secondary></indexterm>
+<para><computeroutput>img = Image.new( &apos;RGB&apos;, (<link linkend="_a00366_1a5c7e4f16622600cb52580b191565e2dd">Nx</link>,<link linkend="_a00366_1ac1452fdfd6ea1c8c005ac90bbfa62011">Ny</link>), &quot;black&quot;)</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00123">123</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a34ddfe7666109e00419326a0334cea67"/><section>
+    <title>maximum</title>
+<indexterm><primary>maximum</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>maximum</secondary></indexterm>
+<para><computeroutput>maximum = numbers.max()</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00112">112</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a0ad48c3f647380a8559a3d2a284376d8"/><section>
+    <title>minimum</title>
+<indexterm><primary>minimum</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>minimum</secondary></indexterm>
+<para><computeroutput>minimum = numbers.min()</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00111">111</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a68c1363ccdf28598f4504e4b6fd6288a"/><section>
+    <title>number_range</title>
+<indexterm><primary>number_range</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>number_range</secondary></indexterm>
+<para><computeroutput>number_range = <link linkend="_a00366_1a34ddfe7666109e00419326a0334cea67">maximum</link> - <link linkend="_a00366_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link> + 1</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00113">113</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1adbdde44f981e5f6df2c75332ea3f9220"/><section>
+    <title>numbers</title>
+<indexterm><primary>numbers</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>numbers</secondary></indexterm>
+<para><computeroutput>numbers = np.array(<link linkend="_a00366_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link>, dtype=int)</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00104">104</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a5c7e4f16622600cb52580b191565e2dd"/><section>
+    <title>Nx</title>
+<indexterm><primary>Nx</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>Nx</secondary></indexterm>
+<para><computeroutput>Nx</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00097">97</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1ac1452fdfd6ea1c8c005ac90bbfa62011"/><section>
+    <title>Ny</title>
+<indexterm><primary>Ny</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>Ny</secondary></indexterm>
+<para><computeroutput>Ny</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00097">97</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1af3ec54a0e6bc4935a13fb520b7d7df6e"/><section>
+    <title>Nz</title>
+<indexterm><primary>Nz</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>Nz</secondary></indexterm>
+<para><computeroutput>Nz</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00097">97</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1a25d0e7c7655b7a5eed365b894fd5e26f"/><section>
+    <title>pixels</title>
+<indexterm><primary>pixels</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>pixels</secondary></indexterm>
+<para><computeroutput>pixels = img.load()</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00124">124</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+<anchor xml:id="_a00366_1ac8859e8c1ce357c4c8b37bbb1936ba1c"/><section>
+    <title>v</title>
+<indexterm><primary>v</primary><secondary>prepare_hImage</secondary></indexterm>
+<indexterm><primary>prepare_hImage</primary><secondary>v</secondary></indexterm>
+<para><computeroutput>int v = (<link linkend="_a00366_1adbdde44f981e5f6df2c75332ea3f9220">numbers</link>[i, j, z] - <link linkend="_a00366_1a0ad48c3f647380a8559a3d2a284376d8">minimum</link>) / <link linkend="_a00366_1a68c1363ccdf28598f4504e4b6fd6288a">number_range</link> * 370 + 380</computeroutput></para><para>
+Definition at line <link linkend="_a00008_source_1l00131">131</link> of file <link linkend="_a00008_source">prepare_hImage.py</link>.</para>
+</section>
+</section>
+</section>

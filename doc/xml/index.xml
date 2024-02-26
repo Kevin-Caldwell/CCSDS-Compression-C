@@ -1,0 +1,1067 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="dd/dec/structdim2" kind="struct"><name>dim2</name>
+    <member refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" kind="variable"><name>x</name></member>
+    <member refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="d3/db3/structdim3" kind="struct"><name>dim3</name>
+    <member refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" kind="variable"><name>x</name></member>
+    <member refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" kind="variable"><name>y</name></member>
+    <member refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="da/d1d/structf_vector3" kind="struct"><name>fVector3</name>
+    <member refid="da/d1d/structf_vector3_1ad0da36b2558901e21e7a30f6c227a45e" kind="variable"><name>x</name></member>
+    <member refid="da/d1d/structf_vector3_1aa4f0d3eebc3c443f9be81bf48561a217" kind="variable"><name>y</name></member>
+    <member refid="da/d1d/structf_vector3_1af73583b1e980b0aa03f9884812e9fd4d" kind="variable"><name>z</name></member>
+  </compound>
+  <compound refid="d6/dc9/struct_golomb_int" kind="struct"><name>GolombInt</name>
+    <member refid="d6/dc9/struct_golomb_int_1a1e43bf7d608e87228b625cca2c04d641" kind="variable"><name>data</name></member>
+    <member refid="d6/dc9/struct_golomb_int_1aebb70c2aab3407a9f05334c47131a43b" kind="variable"><name>length</name></member>
+  </compound>
+  <compound refid="d8/d82/struct_hash_table" kind="struct"><name>HashTable</name>
+    <member refid="d8/d82/struct_hash_table_1aa429745e164770f5a9545fd31ba633b1" kind="variable"><name>keys</name></member>
+    <member refid="d8/d82/struct_hash_table_1afe6af42ae11ea67b9e6403bd99a4f99d" kind="variable"><name>data</name></member>
+    <member refid="d8/d82/struct_hash_table_1afed088663f8704004425cdae2120b9b3" kind="variable"><name>len</name></member>
+  </compound>
+  <compound refid="de/d68/structimage" kind="struct"><name>image</name>
+    <member refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" kind="variable"><name>size</name></member>
+    <member refid="de/d68/structimage_1a53d0e0aad601020b80d8266c2d9f8462" kind="variable"><name>data</name></member>
+  </compound>
+  <compound refid="d5/d31/structimage2" kind="struct"><name>image2</name>
+    <member refid="d5/d31/structimage2_1af773904b63569ed8472a1814b0f9e2af" kind="variable"><name>size</name></member>
+    <member refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" kind="variable"><name>data</name></member>
+  </compound>
+  <compound refid="d0/d18/struct_predictor_cache" kind="struct"><name>PredictorCache</name>
+    <member refid="d0/d18/struct_predictor_cache_1a847490dd84d456f3e80b13a3be6ddfac" kind="variable"><name>cache_space</name></member>
+    <member refid="d0/d18/struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826" kind="variable"><name>weights</name></member>
+  </compound>
+  <compound refid="d9/d7b/classtest__compression_1_1_test_comp" kind="class"><name>test_compression::TestComp</name>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kind="variable"><name>data</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a5c7e4f16622600cb52580b191565e2dd" kind="variable"><name>Nx</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1ac1452fdfd6ea1c8c005ac90bbfa62011" kind="variable"><name>Ny</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1af3ec54a0e6bc4935a13fb520b7d7df6e" kind="variable"><name>Nz</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1ac86c73ff4bb09de46d20296fcbcbd1af" kind="function"><name>setUpClass</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a7e18036fb4bf81697e8f0dd2d709a888" kind="function"><name>test_CSV</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a6f8e687cf87f06f265f8345e025fd290" kind="function"><name>test_predictor</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a9c3b7d7f89e7794b99b5d30b9e1b3c03" kind="function"><name>test_unpredict</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a9dd048a6a37c5628aa57a9301fe0e6a3" kind="function"><name>test_inv_GPO2</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a12de10b081d4d2ddbb1828ecb7fbf1a7" kind="function"><name>test_decompress</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a5d6a83596562086f4bef51e7ce7e3ff8" kind="function"><name>test_compression_algo</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a73770f9898094fc643ccdf3f6e3e6450" kind="function"><name>test_rmse</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a207b44f776c09bac2062fc6fe065aa9d" kind="function"><name>test_compression_ratio</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1a1a455a23bafc82e59390728276776d89" kind="function"><name>load_pic</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1acab599e43f76a42446f7d128db6142f5" kind="function"><name>rmse</name></member>
+    <member refid="d9/d7b/classtest__compression_1_1_test_comp_1abb98cfaed1aee0349dde4e879c2ecb9e" kind="function"><name>compression_ratio</name></member>
+  </compound>
+  <compound refid="db/db5/struct_uncompressed_hyperspectral_image" kind="struct"><name>UncompressedHyperspectralImage</name>
+    <member refid="db/db5/struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff" kind="variable"><name>fs</name></member>
+    <member refid="db/db5/struct_uncompressed_hyperspectral_image_1a92c57811a03d78e56a6e8592f96a41ad" kind="variable"><name>size</name></member>
+    <member refid="db/db5/struct_uncompressed_hyperspectral_image_1ad6ee0d6e06c4b67239464b59d806f72c" kind="variable"><name>cache</name></member>
+  </compound>
+  <compound refid="db/dbc/struct_var_int_file_stream" kind="struct"><name>VarIntFileStream</name>
+    <member refid="db/dbc/struct_var_int_file_stream_1ab10afab4dbcbfc99227c63ee0ae694ff" kind="variable"><name>fs</name></member>
+    <member refid="db/dbc/struct_var_int_file_stream_1a1e5757374503c98182efdc688999f91f" kind="variable"><name>bit_ptr</name></member>
+    <member refid="db/dbc/struct_var_int_file_stream_1a97ecce5e0a58b1ab0ac947547d0ae8f3" kind="variable"><name>byte_ptr</name></member>
+    <member refid="db/dbc/struct_var_int_file_stream_1a35cba028c7b885581f278e533cfc4147" kind="variable"><name>buffer</name></member>
+  </compound>
+  <compound refid="d5/ddd/struct_var_unsigned_int_file" kind="struct"><name>VarUnsignedIntFile</name>
+    <member refid="d5/ddd/struct_var_unsigned_int_file_1ab10afab4dbcbfc99227c63ee0ae694ff" kind="variable"><name>fs</name></member>
+    <member refid="d5/ddd/struct_var_unsigned_int_file_1ab4d491f08cdd6da71b95cf04059412c6" kind="variable"><name>rw_buffer</name></member>
+    <member refid="d5/ddd/struct_var_unsigned_int_file_1aec46119c1ac94a666f08c86543006ed0" kind="variable"><name>io_mode</name></member>
+    <member refid="d5/ddd/struct_var_unsigned_int_file_1a97194a18c4b1d8f274a42c431ebab9e4" kind="variable"><name>bit_index</name></member>
+    <member refid="d5/ddd/struct_var_unsigned_int_file_1a655357dd976f916aed3eb30bc0a694d9" kind="variable"><name>byte_index</name></member>
+  </compound>
+  <compound refid="d0/d0c/namespacecompression" kind="namespace"><name>compression</name>
+    <member refid="d0/d0c/namespacecompression_1abf6d0ccec2f5157184071729f129de19" kind="variable"><name>D</name></member>
+    <member refid="d0/d0c/namespacecompression_1a80970133e7290ddaa15b6d949fc99420" kind="variable"><name>S_MIN</name></member>
+    <member refid="d0/d0c/namespacecompression_1a04632c156a04ad172a367f2760582928" kind="variable"><name>S_MAX</name></member>
+    <member refid="d0/d0c/namespacecompression_1af02faf18c4b6fb6841abaf0b3142cc92" kind="variable"><name>S_MID</name></member>
+    <member refid="d0/d0c/namespacecompression_1aef94be98e2c9e4a4dece75f60ca9792c" kind="variable"><name>P</name></member>
+    <member refid="d0/d0c/namespacecompression_1aa3e9a982c10101613c6a1dd1fb3279f6" kind="variable"><name>W_RES</name></member>
+    <member refid="d0/d0c/namespacecompression_1a999bcfcc11e2794539308d5015455f59" kind="variable"><name>W_MIN</name></member>
+    <member refid="d0/d0c/namespacecompression_1add63171ca968cbd5ca4d60dfbf9a2746" kind="variable"><name>W_MAX</name></member>
+    <member refid="d0/d0c/namespacecompression_1a3d90133d3051fbc4816d02efd9566d8e" kind="variable"><name>R</name></member>
+    <member refid="d0/d0c/namespacecompression_1a5e78dbd5fd0fc01ba7b98dd15e27221e" kind="variable"><name>M</name></member>
+    <member refid="d0/d0c/namespacecompression_1a6238c0ecdac57d88d1f30259c60238cc" kind="variable"><name>V_MIN</name></member>
+    <member refid="d0/d0c/namespacecompression_1ae2de9b8731e1c54a74579610837e59c0" kind="variable"><name>V_MAX</name></member>
+    <member refid="d0/d0c/namespacecompression_1aa911c208b6f29485ce4b65c73b7f72f8" kind="variable"><name>T_INC</name></member>
+    <member refid="d0/d0c/namespacecompression_1a633454f54a1d7f2439a65666d71f9271" kind="variable"><name>U_MAX</name></member>
+    <member refid="d0/d0c/namespacecompression_1a7880c4643e340683b530ce1609a8fd47" kind="variable"><name>GAMMA_0</name></member>
+    <member refid="d0/d0c/namespacecompression_1a2689c4b3931025b79053532a5f1b0a85" kind="variable"><name>K</name></member>
+    <member refid="d0/d0c/namespacecompression_1a3272087e7728ef865ea990a98baf8395" kind="variable"><name>GAMMA_STAR</name></member>
+    <member refid="d0/d0c/namespacecompression_1aa92b3873c7c4a40451e43cc6b2cd53f1" kind="variable"><name>K_ZPRIME</name></member>
+    <member refid="d0/d0c/namespacecompression_1a7251716b703096793ed329f6b8469300" kind="function"><name>Ps</name></member>
+    <member refid="d0/d0c/namespacecompression_1a7f0bae725f24b8dae34a48b3cbe35d49" kind="function"><name>local_sum</name></member>
+    <member refid="d0/d0c/namespacecompression_1a49ef318f74fbe8e8dd91da6f85f2c3e8" kind="function"><name>local_diff_vector</name></member>
+    <member refid="d0/d0c/namespacecompression_1a49c6c06e2ea0cfc20fce6d6edb0c72fa" kind="function"><name>init_weight_vector</name></member>
+    <member refid="d0/d0c/namespacecompression_1a148cf1e7cc2fd2f23b569009afd6d3c1" kind="function"><name>prediction</name></member>
+    <member refid="d0/d0c/namespacecompression_1aff3436357165d0b07392b7d032fd13bc" kind="function"><name>updated_weight_vector</name></member>
+    <member refid="d0/d0c/namespacecompression_1a37ffa8d9496cef9a8e698c70ada1b0a7" kind="function"><name>mapper</name></member>
+    <member refid="d0/d0c/namespacecompression_1a11e878c5de785af8c9c14a5a86a0354d" kind="function"><name>predictor</name></member>
+    <member refid="d0/d0c/namespacecompression_1ae875711385174553f6db26923ce85874" kind="function"><name>predictor_debug</name></member>
+    <member refid="d0/d0c/namespacecompression_1a6a4af5f40ce35a453cd8e214f546734f" kind="function"><name>GPO2</name></member>
+    <member refid="d0/d0c/namespacecompression_1ac2c565a00560593a9177b1aad41e0d3c" kind="function"><name>encoder</name></member>
+    <member refid="d0/d0c/namespacecompression_1a0b0449d8b52604ab8eed2bfa8c7c4277" kind="function"><name>increment_xyz</name></member>
+    <member refid="d0/d0c/namespacecompression_1a78bff45f9915c892f4cf129d2fd27f55" kind="function"><name>inv_GPO2</name></member>
+    <member refid="d0/d0c/namespacecompression_1a13bd9527fe572001978b40411c0868be" kind="function"><name>decoder</name></member>
+    <member refid="d0/d0c/namespacecompression_1a1f2ff95dd2ae77e1fd9c720e7873c5c6" kind="function"><name>unmapper</name></member>
+    <member refid="d0/d0c/namespacecompression_1a6ac9172b17fab1182e21fbc228069437" kind="function"><name>unpredictor</name></member>
+  </compound>
+  <compound refid="d6/d9b/namespacecsv__io" kind="namespace"><name>csv_io</name>
+    <member refid="d6/d9b/namespacecsv__io_1a84c47e6bbcef028eda4c81cfa1b935ff" kind="function"><name>ReadCSV</name></member>
+    <member refid="d6/d9b/namespacecsv__io_1af953609f65420e99a9c283dfa65c5453" kind="function"><name>SaveCSV</name></member>
+  </compound>
+  <compound refid="df/ded/namespacedisplay__debugging" kind="namespace"><name>display_debugging</name>
+    <member refid="df/ded/namespacedisplay__debugging_1a7e69bd3f9400dc258e83fe7ecab1e317" kind="variable"><name>CacheFiles</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1ac3eb632b1a788eb448ac9474d94a2436" kind="variable"><name>num_images</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1a74742cb5c8e2ac354a60cb73383d8176" kind="variable"><name>rows</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1aaed057ed424ced7429016ec18c2edbb6" kind="variable"><name>cols</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1a64aa603bc3c6c1587e7c6542452481ac" kind="variable"><name>fig</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1addecde06ced656af71c7c68c4e780fe8" kind="variable"><name>axes</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1a574732c04d57514f219fc914fdcb54e5" kind="variable"><name>figsize</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1a09fdf86df724fb528e53a740e45fb686" kind="variable"><name>images</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1a4c913b7a4b89c523eb5240af5d344082" kind="variable"><name>anim</name></member>
+    <member refid="df/ded/namespacedisplay__debugging_1a225e5b2e6406c2700aa6a6c884994dc3" kind="function"><name>display_images</name></member>
+  </compound>
+  <compound refid="d3/d62/namespacefile__compare" kind="namespace"><name>file_compare</name>
+    <member refid="d3/d62/namespacefile__compare_1aeab71244afb687f16d8c4f5ee9d6ef0e" kind="variable"><name>n</name></member>
+    <member refid="d3/d62/namespacefile__compare_1ac7d0b484ac5bfa8e7714915a5a0868d5" kind="function"><name>CompareResults</name></member>
+  </compound>
+  <compound refid="d0/d3e/namespacefile__stats" kind="namespace"><name>file_stats</name>
+    <member refid="d0/d3e/namespacefile__stats_1aeab71244afb687f16d8c4f5ee9d6ef0e" kind="variable"><name>n</name></member>
+    <member refid="d0/d3e/namespacefile__stats_1a473892ba0152ef4e5eda5695d64603e2" kind="function"><name>compression_ratio</name></member>
+    <member refid="d0/d3e/namespacefile__stats_1a5e923c6c785648e0a14fa3a4825120e9" kind="function"><name>file_info</name></member>
+  </compound>
+  <compound refid="da/dc4/namespacegenerate__perlin__image" kind="namespace"><name>generate_perlin_image</name>
+    <member refid="da/dc4/namespacegenerate__perlin__image_1ac483f6ce851c9ecd9fb835ff7551737c" kind="variable"><name>p</name></member>
+    <member refid="da/dc4/namespacegenerate__perlin__image_1a86d0d51ceb4bc3bd26707520f257a5a4" kind="variable"><name>img</name></member>
+    <member refid="da/dc4/namespacegenerate__perlin__image_1a943f49763dd36e31fc7ea8604fcad789" kind="variable"><name>frame</name></member>
+    <member refid="da/dc4/namespacegenerate__perlin__image_1a550769bbd4e7537ff90a656f5b0c23b2" kind="variable"><name>start</name></member>
+    <member refid="da/dc4/namespacegenerate__perlin__image_1afb358f48b1646c750fb9da6c6585be2b" kind="variable"><name>end</name></member>
+  </compound>
+  <compound refid="d0/d09/namespacehelperlib" kind="namespace"><name>helperlib</name>
+    <member refid="d0/d09/namespacehelperlib_1a081f96217f1dd709e9c15859a50e68f0" kind="function"><name>sign</name></member>
+    <member refid="d0/d09/namespacehelperlib_1ac0d353b52829389169d73b9a9810f866" kind="function"><name>dec_to_bin</name></member>
+    <member refid="d0/d09/namespacehelperlib_1a0efb929942addc663e0c6f20aecd4ccb" kind="function"><name>bin_to_dec</name></member>
+  </compound>
+  <compound refid="d3/d69/namespaceimage__test" kind="namespace"><name>image_test</name>
+    <member refid="d3/d69/namespaceimage__test_1afd65cf072a93c93ad52b9f25b341e10b" kind="variable"><name>ip</name></member>
+    <member refid="d3/d69/namespaceimage__test_1aaeb5d6c0725676dbf8a8b57680213cb9" kind="variable"><name>wavelength</name></member>
+    <member refid="d3/d69/namespaceimage__test_1a0b47ce0c13c56f95ba8759974d6e722b" kind="function"><name>load_indian_pines</name></member>
+  </compound>
+  <compound refid="d5/d67/namespacemat__to__csv" kind="namespace"><name>mat_to_csv</name>
+    <member refid="d5/d67/namespacemat__to__csv_1a21bbd772bda66a652cb421b8dcbbb582" kind="variable"><name>argS</name></member>
+    <member refid="d5/d67/namespacemat__to__csv_1a5c7e4f16622600cb52580b191565e2dd" kind="variable"><name>Nx</name></member>
+    <member refid="d5/d67/namespacemat__to__csv_1ac1452fdfd6ea1c8c005ac90bbfa62011" kind="variable"><name>Ny</name></member>
+    <member refid="d5/d67/namespacemat__to__csv_1af3ec54a0e6bc4935a13fb520b7d7df6e" kind="variable"><name>Nz</name></member>
+    <member refid="d5/d67/namespacemat__to__csv_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kind="variable"><name>data</name></member>
+    <member refid="d5/d67/namespacemat__to__csv_1aeab71244afb687f16d8c4f5ee9d6ef0e" kind="variable"><name>n</name></member>
+    <member refid="d5/d67/namespacemat__to__csv_1a53c8b63647024371209f34ff11f676af" kind="function"><name>load_pic</name></member>
+  </compound>
+  <compound refid="db/da0/namespaceperlin__image" kind="namespace"><name>perlin_image</name>
+    <member refid="db/da0/namespaceperlin__image_1a3fa1574eb32a9a437f406b678d378c99" kind="function"><name>interpolant</name></member>
+    <member refid="db/da0/namespaceperlin__image_1a8f0a805cc15da261cccfb8ee1b927e2e" kind="function"><name>generate_perlin_noise_3d</name></member>
+    <member refid="db/da0/namespaceperlin__image_1a8b26fa13f4dca6276805ea852aa4b62d" kind="function"><name>generate_fractal_noise_3d</name></member>
+  </compound>
+  <compound refid="dd/d4a/namespacepredictor__eg" kind="namespace"><name>predictor_eg</name>
+    <member refid="dd/d4a/namespacepredictor__eg_1aeab71244afb687f16d8c4f5ee9d6ef0e" kind="variable"><name>n</name></member>
+    <member refid="dd/d4a/namespacepredictor__eg_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kind="variable"><name>data</name></member>
+    <member refid="dd/d4a/namespacepredictor__eg_1a5c7e4f16622600cb52580b191565e2dd" kind="variable"><name>Nx</name></member>
+    <member refid="dd/d4a/namespacepredictor__eg_1ac1452fdfd6ea1c8c005ac90bbfa62011" kind="variable"><name>Ny</name></member>
+    <member refid="dd/d4a/namespacepredictor__eg_1af3ec54a0e6bc4935a13fb520b7d7df6e" kind="variable"><name>Nz</name></member>
+    <member refid="dd/d4a/namespacepredictor__eg_1aeaf873546abc6183d2e324ec6585d854" kind="variable"><name>python_predicted</name></member>
+    <member refid="dd/d4a/namespacepredictor__eg_1a2500b5ef2b732958e0d8386dfe8c200a" kind="variable"><name>encoded</name></member>
+  </compound>
+  <compound refid="d2/dc7/namespaceprepare__h_image" kind="namespace"><name>prepare_hImage</name>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a7e69bd3f9400dc258e83fe7ecab1e317" kind="variable"><name>CacheFiles</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kind="variable"><name>data</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a5c7e4f16622600cb52580b191565e2dd" kind="variable"><name>Nx</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1ac1452fdfd6ea1c8c005ac90bbfa62011" kind="variable"><name>Ny</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1af3ec54a0e6bc4935a13fb520b7d7df6e" kind="variable"><name>Nz</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1adbdde44f981e5f6df2c75332ea3f9220" kind="variable"><name>numbers</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a0ad48c3f647380a8559a3d2a284376d8" kind="variable"><name>minimum</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a34ddfe7666109e00419326a0334cea67" kind="variable"><name>maximum</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a68c1363ccdf28598f4504e4b6fd6288a" kind="variable"><name>number_range</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a86d0d51ceb4bc3bd26707520f257a5a4" kind="variable"><name>img</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a25d0e7c7655b7a5eed365b894fd5e26f" kind="variable"><name>pixels</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1ac8859e8c1ce357c4c8b37bbb1936ba1c" kind="variable"><name>v</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a1aabac6d068eef6a7bad3fdf50a05cc8" kind="variable"><name>d</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a84c47e6bbcef028eda4c81cfa1b935ff" kind="function"><name>ReadCSV</name></member>
+    <member refid="d2/dc7/namespaceprepare__h_image_1a74f2b862a36db3cde75f1cc94d388c81" kind="function"><name>wavelength_to_rgb</name></member>
+  </compound>
+  <compound refid="d7/dc2/namespacerun__predictor" kind="namespace"><name>run_predictor</name>
+    <member refid="d7/dc2/namespacerun__predictor_1aeab71244afb687f16d8c4f5ee9d6ef0e" kind="variable"><name>n</name></member>
+    <member refid="d7/dc2/namespacerun__predictor_1a511ae0b1c13f95e5f08f1a0dd3da3d93" kind="variable"><name>data</name></member>
+    <member refid="d7/dc2/namespacerun__predictor_1a5c7e4f16622600cb52580b191565e2dd" kind="variable"><name>Nx</name></member>
+    <member refid="d7/dc2/namespacerun__predictor_1ac1452fdfd6ea1c8c005ac90bbfa62011" kind="variable"><name>Ny</name></member>
+    <member refid="d7/dc2/namespacerun__predictor_1af3ec54a0e6bc4935a13fb520b7d7df6e" kind="variable"><name>Nz</name></member>
+    <member refid="d7/dc2/namespacerun__predictor_1aeaf873546abc6183d2e324ec6585d854" kind="variable"><name>python_predicted</name></member>
+  </compound>
+  <compound refid="d6/d38/namespacetest__compression" kind="namespace"><name>test_compression</name>
+  </compound>
+  <compound refid="d8/dcb/namespaceunittest" kind="namespace"><name>unittest</name>
+  </compound>
+  <compound refid="d1/d3a/_c_make_c_compiler_id_8c" kind="file"><name>CMakeCCompilerId.c</name>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1ae5510d82e4946f1656f4969911c54736" kind="define"><name>__has_include</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a81dee0709ded976b2e0319239f72d174" kind="define"><name>COMPILER_ID</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a2ae9b72bb13abaabfcf2ee0ba7d3fa1d" kind="define"><name>STRINGIFY_HELPER</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a43e1cad902b6477bec893cb6430bd6c8" kind="define"><name>STRINGIFY</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1adbc5372f40838899018fadbc89bd588b" kind="define"><name>PLATFORM_ID</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1aba35d0d200deaeb06aee95ca297acb28" kind="define"><name>ARCHITECTURE_ID</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1ad1280362da42492bbc11aa78cbf776ad" kind="define"><name>DEC</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a46d5d95daa1bef867bd0179594310ed5" kind="define"><name>HEX</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1adaee3ee7c5a7a22451ea25e762e1d7d5" kind="define"><name>C_VERSION</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a4b0efeb7a5d59313986b3a0390f050f6" kind="variable"><name>info_compiler</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a2321403dee54ee23f0c2fa849c60f7d4" kind="variable"><name>info_platform</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a59647e99d304ed33b15cb284c27ed391" kind="variable"><name>info_arch</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a4607cccf070750927b458473ca82c090" kind="variable"><name>info_language_standard_default</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a0f46a8a39e09d9b803c4766904fd7e99" kind="variable"><name>info_language_extensions_default</name></member>
+    <member refid="d1/d3a/_c_make_c_compiler_id_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="df/de8/compressor_8c_8o_8d" kind="file"><name>compressor.c.o.d</name>
+  </compound>
+  <compound refid="d3/d54/_c_c_s_d_s___compressor_8dir_2src_2cache__predictor_8c_8o_8d" kind="file"><name>cache_predictor.c.o.d</name>
+  </compound>
+  <compound refid="d5/d48/_c_c_s_d_s___decompressor_8dir_2src_2cache__predictor_8c_8o_8d" kind="file"><name>cache_predictor.c.o.d</name>
+  </compound>
+  <compound refid="d7/d75/_c_c_s_d_s___image___generator_8dir_2src_2cache__predictor_8c_8o_8d" kind="file"><name>cache_predictor.c.o.d</name>
+  </compound>
+  <compound refid="d9/d5f/_c_c_s_d_s___compressor_8dir_2src_2constants_8c_8o_8d" kind="file"><name>constants.c.o.d</name>
+  </compound>
+  <compound refid="d3/d08/_c_c_s_d_s___decompressor_8dir_2src_2constants_8c_8o_8d" kind="file"><name>constants.c.o.d</name>
+  </compound>
+  <compound refid="d1/ddf/_c_c_s_d_s___image___generator_8dir_2src_2constants_8c_8o_8d" kind="file"><name>constants.c.o.d</name>
+  </compound>
+  <compound refid="d8/d08/_c_c_s_d_s___compressor_8dir_2src_2csv-io_8c_8o_8d" kind="file"><name>csv-io.c.o.d</name>
+  </compound>
+  <compound refid="d9/de2/_c_c_s_d_s___decompressor_8dir_2src_2csv-io_8c_8o_8d" kind="file"><name>csv-io.c.o.d</name>
+  </compound>
+  <compound refid="d7/db3/_c_c_s_d_s___image___generator_8dir_2src_2csv-io_8c_8o_8d" kind="file"><name>csv-io.c.o.d</name>
+  </compound>
+  <compound refid="d3/d56/_c_c_s_d_s___compressor_8dir_2src_2decoder_8c_8o_8d" kind="file"><name>decoder.c.o.d</name>
+  </compound>
+  <compound refid="da/d80/_c_c_s_d_s___decompressor_8dir_2src_2decoder_8c_8o_8d" kind="file"><name>decoder.c.o.d</name>
+  </compound>
+  <compound refid="d8/d7c/_c_c_s_d_s___image___generator_8dir_2src_2decoder_8c_8o_8d" kind="file"><name>decoder.c.o.d</name>
+  </compound>
+  <compound refid="da/d66/_c_c_s_d_s___compressor_8dir_2src_2encoder__body_8c_8o_8d" kind="file"><name>encoder_body.c.o.d</name>
+  </compound>
+  <compound refid="de/d32/_c_c_s_d_s___decompressor_8dir_2src_2encoder__body_8c_8o_8d" kind="file"><name>encoder_body.c.o.d</name>
+  </compound>
+  <compound refid="d5/d95/_c_c_s_d_s___image___generator_8dir_2src_2encoder__body_8c_8o_8d" kind="file"><name>encoder_body.c.o.d</name>
+  </compound>
+  <compound refid="d1/d50/_c_c_s_d_s___compressor_8dir_2src_2encoder__constants_8c_8o_8d" kind="file"><name>encoder_constants.c.o.d</name>
+  </compound>
+  <compound refid="d5/d51/_c_c_s_d_s___decompressor_8dir_2src_2encoder__constants_8c_8o_8d" kind="file"><name>encoder_constants.c.o.d</name>
+  </compound>
+  <compound refid="db/dcc/_c_c_s_d_s___image___generator_8dir_2src_2encoder__constants_8c_8o_8d" kind="file"><name>encoder_constants.c.o.d</name>
+  </compound>
+  <compound refid="db/dba/_c_c_s_d_s___compressor_8dir_2src_2encoder__helper_8c_8o_8d" kind="file"><name>encoder_helper.c.o.d</name>
+  </compound>
+  <compound refid="df/d31/_c_c_s_d_s___decompressor_8dir_2src_2encoder__helper_8c_8o_8d" kind="file"><name>encoder_helper.c.o.d</name>
+  </compound>
+  <compound refid="df/dda/_c_c_s_d_s___image___generator_8dir_2src_2encoder__helper_8c_8o_8d" kind="file"><name>encoder_helper.c.o.d</name>
+  </compound>
+  <compound refid="d2/db4/_c_c_s_d_s___compressor_8dir_2src_2file___i_o_8c_8o_8d" kind="file"><name>file_IO.c.o.d</name>
+  </compound>
+  <compound refid="d3/d7d/_c_c_s_d_s___decompressor_8dir_2src_2file___i_o_8c_8o_8d" kind="file"><name>file_IO.c.o.d</name>
+  </compound>
+  <compound refid="d0/d11/_c_c_s_d_s___image___generator_8dir_2src_2file___i_o_8c_8o_8d" kind="file"><name>file_IO.c.o.d</name>
+  </compound>
+  <compound refid="d6/d77/_c_c_s_d_s___compressor_8dir_2src_2full__image_8c_8o_8d" kind="file"><name>full_image.c.o.d</name>
+  </compound>
+  <compound refid="d5/dc8/_c_c_s_d_s___decompressor_8dir_2src_2full__image_8c_8o_8d" kind="file"><name>full_image.c.o.d</name>
+  </compound>
+  <compound refid="dc/dc1/_c_c_s_d_s___image___generator_8dir_2src_2full__image_8c_8o_8d" kind="file"><name>full_image.c.o.d</name>
+  </compound>
+  <compound refid="df/d9f/_c_c_s_d_s___compressor_8dir_2src_2generate__image_8c_8o_8d" kind="file"><name>generate_image.c.o.d</name>
+  </compound>
+  <compound refid="d8/d04/_c_c_s_d_s___decompressor_8dir_2src_2generate__image_8c_8o_8d" kind="file"><name>generate_image.c.o.d</name>
+  </compound>
+  <compound refid="da/d3e/_c_c_s_d_s___image___generator_8dir_2src_2generate__image_8c_8o_8d" kind="file"><name>generate_image.c.o.d</name>
+  </compound>
+  <compound refid="da/d9b/_c_c_s_d_s___compressor_8dir_2src_2hash__table_8c_8o_8d" kind="file"><name>hash_table.c.o.d</name>
+  </compound>
+  <compound refid="db/d39/_c_c_s_d_s___decompressor_8dir_2src_2hash__table_8c_8o_8d" kind="file"><name>hash_table.c.o.d</name>
+  </compound>
+  <compound refid="d8/d3a/_c_c_s_d_s___image___generator_8dir_2src_2hash__table_8c_8o_8d" kind="file"><name>hash_table.c.o.d</name>
+  </compound>
+  <compound refid="d1/dd6/_c_c_s_d_s___compressor_8dir_2src_2header_8c_8o_8d" kind="file"><name>header.c.o.d</name>
+  </compound>
+  <compound refid="dd/d34/_c_c_s_d_s___decompressor_8dir_2src_2header_8c_8o_8d" kind="file"><name>header.c.o.d</name>
+  </compound>
+  <compound refid="db/d84/_c_c_s_d_s___image___generator_8dir_2src_2header_8c_8o_8d" kind="file"><name>header.c.o.d</name>
+  </compound>
+  <compound refid="db/dd1/_c_c_s_d_s___compressor_8dir_2src_2image_8c_8o_8d" kind="file"><name>image.c.o.d</name>
+  </compound>
+  <compound refid="da/d27/_c_c_s_d_s___decompressor_8dir_2src_2image_8c_8o_8d" kind="file"><name>image.c.o.d</name>
+  </compound>
+  <compound refid="d1/d66/_c_c_s_d_s___image___generator_8dir_2src_2image_8c_8o_8d" kind="file"><name>image.c.o.d</name>
+  </compound>
+  <compound refid="d0/dd6/_c_c_s_d_s___compressor_8dir_2src_2linear__algebra_8c_8o_8d" kind="file"><name>linear_algebra.c.o.d</name>
+  </compound>
+  <compound refid="d9/d7e/_c_c_s_d_s___decompressor_8dir_2src_2linear__algebra_8c_8o_8d" kind="file"><name>linear_algebra.c.o.d</name>
+  </compound>
+  <compound refid="d0/ded/_c_c_s_d_s___image___generator_8dir_2src_2linear__algebra_8c_8o_8d" kind="file"><name>linear_algebra.c.o.d</name>
+  </compound>
+  <compound refid="d0/de5/_c_c_s_d_s___compressor_8dir_2src_2load__constants_8c_8o_8d" kind="file"><name>load_constants.c.o.d</name>
+  </compound>
+  <compound refid="d1/d6e/_c_c_s_d_s___decompressor_8dir_2src_2load__constants_8c_8o_8d" kind="file"><name>load_constants.c.o.d</name>
+  </compound>
+  <compound refid="d5/db4/_c_c_s_d_s___image___generator_8dir_2src_2load__constants_8c_8o_8d" kind="file"><name>load_constants.c.o.d</name>
+  </compound>
+  <compound refid="dd/d77/_c_c_s_d_s___compressor_8dir_2src_2local__differences_8c_8o_8d" kind="file"><name>local_differences.c.o.d</name>
+  </compound>
+  <compound refid="d0/d08/_c_c_s_d_s___decompressor_8dir_2src_2local__differences_8c_8o_8d" kind="file"><name>local_differences.c.o.d</name>
+  </compound>
+  <compound refid="d4/dd9/_c_c_s_d_s___image___generator_8dir_2src_2local__differences_8c_8o_8d" kind="file"><name>local_differences.c.o.d</name>
+  </compound>
+  <compound refid="dd/dd6/_c_c_s_d_s___compressor_8dir_2src_2local__sum_8c_8o_8d" kind="file"><name>local_sum.c.o.d</name>
+  </compound>
+  <compound refid="df/da5/_c_c_s_d_s___decompressor_8dir_2src_2local__sum_8c_8o_8d" kind="file"><name>local_sum.c.o.d</name>
+  </compound>
+  <compound refid="de/d2f/_c_c_s_d_s___image___generator_8dir_2src_2local__sum_8c_8o_8d" kind="file"><name>local_sum.c.o.d</name>
+  </compound>
+  <compound refid="d6/da5/_c_c_s_d_s___compressor_8dir_2src_2logs_8c_8o_8d" kind="file"><name>logs.c.o.d</name>
+  </compound>
+  <compound refid="d1/d30/_c_c_s_d_s___decompressor_8dir_2src_2logs_8c_8o_8d" kind="file"><name>logs.c.o.d</name>
+  </compound>
+  <compound refid="da/d81/_c_c_s_d_s___image___generator_8dir_2src_2logs_8c_8o_8d" kind="file"><name>logs.c.o.d</name>
+  </compound>
+  <compound refid="d2/db7/_c_c_s_d_s___compressor_8dir_2src_2math__functions_8c_8o_8d" kind="file"><name>math_functions.c.o.d</name>
+  </compound>
+  <compound refid="d6/d6e/_c_c_s_d_s___decompressor_8dir_2src_2math__functions_8c_8o_8d" kind="file"><name>math_functions.c.o.d</name>
+  </compound>
+  <compound refid="de/d7b/_c_c_s_d_s___image___generator_8dir_2src_2math__functions_8c_8o_8d" kind="file"><name>math_functions.c.o.d</name>
+  </compound>
+  <compound refid="d7/dcc/_c_c_s_d_s___compressor_8dir_2src_2perlin__noise_8c_8o_8d" kind="file"><name>perlin_noise.c.o.d</name>
+  </compound>
+  <compound refid="d2/dd8/_c_c_s_d_s___decompressor_8dir_2src_2perlin__noise_8c_8o_8d" kind="file"><name>perlin_noise.c.o.d</name>
+  </compound>
+  <compound refid="d5/d87/_c_c_s_d_s___image___generator_8dir_2src_2perlin__noise_8c_8o_8d" kind="file"><name>perlin_noise.c.o.d</name>
+  </compound>
+  <compound refid="d5/d04/_c_c_s_d_s___compressor_8dir_2src_2predictor_8c_8o_8d" kind="file"><name>predictor.c.o.d</name>
+  </compound>
+  <compound refid="d9/dd7/_c_c_s_d_s___decompressor_8dir_2src_2predictor_8c_8o_8d" kind="file"><name>predictor.c.o.d</name>
+  </compound>
+  <compound refid="d6/dd2/_c_c_s_d_s___image___generator_8dir_2src_2predictor_8c_8o_8d" kind="file"><name>predictor.c.o.d</name>
+  </compound>
+  <compound refid="d9/d55/_c_c_s_d_s___compressor_8dir_2src_2quantizer_8c_8o_8d" kind="file"><name>quantizer.c.o.d</name>
+  </compound>
+  <compound refid="db/d65/_c_c_s_d_s___decompressor_8dir_2src_2quantizer_8c_8o_8d" kind="file"><name>quantizer.c.o.d</name>
+  </compound>
+  <compound refid="d2/dad/_c_c_s_d_s___image___generator_8dir_2src_2quantizer_8c_8o_8d" kind="file"><name>quantizer.c.o.d</name>
+  </compound>
+  <compound refid="db/d5d/_c_c_s_d_s___compressor_8dir_2src_2reconstructor_8c_8o_8d" kind="file"><name>reconstructor.c.o.d</name>
+  </compound>
+  <compound refid="d7/d60/_c_c_s_d_s___decompressor_8dir_2src_2reconstructor_8c_8o_8d" kind="file"><name>reconstructor.c.o.d</name>
+  </compound>
+  <compound refid="d7/d91/_c_c_s_d_s___image___generator_8dir_2src_2reconstructor_8c_8o_8d" kind="file"><name>reconstructor.c.o.d</name>
+  </compound>
+  <compound refid="d7/dee/_c_c_s_d_s___compressor_8dir_2src_2sample__representative_8c_8o_8d" kind="file"><name>sample_representative.c.o.d</name>
+  </compound>
+  <compound refid="dd/dee/_c_c_s_d_s___decompressor_8dir_2src_2sample__representative_8c_8o_8d" kind="file"><name>sample_representative.c.o.d</name>
+  </compound>
+  <compound refid="de/d55/_c_c_s_d_s___image___generator_8dir_2src_2sample__representative_8c_8o_8d" kind="file"><name>sample_representative.c.o.d</name>
+  </compound>
+  <compound refid="d4/dce/_c_c_s_d_s___compressor_8dir_2src_2stream__encoder_8c_8o_8d" kind="file"><name>stream_encoder.c.o.d</name>
+  </compound>
+  <compound refid="da/dae/_c_c_s_d_s___decompressor_8dir_2src_2stream__encoder_8c_8o_8d" kind="file"><name>stream_encoder.c.o.d</name>
+  </compound>
+  <compound refid="df/d4d/_c_c_s_d_s___image___generator_8dir_2src_2stream__encoder_8c_8o_8d" kind="file"><name>stream_encoder.c.o.d</name>
+  </compound>
+  <compound refid="d3/d18/_c_c_s_d_s___compressor_8dir_2src_2synthetic__image__generator_8c_8o_8d" kind="file"><name>synthetic_image_generator.c.o.d</name>
+  </compound>
+  <compound refid="d8/d47/_c_c_s_d_s___decompressor_8dir_2src_2synthetic__image__generator_8c_8o_8d" kind="file"><name>synthetic_image_generator.c.o.d</name>
+  </compound>
+  <compound refid="d1/d39/_c_c_s_d_s___image___generator_8dir_2src_2synthetic__image__generator_8c_8o_8d" kind="file"><name>synthetic_image_generator.c.o.d</name>
+  </compound>
+  <compound refid="da/ddb/_c_c_s_d_s___compressor_8dir_2src_2test___u_h_i_8c_8o_8d" kind="file"><name>test_UHI.c.o.d</name>
+  </compound>
+  <compound refid="d8/d78/_c_c_s_d_s___decompressor_8dir_2src_2test___u_h_i_8c_8o_8d" kind="file"><name>test_UHI.c.o.d</name>
+  </compound>
+  <compound refid="d2/d55/_c_c_s_d_s___image___generator_8dir_2src_2test___u_h_i_8c_8o_8d" kind="file"><name>test_UHI.c.o.d</name>
+  </compound>
+  <compound refid="d0/d01/_c_c_s_d_s___compressor_8dir_2src_2test__var_int_8c_8o_8d" kind="file"><name>test_varInt.c.o.d</name>
+  </compound>
+  <compound refid="d7/d81/_c_c_s_d_s___decompressor_8dir_2src_2test__var_int_8c_8o_8d" kind="file"><name>test_varInt.c.o.d</name>
+  </compound>
+  <compound refid="d5/dec/_c_c_s_d_s___image___generator_8dir_2src_2test__var_int_8c_8o_8d" kind="file"><name>test_varInt.c.o.d</name>
+  </compound>
+  <compound refid="d9/d9c/_c_c_s_d_s___compressor_8dir_2src_2uhi__io_8c_8o_8d" kind="file"><name>uhi_io.c.o.d</name>
+  </compound>
+  <compound refid="d8/dab/_c_c_s_d_s___decompressor_8dir_2src_2uhi__io_8c_8o_8d" kind="file"><name>uhi_io.c.o.d</name>
+  </compound>
+  <compound refid="d6/d1f/_c_c_s_d_s___image___generator_8dir_2src_2uhi__io_8c_8o_8d" kind="file"><name>uhi_io.c.o.d</name>
+  </compound>
+  <compound refid="d9/d2e/_c_c_s_d_s___compressor_8dir_2src_2var_int_file___i_o_8c_8o_8d" kind="file"><name>varIntFile_IO.c.o.d</name>
+  </compound>
+  <compound refid="d3/d76/_c_c_s_d_s___decompressor_8dir_2src_2var_int_file___i_o_8c_8o_8d" kind="file"><name>varIntFile_IO.c.o.d</name>
+  </compound>
+  <compound refid="da/db8/_c_c_s_d_s___image___generator_8dir_2src_2var_int_file___i_o_8c_8o_8d" kind="file"><name>varIntFile_IO.c.o.d</name>
+  </compound>
+  <compound refid="d5/dcd/_c_c_s_d_s___compressor_8dir_2src_2weights_8c_8o_8d" kind="file"><name>weights.c.o.d</name>
+  </compound>
+  <compound refid="d5/d00/_c_c_s_d_s___decompressor_8dir_2src_2weights_8c_8o_8d" kind="file"><name>weights.c.o.d</name>
+  </compound>
+  <compound refid="d6/de2/_c_c_s_d_s___image___generator_8dir_2src_2weights_8c_8o_8d" kind="file"><name>weights.c.o.d</name>
+  </compound>
+  <compound refid="d9/dfe/decompressor_8c_8o_8d" kind="file"><name>decompressor.c.o.d</name>
+  </compound>
+  <compound refid="d8/d32/image__handler_8c_8o_8d" kind="file"><name>image_handler.c.o.d</name>
+  </compound>
+  <compound refid="df/d01/cache__predictor_8h" kind="file"><name>cache_predictor.h</name>
+    <member refid="df/d01/cache__predictor_8h_1a14c9bf8f6caac29a6a4f388d6e638409" kind="typedef"><name>PredictorCache</name></member>
+    <member refid="df/d01/cache__predictor_8h_1a01a11e19b54bb1195243f037c3d93b7b" kind="variable"><name>CacheFiles</name></member>
+    <member refid="df/d01/cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669" kind="variable"><name>global_cache</name></member>
+    <member refid="df/d01/cache__predictor_8h_1a400e6cd529a6a1ca3901be57ab88fb63" kind="function"><name>InitializePredictorCache</name></member>
+    <member refid="df/d01/cache__predictor_8h_1aca0d39cbaa7b58e1e75c93010c1a7750" kind="function"><name>DeletePredictorCache</name></member>
+  </compound>
+  <compound refid="d2/d6f/constants_8h" kind="file"><name>constants.h</name>
+    <member refid="d2/d6f/constants_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kind="define"><name>TRUE</name></member>
+    <member refid="d2/d6f/constants_8h_1aa93f0eb578d23995850d61f7d61c55c1" kind="define"><name>FALSE</name></member>
+    <member refid="d2/d6f/constants_8h_1a7f5757914e027b5d5df1f4bacd8278da" kind="define"><name>DYNAMIC_RANGE</name></member>
+    <member refid="d2/d6f/constants_8h_1a873424d1abe8e9f914630b82435f02aa" kind="define"><name>PREVIOUS_BAND_SAMPLES</name></member>
+    <member refid="d2/d6f/constants_8h_1a95d55ebfa2f2f1bd14867ad6a6cc9bfb" kind="define"><name>RESOLUTION</name></member>
+    <member refid="d2/d6f/constants_8h_1a299d67a9aa02ae3a2bd476a639a5be37" kind="define"><name>WEIGHT_INITIALIZATION</name></member>
+    <member refid="d2/d6f/constants_8h_1aa88d01fdf084b6477a2a70e73c56ac5a" kind="define"><name>WEIGHT_EXPONENT_OFFSET_FLAG</name></member>
+    <member refid="d2/d6f/constants_8h_1abfda77b016218238359bcc3e5c1600b0" kind="variable"><name>Nx</name></member>
+    <member refid="d2/d6f/constants_8h_1adcc9183c4659dc09e04e5ede1d79215b" kind="variable"><name>Ny</name></member>
+    <member refid="d2/d6f/constants_8h_1a7a7576e08f5980d322da5f48c7385edc" kind="variable"><name>Nz</name></member>
+    <member refid="d2/d6f/constants_8h_1a7616eb54bbcdaa3da50f879837bbe020" kind="variable"><name>LOSSLESS</name></member>
+    <member refid="d2/d6f/constants_8h_1aee5860bd3e62fe2734ce27a1b1038dbc" kind="variable"><name>PREDICTION_MODE</name></member>
+    <member refid="d2/d6f/constants_8h_1ab11dcc700999baf22e51630cc1e0d7ed" kind="variable"><name>LOCAL_SUM_TYPE</name></member>
+    <member refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" kind="variable"><name>D</name></member>
+    <member refid="d2/d6f/constants_8h_1a9f28821bcbb645a7c3ab8a0228335fc5" kind="variable"><name>kUnsignedSamples</name></member>
+    <member refid="d2/d6f/constants_8h_1add3510c03fbe63c1b97c67aac517c930" kind="variable"><name>kSmin</name></member>
+    <member refid="d2/d6f/constants_8h_1a8329a1a244af278852519dfccd0d4814" kind="variable"><name>kSmax</name></member>
+    <member refid="d2/d6f/constants_8h_1a0dca58ddf3108a022c36b549baa6ec46" kind="variable"><name>kSmid</name></member>
+    <member refid="d2/d6f/constants_8h_1a21c169290a6c782855c778bb7a0389b9" kind="variable"><name>kP</name></member>
+    <member refid="d2/d6f/constants_8h_1a515cdf0341e52056bcea8e46c952ee82" kind="variable"><name>Omega</name></member>
+    <member refid="d2/d6f/constants_8h_1a43cf89f028c6b6ad01038627b83a84c0" kind="variable"><name>kR</name></member>
+    <member refid="d2/d6f/constants_8h_1afe552e4b168b0821a5cb40ca9f8df744" kind="variable"><name>kOmegaMin</name></member>
+    <member refid="d2/d6f/constants_8h_1a919504d752286a3ecacfab4792035e7c" kind="variable"><name>kOmegaMax</name></member>
+    <member refid="d2/d6f/constants_8h_1a277c6f02ad4604307ae5ed6d8e4f9630" kind="variable"><name>Da</name></member>
+    <member refid="d2/d6f/constants_8h_1ac27421de69856578bf77ce84bfa82974" kind="variable"><name>m_z</name></member>
+    <member refid="d2/d6f/constants_8h_1a5464533d23b59ba11030432e73528730" kind="variable"><name>C</name></member>
+    <member refid="d2/d6f/constants_8h_1a68b61249aa9c541a3ed6d1987b8c53ce" kind="variable"><name>kVMin</name></member>
+    <member refid="d2/d6f/constants_8h_1a85fbef56eedaaa1a29a9f0c18ba53631" kind="variable"><name>kVMax</name></member>
+    <member refid="d2/d6f/constants_8h_1a2481969fa62464bdc5889190f3e10f31" kind="variable"><name>kTInc</name></member>
+    <member refid="d2/d6f/constants_8h_1af84e7b9bd8c4fa1203b0040adf941d8d" kind="function"><name>InitalizeImageConstants</name></member>
+    <member refid="d2/d6f/constants_8h_1a6acd65af9a2f057ad3f0891038799e5b" kind="function"><name>InitalizePredictorConstants</name></member>
+  </compound>
+  <compound refid="d7/ddb/encoder__constants_8h" kind="file"><name>encoder_constants.h</name>
+    <member refid="d7/ddb/encoder__constants_8h_1ad01e1c682be1b33d6ea8287bb7d5fff5" kind="define"><name>OUTPUT_WORD_SIZE</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1aab2a3fdc0e63fde9690b44450a35e26b" kind="define"><name>ENTROPY_CODER</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a7b753f7db0f750b0010df61a3046d2f2" kind="define"><name>QUANTIZER_FIDELITY_CONTROL</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a0f5679d9c7940eacaf7f99e2de79e5fe" kind="define"><name>TABLE_COUNT</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1ae18bded6a8507a03e0743e2fb320ab3a" kind="define"><name>SIZEOF_HEADER_ESSENTIAL</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a9591d28de78714ff84008187c0f264a5" kind="define"><name>SAMPLE_REP_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a8b3f48be0fd9f9bee0fdaf45425a90ed" kind="define"><name>WEO_TABLE_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1ad2efe3db4f03ddf8a0d2494d9c643549" kind="define"><name>WEIGHT_INITIALIZATION_TABLE_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a18ddd6c43809a62609148ee7843ed4e8" kind="define"><name>BAND_VARYING_DAMPING_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a37bf74bce23e349834ae376bfd7d66e7" kind="define"><name>DAMPING_TABLE_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1af19c5cde04e920f045ccf275bac5b2bd" kind="define"><name>BAND_VARYING_OFFSET_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a01ae0a84ae74aeda76855e3248f8de30" kind="define"><name>OFFSET_TABLE_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1affbf66e9c65fe62a8677ca4f4b61730a" kind="define"><name>FIXED_DAMPING</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a96cc7d5d38f6b98001288a9b302d6796" kind="define"><name>FIXED_OFFSET</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1ac06b5b3d7fc01cb19295b60b4421b802" kind="define"><name>RESCALING_COUNTER_SIZE</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a637670209ee0a097697896588c1cbdef" kind="define"><name>INITIAL_COUNT_EXPONENT</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a5da5a1923a6dffb7ba9faee8b7fe7e52" kind="define"><name>ACCUMULATOR_INITIALIZATION</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1aa929522bb0023aae20ed57e583c3eb62" kind="define"><name>ACCUMULATOR_INITIALIZATION_TABLE_FLAG</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a637670209ee0a097697896588c1cbdef" kind="define"><name>INITIAL_COUNT_EXPONENT</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a1c04aca8aa2fcabef401b440f8c5863a" kind="define"><name>ACCUMULATOR_INITIALIZATION_CONSTANT</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a2dd7f6568a16cd0cf58bc9f59c6c5f3c" kind="define"><name>UNARY_LENGTH_LIMIT</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1aefcba2436e62e516a63bdad51613a2e5" kind="variable"><name>B</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a706ff4e6123594c36b0894c248a25ff7" kind="variable"><name>U_max</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a2689c4b3931025b79053532a5f1b0a85" kind="variable"><name>K</name></member>
+    <member refid="d7/ddb/encoder__constants_8h_1a14069285fee7428b1929cb23a4b1561c" kind="variable"><name>Gamma1</name></member>
+  </compound>
+  <compound refid="d5/ddb/global__constants_8h" kind="file"><name>global_constants.h</name>
+    <member refid="d5/ddb/global__constants_8h_1a614412df666e2cf249faa7be8d3fa841" kind="define"><name>GLOBAL_CONSTANTS_LOCATION</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a7a8fe096cc3b24ddabd9b150f4f5bdd7" kind="define"><name>PREDICTOR_CONSTANTS_LOCATION</name></member>
+    <member refid="d5/ddb/global__constants_8h_1ad4eebc138945aeff7dba131d420d1b51" kind="define"><name>ENCODER_CONSTANTS_LOCATION</name></member>
+    <member refid="d5/ddb/global__constants_8h_1ae53081d61f280bba7a4a6da4facdd653" kind="define"><name>WIN_GCC</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a159ca84d25a5487d8e81e4438725df19" kind="define"><name>LOG</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25" kind="enum"><name>ERROR_CODES</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kind="enumvalue"><name>RES_OK</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" kind="enumvalue"><name>FILE_ACCESS_ERROR</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215" kind="enumvalue"><name>FILE_READ_ERROR</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a48c4ba85d5ee73f67a14a3362b9bb3cc" kind="enumvalue"><name>FILE_WRITE_ERROR</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25ad4ce6624264e795b9dd966f44e15956c" kind="enumvalue"><name>MEM_ALLOC_ERROR</name></member>
+    <member refid="d5/ddb/global__constants_8h_1ae6f57a1b4f31c934703178eaecd3d272" kind="typedef"><name>ERROR_CODES</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a3e84b5148948a9a22f804ac78d16590c" kind="variable"><name>predictor_constants</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a3c652412cc269bd4ae6155fed5f79c6f" kind="variable"><name>encoder_constants</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a1b0cdea94de8d08c0351a24c1e84f547" kind="variable"><name>DEBUG</name></member>
+    <member refid="d5/ddb/global__constants_8h_1a87e78d2e71f0d53d7886e1a126f39b16" kind="variable"><name>log_file</name></member>
+  </compound>
+  <compound refid="d4/d3e/load__constants_8h" kind="file"><name>load_constants.h</name>
+    <member refid="d4/d3e/load__constants_8h_1a5d642038360b72b886a5eb66e3efd14a" kind="function"><name>LoadConstantFile</name></member>
+  </compound>
+  <compound refid="d5/dba/decoder_2decoder_8h" kind="file"><name>decoder.h</name>
+  </compound>
+  <compound refid="d8/dbb/decompressor_2decoder_8h" kind="file"><name>decoder.h</name>
+    <member refid="d8/dbb/decompressor_2decoder_8h_1aed4e95d0c6d50bc3f99264337e2f9fb8" kind="function"><name>Decoder_DecodeBody</name></member>
+    <member refid="d8/dbb/decompressor_2decoder_8h_1a760ca18536e4e5b09a2cad3509f700ba" kind="function"><name>TestDecoder</name></member>
+  </compound>
+  <compound refid="de/d32/reconstructor_8h" kind="file"><name>reconstructor.h</name>
+    <member refid="de/d32/reconstructor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" kind="define"><name>Ps</name></member>
+    <member refid="de/d32/reconstructor_8h_1ad4115f40f38a206246691fa2c1d1c9db" kind="typedef"><name>weight_t</name></member>
+    <member refid="de/d32/reconstructor_8h_1a5464533d23b59ba11030432e73528730" kind="variable"><name>C</name></member>
+    <member refid="de/d32/reconstructor_8h_1a939a70de0c04a2c4e970e4c242ff0f21" kind="function"><name>ReconstructPixel</name></member>
+    <member refid="de/d32/reconstructor_8h_1ad0d5b55646a3018075f07ae472ddb312" kind="function"><name>Reconstructor</name></member>
+    <member refid="de/d32/reconstructor_8h_1aadb567bbc159d00d6334e2eb36e6e253" kind="function"><name>TestReconstructor</name></member>
+  </compound>
+  <compound refid="d3/d94/full__image_8h" kind="file"><name>full_image.h</name>
+  </compound>
+  <compound refid="d4/ddb/hash__table_8h" kind="file"><name>hash_table.h</name>
+    <member refid="d4/ddb/hash__table_8h_1ac5ff60f58cdc7ee42543e2812a8cae47" kind="define"><name>HASH_CAPACITY</name></member>
+    <member refid="d4/ddb/hash__table_8h_1a5145aca5cb4a65b79b24d162d6fd72eb" kind="define"><name>KEY_LENGTH</name></member>
+    <member refid="d4/ddb/hash__table_8h_1a8dea4341d1b1662a30ec89ea38da0c0c" kind="typedef"><name>HashTable</name></member>
+    <member refid="d4/ddb/hash__table_8h_1aecf492d271c7b0c50c1832371fb34c84" kind="function"><name>Hash_InitializeHashTable</name></member>
+    <member refid="d4/ddb/hash__table_8h_1a0f96cedf42d4440115356ae74e627126" kind="function"><name>Hash_DeleteHashTable</name></member>
+    <member refid="d4/ddb/hash__table_8h_1af0c750fb9a54f590b713d6526ed263fc" kind="function"><name>Hash_AddEntry</name></member>
+    <member refid="d4/ddb/hash__table_8h_1a7026562de200bd5e9813f101d9eb614b" kind="function"><name>Hash_GetIndex</name></member>
+    <member refid="d4/ddb/hash__table_8h_1a27578c1b5a3ab68d8f144ed86ea72cc2" kind="function"><name>Hash_GetValue</name></member>
+    <member refid="d4/ddb/hash__table_8h_1ae198aa5dfcbf0fa9e5fb885e34e08b0c" kind="function"><name>Hash_SetValue</name></member>
+  </compound>
+  <compound refid="d5/db2/image_8h" kind="file"><name>image.h</name>
+    <member refid="d5/db2/image_8h_1acaccd9f1398a726f32adffb1f78d6761" kind="define"><name>FRAME_SIZE</name></member>
+    <member refid="d5/db2/image_8h_1a38f6fc4c8999b95f1f75294a52c32e4c" kind="define"><name>MAP3_1</name></member>
+    <member refid="d5/db2/image_8h_1af6434ff11f3bef292960119c16edba32" kind="define"><name>GetT</name></member>
+    <member refid="d5/db2/image_8h_1a603ad8850d10b60de148b716ae22f3cd" kind="define"><name>GetX</name></member>
+    <member refid="d5/db2/image_8h_1a9d63a43992ec07d97e149afe470eb02d" kind="define"><name>GetY</name></member>
+    <member refid="d5/db2/image_8h_1a582f5034cfb025614b418984a00e2e5c" kind="define"><name>S</name></member>
+    <member refid="d5/db2/image_8h_1a183300a528553b66677f173c07c7170e" kind="typedef"><name>image</name></member>
+    <member refid="d5/db2/image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa" kind="typedef"><name>image3</name></member>
+    <member refid="d5/db2/image_8h_1a64ee4969f267712e06a948fdf5bfe902" kind="typedef"><name>image2</name></member>
+    <member refid="d5/db2/image_8h_1a61b8047c5bba5a89979d65847e4103b1" kind="function"><name>InitImage</name></member>
+    <member refid="d5/db2/image_8h_1a78477801fe183cdf32e60df1c92b7320" kind="function"><name>GetPixel</name></member>
+    <member refid="d5/db2/image_8h_1a5a1ef1e96ecb20d081d2e7e75e2996e2" kind="function"><name>GetFrame</name></member>
+    <member refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" kind="function"><name>SetPixel</name></member>
+    <member refid="d5/db2/image_8h_1a1aeeb4864b63110b92099384a7a21fa8" kind="function"><name>Image_Equals</name></member>
+  </compound>
+  <compound refid="d0/d77/body_8h" kind="file"><name>body.h</name>
+    <member refid="d0/d77/body_8h_1a0bbf3cd743f1631577f828fa3d85ccf7" kind="define"><name>GAMMA_STAR</name></member>
+    <member refid="d0/d77/body_8h_1ab186a3d3c48b41b71d731fb1c209cae5" kind="typedef"><name>GolombInt</name></member>
+    <member refid="d0/d77/body_8h_1a2689c4b3931025b79053532a5f1b0a85" kind="variable"><name>K</name></member>
+    <member refid="d0/d77/body_8h_1a706ff4e6123594c36b0894c248a25ff7" kind="variable"><name>U_max</name></member>
+    <member refid="d0/d77/body_8h_1a14069285fee7428b1929cb23a4b1561c" kind="variable"><name>Gamma1</name></member>
+    <member refid="d0/d77/body_8h_1ad956397a2e57dfa4fe588564adef610f" kind="function"><name>GolombPowerTwo</name></member>
+    <member refid="d0/d77/body_8h_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b" kind="function"><name>InitAccumulatorValue</name></member>
+    <member refid="d0/d77/body_8h_1a38c7868c2a8819e7abc16148811f2e0b" kind="function"><name>EncodeBody</name></member>
+  </compound>
+  <compound refid="d1/d79/encoder_8h" kind="file"><name>encoder.h</name>
+  </compound>
+  <compound refid="d4/d25/encoder__helper__functions_8h" kind="file"><name>encoder_helper_functions.h</name>
+    <member refid="d4/d25/encoder__helper__functions_8h_1aa268d136b017ba11fca74d167e36dd34" kind="function"><name>PrintBinary</name></member>
+    <member refid="d4/d25/encoder__helper__functions_8h_1a7050a856b982bdf5a658945d470cd683" kind="function"><name>Encode</name></member>
+  </compound>
+  <compound refid="df/dcb/header_8h" kind="file"><name>header.h</name>
+    <member refid="df/dcb/header_8h_1ac726367a97f26d89d0e2a44763f43448" kind="function"><name>PrepareImageMetadata</name></member>
+    <member refid="df/dcb/header_8h_1abab4192db36e8577c377efd110ff5efc" kind="function"><name>PreparePredictorMetadata</name></member>
+    <member refid="df/dcb/header_8h_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" kind="function"><name>PrepareSampleAdaptiveEntropyCoder</name></member>
+  </compound>
+  <compound refid="d8/d81/stream__encoder_8h" kind="file"><name>stream_encoder.h</name>
+    <member refid="d8/d81/stream__encoder_8h_1abc23dc7967a47b4db3efff8237ef3a2f" kind="define"><name>L_SHIFT</name></member>
+    <member refid="d8/d81/stream__encoder_8h_1a548781ef0de810de1f925dff4d5d3f9a" kind="define"><name>BUFFER_REG_SIZE</name></member>
+    <member refid="d8/d81/stream__encoder_8h_1af7b7dc9a200cb1404c280bd500fd1551" kind="define"><name>BUFFER_LENGTH</name></member>
+    <member refid="d8/d81/stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707" kind="typedef"><name>VIFS</name></member>
+    <member refid="d8/d81/stream__encoder_8h_1a0db4a8ab23a4af63c99d5fbfca9073eb" kind="function"><name>InitializeVarIntStream</name></member>
+    <member refid="d8/d81/stream__encoder_8h_1a8b42309d51939ee46f5f0d348fbbcbc0" kind="function"><name>StreamVarInteger</name></member>
+    <member refid="d8/d81/stream__encoder_8h_1afbd717a2dd8bee43593e06a3919ba72a" kind="function"><name>CloseVarIntegerStream</name></member>
+  </compound>
+  <compound refid="d6/d51/csv-io_8h" kind="file"><name>csv-io.h</name>
+    <member refid="d6/d51/csv-io_8h_1a3e3e00c9789afb1d2f5f2c7004bd82ad" kind="function"><name>SaveArrayAsCSV</name></member>
+    <member refid="d6/d51/csv-io_8h_1a214fc383a5cb483508da7bb0449a9528" kind="function"><name>SaveImageAsCSV</name></member>
+    <member refid="d6/d51/csv-io_8h_1aba677341d6fd704867c56e0b5d6f3fc3" kind="function"><name>ReadImageFromCSV</name></member>
+  </compound>
+  <compound refid="d9/d7f/file___i_o_8h" kind="file"><name>file_IO.h</name>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6" kind="enum"><name>file_mode</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" kind="enumvalue"><name>READ</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" kind="enumvalue"><name>WRITE</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6af38784ef4b08f294d4a78f62181729a0" kind="enumvalue"><name>APPEND</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a8766471eed07b5c5db8f7e9b5bf0e13e" kind="enumvalue"><name>READ_AND_WRITE</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a493a40eded29a96303feede4ff801f9d" kind="enumvalue"><name>WRITING_AND_READING</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6ae84d332f7224e720a386f17024af73d5" kind="enumvalue"><name>APPENDING_AND_READING</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088" kind="typedef"><name>file_t</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1abf7662b304505130b2e87a944038aff0" kind="typedef"><name>FileMode</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1aed9fcf257d5879cc1d4a649543e3cd12" kind="variable"><name>file_modes_str</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c" kind="function"><name>F_OPEN</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a94d988ea4ce93357f56c0191584246a6" kind="function"><name>F_WRITE</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a6d14febd2771048b4a06dd86ea17718d" kind="function"><name>F_READ</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1ad62e6a72675aa7b389460e97f4e6d998" kind="function"><name>F_CLOSE</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a4b306680e215dfe285fa220421141d38" kind="function"><name>F_EMPTY</name></member>
+    <member refid="d9/d7f/file___i_o_8h_1a3ac9e7bef40307b69bdf5e0cb6904d83" kind="function"><name>F_SEEK</name></member>
+  </compound>
+  <compound refid="df/d8f/logs_8h" kind="file"><name>logs.h</name>
+    <member refid="df/d8f/logs_8h_1a0b7cf426e0ba603b54206d70e4c93f04" kind="function"><name>Log_init</name></member>
+    <member refid="df/d8f/logs_8h_1ad02317523a9dd7b5180cccbc0371ac6a" kind="function"><name>Log_close</name></member>
+    <member refid="df/d8f/logs_8h_1a61353ebf0328d8bd1f61f224305e64bb" kind="function"><name>Log_add</name></member>
+    <member refid="df/d8f/logs_8h_1ad795690a809192117add6898be812267" kind="function"><name>Log_error</name></member>
+  </compound>
+  <compound refid="d8/d60/uhi__io_8h" kind="file"><name>uhi_io.h</name>
+    <member refid="d8/d60/uhi__io_8h_1a6aba86f49a9e77ca452352dd1ef8d4af" kind="define"><name>UHI_CACHE_LENGTH</name></member>
+    <member refid="d8/d60/uhi__io_8h_1aabf4f060c3ec7817f143c3cbf63ba0c0" kind="typedef"><name>F_UHI</name></member>
+    <member refid="d8/d60/uhi__io_8h_1ac3e22f6af3f1d9eb75f08f122711569b" kind="typedef"><name>UHI</name></member>
+    <member refid="d8/d60/uhi__io_8h_1a73f9b90ad8f0d9cbe39332bdca2c1aa7" kind="typedef"><name>uIMG</name></member>
+    <member refid="d8/d60/uhi__io_8h_1a6114b6569fbd42d5a3fa05f4cd82cc7e" kind="function"><name>UHI_Initialize</name></member>
+    <member refid="d8/d60/uhi__io_8h_1a88066808c0a718f67bd50a325cdb5721" kind="function"><name>UHI_WritePixel</name></member>
+    <member refid="d8/d60/uhi__io_8h_1ad7fd2d84633ee6e0355a950deeacd220" kind="function"><name>UHI_ReadPixel</name></member>
+    <member refid="d8/d60/uhi__io_8h_1aad573fb88befb1cd5c553c20a32027a9" kind="function"><name>Proxy_GetPixel</name></member>
+    <member refid="d8/d60/uhi__io_8h_1a1ec6bacb78062b9b8dde4cf3e3eeb923" kind="function"><name>Proxy_SetPixel</name></member>
+  </compound>
+  <compound refid="d5/d5e/var_int_file___i_o_8h" kind="file"><name>varIntFile_IO.h</name>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1abc23dc7967a47b4db3efff8237ef3a2f" kind="define"><name>L_SHIFT</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1af7b7dc9a200cb1404c280bd500fd1551" kind="define"><name>BUFFER_LENGTH</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a6b20d41d6252e9871430c242cb1a56e7" kind="define"><name>BUFFER_SIZE</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a65ff8d4f12985f7d5210a0688be998dc" kind="enum"><name>file_modes</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8" kind="enumvalue"><name>READ_BINARY</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc" kind="enumvalue"><name>WRITE_BINARY</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a260a6f6af9275cf2bfbc28e6a687710b" kind="typedef"><name>file_modes</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006" kind="typedef"><name>VUF</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a07ca21a87dab6f536b7f4d69050f5602" kind="function"><name>VUF_initialize</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1a744805d2f1db68081efadb9892a297e9" kind="function"><name>VUF_append</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1aafa9034f88afca6a726a84673d063889" kind="function"><name>VUF_read_stack</name></member>
+    <member refid="d5/d5e/var_int_file___i_o_8h_1ad54b8d6492e4c149c7f1232e3eda58be" kind="function"><name>VUF_close</name></member>
+  </compound>
+  <compound refid="dc/d9c/linear__algebra_8h" kind="file"><name>linear_algebra.h</name>
+    <member refid="dc/d9c/linear__algebra_8h_1ab3884a0bbfd7dee1c68c7296b669ebab" kind="define"><name>AddToVector</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a3551e792e31423caf9108ee7a990fb0b" kind="define"><name>SubtractFromVector</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a5fe8e5a199bb90a6358cee7306d3d09d" kind="define"><name>ScalarProduct_C</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kind="typedef"><name>data_t</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1ab9661c8e10293140db24d4b650785939" kind="function"><name>InitVector</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1ae000d0d19cf867f1ad39325993763205" kind="function"><name>DeleteVector</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a2765cafcf739497b0ee51e705590039a" kind="function"><name>AddVectors</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a06b11149235c5a4fe6c877aed33f55f9" kind="function"><name>SubtractVectors</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a46ade3794d4b4d5cc1eaf983858507ef" kind="function"><name>InnerProduct</name></member>
+    <member refid="dc/d9c/linear__algebra_8h_1a2c84697470e743f7c69fffbe7e0f92bc" kind="function"><name>ScalarProduct</name></member>
+  </compound>
+  <compound refid="d2/de2/math__functions_8h" kind="file"><name>math_functions.h</name>
+    <member refid="d2/de2/math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kind="define"><name>NULL</name></member>
+    <member refid="d2/de2/math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e" kind="define"><name>CLIP</name></member>
+    <member refid="d2/de2/math__functions_8h_1aa26f9f0c05aaa0b3935ffee8b9b040cd" kind="define"><name>INSIDE_INTERVAL</name></member>
+    <member refid="d2/de2/math__functions_8h_1a67f67d2902bd4730eb69f82fcf008401" kind="define"><name>OUTSIDE_INTERVAL</name></member>
+    <member refid="d2/de2/math__functions_8h_1a8c5ff70b6b28cd0157c50a22406f92c4" kind="define"><name>SIGN</name></member>
+    <member refid="d2/de2/math__functions_8h_1a5f76d4dda1e368d45e059912932c7b60" kind="define"><name>SIGN_P</name></member>
+    <member refid="d2/de2/math__functions_8h_1a16c5207cff1677a5fde882e81a7d58bd" kind="define"><name>MOD</name></member>
+    <member refid="d2/de2/math__functions_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" kind="define"><name>MAX</name></member>
+    <member refid="d2/de2/math__functions_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" kind="define"><name>MIN</name></member>
+    <member refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kind="define"><name>BPOW</name></member>
+    <member refid="d2/de2/math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc" kind="define"><name>SQ</name></member>
+    <member refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92" kind="enum"><name>RetVal</name></member>
+    <member refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59" kind="enumvalue"><name>OK</name></member>
+    <member refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90" kind="enumvalue"><name>ERROR</name></member>
+    <member refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kind="typedef"><name>DIM</name></member>
+    <member refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kind="typedef"><name>UINT</name></member>
+    <member refid="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" kind="typedef"><name>PIXEL</name></member>
+    <member refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kind="typedef"><name>INDEX</name></member>
+    <member refid="d2/de2/math__functions_8h_1af3273ad069a5db23c87cf0547340e6fa" kind="typedef"><name>dim3</name></member>
+    <member refid="d2/de2/math__functions_8h_1a25a1b999e489d87de5f6ae6f37cba079" kind="typedef"><name>dim2</name></member>
+    <member refid="d2/de2/math__functions_8h_1a61e36d5241561d1bc112c291a3262565" kind="function"><name>Euclidian2</name></member>
+    <member refid="d2/de2/math__functions_8h_1adfddd321b4840c92df9f1d48e11c657e" kind="function"><name>Euclidian3</name></member>
+    <member refid="d2/de2/math__functions_8h_1adf11110e70a4ca4a966622288d194681" kind="function"><name>Manhattan2</name></member>
+    <member refid="d2/de2/math__functions_8h_1ace80df346398f6e153166e87cee41d47" kind="function"><name>Manhattan3</name></member>
+  </compound>
+  <compound refid="d2/df3/local__differences_8h" kind="file"><name>local_differences.h</name>
+    <member refid="d2/df3/local__differences_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" kind="define"><name>Ps</name></member>
+    <member refid="d2/df3/local__differences_8h_1add0875819772a3917e5a6f648c0a3292" kind="define"><name>DLD</name></member>
+    <member refid="d2/df3/local__differences_8h_1a21b79785d586c939ebdd71a1602e9b5c" kind="define"><name>DLD_N</name></member>
+    <member refid="d2/df3/local__differences_8h_1ad68845bcfb3f6bd01382ba8a2550f21f" kind="define"><name>DLD_W</name></member>
+    <member refid="d2/df3/local__differences_8h_1a05c0b8c3e6a3ae85df713a1cd5a99cd5" kind="define"><name>DLD_NW</name></member>
+    <member refid="d2/df3/local__differences_8h_1aa268a41a13430b18e933ed40207178d0" kind="enum"><name>DIRECTION</name></member>
+    <member refid="d2/df3/local__differences_8h_1aa268a41a13430b18e933ed40207178d0a2c63acbe79d9f41ba6bb7766e9c37702" kind="enumvalue"><name>N</name></member>
+    <member refid="d2/df3/local__differences_8h_1aa268a41a13430b18e933ed40207178d0ab722ceeb601c72cd78fbd35f3581fdf7" kind="enumvalue"><name>W</name></member>
+    <member refid="d2/df3/local__differences_8h_1aa268a41a13430b18e933ed40207178d0a9b2eeb9b33247edbc638099452c6b46f" kind="enumvalue"><name>NW</name></member>
+    <member refid="d2/df3/local__differences_8h_1a37d2cf3f48b1b2c436f630a2b649cf52" kind="function"><name>CentralLocalDifference</name></member>
+    <member refid="d2/df3/local__differences_8h_1aa1779fb92c191cde51766275baaf7591" kind="function"><name>DirectionalLocalDifference</name></member>
+    <member refid="d2/df3/local__differences_8h_1a92b3b535f0c13d4ec28dab8b13713262" kind="function"><name>LocalDirectionVector</name></member>
+    <member refid="d2/df3/local__differences_8h_1a36ddae4ef0f34ba3f7402469253bb6b6" kind="function"><name>PredictedCentralLocalDifference</name></member>
+  </compound>
+  <compound refid="d6/d9d/local__sum_8h" kind="file"><name>local_sum.h</name>
+    <member refid="d6/d9d/local__sum_8h_1a010a797f4917c1fb48527b5e26827dba" kind="define"><name>LS</name></member>
+    <member refid="d6/d9d/local__sum_8h_1a1f0a6a3443597dab4881bb94fbc35f41" kind="function"><name>FindLocalSum</name></member>
+  </compound>
+  <compound refid="dc/d08/predictor_8h" kind="file"><name>predictor.h</name>
+    <member refid="dc/d08/predictor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" kind="define"><name>Ps</name></member>
+    <member refid="dc/d08/predictor_8h_1ad4115f40f38a206246691fa2c1d1c9db" kind="typedef"><name>weight_t</name></member>
+    <member refid="dc/d08/predictor_8h_1a5464533d23b59ba11030432e73528730" kind="variable"><name>C</name></member>
+    <member refid="dc/d08/predictor_8h_1a4a94804509574a94d896a4164802bcd2" kind="function"><name>RunPredictor</name></member>
+  </compound>
+  <compound refid="d1/d38/quantizer_8h" kind="file"><name>quantizer.h</name>
+    <member refid="d1/d38/quantizer_8h_1afa51bec3d5dfdb41078f60b1a7c454ab" kind="function"><name>QuantizerIndex</name></member>
+    <member refid="d1/d38/quantizer_8h_1a1f491e0a435427669942c932394d7c1a" kind="function"><name>MappedQuantizerIndex</name></member>
+    <member refid="d1/d38/quantizer_8h_1ae85d34759565d8a3ab498494786c395b" kind="function"><name>QuantizerIndexUnmapper</name></member>
+    <member refid="d1/d38/quantizer_8h_1a93be7d02ed2acce98f53818c98ac6cca" kind="function"><name>PredictionResidual</name></member>
+    <member refid="d1/d38/quantizer_8h_1a9d745aa249b8a9cde3f83899b563dcc5" kind="function"><name>ClippedQuantizerBinCenter</name></member>
+  </compound>
+  <compound refid="df/d7d/sample__representative_8h" kind="file"><name>sample_representative.h</name>
+    <member refid="df/d7d/sample__representative_8h_1a9d318d5c2a1d81d6f70cbf34e917e47d" kind="define"><name>SR</name></member>
+    <member refid="df/d7d/sample__representative_8h_1aa25f2ddef46c2c5466643b137580700a" kind="variable"><name>damping</name></member>
+    <member refid="df/d7d/sample__representative_8h_1a0ed063d2db07cb63fecfb70cffec43f1" kind="variable"><name>offset</name></member>
+    <member refid="df/d7d/sample__representative_8h_1aca1581c921d082976e7f116aa52c56f0" kind="function"><name>SampleRepresentative</name></member>
+    <member refid="df/d7d/sample__representative_8h_1a6c60474c610dc64773816bc445efeb77" kind="function"><name>DoubleResolutionPredictedSample</name></member>
+    <member refid="df/d7d/sample__representative_8h_1a14cff7c59ac94b0387e8b95a433521e9" kind="function"><name>PredictedSample</name></member>
+    <member refid="df/d7d/sample__representative_8h_1a441e8d0fe639d45889aab5b88c4138f4" kind="function"><name>HighResolutionPredictedSample</name></member>
+  </compound>
+  <compound refid="d2/d6a/weights_8h" kind="file"><name>weights.h</name>
+    <member refid="d2/d6a/weights_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" kind="define"><name>Ps</name></member>
+    <member refid="d2/d6a/weights_8h_1adcc753ae7048085817bd2c37b471f739" kind="function"><name>InitializeWeights</name></member>
+    <member refid="d2/d6a/weights_8h_1a286baab1384ff25cf7cf4c2061f15c4c" kind="function"><name>DoubleResolutionPredictionError</name></member>
+    <member refid="d2/d6a/weights_8h_1a17984670eb20b6ea122fb1e90a50dc75" kind="function"><name>WeightUpdateScalingExponent</name></member>
+    <member refid="d2/d6a/weights_8h_1a805706f7af2f212bc46076319fcec535" kind="function"><name>UpdateWeights</name></member>
+  </compound>
+  <compound refid="df/d7b/generate__image_8h" kind="file"><name>generate_image.h</name>
+    <member refid="df/d7b/generate__image_8h_1a7c0526eafc78103d6067815877e28fe8" kind="function"><name>TestHeader</name></member>
+    <member refid="df/d7b/generate__image_8h_1aac70a37466945a2c91d42fbfb9d1dcbb" kind="function"><name>TestReadImage</name></member>
+    <member refid="df/d7b/generate__image_8h_1a7fae527c979b4b287e1f9672c8d2c366" kind="function"><name>PredictImage</name></member>
+    <member refid="df/d7b/generate__image_8h_1a29f9d24093c99f0e47133d90ea4286e6" kind="function"><name>EncodeImage</name></member>
+    <member refid="df/d7b/generate__image_8h_1aaa094efd7037f34ae4e485a0b97c4282" kind="function"><name>CompressImage</name></member>
+    <member refid="df/d7b/generate__image_8h_1a450c7f9206bff8de0c177e34e6b5bcf4" kind="function"><name>GenerateVoronoiImage</name></member>
+  </compound>
+  <compound refid="d1/d9c/perlin_8h" kind="file"><name>perlin.h</name>
+    <member refid="d1/d9c/perlin_8h_1a6d727efa497a4b992c90483602583515" kind="function"><name>GeneratePerlinImage</name></member>
+    <member refid="d1/d9c/perlin_8h_1a573b5b9f4a318d5723b22ecfe2eaa87a" kind="function"><name>Perlin4</name></member>
+  </compound>
+  <compound refid="d9/dea/synthetic__image__generator_8h" kind="file"><name>synthetic_image_generator.h</name>
+    <member refid="d9/dea/synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22" kind="define"><name>INIT_ARRAY</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1a07336610b2fae60747404124a1bebbbe" kind="function"><name>WithinRect2</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1a5b129c029b15584f09f306c005950893" kind="function"><name>WithinRect3</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1a9793361bc08ee3644e6f9ac73e1bee45" kind="function"><name>SpreadPoint2</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1ab7214af202e08fe839b1623f5f783f59" kind="function"><name>SpreadPoint3</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" kind="function"><name>GenerateVoronoiFlat2D</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa" kind="function"><name>GenerateVoronoiFlat3DNaive</name></member>
+    <member refid="d9/dea/synthetic__image__generator_8h_1a5561acefba71d729426452c73bb402dd" kind="function"><name>GenerateVoronoiFlat3DLocal</name></member>
+  </compound>
+  <compound refid="d0/dbe/test___u_h_i_8h" kind="file"><name>test_UHI.h</name>
+    <member refid="d0/dbe/test___u_h_i_8h_1a24aa285f65de829c8a9791d901405626" kind="function"><name>test_UHI</name></member>
+  </compound>
+  <compound refid="d8/d0b/test__var_int_8h" kind="file"><name>test_varInt.h</name>
+    <member refid="d8/d0b/test__var_int_8h_1af925d49ae82dafea37f82c0d044a6308" kind="function"><name>testVUF_Write</name></member>
+    <member refid="d8/d0b/test__var_int_8h_1aaac61ccbc34855ae728a8a9d45db1105" kind="function"><name>testVUF_Read</name></member>
+  </compound>
+  <compound refid="da/db2/compressor_8c" kind="file"><name>compressor.c</name>
+    <member refid="da/db2/compressor_8c_1a1b0cdea94de8d08c0351a24c1e84f547" kind="variable"><name>DEBUG</name></member>
+    <member refid="da/db2/compressor_8c_1a048af25ea3eb0571ab780e44e221650e" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="df/dee/decompressor_8c" kind="file"><name>decompressor.c</name>
+    <member refid="df/dee/decompressor_8c_1a1b0cdea94de8d08c0351a24c1e84f547" kind="variable"><name>DEBUG</name></member>
+    <member refid="df/dee/decompressor_8c_1a048af25ea3eb0571ab780e44e221650e" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="d1/d6e/image__handler_8c" kind="file"><name>image_handler.c</name>
+    <member refid="d1/d6e/image__handler_8c_1a1b0cdea94de8d08c0351a24c1e84f547" kind="variable"><name>DEBUG</name></member>
+    <member refid="d1/d6e/image__handler_8c_1a048af25ea3eb0571ab780e44e221650e" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dc/da1/compression_8py" kind="file"><name>compression.py</name>
+  </compound>
+  <compound refid="da/d53/csv__io_8py" kind="file"><name>csv_io.py</name>
+  </compound>
+  <compound refid="d7/dc6/display__debugging_8py" kind="file"><name>display_debugging.py</name>
+  </compound>
+  <compound refid="d1/d59/file__compare_8py" kind="file"><name>file_compare.py</name>
+  </compound>
+  <compound refid="da/d4a/file__stats_8py" kind="file"><name>file_stats.py</name>
+  </compound>
+  <compound refid="df/d67/generate__perlin__image_8py" kind="file"><name>generate_perlin_image.py</name>
+  </compound>
+  <compound refid="d8/d9e/helperlib_8py" kind="file"><name>helperlib.py</name>
+  </compound>
+  <compound refid="db/d78/image__test_8py" kind="file"><name>image_test.py</name>
+  </compound>
+  <compound refid="dd/d04/mat__to__csv_8py" kind="file"><name>mat_to_csv.py</name>
+  </compound>
+  <compound refid="dd/d72/perlin__image_8py" kind="file"><name>perlin_image.py</name>
+  </compound>
+  <compound refid="de/d47/predictor__eg_8py" kind="file"><name>predictor_eg.py</name>
+  </compound>
+  <compound refid="d7/d29/prepare__h_image_8py" kind="file"><name>prepare_hImage.py</name>
+  </compound>
+  <compound refid="df/db7/run__predictor_8py" kind="file"><name>run_predictor.py</name>
+  </compound>
+  <compound refid="dd/dee/test__compression_8py" kind="file"><name>test_compression.py</name>
+  </compound>
+  <compound refid="d9/dd6/_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dc/d99/cache__predictor_8c" kind="file"><name>cache_predictor.c</name>
+    <member refid="dc/d99/cache__predictor_8c_1a8dc01c7173e49a14ae38a59d91b9d669" kind="variable"><name>global_cache</name></member>
+    <member refid="dc/d99/cache__predictor_8c_1a01a11e19b54bb1195243f037c3d93b7b" kind="variable"><name>CacheFiles</name></member>
+    <member refid="dc/d99/cache__predictor_8c_1a596c51dc78ec695dccf12414da82bbf5" kind="function"><name>InitializePredictorCache</name></member>
+    <member refid="dc/d99/cache__predictor_8c_1aca0d39cbaa7b58e1e75c93010c1a7750" kind="function"><name>DeletePredictorCache</name></member>
+  </compound>
+  <compound refid="d4/df3/constants_8c" kind="file"><name>constants.c</name>
+    <member refid="d4/df3/constants_8c_1a45cfb0527526c2a0aec021d50a279091" kind="define"><name>GET_PCONST</name></member>
+    <member refid="d4/df3/constants_8c_1abfda77b016218238359bcc3e5c1600b0" kind="variable"><name>Nx</name></member>
+    <member refid="d4/df3/constants_8c_1adcc9183c4659dc09e04e5ede1d79215b" kind="variable"><name>Ny</name></member>
+    <member refid="d4/df3/constants_8c_1a7a7576e08f5980d322da5f48c7385edc" kind="variable"><name>Nz</name></member>
+    <member refid="d4/df3/constants_8c_1a3e84b5148948a9a22f804ac78d16590c" kind="variable"><name>predictor_constants</name></member>
+    <member refid="d4/df3/constants_8c_1a3c652412cc269bd4ae6155fed5f79c6f" kind="variable"><name>encoder_constants</name></member>
+    <member refid="d4/df3/constants_8c_1a9f28821bcbb645a7c3ab8a0228335fc5" kind="variable"><name>kUnsignedSamples</name></member>
+    <member refid="d4/df3/constants_8c_1ab11dcc700999baf22e51630cc1e0d7ed" kind="variable"><name>LOCAL_SUM_TYPE</name></member>
+    <member refid="d4/df3/constants_8c_1aee5860bd3e62fe2734ce27a1b1038dbc" kind="variable"><name>PREDICTION_MODE</name></member>
+    <member refid="d4/df3/constants_8c_1abf6d0ccec2f5157184071729f129de19" kind="variable"><name>D</name></member>
+    <member refid="d4/df3/constants_8c_1a277c6f02ad4604307ae5ed6d8e4f9630" kind="variable"><name>Da</name></member>
+    <member refid="d4/df3/constants_8c_1add3510c03fbe63c1b97c67aac517c930" kind="variable"><name>kSmin</name></member>
+    <member refid="d4/df3/constants_8c_1a0dca58ddf3108a022c36b549baa6ec46" kind="variable"><name>kSmid</name></member>
+    <member refid="d4/df3/constants_8c_1a8329a1a244af278852519dfccd0d4814" kind="variable"><name>kSmax</name></member>
+    <member refid="d4/df3/constants_8c_1a21c169290a6c782855c778bb7a0389b9" kind="variable"><name>kP</name></member>
+    <member refid="d4/df3/constants_8c_1a43cf89f028c6b6ad01038627b83a84c0" kind="variable"><name>kR</name></member>
+    <member refid="d4/df3/constants_8c_1a85fbef56eedaaa1a29a9f0c18ba53631" kind="variable"><name>kVMax</name></member>
+    <member refid="d4/df3/constants_8c_1a68b61249aa9c541a3ed6d1987b8c53ce" kind="variable"><name>kVMin</name></member>
+    <member refid="d4/df3/constants_8c_1a2481969fa62464bdc5889190f3e10f31" kind="variable"><name>kTInc</name></member>
+    <member refid="d4/df3/constants_8c_1a515cdf0341e52056bcea8e46c952ee82" kind="variable"><name>Omega</name></member>
+    <member refid="d4/df3/constants_8c_1afe552e4b168b0821a5cb40ca9f8df744" kind="variable"><name>kOmegaMin</name></member>
+    <member refid="d4/df3/constants_8c_1a919504d752286a3ecacfab4792035e7c" kind="variable"><name>kOmegaMax</name></member>
+    <member refid="d4/df3/constants_8c_1ac27421de69856578bf77ce84bfa82974" kind="variable"><name>m_z</name></member>
+    <member refid="d4/df3/constants_8c_1af84e7b9bd8c4fa1203b0040adf941d8d" kind="function"><name>InitalizeImageConstants</name></member>
+    <member refid="d4/df3/constants_8c_1a6acd65af9a2f057ad3f0891038799e5b" kind="function"><name>InitalizePredictorConstants</name></member>
+  </compound>
+  <compound refid="df/df6/csv-io_8c" kind="file"><name>csv-io.c</name>
+    <member refid="df/df6/csv-io_8c_1a3e3e00c9789afb1d2f5f2c7004bd82ad" kind="function"><name>SaveArrayAsCSV</name></member>
+    <member refid="df/df6/csv-io_8c_1a214fc383a5cb483508da7bb0449a9528" kind="function"><name>SaveImageAsCSV</name></member>
+    <member refid="df/df6/csv-io_8c_1aba677341d6fd704867c56e0b5d6f3fc3" kind="function"><name>ReadImageFromCSV</name></member>
+  </compound>
+  <compound refid="d6/d19/decoder_8c" kind="file"><name>decoder.c</name>
+    <member refid="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" kind="function"><name>increment_xyz</name></member>
+    <member refid="d6/d19/decoder_8c_1aed4e95d0c6d50bc3f99264337e2f9fb8" kind="function"><name>Decoder_DecodeBody</name></member>
+    <member refid="d6/d19/decoder_8c_1a760ca18536e4e5b09a2cad3509f700ba" kind="function"><name>TestDecoder</name></member>
+  </compound>
+  <compound refid="d6/da2/encoder__body_8c" kind="file"><name>encoder_body.c</name>
+    <member refid="d6/da2/encoder__body_8c_1a2689c4b3931025b79053532a5f1b0a85" kind="variable"><name>K</name></member>
+    <member refid="d6/da2/encoder__body_8c_1a706ff4e6123594c36b0894c248a25ff7" kind="variable"><name>U_max</name></member>
+    <member refid="d6/da2/encoder__body_8c_1a14069285fee7428b1929cb23a4b1561c" kind="variable"><name>Gamma1</name></member>
+    <member refid="d6/da2/encoder__body_8c_1ad956397a2e57dfa4fe588564adef610f" kind="function"><name>GolombPowerTwo</name></member>
+    <member refid="d6/da2/encoder__body_8c_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b" kind="function"><name>InitAccumulatorValue</name></member>
+    <member refid="d6/da2/encoder__body_8c_1a38c7868c2a8819e7abc16148811f2e0b" kind="function"><name>EncodeBody</name></member>
+  </compound>
+  <compound refid="d5/d79/encoder__constants_8c" kind="file"><name>encoder_constants.c</name>
+    <member refid="d5/d79/encoder__constants_8c_1aefcba2436e62e516a63bdad51613a2e5" kind="variable"><name>B</name></member>
+  </compound>
+  <compound refid="d7/d92/encoder__helper_8c" kind="file"><name>encoder_helper.c</name>
+    <member refid="d7/d92/encoder__helper_8c_1aa268d136b017ba11fca74d167e36dd34" kind="function"><name>PrintBinary</name></member>
+    <member refid="d7/d92/encoder__helper_8c_1a7050a856b982bdf5a658945d470cd683" kind="function"><name>Encode</name></member>
+  </compound>
+  <compound refid="d9/da2/file___i_o_8c" kind="file"><name>file_IO.c</name>
+    <member refid="d9/da2/file___i_o_8c_1aed9fcf257d5879cc1d4a649543e3cd12" kind="variable"><name>file_modes_str</name></member>
+    <member refid="d9/da2/file___i_o_8c_1a2c398d1da0b5890e22a9377517c54874" kind="function"><name>Initialized</name></member>
+    <member refid="d9/da2/file___i_o_8c_1a05d25080a4592a86386f6d0d3d48496c" kind="function"><name>F_OPEN</name></member>
+    <member refid="d9/da2/file___i_o_8c_1a94d988ea4ce93357f56c0191584246a6" kind="function"><name>F_WRITE</name></member>
+    <member refid="d9/da2/file___i_o_8c_1a6d14febd2771048b4a06dd86ea17718d" kind="function"><name>F_READ</name></member>
+    <member refid="d9/da2/file___i_o_8c_1ad62e6a72675aa7b389460e97f4e6d998" kind="function"><name>F_CLOSE</name></member>
+    <member refid="d9/da2/file___i_o_8c_1a4b306680e215dfe285fa220421141d38" kind="function"><name>F_EMPTY</name></member>
+    <member refid="d9/da2/file___i_o_8c_1a3ac9e7bef40307b69bdf5e0cb6904d83" kind="function"><name>F_SEEK</name></member>
+  </compound>
+  <compound refid="de/ddf/full__image_8c" kind="file"><name>full_image.c</name>
+  </compound>
+  <compound refid="d6/d92/generate__image_8c" kind="file"><name>generate_image.c</name>
+    <member refid="d6/d92/generate__image_8c_1a450c7f9206bff8de0c177e34e6b5bcf4" kind="function"><name>GenerateVoronoiImage</name></member>
+    <member refid="d6/d92/generate__image_8c_1a7fae527c979b4b287e1f9672c8d2c366" kind="function"><name>PredictImage</name></member>
+    <member refid="d6/d92/generate__image_8c_1a29f9d24093c99f0e47133d90ea4286e6" kind="function"><name>EncodeImage</name></member>
+    <member refid="d6/d92/generate__image_8c_1aaa094efd7037f34ae4e485a0b97c4282" kind="function"><name>CompressImage</name></member>
+    <member refid="d6/d92/generate__image_8c_1a7c0526eafc78103d6067815877e28fe8" kind="function"><name>TestHeader</name></member>
+    <member refid="d6/d92/generate__image_8c_1aac70a37466945a2c91d42fbfb9d1dcbb" kind="function"><name>TestReadImage</name></member>
+  </compound>
+  <compound refid="d2/daf/hash__table_8c" kind="file"><name>hash_table.c</name>
+    <member refid="d2/daf/hash__table_8c_1aecf492d271c7b0c50c1832371fb34c84" kind="function"><name>Hash_InitializeHashTable</name></member>
+    <member refid="d2/daf/hash__table_8c_1a0f96cedf42d4440115356ae74e627126" kind="function"><name>Hash_DeleteHashTable</name></member>
+    <member refid="d2/daf/hash__table_8c_1af0c750fb9a54f590b713d6526ed263fc" kind="function"><name>Hash_AddEntry</name></member>
+    <member refid="d2/daf/hash__table_8c_1a7026562de200bd5e9813f101d9eb614b" kind="function"><name>Hash_GetIndex</name></member>
+    <member refid="d2/daf/hash__table_8c_1a27578c1b5a3ab68d8f144ed86ea72cc2" kind="function"><name>Hash_GetValue</name></member>
+    <member refid="d2/daf/hash__table_8c_1ae198aa5dfcbf0fa9e5fb885e34e08b0c" kind="function"><name>Hash_SetValue</name></member>
+  </compound>
+  <compound refid="df/db9/header_8c" kind="file"><name>header.c</name>
+    <member refid="df/db9/header_8c_1ac726367a97f26d89d0e2a44763f43448" kind="function"><name>PrepareImageMetadata</name></member>
+    <member refid="df/db9/header_8c_1abab4192db36e8577c377efd110ff5efc" kind="function"><name>PreparePredictorMetadata</name></member>
+    <member refid="df/db9/header_8c_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" kind="function"><name>PrepareSampleAdaptiveEntropyCoder</name></member>
+  </compound>
+  <compound refid="d3/d10/image_8c" kind="file"><name>image.c</name>
+    <member refid="d3/d10/image_8c_1a61b8047c5bba5a89979d65847e4103b1" kind="function"><name>InitImage</name></member>
+    <member refid="d3/d10/image_8c_1a78477801fe183cdf32e60df1c92b7320" kind="function"><name>GetPixel</name></member>
+    <member refid="d3/d10/image_8c_1a5a1ef1e96ecb20d081d2e7e75e2996e2" kind="function"><name>GetFrame</name></member>
+    <member refid="d3/d10/image_8c_1aefaa1253ccc17864ac32b9d685b821d4" kind="function"><name>SetPixel</name></member>
+    <member refid="d3/d10/image_8c_1a1aeeb4864b63110b92099384a7a21fa8" kind="function"><name>Image_Equals</name></member>
+  </compound>
+  <compound refid="df/d91/linear__algebra_8c" kind="file"><name>linear_algebra.c</name>
+    <member refid="df/d91/linear__algebra_8c_1ab9661c8e10293140db24d4b650785939" kind="function"><name>InitVector</name></member>
+    <member refid="df/d91/linear__algebra_8c_1ae000d0d19cf867f1ad39325993763205" kind="function"><name>DeleteVector</name></member>
+    <member refid="df/d91/linear__algebra_8c_1a2765cafcf739497b0ee51e705590039a" kind="function"><name>AddVectors</name></member>
+    <member refid="df/d91/linear__algebra_8c_1a06b11149235c5a4fe6c877aed33f55f9" kind="function"><name>SubtractVectors</name></member>
+    <member refid="df/d91/linear__algebra_8c_1a46ade3794d4b4d5cc1eaf983858507ef" kind="function"><name>InnerProduct</name></member>
+    <member refid="df/d91/linear__algebra_8c_1a2c84697470e743f7c69fffbe7e0f92bc" kind="function"><name>ScalarProduct</name></member>
+  </compound>
+  <compound refid="dd/ded/load__constants_8c" kind="file"><name>load_constants.c</name>
+    <member refid="dd/ded/load__constants_8c_1a5d642038360b72b886a5eb66e3efd14a" kind="function"><name>LoadConstantFile</name></member>
+  </compound>
+  <compound refid="d8/d97/local__differences_8c" kind="file"><name>local_differences.c</name>
+    <member refid="d8/d97/local__differences_8c_1a37d2cf3f48b1b2c436f630a2b649cf52" kind="function"><name>CentralLocalDifference</name></member>
+    <member refid="d8/d97/local__differences_8c_1aa1779fb92c191cde51766275baaf7591" kind="function"><name>DirectionalLocalDifference</name></member>
+    <member refid="d8/d97/local__differences_8c_1a92b3b535f0c13d4ec28dab8b13713262" kind="function"><name>LocalDirectionVector</name></member>
+    <member refid="d8/d97/local__differences_8c_1a36ddae4ef0f34ba3f7402469253bb6b6" kind="function"><name>PredictedCentralLocalDifference</name></member>
+  </compound>
+  <compound refid="db/d31/local__sum_8c" kind="file"><name>local_sum.c</name>
+    <member refid="db/d31/local__sum_8c_1a1f0a6a3443597dab4881bb94fbc35f41" kind="function"><name>FindLocalSum</name></member>
+  </compound>
+  <compound refid="d7/d02/logs_8c" kind="file"><name>logs.c</name>
+    <member refid="d7/d02/logs_8c_1a87e78d2e71f0d53d7886e1a126f39b16" kind="variable"><name>log_file</name></member>
+    <member refid="d7/d02/logs_8c_1a43a0859253a66e6836e73685d3dcc623" kind="variable"><name>_time_str</name></member>
+    <member refid="d7/d02/logs_8c_1a87886567426a509453e5709bb2ff785b" kind="variable"><name>log_fptr</name></member>
+    <member refid="d7/d02/logs_8c_1a89eb41300c751659cb27ad5955449bdc" kind="function"><name>_GET_PRINT_TIME</name></member>
+    <member refid="d7/d02/logs_8c_1a0b7cf426e0ba603b54206d70e4c93f04" kind="function"><name>Log_init</name></member>
+    <member refid="d7/d02/logs_8c_1ad02317523a9dd7b5180cccbc0371ac6a" kind="function"><name>Log_close</name></member>
+    <member refid="d7/d02/logs_8c_1a61353ebf0328d8bd1f61f224305e64bb" kind="function"><name>Log_add</name></member>
+    <member refid="d7/d02/logs_8c_1ad795690a809192117add6898be812267" kind="function"><name>Log_error</name></member>
+  </compound>
+  <compound refid="d3/d2d/math__functions_8c" kind="file"><name>math_functions.c</name>
+    <member refid="d3/d2d/math__functions_8c_1a61e36d5241561d1bc112c291a3262565" kind="function"><name>Euclidian2</name></member>
+    <member refid="d3/d2d/math__functions_8c_1adfddd321b4840c92df9f1d48e11c657e" kind="function"><name>Euclidian3</name></member>
+    <member refid="d3/d2d/math__functions_8c_1adf11110e70a4ca4a966622288d194681" kind="function"><name>Manhattan2</name></member>
+    <member refid="d3/d2d/math__functions_8c_1ace80df346398f6e153166e87cee41d47" kind="function"><name>Manhattan3</name></member>
+  </compound>
+  <compound refid="d1/d32/perlin__noise_8c" kind="file"><name>perlin_noise.c</name>
+    <member refid="d1/d32/perlin__noise_8c_1ad1fe5773deff1a734c5cc1b9e03d79fa" kind="typedef"><name>fVector3</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1a7f35c7c40a9e0e57a50fd058b064e8f6" kind="function"><name>dot</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1ae6783c22fc9fe3e3afd30963992e383b" kind="function"><name>normalize</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1a0f59de4e718c144e6bfeced85324b3ac" kind="function"><name>interpolate</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1a5641d0f9a07f405360fc111bf0e3e7d4" kind="function"><name>mapper</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1af5816cb432fe4d1eeed508abdf19a429" kind="function"><name>RandomizeVector</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1a26dda31c4d26a5c138a6b58cb7e50910" kind="function"><name>SolvePerlin4</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1a573b5b9f4a318d5723b22ecfe2eaa87a" kind="function"><name>Perlin4</name></member>
+    <member refid="d1/d32/perlin__noise_8c_1a6d727efa497a4b992c90483602583515" kind="function"><name>GeneratePerlinImage</name></member>
+  </compound>
+  <compound refid="db/d25/predictor_8c" kind="file"><name>predictor.c</name>
+    <member refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" kind="variable"><name>fp</name></member>
+    <member refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" kind="variable"><name>C</name></member>
+    <member refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" kind="function"><name>Predict</name></member>
+    <member refid="db/d25/predictor_8c_1a4a94804509574a94d896a4164802bcd2" kind="function"><name>RunPredictor</name></member>
+  </compound>
+  <compound refid="dc/df1/quantizer_8c" kind="file"><name>quantizer.c</name>
+    <member refid="dc/df1/quantizer_8c_1a9d745aa249b8a9cde3f83899b563dcc5" kind="function"><name>ClippedQuantizerBinCenter</name></member>
+    <member refid="dc/df1/quantizer_8c_1a93be7d02ed2acce98f53818c98ac6cca" kind="function"><name>PredictionResidual</name></member>
+    <member refid="dc/df1/quantizer_8c_1afa51bec3d5dfdb41078f60b1a7c454ab" kind="function"><name>QuantizerIndex</name></member>
+    <member refid="dc/df1/quantizer_8c_1ae831d86258458d0a68d3d2143db43d19" kind="function"><name>minTheta</name></member>
+    <member refid="dc/df1/quantizer_8c_1ae85d34759565d8a3ab498494786c395b" kind="function"><name>QuantizerIndexUnmapper</name></member>
+    <member refid="dc/df1/quantizer_8c_1a1f491e0a435427669942c932394d7c1a" kind="function"><name>MappedQuantizerIndex</name></member>
+  </compound>
+  <compound refid="d6/dce/reconstructor_8c" kind="file"><name>reconstructor.c</name>
+    <member refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kind="variable"><name>sample</name></member>
+    <member refid="d6/dce/reconstructor_8c_1ad0d5b55646a3018075f07ae472ddb312" kind="function"><name>Reconstructor</name></member>
+    <member refid="d6/dce/reconstructor_8c_1aeb6c4d18e6fc666235f8ef7464d1ae29" kind="function"><name>ReconstructPixel</name></member>
+    <member refid="d6/dce/reconstructor_8c_1aadb567bbc159d00d6334e2eb36e6e253" kind="function"><name>TestReconstructor</name></member>
+  </compound>
+  <compound refid="d7/d58/sample__representative_8c" kind="file"><name>sample_representative.c</name>
+    <member refid="d7/d58/sample__representative_8c_1aca1581c921d082976e7f116aa52c56f0" kind="function"><name>SampleRepresentative</name></member>
+    <member refid="d7/d58/sample__representative_8c_1a14cff7c59ac94b0387e8b95a433521e9" kind="function"><name>PredictedSample</name></member>
+    <member refid="d7/d58/sample__representative_8c_1a6c60474c610dc64773816bc445efeb77" kind="function"><name>DoubleResolutionPredictedSample</name></member>
+    <member refid="d7/d58/sample__representative_8c_1a441e8d0fe639d45889aab5b88c4138f4" kind="function"><name>HighResolutionPredictedSample</name></member>
+  </compound>
+  <compound refid="de/d04/stream__encoder_8c" kind="file"><name>stream_encoder.c</name>
+    <member refid="de/d04/stream__encoder_8c_1a0db4a8ab23a4af63c99d5fbfca9073eb" kind="function"><name>InitializeVarIntStream</name></member>
+    <member refid="de/d04/stream__encoder_8c_1a8b42309d51939ee46f5f0d348fbbcbc0" kind="function"><name>StreamVarInteger</name></member>
+    <member refid="de/d04/stream__encoder_8c_1afbd717a2dd8bee43593e06a3919ba72a" kind="function"><name>CloseVarIntegerStream</name></member>
+  </compound>
+  <compound refid="d5/d40/synthetic__image__generator_8c" kind="file"><name>synthetic_image_generator.c</name>
+    <member refid="d5/d40/synthetic__image__generator_8c_1abe2b160fe3eb87a606ba91a9c533cd9f" kind="define"><name>WRI</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a07336610b2fae60747404124a1bebbbe" kind="function"><name>WithinRect2</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a5b129c029b15584f09f306c005950893" kind="function"><name>WithinRect3</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a9793361bc08ee3644e6f9ac73e1bee45" kind="function"><name>SpreadPoint2</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1ab7214af202e08fe839b1623f5f783f59" kind="function"><name>SpreadPoint3</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1ac0475627017baf40cac531ab67d58e9d" kind="function"><name>GenerateVoronoiFlat2D</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1abe9bd17929405b7d28af71473f567f3c" kind="function"><name>GetMinDistance3Naive</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a2850e51614bbc71487c7ed52f10fae28" kind="function"><name>GenerateVoronoiFlat3DNaive</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a2d4e6084981252d94b4287b36e85aec7" kind="function"><name>GeneratePointLocales</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1ae17850a552864500c4f1e1f80b8add6a" kind="function"><name>GetMinDistance3Locales</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a7f533fab0007b8e388232d9fb654ae06" kind="function"><name>ShadeVoronoiBox3</name></member>
+    <member refid="d5/d40/synthetic__image__generator_8c_1a4f7681c24ad008b5b20f8147d2938bb0" kind="function"><name>GenerateVoronoiFlat3DLocal</name></member>
+  </compound>
+  <compound refid="d1/dfd/test___u_h_i_8c" kind="file"><name>test_UHI.c</name>
+    <member refid="d1/dfd/test___u_h_i_8c_1a24aa285f65de829c8a9791d901405626" kind="function"><name>test_UHI</name></member>
+  </compound>
+  <compound refid="d8/dd4/test__var_int_8c" kind="file"><name>test_varInt.c</name>
+    <member refid="d8/dd4/test__var_int_8c_1a553dc49f84a0874f09d55f9e84fb31d2" kind="function"><name>printBits</name></member>
+    <member refid="d8/dd4/test__var_int_8c_1a573e4df8190dae4209a0f027d77fb942" kind="function"><name>print_buffer</name></member>
+    <member refid="d8/dd4/test__var_int_8c_1af925d49ae82dafea37f82c0d044a6308" kind="function"><name>testVUF_Write</name></member>
+    <member refid="d8/dd4/test__var_int_8c_1aaac61ccbc34855ae728a8a9d45db1105" kind="function"><name>testVUF_Read</name></member>
+  </compound>
+  <compound refid="d6/d7a/uhi__io_8c" kind="file"><name>uhi_io.c</name>
+    <member refid="d6/d7a/uhi__io_8c_1a6114b6569fbd42d5a3fa05f4cd82cc7e" kind="function"><name>UHI_Initialize</name></member>
+    <member refid="d6/d7a/uhi__io_8c_1a3b81f64a9012eef50fecd6638a817aef" kind="function"><name>UHI_WriteImage</name></member>
+    <member refid="d6/d7a/uhi__io_8c_1ad7fd2d84633ee6e0355a950deeacd220" kind="function"><name>UHI_ReadPixel</name></member>
+    <member refid="d6/d7a/uhi__io_8c_1a88066808c0a718f67bd50a325cdb5721" kind="function"><name>UHI_WritePixel</name></member>
+    <member refid="d6/d7a/uhi__io_8c_1a5a6150f9d137ec78a2778fbf3b52d5be" kind="function"><name>UHI_close</name></member>
+    <member refid="d6/d7a/uhi__io_8c_1aad573fb88befb1cd5c553c20a32027a9" kind="function"><name>Proxy_GetPixel</name></member>
+    <member refid="d6/d7a/uhi__io_8c_1a1ec6bacb78062b9b8dde4cf3e3eeb923" kind="function"><name>Proxy_SetPixel</name></member>
+  </compound>
+  <compound refid="d7/db9/var_int_file___i_o_8c" kind="file"><name>varIntFile_IO.c</name>
+    <member refid="d7/db9/var_int_file___i_o_8c_1adcef86e6a920a4f9ff207599aa37b7f6" kind="variable"><name>file_modes_arguments</name></member>
+    <member refid="d7/db9/var_int_file___i_o_8c_1ab232dbf9e1e9abf226e94b02fe510da4" kind="function"><name>_VUF_Clean</name></member>
+    <member refid="d7/db9/var_int_file___i_o_8c_1a07ca21a87dab6f536b7f4d69050f5602" kind="function"><name>VUF_initialize</name></member>
+    <member refid="d7/db9/var_int_file___i_o_8c_1a744805d2f1db68081efadb9892a297e9" kind="function"><name>VUF_append</name></member>
+    <member refid="d7/db9/var_int_file___i_o_8c_1aafa9034f88afca6a726a84673d063889" kind="function"><name>VUF_read_stack</name></member>
+    <member refid="d7/db9/var_int_file___i_o_8c_1ad54b8d6492e4c149c7f1232e3eda58be" kind="function"><name>VUF_close</name></member>
+  </compound>
+  <compound refid="d0/d26/weights_8c" kind="file"><name>weights.c</name>
+    <member refid="d0/d26/weights_8c_1adcc753ae7048085817bd2c37b471f739" kind="function"><name>InitializeWeights</name></member>
+    <member refid="d0/d26/weights_8c_1a286baab1384ff25cf7cf4c2061f15c4c" kind="function"><name>DoubleResolutionPredictionError</name></member>
+    <member refid="d0/d26/weights_8c_1a17984670eb20b6ea122fb1e90a50dc75" kind="function"><name>WeightUpdateScalingExponent</name></member>
+    <member refid="d0/d26/weights_8c_1a805706f7af2f212bc46076319fcec535" kind="function"><name>UpdateWeights</name></member>
+  </compound>
+  <compound refid="d3/dcc/md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="de/da5/bug" kind="page"><name>bug</name>
+  </compound>
+  <compound refid="da/d58/deprecated" kind="page"><name>deprecated</name>
+  </compound>
+  <compound refid="dir_ee532ceb613f48f23d20ef02624c3a91" kind="dir"><name>build/CMakeFiles/3.22.1</name>
+  </compound>
+  <compound refid="dir_4fef79e7177ba769987a8da36c892c5f" kind="dir"><name>build</name>
+  </compound>
+  <compound refid="dir_83b6a697835ddc3a114ddfd5666c7cf2" kind="dir"><name>include/cache</name>
+  </compound>
+  <compound refid="dir_c22e1dfb7d788f5e80a585f157d215e9" kind="dir"><name>build/CMakeFiles/CCSDS_Compressor.dir</name>
+  </compound>
+  <compound refid="dir_2fcae24043d6c8d9b3f3b422e373032f" kind="dir"><name>build/CMakeFiles/CCSDS_Decompressor.dir</name>
+  </compound>
+  <compound refid="dir_c34be36075c98762d7207a7feefe0a74" kind="dir"><name>build/CMakeFiles/CCSDS_Image_Generator.dir</name>
+  </compound>
+  <compound refid="dir_63772b626f2709090f0bdca0f40827b4" kind="dir"><name>build/CMakeFiles</name>
+  </compound>
+  <compound refid="dir_5ccf6f5f6f8f5a0c68d52188c0c1e2bd" kind="dir"><name>build/CMakeFiles/3.22.1/CompilerIdC</name>
+  </compound>
+  <compound refid="dir_88daf05616196eb210c6c538937e567d" kind="dir"><name>include/constants</name>
+  </compound>
+  <compound refid="dir_ef4c7dabb16c9bee1e17c47c3bb25728" kind="dir"><name>include/decoder</name>
+  </compound>
+  <compound refid="dir_22d374d00b31754c70ea025f8d28506b" kind="dir"><name>include/decompressor</name>
+  </compound>
+  <compound refid="dir_895dbb3563cbc00b89d480ddc20be1a2" kind="dir"><name>include/dst</name>
+  </compound>
+  <compound refid="dir_acb9e55bfefdf4d43f13fff6aa240ad7" kind="dir"><name>include/encoder</name>
+  </compound>
+  <compound refid="dir_70468730f0c354a354bfa0a2dbc63183" kind="dir"><name>include/files</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_310c81af5b5b2a1864c3ebfe09cb7a06" kind="dir"><name>build/CMakeFiles/CCSDS_Compressor.dir/main</name>
+  </compound>
+  <compound refid="dir_428a955cd1dcf08ef5b7d9b0293e4d17" kind="dir"><name>build/CMakeFiles/CCSDS_Decompressor.dir/main</name>
+  </compound>
+  <compound refid="dir_e14425e7f7bd68e40720ec6777e5dfc7" kind="dir"><name>build/CMakeFiles/CCSDS_Image_Generator.dir/main</name>
+  </compound>
+  <compound refid="dir_5c982d53a68cdbcd421152b4020263a9" kind="dir"><name>main</name>
+  </compound>
+  <compound refid="dir_fba38f648377aa56ae5d69782adf9e53" kind="dir"><name>include/math</name>
+  </compound>
+  <compound refid="dir_bcb0e1c297d4eac1568cd8ae7fb42a08" kind="dir"><name>include/predictor</name>
+  </compound>
+  <compound refid="dir_7837fde3ab9c1fb2fc5be7b717af8d79" kind="dir"><name>python</name>
+  </compound>
+  <compound refid="dir_48f859ddecfe4a7a92f5284d7813d2b7" kind="dir"><name>build/CMakeFiles/CCSDS_Compressor.dir/src</name>
+  </compound>
+  <compound refid="dir_bda9db4dee5220dce83fe6b2b34fd167" kind="dir"><name>build/CMakeFiles/CCSDS_Decompressor.dir/src</name>
+  </compound>
+  <compound refid="dir_8b4d779243a4c1ff83e0785b9ca9e30c" kind="dir"><name>build/CMakeFiles/CCSDS_Image_Generator.dir/src</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_a8f5dd5631cff2e293db83b46625e3aa" kind="dir"><name>include/testing</name>
+  </compound>
+</doxygenindex>

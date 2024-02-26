@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d0/d3e/namespacefile__stats" kind="namespace" language="Python">
+    <compoundname>file_stats</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="d0/d3e/namespacefile__stats_1aeab71244afb687f16d8c4f5ee9d6ef0e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <qualifiedname>file_stats.n</qualifiedname>
+        <initializer>=  len(sys.argv)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/file_stats.py" line="19" column="1" bodyfile="python/file_stats.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d0/d3e/namespacefile__stats_1a473892ba0152ef4e5eda5695d64603e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>compression_ratio</definition>
+        <argsstring>(data, compressed)</argsstring>
+        <name>compression_ratio</name>
+        <qualifiedname>file_stats.compression_ratio</qualifiedname>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>compressed</type>
+          <defname>compressed</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/file_stats.py" line="5" column="1" bodyfile="python/file_stats.py" bodystart="5" bodyend="12"/>
+        <referencedby refid="d0/d3e/namespacefile__stats_1a5e923c6c785648e0a14fa3a4825120e9" compoundref="da/d4a/file__stats_8py" startline="13" endline="17">file_info</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d0/d3e/namespacefile__stats_1a5e923c6c785648e0a14fa3a4825120e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>file_info</definition>
+        <argsstring>(file_path)</argsstring>
+        <name>file_info</name>
+        <qualifiedname>file_stats.file_info</qualifiedname>
+        <param>
+          <type>file_path</type>
+          <defname>file_path</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/file_stats.py" line="13" column="1" bodyfile="python/file_stats.py" bodystart="13" bodyend="17"/>
+        <references refid="d0/d3e/namespacefile__stats_1a473892ba0152ef4e5eda5695d64603e2" compoundref="da/d4a/file__stats_8py" startline="5" endline="12">compression_ratio</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python/file_stats.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

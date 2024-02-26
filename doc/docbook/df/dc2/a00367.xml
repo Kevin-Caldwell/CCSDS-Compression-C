@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00367" xml:lang="en-US">
+<title>run_predictor Namespace Reference</title>
+<indexterm><primary>run_predictor</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_a00367_1aeab71244afb687f16d8c4f5ee9d6ef0e">n</link> = len(sys.argv)</para>
+</listitem>
+            <listitem><para><link linkend="_a00367_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link> = ReadCSV(sys.argv[1])</para>
+</listitem>
+            <listitem><para><link linkend="_a00367_1a5c7e4f16622600cb52580b191565e2dd">Nx</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00367_1ac1452fdfd6ea1c8c005ac90bbfa62011">Ny</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00367_1af3ec54a0e6bc4935a13fb520b7d7df6e">Nz</link></para>
+</listitem>
+            <listitem><para><link linkend="_a00367_1aeaf873546abc6183d2e324ec6585d854">python_predicted</link> = comp.predictor(<link linkend="_a00367_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_a00367_1a511ae0b1c13f95e5f08f1a0dd3da3d93"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>run_predictor</secondary></indexterm>
+<indexterm><primary>run_predictor</primary><secondary>data</secondary></indexterm>
+<para><computeroutput>data = ReadCSV(sys.argv[1])</computeroutput></para><para>
+Definition at line <link linkend="_a00020_source_1l00012">12</link> of file <link linkend="_a00020_source">run_predictor.py</link>.</para>
+</section>
+<anchor xml:id="_a00367_1aeab71244afb687f16d8c4f5ee9d6ef0e"/><section>
+    <title>n</title>
+<indexterm><primary>n</primary><secondary>run_predictor</secondary></indexterm>
+<indexterm><primary>run_predictor</primary><secondary>n</secondary></indexterm>
+<para><computeroutput>n = len(sys.argv)</computeroutput></para><para>
+Definition at line <link linkend="_a00020_source_1l00010">10</link> of file <link linkend="_a00020_source">run_predictor.py</link>.</para>
+</section>
+<anchor xml:id="_a00367_1a5c7e4f16622600cb52580b191565e2dd"/><section>
+    <title>Nx</title>
+<indexterm><primary>Nx</primary><secondary>run_predictor</secondary></indexterm>
+<indexterm><primary>run_predictor</primary><secondary>Nx</secondary></indexterm>
+<para><computeroutput>Nx</computeroutput></para><para>
+Definition at line <link linkend="_a00020_source_1l00013">13</link> of file <link linkend="_a00020_source">run_predictor.py</link>.</para>
+</section>
+<anchor xml:id="_a00367_1ac1452fdfd6ea1c8c005ac90bbfa62011"/><section>
+    <title>Ny</title>
+<indexterm><primary>Ny</primary><secondary>run_predictor</secondary></indexterm>
+<indexterm><primary>run_predictor</primary><secondary>Ny</secondary></indexterm>
+<para><computeroutput>Ny</computeroutput></para><para>
+Definition at line <link linkend="_a00020_source_1l00013">13</link> of file <link linkend="_a00020_source">run_predictor.py</link>.</para>
+</section>
+<anchor xml:id="_a00367_1af3ec54a0e6bc4935a13fb520b7d7df6e"/><section>
+    <title>Nz</title>
+<indexterm><primary>Nz</primary><secondary>run_predictor</secondary></indexterm>
+<indexterm><primary>run_predictor</primary><secondary>Nz</secondary></indexterm>
+<para><computeroutput>Nz</computeroutput></para><para>
+Definition at line <link linkend="_a00020_source_1l00013">13</link> of file <link linkend="_a00020_source">run_predictor.py</link>.</para>
+</section>
+<anchor xml:id="_a00367_1aeaf873546abc6183d2e324ec6585d854"/><section>
+    <title>python_predicted</title>
+<indexterm><primary>python_predicted</primary><secondary>run_predictor</secondary></indexterm>
+<indexterm><primary>run_predictor</primary><secondary>python_predicted</secondary></indexterm>
+<para><computeroutput>python_predicted = comp.predictor(<link linkend="_a00367_1a511ae0b1c13f95e5f08f1a0dd3da3d93">data</link>)</computeroutput></para><para>
+Definition at line <link linkend="_a00020_source_1l00015">15</link> of file <link linkend="_a00020_source">run_predictor.py</link>.</para>
+</section>
+</section>
+</section>

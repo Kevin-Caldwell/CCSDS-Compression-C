@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="db/db5/struct_uncompressed_hyperspectral_image" kind="struct" language="C++" prot="public">
+    <compoundname>UncompressedHyperspectralImage</compoundname>
+    <includes refid="d8/d60/uhi__io_8h" local="no">uhi_io.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/db5/struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/d7f/file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+        <definition>file_t* fs</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <qualifiedname>UncompressedHyperspectralImage::fs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/uhi_io.h" line="43" column="12" bodyfile="include/files/uhi_io.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="d0/dbe/test___u_h_i_8h_1a24aa285f65de829c8a9791d901405626" compoundref="d1/dfd/test___u_h_i_8c" startline="5" endline="51">test_UHI</referencedby>
+        <referencedby refid="d6/d7a/uhi__io_8c_1a5a6150f9d137ec78a2778fbf3b52d5be" compoundref="d6/d7a/uhi__io_8c" startline="46" endline="48">UHI_close</referencedby>
+        <referencedby refid="d8/d60/uhi__io_8h_1a6114b6569fbd42d5a3fa05f4cd82cc7e" compoundref="d6/d7a/uhi__io_8c" startline="4" endline="14">UHI_Initialize</referencedby>
+        <referencedby refid="d8/d60/uhi__io_8h_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d6/d7a/uhi__io_8c" startline="27" endline="36">UHI_ReadPixel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="db/db5/struct_uncompressed_hyperspectral_image_1a92c57811a03d78e56a6e8592f96a41ad" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+        <definition>dim3 size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>UncompressedHyperspectralImage::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/uhi_io.h" line="44" column="10" bodyfile="include/files/uhi_io.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="d8/d60/uhi__io_8h_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d6/d7a/uhi__io_8c" startline="27" endline="36">UHI_ReadPixel</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="db/db5/struct_uncompressed_hyperspectral_image_1ad6ee0d6e06c4b67239464b59d806f72c" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t cache[UHI_CACHE_LENGTH]</definition>
+        <argsstring>[UHI_CACHE_LENGTH]</argsstring>
+        <name>cache</name>
+        <qualifiedname>UncompressedHyperspectralImage::cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/files/uhi_io.h" line="45" column="13" bodyfile="include/files/uhi_io.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="d8/d60/uhi__io_8h_1a6114b6569fbd42d5a3fa05f4cd82cc7e" compoundref="d6/d7a/uhi__io_8c" startline="4" endline="14">UHI_Initialize</referencedby>
+        <referencedby refid="d8/d60/uhi__io_8h_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d6/d7a/uhi__io_8c" startline="27" endline="36">UHI_ReadPixel</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Stores UHI file streams.</para>
+<para>File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.</para>
+<para>Designed to be a more RAM-friendly alternative to the image struct defined in <ref refid="d5/db2/image_8h" kindref="compound">image.h</ref>. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.</para>
+<para>fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>UncompressedHyperspectralImage</label>
+        <link refid="db/db5/struct_uncompressed_hyperspectral_image"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dim3</label>
+        <link refid="d3/db3/structdim3"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/files/uhi_io.h" line="42" column="1" bodyfile="include/files/uhi_io.h" bodystart="42" bodyend="46"/>
+    <listofallmembers>
+      <member refid="db/db5/struct_uncompressed_hyperspectral_image_1ad6ee0d6e06c4b67239464b59d806f72c" prot="public" virt="non-virtual"><scope>UncompressedHyperspectralImage</scope><name>cache</name></member>
+      <member refid="db/db5/struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff" prot="public" virt="non-virtual"><scope>UncompressedHyperspectralImage</scope><name>fs</name></member>
+      <member refid="db/db5/struct_uncompressed_hyperspectral_image_1a92c57811a03d78e56a6e8592f96a41ad" prot="public" virt="non-virtual"><scope>UncompressedHyperspectralImage</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d0/da2/a00502" kind="page">
+    <compoundname>md__r_e_a_d_m_e</compoundname>
+    <title>Sample Readme for now</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="d0/da2/a00502_1autotoc_md0"/></para>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

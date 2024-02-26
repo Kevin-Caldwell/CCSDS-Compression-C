@@ -1,0 +1,28 @@
+var encoder__constants_8h =
+[
+    [ "ACCUMULATOR_INITIALIZATION", "d7/ddb/encoder__constants_8h.html#a5da5a1923a6dffb7ba9faee8b7fe7e52", null ],
+    [ "ACCUMULATOR_INITIALIZATION_CONSTANT", "d7/ddb/encoder__constants_8h.html#a1c04aca8aa2fcabef401b440f8c5863a", null ],
+    [ "ACCUMULATOR_INITIALIZATION_TABLE_FLAG", "d7/ddb/encoder__constants_8h.html#aa929522bb0023aae20ed57e583c3eb62", null ],
+    [ "BAND_VARYING_DAMPING_FLAG", "d7/ddb/encoder__constants_8h.html#a18ddd6c43809a62609148ee7843ed4e8", null ],
+    [ "BAND_VARYING_OFFSET_FLAG", "d7/ddb/encoder__constants_8h.html#af19c5cde04e920f045ccf275bac5b2bd", null ],
+    [ "DAMPING_TABLE_FLAG", "d7/ddb/encoder__constants_8h.html#a37bf74bce23e349834ae376bfd7d66e7", null ],
+    [ "ENTROPY_CODER", "d7/ddb/encoder__constants_8h.html#aab2a3fdc0e63fde9690b44450a35e26b", null ],
+    [ "FIXED_DAMPING", "d7/ddb/encoder__constants_8h.html#affbf66e9c65fe62a8677ca4f4b61730a", null ],
+    [ "FIXED_OFFSET", "d7/ddb/encoder__constants_8h.html#a96cc7d5d38f6b98001288a9b302d6796", null ],
+    [ "INITIAL_COUNT_EXPONENT", "d7/ddb/encoder__constants_8h.html#a637670209ee0a097697896588c1cbdef", null ],
+    [ "INITIAL_COUNT_EXPONENT", "d7/ddb/encoder__constants_8h.html#a637670209ee0a097697896588c1cbdef", null ],
+    [ "OFFSET_TABLE_FLAG", "d7/ddb/encoder__constants_8h.html#a01ae0a84ae74aeda76855e3248f8de30", null ],
+    [ "OUTPUT_WORD_SIZE", "d7/ddb/encoder__constants_8h.html#ad01e1c682be1b33d6ea8287bb7d5fff5", null ],
+    [ "QUANTIZER_FIDELITY_CONTROL", "d7/ddb/encoder__constants_8h.html#a7b753f7db0f750b0010df61a3046d2f2", null ],
+    [ "RESCALING_COUNTER_SIZE", "d7/ddb/encoder__constants_8h.html#ac06b5b3d7fc01cb19295b60b4421b802", null ],
+    [ "SAMPLE_REP_FLAG", "d7/ddb/encoder__constants_8h.html#a9591d28de78714ff84008187c0f264a5", null ],
+    [ "SIZEOF_HEADER_ESSENTIAL", "d7/ddb/encoder__constants_8h.html#ae18bded6a8507a03e0743e2fb320ab3a", null ],
+    [ "TABLE_COUNT", "d7/ddb/encoder__constants_8h.html#a0f5679d9c7940eacaf7f99e2de79e5fe", null ],
+    [ "UNARY_LENGTH_LIMIT", "d7/ddb/encoder__constants_8h.html#a2dd7f6568a16cd0cf58bc9f59c6c5f3c", null ],
+    [ "WEIGHT_INITIALIZATION_TABLE_FLAG", "d7/ddb/encoder__constants_8h.html#ad2efe3db4f03ddf8a0d2494d9c643549", null ],
+    [ "WEO_TABLE_FLAG", "d7/ddb/encoder__constants_8h.html#a8b3f48be0fd9f9bee0fdaf45425a90ed", null ],
+    [ "B", "d7/ddb/encoder__constants_8h.html#aefcba2436e62e516a63bdad51613a2e5", null ],
+    [ "Gamma1", "d7/ddb/encoder__constants_8h.html#a14069285fee7428b1929cb23a4b1561c", null ],
+    [ "K", "d7/ddb/encoder__constants_8h.html#a2689c4b3931025b79053532a5f1b0a85", null ],
+    [ "U_max", "d7/ddb/encoder__constants_8h.html#a706ff4e6123594c36b0894c248a25ff7", null ]
+];

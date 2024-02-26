@@ -1,0 +1,84 @@
+\doxysection{src/cache\+\_\+predictor.c File Reference}
+\hypertarget{a00299}{}\label{a00299}\index{src/cache\_predictor.c@{src/cache\_predictor.c}}
+{\ttfamily \#include "{}cache/cache\+\_\+predictor.\+h"{}}\newline
+{\ttfamily \#include "{}predictor/local\+\_\+sum.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for cache\+\_\+predictor.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00299_a596c51dc78ec695dccf12414da82bbf5}{Initialize\+Predictor\+Cache}} (\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr\+\_\+p\+\_\+cache, \mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG)
+\item 
+int \mbox{\hyperlink{a00299_aca0d39cbaa7b58e1e75c93010c1a7750}{Delete\+Predictor\+Cache}} (\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}p\+\_\+cache)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00299_a8dc01c7173e49a14ae38a59d91b9d669}{global\+\_\+cache}} = \mbox{\hyperlink{a00152_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00299_a01a11e19b54bb1195243f037c3d93b7b}{Cache\+Files}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00299_aca0d39cbaa7b58e1e75c93010c1a7750}\label{a00299_aca0d39cbaa7b58e1e75c93010c1a7750} 
+\index{cache\_predictor.c@{cache\_predictor.c}!DeletePredictorCache@{DeletePredictorCache}}
+\index{DeletePredictorCache@{DeletePredictorCache}!cache\_predictor.c@{cache\_predictor.c}}
+\doxysubsubsection{\texorpdfstring{DeletePredictorCache()}{DeletePredictorCache()}}
+{\footnotesize\ttfamily int Delete\+Predictor\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+cache }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00043}{43}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{a00299_a596c51dc78ec695dccf12414da82bbf5}\label{a00299_a596c51dc78ec695dccf12414da82bbf5} 
+\index{cache\_predictor.c@{cache\_predictor.c}!InitializePredictorCache@{InitializePredictorCache}}
+\index{InitializePredictorCache@{InitializePredictorCache}!cache\_predictor.c@{cache\_predictor.c}}
+\doxysubsubsection{\texorpdfstring{InitializePredictorCache()}{InitializePredictorCache()}}
+{\footnotesize\ttfamily int Initialize\+Predictor\+Cache (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00372}{Predictor\+Cache}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ptr\+\_\+p\+\_\+cache,  }\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00016}{16}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{a00299_a01a11e19b54bb1195243f037c3d93b7b}\label{a00299_a01a11e19b54bb1195243f037c3d93b7b} 
+\index{cache\_predictor.c@{cache\_predictor.c}!CacheFiles@{CacheFiles}}
+\index{CacheFiles@{CacheFiles}!cache\_predictor.c@{cache\_predictor.c}}
+\doxysubsubsection{\texorpdfstring{CacheFiles}{CacheFiles}}
+{\footnotesize\ttfamily char\texorpdfstring{$\ast$}{*} Cache\+Files\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{\textcolor{stringliteral}{"{}raw.csv"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}local-\/sums.csv"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}sample-\/representatives.csv"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}predicted\_sample.csv"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}central\_local\_difference.csv"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}predicted\_central\_local\_difference.csv"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}clipped\_quanitzer\_bin\_center.csv"{}},\ \textcolor{stringliteral}{"{}quantizer\_index.csv"{}}\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00006}{6}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+
+\Hypertarget{a00299_a8dc01c7173e49a14ae38a59d91b9d669}\label{a00299_a8dc01c7173e49a14ae38a59d91b9d669} 
+\index{cache\_predictor.c@{cache\_predictor.c}!global\_cache@{global\_cache}}
+\index{global\_cache@{global\_cache}!cache\_predictor.c@{cache\_predictor.c}}
+\doxysubsubsection{\texorpdfstring{global\_cache}{global\_cache}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00372}{Predictor\+Cache}}\texorpdfstring{$\ast$}{*} global\+\_\+cache = \mbox{\hyperlink{a00152_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}}
+
+
+
+Definition at line \mbox{\hyperlink{a00299_source_l00005}{5}} of file \mbox{\hyperlink{a00299_source}{cache\+\_\+predictor.\+c}}.
+

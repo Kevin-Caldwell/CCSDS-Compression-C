@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_image_8h" xml:lang="en-US">
+<title>include/dst/image.h File Reference</title>
+<indexterm><primary>include/dst/image.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;math/math_functions.h&quot;<?linebreak?>#include &quot;constants/constants.h&quot;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &quot;files/uhi_io.h&quot;<?linebreak?></programlisting>Include dependency graph for image.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d3/deb/image_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d2/dd3/image_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structimage">image</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structimage2">image2</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_image_8h_1acaccd9f1398a726f32adffb1f78d6761">FRAME_SIZE</link>(size)&#160;&#160;&#160;(size.x * size.y)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_image_8h_1a38f6fc4c8999b95f1f75294a52c32e4c">MAP3_1</link>(i,  j,  k,  size)&#160;&#160;&#160;(k * <link linkend="_image_8h_1acaccd9f1398a726f32adffb1f78d6761">FRAME_SIZE</link>(size) + size.x * j + i)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_image_8h_1af6434ff11f3bef292960119c16edba32">GetT</link>(x,  y)&#160;&#160;&#160;(y * <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link> + x)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_image_8h_1a603ad8850d10b60de148b716ae22f3cd">GetX</link>(t)&#160;&#160;&#160;(t % <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_image_8h_1a9d63a43992ec07d97e149afe470eb02d">GetY</link>(t)&#160;&#160;&#160;((int)t / <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_image_8h_1a582f5034cfb025614b418984a00e2e5c">S</link>(hIMG,  z,  y,  x)&#160;&#160;&#160;<link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(hIMG, x,y,z)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_structimage">image</link> <link linkend="_image_8h_1a183300a528553b66677f173c07c7170e">image</link></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_structimage">image</link> <link linkend="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa">image3</link></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_structimage2">image2</link> <link linkend="_image_8h_1a64ee4969f267712e06a948fdf5bfe902">image2</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_image_8h_1a61b8047c5bba5a89979d65847e4103b1">InitImage</link> (<link linkend="_structimage">image</link> *img_p, size_t x, size_t y, size_t z)</para>
+</listitem>
+            <listitem><para><link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> <link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z)</para>
+</listitem>
+            <listitem><para><link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> * <link linkend="_image_8h_1a5a1ef1e96ecb20d081d2e7e75e2996e2">GetFrame</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y)</para>
+</listitem>
+            <listitem><para>void <link linkend="_image_8h_1aefaa1253ccc17864ac32b9d685b821d4">SetPixel</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_image_8h_1a1aeeb4864b63110b92099384a7a21fa8">Image_Equals</link> (<link linkend="_structimage">image</link> *img1, <link linkend="_structimage">image</link> *img2)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_image_8h_1acaccd9f1398a726f32adffb1f78d6761"/><section>
+    <title>FRAME_SIZE</title>
+<indexterm><primary>FRAME_SIZE</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>FRAME_SIZE</secondary></indexterm>
+<para><computeroutput>#define FRAME_SIZE( size)&#160;&#160;&#160;(size.x * size.y)</computeroutput></para>
+<para><link linkend="_image_8h">image.h</link> <formalpara><title>Authors</title>
+
+<para>@Kevin-Caldwell</para>
+</formalpara>
+Image Structure for Storing 3D bitmaps with a maximum dynamic range of 16 bits</para>
+
+<para>Features Initialize Image Get/Set Pixels Image Compare Coordinate Transform from x,y,z to t,z</para>
+
+<para>Uses Raw Data Predicted Image</para>
+
+<para>Dependencies <link linkend="_math__functions_8h">math_functions.h</link> <link linkend="_constants_8h">constants.h</link> stdlib.h <?linebreak?> </para>
+<para>
+Definition at line <link linkend="_image_8h_source_1l00033">33</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<anchor xml:id="_image_8h_1af6434ff11f3bef292960119c16edba32"/><section>
+    <title>GetT</title>
+<indexterm><primary>GetT</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>GetT</secondary></indexterm>
+<para><computeroutput>#define GetT( x,  y)&#160;&#160;&#160;(y * <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link> + x)</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00035">35</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<anchor xml:id="_image_8h_1a603ad8850d10b60de148b716ae22f3cd"/><section>
+    <title>GetX</title>
+<indexterm><primary>GetX</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>GetX</secondary></indexterm>
+<para><computeroutput>#define GetX( t)&#160;&#160;&#160;(t % <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>)</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00036">36</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<anchor xml:id="_image_8h_1a9d63a43992ec07d97e149afe470eb02d"/><section>
+    <title>GetY</title>
+<indexterm><primary>GetY</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>GetY</secondary></indexterm>
+<para><computeroutput>#define GetY( t)&#160;&#160;&#160;((int)t / <link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>)</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00037">37</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<anchor xml:id="_image_8h_1a38f6fc4c8999b95f1f75294a52c32e4c"/><section>
+    <title>MAP3_1</title>
+<indexterm><primary>MAP3_1</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>MAP3_1</secondary></indexterm>
+<para><computeroutput>#define MAP3_1( i,  j,  k,  size)&#160;&#160;&#160;(k * <link linkend="_image_8h_1acaccd9f1398a726f32adffb1f78d6761">FRAME_SIZE</link>(size) + size.x * j + i)</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00034">34</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<anchor xml:id="_image_8h_1a582f5034cfb025614b418984a00e2e5c"/><section>
+    <title>S</title>
+<indexterm><primary>S</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>S</secondary></indexterm>
+<para><computeroutput>#define S( hIMG,  z,  y,  x)&#160;&#160;&#160;<link linkend="_image_8h_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(hIMG, x,y,z)</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00039">39</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_image_8h_1a183300a528553b66677f173c07c7170e"/><section>
+    <title>image</title>
+<indexterm><primary>image</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>image</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_structimage">image</link> <link linkend="_structimage">image</link></computeroutput></para>
+<para>Image Stuct for storing all the contexts of a hyperspectral image in a linear array.</para>
+
+<para>The size member is a <link linkend="_structdim3">dim3</link> which contains the dimensions of the image in the format: {Nx, Ny, Nz} The data member is a dynamically allocated array of PIXELs arranged according to the MAP3_1 Macro defined in <link linkend="_image_8h">image.h</link></para>
+
+<para>It has only been created as a testing feature. The entire hyperspectral image cannot be stored in RAM on an embedded device such as the STM32H7. The UHI file structure replaces this struct when the MEMORY_SAVING feature is enabled through CMake. </para>
+</section>
+<anchor xml:id="_image_8h_1a64ee4969f267712e06a948fdf5bfe902"/><section>
+    <title>image2</title>
+<indexterm><primary>image2</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>image2</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_structimage2">image2</link> <link linkend="_structimage2">image2</link></computeroutput></para>
+<para>Unused Struct for 2-D images. </para>
+</section>
+<anchor xml:id="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa"/><section>
+    <title>image3</title>
+<indexterm><primary>image3</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>image3</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_structimage">image</link> <link linkend="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa">image3</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_image_8h_1a5a1ef1e96ecb20d081d2e7e75e2996e2"/><section>
+    <title>GetFrame()</title>
+<indexterm><primary>GetFrame</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>GetFrame</secondary></indexterm>
+<para><computeroutput><link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> * GetFrame (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y)</computeroutput></para><para>
+Definition at line <link linkend="_image_8c_source_1l00061">61</link> of file <link linkend="_image_8c_source">image.c</link>.</para>
+</section>
+<anchor xml:id="_image_8h_1a78477801fe183cdf32e60df1c92b7320"/><section>
+    <title>GetPixel()</title>
+<indexterm><primary>GetPixel</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>GetPixel</secondary></indexterm>
+<para><computeroutput><link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> GetPixel (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z)</computeroutput></para><para>
+Definition at line <link linkend="_image_8c_source_1l00055">55</link> of file <link linkend="_image_8c_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/db2/image_8h_a78477801fe183cdf32e60df1c92b7320_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_image_8h_1a1aeeb4864b63110b92099384a7a21fa8"/><section>
+    <title>Image_Equals()</title>
+<indexterm><primary>Image_Equals</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>Image_Equals</secondary></indexterm>
+<para><computeroutput>int Image_Equals (<link linkend="_structimage">image</link> * img1, <link linkend="_structimage">image</link> * img2)</computeroutput></para><para>
+Definition at line <link linkend="_image_8c_source_1l00071">71</link> of file <link linkend="_image_8c_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/db2/image_8h_a1aeeb4864b63110b92099384a7a21fa8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_image_8h_1a61b8047c5bba5a89979d65847e4103b1"/><section>
+    <title>InitImage()</title>
+<indexterm><primary>InitImage</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>InitImage</secondary></indexterm>
+<para><computeroutput>int InitImage (<link linkend="_structimage">image</link> * img_p, size_t x, size_t y, size_t z)</computeroutput></para><para>
+Definition at line <link linkend="_image_8c_source_1l00045">45</link> of file <link linkend="_image_8c_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/db2/image_8h_a61b8047c5bba5a89979d65847e4103b1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_image_8h_1aefaa1253ccc17864ac32b9d685b821d4"/><section>
+    <title>SetPixel()</title>
+<indexterm><primary>SetPixel</primary><secondary>image.h</secondary></indexterm>
+<indexterm><primary>image.h</primary><secondary>SetPixel</secondary></indexterm>
+<para><computeroutput>void SetPixel (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> data)</computeroutput></para><para>
+Definition at line <link linkend="_image_8c_source_1l00066">66</link> of file <link linkend="_image_8c_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/db2/image_8h_aefaa1253ccc17864ac32b9d685b821d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

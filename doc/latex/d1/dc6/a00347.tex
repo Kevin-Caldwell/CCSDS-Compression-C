@@ -1,0 +1,73 @@
+\doxysection{src/decoder.c File Reference}
+\hypertarget{a00347}{}\label{a00347}\index{src/decoder.c@{src/decoder.c}}
+{\ttfamily \#include "{}decompressor/decoder.\+h"{}}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}encoder/stream\+\_\+encoder.\+h"{}}\newline
+{\ttfamily \#include "{}files/var\+Int\+File\+\_\+\+IO.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
+{\ttfamily \#include "{}constants/encoder\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}encoder/body.\+h"{}}\newline
+Include dependency graph for decoder.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00347_aeb5d9c2d8630941218ec7b26a666bd61}{increment\+\_\+xyz}} (int \texorpdfstring{$\ast$}{*}x, int \texorpdfstring{$\ast$}{*}y, int \texorpdfstring{$\ast$}{*}z, \mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}} \mbox{\hyperlink{a00146_abfda77b016218238359bcc3e5c1600b0}{Nx}}, \mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}} \mbox{\hyperlink{a00146_adcc9183c4659dc09e04e5ede1d79215b}{Ny}}, \mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}} \mbox{\hyperlink{a00146_a7a7576e08f5980d322da5f48c7385edc}{Nz}})
+\item 
+void \mbox{\hyperlink{a00347_aed4e95d0c6d50bc3f99264337e2f9fb8}{Decoder\+\_\+\+Decode\+Body}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}predicted\+\_\+samples, const char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+void \mbox{\hyperlink{a00347_a760ca18536e4e5b09a2cad3509f700ba}{Test\+Decoder}} (char \texorpdfstring{$\ast$}{*}filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00347_aed4e95d0c6d50bc3f99264337e2f9fb8}\label{a00347_aed4e95d0c6d50bc3f99264337e2f9fb8} 
+\index{decoder.c@{decoder.c}!Decoder\_DecodeBody@{Decoder\_DecodeBody}}
+\index{Decoder\_DecodeBody@{Decoder\_DecodeBody}!decoder.c@{decoder.c}}
+\doxysubsubsection{\texorpdfstring{Decoder\_DecodeBody()}{Decoder\_DecodeBody()}}
+{\footnotesize\ttfamily void Decoder\+\_\+\+Decode\+Body (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{predicted\+\_\+samples,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+decoder.\+h \begin{DoxyAuthor}{Authors}
+@\+Kevin-\/Caldwell @\+Brian\+Sh\+Tsoi
+\end{DoxyAuthor}
+Functions for Decoding an image from a .HSP file
+
+Features Functions for Independently Decoding the Header and Body, or both if necessary.
+
+Uses Core File of the Decoder Module
+
+Dependencies \doxylink{a00113}{image.\+h}
+
+Internal Dependencies stdio.\+h inttypes.\+h
+
+TODO Finish Decoder\+\_\+\+Decode\+Body Finish Decoder\+\_\+\+Decode\+Header Finish Decoder\+\_\+\+Decode\+Image 
+
+Definition at line \mbox{\hyperlink{a00347_source_l00040}{40}} of file \mbox{\hyperlink{a00347_source}{decoder.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{a00347_aeb5d9c2d8630941218ec7b26a666bd61}\label{a00347_aeb5d9c2d8630941218ec7b26a666bd61} 
+\index{decoder.c@{decoder.c}!increment\_xyz@{increment\_xyz}}
+\index{increment\_xyz@{increment\_xyz}!decoder.c@{decoder.c}}
+\doxysubsubsection{\texorpdfstring{increment\_xyz()}{increment\_xyz()}}
+{\footnotesize\ttfamily void increment\+\_\+xyz (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int \texorpdfstring{$\ast$}{*}}]{y,  }\item[{int \texorpdfstring{$\ast$}{*}}]{z,  }\item[{\mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}}}]{Nx,  }\item[{\mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}}}]{Ny,  }\item[{\mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}}}]{Nz }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00347_source_l00017}{17}} of file \mbox{\hyperlink{a00347_source}{decoder.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00347_a760ca18536e4e5b09a2cad3509f700ba}\label{a00347_a760ca18536e4e5b09a2cad3509f700ba} 
+\index{decoder.c@{decoder.c}!TestDecoder@{TestDecoder}}
+\index{TestDecoder@{TestDecoder}!decoder.c@{decoder.c}}
+\doxysubsubsection{\texorpdfstring{TestDecoder()}{TestDecoder()}}
+{\footnotesize\ttfamily void Test\+Decoder (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00347_source_l00135}{135}} of file \mbox{\hyperlink{a00347_source}{decoder.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 3

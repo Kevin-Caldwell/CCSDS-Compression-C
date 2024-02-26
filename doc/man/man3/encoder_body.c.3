@@ -1,0 +1,85 @@
+.TH "src/encoder_body.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/encoder_body.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'encoder/body\&.h'\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'encoder/encoder_helper_functions\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGolombInt\fP \fBGolombPowerTwo\fP (uint16_t j, uint16_t k)"
+.br
+.ti -1c
+.RI "unsigned int \fBInitAccumulatorValue\fP (uint32_t z)"
+.br
+.ti -1c
+.RI "int \fBEncodeBody\fP (\fBimage\fP *hIMG, const char *file_name, const char *write_mode, int buffer_size)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBK\fP = 0"
+.br
+.ti -1c
+.RI "unsigned int \fBU_max\fP = \fBCLIP\fP(\fBUNARY_LENGTH_LIMIT\fP, 8, 32)"
+.br
+.ti -1c
+.RI "int \fBGamma1\fP = 1"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int EncodeBody (\fBimage\fP * hIMG, const char * file_name, const char * write_mode, int buffer_size)"
+
+.PP
+Definition at line \fB44\fP of file \fBencoder_body\&.c\fP\&.
+.SS "\fBGolombInt\fP GolombPowerTwo (uint16_t j, uint16_t k)"
+
+.PP
+Definition at line \fB9\fP of file \fBencoder_body\&.c\fP\&.
+.SS "unsigned int InitAccumulatorValue (uint32_t z)"
+
+.PP
+Definition at line \fB38\fP of file \fBencoder_body\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int Gamma1 = 1"
+
+.PP
+Definition at line \fB7\fP of file \fBencoder_body\&.c\fP\&.
+.SS "int K = 0"
+\fBbody\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Helper Functions for Encoding the body of the Compressed Image
+.PP
+Features Golomb Power-of-Two Accumulator Value Encoding the Body of the Compressed file
+.PP
+Dependencies \fBmath_functions\&.h\fP \fBimage\&.h\fP \fBencoder_constants\&.h\fP \fBstream_encoder\&.h\fP
+.PP
+TODO Validate Results 
+.PP
+Definition at line \fB5\fP of file \fBencoder_body\&.c\fP\&.
+.SS "unsigned int U_max = \fBCLIP\fP(\fBUNARY_LENGTH_LIMIT\fP, 8, 32)"
+
+.PP
+Definition at line \fB6\fP of file \fBencoder_body\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

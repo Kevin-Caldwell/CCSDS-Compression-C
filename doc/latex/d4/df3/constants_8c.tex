@@ -1,0 +1,327 @@
+\doxysection{src/constants.c File Reference}
+\hypertarget{constants_8c}{}\label{constants_8c}\index{src/constants.c@{src/constants.c}}
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+Include dependency graph for constants.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{constants_8c_a45cfb0527526c2a0aec021d50a279091}{GET\+\_\+\+PCONST}}(x)~(\mbox{\hyperlink{hash__table_8h_a27578c1b5a3ab68d8f144ed86ea72cc2}{Hash\+\_\+\+Get\+Value}}(\&\mbox{\hyperlink{global__constants_8h_a3e84b5148948a9a22f804ac78d16590c}{predictor\+\_\+constants}}, x))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{constants_8c_af84e7b9bd8c4fa1203b0040adf941d8d}{Initalize\+Image\+Constants}} (\mbox{\hyperlink{structdim3}{dim3}} size)
+\item 
+void \mbox{\hyperlink{constants_8c_a6acd65af9a2f057ad3f0891038799e5b}{Initalize\+Predictor\+Constants}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{constants_8c_abfda77b016218238359bcc3e5c1600b0}{Nx}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_adcc9183c4659dc09e04e5ede1d79215b}{Ny}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a7a7576e08f5980d322da5f48c7385edc}{Nz}} = 0
+\item 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \mbox{\hyperlink{constants_8c_a3e84b5148948a9a22f804ac78d16590c}{predictor\+\_\+constants}}
+\item 
+\mbox{\hyperlink{struct_hash_table}{Hash\+Table}} \mbox{\hyperlink{constants_8c_a3c652412cc269bd4ae6155fed5f79c6f}{encoder\+\_\+constants}}
+\item 
+int \mbox{\hyperlink{constants_8c_a9f28821bcbb645a7c3ab8a0228335fc5}{k\+Unsigned\+Samples}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_ab11dcc700999baf22e51630cc1e0d7ed}{LOCAL\+\_\+\+SUM\+\_\+\+TYPE}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_aee5860bd3e62fe2734ce27a1b1038dbc}{PREDICTION\+\_\+\+MODE}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_abf6d0ccec2f5157184071729f129de19}{D}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a277c6f02ad4604307ae5ed6d8e4f9630}{Da}} = 0
+\item 
+unsigned int \mbox{\hyperlink{constants_8c_add3510c03fbe63c1b97c67aac517c930}{k\+Smin}} = 0
+\item 
+unsigned int \mbox{\hyperlink{constants_8c_a0dca58ddf3108a022c36b549baa6ec46}{k\+Smid}} = 0
+\item 
+unsigned int \mbox{\hyperlink{constants_8c_a8329a1a244af278852519dfccd0d4814}{k\+Smax}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a21c169290a6c782855c778bb7a0389b9}{kP}} = 0
+\item 
+int64\+\_\+t \mbox{\hyperlink{constants_8c_a43cf89f028c6b6ad01038627b83a84c0}{kR}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a85fbef56eedaaa1a29a9f0c18ba53631}{k\+VMax}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a68b61249aa9c541a3ed6d1987b8c53ce}{k\+VMin}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a2481969fa62464bdc5889190f3e10f31}{k\+TInc}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a515cdf0341e52056bcea8e46c952ee82}{Omega}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_afe552e4b168b0821a5cb40ca9f8df744}{k\+Omega\+Min}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_a919504d752286a3ecacfab4792035e7c}{k\+Omega\+Max}} = 0
+\item 
+int \mbox{\hyperlink{constants_8c_ac27421de69856578bf77ce84bfa82974}{m\+\_\+z}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{constants_8c_a45cfb0527526c2a0aec021d50a279091}\label{constants_8c_a45cfb0527526c2a0aec021d50a279091} 
+\index{constants.c@{constants.c}!GET\_PCONST@{GET\_PCONST}}
+\index{GET\_PCONST@{GET\_PCONST}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{GET\_PCONST}{GET\_PCONST}}
+{\footnotesize\ttfamily \#define GET\+\_\+\+PCONST(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{hash__table_8h_a27578c1b5a3ab68d8f144ed86ea72cc2}{Hash\+\_\+\+Get\+Value}}(\&\mbox{\hyperlink{global__constants_8h_a3e84b5148948a9a22f804ac78d16590c}{predictor\+\_\+constants}}, x))}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00010}{10}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{constants_8c_af84e7b9bd8c4fa1203b0040adf941d8d}\label{constants_8c_af84e7b9bd8c4fa1203b0040adf941d8d} 
+\index{constants.c@{constants.c}!InitalizeImageConstants@{InitalizeImageConstants}}
+\index{InitalizeImageConstants@{InitalizeImageConstants}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{InitalizeImageConstants()}{InitalizeImageConstants()}}
+{\footnotesize\ttfamily void Initalize\+Image\+Constants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00003}{3}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{constants_8c_a6acd65af9a2f057ad3f0891038799e5b}\label{constants_8c_a6acd65af9a2f057ad3f0891038799e5b} 
+\index{constants.c@{constants.c}!InitalizePredictorConstants@{InitalizePredictorConstants}}
+\index{InitalizePredictorConstants@{InitalizePredictorConstants}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{InitalizePredictorConstants()}{InitalizePredictorConstants()}}
+{\footnotesize\ttfamily void Initalize\+Predictor\+Constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00012}{12}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{constants_8c_abf6d0ccec2f5157184071729f129de19}\label{constants_8c_abf6d0ccec2f5157184071729f129de19} 
+\index{constants.c@{constants.c}!D@{D}}
+\index{D@{D}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily int D = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00063}{63}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a277c6f02ad4604307ae5ed6d8e4f9630}\label{constants_8c_a277c6f02ad4604307ae5ed6d8e4f9630} 
+\index{constants.c@{constants.c}!Da@{Da}}
+\index{Da@{Da}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{Da}{Da}}
+{\footnotesize\ttfamily int Da = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00064}{64}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a3c652412cc269bd4ae6155fed5f79c6f}\label{constants_8c_a3c652412cc269bd4ae6155fed5f79c6f} 
+\index{constants.c@{constants.c}!encoder\_constants@{encoder\_constants}}
+\index{encoder\_constants@{encoder\_constants}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{encoder\_constants}{encoder\_constants}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} encoder\+\_\+constants}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00056}{56}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a919504d752286a3ecacfab4792035e7c}\label{constants_8c_a919504d752286a3ecacfab4792035e7c} 
+\index{constants.c@{constants.c}!kOmegaMax@{kOmegaMax}}
+\index{kOmegaMax@{kOmegaMax}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kOmegaMax}{kOmegaMax}}
+{\footnotesize\ttfamily int k\+Omega\+Max = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00079}{79}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_afe552e4b168b0821a5cb40ca9f8df744}\label{constants_8c_afe552e4b168b0821a5cb40ca9f8df744} 
+\index{constants.c@{constants.c}!kOmegaMin@{kOmegaMin}}
+\index{kOmegaMin@{kOmegaMin}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kOmegaMin}{kOmegaMin}}
+{\footnotesize\ttfamily int k\+Omega\+Min = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00078}{78}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a21c169290a6c782855c778bb7a0389b9}\label{constants_8c_a21c169290a6c782855c778bb7a0389b9} 
+\index{constants.c@{constants.c}!kP@{kP}}
+\index{kP@{kP}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kP}{kP}}
+{\footnotesize\ttfamily int kP = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00070}{70}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a43cf89f028c6b6ad01038627b83a84c0}\label{constants_8c_a43cf89f028c6b6ad01038627b83a84c0} 
+\index{constants.c@{constants.c}!kR@{kR}}
+\index{kR@{kR}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kR}{kR}}
+{\footnotesize\ttfamily int64\+\_\+t kR = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00071}{71}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a8329a1a244af278852519dfccd0d4814}\label{constants_8c_a8329a1a244af278852519dfccd0d4814} 
+\index{constants.c@{constants.c}!kSmax@{kSmax}}
+\index{kSmax@{kSmax}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kSmax}{kSmax}}
+{\footnotesize\ttfamily unsigned int k\+Smax = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00068}{68}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a0dca58ddf3108a022c36b549baa6ec46}\label{constants_8c_a0dca58ddf3108a022c36b549baa6ec46} 
+\index{constants.c@{constants.c}!kSmid@{kSmid}}
+\index{kSmid@{kSmid}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kSmid}{kSmid}}
+{\footnotesize\ttfamily unsigned int k\+Smid = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00067}{67}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_add3510c03fbe63c1b97c67aac517c930}\label{constants_8c_add3510c03fbe63c1b97c67aac517c930} 
+\index{constants.c@{constants.c}!kSmin@{kSmin}}
+\index{kSmin@{kSmin}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kSmin}{kSmin}}
+{\footnotesize\ttfamily unsigned int k\+Smin = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00066}{66}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a2481969fa62464bdc5889190f3e10f31}\label{constants_8c_a2481969fa62464bdc5889190f3e10f31} 
+\index{constants.c@{constants.c}!kTInc@{kTInc}}
+\index{kTInc@{kTInc}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kTInc}{kTInc}}
+{\footnotesize\ttfamily int k\+TInc = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00075}{75}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a9f28821bcbb645a7c3ab8a0228335fc5}\label{constants_8c_a9f28821bcbb645a7c3ab8a0228335fc5} 
+\index{constants.c@{constants.c}!kUnsignedSamples@{kUnsignedSamples}}
+\index{kUnsignedSamples@{kUnsignedSamples}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kUnsignedSamples}{kUnsignedSamples}}
+{\footnotesize\ttfamily int k\+Unsigned\+Samples = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00058}{58}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a85fbef56eedaaa1a29a9f0c18ba53631}\label{constants_8c_a85fbef56eedaaa1a29a9f0c18ba53631} 
+\index{constants.c@{constants.c}!kVMax@{kVMax}}
+\index{kVMax@{kVMax}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kVMax}{kVMax}}
+{\footnotesize\ttfamily int k\+VMax = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00073}{73}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a68b61249aa9c541a3ed6d1987b8c53ce}\label{constants_8c_a68b61249aa9c541a3ed6d1987b8c53ce} 
+\index{constants.c@{constants.c}!kVMin@{kVMin}}
+\index{kVMin@{kVMin}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{kVMin}{kVMin}}
+{\footnotesize\ttfamily int k\+VMin = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00074}{74}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_ab11dcc700999baf22e51630cc1e0d7ed}\label{constants_8c_ab11dcc700999baf22e51630cc1e0d7ed} 
+\index{constants.c@{constants.c}!LOCAL\_SUM\_TYPE@{LOCAL\_SUM\_TYPE}}
+\index{LOCAL\_SUM\_TYPE@{LOCAL\_SUM\_TYPE}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{LOCAL\_SUM\_TYPE}{LOCAL\_SUM\_TYPE}}
+{\footnotesize\ttfamily int LOCAL\+\_\+\+SUM\+\_\+\+TYPE = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00059}{59}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_ac27421de69856578bf77ce84bfa82974}\label{constants_8c_ac27421de69856578bf77ce84bfa82974} 
+\index{constants.c@{constants.c}!m\_z@{m\_z}}
+\index{m\_z@{m\_z}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{m\_z}{m\_z}}
+{\footnotesize\ttfamily int m\+\_\+z}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00081}{81}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_abfda77b016218238359bcc3e5c1600b0}\label{constants_8c_abfda77b016218238359bcc3e5c1600b0} 
+\index{constants.c@{constants.c}!Nx@{Nx}}
+\index{Nx@{Nx}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{Nx}{Nx}}
+{\footnotesize\ttfamily int Nx = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00051}{51}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_adcc9183c4659dc09e04e5ede1d79215b}\label{constants_8c_adcc9183c4659dc09e04e5ede1d79215b} 
+\index{constants.c@{constants.c}!Ny@{Ny}}
+\index{Ny@{Ny}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{Ny}{Ny}}
+{\footnotesize\ttfamily int Ny = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00052}{52}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a7a7576e08f5980d322da5f48c7385edc}\label{constants_8c_a7a7576e08f5980d322da5f48c7385edc} 
+\index{constants.c@{constants.c}!Nz@{Nz}}
+\index{Nz@{Nz}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{Nz}{Nz}}
+{\footnotesize\ttfamily int Nz = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00053}{53}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a515cdf0341e52056bcea8e46c952ee82}\label{constants_8c_a515cdf0341e52056bcea8e46c952ee82} 
+\index{constants.c@{constants.c}!Omega@{Omega}}
+\index{Omega@{Omega}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{Omega}{Omega}}
+{\footnotesize\ttfamily int Omega = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00077}{77}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_aee5860bd3e62fe2734ce27a1b1038dbc}\label{constants_8c_aee5860bd3e62fe2734ce27a1b1038dbc} 
+\index{constants.c@{constants.c}!PREDICTION\_MODE@{PREDICTION\_MODE}}
+\index{PREDICTION\_MODE@{PREDICTION\_MODE}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{PREDICTION\_MODE}{PREDICTION\_MODE}}
+{\footnotesize\ttfamily int PREDICTION\+\_\+\+MODE = 0}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00061}{61}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+
+\Hypertarget{constants_8c_a3e84b5148948a9a22f804ac78d16590c}\label{constants_8c_a3e84b5148948a9a22f804ac78d16590c} 
+\index{constants.c@{constants.c}!predictor\_constants@{predictor\_constants}}
+\index{predictor\_constants@{predictor\_constants}!constants.c@{constants.c}}
+\doxysubsubsection{\texorpdfstring{predictor\_constants}{predictor\_constants}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_hash_table}{Hash\+Table}} predictor\+\_\+constants}
+
+
+
+Definition at line \mbox{\hyperlink{constants_8c_source_l00055}{55}} of file \mbox{\hyperlink{constants_8c_source}{constants.\+c}}.
+

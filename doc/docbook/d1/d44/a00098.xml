@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00098" xml:lang="en-US">
+<title>include/predictor/quantizer.h File Reference</title>
+<indexterm><primary>include/predictor/quantizer.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;dst/image.h&quot;<?linebreak?>#include &quot;math/math_functions.h&quot;<?linebreak?>#include &quot;math/linear_algebra.h&quot;<?linebreak?>#include &quot;predictor/sample_representative.h&quot;<?linebreak?></programlisting>Include dependency graph for quantizer.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../da/d74/a00099.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00100.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int32_t <link linkend="_a00098_1afa51bec3d5dfdb41078f60b1a7c454ab">QuantizerIndex</link> (uint16_t sample_value, uint16_t predicted_sample)</para>
+</listitem>
+            <listitem><para><link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link> <link linkend="_a00098_1a1f491e0a435427669942c932394d7c1a">MappedQuantizerIndex</link> (int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_a00098_1ae85d34759565d8a3ab498494786c395b">QuantizerIndexUnmapper</link> (uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)</para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_a00098_1a93be7d02ed2acce98f53818c98ac6cca">PredictionResidual</link> (uint16_t sample_value, uint16_t predicted_sample)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_a00098_1a9d745aa249b8a9cde3f83899b563dcc5">ClippedQuantizerBinCenter</link> (uint16_t sample_value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00098_1a9d745aa249b8a9cde3f83899b563dcc5"/><section>
+    <title>ClippedQuantizerBinCenter()</title>
+<indexterm><primary>ClippedQuantizerBinCenter</primary><secondary>quantizer.h</secondary></indexterm>
+<indexterm><primary>quantizer.h</primary><secondary>ClippedQuantizerBinCenter</secondary></indexterm>
+<para><computeroutput>uint16_t ClippedQuantizerBinCenter (uint16_t sample_value)</computeroutput></para><para>
+Definition at line <link linkend="_a00287_source_1l00003">3</link> of file <link linkend="_a00287_source">quantizer.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_a9d745aa249b8a9cde3f83899b563dcc5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00098_1a1f491e0a435427669942c932394d7c1a"/><section>
+    <title>MappedQuantizerIndex()</title>
+<indexterm><primary>MappedQuantizerIndex</primary><secondary>quantizer.h</secondary></indexterm>
+<indexterm><primary>quantizer.h</primary><secondary>MappedQuantizerIndex</secondary></indexterm>
+<para><computeroutput><link linkend="_a00149_1a5acabcf9a2b0d843de53680562e2f639">data_t</link> MappedQuantizerIndex (int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)</computeroutput></para><para>
+Definition at line <link linkend="_a00287_source_1l00061">61</link> of file <link linkend="_a00287_source">quantizer.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_a1f491e0a435427669942c932394d7c1a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_a1f491e0a435427669942c932394d7c1a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00098_1a93be7d02ed2acce98f53818c98ac6cca"/><section>
+    <title>PredictionResidual()</title>
+<indexterm><primary>PredictionResidual</primary><secondary>quantizer.h</secondary></indexterm>
+<indexterm><primary>quantizer.h</primary><secondary>PredictionResidual</secondary></indexterm>
+<para><computeroutput>int16_t PredictionResidual (uint16_t sample_value, uint16_t predicted_sample)</computeroutput></para><para>
+Definition at line <link linkend="_a00287_source_1l00007">7</link> of file <link linkend="_a00287_source">quantizer.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_a93be7d02ed2acce98f53818c98ac6cca_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00098_1afa51bec3d5dfdb41078f60b1a7c454ab"/><section>
+    <title>QuantizerIndex()</title>
+<indexterm><primary>QuantizerIndex</primary><secondary>quantizer.h</secondary></indexterm>
+<indexterm><primary>quantizer.h</primary><secondary>QuantizerIndex</secondary></indexterm>
+<para><computeroutput>int32_t QuantizerIndex (uint16_t sample_value, uint16_t predicted_sample)</computeroutput></para>
+<para><link linkend="_a00098">quantizer.h</link> <formalpara><title>Author</title>
+
+<para>@Kevin-Caldwell</para>
+</formalpara>
+Functions For Quantizer </para>
+<para>
+Definition at line <link linkend="_a00287_source_1l00011">11</link> of file <link linkend="_a00287_source">quantizer.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_afa51bec3d5dfdb41078f60b1a7c454ab_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_afa51bec3d5dfdb41078f60b1a7c454ab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00098_1ae85d34759565d8a3ab498494786c395b"/><section>
+    <title>QuantizerIndexUnmapper()</title>
+<indexterm><primary>QuantizerIndexUnmapper</primary><secondary>quantizer.h</secondary></indexterm>
+<indexterm><primary>quantizer.h</primary><secondary>QuantizerIndexUnmapper</secondary></indexterm>
+<para><computeroutput>int32_t QuantizerIndexUnmapper (uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)</computeroutput></para><para>
+Definition at line <link linkend="_a00287_source_1l00040">40</link> of file <link linkend="_a00287_source">quantizer.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_ae85d34759565d8a3ab498494786c395b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d44/a00098_ae85d34759565d8a3ab498494786c395b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

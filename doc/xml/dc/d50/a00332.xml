@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dc/d50/a00332" kind="file" language="C++">
+    <compoundname>header.c</compoundname>
+    <includes refid="d1/d09/a00077" local="yes">encoder/header.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>constants/encoder_constants.h</label>
+        <link refid="d5/db1/a00140"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>encoder/encoder_helper_functions.h</label>
+        <link refid="d2/d1f/a00083"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>encoder/header.h</label>
+        <link refid="d1/d09/a00077"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/header.c</label>
+        <link refid="dc/d50/a00332"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="15">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d50/a00332_1ac726367a97f26d89d0e2a44763f43448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrepareImageMetadata</definition>
+        <argsstring>(uint8_t *essential)</argsstring>
+        <name>PrepareImageMetadata</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>essential</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d1/d09/a00077" kindref="compound">header.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+File Contains Functions for Preparing Image, Predictor, Encoder and Entropy coder Header Sections of the Compressed Image. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/header.c" line="5" column="6" bodyfile="src/header.c" bodystart="5" bodyend="53"/>
+        <references refid="d5/db1/a00140_1aefcba2436e62e516a63bdad51613a2e5" compoundref="de/d55/a00323" startline="3">B</references>
+        <references refid="d9/db6/a00146_1abf6d0ccec2f5157184071729f129de19" compoundref="de/d25/a00290" startline="63">D</references>
+        <references refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</references>
+        <references refid="d5/db1/a00140_1aab2a3fdc0e63fde9690b44450a35e26b" compoundref="d5/db1/a00140" startline="32">ENTROPY_CODER</references>
+        <references refid="d9/db6/a00146_1a9f28821bcbb645a7c3ab8a0228335fc5" compoundref="de/d25/a00290" startline="58">kUnsignedSamples</references>
+        <references refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" compoundref="de/d25/a00290" startline="51">Nx</references>
+        <references refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" compoundref="de/d25/a00290" startline="52">Ny</references>
+        <references refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" compoundref="de/d25/a00290" startline="53">Nz</references>
+        <references refid="d2/d1f/a00083_1aa268d136b017ba11fca74d167e36dd34" compoundref="dd/dd7/a00260" startline="3" endline="10">PrintBinary</references>
+        <references refid="d5/db1/a00140_1a7b753f7db0f750b0010df61a3046d2f2" compoundref="d5/db1/a00140" startline="39">QUANTIZER_FIDELITY_CONTROL</references>
+        <references refid="d5/db1/a00140_1ae18bded6a8507a03e0743e2fb320ab3a" compoundref="d5/db1/a00140" startline="43">SIZEOF_HEADER_ESSENTIAL</references>
+        <references refid="d5/db1/a00140_1a0f5679d9c7940eacaf7f99e2de79e5fe" compoundref="d5/db1/a00140" startline="41">TABLE_COUNT</references>
+        <referencedby refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" compoundref="d3/d07/a00305" startline="104" endline="109">TestHeader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d50/a00332_1abab4192db36e8577c377efd110ff5efc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PreparePredictorMetadata</definition>
+        <argsstring>(uint8_t *predicted_metadata)</argsstring>
+        <name>PreparePredictorMetadata</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>predicted_metadata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/header.c" line="56" column="6" bodyfile="src/header.c" bodystart="56" bodyend="96"/>
+        <references refid="d5/db1/a00140_1a18ddd6c43809a62609148ee7843ed4e8" compoundref="d5/db1/a00140" startline="53">BAND_VARYING_DAMPING_FLAG</references>
+        <references refid="d5/db1/a00140_1af19c5cde04e920f045ccf275bac5b2bd" compoundref="d5/db1/a00140" startline="61">BAND_VARYING_OFFSET_FLAG</references>
+        <references refid="d5/db1/a00140_1a37bf74bce23e349834ae376bfd7d66e7" compoundref="d5/db1/a00140" startline="57">DAMPING_TABLE_FLAG</references>
+        <references refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</references>
+        <references refid="d5/db1/a00140_1affbf66e9c65fe62a8677ca4f4b61730a" compoundref="d5/db1/a00140" startline="67">FIXED_DAMPING</references>
+        <references refid="d5/db1/a00140_1a96cc7d5d38f6b98001288a9b302d6796" compoundref="d5/db1/a00140" startline="68">FIXED_OFFSET</references>
+        <references refid="df/d6a/a00119_1a27578c1b5a3ab68d8f144ed86ea72cc2" compoundref="d5/d35/a00266" startline="39" endline="42">Hash_GetValue</references>
+        <references refid="d9/db6/a00146_1a21c169290a6c782855c778bb7a0389b9" compoundref="de/d25/a00290" startline="70">kP</references>
+        <references refid="d9/db6/a00146_1a43cf89f028c6b6ad01038627b83a84c0" compoundref="de/d25/a00290" startline="71">kR</references>
+        <references refid="d9/db6/a00146_1a85fbef56eedaaa1a29a9f0c18ba53631" compoundref="de/d25/a00290" startline="73">kVMax</references>
+        <references refid="d9/db6/a00146_1a68b61249aa9c541a3ed6d1987b8c53ce" compoundref="de/d25/a00290" startline="74">kVMin</references>
+        <references refid="d9/db6/a00146_1ab11dcc700999baf22e51630cc1e0d7ed" compoundref="de/d25/a00290" startline="59">LOCAL_SUM_TYPE</references>
+        <references refid="d5/db1/a00140_1a01ae0a84ae74aeda76855e3248f8de30" compoundref="d5/db1/a00140" startline="65">OFFSET_TABLE_FLAG</references>
+        <references refid="d9/db6/a00146_1a515cdf0341e52056bcea8e46c952ee82" compoundref="de/d25/a00290" startline="77">Omega</references>
+        <references refid="d9/db6/a00146_1aee5860bd3e62fe2734ce27a1b1038dbc" compoundref="de/d25/a00290" startline="61">PREDICTION_MODE</references>
+        <references refid="d2/df5/a00137_1a3e84b5148948a9a22f804ac78d16590c" compoundref="de/d25/a00290" startline="55">predictor_constants</references>
+        <references refid="d9/db6/a00146_1a95d55ebfa2f2f1bd14867ad6a6cc9bfb" compoundref="d9/db6/a00146" startline="56">RESOLUTION</references>
+        <references refid="d5/db1/a00140_1a9591d28de78714ff84008187c0f264a5" compoundref="d5/db1/a00140" startline="45">SAMPLE_REP_FLAG</references>
+        <references refid="d9/db6/a00146_1aa88d01fdf084b6477a2a70e73c56ac5a" compoundref="d9/db6/a00146" startline="65">WEIGHT_EXPONENT_OFFSET_FLAG</references>
+        <references refid="d9/db6/a00146_1a299d67a9aa02ae3a2bd476a639a5be37" compoundref="d9/db6/a00146" startline="61">WEIGHT_INITIALIZATION</references>
+        <references refid="d5/db1/a00140_1ad2efe3db4f03ddf8a0d2494d9c643549" compoundref="d5/db1/a00140" startline="47">WEIGHT_INITIALIZATION_TABLE_FLAG</references>
+        <references refid="d5/db1/a00140_1a8b3f48be0fd9f9bee0fdaf45425a90ed" compoundref="d5/db1/a00140" startline="46">WEO_TABLE_FLAG</references>
+        <referencedby refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" compoundref="d3/d07/a00305" startline="104" endline="109">TestHeader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d50/a00332_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrepareSampleAdaptiveEntropyCoder</definition>
+        <argsstring>(uint8_t *entropy_coder_metadata)</argsstring>
+        <name>PrepareSampleAdaptiveEntropyCoder</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>entropy_coder_metadata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/header.c" line="98" column="6" bodyfile="src/header.c" bodystart="98" bodyend="104"/>
+        <references refid="d5/db1/a00140_1a5da5a1923a6dffb7ba9faee8b7fe7e52" compoundref="d5/db1/a00140" startline="75">ACCUMULATOR_INITIALIZATION</references>
+        <references refid="d5/db1/a00140_1aa929522bb0023aae20ed57e583c3eb62" compoundref="d5/db1/a00140" startline="76">ACCUMULATOR_INITIALIZATION_TABLE_FLAG</references>
+        <references refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</references>
+        <references refid="d5/db1/a00140_1a637670209ee0a097697896588c1cbdef" compoundref="d5/db1/a00140" startline="74">INITIAL_COUNT_EXPONENT</references>
+        <references refid="d5/db1/a00140_1ac06b5b3d7fc01cb19295b60b4421b802" compoundref="d5/db1/a00140" startline="73">RESCALING_COUNTER_SIZE</references>
+        <references refid="d5/db1/a00140_1a2dd7f6568a16cd0cf58bc9f59c6c5f3c" compoundref="d5/db1/a00140" startline="85">UNARY_LENGTH_LIMIT</references>
+        <referencedby refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" compoundref="d3/d07/a00305" startline="104" endline="109">TestHeader</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d09/a00077" kindref="compound">encoder/header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d50/a00332_1ac726367a97f26d89d0e2a44763f43448" kindref="member">PrepareImageMetadata</ref>(uint8_t*<sp/>essential){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>buf;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[1]<sp/>=<sp/>(uint8_t)<sp/>((uint16_t)<sp/><ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref><sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[2]<sp/>=<sp/>(uint8_t)<sp/><ref refid="d9/db6/a00146_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref><sp/>%<sp/>(1<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[3]<sp/>=<sp/>(uint8_t)<sp/>((uint16_t)<sp/><ref refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref><sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[4]<sp/>=<sp/>(uint8_t)<sp/><ref refid="d9/db6/a00146_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref><sp/>%<sp/>(1<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[5]<sp/>=<sp/>(uint8_t)<sp/>((uint16_t)<sp/><ref refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref><sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>essential[6]<sp/>=<sp/>(uint8_t)<sp/><ref refid="d9/db6/a00146_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref><sp/>%<sp/>(1<sp/>&lt;&lt;<sp/>8);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>!<ref refid="d9/db6/a00146_1a9f28821bcbb645a7c3ab8a0228335fc5" kindref="member">kUnsignedSamples</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>UNSIGNED_SAMPLES<sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>FIX<sp/>#DEFINE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>7,<sp/>buf,<sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>7,<sp/>0,<sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>D<sp/>&gt;<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>7,<sp/>buf,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>7,<sp/><ref refid="d9/db6/a00146_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Sample<sp/>Encoding<sp/>Order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>7,<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>10,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>10,<sp/><ref refid="d5/db1/a00140_1aefcba2436e62e516a63bdad51613a2e5" kindref="member">B</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>10,<sp/><ref refid="d5/db1/a00140_1aab2a3fdc0e63fde9690b44450a35e26b" kindref="member">ENTROPY_CODER</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>10,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>11,<sp/><ref refid="d5/db1/a00140_1a7b753f7db0f750b0010df61a3046d2f2" kindref="member">QUANTIZER_FIDELITY_CONTROL</ref>,<sp/><sp/><sp/>2);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>11,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(essential,<sp/>11,<sp/><ref refid="d5/db1/a00140_1a0f5679d9c7940eacaf7f99e2de79e5fe" kindref="member">TABLE_COUNT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="d5/db1/a00140_1ae18bded6a8507a03e0743e2fb320ab3a" kindref="member">SIZEOF_HEADER_ESSENTIAL</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1aa268d136b017ba11fca74d167e36dd34" kindref="member">PrintBinary</ref>(essential[i]);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d50/a00332_1abab4192db36e8577c377efd110ff5efc" kindref="member">PreparePredictorMetadata</ref>(uint8_t*<sp/>predicted_metadata){</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/>primary<sp/>=<sp/>predicted_metadata;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>0,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>0,<sp/><ref refid="d5/db1/a00140_1a9591d28de78714ff84008187c0f264a5" kindref="member">SAMPLE_REP_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>0,<sp/><ref refid="d9/db6/a00146_1a21c169290a6c782855c778bb7a0389b9" kindref="member">kP</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>0,<sp/><ref refid="d9/db6/a00146_1aee5860bd3e62fe2734ce27a1b1038dbc" kindref="member">PREDICTION_MODE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>0,<sp/><ref refid="d9/db6/a00146_1aa88d01fdf084b6477a2a70e73c56ac5a" kindref="member">WEIGHT_EXPONENT_OFFSET_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>1,<sp/><ref refid="d9/db6/a00146_1ab11dcc700999baf22e51630cc1e0d7ed" kindref="member">LOCAL_SUM_TYPE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>1,<sp/><ref refid="d9/db6/a00146_1a43cf89f028c6b6ad01038627b83a84c0" kindref="member">kR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>2,<sp/><ref refid="d9/db6/a00146_1a515cdf0341e52056bcea8e46c952ee82" kindref="member">Omega</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>2,<sp/><ref refid="df/d6a/a00119_1a27578c1b5a3ab68d8f144ed86ea72cc2" kindref="member">Hash_GetValue</ref>(&amp;<ref refid="d2/df5/a00137_1a3e84b5148948a9a22f804ac78d16590c" kindref="member">predictor_constants</ref>,<sp/></highlight><highlight class="stringliteral">&quot;CHANGE_INTERVAL&quot;</highlight><highlight class="normal">)<sp/>-<sp/>4,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>3,<sp/><ref refid="d9/db6/a00146_1a68b61249aa9c541a3ed6d1987b8c53ce" kindref="member">kVMin</ref><sp/>+<sp/>6,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>3,<sp/><ref refid="d9/db6/a00146_1a85fbef56eedaaa1a29a9f0c18ba53631" kindref="member">kVMax</ref><sp/>+<sp/>6,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>4,<sp/><ref refid="d5/db1/a00140_1a8b3f48be0fd9f9bee0fdaf45425a90ed" kindref="member">WEO_TABLE_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>4,<sp/><ref refid="d9/db6/a00146_1a299d67a9aa02ae3a2bd476a639a5be37" kindref="member">WEIGHT_INITIALIZATION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>4,<sp/><ref refid="d5/db1/a00140_1ad2efe3db4f03ddf8a0d2494d9c643549" kindref="member">WEIGHT_INITIALIZATION_TABLE_FLAG</ref>,<sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(primary,<sp/>4,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5);<sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>0:<sp/>Default<sp/>Weight<sp/>Initialization<sp/>Resolution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t*<sp/>sr<sp/>=<sp/>predicted_metadata<sp/>+<sp/>5;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>0,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>0,<sp/><ref refid="d9/db6/a00146_1a95d55ebfa2f2f1bd14867ad6a6cc9bfb" kindref="member">RESOLUTION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>1,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>1,<sp/><ref refid="d5/db1/a00140_1a18ddd6c43809a62609148ee7843ed4e8" kindref="member">BAND_VARYING_DAMPING_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>1,<sp/><ref refid="d5/db1/a00140_1a37bf74bce23e349834ae376bfd7d66e7" kindref="member">DAMPING_TABLE_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>1,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>1,<sp/><ref refid="d5/db1/a00140_1affbf66e9c65fe62a8677ca4f4b61730a" kindref="member">FIXED_DAMPING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>2,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>2,<sp/><ref refid="d5/db1/a00140_1af19c5cde04e920f045ccf275bac5b2bd" kindref="member">BAND_VARYING_OFFSET_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>2,<sp/><ref refid="d5/db1/a00140_1a01ae0a84ae74aeda76855e3248f8de30" kindref="member">OFFSET_TABLE_FLAG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>2,<sp/>0,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(sr,<sp/>2,<sp/><ref refid="d5/db1/a00140_1a96cc7d5d38f6b98001288a9b302d6796" kindref="member">FIXED_OFFSET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="d1/d09/a00077_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d50/a00332_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" kindref="member">PrepareSampleAdaptiveEntropyCoder</ref>(uint8_t*<sp/>entropy_coder_metadata){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(entropy_coder_metadata,<sp/>0,<sp/><ref refid="d5/db1/a00140_1a2dd7f6568a16cd0cf58bc9f59c6c5f3c" kindref="member">UNARY_LENGTH_LIMIT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(entropy_coder_metadata,<sp/>0,<sp/><ref refid="d5/db1/a00140_1ac06b5b3d7fc01cb19295b60b4421b802" kindref="member">RESCALING_COUNTER_SIZE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(entropy_coder_metadata,<sp/>1,<sp/><ref refid="d5/db1/a00140_1a637670209ee0a097697896588c1cbdef" kindref="member">INITIAL_COUNT_EXPONENT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(entropy_coder_metadata,<sp/>1,<sp/><ref refid="d5/db1/a00140_1a5da5a1923a6dffb7ba9faee8b7fe7e52" kindref="member">ACCUMULATOR_INITIALIZATION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(entropy_coder_metadata,<sp/>1,<sp/><ref refid="d5/db1/a00140_1aa929522bb0023aae20ed57e583c3eb62" kindref="member">ACCUMULATOR_INITIALIZATION_TABLE_FLAG</ref>,<sp/><sp/><sp/><sp/>1);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/header.c"/>
+  </compounddef>
+</doxygen>

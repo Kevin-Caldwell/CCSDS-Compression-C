@@ -1,0 +1,51 @@
+.TH "include/decompressor/decoder.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/decompressor/decoder.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'dst/image\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBDecoder_DecodeBody\fP (\fBimage\fP *predicted_samples, const char *file_name)"
+.br
+.ti -1c
+.RI "void \fBTestDecoder\fP (char *filename)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void Decoder_DecodeBody (\fBimage\fP * predicted_samples, const char * file_name)"
+decoder\&.h 
+.PP
+\fBAuthors\fP
+.RS 4
+@Kevin-Caldwell @BrianShTsoi
+.RE
+.PP
+Functions for Decoding an image from a \&.HSP file
+.PP
+Features Functions for Independently Decoding the Header and Body, or both if necessary\&.
+.PP
+Uses Core File of the Decoder Module
+.PP
+Dependencies \fBimage\&.h\fP
+.PP
+Internal Dependencies stdio\&.h inttypes\&.h
+.PP
+TODO Finish Decoder_DecodeBody Finish Decoder_DecodeHeader Finish Decoder_DecodeImage 
+.PP
+Definition at line \fB40\fP of file \fBdecoder\&.c\fP\&.
+.SS "void TestDecoder (char * filename)"
+
+.PP
+Definition at line \fB135\fP of file \fBdecoder\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

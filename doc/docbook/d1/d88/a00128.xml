@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00128" xml:lang="en-US">
+<title>include/files/uhi_io.h File Reference</title>
+<indexterm><primary>include/files/uhi_io.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;inttypes.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &quot;files/file_IO.h&quot;<?linebreak?>#include &quot;math/math_functions.h&quot;<?linebreak?></programlisting>Include dependency graph for uhi_io.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d47/a00129.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d6/db3/a00130.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_a00396">UncompressedHyperspectralImage</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_a00128_1a6aba86f49a9e77ca452352dd1ef8d4af">UHI_CACHE_LENGTH</link>&#160;&#160;&#160;3</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_a00396">UncompressedHyperspectralImage</link> <link linkend="_a00128_1aabf4f060c3ec7817f143c3cbf63ba0c0">F_UHI</link></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_a00396">UncompressedHyperspectralImage</link> <link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_a00396">UncompressedHyperspectralImage</link> <link linkend="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7">uIMG</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00128_1a6114b6569fbd42d5a3fa05f4cd82cc7e">UHI_Initialize</link> (<link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link> *stream, <link linkend="_a00404">dim3</link> buffer_size, const char *file_name, <link linkend="_a00122_1abf7662b304505130b2e87a944038aff0">FileMode</link> <link linkend="_a00122_1a588666511dde277029c4c5afc30782a6">file_mode</link>)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00128_1a88066808c0a718f67bd50a325cdb5721">UHI_WritePixel</link> (const <link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link> *stream, <link linkend="_a00404">dim3</link> index, <link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> value)</para>
+</listitem>
+            <listitem><para><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> <link linkend="_a00128_1ad7fd2d84633ee6e0355a950deeacd220">UHI_ReadPixel</link> (<link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link> *stream, <link linkend="_a00404">dim3</link> index)</para>
+</listitem>
+            <listitem><para><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> <link linkend="_a00128_1aad573fb88befb1cd5c553c20a32027a9">Proxy_GetPixel</link> (<link linkend="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7">uIMG</link> *hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00128_1a1ec6bacb78062b9b8dde4cf3e3eeb923">Proxy_SetPixel</link> (<link linkend="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7">uIMG</link> *hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_a00128_1a6aba86f49a9e77ca452352dd1ef8d4af"/><section>
+    <title>UHI_CACHE_LENGTH</title>
+<indexterm><primary>UHI_CACHE_LENGTH</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>UHI_CACHE_LENGTH</secondary></indexterm>
+<para><computeroutput>#define UHI_CACHE_LENGTH&#160;&#160;&#160;3</computeroutput></para>
+<para><link linkend="_a00128">uhi_io.h</link> <formalpara><title>Authors</title>
+
+<para>@Kevin-Caldwell @lalalalinn</para>
+</formalpara>
+Functions for Uncompressed Hyperspectral Image files. The file consists of 14-bit pixel data stored as 16-bit data, prioritizing fast read and write capabilities.</para>
+
+<para>The First 3 16-bit values store the dimensions of the image, with the format: (Nx, Ny, Nz) </para>
+<para>
+Definition at line <link linkend="_a00128_source_1l00022">22</link> of file <link linkend="_a00128_source">uhi_io.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_a00128_1aabf4f060c3ec7817f143c3cbf63ba0c0"/><section>
+    <title>F_UHI</title>
+<indexterm><primary>F_UHI</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>F_UHI</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_a00396">UncompressedHyperspectralImage</link> <link linkend="_a00128_1aabf4f060c3ec7817f143c3cbf63ba0c0">F_UHI</link></computeroutput></para>
+<para>Stores UHI file streams.</para>
+
+<para>File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.</para>
+
+<para>Designed to be a more RAM-friendly alternative to the image struct defined in <link linkend="_a00113">image.h</link>. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.</para>
+
+<para>fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array </para>
+</section>
+<anchor xml:id="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b"/><section>
+    <title>UHI</title>
+<indexterm><primary>UHI</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>UHI</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_a00396">UncompressedHyperspectralImage</link> <link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link></computeroutput></para></section>
+<anchor xml:id="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7"/><section>
+    <title>uIMG</title>
+<indexterm><primary>uIMG</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>uIMG</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_a00396">UncompressedHyperspectralImage</link> <link linkend="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7">uIMG</link></computeroutput></para></section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00128_1aad573fb88befb1cd5c553c20a32027a9"/><section>
+    <title>Proxy_GetPixel()</title>
+<indexterm><primary>Proxy_GetPixel</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>Proxy_GetPixel</secondary></indexterm>
+<para><computeroutput><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> Proxy_GetPixel (<link linkend="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7">uIMG</link> * hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z)</computeroutput></para><para>
+Definition at line <link linkend="_a00311_source_1l00051">51</link> of file <link linkend="_a00311_source">uhi_io.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_aad573fb88befb1cd5c553c20a32027a9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00128_1a1ec6bacb78062b9b8dde4cf3e3eeb923"/><section>
+    <title>Proxy_SetPixel()</title>
+<indexterm><primary>Proxy_SetPixel</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>Proxy_SetPixel</secondary></indexterm>
+<para><computeroutput>void Proxy_SetPixel (<link linkend="_a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7">uIMG</link> * hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> value)</computeroutput></para><para>
+Definition at line <link linkend="_a00311_source_1l00055">55</link> of file <link linkend="_a00311_source">uhi_io.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_a1ec6bacb78062b9b8dde4cf3e3eeb923_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00128_1a6114b6569fbd42d5a3fa05f4cd82cc7e"/><section>
+    <title>UHI_Initialize()</title>
+<indexterm><primary>UHI_Initialize</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>UHI_Initialize</secondary></indexterm>
+<para><computeroutput>int UHI_Initialize (<link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link> * stream, <link linkend="_a00404">dim3</link> buffer_size, const char * file_name, <link linkend="_a00122_1abf7662b304505130b2e87a944038aff0">FileMode</link> file_mode)</computeroutput></para><para>
+Definition at line <link linkend="_a00311_source_1l00004">4</link> of file <link linkend="_a00311_source">uhi_io.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_a6114b6569fbd42d5a3fa05f4cd82cc7e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_a6114b6569fbd42d5a3fa05f4cd82cc7e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00128_1ad7fd2d84633ee6e0355a950deeacd220"/><section>
+    <title>UHI_ReadPixel()</title>
+<indexterm><primary>UHI_ReadPixel</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>UHI_ReadPixel</secondary></indexterm>
+<para><computeroutput><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> UHI_ReadPixel (<link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link> * stream, <link linkend="_a00404">dim3</link> index)</computeroutput></para><para>
+Definition at line <link linkend="_a00311_source_1l00027">27</link> of file <link linkend="_a00311_source">uhi_io.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_ad7fd2d84633ee6e0355a950deeacd220_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_ad7fd2d84633ee6e0355a950deeacd220_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00128_1a88066808c0a718f67bd50a325cdb5721"/><section>
+    <title>UHI_WritePixel()</title>
+<indexterm><primary>UHI_WritePixel</primary><secondary>uhi_io.h</secondary></indexterm>
+<indexterm><primary>uhi_io.h</primary><secondary>UHI_WritePixel</secondary></indexterm>
+<para><computeroutput>int UHI_WritePixel (const <link linkend="_a00128_1ac3e22f6af3f1d9eb75f08f122711569b">UHI</link> * stream, <link linkend="_a00404">dim3</link> index, <link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> value)</computeroutput></para><para>
+Definition at line <link linkend="_a00311_source_1l00038">38</link> of file <link linkend="_a00311_source">uhi_io.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d88/a00128_a88066808c0a718f67bd50a325cdb5721_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,56 @@
+.TH "python/display_debugging.py" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+python/display_debugging.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBdisplay_debugging\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdisplay_images\fP (i)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "list \fBCacheFiles\fP"
+.br
+.ti -1c
+.RI "\fBnum_images\fP = len(\fBCacheFiles\fP)"
+.br
+.ti -1c
+.RI "int \fBrows\fP = 2 if \fBnum_images\fP > 5 else 1"
+.br
+.ti -1c
+.RI "tuple \fBcols\fP = (\fBnum_images\fP + 1) // 2"
+.br
+.ti -1c
+.RI "\fBfig\fP"
+.br
+.ti -1c
+.RI "\fBaxes\fP"
+.br
+.ti -1c
+.RI "\fBfigsize\fP"
+.br
+.ti -1c
+.RI "list \fBimages\fP = []"
+.br
+.ti -1c
+.RI "\fBanim\fP = FuncAnimation(\fBfig\fP, \fBdisplay_images\fP, frames = 100, interval=1000)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

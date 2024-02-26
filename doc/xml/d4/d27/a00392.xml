@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d4/d27/a00392" kind="struct" language="C++" prot="public">
+    <compoundname>VarIntFileStream</compoundname>
+    <includes refid="da/d2a/a00086" local="no">stream_encoder.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" prot="public" static="no" mutable="no">
+        <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+        <definition>file_t* fs</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <qualifiedname>VarIntFileStream::fs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="22" column="12" bodyfile="include/encoder/stream_encoder.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="da/d2a/a00086_1afbd717a2dd8bee43593e06a3919ba72a" compoundref="d6/d82/a00293" startline="38" endline="40">CloseVarIntegerStream</referencedby>
+        <referencedby refid="da/d2a/a00086_1a0db4a8ab23a4af63c99d5fbfca9073eb" compoundref="d6/d82/a00293" startline="3" endline="10">InitializeVarIntStream</referencedby>
+        <referencedby refid="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" compoundref="d6/d82/a00293" startline="12" endline="36">StreamVarInteger</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d27/a00392_1a1e5757374503c98182efdc688999f91f" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t bit_ptr</definition>
+        <argsstring></argsstring>
+        <name>bit_ptr</name>
+        <qualifiedname>VarIntFileStream::bit_ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="24" column="13" bodyfile="include/encoder/stream_encoder.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="da/d2a/a00086_1a0db4a8ab23a4af63c99d5fbfca9073eb" compoundref="d6/d82/a00293" startline="3" endline="10">InitializeVarIntStream</referencedby>
+        <referencedby refid="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" compoundref="d6/d82/a00293" startline="12" endline="36">StreamVarInteger</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d27/a00392_1a97ecce5e0a58b1ab0ac947547d0ae8f3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t byte_ptr</definition>
+        <argsstring></argsstring>
+        <name>byte_ptr</name>
+        <qualifiedname>VarIntFileStream::byte_ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="25" column="14" bodyfile="include/encoder/stream_encoder.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="da/d2a/a00086_1a0db4a8ab23a4af63c99d5fbfca9073eb" compoundref="d6/d82/a00293" startline="3" endline="10">InitializeVarIntStream</referencedby>
+        <referencedby refid="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" compoundref="d6/d82/a00293" startline="12" endline="36">StreamVarInteger</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d27/a00392_1a35cba028c7b885581f278e533cfc4147" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t buffer[BUFFER_LENGTH]</definition>
+        <argsstring>[BUFFER_LENGTH]</argsstring>
+        <name>buffer</name>
+        <qualifiedname>VarIntFileStream::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="27" column="14" bodyfile="include/encoder/stream_encoder.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" compoundref="d6/d82/a00293" startline="12" endline="36">StreamVarInteger</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/encoder/stream_encoder.h" line="20" column="1" bodyfile="include/encoder/stream_encoder.h" bodystart="21" bodyend="28"/>
+    <listofallmembers>
+      <member refid="d4/d27/a00392_1a1e5757374503c98182efdc688999f91f" prot="public" virt="non-virtual"><scope>VarIntFileStream</scope><name>bit_ptr</name></member>
+      <member refid="d4/d27/a00392_1a35cba028c7b885581f278e533cfc4147" prot="public" virt="non-virtual"><scope>VarIntFileStream</scope><name>buffer</name></member>
+      <member refid="d4/d27/a00392_1a97ecce5e0a58b1ab0ac947547d0ae8f3" prot="public" virt="non-virtual"><scope>VarIntFileStream</scope><name>byte_ptr</name></member>
+      <member refid="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" prot="public" virt="non-virtual"><scope>VarIntFileStream</scope><name>fs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

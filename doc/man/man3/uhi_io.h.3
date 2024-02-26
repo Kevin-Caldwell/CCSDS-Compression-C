@@ -1,0 +1,117 @@
+.TH "include/files/uhi_io.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/files/uhi_io.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'files/file_IO\&.h'\fP
+.br
+\fC#include 'math/math_functions\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBUncompressedHyperspectralImage\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUHI_CACHE_LENGTH\fP   3"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBUncompressedHyperspectralImage\fP \fBF_UHI\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBUncompressedHyperspectralImage\fP \fBUHI\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBUncompressedHyperspectralImage\fP \fBuIMG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBUHI_Initialize\fP (\fBUHI\fP *stream, \fBdim3\fP buffer_size, const char *file_name, \fBFileMode\fP \fBfile_mode\fP)"
+.br
+.ti -1c
+.RI "int \fBUHI_WritePixel\fP (const \fBUHI\fP *stream, \fBdim3\fP index, \fBPIXEL\fP value)"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP \fBUHI_ReadPixel\fP (\fBUHI\fP *stream, \fBdim3\fP index)"
+.br
+.ti -1c
+.RI "\fBPIXEL\fP \fBProxy_GetPixel\fP (\fBuIMG\fP *hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z)"
+.br
+.ti -1c
+.RI "void \fBProxy_SetPixel\fP (\fBuIMG\fP *hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z, \fBPIXEL\fP value)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define UHI_CACHE_LENGTH   3"
+\fBuhi_io\&.h\fP 
+.PP
+\fBAuthors\fP
+.RS 4
+@Kevin-Caldwell @lalalalinn
+.RE
+.PP
+Functions for Uncompressed Hyperspectral Image files\&. The file consists of 14-bit pixel data stored as 16-bit data, prioritizing fast read and write capabilities\&.
+.PP
+The First 3 16-bit values store the dimensions of the image, with the format: (Nx, Ny, Nz) 
+.PP
+Definition at line \fB22\fP of file \fBuhi_io\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBUncompressedHyperspectralImage\fP \fBF_UHI\fP"
+Stores UHI file streams\&.
+.PP
+File format designed to store 16 bit pixel data for Hyperspectral Images\&. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values\&.
+.PP
+Designed to be a more RAM-friendly alternative to the image struct defined in \fBimage\&.h\fP\&. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program\&.
+.PP
+fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array 
+.SS "typedef struct \fBUncompressedHyperspectralImage\fP \fBUHI\fP"
+
+.SS "typedef struct \fBUncompressedHyperspectralImage\fP \fBuIMG\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBPIXEL\fP Proxy_GetPixel (\fBuIMG\fP * hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z)"
+
+.PP
+Definition at line \fB51\fP of file \fBuhi_io\&.c\fP\&.
+.SS "void Proxy_SetPixel (\fBuIMG\fP * hIMG, \fBINDEX\fP x, \fBINDEX\fP y, \fBINDEX\fP z, \fBPIXEL\fP value)"
+
+.PP
+Definition at line \fB55\fP of file \fBuhi_io\&.c\fP\&.
+.SS "int UHI_Initialize (\fBUHI\fP * stream, \fBdim3\fP buffer_size, const char * file_name, \fBFileMode\fP file_mode)"
+
+.PP
+Definition at line \fB4\fP of file \fBuhi_io\&.c\fP\&.
+.SS "\fBPIXEL\fP UHI_ReadPixel (\fBUHI\fP * stream, \fBdim3\fP index)"
+
+.PP
+Definition at line \fB27\fP of file \fBuhi_io\&.c\fP\&.
+.SS "int UHI_WritePixel (const \fBUHI\fP * stream, \fBdim3\fP index, \fBPIXEL\fP value)"
+
+.PP
+Definition at line \fB38\fP of file \fBuhi_io\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

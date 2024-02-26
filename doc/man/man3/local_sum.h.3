@@ -1,0 +1,51 @@
+.TH "include/predictor/local_sum.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/predictor/local_sum.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'constants/constants\&.h'\fP
+.br
+\fC#include 'sample_representative\&.h'\fP
+.br
+\fC#include 'cache/cache_predictor\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLS\fP(hIMG,  z,  y,  x)   \fBFindLocalSum\fP(hIMG, z, y, x)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBFindLocalSum\fP (\fBimage\fP *hIMG, \fBINDEX\fP z, \fBINDEX\fP y, \fBINDEX\fP x)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LS(hIMG, z, y, x)   \fBFindLocalSum\fP(hIMG, z, y, x)"
+\fBlocal_sum\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Functions for finding Local Sum 
+.PP
+Definition at line \fB15\fP of file \fBlocal_sum\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "uint32_t FindLocalSum (\fBimage\fP * hIMG, \fBINDEX\fP z, \fBINDEX\fP y, \fBINDEX\fP x)"
+
+.PP
+Definition at line \fB4\fP of file \fBlocal_sum\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sample__representative_8c" xml:lang="en-US">
+<title>src/sample_representative.c File Reference</title>
+<indexterm><primary>src/sample_representative.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;predictor/sample_representative.h&quot;<?linebreak?></programlisting>Include dependency graph for sample_representative.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d38/sample__representative_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link> <link linkend="_sample__representative_8c_1aca1581c921d082976e7f116aa52c56f0">SampleRepresentative</link> (uint16_t sample_value)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_sample__representative_8c_1a14cff7c59ac94b0387e8b95a433521e9">PredictedSample</link> (uint32_t double_resolution_predicted_sample)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_sample__representative_8c_1a6c60474c610dc64773816bc445efeb77">DoubleResolutionPredictedSample</link> (<link linkend="_structimage">image</link> *hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, int64_t high_resolution_predicted_sample)</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_sample__representative_8c_1a441e8d0fe639d45889aab5b88c4138f4">HighResolutionPredictedSample</link> (int64_t predicted_central_local_difference, uint32_t local_sum)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_sample__representative_8c_1a6c60474c610dc64773816bc445efeb77"/><section>
+    <title>DoubleResolutionPredictedSample()</title>
+<indexterm><primary>DoubleResolutionPredictedSample</primary><secondary>sample_representative.c</secondary></indexterm>
+<indexterm><primary>sample_representative.c</primary><secondary>DoubleResolutionPredictedSample</secondary></indexterm>
+<para><computeroutput>uint32_t DoubleResolutionPredictedSample (<link linkend="_structimage">image</link> * hIMG, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, int64_t high_resolution_predicted_sample)</computeroutput></para><para>
+Definition at line <link linkend="_sample__representative_8c_source_1l00013">13</link> of file <link linkend="_sample__representative_8c_source">sample_representative.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d58/sample__representative_8c_a6c60474c610dc64773816bc445efeb77_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_sample__representative_8c_1a441e8d0fe639d45889aab5b88c4138f4"/><section>
+    <title>HighResolutionPredictedSample()</title>
+<indexterm><primary>HighResolutionPredictedSample</primary><secondary>sample_representative.c</secondary></indexterm>
+<indexterm><primary>sample_representative.c</primary><secondary>HighResolutionPredictedSample</secondary></indexterm>
+<para><computeroutput>int64_t HighResolutionPredictedSample (int64_t predicted_central_local_difference, uint32_t local_sum)</computeroutput></para><para>
+Definition at line <link linkend="_sample__representative_8c_source_1l00027">27</link> of file <link linkend="_sample__representative_8c_source">sample_representative.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d58/sample__representative_8c_a441e8d0fe639d45889aab5b88c4138f4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_sample__representative_8c_1a14cff7c59ac94b0387e8b95a433521e9"/><section>
+    <title>PredictedSample()</title>
+<indexterm><primary>PredictedSample</primary><secondary>sample_representative.c</secondary></indexterm>
+<indexterm><primary>sample_representative.c</primary><secondary>PredictedSample</secondary></indexterm>
+<para><computeroutput>uint16_t PredictedSample (uint32_t double_resolution_predicted_sample)</computeroutput></para><para>
+Definition at line <link linkend="_sample__representative_8c_source_1l00009">9</link> of file <link linkend="_sample__representative_8c_source">sample_representative.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d58/sample__representative_8c_a14cff7c59ac94b0387e8b95a433521e9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_sample__representative_8c_1aca1581c921d082976e7f116aa52c56f0"/><section>
+    <title>SampleRepresentative()</title>
+<indexterm><primary>SampleRepresentative</primary><secondary>sample_representative.c</secondary></indexterm>
+<indexterm><primary>sample_representative.c</primary><secondary>SampleRepresentative</secondary></indexterm>
+<para><computeroutput><link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link> SampleRepresentative (uint16_t sample_value)</computeroutput></para><para>
+Definition at line <link linkend="_sample__representative_8c_source_1l00005">5</link> of file <link linkend="_sample__representative_8c_source">sample_representative.c</link>.</para>
+</section>
+</section>
+</section>

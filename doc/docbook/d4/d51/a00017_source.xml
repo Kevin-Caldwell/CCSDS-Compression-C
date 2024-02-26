@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00017_source" xml:lang="en-US">
+<title>display_debugging.py</title>
+<indexterm><primary>python/display_debugging.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00017_source_1l00001"/><link linkend="_a00357">00001</link> <emphasis role="keyword">import</emphasis>&#32;matplotlib.pyplot&#32;<emphasis role="keyword">as</emphasis>&#32;plt
+<anchor xml:id="_a00017_source_1l00002"/>00002 <emphasis role="keyword">from</emphasis>&#32;matplotlib.animation&#32;<emphasis role="keyword">import</emphasis>&#32;FuncAnimation
+<anchor xml:id="_a00017_source_1l00003"/>00003 
+<anchor xml:id="_a00017_source_1l00004"/><link linkend="_a00357_1a7e69bd3f9400dc258e83fe7ecab1e317">00004</link> CacheFiles&#32;=&#32;[<emphasis role="stringliteral">&quot;raw&quot;</emphasis>,
+<anchor xml:id="_a00017_source_1l00005"/>00005 &#32;&#32;&#32;<emphasis role="stringliteral">&quot;predictor&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;local-sums&quot;</emphasis>]
+<anchor xml:id="_a00017_source_1l00006"/>00006 
+<anchor xml:id="_a00017_source_1l00007"/><link linkend="_a00357_1ac3eb632b1a788eb448ac9474d94a2436">00007</link> num_images&#32;=&#32;len(CacheFiles)
+<anchor xml:id="_a00017_source_1l00008"/><link linkend="_a00357_1a74742cb5c8e2ac354a60cb73383d8176">00008</link> rows&#32;=&#32;2&#32;<emphasis role="keywordflow">if</emphasis>&#32;num_images&#32;&gt;&#32;5&#32;<emphasis role="keywordflow">else</emphasis>&#32;1
+<anchor xml:id="_a00017_source_1l00009"/><link linkend="_a00357_1aaed057ed424ced7429016ec18c2edbb6">00009</link> cols&#32;=&#32;(num_images&#32;+&#32;1)&#32;//&#32;2
+<anchor xml:id="_a00017_source_1l00010"/>00010 
+<anchor xml:id="_a00017_source_1l00011"/><link linkend="_a00357_1addecde06ced656af71c7c68c4e780fe8">00011</link> fig,&#32;axes&#32;=&#32;plt.subplots(rows,&#32;cols,&#32;figsize=(10,&#32;5))
+<anchor xml:id="_a00017_source_1l00012"/>00012 fig.tight_layout()
+<anchor xml:id="_a00017_source_1l00013"/>00013 
+<anchor xml:id="_a00017_source_1l00014"/>00014 
+<anchor xml:id="_a00017_source_1l00015"/><link linkend="_a00357_1a09fdf86df724fb528e53a740e45fb686">00015</link> images&#32;=&#32;[]
+<anchor xml:id="_a00017_source_1l00016"/>00016 
+<anchor xml:id="_a00017_source_1l00017"/><link linkend="_a00357_1a225e5b2e6406c2700aa6a6c884994dc3">00017</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00357_1a225e5b2e6406c2700aa6a6c884994dc3">display_images</link>(i):
+<anchor xml:id="_a00017_source_1l00018"/>00018 &#32;&#32;&#32;&#32;images&#32;=&#32;[]
+<anchor xml:id="_a00017_source_1l00019"/>00019 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00017_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;filename&#32;<emphasis role="keywordflow">in</emphasis>&#32;CacheFiles:
+<anchor xml:id="_a00017_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;images.append(plt.imread(f<emphasis role="stringliteral">&apos;Python/images/{filename}{i}.png&apos;</emphasis>))
+<anchor xml:id="_a00017_source_1l00022"/>00022 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00017_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;num_images&#32;&gt;&#32;10:
+<anchor xml:id="_a00017_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Error:&#32;Maximum&#32;10&#32;images&#32;can&#32;be&#32;displayed.&quot;</emphasis>)
+<anchor xml:id="_a00017_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>
+<anchor xml:id="_a00017_source_1l00026"/>00026 
+<anchor xml:id="_a00017_source_1l00027"/>00027 
+<anchor xml:id="_a00017_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i,&#32;ax&#32;<emphasis role="keywordflow">in</emphasis>&#32;enumerate(axes.flat):
+<anchor xml:id="_a00017_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;i&#32;&lt;&#32;num_images:
+<anchor xml:id="_a00017_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ax.imshow(images[i])
+<anchor xml:id="_a00017_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ax.axis(<emphasis role="stringliteral">&apos;off&apos;</emphasis>)
+<anchor xml:id="_a00017_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00017_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ax.axis(<emphasis role="stringliteral">&apos;off&apos;</emphasis>)
+<anchor xml:id="_a00017_source_1l00034"/>00034 
+<anchor xml:id="_a00017_source_1l00035"/>00035 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00017_source_1l00036"/>00036 
+<anchor xml:id="_a00017_source_1l00037"/>00037 
+<anchor xml:id="_a00017_source_1l00038"/>00038 
+<anchor xml:id="_a00017_source_1l00039"/>00039 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_a00017_source_1l00040"/>00040 
+<anchor xml:id="_a00017_source_1l00041"/><link linkend="_a00357_1a4c913b7a4b89c523eb5240af5d344082">00041</link> &#32;&#32;&#32;&#32;anim&#32;=&#32;FuncAnimation(fig,&#32;display_images,&#32;frames&#32;=&#32;100,&#32;interval=1000)
+<anchor xml:id="_a00017_source_1l00042"/>00042 &#32;&#32;&#32;&#32;plt.show()
+</programlisting></section>

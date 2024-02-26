@@ -1,3 +1,12 @@
+/**
+ * sample_representative.h
+ * @authors @Kevin-Caldwell @BrianShTsoi
+ * 
+ * A collection of Sample representative calculation 
+ * functions.
+*/
+
+
 #ifndef SAMPLE_REPRESENTATIVE_H
 #define SAMPLE_REPRESENTATIVE_H
 

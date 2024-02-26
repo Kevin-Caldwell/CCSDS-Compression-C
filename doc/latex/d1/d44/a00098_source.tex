@@ -1,0 +1,29 @@
+\doxysection{quantizer.\+h}
+\hypertarget{a00098_source}{}\label{a00098_source}\index{include/predictor/quantizer.h@{include/predictor/quantizer.h}}
+\mbox{\hyperlink{a00098}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ QUANTIZER\_H}}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00009}00009\ \textcolor{preprocessor}{\#define\ QUANTIZER\_H}}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00113}{dst/image.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00152}{math/math\_functions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00149}{math/linear\_algebra.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00092}{predictor/sample\_representative.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00016}00016\ int32\_t\ \mbox{\hyperlink{a00098_afa51bec3d5dfdb41078f60b1a7c454ab}{QuantizerIndex}}(uint16\_t\ sample\_value,\ uint16\_t\ predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00018}00018\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{a00098_a1f491e0a435427669942c932394d7c1a}{MappedQuantizerIndex}}(int32\_t\ quantizer\_index,\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ predicted\_sample,\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ double\_res\_predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00022}00022\ int32\_t\ \mbox{\hyperlink{a00098_ae85d34759565d8a3ab498494786c395b}{QuantizerIndexUnmapper}}(uint16\_t\ mapped\_delta,\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ predicted\_sample,\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ drps);}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00026}00026\ int16\_t\ \mbox{\hyperlink{a00098_a93be7d02ed2acce98f53818c98ac6cca}{PredictionResidual}}(uint16\_t\ sample\_value,\ uint16\_t\ predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00027}00027\ uint16\_t\ \mbox{\hyperlink{a00098_a9d745aa249b8a9cde3f83899b563dcc5}{ClippedQuantizerBinCenter}}(uint16\_t\ sample\_value);}
+\DoxyCodeLine{\Hypertarget{a00098_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{a00098_source_l00029}00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ QUANTIZER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

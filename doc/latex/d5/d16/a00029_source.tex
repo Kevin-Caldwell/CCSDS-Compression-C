@@ -1,0 +1,30 @@
+\doxysection{file\+\_\+stats.\+py}
+\hypertarget{a00029_source}{}\label{a00029_source}\index{python/file\_stats.py@{python/file\_stats.py}}
+\mbox{\hyperlink{a00029}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00001}\mbox{\hyperlink{a00359}{00001}}\ \textcolor{keyword}{from}\ csv\_io\ \textcolor{keyword}{import}\ ReadCSV}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00002}00002\ \textcolor{keyword}{import}\ sys}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00003}00003\ \textcolor{keyword}{import}\ compression\ \textcolor{keyword}{as}\ comp}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{a00029_source_l00005}\mbox{\hyperlink{a00359_a473892ba0152ef4e5eda5695d64603e2}{00005}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00359_a473892ba0152ef4e5eda5695d64603e2}{compression\_ratio}}(data,\ compressed):}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00006}00006\ \ \ \ \ \textcolor{comment}{\#\ data16int\ =\ np.array(data,\ dtype=np.uint16)}}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00007}00007\ \ \ \ \ \textcolor{comment}{\#\ return\ len(np.asarray(data16int).tobytes()\ *\ 8)\ /\ len(compressed)}}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00008}00008\ \ \ \ \ print(data.shape[0],\ data.shape[1],\ data.shape[2],\ comp.D,\ len(compressed))}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{return}\ len(compressed)\ /\ (data.size\ *\ comp.D),\ len(compressed)\ /\ 1000000}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{a00029_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{a00029_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{a00029_source_l00013}\mbox{\hyperlink{a00359_a5e923c6c785648e0a14fa3a4825120e9}{00013}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00359_a5e923c6c785648e0a14fa3a4825120e9}{file\_info}}(file\_path):}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00014}00014\ \ \ \ \ data\ =\ ReadCSV(filename=file\_path)}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00015}00015\ \ \ \ \ encoded\ =\ comp.encoder(data)}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{a00359_a473892ba0152ef4e5eda5695d64603e2}{compression\_ratio}}(data,\ encoded)}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{a00029_source_l00018}00018\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00019}\mbox{\hyperlink{a00359_aeab71244afb687f16d8c4f5ee9d6ef0e}{00019}}\ \ \ \ \ n\ =\ len(sys.argv)}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{if}\ n\ >\ 1:}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00021}00021\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Hllo"{}})}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00023}00023\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Compression\ Results:"{}},\ \mbox{\hyperlink{a00359_a5e923c6c785648e0a14fa3a4825120e9}{file\_info}}(\textcolor{stringliteral}{"{}data/results/CRESULT\_640x512x640\_0\_predicted.csv"{}}))}
+\DoxyCodeLine{\Hypertarget{a00029_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#print("{}Python\ Results:"{},\ file\_info("{}data/results/PYTHONRESULT\_100x100x100\_0\_predicted.csv"{}))}}
+
+\end{DoxyCode}

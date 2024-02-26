@@ -1,0 +1,68 @@
+.TH "include/predictor/quantizer.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/predictor/quantizer.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'dst/image\&.h'\fP
+.br
+\fC#include 'math/math_functions\&.h'\fP
+.br
+\fC#include 'math/linear_algebra\&.h'\fP
+.br
+\fC#include 'predictor/sample_representative\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBQuantizerIndex\fP (uint16_t sample_value, uint16_t predicted_sample)"
+.br
+.ti -1c
+.RI "\fBdata_t\fP \fBMappedQuantizerIndex\fP (int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)"
+.br
+.ti -1c
+.RI "int32_t \fBQuantizerIndexUnmapper\fP (uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)"
+.br
+.ti -1c
+.RI "int16_t \fBPredictionResidual\fP (uint16_t sample_value, uint16_t predicted_sample)"
+.br
+.ti -1c
+.RI "uint16_t \fBClippedQuantizerBinCenter\fP (uint16_t sample_value)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "uint16_t ClippedQuantizerBinCenter (uint16_t sample_value)"
+
+.PP
+Definition at line \fB3\fP of file \fBquantizer\&.c\fP\&.
+.SS "\fBdata_t\fP MappedQuantizerIndex (int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)"
+
+.PP
+Definition at line \fB61\fP of file \fBquantizer\&.c\fP\&.
+.SS "int16_t PredictionResidual (uint16_t sample_value, uint16_t predicted_sample)"
+
+.PP
+Definition at line \fB7\fP of file \fBquantizer\&.c\fP\&.
+.SS "int32_t QuantizerIndex (uint16_t sample_value, uint16_t predicted_sample)"
+\fBquantizer\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Functions For Quantizer 
+.PP
+Definition at line \fB11\fP of file \fBquantizer\&.c\fP\&.
+.SS "int32_t QuantizerIndexUnmapper (uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)"
+
+.PP
+Definition at line \fB40\fP of file \fBquantizer\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

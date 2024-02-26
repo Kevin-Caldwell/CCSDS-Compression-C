@@ -1,0 +1,30 @@
+\doxysection{reconstructor.\+h}
+\hypertarget{reconstructor_8h_source}{}\label{reconstructor_8h_source}\index{include/decompressor/reconstructor.h@{include/decompressor/reconstructor.h}}
+\mbox{\hyperlink{reconstructor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00037}00037\ \textcolor{preprocessor}{\#ifndef\ RECONSTRUCTOR\_H}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00038}00038\ \textcolor{preprocessor}{\#define\ RECONSTRUCTOR\_H}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00040}00040\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00041}00041\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math__functions_8h}{math/math\_functions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00042}00042\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{linear__algebra_8h}{math/linear\_algebra.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00043}00043\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00044}00044\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{quantizer_8h}{predictor/quantizer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00045}00045\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csv-io_8h}{files/csv-\/io.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00046}00046\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00047}00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{predictor_8h}{predictor/predictor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00049}\mbox{\hyperlink{reconstructor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}{00049}}\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00050}00050\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{reconstructor_8h_a5464533d23b59ba11030432e73528730}{C}};}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00051}\mbox{\hyperlink{reconstructor_8h_ad4115f40f38a206246691fa2c1d1c9db}{00051}}\ \textcolor{keyword}{typedef}\ uint32\_t\ \mbox{\hyperlink{reconstructor_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}};}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00053}00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{reconstructor_8h_a939a70de0c04a2c4e970e4c242ff0f21}{ReconstructPixel}}(\mbox{\hyperlink{structimage}{image}}\ *hIMG,\ \mbox{\hyperlink{structimage}{image}}\ *result,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ z,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ y,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ x,\ FILE*\ file\_ptr);}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00055}00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{reconstructor_8h_ad0d5b55646a3018075f07ae472ddb312}{Reconstructor}}(\mbox{\hyperlink{structimage}{image}}*\ predicted\_values,\ \mbox{\hyperlink{structimage}{image}}*\ reconstructed,\ FILE*\ file\_ptr);}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00057}00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{reconstructor_8h_aadb567bbc159d00d6334e2eb36e6e253}{TestReconstructor}}(\textcolor{keywordtype}{char}*\ file\_name);}
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{reconstructor_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ RECONSTRUCTOR\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_83b6a697835ddc3a114ddfd5666c7cf2" xml:lang="en-US">
+<title>include/cache Directory Reference</title>
+<indexterm><primary>include/cache Directory Reference</primary></indexterm>
+Directory dependency graph for cache:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_83b6a697835ddc3a114ddfd5666c7cf2_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_cache__predictor_8h">cache_predictor.h</link></para>
+
+<para>Deprecated, Used as a buffer for debugging and temporary storage. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

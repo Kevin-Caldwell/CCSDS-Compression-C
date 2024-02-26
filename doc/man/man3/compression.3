@@ -1,0 +1,261 @@
+.TH "compression" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+compression
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPs\fP (z)"
+.br
+.ti -1c
+.RI "\fBlocal_sum\fP (x, y, z, data)"
+.br
+.ti -1c
+.RI "\fBlocal_diff_vector\fP (x, y, z, data)"
+.br
+.ti -1c
+.RI "\fBinit_weight_vector\fP (z)"
+.br
+.ti -1c
+.RI "\fBprediction\fP (ld_vector, weight_vector, x, y, z, data)"
+.br
+.ti -1c
+.RI "\fBupdated_weight_vector\fP (s_tilde, weight_vector, ld_vector, x, y, z, data)"
+.br
+.ti -1c
+.RI "\fBmapper\fP (delta, s_hat, s_tilde)"
+.br
+.ti -1c
+.RI "\fBpredictor\fP (data)"
+.br
+.ti -1c
+.RI "\fBpredictor_debug\fP (data)"
+.br
+.ti -1c
+.RI "\fBGPO2\fP (k, j)"
+.br
+.ti -1c
+.RI "\fBencoder\fP (mapped_delta)"
+.br
+.ti -1c
+.RI "\fBincrement_xyz\fP (x, y, z, \fBNx\fP, \fBNy\fP, \fBNz\fP)"
+.br
+.ti -1c
+.RI "\fBinv_GPO2\fP (k, encoded, i)"
+.br
+.ti -1c
+.RI "\fBdecoder\fP (encoded, \fBNx\fP, \fBNy\fP, \fBNz\fP)"
+.br
+.ti -1c
+.RI "\fBunmapper\fP (mapped_delta, s_hat, s_tilde)"
+.br
+.ti -1c
+.RI "np\&.array \fBunpredictor\fP (np\&.array mapped, int \fBNx\fP, int \fBNy\fP, int \fBNz\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBD\fP = 14"
+.br
+.ti -1c
+.RI "int \fBS_MIN\fP = 0"
+.br
+.ti -1c
+.RI "int \fBS_MAX\fP = 2**(\fBD\fP) \- 1"
+.br
+.ti -1c
+.RI "int \fBS_MID\fP = 2**(\fBD\fP \- 1)"
+.br
+.ti -1c
+.RI "int \fBP\fP = 3"
+.br
+.ti -1c
+.RI "int \fBW_RES\fP = 19"
+.br
+.ti -1c
+.RI "\fBW_MIN\fP = \-(2**(\fBW_RES\fP + 2))"
+.br
+.ti -1c
+.RI "int \fBW_MAX\fP = 2**(\fBW_RES\fP + 2) \- 1"
+.br
+.ti -1c
+.RI "int \fBR\fP = 35"
+.br
+.ti -1c
+.RI "int \fBM\fP = 0"
+.br
+.ti -1c
+.RI "int \fBV_MIN\fP = \-6"
+.br
+.ti -1c
+.RI "int \fBV_MAX\fP = 9"
+.br
+.ti -1c
+.RI "int \fBT_INC\fP = 2**4"
+.br
+.ti -1c
+.RI "int \fBU_MAX\fP = 8"
+.br
+.ti -1c
+.RI "int \fBGAMMA_0\fP = 1"
+.br
+.ti -1c
+.RI "int \fBK\fP = 0"
+.br
+.ti -1c
+.RI "int \fBGAMMA_STAR\fP = 5"
+.br
+.ti -1c
+.RI "int \fBK_ZPRIME\fP = \fBK\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "decoder ( encoded,  Nx,  Ny,  Nz)"
+
+.PP
+Definition at line \fB305\fP of file \fBcompression\&.py\fP\&.
+.SS "encoder ( mapped_delta)"
+
+.PP
+Definition at line \fB225\fP of file \fBcompression\&.py\fP\&.
+.SS "GPO2 ( k,  j)"
+
+.PP
+Definition at line \fB212\fP of file \fBcompression\&.py\fP\&.
+.SS "increment_xyz ( x,  y,  z,  Nx,  Ny,  Nz)"
+
+.PP
+Definition at line \fB275\fP of file \fBcompression\&.py\fP\&.
+.SS "init_weight_vector ( z)"
+
+.PP
+Definition at line \fB81\fP of file \fBcompression\&.py\fP\&.
+.SS "inv_GPO2 ( k,  encoded,  i)"
+
+.PP
+Definition at line \fB285\fP of file \fBcompression\&.py\fP\&.
+.SS "local_diff_vector ( x,  y,  z,  data)"
+
+.PP
+Definition at line \fB54\fP of file \fBcompression\&.py\fP\&.
+.SS "local_sum ( x,  y,  z,  data)"
+
+.PP
+Definition at line \fB38\fP of file \fBcompression\&.py\fP\&.
+.SS "mapper ( delta,  s_hat,  s_tilde)"
+
+.PP
+Definition at line \fB147\fP of file \fBcompression\&.py\fP\&.
+.SS "prediction ( ld_vector,  weight_vector,  x,  y,  z,  data)"
+
+.PP
+Definition at line \fB96\fP of file \fBcompression\&.py\fP\&.
+.SS "predictor ( data)"
+
+.PP
+Definition at line \fB160\fP of file \fBcompression\&.py\fP\&.
+.SS "predictor_debug ( data)"
+
+.PP
+Definition at line \fB187\fP of file \fBcompression\&.py\fP\&.
+.SS "Ps ( z)"
+
+.PP
+Definition at line \fB34\fP of file \fBcompression\&.py\fP\&.
+.SS "unmapper ( mapped_delta,  s_hat,  s_tilde)"
+
+.PP
+Definition at line \fB349\fP of file \fBcompression\&.py\fP\&.
+.SS " np\&.array unpredictor (np\&.array mapped, int Nx, int Ny, int Nz)"
+
+.PP
+Definition at line \fB361\fP of file \fBcompression\&.py\fP\&.
+.SS "updated_weight_vector ( s_tilde,  weight_vector,  ld_vector,  x,  y,  z,  data)"
+
+.PP
+Definition at line \fB126\fP of file \fBcompression\&.py\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int D = 14"
+
+.PP
+Definition at line \fB5\fP of file \fBcompression\&.py\fP\&.
+.SS "int GAMMA_0 = 1"
+
+.PP
+Definition at line \fB23\fP of file \fBcompression\&.py\fP\&.
+.SS "int GAMMA_STAR = 5"
+
+.PP
+Definition at line \fB26\fP of file \fBcompression\&.py\fP\&.
+.SS "int K = 0"
+
+.PP
+Definition at line \fB25\fP of file \fBcompression\&.py\fP\&.
+.SS "int K_ZPRIME = \fBK\fP"
+
+.PP
+Definition at line \fB29\fP of file \fBcompression\&.py\fP\&.
+.SS "int M = 0"
+
+.PP
+Definition at line \fB15\fP of file \fBcompression\&.py\fP\&.
+.SS "int P = 3"
+
+.PP
+Definition at line \fB10\fP of file \fBcompression\&.py\fP\&.
+.SS "int R = 35"
+
+.PP
+Definition at line \fB14\fP of file \fBcompression\&.py\fP\&.
+.SS "int S_MAX = 2**(\fBD\fP) \- 1"
+
+.PP
+Definition at line \fB7\fP of file \fBcompression\&.py\fP\&.
+.SS "int S_MID = 2**(\fBD\fP \- 1)"
+
+.PP
+Definition at line \fB8\fP of file \fBcompression\&.py\fP\&.
+.SS "int S_MIN = 0"
+
+.PP
+Definition at line \fB6\fP of file \fBcompression\&.py\fP\&.
+.SS "int T_INC = 2**4"
+
+.PP
+Definition at line \fB19\fP of file \fBcompression\&.py\fP\&.
+.SS "int U_MAX = 8"
+
+.PP
+Definition at line \fB22\fP of file \fBcompression\&.py\fP\&.
+.SS "int V_MAX = 9"
+
+.PP
+Definition at line \fB18\fP of file \fBcompression\&.py\fP\&.
+.SS "int V_MIN = \-6"
+
+.PP
+Definition at line \fB17\fP of file \fBcompression\&.py\fP\&.
+.SS "int W_MAX = 2**(\fBW_RES\fP + 2) \- 1"
+
+.PP
+Definition at line \fB13\fP of file \fBcompression\&.py\fP\&.
+.SS "W_MIN = \-(2**(\fBW_RES\fP + 2))"
+
+.PP
+Definition at line \fB12\fP of file \fBcompression\&.py\fP\&.
+.SS "int W_RES = 19"
+
+.PP
+Definition at line \fB11\fP of file \fBcompression\&.py\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

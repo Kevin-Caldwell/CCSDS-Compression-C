@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ef4c7dabb16c9bee1e17c47c3bb25728" xml:lang="en-US">
+<title>include/decoder Directory Reference</title>
+<indexterm><primary>include/decoder Directory Reference</primary></indexterm>
+Directory dependency graph for decoder:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_ef4c7dabb16c9bee1e17c47c3bb25728_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_decoder_2decoder_8h">decoder.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

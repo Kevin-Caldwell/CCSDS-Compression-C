@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00032_source" xml:lang="en-US">
+<title>compression.py</title>
+<indexterm><primary>python/compression.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00032_source_1l00001"/><link linkend="_a00355">00001</link> <emphasis role="keyword">import</emphasis>&#32;numpy&#32;<emphasis role="keyword">as</emphasis>&#32;np
+<anchor xml:id="_a00032_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;helperlib
+<anchor xml:id="_a00032_source_1l00003"/>00003 
+<anchor xml:id="_a00032_source_1l00004"/>00004 <emphasis role="comment">#&#32;Parameters&#32;for&#32;Compression</emphasis>
+<anchor xml:id="_a00032_source_1l00005"/><link linkend="_a00355_1abf6d0ccec2f5157184071729f129de19">00005</link> D&#32;=&#32;14&#32;<emphasis role="comment">#&#32;dynamic&#32;range,&#32;number&#32;of&#32;bits&#32;for&#32;sample&#32;size&#32;value&#32;(between&#32;2&#32;to&#32;32)</emphasis>
+<anchor xml:id="_a00032_source_1l00006"/><link linkend="_a00355_1a80970133e7290ddaa15b6d949fc99420">00006</link> S_MIN&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00007"/><link linkend="_a00355_1a04632c156a04ad172a367f2760582928">00007</link> S_MAX&#32;=&#32;2**(D)&#32;-&#32;1
+<anchor xml:id="_a00032_source_1l00008"/><link linkend="_a00355_1af02faf18c4b6fb6841abaf0b3142cc92">00008</link> S_MID&#32;=&#32;2**(D&#32;-&#32;1)
+<anchor xml:id="_a00032_source_1l00009"/>00009 
+<anchor xml:id="_a00032_source_1l00010"/><link linkend="_a00355_1aef94be98e2c9e4a4dece75f60ca9792c">00010</link> P&#32;=&#32;3&#32;<emphasis role="comment">#&#32;&#32;number&#32;of&#32;previous&#32;bands&#32;used&#32;for&#32;prediction&#32;(between&#32;2-15)</emphasis>
+<anchor xml:id="_a00032_source_1l00011"/><link linkend="_a00355_1aa3e9a982c10101613c6a1dd1fb3279f6">00011</link> W_RES&#32;=&#32;19&#32;<emphasis role="comment">#&#32;Omega,&#32;between&#32;4&#32;and&#32;19</emphasis>
+<anchor xml:id="_a00032_source_1l00012"/><link linkend="_a00355_1a999bcfcc11e2794539308d5015455f59">00012</link> W_MIN&#32;=&#32;-(2**(W_RES&#32;+&#32;2))&#32;<emphasis role="comment">#&#32;W_MIN&#32;and&#32;W_MAX&#32;values&#32;are&#32;used&#32;in&#32;weight&#32;updates&#32;(Equation&#32;30)</emphasis>
+<anchor xml:id="_a00032_source_1l00013"/><link linkend="_a00355_1add63171ca968cbd5ca4d60dfbf9a2746">00013</link> W_MAX&#32;=&#32;2**(W_RES&#32;+&#32;2)&#32;-&#32;1
+<anchor xml:id="_a00032_source_1l00014"/><link linkend="_a00355_1a3d90133d3051fbc4816d02efd9566d8e">00014</link> R&#32;=&#32;35&#32;<emphasis role="comment">#&#32;User-defined&#32;parameter&#32;from&#32;max{32,&#32;2^(D&#32;+&#32;W_RES&#32;+&#32;1)}&#32;to&#32;64</emphasis>
+<anchor xml:id="_a00032_source_1l00015"/><link linkend="_a00355_1a5e78dbd5fd0fc01ba7b98dd15e27221e">00015</link> M&#32;=&#32;0&#32;<emphasis role="comment">#&#32;Maximum&#32;Error</emphasis>
+<anchor xml:id="_a00032_source_1l00016"/>00016 
+<anchor xml:id="_a00032_source_1l00017"/><link linkend="_a00355_1a6238c0ecdac57d88d1f30259c60238cc">00017</link> V_MIN&#32;=&#32;-6&#32;<emphasis role="comment">#&#32;V_MIN&#32;and&#32;V_MAX&#32;are&#32;user-defined&#32;parameters&#32;that&#32;control&#32;the&#32;rate&#32;at&#32;which&#32;the&#32;algorithm&#32;adapts&#32;to&#32;data&#32;statistics</emphasis>
+<anchor xml:id="_a00032_source_1l00018"/><link linkend="_a00355_1ae2de9b8731e1c54a74579610837e59c0">00018</link> V_MAX&#32;=&#32;9&#32;<emphasis role="comment">#&#32;-6&#32;&lt;=&#32;v_min&#32;&lt;&#32;v_max&#32;&lt;=&#32;9</emphasis>
+<anchor xml:id="_a00032_source_1l00019"/><link linkend="_a00355_1aa911c208b6f29485ce4b65c73b7f72f8">00019</link> T_INC&#32;=&#32;2**4&#32;<emphasis role="comment">#parameter&#32;from&#32;2^4&#32;to&#32;2^11</emphasis>
+<anchor xml:id="_a00032_source_1l00020"/>00020 
+<anchor xml:id="_a00032_source_1l00021"/>00021 <emphasis role="comment">#&#32;Parameters&#32;for&#32;Decompression</emphasis>
+<anchor xml:id="_a00032_source_1l00022"/><link linkend="_a00355_1a633454f54a1d7f2439a65666d71f9271">00022</link> U_MAX&#32;=&#32;8&#32;<emphasis role="comment">#&#32;Unary&#32;length&#32;limit&#32;-&#32;ranges&#32;between&#32;8&#32;and&#32;32,&#32;each&#32;code&#32;word&#32;is&#32;not&#32;longer&#32;than&#32;U_MAX&#32;+&#32;D</emphasis>
+<anchor xml:id="_a00032_source_1l00023"/><link linkend="_a00355_1a7880c4643e340683b530ce1609a8fd47">00023</link> GAMMA_0&#32;=&#32;1&#32;<emphasis role="comment">#&#32;Initial&#32;count&#32;exponent&#32;used&#32;for&#32;adaptive&#32;statistics&#32;-&#32;ranges&#32;from&#32;1&#32;to&#32;8</emphasis>
+<anchor xml:id="_a00032_source_1l00024"/>00024 
+<anchor xml:id="_a00032_source_1l00025"/><link linkend="_a00355_1a2689c4b3931025b79053532a5f1b0a85">00025</link> K&#32;=&#32;0&#32;<emphasis role="comment">#&#32;Accumulator&#32;initialization&#32;constant,&#32;user&#32;specified&#32;parameter&#32;from&#32;0&#32;to&#32;min(D-2,14)</emphasis>
+<anchor xml:id="_a00032_source_1l00026"/><link linkend="_a00355_1a3272087e7728ef865ea990a98baf8395">00026</link> GAMMA_STAR&#32;=&#32;5&#32;<emphasis role="comment">#&#32;used&#32;to&#32;rescale&#32;the&#32;counter&#32;-&#32;a&#32;value&#32;from&#32;4&#32;to&#32;11</emphasis>
+<anchor xml:id="_a00032_source_1l00027"/>00027 
+<anchor xml:id="_a00032_source_1l00028"/>00028 <emphasis role="keywordflow">if</emphasis>&#32;(K&#32;&lt;=&#32;30&#32;-&#32;D):
+<anchor xml:id="_a00032_source_1l00029"/><link linkend="_a00355_1aa92b3873c7c4a40451e43cc6b2cd53f1">00029</link> &#32;&#32;&#32;&#32;K_ZPRIME&#32;=&#32;K
+<anchor xml:id="_a00032_source_1l00030"/>00030 <emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00031"/>00031 &#32;&#32;&#32;&#32;K_ZPRIME&#32;=&#32;2&#32;*&#32;K&#32;+&#32;D&#32;-&#32;30
+<anchor xml:id="_a00032_source_1l00032"/>00032 
+<anchor xml:id="_a00032_source_1l00033"/>00033 <emphasis role="comment">#&#32;Number&#32;of&#32;bands&#32;for&#32;predictions</emphasis>
+<anchor xml:id="_a00032_source_1l00034"/><link linkend="_a00355_1a7251716b703096793ed329f6b8469300">00034</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00110_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</link>(z):
+<anchor xml:id="_a00032_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;min(P,&#32;z)
+<anchor xml:id="_a00032_source_1l00036"/>00036 
+<anchor xml:id="_a00032_source_1l00037"/>00037 <emphasis role="comment">#&#32;Note&#32;that&#32;if&#32;x&#32;==&#32;0&#32;and&#32;y&#32;==&#32;0,&#32;local&#32;sum&#32;is&#32;not&#32;defined</emphasis>
+<anchor xml:id="_a00032_source_1l00038"/><link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">00038</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data):
+<anchor xml:id="_a00032_source_1l00039"/>00039 &#32;&#32;&#32;&#32;Nx&#32;=&#32;data.shape[0]
+<anchor xml:id="_a00032_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;y&#32;&gt;&#32;0&#32;&#32;<emphasis role="keywordflow">and</emphasis>&#32;x&#32;&gt;&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;x&#32;&lt;&#32;(Nx&#32;-&#32;1):&#32;
+<anchor xml:id="_a00032_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;data[x-1,&#32;y,&#32;z]&#32;+&#32;data[x-1,&#32;y-1,&#32;z]&#32;+&#32;data[x,&#32;y-1,&#32;z]&#32;+&#32;data[x+1,&#32;y-1,&#32;z]
+<anchor xml:id="_a00032_source_1l00042"/>00042 
+<anchor xml:id="_a00032_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;y&#32;==&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;x&#32;&gt;&#32;0:
+<anchor xml:id="_a00032_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;4&#32;*&#32;(data[x-1,&#32;y,&#32;z])
+<anchor xml:id="_a00032_source_1l00045"/>00045 
+<anchor xml:id="_a00032_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;y&#32;&gt;&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;x&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2&#32;*&#32;(data[x,&#32;y-1,&#32;z]&#32;+&#32;data[x+1,&#32;y-1,&#32;z])
+<anchor xml:id="_a00032_source_1l00048"/>00048 
+<anchor xml:id="_a00032_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;y&#32;&gt;&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;x&#32;==&#32;(Nx&#32;-&#32;1):
+<anchor xml:id="_a00032_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;data[x-1,&#32;y,&#32;z]&#32;+&#32;data[x-1,&#32;y-1,&#32;z]&#32;+&#32;2&#32;*&#32;data[x,&#32;y-1,&#32;z]
+<anchor xml:id="_a00032_source_1l00051"/>00051 
+<anchor xml:id="_a00032_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0
+<anchor xml:id="_a00032_source_1l00053"/>00053 
+<anchor xml:id="_a00032_source_1l00054"/><link linkend="_a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8">00054</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8">local_diff_vector</link>(x,&#32;y,&#32;z,&#32;data):
+<anchor xml:id="_a00032_source_1l00055"/>00055 &#32;&#32;&#32;&#32;ld_vector&#32;=&#32;[]
+<anchor xml:id="_a00032_source_1l00056"/>00056 &#32;&#32;&#32;&#32;dN,&#32;dW,&#32;dNW&#32;=&#32;0,&#32;0,&#32;0&#32;
+<anchor xml:id="_a00032_source_1l00057"/>00057 
+<anchor xml:id="_a00032_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;y&#32;&gt;&#32;0:
+<anchor xml:id="_a00032_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dN&#32;=&#32;4&#32;*&#32;(data[x,&#32;y-1,&#32;z])&#32;-&#32;<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;y&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dN&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00062"/>00062 
+<anchor xml:id="_a00032_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;x&#32;&gt;&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;y&#32;&gt;&#32;0:
+<anchor xml:id="_a00032_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dW&#32;=&#32;4&#32;*&#32;(data[x-1,&#32;y,&#32;z])&#32;-&#32;<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dNW&#32;=&#32;4&#32;*&#32;(data[x-1,&#32;y-1,&#32;z])&#32;-&#32;<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;x&#32;==&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;y&#32;&gt;&#32;0:
+<anchor xml:id="_a00032_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dW&#32;=&#32;4&#32;*&#32;(data[x,&#32;y-1,&#32;z])&#32;-&#32;<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dNW&#32;=&#32;4&#32;*&#32;(data[x,&#32;y-1,&#32;z])&#32;-&#32;<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;y&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dW&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dNW&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00072"/>00072 
+<anchor xml:id="_a00032_source_1l00073"/>00073 &#32;&#32;&#32;&#32;ld_vector.extend([dN,&#32;dW,&#32;dNW])
+<anchor xml:id="_a00032_source_1l00074"/>00074 
+<anchor xml:id="_a00032_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(1,&#32;<link linkend="_a00110_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</link>(z)&#32;+&#32;1):
+<anchor xml:id="_a00032_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;d&#32;=&#32;4&#32;*&#32;(data[x,&#32;y,&#32;z-i])&#32;-&#32;<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z-i,&#32;data)
+<anchor xml:id="_a00032_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ld_vector.append(d)
+<anchor xml:id="_a00032_source_1l00078"/>00078 &#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;np.array(ld_vector)
+<anchor xml:id="_a00032_source_1l00080"/>00080 
+<anchor xml:id="_a00032_source_1l00081"/><link linkend="_a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa">00081</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa">init_weight_vector</link>(z):
+<anchor xml:id="_a00032_source_1l00082"/>00082 &#32;&#32;&#32;&#32;init_weight_vector&#32;=&#32;[]
+<anchor xml:id="_a00032_source_1l00083"/>00083 &#32;&#32;&#32;&#32;wN,&#32;wW,&#32;wNW&#32;=&#32;0,&#32;0,&#32;0
+<anchor xml:id="_a00032_source_1l00084"/>00084 &#32;&#32;&#32;&#32;init_weight_vector.extend([wN,&#32;wW,&#32;wNW])
+<anchor xml:id="_a00032_source_1l00085"/>00085 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(1,&#32;<link linkend="_a00110_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</link>(z)&#32;+&#32;1):
+<anchor xml:id="_a00032_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;i&#32;==&#32;1:
+<anchor xml:id="_a00032_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;w1&#32;=&#32;(7/8)&#32;*&#32;(2**W_RES)
+<anchor xml:id="_a00032_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;init_weight_vector.append(w1)
+<anchor xml:id="_a00032_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;wi&#32;=&#32;np.floor((1/8)&#32;*&#32;init_weight_vector[-1])
+<anchor xml:id="_a00032_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;init_weight_vector.append(wi)
+<anchor xml:id="_a00032_source_1l00093"/>00093 
+<anchor xml:id="_a00032_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;np.array(init_weight_vector)
+<anchor xml:id="_a00032_source_1l00095"/>00095 
+<anchor xml:id="_a00032_source_1l00096"/><link linkend="_a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1">00096</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1">prediction</link>(ld_vector,&#32;weight_vector,&#32;x,&#32;y,&#32;z,&#32;data):
+<anchor xml:id="_a00032_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(36)&#32;Calculate&#32;inner&#32;product&#32;of&#32;local&#32;difference&#32;and&#32;weight&#32;vectors</emphasis>
+<anchor xml:id="_a00032_source_1l00098"/>00098 &#32;&#32;&#32;&#32;d&#32;=&#32;np.inner(weight_vector,&#32;ld_vector)
+<anchor xml:id="_a00032_source_1l00099"/>00099 
+<anchor xml:id="_a00032_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(37)&#32;Calculate&#32;high&#32;resolution&#32;predicted&#32;sample&#32;values,&#32;broken&#32;into&#32;temp&#32;vars</emphasis>
+<anchor xml:id="_a00032_source_1l00101"/>00101 &#32;&#32;&#32;&#32;temp1&#32;=&#32;d&#32;+&#32;(2**W_RES)&#32;*&#32;(<link linkend="_a00355_1a7f0bae725f24b8dae34a48b3cbe35d49">local_sum</link>(x,&#32;y,&#32;z,&#32;data)&#32;-&#32;4&#32;*&#32;S_MID)
+<anchor xml:id="_a00032_source_1l00102"/>00102 &#32;&#32;&#32;&#32;temp2&#32;=&#32;(temp1&#32;+&#32;(2**(R&#32;-&#32;1)))&#32;%&#32;(2**R)&#32;-&#32;2**(R&#32;-&#32;1)
+<anchor xml:id="_a00032_source_1l00103"/>00103 &#32;&#32;&#32;&#32;temp3&#32;=&#32;temp2&#32;+&#32;(2**(W_RES&#32;+&#32;2)&#32;*&#32;S_MID)&#32;+&#32;2**(W_RES&#32;+&#32;1)
+<anchor xml:id="_a00032_source_1l00104"/>00104 
+<anchor xml:id="_a00032_source_1l00105"/>00105 &#32;&#32;&#32;&#32;min&#32;=&#32;2**(W_RES&#32;+&#32;2)&#32;*&#32;S_MIN
+<anchor xml:id="_a00032_source_1l00106"/>00106 &#32;&#32;&#32;&#32;max&#32;=&#32;2**(W_RES&#32;+&#32;2)&#32;*&#32;S_MAX&#32;+&#32;2**(W_RES&#32;+&#32;1)
+<anchor xml:id="_a00032_source_1l00107"/>00107 &#32;&#32;&#32;&#32;hr_s&#32;=&#32;np.clip(temp3,&#32;min,&#32;max)
+<anchor xml:id="_a00032_source_1l00108"/>00108 
+<anchor xml:id="_a00032_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(38)&#32;Calculate&#32;double-resolution&#32;predicted&#32;sample&#32;value</emphasis>
+<anchor xml:id="_a00032_source_1l00110"/>00110 &#32;&#32;&#32;&#32;Nx&#32;=&#32;data.shape[0]
+<anchor xml:id="_a00032_source_1l00111"/>00111 &#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00112"/>00112 &#32;&#32;&#32;&#32;s_tilde&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00113"/>00113 
+<anchor xml:id="_a00032_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;t&#32;&gt;&#32;0:
+<anchor xml:id="_a00032_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s_tilde&#32;=&#32;np.floor(hr_s&#32;/&#32;(2**(W_RES&#32;+&#32;1)))
+<anchor xml:id="_a00032_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;t&#32;==&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;P&#32;&gt;&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;z&#32;&gt;&#32;0:
+<anchor xml:id="_a00032_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s_tilde&#32;=&#32;2&#32;*&#32;data[x,&#32;y,&#32;z&#32;-&#32;1]
+<anchor xml:id="_a00032_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;t&#32;==&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;(P&#32;==&#32;0&#32;<emphasis role="keywordflow">or</emphasis>&#32;z&#32;==&#32;0):
+<anchor xml:id="_a00032_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s_tilde&#32;=&#32;2&#32;*&#32;S_MID
+<anchor xml:id="_a00032_source_1l00120"/>00120 
+<anchor xml:id="_a00032_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(39)</emphasis>
+<anchor xml:id="_a00032_source_1l00122"/>00122 &#32;&#32;&#32;&#32;s_hat&#32;=&#32;np.floor(s_tilde&#32;/&#32;2)
+<anchor xml:id="_a00032_source_1l00123"/>00123 
+<anchor xml:id="_a00032_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;s_hat,&#32;s_tilde,d,&#32;hr_s
+<anchor xml:id="_a00032_source_1l00125"/>00125 
+<anchor xml:id="_a00032_source_1l00126"/><link linkend="_a00355_1aff3436357165d0b07392b7d032fd13bc">00126</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1aff3436357165d0b07392b7d032fd13bc">updated_weight_vector</link>(s_tilde,&#32;weight_vector,&#32;ld_vector,&#32;x,&#32;y,&#32;z,&#32;data):
+<anchor xml:id="_a00032_source_1l00127"/>00127 &#32;&#32;&#32;&#32;if(x&#32;==&#32;71&#32;<emphasis role="keywordflow">and</emphasis>&#32;y&#32;==&#32;3&#32;<emphasis role="keywordflow">and</emphasis>&#32;z&#32;==&#32;0):
+<anchor xml:id="_a00032_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f&#32;=&#32;1
+<anchor xml:id="_a00032_source_1l00129"/>00129 &#32;&#32;&#32;&#32;Nx&#32;=&#32;data.shape[0]
+<anchor xml:id="_a00032_source_1l00130"/>00130 &#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00131"/>00131 &#32;&#32;&#32;&#32;new_weight_vector&#32;=&#32;[]
+<anchor xml:id="_a00032_source_1l00132"/>00132 &#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(49)&#32;double-resoluction&#32;prediction&#32;error</emphasis>
+<anchor xml:id="_a00032_source_1l00134"/>00134 &#32;&#32;&#32;&#32;dr_e&#32;=&#32;2&#32;*&#32;data[x,&#32;y,&#32;z]&#32;-&#32;s_tilde
+<anchor xml:id="_a00032_source_1l00135"/>00135 
+<anchor xml:id="_a00032_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(50)&#32;the&#32;weight&#32;update&#32;scaling&#32;exponent&#32;is&#32;calculated</emphasis>
+<anchor xml:id="_a00032_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Using&#32;Eq(34)&#32;from&#32;older&#32;version&#32;of&#32;compression&#32;algorithm&#32;&#32;</emphasis>
+<anchor xml:id="_a00032_source_1l00138"/>00138 &#32;&#32;&#32;&#32;w_exp&#32;=&#32;np.clip(V_MIN&#32;+&#32;np.floor((t&#32;-&#32;Nx)&#32;/&#32;T_INC),&#32;V_MIN,&#32;V_MAX)&#32;+&#32;D&#32;-&#32;W_RES
+<anchor xml:id="_a00032_source_1l00139"/>00139 &#32;&#32;&#32;&#32;base&#32;=&#32;(<link linkend="_a00361_1a081f96217f1dd709e9c15859a50e68f0">helperlib.sign</link>(dr_e))&#32;*&#32;(2**(-(w_exp)))
+<anchor xml:id="_a00032_source_1l00140"/>00140 
+<anchor xml:id="_a00032_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(len(weight_vector)):
+<anchor xml:id="_a00032_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_w&#32;=&#32;np.clip(weight_vector[i]&#32;+&#32;np.floor((base&#32;*&#32;ld_vector[i]&#32;+&#32;1)&#32;/&#32;2),&#32;W_MIN,&#32;W_MAX)
+<anchor xml:id="_a00032_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_weight_vector.append(new_w)
+<anchor xml:id="_a00032_source_1l00144"/>00144 
+<anchor xml:id="_a00032_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;np.array(new_weight_vector)
+<anchor xml:id="_a00032_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00147"/><link linkend="_a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7">00147</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7">mapper</link>(delta,&#32;s_hat,&#32;s_tilde):
+<anchor xml:id="_a00032_source_1l00148"/>00148 &#32;&#32;&#32;&#32;theta&#32;=&#32;min(s_hat&#32;-&#32;S_MIN,&#32;S_MAX&#32;-&#32;s_hat)
+<anchor xml:id="_a00032_source_1l00149"/>00149 
+<anchor xml:id="_a00032_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(55)</emphasis>
+<anchor xml:id="_a00032_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;abs(delta)&#32;&gt;&#32;theta:
+<anchor xml:id="_a00032_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;abs(delta)&#32;+&#32;theta
+<anchor xml:id="_a00032_source_1l00153"/>00153 
+<anchor xml:id="_a00032_source_1l00154"/>00154 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;0&#32;&lt;=&#32;(-1)**s_tilde&#32;*&#32;delta&#32;<emphasis role="keywordflow">and</emphasis>&#32;(-1)**s_tilde&#32;*&#32;delta&#32;&lt;=&#32;theta:
+<anchor xml:id="_a00032_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2&#32;*&#32;abs(delta)
+<anchor xml:id="_a00032_source_1l00156"/>00156 
+<anchor xml:id="_a00032_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2&#32;*&#32;abs(delta)&#32;-&#32;1
+<anchor xml:id="_a00032_source_1l00159"/>00159 
+<anchor xml:id="_a00032_source_1l00160"/><link linkend="_a00355_1a11e878c5de785af8c9c14a5a86a0354d">00160</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a11e878c5de785af8c9c14a5a86a0354d">predictor</link>(data):
+<anchor xml:id="_a00032_source_1l00161"/>00161 &#32;&#32;&#32;&#32;Nx&#32;=&#32;data.shape[0]
+<anchor xml:id="_a00032_source_1l00162"/>00162 &#32;&#32;&#32;&#32;Ny&#32;=&#32;data.shape[1]
+<anchor xml:id="_a00032_source_1l00163"/>00163 &#32;&#32;&#32;&#32;Nz&#32;=&#32;data.shape[2]
+<anchor xml:id="_a00032_source_1l00164"/>00164 &#32;&#32;&#32;&#32;mapped&#32;=&#32;np.empty_like(data)
+<anchor xml:id="_a00032_source_1l00165"/>00165 
+<anchor xml:id="_a00032_source_1l00166"/>00166 &#32;&#32;&#32;&#32;fp&#32;=&#32;open(<emphasis role="stringliteral">&quot;data/logs/python-debug.LOG&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;w&quot;</emphasis>)
+<anchor xml:id="_a00032_source_1l00167"/>00167 
+<anchor xml:id="_a00032_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;z&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Nz):
+<anchor xml:id="_a00032_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;Predicting.....&#32;z&#32;=&#32;{z}/{Nz}&quot;</emphasis>,&#32;end=<emphasis role="stringliteral">&apos;\r&apos;</emphasis>)
+<anchor xml:id="_a00032_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;y&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Ny):
+<anchor xml:id="_a00032_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;Nx):
+<anchor xml:id="_a00032_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;t&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector&#32;=&#32;<link linkend="_a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa">init_weight_vector</link>(z)
+<anchor xml:id="_a00032_source_1l00175"/>00175 
+<anchor xml:id="_a00032_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ld_vector&#32;=&#32;<link linkend="_a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8">local_diff_vector</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s_hat,&#32;s_tilde,d,hrps&#32;=&#32;<link linkend="_a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1">prediction</link>(ld_vector,&#32;weight_vector,&#32;x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mapped[x,&#32;y,&#32;z]&#32;=&#32;<link linkend="_a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7">mapper</link>(data[x,&#32;y,&#32;z]&#32;-&#32;s_hat,&#32;s_hat,&#32;s_tilde)
+<anchor xml:id="_a00032_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector&#32;=&#32;<link linkend="_a00355_1aff3436357165d0b07392b7d032fd13bc">updated_weight_vector</link>(s_tilde,&#32;weight_vector,&#32;ld_vector,&#32;x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00180"/>00180 
+<anchor xml:id="_a00032_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fp.write(f<emphasis role="stringliteral">&quot;({x},{y},{z}),&#32;{ld_vector},{int(data[x,y,z])},&#32;{int(s_hat)},&#32;{int(mapped[x,y,z])},&#32;{d},&#32;{s_tilde},&#32;{hrps},&#32;{weight_vector.astype(&apos;int64&apos;)}\n&quot;</emphasis>)
+<anchor xml:id="_a00032_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00184"/>00184 &#32;&#32;&#32;&#32;fp.close()
+<anchor xml:id="_a00032_source_1l00185"/>00185 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;mapped
+<anchor xml:id="_a00032_source_1l00186"/>00186 
+<anchor xml:id="_a00032_source_1l00187"/><link linkend="_a00355_1ae875711385174553f6db26923ce85874">00187</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1ae875711385174553f6db26923ce85874">predictor_debug</link>(data):
+<anchor xml:id="_a00032_source_1l00188"/>00188 &#32;&#32;&#32;&#32;Nx&#32;=&#32;data.shape[0]
+<anchor xml:id="_a00032_source_1l00189"/>00189 &#32;&#32;&#32;&#32;Ny&#32;=&#32;data.shape[1]
+<anchor xml:id="_a00032_source_1l00190"/>00190 &#32;&#32;&#32;&#32;Nz&#32;=&#32;data.shape[2]
+<anchor xml:id="_a00032_source_1l00191"/>00191 &#32;&#32;&#32;&#32;mapped&#32;=&#32;np.empty_like(data)
+<anchor xml:id="_a00032_source_1l00192"/>00192 &#32;&#32;&#32;&#32;residuals&#32;=&#32;np.empty_like(data)
+<anchor xml:id="_a00032_source_1l00193"/>00193 
+<anchor xml:id="_a00032_source_1l00194"/>00194 
+<anchor xml:id="_a00032_source_1l00195"/>00195 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;z&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Nz):
+<anchor xml:id="_a00032_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Predicting.....&#32;z&#32;=&quot;</emphasis>,&#32;z)
+<anchor xml:id="_a00032_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;y&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Ny):
+<anchor xml:id="_a00032_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;Nx):
+<anchor xml:id="_a00032_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;t&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector&#32;=&#32;<link linkend="_a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa">init_weight_vector</link>(z)
+<anchor xml:id="_a00032_source_1l00202"/>00202 
+<anchor xml:id="_a00032_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ld_vector&#32;=&#32;<link linkend="_a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8">local_diff_vector</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s_hat,&#32;s_tilde&#32;=&#32;<link linkend="_a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1">prediction</link>(ld_vector,&#32;weight_vector,&#32;x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector&#32;=&#32;<link linkend="_a00355_1aff3436357165d0b07392b7d032fd13bc">updated_weight_vector</link>(s_tilde,&#32;weight_vector,&#32;ld_vector,&#32;x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;residuals[x,&#32;y,&#32;z]&#32;=&#32;data[x,&#32;y,&#32;z]&#32;-&#32;s_hat
+<anchor xml:id="_a00032_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mapped[x,&#32;y,&#32;z]&#32;=&#32;<link linkend="_a00355_1a37ffa8d9496cef9a8e698c70ada1b0a7">mapper</link>(data[x,&#32;y,&#32;z]&#32;-&#32;s_hat,&#32;s_hat,&#32;s_tilde)
+<anchor xml:id="_a00032_source_1l00208"/>00208 <emphasis role="comment">#&#32;</emphasis>
+<anchor xml:id="_a00032_source_1l00209"/>00209 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;mapped,&#32;residuals
+<anchor xml:id="_a00032_source_1l00210"/>00210 
+<anchor xml:id="_a00032_source_1l00211"/>00211 <emphasis role="comment">#&#32;Length-Limited&#32;Golomb-Power-of-2&#32;Codewords,&#32;aka&#32;R</emphasis>
+<anchor xml:id="_a00032_source_1l00212"/><link linkend="_a00355_1a6a4af5f40ce35a453cd8e214f546734f">00212</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a6a4af5f40ce35a453cd8e214f546734f">GPO2</link>(k,&#32;j):
+<anchor xml:id="_a00032_source_1l00213"/>00213 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(np.floor(j&#32;/&#32;(2**k))&#32;&lt;&#32;U_MAX):
+<anchor xml:id="_a00032_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#Write&#32;unary&#32;code</emphasis>
+<anchor xml:id="_a00032_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;=&#32;[0]&#32;*&#32;int(np.floor(j&#32;/&#32;(2**k)))&#32;+&#32;[1]
+<anchor xml:id="_a00032_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;<link linkend="_a00361_1ac0d353b52829389169d73b9a9810f866">helperlib.dec_to_bin</link>(j,&#32;D)[-k:]&#32;<emphasis role="keywordflow">if</emphasis>&#32;k&#32;!=&#32;0&#32;<emphasis role="keywordflow">else</emphasis>&#32;[]
+<anchor xml:id="_a00032_source_1l00217"/>00217 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#Unary&#32;code</emphasis>
+<anchor xml:id="_a00032_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;u&#32;=&#32;[0]&#32;*&#32;U_MAX
+<anchor xml:id="_a00032_source_1l00220"/>00220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#Remainder&#32;code</emphasis>
+<anchor xml:id="_a00032_source_1l00221"/>00221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;<link linkend="_a00361_1ac0d353b52829389169d73b9a9810f866">helperlib.dec_to_bin</link>(j,&#32;D)
+<anchor xml:id="_a00032_source_1l00222"/>00222 
+<anchor xml:id="_a00032_source_1l00223"/>00223 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;u&#32;+&#32;r
+<anchor xml:id="_a00032_source_1l00224"/>00224 
+<anchor xml:id="_a00032_source_1l00225"/><link linkend="_a00355_1ac2c565a00560593a9177b1aad41e0d3c">00225</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1ac2c565a00560593a9177b1aad41e0d3c">encoder</link>(mapped_delta):
+<anchor xml:id="_a00032_source_1l00226"/>00226 &#32;&#32;&#32;&#32;Nx&#32;=&#32;mapped_delta.shape[0]
+<anchor xml:id="_a00032_source_1l00227"/>00227 &#32;&#32;&#32;&#32;Ny&#32;=&#32;mapped_delta.shape[1]
+<anchor xml:id="_a00032_source_1l00228"/>00228 &#32;&#32;&#32;&#32;Nz&#32;=&#32;mapped_delta.shape[2]
+<anchor xml:id="_a00032_source_1l00229"/>00229 &#32;&#32;&#32;&#32;encoded&#32;=&#32;[]
+<anchor xml:id="_a00032_source_1l00230"/>00230 
+<anchor xml:id="_a00032_source_1l00231"/>00231 &#32;&#32;&#32;&#32;f&#32;=&#32;open(<emphasis role="stringliteral">&quot;data/logs/python-encoder-debug.LOG&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;w&quot;</emphasis>)
+<anchor xml:id="_a00032_source_1l00232"/>00232 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00233"/>00233 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;z&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;Nz):
+<anchor xml:id="_a00032_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Encoding.....&#32;z&#32;=&quot;</emphasis>,&#32;z,&#32;end=<emphasis role="stringliteral">&apos;\r&apos;</emphasis>)
+<anchor xml:id="_a00032_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;y&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Ny):
+<anchor xml:id="_a00032_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Nx):
+<anchor xml:id="_a00032_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00238"/>00238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;x==46&#32;<emphasis role="keywordflow">and</emphasis>&#32;y==76&#32;<emphasis role="keywordflow">and</emphasis>&#32;z==62:
+<anchor xml:id="_a00032_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;g&#32;=&#32;&#32;1
+<anchor xml:id="_a00032_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00241"/>00241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;t&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;2**GAMMA_0&#32;<emphasis role="comment">#&#32;Counter&#32;value</emphasis>
+<anchor xml:id="_a00032_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;np.floor((1&#32;/&#32;(2**7))&#32;*&#32;((3&#32;*&#32;(2**(K_ZPRIME&#32;+&#32;6)))&#32;-&#32;49)&#32;*&#32;gamma)&#32;<emphasis role="comment">#&#32;Eq(58),&#32;epsilon_z&#32;is&#32;accumulator&#32;value</emphasis>
+<anchor xml:id="_a00032_source_1l00244"/>00244 
+<anchor xml:id="_a00032_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;codeword&#32;=&#32;<link linkend="_a00361_1ac0d353b52829389169d73b9a9810f866">helperlib.dec_to_bin</link>(mapped_delta[x,&#32;y,&#32;z],&#32;D)
+<anchor xml:id="_a00032_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;+=&#32;codeword
+<anchor xml:id="_a00032_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f.write(str(codeword))
+<anchor xml:id="_a00032_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>
+<anchor xml:id="_a00032_source_1l00249"/>00249 
+<anchor xml:id="_a00032_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Eq(62)&#32;Set&#32;k_z,&#32;code&#32;index</emphasis>
+<anchor xml:id="_a00032_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(2&#32;*&#32;gamma&#32;&gt;&#32;epsilon_z&#32;+&#32;np.floor((49&#32;/&#32;(2**7))&#32;*&#32;gamma)):
+<anchor xml:id="_a00032_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;k_z&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(D,&#32;0,&#32;-1):
+<anchor xml:id="_a00032_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gamma&#32;*&#32;(2**i)&#32;&lt;=&#32;epsilon_z&#32;+&#32;np.floor((49&#32;/&#32;(2**7))&#32;*&#32;gamma)):
+<anchor xml:id="_a00032_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;k_z&#32;=&#32;i
+<anchor xml:id="_a00032_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>
+<anchor xml:id="_a00032_source_1l00258"/>00258 
+<anchor xml:id="_a00032_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;encoded&#32;+=&#32;<link linkend="_a00355_1a6a4af5f40ce35a453cd8e214f546734f">GPO2</link>(k_z,&#32;mapped_delta[x,&#32;y,&#32;z])
+<anchor xml:id="_a00032_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;f.write(f<emphasis role="stringliteral">&quot;({x},{y},{z}):&#32;{str(GPO2(k_z,&#32;mapped_delta[x,&#32;y,&#32;z]))},&#32;{k_z},&#32;{gamma},&#32;{epsilon_z}\n&quot;</emphasis>)
+<anchor xml:id="_a00032_source_1l00261"/>00261 
+<anchor xml:id="_a00032_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Update&#32;counter&#32;and&#32;accumulator&#32;values&#32;after&#32;each&#32;pixel,&#32;according&#32;to&#32;section&#32;5.4.3.2.3</emphasis>
+<anchor xml:id="_a00032_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gamma&#32;&lt;&#32;2**GAMMA_STAR&#32;-&#32;1):
+<anchor xml:id="_a00032_source_1l00264"/>00264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;epsilon_z&#32;+&#32;mapped_delta[x,&#32;y,&#32;z]
+<anchor xml:id="_a00032_source_1l00265"/>00265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;gamma&#32;+&#32;1
+<anchor xml:id="_a00032_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;(gamma&#32;==&#32;2**GAMMA_STAR&#32;-&#32;1):
+<anchor xml:id="_a00032_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;np.floor((epsilon_z&#32;+&#32;mapped_delta[x,&#32;y,&#32;z]&#32;+&#32;1)&#32;/&#32;2)
+<anchor xml:id="_a00032_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;np.floor((gamma&#32;+&#32;1)&#32;/&#32;2)
+<anchor xml:id="_a00032_source_1l00269"/>00269 &#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00270"/>00270 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Omitted&#32;last&#32;codeword&#32;fill&#32;bits</emphasis>
+<anchor xml:id="_a00032_source_1l00271"/>00271 &#32;&#32;&#32;&#32;print()
+<anchor xml:id="_a00032_source_1l00272"/>00272 &#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;Ratio:&#32;{int(len(encoded)&#32;/&#32;8)}/{int(Nx&#32;*&#32;Ny&#32;*&#32;Nz&#32;*&#32;D&#32;/&#32;8)}&quot;</emphasis>,&#32;(1&#32;-&#32;len(encoded)&#32;/&#32;(Nx&#32;*&#32;Ny&#32;*&#32;Nz&#32;*&#32;D))&#32;*&#32;100)
+<anchor xml:id="_a00032_source_1l00273"/>00273 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;encoded&#32;
+<anchor xml:id="_a00032_source_1l00274"/>00274 
+<anchor xml:id="_a00032_source_1l00275"/><link linkend="_a00355_1a0b0449d8b52604ab8eed2bfa8c7c4277">00275</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a0b0449d8b52604ab8eed2bfa8c7c4277">increment_xyz</link>(x,&#32;y,&#32;z,&#32;Nx,&#32;Ny,&#32;Nz):
+<anchor xml:id="_a00032_source_1l00276"/>00276 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;x&#32;&lt;&#32;Nx&#32;-&#32;1:
+<anchor xml:id="_a00032_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;x&#32;+&#32;1,&#32;y,&#32;z
+<anchor xml:id="_a00032_source_1l00278"/>00278 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;y&#32;&lt;&#32;Ny&#32;-&#32;1:
+<anchor xml:id="_a00032_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0,&#32;y&#32;+&#32;1,&#32;z
+<anchor xml:id="_a00032_source_1l00280"/>00280 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;z&#32;&lt;&#32;Nz&#32;-&#32;1:
+<anchor xml:id="_a00032_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0,&#32;0,&#32;z&#32;+&#32;1
+<anchor xml:id="_a00032_source_1l00282"/>00282 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keywordtype">None</emphasis>&#32;&#32;<emphasis role="comment">#&#32;End&#32;of&#32;traversal</emphasis>
+<anchor xml:id="_a00032_source_1l00284"/>00284 
+<anchor xml:id="_a00032_source_1l00285"/><link linkend="_a00355_1a78bff45f9915c892f4cf129d2fd27f55">00285</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a78bff45f9915c892f4cf129d2fd27f55">inv_GPO2</link>(k,&#32;encoded,&#32;i):
+<anchor xml:id="_a00032_source_1l00286"/>00286 &#32;&#32;&#32;&#32;j&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00287"/>00287 &#32;&#32;&#32;&#32;q&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00288"/>00288 
+<anchor xml:id="_a00032_source_1l00289"/>00289 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;in&#32;unit&#32;test&#32;it&#32;only&#32;stops&#32;because&#32;i&#32;==&#32;len(encoded)</emphasis>
+<anchor xml:id="_a00032_source_1l00290"/>00290 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;i&#32;&lt;&#32;len(encoded)&#32;<emphasis role="keywordflow">and</emphasis>&#32;encoded[i]&#32;==&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;q&#32;&lt;&#32;U_MAX:
+<anchor xml:id="_a00032_source_1l00291"/>00291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;+=&#32;1
+<anchor xml:id="_a00032_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;q&#32;+=&#32;1
+<anchor xml:id="_a00032_source_1l00293"/>00293 
+<anchor xml:id="_a00032_source_1l00294"/>00294 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;q&#32;==&#32;U_MAX:
+<anchor xml:id="_a00032_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;j&#32;=&#32;<link linkend="_a00361_1a0efb929942addc663e0c6f20aecd4ccb">helperlib.bin_to_dec</link>(encoded[i:i&#32;+&#32;D])
+<anchor xml:id="_a00032_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;+=&#32;D
+<anchor xml:id="_a00032_source_1l00297"/>00297 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;+=&#32;1
+<anchor xml:id="_a00032_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;=&#32;0&#32;<emphasis role="keywordflow">if</emphasis>&#32;k&#32;==&#32;0&#32;<emphasis role="keywordflow">else</emphasis>&#32;<link linkend="_a00361_1a0efb929942addc663e0c6f20aecd4ccb">helperlib.bin_to_dec</link>(encoded[i:i&#32;+&#32;k])
+<anchor xml:id="_a00032_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;j&#32;=&#32;q&#32;*&#32;2**k&#32;+&#32;r
+<anchor xml:id="_a00032_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;+=&#32;k
+<anchor xml:id="_a00032_source_1l00302"/>00302 
+<anchor xml:id="_a00032_source_1l00303"/>00303 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;j,&#32;i
+<anchor xml:id="_a00032_source_1l00304"/>00304 
+<anchor xml:id="_a00032_source_1l00305"/><link linkend="_a00355_1a13bd9527fe572001978b40411c0868be">00305</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a13bd9527fe572001978b40411c0868be">decoder</link>(encoded,&#32;Nx,&#32;Ny,&#32;Nz):
+<anchor xml:id="_a00032_source_1l00306"/>00306 &#32;&#32;&#32;&#32;decoded&#32;=&#32;np.zeros((Nx,&#32;Ny,&#32;Nz),&#32;dtype=np.int64)
+<anchor xml:id="_a00032_source_1l00307"/>00307 &#32;&#32;&#32;&#32;x,&#32;y,&#32;z&#32;=&#32;0,&#32;0,&#32;0
+<anchor xml:id="_a00032_source_1l00308"/>00308 &#32;&#32;&#32;&#32;i&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00309"/>00309 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;i&#32;&lt;&#32;len(encoded):
+<anchor xml:id="_a00032_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00311"/>00311 
+<anchor xml:id="_a00032_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;t&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Decoding.....&#32;z&#32;=&quot;</emphasis>,&#32;z)
+<anchor xml:id="_a00032_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;2**GAMMA_0&#32;<emphasis role="comment">#&#32;Counter&#32;value</emphasis>
+<anchor xml:id="_a00032_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;np.floor((1&#32;/&#32;(2**7))&#32;*&#32;((3&#32;*&#32;(2**(K_ZPRIME&#32;+&#32;6)))&#32;-&#32;49)&#32;*&#32;gamma)&#32;<emphasis role="comment">#&#32;Eq(58),&#32;epsilon_z&#32;is&#32;accumulator&#32;value</emphasis>
+<anchor xml:id="_a00032_source_1l00316"/>00316 
+<anchor xml:id="_a00032_source_1l00317"/>00317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;codeword&#32;=&#32;encoded[i:i&#32;+&#32;D]
+<anchor xml:id="_a00032_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;+=&#32;D
+<anchor xml:id="_a00032_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value&#32;=&#32;<link linkend="_a00361_1a0efb929942addc663e0c6f20aecd4ccb">helperlib.bin_to_dec</link>(codeword)
+<anchor xml:id="_a00032_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;decoded[x,&#32;y,&#32;z]&#32;=&#32;value
+<anchor xml:id="_a00032_source_1l00321"/>00321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x,&#32;y,&#32;z&#32;=&#32;<link linkend="_a00355_1a0b0449d8b52604ab8eed2bfa8c7c4277">increment_xyz</link>(x,&#32;y,&#32;z,&#32;Nx,&#32;Ny,&#32;Nz)
+<anchor xml:id="_a00032_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>
+<anchor xml:id="_a00032_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(2&#32;*&#32;gamma&#32;&gt;&#32;epsilon_z&#32;+&#32;np.floor((49&#32;/&#32;(2**7))&#32;*&#32;gamma)):
+<anchor xml:id="_a00032_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;k_z&#32;=&#32;0
+<anchor xml:id="_a00032_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00327"/>00327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;idx&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(D,&#32;0,&#32;-1):
+<anchor xml:id="_a00032_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gamma&#32;*&#32;(2**idx)&#32;&lt;=&#32;epsilon_z&#32;+&#32;np.floor((49&#32;/&#32;(2**7))&#32;*&#32;gamma)):
+<anchor xml:id="_a00032_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;k_z&#32;=&#32;idx
+<anchor xml:id="_a00032_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>
+<anchor xml:id="_a00032_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;read&#32;the&#32;code&#32;word&#32;and&#32;increment&#32;i&#32;appropriately</emphasis>
+<anchor xml:id="_a00032_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;value,&#32;i&#32;=&#32;<link linkend="_a00355_1a78bff45f9915c892f4cf129d2fd27f55">inv_GPO2</link>(k_z,&#32;encoded,&#32;i)
+<anchor xml:id="_a00032_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00334"/>00334 
+<anchor xml:id="_a00032_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;decoded[x,&#32;y,&#32;z]&#32;=&#32;value
+<anchor xml:id="_a00032_source_1l00336"/>00336 
+<anchor xml:id="_a00032_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;x&#32;&lt;&#32;Nx&#32;-&#32;1&#32;<emphasis role="keywordflow">or</emphasis>&#32;y&#32;&lt;&#32;Ny&#32;-&#32;1&#32;<emphasis role="keywordflow">or</emphasis>&#32;z&#32;&lt;&#32;Nz&#32;-&#32;1:
+<anchor xml:id="_a00032_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x,&#32;y,&#32;z&#32;=&#32;<link linkend="_a00355_1a0b0449d8b52604ab8eed2bfa8c7c4277">increment_xyz</link>(x,&#32;y,&#32;z,&#32;Nx,&#32;Ny,&#32;Nz)
+<anchor xml:id="_a00032_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gamma&#32;&lt;&#32;2**GAMMA_STAR&#32;-&#32;1):
+<anchor xml:id="_a00032_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;epsilon_z&#32;+&#32;value
+<anchor xml:id="_a00032_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;gamma&#32;+&#32;1
+<anchor xml:id="_a00032_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;(gamma&#32;==&#32;2**GAMMA_STAR&#32;-&#32;1):
+<anchor xml:id="_a00032_source_1l00343"/>00343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;epsilon_z&#32;=&#32;np.floor((epsilon_z&#32;+&#32;value&#32;+&#32;1)&#32;/&#32;2)
+<anchor xml:id="_a00032_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;gamma&#32;=&#32;np.floor((gamma&#32;+&#32;1)&#32;/&#32;2)
+<anchor xml:id="_a00032_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00346"/>00346 
+<anchor xml:id="_a00032_source_1l00347"/>00347 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;decoded
+<anchor xml:id="_a00032_source_1l00348"/>00348 
+<anchor xml:id="_a00032_source_1l00349"/><link linkend="_a00355_1a1f2ff95dd2ae77e1fd9c720e7873c5c6">00349</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a1f2ff95dd2ae77e1fd9c720e7873c5c6">unmapper</link>(mapped_delta,&#32;s_hat,&#32;s_tilde):
+<anchor xml:id="_a00032_source_1l00350"/>00350 &#32;&#32;&#32;&#32;theta&#32;=&#32;min(s_hat&#32;-&#32;S_MIN,&#32;S_MAX&#32;-&#32;s_hat)
+<anchor xml:id="_a00032_source_1l00351"/>00351 
+<anchor xml:id="_a00032_source_1l00352"/>00352 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;mapped_delta&#32;-&#32;theta&#32;&gt;&#32;theta:
+<anchor xml:id="_a00032_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;mapped_delta&#32;-&#32;theta&#32;<emphasis role="keywordflow">if</emphasis>&#32;theta&#32;==&#32;s_hat&#32;-&#32;S_MIN&#32;<emphasis role="keywordflow">else</emphasis>&#32;theta&#32;-&#32;mapped_delta
+<anchor xml:id="_a00032_source_1l00354"/>00354 
+<anchor xml:id="_a00032_source_1l00355"/>00355 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">elif</emphasis>&#32;mapped_delta&#32;%&#32;2&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(-1)**s_tilde&#32;*&#32;mapped_delta&#32;/&#32;2
+<anchor xml:id="_a00032_source_1l00357"/>00357 
+<anchor xml:id="_a00032_source_1l00358"/>00358 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_a00032_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(-1)**(s_tilde&#32;+&#32;1)&#32;*&#32;(mapped_delta&#32;+&#32;1)&#32;/&#32;2
+<anchor xml:id="_a00032_source_1l00360"/>00360 
+<anchor xml:id="_a00032_source_1l00361"/><link linkend="_a00355_1a6ac9172b17fab1182e21fbc228069437">00361</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_a00355_1a6ac9172b17fab1182e21fbc228069437">unpredictor</link>(mapped:&#32;np.array,&#32;Nx:&#32;int,&#32;Ny:&#32;int,&#32;Nz:&#32;int)&#32;-&gt;&#32;np.array:
+<anchor xml:id="_a00032_source_1l00362"/>00362 &#32;&#32;&#32;&#32;data&#32;=&#32;np.zeros_like(mapped)
+<anchor xml:id="_a00032_source_1l00363"/>00363 
+<anchor xml:id="_a00032_source_1l00364"/>00364 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;z&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Nz):
+<anchor xml:id="_a00032_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Unpredicting.....&#32;z&#32;=&quot;</emphasis>,&#32;z)
+<anchor xml:id="_a00032_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;y&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,Ny):
+<anchor xml:id="_a00032_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;Nx):
+<anchor xml:id="_a00032_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;36&#32;<emphasis role="keywordflow">and</emphasis>&#32;y&#32;==&#32;71&#32;<emphasis role="keywordflow">and</emphasis>&#32;z&#32;==&#32;16):
+<anchor xml:id="_a00032_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;g&#32;=&#32;&#32;1
+<anchor xml:id="_a00032_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_a00032_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;t&#32;=&#32;y&#32;*&#32;Nx&#32;+&#32;x
+<anchor xml:id="_a00032_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;t&#32;==&#32;0:
+<anchor xml:id="_a00032_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector&#32;=&#32;<link linkend="_a00355_1a49c6c06e2ea0cfc20fce6d6edb0c72fa">init_weight_vector</link>(z)
+<anchor xml:id="_a00032_source_1l00374"/>00374 
+<anchor xml:id="_a00032_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ld_vector&#32;=&#32;<link linkend="_a00355_1a49ef318f74fbe8e8dd91da6f85f2c3e8">local_diff_vector</link>(x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s_hat,&#32;s_tilde,&#32;d,&#32;hrps&#32;=&#32;<link linkend="_a00355_1a148cf1e7cc2fd2f23b569009afd6d3c1">prediction</link>(ld_vector,&#32;weight_vector,&#32;x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;delta&#32;=&#32;<link linkend="_a00355_1a1f2ff95dd2ae77e1fd9c720e7873c5c6">unmapper</link>(mapped[x,&#32;y,&#32;z],&#32;s_hat,&#32;s_tilde)
+<anchor xml:id="_a00032_source_1l00378"/>00378 
+<anchor xml:id="_a00032_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;data[x,&#32;y,&#32;z]&#32;=&#32;s_hat&#32;+&#32;delta
+<anchor xml:id="_a00032_source_1l00380"/>00380 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector&#32;=&#32;<link linkend="_a00355_1aff3436357165d0b07392b7d032fd13bc">updated_weight_vector</link>(s_tilde,&#32;weight_vector,&#32;ld_vector,&#32;x,&#32;y,&#32;z,&#32;data)
+<anchor xml:id="_a00032_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;1&#32;<emphasis role="keywordflow">and</emphasis>&#32;y&#32;==&#32;0&#32;<emphasis role="keywordflow">and</emphasis>&#32;z&#32;==&#32;1):
+<anchor xml:id="_a00032_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;ld_vec:&#32;{ld_vector}\npredicted_sample:&#32;{s_hat}\npcld:&#32;{d}\ndelta:&#32;{delta},&#32;weights:&#32;{weight_vector}\n&quot;</emphasis>)
+<anchor xml:id="_a00032_source_1l00383"/>00383 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;data
+</programlisting></section>

@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="df/d03/a00062" kind="file" language="C++">
+    <compoundname>generate_image.h</compoundname>
+    <includes refid="d0/dc2/a00104" local="yes">predictor/predictor.h</includes>
+    <includes refid="d1/d09/a00077" local="yes">encoder/header.h</includes>
+    <includes refid="dc/dfe/a00125" local="yes">files/csv-io.h</includes>
+    <includes refid="de/de1/a00065" local="yes">testing/synthetic_image_generator.h</includes>
+    <includes local="no">time.h</includes>
+    <includedby refid="d6/d2d/a00047" local="yes">main/compressor.c</includedby>
+    <includedby refid="dc/dee/a00053" local="yes">main/image_handler.c</includedby>
+    <includedby refid="d3/d07/a00305" local="yes">src/generate_image.c</includedby>
+    <incdepgraph>
+      <node id="20">
+        <label>cache/cache_predictor.h</label>
+        <link refid="db/db6/a00074"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>constants/encoder_constants.h</label>
+        <link refid="d5/db1/a00140"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>encoder/encoder_helper_functions.h</label>
+        <link refid="d2/d1f/a00083"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>encoder/header.h</label>
+        <link refid="d1/d09/a00077"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>files/csv-io.h</label>
+        <link refid="dc/dfe/a00125"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>math/linear_algebra.h</label>
+        <link refid="da/d1e/a00149"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>predictor/local_differences.h</label>
+        <link refid="d4/d3a/a00101"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>predictor/local_sum.h</label>
+        <link refid="df/d98/a00107"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>predictor/predictor.h</label>
+        <link refid="d0/dc2/a00104"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>predictor/quantizer.h</label>
+        <link refid="d1/d44/a00098"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>predictor/sample_representative.h</label>
+        <link refid="d1/dc1/a00092"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>predictor/weights.h</label>
+        <link refid="d9/d77/a00095"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>testing/synthetic_image_generator.h</label>
+        <link refid="de/de1/a00065"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+      <node id="29">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d03/a00062"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>main/compressor.c</label>
+        <link refid="d6/d2d/a00047"/>
+      </node>
+      <node id="3">
+        <label>main/image_handler.c</label>
+        <link refid="dc/dee/a00053"/>
+      </node>
+      <node id="4">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestHeader</definition>
+        <argsstring>()</argsstring>
+        <name>TestHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/generate_image.h" line="11" column="6" bodyfile="src/generate_image.c" bodystart="104" bodyend="109" declfile="include/testing/generate_image.h" declline="11" declcolumn="6"/>
+        <references refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</references>
+        <references refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</references>
+        <references refid="d1/d09/a00077_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" compoundref="dc/d50/a00332" startline="98" endline="104">PrepareSampleAdaptiveEntropyCoder</references>
+      </memberdef>
+      <memberdef kind="function" id="df/d03/a00062_1aac70a37466945a2c91d42fbfb9d1dcbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestReadImage</definition>
+        <argsstring>()</argsstring>
+        <name>TestReadImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/generate_image.h" line="12" column="6" bodyfile="src/generate_image.c" bodystart="111" bodyend="119" declfile="include/testing/generate_image.h" declline="12" declcolumn="6"/>
+        <references refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</references>
+        <references refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</references>
+      </memberdef>
+      <memberdef kind="function" id="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PredictImage</definition>
+        <argsstring>(char *source, char *destination)</argsstring>
+        <name>PredictImage</name>
+        <param>
+          <type>char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/generate_image.h" line="13" column="5" bodyfile="src/generate_image.c" bodystart="21" bodyend="82" declfile="include/testing/generate_image.h" declline="13" declcolumn="5"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="db/db6/a00074_1aca0d39cbaa7b58e1e75c93010c1a7750" compoundref="df/d95/a00299" startline="43" endline="52">DeletePredictorCache</references>
+        <references refid="db/db6/a00074_1a8dc01c7173e49a14ae38a59d91b9d669" compoundref="df/d95/a00299" startline="5">global_cache</references>
+        <references refid="db/db6/a00074_1a400e6cd529a6a1ca3901be57ab88fb63" compoundref="df/d95/a00299" startline="16" endline="41">InitializePredictorCache</references>
+        <references refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" compoundref="d0/d39/a00314" startline="45" endline="53">InitImage</references>
+        <references refid="de/d76/a00134_1a61353ebf0328d8bd1f61f224305e64bb" compoundref="d5/d42/a00269" startline="34" endline="36">Log_add</references>
+        <references refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</references>
+        <references refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</references>
+        <references refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</references>
+        <references refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="df/d03/a00062_1a29f9d24093c99f0e47133d90ea4286e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int EncodeImage</definition>
+        <argsstring>(char *source, char *destination)</argsstring>
+        <name>EncodeImage</name>
+        <param>
+          <type>char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/generate_image.h" line="15" column="5" bodyfile="src/generate_image.c" bodystart="84" bodyend="98" declfile="include/testing/generate_image.h" declline="15" declcolumn="5"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</references>
+        <references refid="d9/db6/a00146_1af84e7b9bd8c4fa1203b0040adf941d8d" compoundref="de/d25/a00290" startline="3" endline="8">InitalizeImageConstants</references>
+        <references refid="d9/db6/a00146_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="de/d25/a00290" startline="12" endline="47">InitalizePredictorConstants</references>
+        <references refid="d7/dce/a00143_1a5d642038360b72b886a5eb66e3efd14a" compoundref="db/d10/a00350" startline="6" endline="35">LoadConstantFile</references>
+        <references refid="d2/df5/a00137_1a3e84b5148948a9a22f804ac78d16590c" compoundref="de/d25/a00290" startline="55">predictor_constants</references>
+        <references refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="df/d03/a00062_1aaa094efd7037f34ae4e485a0b97c4282" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CompressImage</definition>
+        <argsstring>(char *source, char *destination)</argsstring>
+        <name>CompressImage</name>
+        <param>
+          <type>char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/generate_image.h" line="17" column="5" bodyfile="src/generate_image.c" bodystart="100" bodyend="102" declfile="include/testing/generate_image.h" declline="17" declcolumn="5"/>
+        <referencedby refid="d6/d2d/a00047_1a048af25ea3eb0571ab780e44e221650e" compoundref="d6/d2d/a00047" startline="16" endline="61">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="df/d03/a00062_1a450c7f9206bff8de0c177e34e6b5bcf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerateVoronoiImage</definition>
+        <argsstring>(dim3 size, int index, int points)</argsstring>
+        <name>GenerateVoronoiImage</name>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/generate_image.h" line="19" column="5" bodyfile="src/generate_image.c" bodystart="5" bodyend="19" declfile="include/testing/generate_image.h" declline="19" declcolumn="5"/>
+        <references refid="d8/ddd/a00380_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d3/d00/a00113" startline="67">image::data</references>
+        <references refid="de/de1/a00065_1a5561acefba71d729426452c73bb402dd" compoundref="dd/d4e/a00329" startline="233" endline="264">GenerateVoronoiFlat3DLocal</references>
+        <references refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" compoundref="d0/d39/a00314" startline="45" endline="53">InitImage</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="dc/dee/a00053_1a048af25ea3eb0571ab780e44e221650e" compoundref="dc/dee/a00053" startline="8" endline="20">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GENERATE_IMAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GENERATE_IMAGE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/dc2/a00104" kindref="compound">predictor/predictor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d09/a00077" kindref="compound">encoder/header.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/dfe/a00125" kindref="compound">files/csv-io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/de1/a00065" kindref="compound">testing/synthetic_image_generator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="df/d03/a00062_1a7c0526eafc78103d6067815877e28fe8" kindref="member">TestHeader</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="df/d03/a00062_1aac70a37466945a2c91d42fbfb9d1dcbb" kindref="member">TestReadImage</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" kindref="member">PredictImage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d03/a00062_1a29f9d24093c99f0e47133d90ea4286e6" kindref="member">EncodeImage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d03/a00062_1aaa094efd7037f34ae4e485a0b97c4282" kindref="member">CompressImage</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/d03/a00062_1a450c7f9206bff8de0c177e34e6b5bcf4" kindref="member">GenerateVoronoiImage</ref>(<ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>points);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>GENERATE_IMAGE_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/testing/generate_image.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,38 @@
+\doxysection{stream\+\_\+encoder.\+h}
+\hypertarget{a00086_source}{}\label{a00086_source}\index{include/encoder/stream\_encoder.h@{include/encoder/stream\_encoder.h}}
+\mbox{\hyperlink{a00086}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ STREAM\_ENCODER\_H}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00009}00009\ \textcolor{preprocessor}{\#define\ STREAM\_ENCODER\_H}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00122}{files/file\_IO.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00015}\mbox{\hyperlink{a00086_abc23dc7967a47b4db3efff8237ef3a2f}{00015}}\ \textcolor{preprocessor}{\#define\ L\_SHIFT(x,\ s)\ (s\ <\ 0\ ?\ x\ >>\ -\/s\ :\ x\ <<\ s)}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00017}\mbox{\hyperlink{a00086_a548781ef0de810de1f925dff4d5d3f9a}{00017}}\ \textcolor{preprocessor}{\#define\ BUFFER\_REG\_SIZE\ 32}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00018}\mbox{\hyperlink{a00086_af7b7dc9a200cb1404c280bd500fd1551}{00018}}\ \textcolor{preprocessor}{\#define\ BUFFER\_LENGTH\ 15}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00020}\mbox{\hyperlink{a00392}{00020}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{a00392}{VarIntFileStream}}}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00022}\mbox{\hyperlink{a00392_ab10afab4dbcbfc99227c63ee0ae694ff}{00022}}\ \ \ \ \ \mbox{\hyperlink{a00122_aaa4f66633ab727c9d841db141c3da088}{file\_t}}\ *\mbox{\hyperlink{a00392_ab10afab4dbcbfc99227c63ee0ae694ff}{fs}};}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00024}\mbox{\hyperlink{a00392_a1e5757374503c98182efdc688999f91f}{00024}}\ \ \ \ \ int32\_t\ \mbox{\hyperlink{a00392_a1e5757374503c98182efdc688999f91f}{bit\_ptr}};}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00025}\mbox{\hyperlink{a00392_a97ecce5e0a58b1ab0ac947547d0ae8f3}{00025}}\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{a00392_a97ecce5e0a58b1ab0ac947547d0ae8f3}{byte\_ptr}};}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00027}\mbox{\hyperlink{a00392_a35cba028c7b885581f278e533cfc4147}{00027}}\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{a00392_a35cba028c7b885581f278e533cfc4147}{buffer}}[\mbox{\hyperlink{a00086_af7b7dc9a200cb1404c280bd500fd1551}{BUFFER\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00028}\mbox{\hyperlink{a00086_a28faaa580490ca2e895b2ebe7bf22707}{00028}}\ \}\ \mbox{\hyperlink{a00086_a28faaa580490ca2e895b2ebe7bf22707}{VIFS}};}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00030}00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{a00086_a0db4a8ab23a4af63c99d5fbfca9073eb}{InitializeVarIntStream}}(\mbox{\hyperlink{a00392}{VIFS}}\ *stream,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,\ uint32\_t\ buffer\_size);}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00032}00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{a00086_a8b42309d51939ee46f5f0d348fbbcbc0}{StreamVarInteger}}(\mbox{\hyperlink{a00392}{VIFS}}\ *stream,\ uint32\_t\ data,\ uint32\_t\ length);}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00034}00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{a00086_afbd717a2dd8bee43593e06a3919ba72a}{CloseVarIntegerStream}}(\mbox{\hyperlink{a00392}{VIFS}}*\ stream);}
+\DoxyCodeLine{\Hypertarget{a00086_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{a00086_source_l00038}00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ STREAM\_ENCODER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d7/ddb/a00361" kind="namespace" language="Python">
+    <compoundname>helperlib</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d7/ddb/a00361_1a081f96217f1dd709e9c15859a50e68f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sign</definition>
+        <argsstring>(x)</argsstring>
+        <name>sign</name>
+        <qualifiedname>helperlib.sign</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/helperlib.py" line="4" column="1" bodyfile="python/helperlib.py" bodystart="4" bodyend="10"/>
+        <referencedby refid="d3/dc9/a00355_1aff3436357165d0b07392b7d032fd13bc" compoundref="dc/d87/a00032" startline="126" endline="146">compression.updated_weight_vector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/a00361_1ac0d353b52829389169d73b9a9810f866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dec_to_bin</definition>
+        <argsstring>(d, width)</argsstring>
+        <name>dec_to_bin</name>
+        <qualifiedname>helperlib.dec_to_bin</qualifiedname>
+        <param>
+          <type>d</type>
+          <defname>d</defname>
+        </param>
+        <param>
+          <type>width</type>
+          <defname>width</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/helperlib.py" line="11" column="1" bodyfile="python/helperlib.py" bodystart="11" bodyend="17"/>
+        <referencedby refid="d3/dc9/a00355_1ac2c565a00560593a9177b1aad41e0d3c" compoundref="dc/d87/a00032" startline="225" endline="274">compression.encoder</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a6a4af5f40ce35a453cd8e214f546734f" compoundref="dc/d87/a00032" startline="212" endline="224">compression.GPO2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d7/ddb/a00361_1a0efb929942addc663e0c6f20aecd4ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>bin_to_dec</definition>
+        <argsstring>(b)</argsstring>
+        <name>bin_to_dec</name>
+        <qualifiedname>helperlib.bin_to_dec</qualifiedname>
+        <param>
+          <type>b</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="python/helperlib.py" line="18" column="1" bodyfile="python/helperlib.py" bodystart="18" bodyend="22"/>
+        <referencedby refid="d3/dc9/a00355_1a13bd9527fe572001978b40411c0868be" compoundref="dc/d87/a00032" startline="305" endline="348">compression.decoder</referencedby>
+        <referencedby refid="d3/dc9/a00355_1a78bff45f9915c892f4cf129d2fd27f55" compoundref="dc/d87/a00032" startline="285" endline="304">compression.inv_GPO2</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="python/helperlib.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

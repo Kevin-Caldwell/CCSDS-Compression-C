@@ -1,0 +1,83 @@
+\doxysection{quantizer.\+c}
+\hypertarget{quantizer_8c_source}{}\label{quantizer_8c_source}\index{src/quantizer.c@{src/quantizer.c}}
+\mbox{\hyperlink{quantizer_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{quantizer_8h}{predictor/quantizer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00003}\mbox{\hyperlink{quantizer_8h_a9d745aa249b8a9cde3f83899b563dcc5}{00003}}\ uint16\_t\ \mbox{\hyperlink{quantizer_8c_a9d745aa249b8a9cde3f83899b563dcc5}{ClippedQuantizerBinCenter}}(uint16\_t\ sample\_value)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00004}00004\ \ \ \ \ \textcolor{keywordflow}{return}\ \ sample\_value;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00005}00005\ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00007}\mbox{\hyperlink{quantizer_8h_a93be7d02ed2acce98f53818c98ac6cca}{00007}}\ int16\_t\ \mbox{\hyperlink{quantizer_8c_a93be7d02ed2acce98f53818c98ac6cca}{PredictionResidual}}(uint16\_t\ sample\_value,\ uint16\_t\ predicted\_sample)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{return}\ sample\_value\ -\/\ predicted\_sample;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00009}00009\ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00011}\mbox{\hyperlink{quantizer_8h_afa51bec3d5dfdb41078f60b1a7c454ab}{00011}}\ int32\_t\ \mbox{\hyperlink{quantizer_8c_afa51bec3d5dfdb41078f60b1a7c454ab}{QuantizerIndex}}(uint16\_t\ sample\_value,\ uint16\_t\ predicted\_sample)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{quantizer_8c_a93be7d02ed2acce98f53818c98ac6cca}{PredictionResidual}}(sample\_value,\ predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ SignedLongData\ qInd;}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00015}00015\ \ \ \ \ \textcolor{comment}{//\ uint16\_t\ pred\_res\ =\ PredictionResidual(hIMG,\ z,y,x);}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ if(x\ ==\ 0\ \&\&\ y\ ==\ 0)\{}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ qInd\ =\ pred\_res;}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ else\{}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ qInd\ =\ SIGN(pred\_res)\ *\ (abs(pred\_res)\ +\ m\_z)\ /\ (2\ *\ m\_z\ +\ 1);}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ return\ qInd;}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00027}\mbox{\hyperlink{quantizer_8c_ae831d86258458d0a68d3d2143db43d19}{00027}}\ uint16\_t\ \mbox{\hyperlink{quantizer_8c_ae831d86258458d0a68d3d2143db43d19}{minTheta}}(uint32\_t\ predicted\_sample)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ if(x\ ==\ 0\ \&\&\ y\ ==\ 0)\{}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ return\ MIN(pred\_res\ -\/\ kSmin,\ kSmax\ -\/\ pred\_res);}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ \}\ else\ if\ (x\ >\ 0\ ||\ y\ >\ 0)}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00032}00032\ \ \ \ \ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ return\ \ MIN((pred\_res\ -\/\ kSmin\ +\ m\_z)/(2\ *\ m\_z\ +\ 1),\ }}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ (kSmax\ -\/\ pred\_res\ +\ m\_z)/(2\ *\ m\_z\ +\ 1));}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ \}}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(predicted\_sample\ -\/\ \mbox{\hyperlink{constants_8h_add3510c03fbe63c1b97c67aac517c930}{kSmin}},\ \mbox{\hyperlink{constants_8h_a8329a1a244af278852519dfccd0d4814}{kSmax}}\ -\/\ predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00037}00037\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00040}\mbox{\hyperlink{quantizer_8h_ae85d34759565d8a3ab498494786c395b}{00040}}\ int32\_t\ \mbox{\hyperlink{quantizer_8c_ae85d34759565d8a3ab498494786c395b}{QuantizerIndexUnmapper}}(uint16\_t\ mapped\_delta,\ uint16\_t\ predicted\_sample,\ int32\_t\ drps)}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00041}00041\ \{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00043}00043\ \ \ \ \ int32\_t\ theta\ =\ \mbox{\hyperlink{quantizer_8c_ae831d86258458d0a68d3d2143db43d19}{minTheta}}(predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ a\ =\ drps\ \%\ 2\ ?\ -\/1\ :\ 1;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}(mapped\_delta\ -\/\ theta\ >\ theta)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(theta\ ==\ predicted\_sample\ -\/\ \mbox{\hyperlink{constants_8h_add3510c03fbe63c1b97c67aac517c930}{kSmin}})\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapped\_delta\ -\/\ theta;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ theta\ -\/\ mapped\_delta;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(mapped\_delta\ \%\ 2)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (((drps\ +\ 1)\ \%\ 2)\ ?\ (-\/1)\ :\ (1))\ *\ (mapped\_delta\ +\ 1)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00055}00055\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (((drps)\ \%\ 2)\ ?\ (-\/1)\ :\ (1))\ *\ (mapped\_delta)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00061}\mbox{\hyperlink{quantizer_8h_a1f491e0a435427669942c932394d7c1a}{00061}}\ \mbox{\hyperlink{linear__algebra_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{quantizer_8c_a1f491e0a435427669942c932394d7c1a}{MappedQuantizerIndex}}(int32\_t\ quantizer\_index,\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ predicted\_sample,\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ uint32\_t\ double\_res\_predicted\_sample)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00065}00065\ \ \ \ \ int32\_t\ theta\ =\ \mbox{\hyperlink{quantizer_8c_ae831d86258458d0a68d3d2143db43d19}{minTheta}}(predicted\_sample);}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00066}00066\ \ \ \ \ int32\_t\ a\ =\ quantizer\_index\ *\ (double\_res\_predicted\_sample\ \%\ 2\ ?\ -\/1\ :\ 1);}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}(abs(quantizer\_index)\ >\ theta)\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ abs(quantizer\_index)\ +\ theta;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00070}00070\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (0\ <=\ a\ \&\&\ a\ <=\ theta)}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2\ *\ abs(quantizer\_index);}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00073}00073\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2\ *\ abs(quantizer\_index)\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00076}00076\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{quantizer_8c_source_l00077}00077\ \}}
+
+\end{DoxyCode}

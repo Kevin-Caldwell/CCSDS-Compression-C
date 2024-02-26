@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dd/dd7/a00260" kind="file" language="C++">
+    <compoundname>encoder_helper.c</compoundname>
+    <includes refid="d2/d1f/a00083" local="yes">encoder/encoder_helper_functions.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>encoder/encoder_helper_functions.h</label>
+        <link refid="d2/d1f/a00083"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/encoder_helper.c</label>
+        <link refid="dd/dd7/a00260"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dd/dd7/a00260_1aa268d136b017ba11fca74d167e36dd34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PrintBinary</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>PrintBinary</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d2/d1f/a00083" kindref="compound">encoder_helper_functions.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+Global Functions for Encoding the image</para>
+<para>Features Print a byte in Binary Encode n bit data into m bit buffer, n &lt; 8, data &lt; 8</para>
+<para>Dependencies inttypes.h stdio.h </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/encoder_helper.c" line="3" column="6" bodyfile="src/encoder_helper.c" bodystart="3" bodyend="10"/>
+        <referencedby refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" compoundref="dd/dd7/a00260" startline="12" endline="17">Encode</referencedby>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dd/dd7/a00260_1a7050a856b982bdf5a658945d470cd683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Encode</definition>
+        <argsstring>(uint8_t *destination, uint8_t index, uint8_t data, uint8_t length)</argsstring>
+        <name>Encode</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/encoder_helper.c" line="12" column="6" bodyfile="src/encoder_helper.c" bodystart="12" bodyend="17"/>
+        <references refid="dd/dd7/a00260_1aa268d136b017ba11fca74d167e36dd34" compoundref="dd/dd7/a00260" startline="3" endline="10">PrintBinary</references>
+        <referencedby refid="d1/d09/a00077_1ac726367a97f26d89d0e2a44763f43448" compoundref="dc/d50/a00332" startline="5" endline="53">PrepareImageMetadata</referencedby>
+        <referencedby refid="d1/d09/a00077_1abab4192db36e8577c377efd110ff5efc" compoundref="dc/d50/a00332" startline="56" endline="96">PreparePredictorMetadata</referencedby>
+        <referencedby refid="d1/d09/a00077_1a90788cfb0ad28f5bc9b0cd67d0a2b52e" compoundref="dc/d50/a00332" startline="98" endline="104">PrepareSampleAdaptiveEntropyCoder</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/d1f/a00083" kindref="compound">encoder/encoder_helper_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d2/d1f/a00083_1aa268d136b017ba11fca74d167e36dd34" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dd7/a00260_1aa268d136b017ba11fca74d167e36dd34" kindref="member">PrintBinary</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>i++){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%u&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>7))<sp/>&gt;&gt;<sp/>7);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>&lt;&lt;=<sp/>1;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;|&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="d2/d1f/a00083_1a7050a856b982bdf5a658945d470cd683" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dd/dd7/a00260_1a7050a856b982bdf5a658945d470cd683" kindref="member">Encode</ref>(uint8_t*<sp/>destination,<sp/>uint8_t<sp/>index,<sp/>uint8_t<sp/>data,<sp/>uint8_t<sp/>length){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>*(destination<sp/>+<sp/>index)<sp/>&lt;&lt;=<sp/>length;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>*(destination<sp/>+<sp/>index)<sp/>|=<sp/>(data<sp/>%<sp/>(1<sp/>&lt;&lt;<sp/>length));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/dd7/a00260_1aa268d136b017ba11fca74d167e36dd34" kindref="member">PrintBinary</ref>(*(destination<sp/>+<sp/>index));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,<sp/>data);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/encoder_helper.c"/>
+  </compounddef>
+</doxygen>

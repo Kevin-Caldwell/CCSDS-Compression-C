@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dd/de2/a00320" kind="file" language="C++">
+    <compoundname>math_functions.c</compoundname>
+    <includes refid="d7/d9a/a00152" local="yes">math/math_functions.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/math_functions.c</label>
+        <link refid="dd/de2/a00320"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dd/de2/a00320_1a61e36d5241561d1bc112c291a3262565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Euclidian2</definition>
+        <argsstring>(dim2 pt1, dim2 pt2)</argsstring>
+        <name>Euclidian2</name>
+        <param>
+          <type><ref refid="dd/dea/a00408" kindref="compound">dim2</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dea/a00408" kindref="compound">dim2</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math_functions.c" line="3" column="6" bodyfile="src/math_functions.c" bodystart="3" bodyend="5"/>
+        <references refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" compoundref="d7/d9a/a00152" startline="36">SQ</references>
+        <references refid="dd/dea/a00408_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="65">dim2::x</references>
+        <references refid="dd/dea/a00408_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="66">dim2::y</references>
+      </memberdef>
+      <memberdef kind="function" id="dd/de2/a00320_1adfddd321b4840c92df9f1d48e11c657e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Euclidian3</definition>
+        <argsstring>(dim3 pt1, dim3 pt2)</argsstring>
+        <name>Euclidian3</name>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math_functions.c" line="7" column="6" bodyfile="src/math_functions.c" bodystart="7" bodyend="9"/>
+        <references refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" compoundref="d7/d9a/a00152" startline="36">SQ</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="dd/de2/a00320_1adf11110e70a4ca4a966622288d194681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Manhattan2</definition>
+        <argsstring>(dim2 pt1, dim2 pt2)</argsstring>
+        <name>Manhattan2</name>
+        <param>
+          <type><ref refid="dd/dea/a00408" kindref="compound">dim2</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dea/a00408" kindref="compound">dim2</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math_functions.c" line="11" column="6" bodyfile="src/math_functions.c" bodystart="11" bodyend="13"/>
+        <references refid="dd/dea/a00408_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="65">dim2::x</references>
+        <references refid="dd/dea/a00408_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="66">dim2::y</references>
+        <referencedby refid="de/de1/a00065_1adf6a5cb5771660cb1086396d4324c4eb" compoundref="dd/d4e/a00329" startline="49" endline="68">GenerateVoronoiFlat2D</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dd/de2/a00320_1ace80df346398f6e153166e87cee41d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Manhattan3</definition>
+        <argsstring>(dim3 pt1, dim3 pt2)</argsstring>
+        <name>Manhattan3</name>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/math_functions.c" line="15" column="6" bodyfile="src/math_functions.c" bodystart="15" bodyend="17"/>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="dd/d4e/a00329_1a2d4e6084981252d94b4287b36e85aec7" compoundref="dd/d4e/a00329" startline="109" endline="132">GeneratePointLocales</referencedby>
+        <referencedby refid="dd/d4e/a00329_1ae17850a552864500c4f1e1f80b8add6a" compoundref="dd/d4e/a00329" startline="134" endline="168">GetMinDistance3Locales</referencedby>
+        <referencedby refid="dd/d4e/a00329_1abe9bd17929405b7d28af71473f567f3c" compoundref="dd/d4e/a00329" startline="70" endline="86">GetMinDistance3Naive</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d9a/a00152" kindref="compound">math/math_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="d7/d9a/a00152_1a61e36d5241561d1bc112c291a3262565" refkind="member"><highlight class="normal"><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="dd/de2/a00320_1a61e36d5241561d1bc112c291a3262565" kindref="member">Euclidian2</ref>(<ref refid="dd/dea/a00408" kindref="compound">dim2</ref><sp/>pt1,<sp/><ref refid="dd/dea/a00408" kindref="compound">dim2</ref><sp/>pt2){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref>)<sp/>sqrtf((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>(<ref refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" kindref="member">SQ</ref>(pt1.<ref refid="dd/dea/a00408_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>-<sp/>pt2.<ref refid="dd/dea/a00408_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>)<sp/>+<sp/><ref refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" kindref="member">SQ</ref>(pt1.<ref refid="dd/dea/a00408_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>-<sp/>pt2.<ref refid="dd/dea/a00408_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>)));</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="d7/d9a/a00152_1adfddd321b4840c92df9f1d48e11c657e" refkind="member"><highlight class="normal"><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="dd/de2/a00320_1adfddd321b4840c92df9f1d48e11c657e" kindref="member">Euclidian3</ref>(<ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>pt1,<sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>pt2){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref>)<sp/>((<ref refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" kindref="member">SQ</ref>(pt1.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>-<sp/>pt2.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>)<sp/>+<sp/><ref refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" kindref="member">SQ</ref>(pt1.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>-<sp/>pt2.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>)<sp/>+<sp/><ref refid="d7/d9a/a00152_1ac3644f84794a8bfdacf39c4b2c2495fc" kindref="member">SQ</ref>(pt1.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref><sp/>-<sp/>pt2.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>)));</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="d7/d9a/a00152_1adf11110e70a4ca4a966622288d194681" refkind="member"><highlight class="normal"><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="dd/de2/a00320_1adf11110e70a4ca4a966622288d194681" kindref="member">Manhattan2</ref>(<ref refid="dd/dea/a00408" kindref="compound">dim2</ref><sp/>pt1,<sp/><ref refid="dd/dea/a00408" kindref="compound">dim2</ref><sp/>pt2){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref>)<sp/>(abs(pt1.<ref refid="dd/dea/a00408_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>-<sp/>pt2.<ref refid="dd/dea/a00408_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>)<sp/>+<sp/>abs(pt1.<ref refid="dd/dea/a00408_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>-<sp/>pt2.<ref refid="dd/dea/a00408_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="d7/d9a/a00152_1ace80df346398f6e153166e87cee41d47" refkind="member"><highlight class="normal"><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="dd/de2/a00320_1ace80df346398f6e153166e87cee41d47" kindref="member">Manhattan3</ref>(<ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>pt1,<sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>pt2){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref>)<sp/>(abs(pt1.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>-<sp/>pt2.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>)<sp/>+<sp/>abs(pt1.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>-<sp/>pt2.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>)<sp/>+<sp/>abs(pt1.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref><sp/>-<sp/>pt2.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/math_functions.c"/>
+  </compounddef>
+</doxygen>

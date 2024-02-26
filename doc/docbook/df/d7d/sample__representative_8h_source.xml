@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sample__representative_8h_source" xml:lang="en-US">
+<title>sample_representative.h</title>
+<indexterm><primary>include/predictor/sample_representative.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_sample__representative_8h_source_1l00001"/>00001 
+<anchor xml:id="_sample__representative_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#ifndef&#32;SAMPLE_REPRESENTATIVE_H</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#define&#32;SAMPLE_REPRESENTATIVE_H</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00012"/>00012 
+<anchor xml:id="_sample__representative_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_image_8h">dst/image.h</link>&quot;</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_constants_8h">constants/constants.h</link>&quot;</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cache__predictor_8h">cache/cache_predictor.h</link>&quot;</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_linear__algebra_8h">math/linear_algebra.h</link>&quot;</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_local__differences_8h">predictor/local_differences.h</link>&quot;</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_quantizer_8h">predictor/quantizer.h</link>&quot;</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00019"/>00019 
+<anchor xml:id="_sample__representative_8h_source_1l00020"/>00020 
+<anchor xml:id="_sample__representative_8h_source_1l00021"/><link linkend="_sample__representative_8h_1a9d318d5c2a1d81d6f70cbf34e917e47d">00021</link> <emphasis role="preprocessor">#define&#32;SR(hIMG,&#32;Z,&#32;Y,&#32;X)&#32;&#32;&#32;&#32;&#32;GetPixel(hIMG,&#32;X,Y,Z)</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00022"/>00022 <emphasis role="comment">//#define&#32;SAMPLE(z,y,x)&#32;(0)&#32;//&#32;TODO</emphasis>
+<anchor xml:id="_sample__representative_8h_source_1l00023"/>00023 
+<anchor xml:id="_sample__representative_8h_source_1l00024"/>00024 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;<link linkend="_sample__representative_8h_1aa25f2ddef46c2c5466643b137580700a">damping</link>[];
+<anchor xml:id="_sample__representative_8h_source_1l00025"/>00025 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;<link linkend="_sample__representative_8h_1a0ed063d2db07cb63fecfb70cffec43f1">offset</link>[];
+<anchor xml:id="_sample__representative_8h_source_1l00026"/>00026 
+<anchor xml:id="_sample__representative_8h_source_1l00027"/>00027 <link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;<link linkend="_sample__representative_8h_1aca1581c921d082976e7f116aa52c56f0">SampleRepresentative</link>(uint16_t&#32;sample_value);
+<anchor xml:id="_sample__representative_8h_source_1l00028"/>00028 
+<anchor xml:id="_sample__representative_8h_source_1l00029"/>00029 uint32_t&#32;<link linkend="_sample__representative_8h_1a6c60474c610dc64773816bc445efeb77">DoubleResolutionPredictedSample</link>(<link linkend="_structimage">image</link>*&#32;hIMG,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x,&#32;int64_t&#32;high_resolution_predicted_sample);
+<anchor xml:id="_sample__representative_8h_source_1l00030"/>00030 
+<anchor xml:id="_sample__representative_8h_source_1l00031"/>00031 uint16_t&#32;<link linkend="_sample__representative_8h_1a14cff7c59ac94b0387e8b95a433521e9">PredictedSample</link>(uint32_t&#32;double_resolution_predicted_sample);
+<anchor xml:id="_sample__representative_8h_source_1l00032"/>00032 
+<anchor xml:id="_sample__representative_8h_source_1l00033"/>00033 int64_t&#32;<link linkend="_sample__representative_8h_1a441e8d0fe639d45889aab5b88c4138f4">HighResolutionPredictedSample</link>(int64_t&#32;predicted_central_local_difference,&#32;uint32_t&#32;local_sum);
+<anchor xml:id="_sample__representative_8h_source_1l00034"/>00034 
+<anchor xml:id="_sample__representative_8h_source_1l00035"/>00035 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;SAMPLE_REPRESENTATIVE_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

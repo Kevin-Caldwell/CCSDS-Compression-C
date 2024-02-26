@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_synthetic__image__generator_8h" xml:lang="en-US">
+<title>include/testing/synthetic_image_generator.h File Reference</title>
+<indexterm><primary>include/testing/synthetic_image_generator.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;math/math_functions.h&quot;<?linebreak?>#include &quot;math/linear_algebra.h&quot;<?linebreak?>#include &quot;dst/image.h&quot;<?linebreak?></programlisting>Include dependency graph for synthetic_image_generator.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../db/d98/synthetic__image__generator_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dd/ddc/synthetic__image__generator_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22">INIT_ARRAY</link>(T,  count)&#160;&#160;&#160;(T*) malloc(sizeof(T) * count)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1a07336610b2fae60747404124a1bebbbe">WithinRect2</link> (<link linkend="_structdim2">dim2</link> point, <link linkend="_structdim2">dim2</link> top_left, <link linkend="_structdim2">dim2</link> bottom_right)</para>
+</listitem>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1a5b129c029b15584f09f306c005950893">WithinRect3</link> (<link linkend="_structdim3">dim3</link> point, <link linkend="_structdim3">dim3</link> top_left, <link linkend="_structdim3">dim3</link> bottom_right)</para>
+</listitem>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1a9793361bc08ee3644e6f9ac73e1bee45">SpreadPoint2</link> (<link linkend="_structdim2">dim2</link> **points, <link linkend="_structdim2">dim2</link> bounds, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> point_count)</para>
+</listitem>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1ab7214af202e08fe839b1623f5f783f59">SpreadPoint3</link> (<link linkend="_structdim3">dim3</link> **points, <link linkend="_structdim3">dim3</link> bounds, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> point_count)</para>
+</listitem>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb">GenerateVoronoiFlat2D</link> (<link linkend="_structimage2">image2</link> *result, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> sample_points)</para>
+</listitem>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa">GenerateVoronoiFlat3DNaive</link> (<link linkend="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa">image3</link> *result, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> sample_points)</para>
+</listitem>
+            <listitem><para>int <link linkend="_synthetic__image__generator_8h_1a5561acefba71d729426452c73bb402dd">GenerateVoronoiFlat3DLocal</link> (<link linkend="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa">image3</link> *result, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> sample_points)</para>
+
+<para>Faster Method for Generating Voronoi Diagrams. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22"/><section>
+    <title>INIT_ARRAY</title>
+<indexterm><primary>INIT_ARRAY</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>INIT_ARRAY</secondary></indexterm>
+<para><computeroutput>#define INIT_ARRAY( T,  count)&#160;&#160;&#160;(T*) malloc(sizeof(T) * count)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8h_source_1l00008">8</link> of file <link linkend="_synthetic__image__generator_8h_source">synthetic_image_generator.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb"/><section>
+    <title>GenerateVoronoiFlat2D()</title>
+<indexterm><primary>GenerateVoronoiFlat2D</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>GenerateVoronoiFlat2D</secondary></indexterm>
+<para><computeroutput>int GenerateVoronoiFlat2D (<link linkend="_structimage2">image2</link> * result, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> sample_points)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00049">49</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_adf6a5cb5771660cb1086396d4324c4eb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_synthetic__image__generator_8h_1a5561acefba71d729426452c73bb402dd"/><section>
+    <title>GenerateVoronoiFlat3DLocal()</title>
+<indexterm><primary>GenerateVoronoiFlat3DLocal</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>GenerateVoronoiFlat3DLocal</secondary></indexterm>
+<para><computeroutput>int GenerateVoronoiFlat3DLocal (<link linkend="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa">image3</link> * result, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> point_count)</computeroutput></para><para>
+
+<para>Faster Method for Generating Voronoi Diagrams. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>result</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                            <row>
+<entry>point_count</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00233">233</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_a5561acefba71d729426452c73bb402dd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_a5561acefba71d729426452c73bb402dd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa"/><section>
+    <title>GenerateVoronoiFlat3DNaive()</title>
+<indexterm><primary>GenerateVoronoiFlat3DNaive</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>GenerateVoronoiFlat3DNaive</secondary></indexterm>
+<para><computeroutput>int GenerateVoronoiFlat3DNaive (<link linkend="_image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa">image3</link> * result, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> sample_points)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00088">88</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_a1f64360c2baa3b6c2ab3589a5d25deaa_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_a1f64360c2baa3b6c2ab3589a5d25deaa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_synthetic__image__generator_8h_1a9793361bc08ee3644e6f9ac73e1bee45"/><section>
+    <title>SpreadPoint2()</title>
+<indexterm><primary>SpreadPoint2</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>SpreadPoint2</secondary></indexterm>
+<para><computeroutput>int SpreadPoint2 (<link linkend="_structdim2">dim2</link> ** points, <link linkend="_structdim2">dim2</link> bounds, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> point_count)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00020">20</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_a9793361bc08ee3644e6f9ac73e1bee45_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_synthetic__image__generator_8h_1ab7214af202e08fe839b1623f5f783f59"/><section>
+    <title>SpreadPoint3()</title>
+<indexterm><primary>SpreadPoint3</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>SpreadPoint3</secondary></indexterm>
+<para><computeroutput>int SpreadPoint3 (<link linkend="_structdim3">dim3</link> ** points, <link linkend="_structdim3">dim3</link> bounds, <link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> point_count)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00034">34</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/dea/synthetic__image__generator_8h_ab7214af202e08fe839b1623f5f783f59_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_synthetic__image__generator_8h_1a07336610b2fae60747404124a1bebbbe"/><section>
+    <title>WithinRect2()</title>
+<indexterm><primary>WithinRect2</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>WithinRect2</secondary></indexterm>
+<para><computeroutput>int WithinRect2 (<link linkend="_structdim2">dim2</link> point, <link linkend="_structdim2">dim2</link> top_left, <link linkend="_structdim2">dim2</link> bottom_right)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00006">6</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+</section>
+<anchor xml:id="_synthetic__image__generator_8h_1a5b129c029b15584f09f306c005950893"/><section>
+    <title>WithinRect3()</title>
+<indexterm><primary>WithinRect3</primary><secondary>synthetic_image_generator.h</secondary></indexterm>
+<indexterm><primary>synthetic_image_generator.h</primary><secondary>WithinRect3</secondary></indexterm>
+<para><computeroutput>int WithinRect3 (<link linkend="_structdim3">dim3</link> point, <link linkend="_structdim3">dim3</link> top_left, <link linkend="_structdim3">dim3</link> bottom_right)</computeroutput></para><para>
+Definition at line <link linkend="_synthetic__image__generator_8c_source_1l00012">12</link> of file <link linkend="_synthetic__image__generator_8c_source">synthetic_image_generator.c</link>.</para>
+</section>
+</section>
+</section>

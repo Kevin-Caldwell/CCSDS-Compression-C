@@ -1,0 +1,122 @@
+.TH "src/synthetic_image_generator.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/synthetic_image_generator.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'testing/synthetic_image_generator\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWRI\fP(x,  point,  tl,  br)   (\fBINSIDE_INTERVAL\fP(point\&.x, top_left\&.x, bottom_right, x))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBWithinRect2\fP (\fBdim2\fP point, \fBdim2\fP top_left, \fBdim2\fP bottom_right)"
+.br
+.ti -1c
+.RI "int \fBWithinRect3\fP (\fBdim3\fP point, \fBdim3\fP top_left, \fBdim3\fP bottom_right)"
+.br
+.ti -1c
+.RI "int \fBSpreadPoint2\fP (\fBdim2\fP **points, \fBdim2\fP bounds, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBSpreadPoint3\fP (\fBdim3\fP **points, \fBdim3\fP bounds, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiFlat2D\fP (\fBimage2\fP *result, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "\fBUINT\fP \fBGetMinDistance3Naive\fP (\fBdim3\fP point, \fBdim3\fP *points, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiFlat3DNaive\fP (\fBimage3\fP *result, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBGeneratePointLocales\fP (\fBdim3\fP *points, \fBUINT\fP **p_locales, \fBUINT\fP **p_true_indices, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "\fBUINT\fP \fBGetMinDistance3Locales\fP (\fBdim3\fP point, \fBdim3\fP *points, \fBUINT\fP *locales, \fBUINT\fP *color_indices, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBShadeVoronoiBox3\fP (\fBimage3\fP *img, \fBdim3\fP top_right, \fBdim3\fP bounds, \fBdim3\fP *points, \fBUINT\fP *locales, \fBUINT\fP *color_indices, \fBUINT\fP point_count)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiFlat3DLocal\fP (\fBimage3\fP *result, \fBUINT\fP point_count)"
+.br
+.RI "Faster Method for Generating Voronoi Diagrams\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define WRI(x, point, tl, br)   (\fBINSIDE_INTERVAL\fP(point\&.x, top_left\&.x, bottom_right, x))"
+
+.PP
+Definition at line \fB4\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int GeneratePointLocales (\fBdim3\fP * points, \fBUINT\fP ** p_locales, \fBUINT\fP ** p_true_indices, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB109\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int GenerateVoronoiFlat2D (\fBimage2\fP * result, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB49\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int GenerateVoronoiFlat3DLocal (\fBimage3\fP * result, \fBUINT\fP point_count)"
+
+.PP
+Faster Method for Generating Voronoi Diagrams\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIresult\fP 
+.br
+\fIpoint_count\fP 
+.RE
+.PP
+
+.PP
+Definition at line \fB233\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int GenerateVoronoiFlat3DNaive (\fBimage3\fP * result, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB88\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "\fBUINT\fP GetMinDistance3Locales (\fBdim3\fP point, \fBdim3\fP * points, \fBUINT\fP * locales, \fBUINT\fP * color_indices, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB134\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "\fBUINT\fP GetMinDistance3Naive (\fBdim3\fP point, \fBdim3\fP * points, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB70\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int ShadeVoronoiBox3 (\fBimage3\fP * img, \fBdim3\fP top_right, \fBdim3\fP bounds, \fBdim3\fP * points, \fBUINT\fP * locales, \fBUINT\fP * color_indices, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB170\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int SpreadPoint2 (\fBdim2\fP ** points, \fBdim2\fP bounds, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB20\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int SpreadPoint3 (\fBdim3\fP ** points, \fBdim3\fP bounds, \fBUINT\fP point_count)"
+
+.PP
+Definition at line \fB34\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int WithinRect2 (\fBdim2\fP point, \fBdim2\fP top_left, \fBdim2\fP bottom_right)"
+
+.PP
+Definition at line \fB6\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SS "int WithinRect3 (\fBdim3\fP point, \fBdim3\fP top_left, \fBdim3\fP bottom_right)"
+
+.PP
+Definition at line \fB12\fP of file \fBsynthetic_image_generator\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

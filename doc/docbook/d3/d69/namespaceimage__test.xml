@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceimage__test" xml:lang="en-US">
+<title>image_test Namespace Reference</title>
+<indexterm><primary>image_test</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceimage__test_1a0b47ce0c13c56f95ba8759974d6e722b">load_indian_pines</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespaceimage__test_1afd65cf072a93c93ad52b9f25b341e10b">ip</link> = <link linkend="_namespaceimage__test_1a0b47ce0c13c56f95ba8759974d6e722b">load_indian_pines</link>()</para>
+</listitem>
+            <listitem><para><link linkend="_namespaceimage__test_1aaeb5d6c0725676dbf8a8b57680213cb9">wavelength</link> = <link linkend="_namespaceimage__test_1afd65cf072a93c93ad52b9f25b341e10b">ip</link>[0, 10, :]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceimage__test_1a0b47ce0c13c56f95ba8759974d6e722b"/><section>
+    <title>load_indian_pines()</title>
+<indexterm><primary>load_indian_pines</primary><secondary>image_test</secondary></indexterm>
+<indexterm><primary>image_test</primary><secondary>load_indian_pines</secondary></indexterm>
+<para><computeroutput>load_indian_pines ( )</computeroutput></para><para>
+Definition at line <link linkend="_image__test_8py_source_1l00004">4</link> of file <link linkend="_image__test_8py_source">image_test.py</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespaceimage__test_1afd65cf072a93c93ad52b9f25b341e10b"/><section>
+    <title>ip</title>
+<indexterm><primary>ip</primary><secondary>image_test</secondary></indexterm>
+<indexterm><primary>image_test</primary><secondary>ip</secondary></indexterm>
+<para><computeroutput>ip = <link linkend="_namespaceimage__test_1a0b47ce0c13c56f95ba8759974d6e722b">load_indian_pines</link>()</computeroutput></para><para>
+Definition at line <link linkend="_image__test_8py_source_1l00009">9</link> of file <link linkend="_image__test_8py_source">image_test.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceimage__test_1aaeb5d6c0725676dbf8a8b57680213cb9"/><section>
+    <title>wavelength</title>
+<indexterm><primary>wavelength</primary><secondary>image_test</secondary></indexterm>
+<indexterm><primary>image_test</primary><secondary>wavelength</secondary></indexterm>
+<para><computeroutput>wavelength = <link linkend="_namespaceimage__test_1afd65cf072a93c93ad52b9f25b341e10b">ip</link>[0, 10, :]</computeroutput></para><para>
+Definition at line <link linkend="_image__test_8py_source_1l00010">10</link> of file <link linkend="_image__test_8py_source">image_test.py</link>.</para>
+</section>
+</section>
+</section>

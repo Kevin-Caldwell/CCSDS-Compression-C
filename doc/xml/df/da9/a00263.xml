@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="df/da9/a00263" kind="file" language="C++">
+    <compoundname>csv-io.c</compoundname>
+    <includes refid="dc/dfe/a00125" local="yes">files/csv-io.h</includes>
+    <includes local="no">string.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>files/csv-io.h</label>
+        <link refid="dc/dfe/a00125"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/csv-io.c</label>
+        <link refid="df/da9/a00263"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+      <node id="7">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="6">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="df/da9/a00263_1a3e3e00c9789afb1d2f5f2c7004bd82ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SaveArrayAsCSV</definition>
+        <argsstring>(uint16_t *data, UINT count, char *file_name)</argsstring>
+        <name>SaveArrayAsCSV</name>
+        <param>
+          <type>uint16_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="dc/dfe/a00125" kindref="compound">csv-io.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell and @BrianShTsoi</para>
+</simplesect>
+Functions for image file read and write to CSV </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/csv-io.c" line="9" column="6" bodyfile="src/csv-io.c" bodystart="9" bodyend="27"/>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" compoundref="d8/d8e/a00344" startline="7">fp</references>
+        <references refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" compoundref="df/dc8/a00122" startline="26">WRITE</references>
+      </memberdef>
+      <memberdef kind="function" id="df/da9/a00263_1a214fc383a5cb483508da7bb0449a9528" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SaveImageAsCSV</definition>
+        <argsstring>(image *hIMG, char *file_name)</argsstring>
+        <name>SaveImageAsCSV</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/csv-io.c" line="31" column="5" bodyfile="src/csv-io.c" bodystart="31" bodyend="65"/>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" compoundref="d2/df5/a00137" startline="43">FILE_ACCESS_ERROR</references>
+        <references refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" compoundref="d8/d8e/a00344" startline="7">fp</references>
+        <references refid="d3/d00/a00113_1a78477801fe183cdf32e60df1c92b7320" compoundref="d0/d39/a00314" startline="55" endline="59">GetPixel</references>
+        <references refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d3/d00/a00113" startline="66">image::size</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" compoundref="df/dc8/a00122" startline="26">WRITE</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="da/d24/a00068_1a6d727efa497a4b992c90483602583515" compoundref="d0/d61/a00302" startline="103" endline="117">GeneratePerlinImage</referencedby>
+        <referencedby refid="df/d03/a00062_1a450c7f9206bff8de0c177e34e6b5bcf4" compoundref="d3/d07/a00305" startline="5" endline="19">GenerateVoronoiImage</referencedby>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="df/d03/a00062_1aac70a37466945a2c91d42fbfb9d1dcbb" compoundref="d3/d07/a00305" startline="111" endline="119">TestReadImage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="df/da9/a00263_1aba677341d6fd704867c56e0b5d6f3fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ReadImageFromCSV</definition>
+        <argsstring>(image *hIMG, char *file_name)</argsstring>
+        <name>ReadImageFromCSV</name>
+        <param>
+          <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/csv-io.c" line="67" column="5" bodyfile="src/csv-io.c" bodystart="67" bodyend="127"/>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" compoundref="dc/d5d/a00278" startline="22" endline="24">F_READ</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" compoundref="d2/df5/a00137" startline="43">FILE_ACCESS_ERROR</references>
+        <references refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" compoundref="d8/d8e/a00344" startline="7">fp</references>
+        <references refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" compoundref="d0/d39/a00314" startline="45" endline="53">InitImage</references>
+        <references refid="de/d76/a00134_1ad795690a809192117add6898be812267" compoundref="d5/d42/a00269" startline="38" endline="40">Log_error</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" compoundref="df/dc8/a00122" startline="25">READ</references>
+        <references refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d2/df5/a00137" startline="42">RES_OK</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="df/d03/a00062_1a29f9d24093c99f0e47133d90ea4286e6" compoundref="d3/d07/a00305" startline="84" endline="98">EncodeImage</referencedby>
+        <referencedby refid="df/d03/a00062_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d3/d07/a00305" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="df/d03/a00062_1aac70a37466945a2c91d42fbfb9d1dcbb" compoundref="d3/d07/a00305" startline="111" endline="119">TestReadImage</referencedby>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/dfe/a00125" kindref="compound">files/csv-io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d76/a00134" kindref="compound">files/logs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="dc/dfe/a00125_1a3e3e00c9789afb1d2f5f2c7004bd82ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="df/da9/a00263_1a3e3e00c9789afb1d2f5f2c7004bd82ad" kindref="member">SaveArrayAsCSV</ref>(uint16_t*<sp/>data,<sp/><ref refid="d7/d9a/a00152_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>count,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref><sp/>=<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(file_name,<sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d76/a00134_1ad795690a809192117add6898be812267" kindref="member">Log_error</ref>(</highlight><highlight class="stringliteral">&quot;SaveArrayAsCSV:<sp/>Unable<sp/>to<sp/>open<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>string_buffer[50];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count;<sp/>i++){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(string_buffer,<sp/></highlight><highlight class="stringliteral">&quot;%hu,&quot;</highlight><highlight class="normal">,<sp/>data[i]);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs(string_buffer,<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(</highlight><highlight class="stringliteral">&quot;%hu&quot;</highlight><highlight class="normal">,<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/da9/a00263_1a214fc383a5cb483508da7bb0449a9528" kindref="member">SaveImageAsCSV</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>hIMG,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FILE*<sp/>fp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>size<sp/>=<sp/>hIMG-&gt;<ref refid="d8/ddd/a00380_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref><sp/>=<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(file_name,<sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d76/a00134_1ad795690a809192117add6898be812267" kindref="member">Log_error</ref>(</highlight><highlight class="stringliteral">&quot;SaveImageAsCSV:<sp/>Unable<sp/>to<sp/>open<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" kindref="member">FILE_ACCESS_ERROR</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>string_buffer[50];</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(string_buffer,<sp/></highlight><highlight class="stringliteral">&quot;%ld,%ld,%ld,&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>size.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>,<sp/>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>size.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>,(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)<sp/>size.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>fputs(string_buffer,<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>;<sp/>i++){</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>size.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>;<sp/>j++){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>size.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>;<sp/>k++){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(string_buffer,<sp/></highlight><highlight class="stringliteral">&quot;%hu,&quot;</highlight><highlight class="normal">,<sp/><ref refid="d3/d00/a00113_1a78477801fe183cdf32e60df1c92b7320" kindref="member">GetPixel</ref>(hIMG,<sp/>k,j,i));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs(string_buffer,<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>sprintf(string_buffer,<sp/>&quot;%hu&quot;,<sp/>hIMG-&gt;data[size.x<sp/>*<sp/>size.y<sp/>*<sp/>size.z<sp/>-<sp/>1]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fputs(string_buffer,<sp/>fp);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="df/da9/a00263_1aba677341d6fd704867c56e0b5d6f3fc3" kindref="member">ReadImageFromCSV</ref>(<ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>hIMG,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref><sp/>=<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(file_name,<sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" kindref="member">READ</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d76/a00134_1ad795690a809192117add6898be812267" kindref="member">Log_error</ref>(</highlight><highlight class="stringliteral">&quot;ReadImageFromCSV:<sp/>Unable<sp/>to<sp/>open<sp/>File&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f" kindref="member">FILE_ACCESS_ERROR</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>size<sp/>=<sp/><sp/>{0,0,0};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>read_buffer<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>num_buffer[30];</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buffer_ptr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>num;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>img_counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(read_buffer<sp/>!=<sp/>EOF){</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>res<sp/>=<sp/><ref refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" kindref="member">F_READ</ref>(&amp;read_buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>1,<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(read_buffer<sp/>==<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_buffer[buffer_ptr]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num<sp/><sp/>=<sp/>atoi(num_buffer);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer_ptr<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!size.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>){</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!size.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!size.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>){</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref><sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d00/a00113_1a61b8047c5bba5a89979d65847e4103b1" kindref="member">InitImage</ref>(hIMG,<sp/>size.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>,<sp/>size.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>,<sp/>size.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>MEMORY_SAVING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(hIMG)-&gt;data[img_counter++]<sp/>=<sp/>num;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(img_counter<sp/>==<sp/>size.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>*<sp/>size.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>*<sp/>size.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>){</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_buffer[buffer_ptr++]<sp/>=<sp/>read_buffer;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d2/df5/a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/csv-io.c"/>
+  </compounddef>
+</doxygen>

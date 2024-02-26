@@ -1,0 +1,102 @@
+.TH "include/cache/cache_predictor.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/cache/cache_predictor.h \- Deprecated, Used as a buffer for debugging and temporary storage\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'math/linear_algebra\&.h'\fP
+.br
+\fC#include 'dst/image\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBPredictorCache\fP"
+.br
+.RI "Struct \fBPredictorCache\fP is a struct for storing the intermediate results obtained through the predictor\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBPredictorCache\fP \fBPredictorCache\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBInitializePredictorCache\fP (\fBPredictorCache\fP **p_cache, \fBimage\fP *hIMG)"
+.br
+.ti -1c
+.RI "int \fBDeletePredictorCache\fP (\fBPredictorCache\fP *p_cache)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBCacheFiles\fP []"
+.br
+.ti -1c
+.RI "\fBPredictorCache\fP * \fBglobal_cache\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Deprecated, Used as a buffer for debugging and temporary storage\&. 
+
+
+.PP
+\fBAuthors\fP
+.RS 4
+Kevin Caldwell 
+.RE
+.PP
+\fBBug\fP
+.RS 4
+No Bugs 
+.RE
+.PP
+\fBDeprecated\fP
+.RS 4
+Large Memory Usage, ineffective for debug\&. 
+.RE
+.PP
+
+.PP
+Definition in file \fBcache_predictor\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBPredictorCache\fP \fBPredictorCache\fP"
+
+.PP
+Definition at line \fB36\fP of file \fBcache_predictor\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int DeletePredictorCache (\fBPredictorCache\fP * p_cache)"
+
+.PP
+Definition at line \fB43\fP of file \fBcache_predictor\&.c\fP\&.
+.SS "int InitializePredictorCache (\fBPredictorCache\fP ** p_cache, \fBimage\fP * hIMG)"
+
+.PP
+Definition at line \fB16\fP of file \fBcache_predictor\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char* CacheFiles[]\fC [extern]\fP"
+
+.PP
+Definition at line \fB6\fP of file \fBcache_predictor\&.c\fP\&.
+.SS "\fBPredictorCache\fP* global_cache\fC [extern]\fP"
+
+.PP
+Definition at line \fB5\fP of file \fBcache_predictor\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

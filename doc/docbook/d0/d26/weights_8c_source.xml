@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_weights_8c_source" xml:lang="en-US">
+<title>weights.c</title>
+<indexterm><primary>src/weights.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_weights_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_weights_8h">predictor/weights.h</link>&quot;</emphasis>
+<anchor xml:id="_weights_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+<anchor xml:id="_weights_8c_source_1l00003"/>00003 
+<anchor xml:id="_weights_8c_source_1l00004"/><link linkend="_weights_8h_1adcc753ae7048085817bd2c37b471f739">00004</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_weights_8c_1adcc753ae7048085817bd2c37b471f739">InitializeWeights</link>(int32_t&#32;**weight_ptr,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x)
+<anchor xml:id="_weights_8c_source_1l00005"/>00005 {
+<anchor xml:id="_weights_8c_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<link linkend="_linear__algebra_8h_1ab9661c8e10293140db24d4b650785939">InitVector</link>(weight_ptr,&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>);
+<anchor xml:id="_weights_8c_source_1l00007"/>00007 &#32;&#32;&#32;&#32;int32_t&#32;*weight_vector&#32;=&#32;*weight_ptr;&#32;<emphasis role="comment">//&#32;TODO&#32;Turn&#32;into&#32;#define&#32;for&#32;optimization?</emphasis>
+<anchor xml:id="_weights_8c_source_1l00008"/>00008 
+<anchor xml:id="_weights_8c_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!<link linkend="_constants_8h_1aee5860bd3e62fe2734ce27a1b1038dbc">PREDICTION_MODE</link>)
+<anchor xml:id="_weights_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;3;&#32;i++)
+<anchor xml:id="_weights_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector[i]&#32;=&#32;0;
+<anchor xml:id="_weights_8c_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00015"/>00015 
+<anchor xml:id="_weights_8c_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector[3]&#32;=&#32;7&#32;*&#32;(int32_t)<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_constants_8h_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>)&#32;/&#32;8;&#32;<emphasis role="comment">//&#32;!&#32;Source&#32;of&#32;Error</emphasis>
+<anchor xml:id="_weights_8c_source_1l00017"/>00017 
+<anchor xml:id="_weights_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;i&#32;=&#32;4;&#32;i&#32;&lt;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>;&#32;i++)
+<anchor xml:id="_weights_8c_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector[i]&#32;=&#32;weight_vector[i&#32;-&#32;1]&#32;&gt;&gt;&#32;3;&#32;<emphasis role="comment">//&#32;!&#32;Watch&#32;out&#32;for&#32;Indexing&#32;Issues</emphasis>
+<anchor xml:id="_weights_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_weights_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector[0]&#32;=&#32;7&#32;*&#32;<link linkend="_math__functions_8h_1a60b4b9f1152371307ebadc232149699c">BPOW</link>(<link linkend="_constants_8h_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>&#32;-&#32;3);
+<anchor xml:id="_weights_8c_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;i&#32;=&#32;1;&#32;i&#32;&lt;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>;&#32;i++)
+<anchor xml:id="_weights_8c_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weight_vector[i]&#32;=&#32;weight_vector[i&#32;-&#32;1]&#32;&gt;&gt;&#32;3;
+<anchor xml:id="_weights_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00030"/>00030 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00031"/>00031 
+<anchor xml:id="_weights_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737">RES_OK</link>;
+<anchor xml:id="_weights_8c_source_1l00033"/>00033 }
+<anchor xml:id="_weights_8c_source_1l00034"/>00034 
+<anchor xml:id="_weights_8c_source_1l00035"/><link linkend="_weights_8h_1a286baab1384ff25cf7cf4c2061f15c4c">00035</link> int32_t&#32;<link linkend="_weights_8c_1a286baab1384ff25cf7cf4c2061f15c4c">DoubleResolutionPredictionError</link>(int16_t&#32;clipped_quantizer_bin_center,
+<anchor xml:id="_weights_8c_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;int32_t&#32;double_resolution_predicted_sample)
+<anchor xml:id="_weights_8c_source_1l00037"/>00037 {
+<anchor xml:id="_weights_8c_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2&#32;*&#32;(int32_t)clipped_quantizer_bin_center&#32;-&#32;(int32_t)double_resolution_predicted_sample;
+<anchor xml:id="_weights_8c_source_1l00039"/>00039 }
+<anchor xml:id="_weights_8c_source_1l00040"/>00040 
+<anchor xml:id="_weights_8c_source_1l00041"/><link linkend="_weights_8h_1a17984670eb20b6ea122fb1e90a50dc75">00041</link> int32_t&#32;<link linkend="_weights_8c_1a17984670eb20b6ea122fb1e90a50dc75">WeightUpdateScalingExponent</link>(<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x)
+<anchor xml:id="_weights_8c_source_1l00042"/>00042 {
+<anchor xml:id="_weights_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;int32_t&#32;res&#32;=&#32;<link linkend="_math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e">CLIP</link>((int32_t)<link linkend="_constants_8h_1a68b61249aa9c541a3ed6d1987b8c53ce">kVMin</link>&#32;+
+<anchor xml:id="_weights_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((int32_t)y&#32;*&#32;<link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>&#32;+&#32;(int32_t)x&#32;-&#32;<link linkend="_constants_8h_1abfda77b016218238359bcc3e5c1600b0">Nx</link>)&#32;/&#32;(int32_t)<link linkend="_constants_8h_1a2481969fa62464bdc5889190f3e10f31">kTInc</link>,
+<anchor xml:id="_weights_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(int32_t)<link linkend="_constants_8h_1a68b61249aa9c541a3ed6d1987b8c53ce">kVMin</link>,&#32;(int32_t)<link linkend="_constants_8h_1a85fbef56eedaaa1a29a9f0c18ba53631">kVMax</link>)&#32;+
+<anchor xml:id="_weights_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(int32_t)<link linkend="_constants_8h_1abf6d0ccec2f5157184071729f129de19">D</link>&#32;-&#32;(int32_t)<link linkend="_constants_8h_1a515cdf0341e52056bcea8e46c952ee82">Omega</link>;
+<anchor xml:id="_weights_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;res;
+<anchor xml:id="_weights_8c_source_1l00048"/>00048 }
+<anchor xml:id="_weights_8c_source_1l00049"/>00049 
+<anchor xml:id="_weights_8c_source_1l00050"/><link linkend="_weights_8h_1a805706f7af2f212bc46076319fcec535">00050</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_weights_8c_1a805706f7af2f212bc46076319fcec535">UpdateWeights</link>(<link linkend="_structimage">image</link>&#32;*hIMG,&#32;int32_t&#32;*weights,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x,&#32;int32_t&#32;double_resolution_prediction_error)
+<anchor xml:id="_weights_8c_source_1l00051"/>00051 {
+<anchor xml:id="_weights_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;scaling_exponent&#32;=&#32;-<link linkend="_weights_8c_1a17984670eb20b6ea122fb1e90a50dc75">WeightUpdateScalingExponent</link>(y,&#32;x);
+<anchor xml:id="_weights_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;exp&#32;=&#32;exp2f(scaling_exponent)&#32;*&#32;<link linkend="_math__functions_8h_1a5f76d4dda1e368d45e059912932c7b60">SIGN_P</link>(double_resolution_prediction_error);
+<anchor xml:id="_weights_8c_source_1l00054"/>00054 
+<anchor xml:id="_weights_8c_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;3;&#32;i++)
+<anchor xml:id="_weights_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;val&#32;=&#32;floor((exp&#32;*&#32;(<emphasis role="keywordtype">float</emphasis>)<link linkend="_local__differences_8h_1add0875819772a3917e5a6f648c0a3292">DLD</link>(hIMG,&#32;z,&#32;y,&#32;x,&#32;i)&#32;+&#32;1)&#32;/&#32;2);
+<anchor xml:id="_weights_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weights[i]&#32;+=&#32;val;
+<anchor xml:id="_weights_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00060"/>00060 
+<anchor xml:id="_weights_8c_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;3;&#32;i&#32;&lt;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>;&#32;i++)
+<anchor xml:id="_weights_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;val&#32;=&#32;floor((exp&#32;*&#32;(<emphasis role="keywordtype">float</emphasis>)<link linkend="_local__differences_8h_1a37d2cf3f48b1b2c436f630a2b649cf52">CentralLocalDifference</link>(hIMG,&#32;z&#32;-&#32;i&#32;+&#32;2,&#32;y,&#32;x)&#32;+&#32;1)&#32;/&#32;2);
+<anchor xml:id="_weights_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weights[i]&#32;+=&#32;val;
+<anchor xml:id="_weights_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00066"/>00066 
+<anchor xml:id="_weights_8c_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_constants_8h_1a5464533d23b59ba11030432e73528730">C</link>;&#32;i++)
+<anchor xml:id="_weights_8c_source_1l00068"/>00068 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_weights_8c_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;weights[i]&#32;=&#32;<link linkend="_math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e">CLIP</link>(weights[i],&#32;<link linkend="_constants_8h_1afe552e4b168b0821a5cb40ca9f8df744">kOmegaMin</link>,&#32;<link linkend="_constants_8h_1a919504d752286a3ecacfab4792035e7c">kOmegaMax</link>);
+<anchor xml:id="_weights_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_weights_8c_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_weights_8c_source_1l00072"/>00072 }
+</programlisting></section>

@@ -1,0 +1,462 @@
+\doxysection{compression Namespace Reference}
+\hypertarget{namespacecompression}{}\label{namespacecompression}\index{compression@{compression}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecompression_a7251716b703096793ed329f6b8469300}{Ps}} (z)
+\item 
+\mbox{\hyperlink{namespacecompression_a7f0bae725f24b8dae34a48b3cbe35d49}{local\+\_\+sum}} (x, y, z, data)
+\item 
+\mbox{\hyperlink{namespacecompression_a49ef318f74fbe8e8dd91da6f85f2c3e8}{local\+\_\+diff\+\_\+vector}} (x, y, z, data)
+\item 
+\mbox{\hyperlink{namespacecompression_a49c6c06e2ea0cfc20fce6d6edb0c72fa}{init\+\_\+weight\+\_\+vector}} (z)
+\item 
+\mbox{\hyperlink{namespacecompression_a148cf1e7cc2fd2f23b569009afd6d3c1}{prediction}} (ld\+\_\+vector, weight\+\_\+vector, x, y, z, data)
+\item 
+\mbox{\hyperlink{namespacecompression_aff3436357165d0b07392b7d032fd13bc}{updated\+\_\+weight\+\_\+vector}} (s\+\_\+tilde, weight\+\_\+vector, ld\+\_\+vector, x, y, z, data)
+\item 
+\mbox{\hyperlink{namespacecompression_a37ffa8d9496cef9a8e698c70ada1b0a7}{mapper}} (delta, s\+\_\+hat, s\+\_\+tilde)
+\item 
+\mbox{\hyperlink{namespacecompression_a11e878c5de785af8c9c14a5a86a0354d}{predictor}} (data)
+\item 
+\mbox{\hyperlink{namespacecompression_ae875711385174553f6db26923ce85874}{predictor\+\_\+debug}} (data)
+\item 
+\mbox{\hyperlink{namespacecompression_a6a4af5f40ce35a453cd8e214f546734f}{GPO2}} (k, j)
+\item 
+\mbox{\hyperlink{namespacecompression_ac2c565a00560593a9177b1aad41e0d3c}{encoder}} (mapped\+\_\+delta)
+\item 
+\mbox{\hyperlink{namespacecompression_a0b0449d8b52604ab8eed2bfa8c7c4277}{increment\+\_\+xyz}} (x, y, z, \mbox{\hyperlink{constants_8h_abfda77b016218238359bcc3e5c1600b0}{Nx}}, \mbox{\hyperlink{constants_8h_adcc9183c4659dc09e04e5ede1d79215b}{Ny}}, \mbox{\hyperlink{constants_8h_a7a7576e08f5980d322da5f48c7385edc}{Nz}})
+\item 
+\mbox{\hyperlink{namespacecompression_a78bff45f9915c892f4cf129d2fd27f55}{inv\+\_\+\+GPO2}} (k, encoded, i)
+\item 
+\mbox{\hyperlink{namespacecompression_a13bd9527fe572001978b40411c0868be}{decoder}} (encoded, \mbox{\hyperlink{constants_8h_abfda77b016218238359bcc3e5c1600b0}{Nx}}, \mbox{\hyperlink{constants_8h_adcc9183c4659dc09e04e5ede1d79215b}{Ny}}, \mbox{\hyperlink{constants_8h_a7a7576e08f5980d322da5f48c7385edc}{Nz}})
+\item 
+\mbox{\hyperlink{namespacecompression_a1f2ff95dd2ae77e1fd9c720e7873c5c6}{unmapper}} (mapped\+\_\+delta, s\+\_\+hat, s\+\_\+tilde)
+\item 
+np.\+array \mbox{\hyperlink{namespacecompression_a6ac9172b17fab1182e21fbc228069437}{unpredictor}} (np.\+array mapped, int \mbox{\hyperlink{constants_8h_abfda77b016218238359bcc3e5c1600b0}{Nx}}, int \mbox{\hyperlink{constants_8h_adcc9183c4659dc09e04e5ede1d79215b}{Ny}}, int \mbox{\hyperlink{constants_8h_a7a7576e08f5980d322da5f48c7385edc}{Nz}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacecompression_abf6d0ccec2f5157184071729f129de19}{D}} = 14
+\item 
+int \mbox{\hyperlink{namespacecompression_a80970133e7290ddaa15b6d949fc99420}{S\+\_\+\+MIN}} = 0
+\item 
+int \mbox{\hyperlink{namespacecompression_a04632c156a04ad172a367f2760582928}{S\+\_\+\+MAX}} = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_abf6d0ccec2f5157184071729f129de19}{D}}) -\/ 1
+\item 
+int \mbox{\hyperlink{namespacecompression_af02faf18c4b6fb6841abaf0b3142cc92}{S\+\_\+\+MID}} = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_abf6d0ccec2f5157184071729f129de19}{D}} -\/ 1)
+\item 
+int \mbox{\hyperlink{namespacecompression_aef94be98e2c9e4a4dece75f60ca9792c}{P}} = 3
+\item 
+int \mbox{\hyperlink{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6}{W\+\_\+\+RES}} = 19
+\item 
+\mbox{\hyperlink{namespacecompression_a999bcfcc11e2794539308d5015455f59}{W\+\_\+\+MIN}} = -\/(2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6}{W\+\_\+\+RES}} + 2))
+\item 
+int \mbox{\hyperlink{namespacecompression_add63171ca968cbd5ca4d60dfbf9a2746}{W\+\_\+\+MAX}} = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6}{W\+\_\+\+RES}} + 2) -\/ 1
+\item 
+int \mbox{\hyperlink{namespacecompression_a3d90133d3051fbc4816d02efd9566d8e}{R}} = 35
+\item 
+int \mbox{\hyperlink{namespacecompression_a5e78dbd5fd0fc01ba7b98dd15e27221e}{M}} = 0
+\item 
+int \mbox{\hyperlink{namespacecompression_a6238c0ecdac57d88d1f30259c60238cc}{V\+\_\+\+MIN}} = -\/6
+\item 
+int \mbox{\hyperlink{namespacecompression_ae2de9b8731e1c54a74579610837e59c0}{V\+\_\+\+MAX}} = 9
+\item 
+int \mbox{\hyperlink{namespacecompression_aa911c208b6f29485ce4b65c73b7f72f8}{T\+\_\+\+INC}} = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}4
+\item 
+int \mbox{\hyperlink{namespacecompression_a633454f54a1d7f2439a65666d71f9271}{U\+\_\+\+MAX}} = 8
+\item 
+int \mbox{\hyperlink{namespacecompression_a7880c4643e340683b530ce1609a8fd47}{GAMMA\+\_\+0}} = 1
+\item 
+int \mbox{\hyperlink{namespacecompression_a2689c4b3931025b79053532a5f1b0a85}{K}} = 0
+\item 
+int \mbox{\hyperlink{namespacecompression_a3272087e7728ef865ea990a98baf8395}{GAMMA\+\_\+\+STAR}} = 5
+\item 
+int \mbox{\hyperlink{namespacecompression_aa92b3873c7c4a40451e43cc6b2cd53f1}{K\+\_\+\+ZPRIME}} = \mbox{\hyperlink{namespacecompression_a2689c4b3931025b79053532a5f1b0a85}{K}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacecompression_a13bd9527fe572001978b40411c0868be}\label{namespacecompression_a13bd9527fe572001978b40411c0868be} 
+\index{compression@{compression}!decoder@{decoder}}
+\index{decoder@{decoder}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{decoder()}{decoder()}}
+{\footnotesize\ttfamily decoder (\begin{DoxyParamCaption}\item[{}]{encoded,  }\item[{}]{Nx,  }\item[{}]{Ny,  }\item[{}]{Nz }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00305}{305}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+\Hypertarget{namespacecompression_ac2c565a00560593a9177b1aad41e0d3c}\label{namespacecompression_ac2c565a00560593a9177b1aad41e0d3c} 
+\index{compression@{compression}!encoder@{encoder}}
+\index{encoder@{encoder}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{encoder()}{encoder()}}
+{\footnotesize\ttfamily encoder (\begin{DoxyParamCaption}\item[{}]{mapped\+\_\+delta }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00225}{225}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+\Hypertarget{namespacecompression_a6a4af5f40ce35a453cd8e214f546734f}\label{namespacecompression_a6a4af5f40ce35a453cd8e214f546734f} 
+\index{compression@{compression}!GPO2@{GPO2}}
+\index{GPO2@{GPO2}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{GPO2()}{GPO2()}}
+{\footnotesize\ttfamily GPO2 (\begin{DoxyParamCaption}\item[{}]{k,  }\item[{}]{j }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00212}{212}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{namespacecompression_a0b0449d8b52604ab8eed2bfa8c7c4277}\label{namespacecompression_a0b0449d8b52604ab8eed2bfa8c7c4277} 
+\index{compression@{compression}!increment\_xyz@{increment\_xyz}}
+\index{increment\_xyz@{increment\_xyz}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{increment\_xyz()}{increment\_xyz()}}
+{\footnotesize\ttfamily increment\+\_\+xyz (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z,  }\item[{}]{Nx,  }\item[{}]{Ny,  }\item[{}]{Nz }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00275}{275}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{namespacecompression_a49c6c06e2ea0cfc20fce6d6edb0c72fa}\label{namespacecompression_a49c6c06e2ea0cfc20fce6d6edb0c72fa} 
+\index{compression@{compression}!init\_weight\_vector@{init\_weight\_vector}}
+\index{init\_weight\_vector@{init\_weight\_vector}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{init\_weight\_vector()}{init\_weight\_vector()}}
+{\footnotesize\ttfamily init\+\_\+weight\+\_\+vector (\begin{DoxyParamCaption}\item[{}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00081}{81}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{namespacecompression_a78bff45f9915c892f4cf129d2fd27f55}\label{namespacecompression_a78bff45f9915c892f4cf129d2fd27f55} 
+\index{compression@{compression}!inv\_GPO2@{inv\_GPO2}}
+\index{inv\_GPO2@{inv\_GPO2}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{inv\_GPO2()}{inv\_GPO2()}}
+{\footnotesize\ttfamily inv\+\_\+\+GPO2 (\begin{DoxyParamCaption}\item[{}]{k,  }\item[{}]{encoded,  }\item[{}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00285}{285}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{namespacecompression_a49ef318f74fbe8e8dd91da6f85f2c3e8}\label{namespacecompression_a49ef318f74fbe8e8dd91da6f85f2c3e8} 
+\index{compression@{compression}!local\_diff\_vector@{local\_diff\_vector}}
+\index{local\_diff\_vector@{local\_diff\_vector}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{local\_diff\_vector()}{local\_diff\_vector()}}
+{\footnotesize\ttfamily local\+\_\+diff\+\_\+vector (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00054}{54}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{namespacecompression_a7f0bae725f24b8dae34a48b3cbe35d49}\label{namespacecompression_a7f0bae725f24b8dae34a48b3cbe35d49} 
+\index{compression@{compression}!local\_sum@{local\_sum}}
+\index{local\_sum@{local\_sum}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{local\_sum()}{local\_sum()}}
+{\footnotesize\ttfamily local\+\_\+sum (\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00038}{38}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{namespacecompression_a37ffa8d9496cef9a8e698c70ada1b0a7}\label{namespacecompression_a37ffa8d9496cef9a8e698c70ada1b0a7} 
+\index{compression@{compression}!mapper@{mapper}}
+\index{mapper@{mapper}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{mapper()}{mapper()}}
+{\footnotesize\ttfamily mapper (\begin{DoxyParamCaption}\item[{}]{delta,  }\item[{}]{s\+\_\+hat,  }\item[{}]{s\+\_\+tilde }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00147}{147}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{namespacecompression_a148cf1e7cc2fd2f23b569009afd6d3c1}\label{namespacecompression_a148cf1e7cc2fd2f23b569009afd6d3c1} 
+\index{compression@{compression}!prediction@{prediction}}
+\index{prediction@{prediction}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{prediction()}{prediction()}}
+{\footnotesize\ttfamily prediction (\begin{DoxyParamCaption}\item[{}]{ld\+\_\+vector,  }\item[{}]{weight\+\_\+vector,  }\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00096}{96}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{namespacecompression_a11e878c5de785af8c9c14a5a86a0354d}\label{namespacecompression_a11e878c5de785af8c9c14a5a86a0354d} 
+\index{compression@{compression}!predictor@{predictor}}
+\index{predictor@{predictor}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{predictor()}{predictor()}}
+{\footnotesize\ttfamily predictor (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00160}{160}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 14
+\Hypertarget{namespacecompression_ae875711385174553f6db26923ce85874}\label{namespacecompression_ae875711385174553f6db26923ce85874} 
+\index{compression@{compression}!predictor\_debug@{predictor\_debug}}
+\index{predictor\_debug@{predictor\_debug}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{predictor\_debug()}{predictor\_debug()}}
+{\footnotesize\ttfamily predictor\+\_\+debug (\begin{DoxyParamCaption}\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00187}{187}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 15
+\Hypertarget{namespacecompression_a7251716b703096793ed329f6b8469300}\label{namespacecompression_a7251716b703096793ed329f6b8469300} 
+\index{compression@{compression}!Ps@{Ps}}
+\index{Ps@{Ps}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{Ps()}{Ps()}}
+{\footnotesize\ttfamily Ps (\begin{DoxyParamCaption}\item[{}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00034}{34}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a1f2ff95dd2ae77e1fd9c720e7873c5c6}\label{namespacecompression_a1f2ff95dd2ae77e1fd9c720e7873c5c6} 
+\index{compression@{compression}!unmapper@{unmapper}}
+\index{unmapper@{unmapper}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{unmapper()}{unmapper()}}
+{\footnotesize\ttfamily unmapper (\begin{DoxyParamCaption}\item[{}]{mapped\+\_\+delta,  }\item[{}]{s\+\_\+hat,  }\item[{}]{s\+\_\+tilde }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00349}{349}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the caller graph for this function\+:
+% FIG 16
+\Hypertarget{namespacecompression_a6ac9172b17fab1182e21fbc228069437}\label{namespacecompression_a6ac9172b17fab1182e21fbc228069437} 
+\index{compression@{compression}!unpredictor@{unpredictor}}
+\index{unpredictor@{unpredictor}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{unpredictor()}{unpredictor()}}
+{\footnotesize\ttfamily  np.\+array unpredictor (\begin{DoxyParamCaption}\item[{np.\+array}]{mapped,  }\item[{int}]{Nx,  }\item[{int}]{Ny,  }\item[{int}]{Nz }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00361}{361}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 17
+\Hypertarget{namespacecompression_aff3436357165d0b07392b7d032fd13bc}\label{namespacecompression_aff3436357165d0b07392b7d032fd13bc} 
+\index{compression@{compression}!updated\_weight\_vector@{updated\_weight\_vector}}
+\index{updated\_weight\_vector@{updated\_weight\_vector}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{updated\_weight\_vector()}{updated\_weight\_vector()}}
+{\footnotesize\ttfamily updated\+\_\+weight\+\_\+vector (\begin{DoxyParamCaption}\item[{}]{s\+\_\+tilde,  }\item[{}]{weight\+\_\+vector,  }\item[{}]{ld\+\_\+vector,  }\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00126}{126}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+Here is the call graph for this function\+:
+% FIG 18
+Here is the caller graph for this function\+:
+% FIG 19
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacecompression_abf6d0ccec2f5157184071729f129de19}\label{namespacecompression_abf6d0ccec2f5157184071729f129de19} 
+\index{compression@{compression}!D@{D}}
+\index{D@{D}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily int D = 14}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00005}{5}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a7880c4643e340683b530ce1609a8fd47}\label{namespacecompression_a7880c4643e340683b530ce1609a8fd47} 
+\index{compression@{compression}!GAMMA\_0@{GAMMA\_0}}
+\index{GAMMA\_0@{GAMMA\_0}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{GAMMA\_0}{GAMMA\_0}}
+{\footnotesize\ttfamily int GAMMA\+\_\+0 = 1}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00023}{23}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a3272087e7728ef865ea990a98baf8395}\label{namespacecompression_a3272087e7728ef865ea990a98baf8395} 
+\index{compression@{compression}!GAMMA\_STAR@{GAMMA\_STAR}}
+\index{GAMMA\_STAR@{GAMMA\_STAR}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{GAMMA\_STAR}{GAMMA\_STAR}}
+{\footnotesize\ttfamily int GAMMA\+\_\+\+STAR = 5}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00026}{26}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a2689c4b3931025b79053532a5f1b0a85}\label{namespacecompression_a2689c4b3931025b79053532a5f1b0a85} 
+\index{compression@{compression}!K@{K}}
+\index{K@{K}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily int K = 0}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00025}{25}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_aa92b3873c7c4a40451e43cc6b2cd53f1}\label{namespacecompression_aa92b3873c7c4a40451e43cc6b2cd53f1} 
+\index{compression@{compression}!K\_ZPRIME@{K\_ZPRIME}}
+\index{K\_ZPRIME@{K\_ZPRIME}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{K\_ZPRIME}{K\_ZPRIME}}
+{\footnotesize\ttfamily int K\+\_\+\+ZPRIME = \mbox{\hyperlink{namespacecompression_a2689c4b3931025b79053532a5f1b0a85}{K}}}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00029}{29}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a5e78dbd5fd0fc01ba7b98dd15e27221e}\label{namespacecompression_a5e78dbd5fd0fc01ba7b98dd15e27221e} 
+\index{compression@{compression}!M@{M}}
+\index{M@{M}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily int M = 0}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00015}{15}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_aef94be98e2c9e4a4dece75f60ca9792c}\label{namespacecompression_aef94be98e2c9e4a4dece75f60ca9792c} 
+\index{compression@{compression}!P@{P}}
+\index{P@{P}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily int P = 3}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00010}{10}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a3d90133d3051fbc4816d02efd9566d8e}\label{namespacecompression_a3d90133d3051fbc4816d02efd9566d8e} 
+\index{compression@{compression}!R@{R}}
+\index{R@{R}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily int R = 35}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00014}{14}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a04632c156a04ad172a367f2760582928}\label{namespacecompression_a04632c156a04ad172a367f2760582928} 
+\index{compression@{compression}!S\_MAX@{S\_MAX}}
+\index{S\_MAX@{S\_MAX}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{S\_MAX}{S\_MAX}}
+{\footnotesize\ttfamily int S\+\_\+\+MAX = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_abf6d0ccec2f5157184071729f129de19}{D}}) -\/ 1}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00007}{7}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_af02faf18c4b6fb6841abaf0b3142cc92}\label{namespacecompression_af02faf18c4b6fb6841abaf0b3142cc92} 
+\index{compression@{compression}!S\_MID@{S\_MID}}
+\index{S\_MID@{S\_MID}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{S\_MID}{S\_MID}}
+{\footnotesize\ttfamily int S\+\_\+\+MID = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_abf6d0ccec2f5157184071729f129de19}{D}} -\/ 1)}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00008}{8}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a80970133e7290ddaa15b6d949fc99420}\label{namespacecompression_a80970133e7290ddaa15b6d949fc99420} 
+\index{compression@{compression}!S\_MIN@{S\_MIN}}
+\index{S\_MIN@{S\_MIN}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{S\_MIN}{S\_MIN}}
+{\footnotesize\ttfamily int S\+\_\+\+MIN = 0}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00006}{6}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_aa911c208b6f29485ce4b65c73b7f72f8}\label{namespacecompression_aa911c208b6f29485ce4b65c73b7f72f8} 
+\index{compression@{compression}!T\_INC@{T\_INC}}
+\index{T\_INC@{T\_INC}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{T\_INC}{T\_INC}}
+{\footnotesize\ttfamily int T\+\_\+\+INC = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}4}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00019}{19}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a633454f54a1d7f2439a65666d71f9271}\label{namespacecompression_a633454f54a1d7f2439a65666d71f9271} 
+\index{compression@{compression}!U\_MAX@{U\_MAX}}
+\index{U\_MAX@{U\_MAX}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{U\_MAX}{U\_MAX}}
+{\footnotesize\ttfamily int U\+\_\+\+MAX = 8}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00022}{22}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_ae2de9b8731e1c54a74579610837e59c0}\label{namespacecompression_ae2de9b8731e1c54a74579610837e59c0} 
+\index{compression@{compression}!V\_MAX@{V\_MAX}}
+\index{V\_MAX@{V\_MAX}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{V\_MAX}{V\_MAX}}
+{\footnotesize\ttfamily int V\+\_\+\+MAX = 9}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00018}{18}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a6238c0ecdac57d88d1f30259c60238cc}\label{namespacecompression_a6238c0ecdac57d88d1f30259c60238cc} 
+\index{compression@{compression}!V\_MIN@{V\_MIN}}
+\index{V\_MIN@{V\_MIN}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{V\_MIN}{V\_MIN}}
+{\footnotesize\ttfamily int V\+\_\+\+MIN = -\/6}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00017}{17}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_add63171ca968cbd5ca4d60dfbf9a2746}\label{namespacecompression_add63171ca968cbd5ca4d60dfbf9a2746} 
+\index{compression@{compression}!W\_MAX@{W\_MAX}}
+\index{W\_MAX@{W\_MAX}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{W\_MAX}{W\_MAX}}
+{\footnotesize\ttfamily int W\+\_\+\+MAX = 2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6}{W\+\_\+\+RES}} + 2) -\/ 1}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00013}{13}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_a999bcfcc11e2794539308d5015455f59}\label{namespacecompression_a999bcfcc11e2794539308d5015455f59} 
+\index{compression@{compression}!W\_MIN@{W\_MIN}}
+\index{W\_MIN@{W\_MIN}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{W\_MIN}{W\_MIN}}
+{\footnotesize\ttfamily W\+\_\+\+MIN = -\/(2\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(\mbox{\hyperlink{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6}{W\+\_\+\+RES}} + 2))}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00012}{12}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+
+\Hypertarget{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6}\label{namespacecompression_aa3e9a982c10101613c6a1dd1fb3279f6} 
+\index{compression@{compression}!W\_RES@{W\_RES}}
+\index{W\_RES@{W\_RES}!compression@{compression}}
+\doxysubsubsection{\texorpdfstring{W\_RES}{W\_RES}}
+{\footnotesize\ttfamily int W\+\_\+\+RES = 19}
+
+
+
+Definition at line \mbox{\hyperlink{compression_8py_source_l00011}{11}} of file \mbox{\hyperlink{compression_8py_source}{compression.\+py}}.
+

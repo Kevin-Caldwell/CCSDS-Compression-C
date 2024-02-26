@@ -1,0 +1,78 @@
+\doxysection{weights.\+c}
+\hypertarget{weights_8c_source}{}\label{weights_8c_source}\index{src/weights.c@{src/weights.c}}
+\mbox{\hyperlink{weights_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weights_8h}{predictor/weights.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00004}\mbox{\hyperlink{weights_8h_adcc753ae7048085817bd2c37b471f739}{00004}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{weights_8c_adcc753ae7048085817bd2c37b471f739}{InitializeWeights}}(int32\_t\ **weight\_ptr,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ z,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ y,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ x)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00006}00006\ \ \ \ \ \mbox{\hyperlink{linear__algebra_8h_ab9661c8e10293140db24d4b650785939}{InitVector}}(weight\_ptr,\ \mbox{\hyperlink{constants_8h_a5464533d23b59ba11030432e73528730}{C}});}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00007}00007\ \ \ \ \ int32\_t\ *weight\_vector\ =\ *weight\_ptr;\ \textcolor{comment}{//\ TODO\ Turn\ into\ \#define\ for\ optimization?}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{constants_8h_aee5860bd3e62fe2734ce27a1b1038dbc}{PREDICTION\_MODE}})}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00012}00012\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ weight\_vector[i]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00014}00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00016}00016\ \ \ \ \ \ \ \ \ weight\_vector[3]\ =\ 7\ *\ (int32\_t)\mbox{\hyperlink{math__functions_8h_a60b4b9f1152371307ebadc232149699c}{BPOW}}(\mbox{\hyperlink{constants_8h_a515cdf0341e52056bcea8e46c952ee82}{Omega}})\ /\ 8;\ \textcolor{comment}{//\ !\ Source\ of\ Error}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ i\ =\ 4;\ i\ <\ \mbox{\hyperlink{constants_8h_a5464533d23b59ba11030432e73528730}{C}};\ i++)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ weight\_vector[i]\ =\ weight\_vector[i\ -\/\ 1]\ >>\ 3;\ \textcolor{comment}{//\ !\ Watch\ out\ for\ Indexing\ Issues}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00021}00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00024}00024\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ weight\_vector[0]\ =\ 7\ *\ \mbox{\hyperlink{math__functions_8h_a60b4b9f1152371307ebadc232149699c}{BPOW}}(\mbox{\hyperlink{constants_8h_a515cdf0341e52056bcea8e46c952ee82}{Omega}}\ -\/\ 3);}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ i\ =\ 1;\ i\ <\ \mbox{\hyperlink{constants_8h_a5464533d23b59ba11030432e73528730}{C}};\ i++)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ weight\_vector[i]\ =\ weight\_vector[i\ -\/\ 1]\ >>\ 3;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00030}00030\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{global__constants_8h_a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737}{RES\_OK}};}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00035}\mbox{\hyperlink{weights_8h_a286baab1384ff25cf7cf4c2061f15c4c}{00035}}\ int32\_t\ \mbox{\hyperlink{weights_8c_a286baab1384ff25cf7cf4c2061f15c4c}{DoubleResolutionPredictionError}}(int16\_t\ clipped\_quantizer\_bin\_center,}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_predicted\_sample)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00037}00037\ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{return}\ 2\ *\ (int32\_t)clipped\_quantizer\_bin\_center\ -\/\ (int32\_t)double\_resolution\_predicted\_sample;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00041}\mbox{\hyperlink{weights_8h_a17984670eb20b6ea122fb1e90a50dc75}{00041}}\ int32\_t\ \mbox{\hyperlink{weights_8c_a17984670eb20b6ea122fb1e90a50dc75}{WeightUpdateScalingExponent}}(\mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ y,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ x)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00043}00043\ \ \ \ \ int32\_t\ res\ =\ \mbox{\hyperlink{math__functions_8h_a816dcf31e408d445ca8275ad96e6eb1e}{CLIP}}((int32\_t)\mbox{\hyperlink{constants_8h_a68b61249aa9c541a3ed6d1987b8c53ce}{kVMin}}\ +}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((int32\_t)y\ *\ \mbox{\hyperlink{constants_8h_abfda77b016218238359bcc3e5c1600b0}{Nx}}\ +\ (int32\_t)x\ -\/\ \mbox{\hyperlink{constants_8h_abfda77b016218238359bcc3e5c1600b0}{Nx}})\ /\ (int32\_t)\mbox{\hyperlink{constants_8h_a2481969fa62464bdc5889190f3e10f31}{kTInc}},}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (int32\_t)\mbox{\hyperlink{constants_8h_a68b61249aa9c541a3ed6d1987b8c53ce}{kVMin}},\ (int32\_t)\mbox{\hyperlink{constants_8h_a85fbef56eedaaa1a29a9f0c18ba53631}{kVMax}})\ +}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (int32\_t)\mbox{\hyperlink{constants_8h_abf6d0ccec2f5157184071729f129de19}{D}}\ -\/\ (int32\_t)\mbox{\hyperlink{constants_8h_a515cdf0341e52056bcea8e46c952ee82}{Omega}};}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00047}00047\ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00050}\mbox{\hyperlink{weights_8h_a805706f7af2f212bc46076319fcec535}{00050}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{weights_8c_a805706f7af2f212bc46076319fcec535}{UpdateWeights}}(\mbox{\hyperlink{structimage}{image}}\ *hIMG,\ int32\_t\ *weights,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ z,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ y,\ \mbox{\hyperlink{math__functions_8h_affb1df897d26e77d96c613bea67825c6}{INDEX}}\ x,\ int32\_t\ double\_resolution\_prediction\_error)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00051}00051\ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{float}\ scaling\_exponent\ =\ -\/\mbox{\hyperlink{weights_8c_a17984670eb20b6ea122fb1e90a50dc75}{WeightUpdateScalingExponent}}(y,\ x);}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordtype}{float}\ exp\ =\ exp2f(scaling\_exponent)\ *\ \mbox{\hyperlink{math__functions_8h_a5f76d4dda1e368d45e059912932c7b60}{SIGN\_P}}(double\_resolution\_prediction\_error);}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 3;\ i++)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00056}00056\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ val\ =\ floor((exp\ *\ (\textcolor{keywordtype}{float})\mbox{\hyperlink{local__differences_8h_add0875819772a3917e5a6f648c0a3292}{DLD}}(hIMG,\ z,\ y,\ x,\ i)\ +\ 1)\ /\ 2);}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ weights[i]\ +=\ val;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3;\ i\ <\ \mbox{\hyperlink{constants_8h_a5464533d23b59ba11030432e73528730}{C}};\ i++)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00062}00062\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ val\ =\ floor((exp\ *\ (\textcolor{keywordtype}{float})\mbox{\hyperlink{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52}{CentralLocalDifference}}(hIMG,\ z\ -\/\ i\ +\ 2,\ y,\ x)\ +\ 1)\ /\ 2);}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ weights[i]\ +=\ val;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{constants_8h_a5464533d23b59ba11030432e73528730}{C}};\ i++)}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00068}00068\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ weights[i]\ =\ \mbox{\hyperlink{math__functions_8h_a816dcf31e408d445ca8275ad96e6eb1e}{CLIP}}(weights[i],\ \mbox{\hyperlink{constants_8h_afe552e4b168b0821a5cb40ca9f8df744}{kOmegaMin}},\ \mbox{\hyperlink{constants_8h_a919504d752286a3ecacfab4792035e7c}{kOmegaMax}});}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{weights_8c_source_l00072}00072\ \}}
+
+\end{DoxyCode}

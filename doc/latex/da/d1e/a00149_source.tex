@@ -1,0 +1,33 @@
+\doxysection{linear\+\_\+algebra.\+h}
+\hypertarget{a00149_source}{}\label{a00149_source}\index{include/math/linear\_algebra.h@{include/math/linear\_algebra.h}}
+\mbox{\hyperlink{a00149}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00025}00025\ \textcolor{preprocessor}{\#ifndef\ LINEAR\_ALGEBRA\_H}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00026}00026\ \textcolor{preprocessor}{\#define\ LINEAR\_ALGEBRA\_H}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00146}{constants/constants.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00152}{math\_functions.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00030}\mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{00030}}\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}};}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00033}00033\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00149_ab9661c8e10293140db24d4b650785939}{InitVector}}(int32\_t**\ v,\ \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ len);}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00035}00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00149_ae000d0d19cf867f1ad39325993763205}{DeleteVector}}(\mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ v);}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00037}00037\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00149_a2765cafcf739497b0ee51e705590039a}{AddVectors}}(\mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ v1,\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ v2,\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ res,\ \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00039}00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00149_a06b11149235c5a4fe6c877aed33f55f9}{SubtractVectors}}(\mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ v1,\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ v2,\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ res,\ \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00041}00041\ int64\_t\ \mbox{\hyperlink{a00149_a46ade3794d4b4d5cc1eaf983858507ef}{InnerProduct}}(int32\_t*\ v1,\ int32\_t*\ v2,\ \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00043}00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00149_a2c84697470e743f7c69fffbe7e0f92bc}{ScalarProduct}}(\mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ v,\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ scalar,\ \mbox{\hyperlink{a00149_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}*\ res,\ \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00045}\mbox{\hyperlink{a00149_ab3884a0bbfd7dee1c68c7296b669ebab}{00045}}\ \textcolor{preprocessor}{\#define\ AddToVector(v,\ other,\ size)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddVectors(v,\ other,\ v,\ size)}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00046}\mbox{\hyperlink{a00149_a3551e792e31423caf9108ee7a990fb0b}{00046}}\ \textcolor{preprocessor}{\#define\ SubtractFromVector(v,\ other,\ size)\ \ \ \ \ \ \ \ \ \ SubtractVectors(v,\ other,\ v,\ size)}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00047}\mbox{\hyperlink{a00149_a5fe8e5a199bb90a6358cee7306d3d09d}{00047}}\ \textcolor{preprocessor}{\#define\ ScalarProduct\_C(v,\ other,\ size)\ \ \ \ \ \ \ \ \ \ \ \ \ ScalarProduct(v,\ other,\ v,\ size)}}
+\DoxyCodeLine{\Hypertarget{a00149_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{a00149_source_l00050}00050\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LINEAR\_ALGEBRA\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,3 +1,10 @@
+/**
+ * csv-io.h
+ * @authors @Kevin-Caldwell and @BrianShTsoi
+ * 
+ * Functions for image file read and write to CSV
+ */
+
 #ifndef CSV_IO_H
 #define CSV_IO_H
 

@@ -1,0 +1,27 @@
+\doxysection{helperlib.\+py}
+\hypertarget{a00023_source}{}\label{a00023_source}\index{python/helperlib.py@{python/helperlib.py}}
+\mbox{\hyperlink{a00023}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00001}\mbox{\hyperlink{a00361}{00001}}\ \textcolor{comment}{\#Helper\ functions}}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00002}00002\ \textcolor{keyword}{import}\ numpy}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00003}00003\ \textcolor{comment}{\#Function\ required\ for\ weight\ update\ -\/\ not\ the\ same\ as\ numpy.sign\ so\ I\ had\ to\ quickly\ make\ it}}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00004}\mbox{\hyperlink{a00361_a081f96217f1dd709e9c15859a50e68f0}{00004}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00361_a081f96217f1dd709e9c15859a50e68f0}{sign}}(x):}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}\ x\ >=\ 0:}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00007}00007\ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00008}00008\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{a00023_source_l00010}00010\ \textcolor{comment}{\#Conversion\ functions\ (borrowed\ from\ FPCNN)}}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00011}\mbox{\hyperlink{a00361_ac0d353b52829389169d73b9a9810f866}{00011}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00361_ac0d353b52829389169d73b9a9810f866}{dec\_to\_bin}}(d,\ width):}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (type(d)\ ==\ numpy.float64):}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00013}00013\ \ \ \ \ \ \ \ \ d\ =\ int(d)}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00014}00014\ \ \ \ \ b\ =\ [int(x)\ \textcolor{keywordflow}{for}\ x\ \textcolor{keywordflow}{in}\ \textcolor{stringliteral}{"{}\{:0\{size\}b\}"{}}.format(d,\ size=width)]}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{a00023_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{return}\ b}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{a00023_source_l00018}\mbox{\hyperlink{a00361_a0efb929942addc663e0c6f20aecd4ccb}{00018}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{a00361_a0efb929942addc663e0c6f20aecd4ccb}{bin\_to\_dec}}(b):}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00019}00019\ \ \ \ \ d\ =\ int(\textcolor{stringliteral}{"{}"{}}.join(str(x)\ \textcolor{keywordflow}{for}\ x\ \textcolor{keywordflow}{in}\ b),\ 2)}
+\DoxyCodeLine{\Hypertarget{a00023_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{a00023_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ d}
+
+\end{DoxyCode}

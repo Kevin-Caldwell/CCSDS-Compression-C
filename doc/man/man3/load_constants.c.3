@@ -1,0 +1,48 @@
+.TH "src/load_constants.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/load_constants.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'constants/load_constants\&.h'\fP
+.br
+\fC#include 'files/file_IO\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBLoadConstantFile\fP (const char *file_name, \fBHashTable\fP *result)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int LoadConstantFile (const char * file_name, \fBHashTable\fP * result)"
+\fBload_constants\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Abstractions for Loading \&.CONST files
+.PP
+Features Custom \&.CONST file format with easy-to-read Constant Parameter Storage
+.PP
+Uses Interpreting \&.CONST Files to load constants for all modules Stores result in a \fBHashTable\fP structure
+.PP
+Dependencies \fBhash_table\&.h\fP
+.PP
+Internal Dependencies stdio\&.h
+.PP
+TODO Add a SaveConstantFile Function FUNCDEF: int SaveConstantFile(const char* file_name, HashTable* save_input) 
+.PP
+Definition at line \fB6\fP of file \fBload_constants\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

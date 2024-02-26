@@ -1,0 +1,43 @@
+\doxysection{python/prepare\+\_\+h\+Image.py File Reference}
+\hypertarget{a00008}{}\label{a00008}\index{python/prepare\_hImage.py@{python/prepare\_hImage.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{a00366}{prepare\+\_\+h\+Image}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00366_a84c47e6bbcef028eda4c81cfa1b935ff}{Read\+CSV}} (filename)
+\item 
+\mbox{\hyperlink{a00366_a74f2b862a36db3cde75f1cc94d388c81}{wavelength\+\_\+to\+\_\+rgb}} (wavelength, gamma=0.\+8)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{a00366_a7e69bd3f9400dc258e83fe7ecab1e317}{Cache\+Files}} = \mbox{[}\mbox{[}$\,$\mbox{]}\mbox{]}
+\item 
+\mbox{\hyperlink{a00366_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}} = \mbox{\hyperlink{a00366_a84c47e6bbcef028eda4c81cfa1b935ff}{Read\+CSV}}(f"{}data/test-\/images/VORONOI\+\_\+640x512x640\+\_\+1000.\+csv"{})
+\item 
+\mbox{\hyperlink{a00366_a5c7e4f16622600cb52580b191565e2dd}{Nx}}
+\item 
+\mbox{\hyperlink{a00366_ac1452fdfd6ea1c8c005ac90bbfa62011}{Ny}}
+\item 
+\mbox{\hyperlink{a00366_af3ec54a0e6bc4935a13fb520b7d7df6e}{Nz}}
+\item 
+\mbox{\hyperlink{a00366_adbdde44f981e5f6df2c75332ea3f9220}{numbers}} = np.\+array(\mbox{\hyperlink{a00366_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, dtype=int)
+\item 
+\mbox{\hyperlink{a00366_a0ad48c3f647380a8559a3d2a284376d8}{minimum}} = numbers.\+min()
+\item 
+\mbox{\hyperlink{a00366_a34ddfe7666109e00419326a0334cea67}{maximum}} = numbers.\+max()
+\item 
+int \mbox{\hyperlink{a00366_a68c1363ccdf28598f4504e4b6fd6288a}{number\+\_\+range}} = \mbox{\hyperlink{a00366_a34ddfe7666109e00419326a0334cea67}{maximum}} -\/ \mbox{\hyperlink{a00366_a0ad48c3f647380a8559a3d2a284376d8}{minimum}} + 1
+\item 
+\mbox{\hyperlink{a00366_a86d0d51ceb4bc3bd26707520f257a5a4}{img}} = Image.\+new( \textquotesingle{}RGB\textquotesingle{}, (\mbox{\hyperlink{a00366_a5c7e4f16622600cb52580b191565e2dd}{Nx}},\mbox{\hyperlink{a00366_ac1452fdfd6ea1c8c005ac90bbfa62011}{Ny}}), "{}black"{})
+\item 
+\mbox{\hyperlink{a00366_a25d0e7c7655b7a5eed365b894fd5e26f}{pixels}} = img.\+load()
+\item 
+tuple \mbox{\hyperlink{a00366_ac8859e8c1ce357c4c8b37bbb1936ba1c}{v}} = (\mbox{\hyperlink{a00366_adbdde44f981e5f6df2c75332ea3f9220}{numbers}}\mbox{[}i, j, z\mbox{]} -\/ \mbox{\hyperlink{a00366_a0ad48c3f647380a8559a3d2a284376d8}{minimum}}) / \mbox{\hyperlink{a00366_a68c1363ccdf28598f4504e4b6fd6288a}{number\+\_\+range}} \texorpdfstring{$\ast$}{*} 370 + 380
+\item 
+\mbox{\hyperlink{a00366_a1aabac6d068eef6a7bad3fdf50a05cc8}{d}} = \mbox{\hyperlink{a00366_a74f2b862a36db3cde75f1cc94d388c81}{wavelength\+\_\+to\+\_\+rgb}}(int(\mbox{\hyperlink{a00366_ac8859e8c1ce357c4c8b37bbb1936ba1c}{v}}))
+\end{DoxyCompactItemize}

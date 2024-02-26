@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="db/d7e/a00372" kind="struct" language="C++" prot="public">
+    <compoundname>PredictorCache</compoundname>
+    <includes refid="db/db6/a00074" local="no">cache_predictor.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/d7e/a00372_1a847490dd84d456f3e80b13a3be6ddfac" prot="public" static="no" mutable="no">
+        <type><ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+        <definition>image* cache_space[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>cache_space</name>
+        <qualifiedname>PredictorCache::cache_space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="33" column="11" bodyfile="include/cache/cache_predictor.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="db/db6/a00074_1aca0d39cbaa7b58e1e75c93010c1a7750" compoundref="df/d95/a00299" startline="43" endline="52">DeletePredictorCache</referencedby>
+        <referencedby refid="db/db6/a00074_1a400e6cd529a6a1ca3901be57ab88fb63" compoundref="df/d95/a00299" startline="16" endline="41">InitializePredictorCache</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="db/d7e/a00372_1a8ffc318fbdca60414a190de33e244826" prot="public" static="no" mutable="no">
+        <type>int32_t *</type>
+        <definition>int32_t* weights</definition>
+        <argsstring></argsstring>
+        <name>weights</name>
+        <qualifiedname>PredictorCache::weights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/cache/cache_predictor.h" line="34" column="13" bodyfile="include/cache/cache_predictor.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="db/db6/a00074_1a400e6cd529a6a1ca3901be57ab88fb63" compoundref="df/d95/a00299" startline="16" endline="41">InitializePredictorCache</referencedby>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d4/d3a/a00101_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="da/de0/a00317" startline="82" endline="99">PredictedCentralLocalDifference</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Struct <ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref> is a struct for storing the intermediate results obtained through the predictor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>cache_space: dynamically allocated image array for storing multiple images</para>
+<para>weights: dynamcially allocated int32_t array for storing the weights</para>
+<para><xrefsect id="d0/dc3/a00354_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription><para>The Predictor testing has been re-implemented to accomodate more streamlined and memory-efficient debugging processes.</para>
+</xrefdescription></xrefsect></para>
+<para>See <ref refid="d8/d8e/a00344" kindref="compound">predictor.c</ref> for more details </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>PredictorCache</label>
+        <link refid="db/d7e/a00372"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>cache_space</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dim3</label>
+        <link refid="d9/de6/a00404"/>
+      </node>
+      <node id="2">
+        <label>image</label>
+        <link refid="d8/ddd/a00380"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>size</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/cache/cache_predictor.h" line="32" column="1" bodyfile="include/cache/cache_predictor.h" bodystart="32" bodyend="35"/>
+    <listofallmembers>
+      <member refid="db/d7e/a00372_1a847490dd84d456f3e80b13a3be6ddfac" prot="public" virt="non-virtual"><scope>PredictorCache</scope><name>cache_space</name></member>
+      <member refid="db/d7e/a00372_1a8ffc318fbdca60414a190de33e244826" prot="public" virt="non-virtual"><scope>PredictorCache</scope><name>weights</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

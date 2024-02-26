@@ -1,0 +1,67 @@
+\doxysection{include/encoder/header.h File Reference}
+\hypertarget{header_8h}{}\label{header_8h}\index{include/encoder/header.h@{include/encoder/header.h}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+{\ttfamily \#include "{}constants/encoder\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}encoder/encoder\+\_\+helper\+\_\+functions.\+h"{}}\newline
+Include dependency graph for header.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{header_8h_ac726367a97f26d89d0e2a44763f43448}{Prepare\+Image\+Metadata}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}essential)
+\item 
+void \mbox{\hyperlink{header_8h_abab4192db36e8577c377efd110ff5efc}{Prepare\+Predictor\+Metadata}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}predicted\+\_\+metadata)
+\item 
+void \mbox{\hyperlink{header_8h_a90788cfb0ad28f5bc9b0cd67d0a2b52e}{Prepare\+Sample\+Adaptive\+Entropy\+Coder}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}entropy\+\_\+coder\+\_\+metadata)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{header_8h_ac726367a97f26d89d0e2a44763f43448}\label{header_8h_ac726367a97f26d89d0e2a44763f43448} 
+\index{header.h@{header.h}!PrepareImageMetadata@{PrepareImageMetadata}}
+\index{PrepareImageMetadata@{PrepareImageMetadata}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{PrepareImageMetadata()}{PrepareImageMetadata()}}
+{\footnotesize\ttfamily void Prepare\+Image\+Metadata (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{essential }\end{DoxyParamCaption})}
+
+\doxylink{header_8h}{header.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+File Contains Functions for Preparing Image, Predictor, Encoder and Entropy coder Header Sections of the Compressed Image. 
+
+Definition at line \mbox{\hyperlink{header_8c_source_l00005}{5}} of file \mbox{\hyperlink{header_8c_source}{header.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{header_8h_abab4192db36e8577c377efd110ff5efc}\label{header_8h_abab4192db36e8577c377efd110ff5efc} 
+\index{header.h@{header.h}!PreparePredictorMetadata@{PreparePredictorMetadata}}
+\index{PreparePredictorMetadata@{PreparePredictorMetadata}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{PreparePredictorMetadata()}{PreparePredictorMetadata()}}
+{\footnotesize\ttfamily void Prepare\+Predictor\+Metadata (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{predicted\+\_\+metadata }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{header_8c_source_l00056}{56}} of file \mbox{\hyperlink{header_8c_source}{header.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{header_8h_a90788cfb0ad28f5bc9b0cd67d0a2b52e}\label{header_8h_a90788cfb0ad28f5bc9b0cd67d0a2b52e} 
+\index{header.h@{header.h}!PrepareSampleAdaptiveEntropyCoder@{PrepareSampleAdaptiveEntropyCoder}}
+\index{PrepareSampleAdaptiveEntropyCoder@{PrepareSampleAdaptiveEntropyCoder}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{PrepareSampleAdaptiveEntropyCoder()}{PrepareSampleAdaptiveEntropyCoder()}}
+{\footnotesize\ttfamily void Prepare\+Sample\+Adaptive\+Entropy\+Coder (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{entropy\+\_\+coder\+\_\+metadata }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{header_8c_source_l00098}{98}} of file \mbox{\hyperlink{header_8c_source}{header.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7

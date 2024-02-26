@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00314" xml:lang="en-US">
+<title>src/image.c File Reference</title>
+<indexterm><primary>src/image.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;dst/image.h&quot;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?></programlisting>Include dependency graph for image.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/d6f/a00315.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00314_1a61b8047c5bba5a89979d65847e4103b1">InitImage</link> (<link linkend="_a00380">image</link> *img_p, size_t x, size_t y, size_t z)</para>
+</listitem>
+            <listitem><para><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> <link linkend="_a00314_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link> (<link linkend="_a00380">image</link> *hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z)</para>
+</listitem>
+            <listitem><para><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> * <link linkend="_a00314_1a5a1ef1e96ecb20d081d2e7e75e2996e2">GetFrame</link> (<link linkend="_a00380">image</link> *hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00314_1aefaa1253ccc17864ac32b9d685b821d4">SetPixel</link> (<link linkend="_a00380">image</link> *hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00314_1a1aeeb4864b63110b92099384a7a21fa8">Image_Equals</link> (<link linkend="_a00380">image</link> *img1, <link linkend="_a00380">image</link> *img2)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00314_1a5a1ef1e96ecb20d081d2e7e75e2996e2"/><section>
+    <title>GetFrame()</title>
+<indexterm><primary>GetFrame</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>GetFrame</secondary></indexterm>
+<para><computeroutput><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> * GetFrame (<link linkend="_a00380">image</link> * hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y)</computeroutput></para><para>
+Definition at line <link linkend="_a00314_source_1l00061">61</link> of file <link linkend="_a00314_source">image.c</link>.</para>
+</section>
+<anchor xml:id="_a00314_1a78477801fe183cdf32e60df1c92b7320"/><section>
+    <title>GetPixel()</title>
+<indexterm><primary>GetPixel</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>GetPixel</secondary></indexterm>
+<para><computeroutput><link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> GetPixel (<link linkend="_a00380">image</link> * hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z)</computeroutput></para><para>
+Definition at line <link linkend="_a00314_source_1l00055">55</link> of file <link linkend="_a00314_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d39/a00314_a78477801fe183cdf32e60df1c92b7320_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00314_1a1aeeb4864b63110b92099384a7a21fa8"/><section>
+    <title>Image_Equals()</title>
+<indexterm><primary>Image_Equals</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>Image_Equals</secondary></indexterm>
+<para><computeroutput>int Image_Equals (<link linkend="_a00380">image</link> * img1, <link linkend="_a00380">image</link> * img2)</computeroutput></para><para>
+Definition at line <link linkend="_a00314_source_1l00071">71</link> of file <link linkend="_a00314_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d39/a00314_a1aeeb4864b63110b92099384a7a21fa8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00314_1a61b8047c5bba5a89979d65847e4103b1"/><section>
+    <title>InitImage()</title>
+<indexterm><primary>InitImage</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>InitImage</secondary></indexterm>
+<para><computeroutput>int InitImage (<link linkend="_a00380">image</link> * img_p, size_t x, size_t y, size_t z)</computeroutput></para><para>
+Definition at line <link linkend="_a00314_source_1l00045">45</link> of file <link linkend="_a00314_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d39/a00314_a61b8047c5bba5a89979d65847e4103b1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00314_1aefaa1253ccc17864ac32b9d685b821d4"/><section>
+    <title>SetPixel()</title>
+<indexterm><primary>SetPixel</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>SetPixel</secondary></indexterm>
+<para><computeroutput>void SetPixel (<link linkend="_a00380">image</link> * hIMG, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> data)</computeroutput></para><para>
+Definition at line <link linkend="_a00314_source_1l00066">66</link> of file <link linkend="_a00314_source">image.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d39/a00314_aefaa1253ccc17864ac32b9d685b821d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

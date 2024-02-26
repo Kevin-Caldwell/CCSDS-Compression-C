@@ -1,0 +1,207 @@
+.TH "src/constants.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/constants.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'constants/constants\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGET_PCONST\fP(x)   (\fBHash_GetValue\fP(&\fBpredictor_constants\fP, x))"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInitalizeImageConstants\fP (\fBdim3\fP size)"
+.br
+.ti -1c
+.RI "void \fBInitalizePredictorConstants\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBNx\fP = 0"
+.br
+.ti -1c
+.RI "int \fBNy\fP = 0"
+.br
+.ti -1c
+.RI "int \fBNz\fP = 0"
+.br
+.ti -1c
+.RI "\fBHashTable\fP \fBpredictor_constants\fP"
+.br
+.ti -1c
+.RI "\fBHashTable\fP \fBencoder_constants\fP"
+.br
+.ti -1c
+.RI "int \fBkUnsignedSamples\fP = 0"
+.br
+.ti -1c
+.RI "int \fBLOCAL_SUM_TYPE\fP = 0"
+.br
+.ti -1c
+.RI "int \fBPREDICTION_MODE\fP = 0"
+.br
+.ti -1c
+.RI "int \fBD\fP = 0"
+.br
+.ti -1c
+.RI "int \fBDa\fP = 0"
+.br
+.ti -1c
+.RI "unsigned int \fBkSmin\fP = 0"
+.br
+.ti -1c
+.RI "unsigned int \fBkSmid\fP = 0"
+.br
+.ti -1c
+.RI "unsigned int \fBkSmax\fP = 0"
+.br
+.ti -1c
+.RI "int \fBkP\fP = 0"
+.br
+.ti -1c
+.RI "int64_t \fBkR\fP = 0"
+.br
+.ti -1c
+.RI "int \fBkVMax\fP = 0"
+.br
+.ti -1c
+.RI "int \fBkVMin\fP = 0"
+.br
+.ti -1c
+.RI "int \fBkTInc\fP = 0"
+.br
+.ti -1c
+.RI "int \fBOmega\fP = 0"
+.br
+.ti -1c
+.RI "int \fBkOmegaMin\fP = 0"
+.br
+.ti -1c
+.RI "int \fBkOmegaMax\fP = 0"
+.br
+.ti -1c
+.RI "int \fBm_z\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GET_PCONST(x)   (\fBHash_GetValue\fP(&\fBpredictor_constants\fP, x))"
+
+.PP
+Definition at line \fB10\fP of file \fBconstants\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void InitalizeImageConstants (\fBdim3\fP size)"
+
+.PP
+Definition at line \fB3\fP of file \fBconstants\&.c\fP\&.
+.SS "void InitalizePredictorConstants ()"
+
+.PP
+Definition at line \fB12\fP of file \fBconstants\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "int D = 0"
+
+.PP
+Definition at line \fB63\fP of file \fBconstants\&.c\fP\&.
+.SS "int Da = 0"
+
+.PP
+Definition at line \fB64\fP of file \fBconstants\&.c\fP\&.
+.SS "\fBHashTable\fP encoder_constants"
+
+.PP
+Definition at line \fB56\fP of file \fBconstants\&.c\fP\&.
+.SS "int kOmegaMax = 0"
+
+.PP
+Definition at line \fB79\fP of file \fBconstants\&.c\fP\&.
+.SS "int kOmegaMin = 0"
+
+.PP
+Definition at line \fB78\fP of file \fBconstants\&.c\fP\&.
+.SS "int kP = 0"
+
+.PP
+Definition at line \fB70\fP of file \fBconstants\&.c\fP\&.
+.SS "int64_t kR = 0"
+
+.PP
+Definition at line \fB71\fP of file \fBconstants\&.c\fP\&.
+.SS "unsigned int kSmax = 0"
+
+.PP
+Definition at line \fB68\fP of file \fBconstants\&.c\fP\&.
+.SS "unsigned int kSmid = 0"
+
+.PP
+Definition at line \fB67\fP of file \fBconstants\&.c\fP\&.
+.SS "unsigned int kSmin = 0"
+
+.PP
+Definition at line \fB66\fP of file \fBconstants\&.c\fP\&.
+.SS "int kTInc = 0"
+
+.PP
+Definition at line \fB75\fP of file \fBconstants\&.c\fP\&.
+.SS "int kUnsignedSamples = 0"
+
+.PP
+Definition at line \fB58\fP of file \fBconstants\&.c\fP\&.
+.SS "int kVMax = 0"
+
+.PP
+Definition at line \fB73\fP of file \fBconstants\&.c\fP\&.
+.SS "int kVMin = 0"
+
+.PP
+Definition at line \fB74\fP of file \fBconstants\&.c\fP\&.
+.SS "int LOCAL_SUM_TYPE = 0"
+
+.PP
+Definition at line \fB59\fP of file \fBconstants\&.c\fP\&.
+.SS "int m_z"
+
+.PP
+Definition at line \fB81\fP of file \fBconstants\&.c\fP\&.
+.SS "int Nx = 0"
+
+.PP
+Definition at line \fB51\fP of file \fBconstants\&.c\fP\&.
+.SS "int Ny = 0"
+
+.PP
+Definition at line \fB52\fP of file \fBconstants\&.c\fP\&.
+.SS "int Nz = 0"
+
+.PP
+Definition at line \fB53\fP of file \fBconstants\&.c\fP\&.
+.SS "int Omega = 0"
+
+.PP
+Definition at line \fB77\fP of file \fBconstants\&.c\fP\&.
+.SS "int PREDICTION_MODE = 0"
+
+.PP
+Definition at line \fB61\fP of file \fBconstants\&.c\fP\&.
+.SS "\fBHashTable\fP predictor_constants"
+
+.PP
+Definition at line \fB55\fP of file \fBconstants\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

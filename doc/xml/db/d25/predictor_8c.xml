@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="db/d25/predictor_8c" kind="file" language="C++">
+    <compoundname>predictor.c</compoundname>
+    <includes refid="d5/ddb/global__constants_8h" local="yes">constants/global_constants.h</includes>
+    <includes refid="dc/d08/predictor_8h" local="yes">predictor/predictor.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="df/d8f/logs_8h" local="yes">files/logs.h</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>cache/cache_predictor.h</label>
+        <link refid="df/d01/cache__predictor_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>constants/global_constants.h</label>
+        <link refid="d5/ddb/global__constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>constants/load_constants.h</label>
+        <link refid="d4/d3e/load__constants_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dst/hash_table.h</label>
+        <link refid="d4/ddb/hash__table_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dst/image.h</label>
+        <link refid="d5/db2/image_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>files/file_IO.h</label>
+        <link refid="d9/d7f/file___i_o_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>files/logs.h</label>
+        <link refid="df/d8f/logs_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/uhi_io.h</label>
+        <link refid="d8/d60/uhi__io_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>math/linear_algebra.h</label>
+        <link refid="dc/d9c/linear__algebra_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>predictor/local_differences.h</label>
+        <link refid="d2/df3/local__differences_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>predictor/local_sum.h</label>
+        <link refid="d6/d9d/local__sum_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>predictor/predictor.h</label>
+        <link refid="dc/d08/predictor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>predictor/quantizer.h</label>
+        <link refid="d1/d38/quantizer_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>predictor/sample_representative.h</label>
+        <link refid="df/d7d/sample__representative_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>predictor/weights.h</label>
+        <link refid="d2/d6a/weights_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/predictor.c</label>
+        <link refid="db/d25/predictor_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>inttypes.h</label>
+      </node>
+      <node id="11">
+        <label>math.h</label>
+      </node>
+      <node id="12">
+        <label>stddef.h</label>
+      </node>
+      <node id="17">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="24">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/d7f/file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+        <definition>file_t* fp</definition>
+        <argsstring></argsstring>
+        <name>fp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/predictor.c" line="7" column="8" bodyfile="src/predictor.c" bodystart="7" bodyend="-1"/>
+        <referencedby refid="d4/d3e/load__constants_8h_1a5d642038360b72b886a5eb66e3efd14a" compoundref="dd/ded/load__constants_8c" startline="6" endline="35">LoadConstantFile</referencedby>
+        <referencedby refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="db/d25/predictor_8c" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d6/d51/csv-io_8h_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/df6/csv-io_8c" startline="67" endline="127">ReadImageFromCSV</referencedby>
+        <referencedby refid="dc/d08/predictor_8h_1a4a94804509574a94d896a4164802bcd2" compoundref="db/d25/predictor_8c" startline="57" endline="122">RunPredictor</referencedby>
+        <referencedby refid="d6/d51/csv-io_8h_1a3e3e00c9789afb1d2f5f2c7004bd82ad" compoundref="df/df6/csv-io_8c" startline="9" endline="27">SaveArrayAsCSV</referencedby>
+        <referencedby refid="d6/d51/csv-io_8h_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/df6/csv-io_8c" startline="31" endline="65">SaveImageAsCSV</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/predictor.c" line="8" column="5" bodyfile="src/predictor.c" bodystart="8" bodyend="-1"/>
+        <referencedby refid="d2/d6a/weights_8h_1adcc753ae7048085817bd2c37b471f739" compoundref="d0/d26/weights_8c" startline="4" endline="33">InitializeWeights</referencedby>
+        <referencedby refid="d2/df3/local__differences_8h_1a92b3b535f0c13d4ec28dab8b13713262" compoundref="d8/d97/local__differences_8c" startline="55" endline="80">LocalDirectionVector</referencedby>
+        <referencedby refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="db/d25/predictor_8c" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d2/df3/local__differences_8h_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="d8/d97/local__differences_8c" startline="82" endline="99">PredictedCentralLocalDifference</referencedby>
+        <referencedby refid="de/d32/reconstructor_8h_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d6/dce/reconstructor_8c" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="de/d32/reconstructor_8h_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d6/dce/reconstructor_8c" startline="43" endline="86">ReconstructPixel</referencedby>
+        <referencedby refid="dc/d08/predictor_8h_1a4a94804509574a94d896a4164802bcd2" compoundref="db/d25/predictor_8c" startline="57" endline="122">RunPredictor</referencedby>
+        <referencedby refid="d2/d6a/weights_8h_1a805706f7af2f212bc46076319fcec535" compoundref="d0/d26/weights_8c" startline="50" endline="72">UpdateWeights</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Predict</definition>
+        <argsstring>(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)</argsstring>
+        <name>Predict</name>
+        <param>
+          <type><ref refid="de/d68/structimage" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d68/structimage" kindref="compound">image</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/predictor.c" line="10" column="6" bodyfile="src/predictor.c" bodystart="10" bodyend="55"/>
+        <references refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" compoundref="db/d25/predictor_8c" startline="8">C</references>
+        <references refid="d1/d38/quantizer_8h_1a9d745aa249b8a9cde3f83899b563dcc5" compoundref="dc/df1/quantizer_8c" startline="3" endline="5">ClippedQuantizerBinCenter</references>
+        <references refid="d5/ddb/global__constants_8h_1a1b0cdea94de8d08c0351a24c1e84f547" compoundref="da/db2/compressor_8c" startline="14">DEBUG</references>
+        <references refid="df/d7d/sample__representative_8h_1a6c60474c610dc64773816bc445efeb77" compoundref="d7/d58/sample__representative_8c" startline="13" endline="25">DoubleResolutionPredictedSample</references>
+        <references refid="d2/d6a/weights_8h_1a286baab1384ff25cf7cf4c2061f15c4c" compoundref="d0/d26/weights_8c" startline="35" endline="39">DoubleResolutionPredictionError</references>
+        <references refid="d9/d7f/file___i_o_8h_1a94d988ea4ce93357f56c0191584246a6" compoundref="d9/da2/file___i_o_8c" startline="18" endline="20">F_WRITE</references>
+        <references refid="d6/d9d/local__sum_8h_1a1f0a6a3443597dab4881bb94fbc35f41" compoundref="db/d31/local__sum_8c" startline="4" endline="84">FindLocalSum</references>
+        <references refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" compoundref="db/d25/predictor_8c" startline="7">fp</references>
+        <references refid="d5/db2/image_8h_1a78477801fe183cdf32e60df1c92b7320" compoundref="d3/d10/image_8c" startline="55" endline="59">GetPixel</references>
+        <references refid="df/d01/cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669" compoundref="dc/d99/cache__predictor_8c" startline="5">global_cache</references>
+        <references refid="df/d7d/sample__representative_8h_1a441e8d0fe639d45889aab5b88c4138f4" compoundref="d7/d58/sample__representative_8c" startline="27" endline="39">HighResolutionPredictedSample</references>
+        <references refid="d2/d6a/weights_8h_1adcc753ae7048085817bd2c37b471f739" compoundref="d0/d26/weights_8c" startline="4" endline="33">InitializeWeights</references>
+        <references refid="d1/d38/quantizer_8h_1a1f491e0a435427669942c932394d7c1a" compoundref="dc/df1/quantizer_8c" startline="61" endline="77">MappedQuantizerIndex</references>
+        <references refid="d2/df3/local__differences_8h_1a36ddae4ef0f34ba3f7402469253bb6b6" compoundref="d8/d97/local__differences_8c" startline="82" endline="99">PredictedCentralLocalDifference</references>
+        <references refid="df/d7d/sample__representative_8h_1a14cff7c59ac94b0387e8b95a433521e9" compoundref="d7/d58/sample__representative_8c" startline="9" endline="11">PredictedSample</references>
+        <references refid="d1/d38/quantizer_8h_1afa51bec3d5dfdb41078f60b1a7c454ab" compoundref="dc/df1/quantizer_8c" startline="11" endline="24">QuantizerIndex</references>
+        <references refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" compoundref="d3/d10/image_8c" startline="66" endline="69">SetPixel</references>
+        <references refid="d2/d6a/weights_8h_1a805706f7af2f212bc46076319fcec535" compoundref="d0/d26/weights_8c" startline="50" endline="72">UpdateWeights</references>
+        <references refid="d0/d18/struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826" compoundref="df/d01/cache__predictor_8h" startline="34">PredictorCache::weights</references>
+        <referencedby refid="dc/d08/predictor_8h_1a4a94804509574a94d896a4164802bcd2" compoundref="db/d25/predictor_8c" startline="57" endline="122">RunPredictor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="db/d25/predictor_8c_1a4a94804509574a94d896a4164802bcd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RunPredictor</definition>
+        <argsstring>(image *hIMG, image *result)</argsstring>
+        <name>RunPredictor</name>
+        <param>
+          <type><ref refid="de/d68/structimage" kindref="compound">image</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="de/d68/structimage" kindref="compound">image</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/predictor.c" line="57" column="5" bodyfile="src/predictor.c" bodystart="57" bodyend="122"/>
+        <references refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" compoundref="db/d25/predictor_8c" startline="8">C</references>
+        <references refid="d9/d7f/file___i_o_8h_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="d9/da2/file___i_o_8c" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d9/d7f/file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c" compoundref="d9/da2/file___i_o_8c" startline="11" endline="16">F_OPEN</references>
+        <references refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215" compoundref="d5/ddb/global__constants_8h" startline="44">FILE_READ_ERROR</references>
+        <references refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" compoundref="db/d25/predictor_8c" startline="7">fp</references>
+        <references refid="d2/d6f/constants_8h_1af84e7b9bd8c4fa1203b0040adf941d8d" compoundref="d4/df3/constants_8c" startline="3" endline="8">InitalizeImageConstants</references>
+        <references refid="d2/d6f/constants_8h_1a6acd65af9a2f057ad3f0891038799e5b" compoundref="d4/df3/constants_8c" startline="12" endline="47">InitalizePredictorConstants</references>
+        <references refid="d4/d3e/load__constants_8h_1a5d642038360b72b886a5eb66e3efd14a" compoundref="dd/ded/load__constants_8c" startline="6" endline="35">LoadConstantFile</references>
+        <references refid="df/d8f/logs_8h_1a61353ebf0328d8bd1f61f224305e64bb" compoundref="d7/d02/logs_8c" startline="34" endline="36">Log_add</references>
+        <references refid="df/d8f/logs_8h_1ad795690a809192117add6898be812267" compoundref="d7/d02/logs_8c" startline="38" endline="40">Log_error</references>
+        <references refid="d2/d6f/constants_8h_1a7a7576e08f5980d322da5f48c7385edc" compoundref="d4/df3/constants_8c" startline="53">Nz</references>
+        <references refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="db/d25/predictor_8c" startline="10" endline="55">Predict</references>
+        <references refid="d2/d6f/constants_8h_1aee5860bd3e62fe2734ce27a1b1038dbc" compoundref="d4/df3/constants_8c" startline="61">PREDICTION_MODE</references>
+        <references refid="d5/ddb/global__constants_8h_1a3e84b5148948a9a22f804ac78d16590c" compoundref="d4/df3/constants_8c" startline="55">predictor_constants</references>
+        <references refid="d5/ddb/global__constants_8h_1a7a8fe096cc3b24ddabd9b150f4f5bdd7" compoundref="d5/ddb/global__constants_8h" startline="26">PREDICTOR_CONSTANTS_LOCATION</references>
+        <references refid="de/d32/reconstructor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" compoundref="de/d32/reconstructor_8h" startline="49">Ps</references>
+        <references refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" compoundref="d5/ddb/global__constants_8h" startline="42">RES_OK</references>
+        <references refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d5/db2/image_8h" startline="66">image::size</references>
+        <references refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" compoundref="d9/d7f/file___i_o_8h" startline="26">WRITE</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+        <referencedby refid="df/d7b/generate__image_8h_1a7fae527c979b4b287e1f9672c8d2c366" compoundref="d6/d92/generate__image_8c" startline="21" endline="82">PredictImage</referencedby>
+        <referencedby refid="de/d32/reconstructor_8h_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d6/dce/reconstructor_8c" startline="88" endline="142">TestReconstructor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/ddb/global__constants_8h" kindref="compound">constants/global_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/d08/predictor_8h" kindref="compound">predictor/predictor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="df/d8f/logs_8h" kindref="compound">files/logs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" refkind="member"><highlight class="normal"><ref refid="d9/d7f/file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref><sp/>*<ref refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>;</highlight></codeline>
+<codeline lineno="8" refid="d2/d6f/constants_8h_1a5464533d23b59ba11030432e73528730" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" kindref="member">C</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" kindref="member">Predict</ref>(<ref refid="de/d68/structimage" kindref="compound">image</ref><sp/>*hIMG,<sp/><ref refid="de/d68/structimage" kindref="compound">image</ref><sp/>*result,<sp/><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>z,<sp/><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>y,<sp/><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>x)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>y<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>free(<ref refid="df/d01/cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669" kindref="member">global_cache</ref>-&gt;<ref refid="d0/d18/struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826" kindref="member">weights</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d2/d6a/weights_8h_1adcc753ae7048085817bd2c37b471f739" kindref="member">InitializeWeights</ref>(&amp;<ref refid="df/d01/cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669" kindref="member">global_cache</ref>-&gt;<ref refid="d0/d18/struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826" kindref="member">weights</ref>,<sp/>z,<sp/>y,<sp/>x);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref><sp/>raw_data<sp/>=<sp/><ref refid="d5/db2/image_8h_1a78477801fe183cdf32e60df1c92b7320" kindref="member">GetPixel</ref>(hIMG,<sp/>x,<sp/>y,<sp/>z);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>local_sum<sp/>=<sp/><ref refid="d6/d9d/local__sum_8h_1a1f0a6a3443597dab4881bb94fbc35f41" kindref="member">FindLocalSum</ref>(hIMG,<sp/>z,<sp/>y,<sp/>x);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>predicted_central_local_difference<sp/>=<sp/><ref refid="d2/df3/local__differences_8h_1a36ddae4ef0f34ba3f7402469253bb6b6" kindref="member">PredictedCentralLocalDifference</ref>(hIMG,<sp/>z,<sp/>y,<sp/>x);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>high_resolution_predicted_sample<sp/>=<sp/><ref refid="df/d7d/sample__representative_8h_1a441e8d0fe639d45889aab5b88c4138f4" kindref="member">HighResolutionPredictedSample</ref>(predicted_central_local_difference,<sp/>local_sum);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>double_resolution_predicted_sample<sp/>=<sp/><ref refid="df/d7d/sample__representative_8h_1a6c60474c610dc64773816bc445efeb77" kindref="member">DoubleResolutionPredictedSample</ref>(hIMG,<sp/>z,<sp/>y,<sp/>x,<sp/>high_resolution_predicted_sample);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>predicted_sample<sp/>=<sp/><ref refid="df/d7d/sample__representative_8h_1a14cff7c59ac94b0387e8b95a433521e9" kindref="member">PredictedSample</ref>(double_resolution_predicted_sample);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>quantizer_index<sp/>=<sp/><ref refid="d1/d38/quantizer_8h_1afa51bec3d5dfdb41078f60b1a7c454ab" kindref="member">QuantizerIndex</ref>(raw_data,<sp/>predicted_sample);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>clipped_quantizer_bin_center<sp/>=<sp/><ref refid="d1/d38/quantizer_8h_1a9d745aa249b8a9cde3f83899b563dcc5" kindref="member">ClippedQuantizerBinCenter</ref>(raw_data);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>double_resolution_predicted_error<sp/>=<sp/><ref refid="d2/d6a/weights_8h_1a286baab1384ff25cf7cf4c2061f15c4c" kindref="member">DoubleResolutionPredictionError</ref>(clipped_quantizer_bin_center,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double_resolution_predicted_sample);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/d9c/linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639" kindref="member">data_t</ref><sp/>predicted_value<sp/>=<sp/><ref refid="d1/d38/quantizer_8h_1a1f491e0a435427669942c932394d7c1a" kindref="member">MappedQuantizerIndex</ref>(quantizer_index,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>predicted_sample,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>double_resolution_predicted_sample);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" kindref="member">SetPixel</ref>(result,<sp/>x,<sp/>y,<sp/>z,<sp/>predicted_value);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d6a/weights_8h_1a805706f7af2f212bc46076319fcec535" kindref="member">UpdateWeights</ref>(hIMG,<sp/><ref refid="df/d01/cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669" kindref="member">global_cache</ref>-&gt;<ref refid="d0/d18/struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826" kindref="member">weights</ref>,<sp/>z,<sp/>y,<sp/>x,<sp/>double_resolution_predicted_error);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="d5/ddb/global__constants_8h_1a1b0cdea94de8d08c0351a24c1e84f547" kindref="member">DEBUG</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>write_buffer[1000];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(write_buffer,<sp/></highlight><highlight class="stringliteral">&quot;(%d,%d,%d),%u,<sp/>%d,<sp/>%d,<sp/>%ld,<sp/>%d,<sp/>%ld,<sp/>[&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x,<sp/>y,<sp/>z,<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>raw_data,<sp/>predicted_sample,<sp/>predicted_value,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>predicted_central_local_difference,<sp/>double_resolution_predicted_sample,<sp/>high_resolution_predicted_sample);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" kindref="member">C</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(write_buffer<sp/>+<sp/>strlen(write_buffer),<sp/></highlight><highlight class="stringliteral">&quot;%d,&quot;</highlight><highlight class="normal">,<sp/><ref refid="df/d01/cache__predictor_8h_1a8dc01c7173e49a14ae38a59d91b9d669" kindref="member">global_cache</ref>-&gt;<ref refid="d0/d18/struct_predictor_cache_1a8ffc318fbdca60414a190de33e244826" kindref="member">weights</ref>[i]);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprintf(write_buffer<sp/>+<sp/>strlen(write_buffer),<sp/></highlight><highlight class="stringliteral">&quot;]\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d9/d7f/file___i_o_8h_1a94d988ea4ce93357f56c0191584246a6" kindref="member">F_WRITE</ref>(write_buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>strlen(write_buffer),<sp/><ref refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="dc/d08/predictor_8h_1a4a94804509574a94d896a4164802bcd2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/d25/predictor_8c_1a4a94804509574a94d896a4164802bcd2" kindref="member">RunPredictor</ref>(<ref refid="de/d68/structimage" kindref="compound">image</ref><sp/>*hIMG,<sp/><ref refid="de/d68/structimage" kindref="compound">image</ref><sp/>*result)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d6f/constants_8h_1af84e7b9bd8c4fa1203b0040adf941d8d" kindref="member">InitalizeImageConstants</ref>(hIMG-&gt;<ref refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>res<sp/>=<sp/><ref refid="d4/d3e/load__constants_8h_1a5d642038360b72b886a5eb66e3efd14a" kindref="member">LoadConstantFile</ref>(<ref refid="d5/ddb/global__constants_8h_1a7a8fe096cc3b24ddabd9b150f4f5bdd7" kindref="member">PREDICTOR_CONSTANTS_LOCATION</ref>,<sp/>&amp;<ref refid="d5/ddb/global__constants_8h_1a3e84b5148948a9a22f804ac78d16590c" kindref="member">predictor_constants</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d6f/constants_8h_1a6acd65af9a2f057ad3f0891038799e5b" kindref="member">InitalizePredictorConstants</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(res)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/d8f/logs_8h_1ad795690a809192117add6898be812267" kindref="member">Log_error</ref>(</highlight><highlight class="stringliteral">&quot;Unable<sp/>to<sp/>load<sp/>Predictor<sp/>Constants&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215" kindref="member">FILE_READ_ERROR</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>clock_t<sp/>start,<sp/>end;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>size<sp/>=<sp/>hIMG-&gt;<ref refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref><sp/>=<sp/><ref refid="d9/d7f/file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(</highlight><highlight class="stringliteral">&quot;../data/logs/c-debug.LOG&quot;</highlight><highlight class="normal">,<sp/><ref refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d8f/logs_8h_1a61353ebf0328d8bd1f61f224305e64bb" kindref="member">Log_add</ref>(</highlight><highlight class="stringliteral">&quot;Setup<sp/>Complete.<sp/>Running<sp/>C<sp/>Predictor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>start<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>size.<ref refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="d2/d6f/constants_8h_1aee5860bd3e62fe2734ce27a1b1038dbc" kindref="member">PREDICTION_MODE</ref>){</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" kindref="member">C</ref><sp/>=<sp/><ref refid="de/d32/reconstructor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" kindref="member">Ps</ref>(i)<sp/>+<sp/>3;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d25/predictor_8c_1a5464533d23b59ba11030432e73528730" kindref="member">C</ref><sp/>=<sp/><ref refid="de/d32/reconstructor_8h_1a2fee6f8dd7f3cd3ed1ae75161294c4c4" kindref="member">Ps</ref>(i);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>size.<ref refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>;<sp/>j++)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>size.<ref refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>;<sp/>k++)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="db/d25/predictor_8c_1a498daa18fb3529e8fffc3fff08e6bef6" kindref="member">Predict</ref>(hIMG,<sp/>result,<sp/>i,<sp/>j,<sp/>k);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time_elapsed<sp/>=<sp/>(double)<sp/>(clock()<sp/>-<sp/>start)<sp/>/<sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)<sp/>CLOCKS_PER_SEC;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time_left<sp/>=<sp/>time_elapsed<sp/>*<sp/>(<ref refid="d2/d6f/constants_8h_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref><sp/>-<sp/>i<sp/>-<sp/>1)<sp/>/<sp/>(i<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\rPredicted<sp/>%d/%d<sp/>of<sp/>Image.<sp/>(%3.1f<sp/>seconds<sp/>Elapsed,<sp/>%3.1f<sp/>seconds<sp/>Left)&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(i<sp/>+<sp/>1),<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)hIMG-&gt;<ref refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>.<ref refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>,<sp/>time_elapsed,<sp/>time_left);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush(stdout);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d7f/file___i_o_8h_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(<ref refid="db/d25/predictor_8c_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>end<sp/>=<sp/>clock();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time_elapsed<sp/>=<sp/>(double)<sp/>(end<sp/>-<sp/>start)<sp/>/<sp/>(double)<sp/>CLOCKS_PER_SEC;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n%3.3f<sp/>seconds<sp/>for<sp/>image<sp/>prediction.\n&quot;</highlight><highlight class="normal">,<sp/>time_elapsed);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>out_buff[100];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(out_buff,<sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>taken<sp/>for<sp/>prediction:<sp/>%3.3f<sp/>seconds&quot;</highlight><highlight class="normal">,<sp/>time_elapsed);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d8f/logs_8h_1a61353ebf0328d8bd1f61f224305e64bb" kindref="member">Log_add</ref>(out_buff);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d8f/logs_8h_1a61353ebf0328d8bd1f61f224305e64bb" kindref="member">Log_add</ref>(</highlight><highlight class="stringliteral">&quot;Prediction<sp/>Complete&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d5/ddb/global__constants_8h_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737" kindref="member">RES_OK</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/predictor.c"/>
+  </compounddef>
+</doxygen>

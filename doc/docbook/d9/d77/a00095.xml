@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00095" xml:lang="en-US">
+<title>include/predictor/weights.h File Reference</title>
+<indexterm><primary>include/predictor/weights.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;constants/constants.h&quot;<?linebreak?>#include &quot;dst/image.h&quot;<?linebreak?>#include &quot;math/linear_algebra.h&quot;<?linebreak?>#include &quot;predictor/quantizer.h&quot;<?linebreak?></programlisting>Include dependency graph for weights.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/df8/a00096.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d84/a00097.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_a00095_1a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</link>(z)&#160;&#160;&#160;<link linkend="_a00152_1a3acffbd305ee72dcd4593c0d8af64a4f">MIN</link>(z, <link linkend="_a00146_1a21c169290a6c782855c778bb7a0389b9">kP</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00095_1adcc753ae7048085817bd2c37b471f739">InitializeWeights</link> (int32_t **weight_ptr, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_a00095_1a286baab1384ff25cf7cf4c2061f15c4c">DoubleResolutionPredictionError</link> (int16_t clipped_quantizer_bin_center, int32_t double_resolution_predicted_sample)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_a00095_1a17984670eb20b6ea122fb1e90a50dc75">WeightUpdateScalingExponent</link> (<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00095_1a805706f7af2f212bc46076319fcec535">UpdateWeights</link> (<link linkend="_a00380">image</link> *hIMG, int32_t *weights, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, int32_t double_resolution_prediction_error)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_a00095_1a2fee6f8dd7f3cd3ed1ae75161294c4c4"/><section>
+    <title>Ps</title>
+<indexterm><primary>Ps</primary><secondary>weights.h</secondary></indexterm>
+<indexterm><primary>weights.h</primary><secondary>Ps</secondary></indexterm>
+<para><computeroutput>#define Ps( z)&#160;&#160;&#160;<link linkend="_a00152_1a3acffbd305ee72dcd4593c0d8af64a4f">MIN</link>(z, <link linkend="_a00146_1a21c169290a6c782855c778bb7a0389b9">kP</link>)</computeroutput></para>
+<para><link linkend="_a00095">weights.h</link> <formalpara><title>Author</title>
+
+<para>@Kevin-Caldwell</para>
+</formalpara>
+Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor. </para>
+<para>
+Definition at line <link linkend="_a00095_source_1l00018">18</link> of file <link linkend="_a00095_source">weights.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00095_1a286baab1384ff25cf7cf4c2061f15c4c"/><section>
+    <title>DoubleResolutionPredictionError()</title>
+<indexterm><primary>DoubleResolutionPredictionError</primary><secondary>weights.h</secondary></indexterm>
+<indexterm><primary>weights.h</primary><secondary>DoubleResolutionPredictionError</secondary></indexterm>
+<para><computeroutput>int32_t DoubleResolutionPredictionError (int16_t clipped_quantizer_bin_center, int32_t double_resolution_predicted_sample)</computeroutput></para><para>
+Definition at line <link linkend="_a00284_source_1l00035">35</link> of file <link linkend="_a00284_source">weights.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d77/a00095_a286baab1384ff25cf7cf4c2061f15c4c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00095_1adcc753ae7048085817bd2c37b471f739"/><section>
+    <title>InitializeWeights()</title>
+<indexterm><primary>InitializeWeights</primary><secondary>weights.h</secondary></indexterm>
+<indexterm><primary>weights.h</primary><secondary>InitializeWeights</secondary></indexterm>
+<para><computeroutput>int InitializeWeights (int32_t ** weight_ptr, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</computeroutput></para><para>
+Definition at line <link linkend="_a00284_source_1l00004">4</link> of file <link linkend="_a00284_source">weights.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d77/a00095_adcc753ae7048085817bd2c37b471f739_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d77/a00095_adcc753ae7048085817bd2c37b471f739_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00095_1a805706f7af2f212bc46076319fcec535"/><section>
+    <title>UpdateWeights()</title>
+<indexterm><primary>UpdateWeights</primary><secondary>weights.h</secondary></indexterm>
+<indexterm><primary>weights.h</primary><secondary>UpdateWeights</secondary></indexterm>
+<para><computeroutput>int UpdateWeights (<link linkend="_a00380">image</link> * hIMG, int32_t * weights, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> z, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x, int32_t double_resolution_prediction_error)</computeroutput></para><para>
+Definition at line <link linkend="_a00284_source_1l00050">50</link> of file <link linkend="_a00284_source">weights.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d77/a00095_a805706f7af2f212bc46076319fcec535_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d77/a00095_a805706f7af2f212bc46076319fcec535_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00095_1a17984670eb20b6ea122fb1e90a50dc75"/><section>
+    <title>WeightUpdateScalingExponent()</title>
+<indexterm><primary>WeightUpdateScalingExponent</primary><secondary>weights.h</secondary></indexterm>
+<indexterm><primary>weights.h</primary><secondary>WeightUpdateScalingExponent</secondary></indexterm>
+<para><computeroutput>int32_t WeightUpdateScalingExponent (<link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> y, <link linkend="_a00152_1affb1df897d26e77d96c613bea67825c6">INDEX</link> x)</computeroutput></para><para>
+Definition at line <link linkend="_a00284_source_1l00041">41</link> of file <link linkend="_a00284_source">weights.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d9/d77/a00095_a17984670eb20b6ea122fb1e90a50dc75_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

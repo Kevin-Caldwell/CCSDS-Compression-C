@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_perlin__noise_8c_source" xml:lang="en-US">
+<title>perlin_noise.c</title>
+<indexterm><primary>src/perlin_noise.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_perlin__noise_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_perlin_8h">testing/perlin.h</link>&quot;</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00002"/>00002 
+<anchor xml:id="_perlin__noise_8c_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_csv-io_8h">files/csv-io.h</link>&quot;</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;math.h&gt;</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;string.h&gt;</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;time.h&gt;</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00007"/>00007 
+<anchor xml:id="_perlin__noise_8c_source_1l00011"/><link linkend="_structf_vector3">00011</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structf_vector3">fVector3</link>
+<anchor xml:id="_perlin__noise_8c_source_1l00012"/>00012 {
+<anchor xml:id="_perlin__noise_8c_source_1l00013"/><link linkend="_structf_vector3_1ad0da36b2558901e21e7a30f6c227a45e">00013</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_structf_vector3_1ad0da36b2558901e21e7a30f6c227a45e">x</link>,&#32;<link linkend="_structf_vector3_1aa4f0d3eebc3c443f9be81bf48561a217">y</link>,&#32;<link linkend="_structf_vector3_1af73583b1e980b0aa03f9884812e9fd4d">z</link>;
+<anchor xml:id="_perlin__noise_8c_source_1l00014"/><link linkend="_perlin__noise_8c_1ad1fe5773deff1a734c5cc1b9e03d79fa">00014</link> }&#32;<link linkend="_structf_vector3">fVector3</link>;
+<anchor xml:id="_perlin__noise_8c_source_1l00015"/>00015 
+<anchor xml:id="_perlin__noise_8c_source_1l00016"/><link linkend="_perlin__noise_8c_1a7f35c7c40a9e0e57a50fd058b064e8f6">00016</link> <emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_perlin__noise_8c_1a7f35c7c40a9e0e57a50fd058b064e8f6">dot</link>(<link linkend="_structf_vector3">fVector3</link>&#32;u,&#32;<link linkend="_structf_vector3">fVector3</link>&#32;v)
+<anchor xml:id="_perlin__noise_8c_source_1l00017"/>00017 {
+<anchor xml:id="_perlin__noise_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;u.<link linkend="_structf_vector3_1ad0da36b2558901e21e7a30f6c227a45e">x</link>&#32;*&#32;v.x&#32;+&#32;u.<link linkend="_structf_vector3_1aa4f0d3eebc3c443f9be81bf48561a217">y</link>&#32;*&#32;v.y&#32;+&#32;u.<link linkend="_structf_vector3_1af73583b1e980b0aa03f9884812e9fd4d">z</link>&#32;*&#32;v.z;
+<anchor xml:id="_perlin__noise_8c_source_1l00019"/>00019 }
+<anchor xml:id="_perlin__noise_8c_source_1l00020"/>00020 
+<anchor xml:id="_perlin__noise_8c_source_1l00021"/><link linkend="_perlin__noise_8c_1ae6783c22fc9fe3e3afd30963992e383b">00021</link> <link linkend="_structf_vector3">fVector3</link>&#32;<link linkend="_perlin__noise_8c_1ae6783c22fc9fe3e3afd30963992e383b">normalize</link>(<link linkend="_structf_vector3">fVector3</link>&#32;v)
+<anchor xml:id="_perlin__noise_8c_source_1l00022"/>00022 {
+<anchor xml:id="_perlin__noise_8c_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;mag&#32;=&#32;sqrtf(<link linkend="_perlin__noise_8c_1a7f35c7c40a9e0e57a50fd058b064e8f6">dot</link>(v,&#32;v));
+<anchor xml:id="_perlin__noise_8c_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<link linkend="_structf_vector3">fVector3</link>){v.x&#32;/&#32;mag,&#32;v.y&#32;/&#32;mag,&#32;v.z&#32;/&#32;mag};
+<anchor xml:id="_perlin__noise_8c_source_1l00025"/>00025 }
+<anchor xml:id="_perlin__noise_8c_source_1l00026"/>00026 
+<anchor xml:id="_perlin__noise_8c_source_1l00027"/><link linkend="_perlin__noise_8c_1a0f59de4e718c144e6bfeced85324b3ac">00027</link> <emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_perlin__noise_8c_1a0f59de4e718c144e6bfeced85324b3ac">interpolate</link>(<emphasis role="keywordtype">float</emphasis>&#32;a0,&#32;<emphasis role="keywordtype">float</emphasis>&#32;a1,&#32;<emphasis role="keywordtype">float</emphasis>&#32;w)
+<anchor xml:id="_perlin__noise_8c_source_1l00028"/>00028 {
+<anchor xml:id="_perlin__noise_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(a1&#32;-&#32;a0)&#32;*&#32;((w&#32;*&#32;(w&#32;*&#32;6.0&#32;-&#32;15.0)&#32;+&#32;10.0)&#32;*&#32;w&#32;*&#32;w&#32;*&#32;w)&#32;+&#32;a0;
+<anchor xml:id="_perlin__noise_8c_source_1l00030"/>00030 }
+<anchor xml:id="_perlin__noise_8c_source_1l00031"/>00031 
+<anchor xml:id="_perlin__noise_8c_source_1l00032"/><link linkend="_perlin__noise_8c_1a5641d0f9a07f405360fc111bf0e3e7d4">00032</link> uint16_t&#32;<link linkend="_perlin__noise_8c_1a5641d0f9a07f405360fc111bf0e3e7d4">mapper</link>(<emphasis role="keywordtype">float</emphasis>&#32;val)
+<anchor xml:id="_perlin__noise_8c_source_1l00033"/>00033 {
+<anchor xml:id="_perlin__noise_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(uint16_t)(val&#32;*&#32;(float)(1u&#32;&lt;&lt;&#32;14));
+<anchor xml:id="_perlin__noise_8c_source_1l00035"/>00035 }
+<anchor xml:id="_perlin__noise_8c_source_1l00036"/>00036 
+<anchor xml:id="_perlin__noise_8c_source_1l00037"/><link linkend="_perlin__noise_8c_1af5816cb432fe4d1eeed508abdf19a429">00037</link> <link linkend="_structf_vector3">fVector3</link>&#32;<link linkend="_perlin__noise_8c_1af5816cb432fe4d1eeed508abdf19a429">RandomizeVector</link>(<emphasis role="keywordtype">int</emphasis>&#32;vector_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;vector_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;vector_z)
+<anchor xml:id="_perlin__noise_8c_source_1l00038"/>00038 {
+<anchor xml:id="_perlin__noise_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;srand(vector_x&#32;+&#32;10000);
+<anchor xml:id="_perlin__noise_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;rand()&#32;%&#32;100;
+<anchor xml:id="_perlin__noise_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;srand(vector_y&#32;+&#32;20000);
+<anchor xml:id="_perlin__noise_8c_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;rand()&#32;%&#32;100;
+<anchor xml:id="_perlin__noise_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;srand(vector_z&#32;+&#32;30000);
+<anchor xml:id="_perlin__noise_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;z&#32;=&#32;rand()&#32;%&#32;100;
+<anchor xml:id="_perlin__noise_8c_source_1l00045"/>00045 
+<anchor xml:id="_perlin__noise_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;mag&#32;=&#32;sqrtf(<link linkend="_math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc">SQ</link>(x)&#32;+&#32;<link linkend="_math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc">SQ</link>(y)&#32;+&#32;<link linkend="_math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc">SQ</link>(z));
+<anchor xml:id="_perlin__noise_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<link linkend="_structf_vector3">fVector3</link>){(float)x&#32;/&#32;mag,&#32;(<emphasis role="keywordtype">float</emphasis>)y&#32;/&#32;mag,&#32;(float)z&#32;/&#32;mag};
+<anchor xml:id="_perlin__noise_8c_source_1l00048"/>00048 }
+<anchor xml:id="_perlin__noise_8c_source_1l00049"/>00049 
+<anchor xml:id="_perlin__noise_8c_source_1l00050"/><link linkend="_perlin__noise_8c_1a26dda31c4d26a5c138a6b58cb7e50910">00050</link> uint16_t&#32;<link linkend="_perlin__noise_8c_1a26dda31c4d26a5c138a6b58cb7e50910">SolvePerlin4</link>(<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;z,&#32;<emphasis role="keywordtype">int</emphasis>&#32;len,&#32;<link linkend="_structdim3">dim3</link>&#32;size)
+<anchor xml:id="_perlin__noise_8c_source_1l00051"/>00051 {
+<anchor xml:id="_perlin__noise_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;vertexX&#32;=&#32;x&#32;-&#32;x&#32;%&#32;len;
+<anchor xml:id="_perlin__noise_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;vertexY&#32;=&#32;y&#32;-&#32;y&#32;%&#32;len;
+<anchor xml:id="_perlin__noise_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;vertexZ&#32;=&#32;z&#32;-&#32;z&#32;%&#32;len;
+<anchor xml:id="_perlin__noise_8c_source_1l00055"/>00055 
+<anchor xml:id="_perlin__noise_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<link linkend="_structf_vector3">fVector3</link>&#32;offset_vector&#32;=&#32;<link linkend="_perlin__noise_8c_1ae6783c22fc9fe3e3afd30963992e383b">normalize</link>((<link linkend="_structf_vector3">fVector3</link>){x&#32;%&#32;len,&#32;y&#32;%&#32;len,&#32;z&#32;%&#32;len});
+<anchor xml:id="_perlin__noise_8c_source_1l00057"/>00057 
+<anchor xml:id="_perlin__noise_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;value&#32;=&#32;0;
+<anchor xml:id="_perlin__noise_8c_source_1l00059"/>00059 
+<anchor xml:id="_perlin__noise_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;=&#32;len;&#32;i&#32;+=&#32;len)
+<anchor xml:id="_perlin__noise_8c_source_1l00061"/>00061 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_perlin__noise_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;=&#32;len;&#32;j&#32;+=&#32;len)
+<anchor xml:id="_perlin__noise_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_perlin__noise_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;=&#32;len;&#32;k&#32;+=&#32;len)
+<anchor xml:id="_perlin__noise_8c_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_perlin__noise_8c_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structf_vector3">fVector3</link>&#32;grid_vector&#32;=&#32;<link linkend="_perlin__noise_8c_1af5816cb432fe4d1eeed508abdf19a429">RandomizeVector</link>(vertexX&#32;+&#32;i&#32;*&#32;len,&#32;vertexY&#32;+&#32;j&#32;*&#32;len,&#32;vertexZ&#32;+&#32;k&#32;*&#32;len);
+<anchor xml:id="_perlin__noise_8c_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;dot_product&#32;=&#32;<link linkend="_perlin__noise_8c_1a7f35c7c40a9e0e57a50fd058b064e8f6">dot</link>(grid_vector,&#32;offset_vector);
+<anchor xml:id="_perlin__noise_8c_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_perlin__noise_8c_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_perlin__noise_8c_source_1l00070"/>00070 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_perlin__noise_8c_source_1l00071"/>00071 
+<anchor xml:id="_perlin__noise_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_perlin__noise_8c_1a5641d0f9a07f405360fc111bf0e3e7d4">mapper</link>(value);
+<anchor xml:id="_perlin__noise_8c_source_1l00073"/>00073 }
+<anchor xml:id="_perlin__noise_8c_source_1l00074"/>00074 
+<anchor xml:id="_perlin__noise_8c_source_1l00075"/><link linkend="_perlin_8h_1a573b5b9f4a318d5723b22ecfe2eaa87a">00075</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_perlin__noise_8c_1a573b5b9f4a318d5723b22ecfe2eaa87a">Perlin4</link>(<link linkend="_structimage">image</link>&#32;*result,&#32;<emphasis role="keywordtype">int</emphasis>&#32;cube_side)
+<anchor xml:id="_perlin__noise_8c_source_1l00076"/>00076 {
+<anchor xml:id="_perlin__noise_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;PERLIN&#32;\n&quot;</emphasis>);
+<anchor xml:id="_perlin__noise_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;srand(1);
+<anchor xml:id="_perlin__noise_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;size&#32;=&#32;result-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>;
+<anchor xml:id="_perlin__noise_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;time_t&#32;start;
+<anchor xml:id="_perlin__noise_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;time_t&#32;end;
+<anchor xml:id="_perlin__noise_8c_source_1l00082"/>00082 &#32;&#32;&#32;&#32;start&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>);
+<anchor xml:id="_perlin__noise_8c_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0;&#32;x&#32;&lt;&#32;size.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>;&#32;x++)
+<anchor xml:id="_perlin__noise_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_perlin__noise_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0;&#32;y&#32;&lt;&#32;size.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>;&#32;y++)
+<anchor xml:id="_perlin__noise_8c_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_perlin__noise_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;z&#32;=&#32;0;&#32;z&#32;&lt;&#32;size.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>;&#32;z++)
+<anchor xml:id="_perlin__noise_8c_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_perlin__noise_8c_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_image_8h_1aefaa1253ccc17864ac32b9d685b821d4">SetPixel</link>(result,&#32;x,&#32;y,&#32;z,&#32;<link linkend="_perlin__noise_8c_1a26dda31c4d26a5c138a6b58cb7e50910">SolvePerlin4</link>(x,&#32;y,&#32;z,&#32;cube_side,&#32;size));
+<anchor xml:id="_perlin__noise_8c_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_perlin__noise_8c_source_1l00091"/>00091 
+<anchor xml:id="_perlin__noise_8c_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;time_elapsed&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>)&#32;-&#32;start;
+<anchor xml:id="_perlin__noise_8c_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;time_t&#32;time_left&#32;=&#32;time_elapsed&#32;*&#32;((result-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>&#32;-&#32;x&#32;-&#32;1)&#32;*&#32;result-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>&#32;+&#32;(result-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>&#32;-&#32;y&#32;-&#32;1))&#32;/&#32;(result-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>&#32;*&#32;(x&#32;+&#32;1)&#32;+&#32;(y&#32;+&#32;1));
+<anchor xml:id="_perlin__noise_8c_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\rGenerated&#32;%d/%d&#32;of&#32;Image.&#32;(%ld&#32;seconds&#32;Elapsed,&#32;%ld&#32;seconds&#32;Left)&quot;</emphasis>,&#32;(<emphasis role="keywordtype">int</emphasis>)(x&#32;+&#32;1),&#32;(<emphasis role="keywordtype">int</emphasis>)result-&gt;<link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link>.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>,&#32;time_elapsed,&#32;time_left);
+<anchor xml:id="_perlin__noise_8c_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fflush(stdout);
+<anchor xml:id="_perlin__noise_8c_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_perlin__noise_8c_source_1l00097"/>00097 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_perlin__noise_8c_source_1l00098"/>00098 
+<anchor xml:id="_perlin__noise_8c_source_1l00099"/>00099 &#32;&#32;&#32;&#32;end&#32;=&#32;time(<link linkend="_math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</link>);
+<anchor xml:id="_perlin__noise_8c_source_1l00100"/>00100 &#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n%d&#32;seconds&#32;for&#32;image&#32;prediction.\n&quot;</emphasis>,&#32;(<emphasis role="keywordtype">int</emphasis>)(end&#32;-&#32;start));
+<anchor xml:id="_perlin__noise_8c_source_1l00101"/>00101 }
+<anchor xml:id="_perlin__noise_8c_source_1l00102"/>00102 
+<anchor xml:id="_perlin__noise_8c_source_1l00103"/><link linkend="_perlin_8h_1a6d727efa497a4b992c90483602583515">00103</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_perlin__noise_8c_1a6d727efa497a4b992c90483602583515">GeneratePerlinImage</link>(<link linkend="_structdim3">dim3</link>&#32;size,&#32;<emphasis role="keywordtype">int</emphasis>&#32;index,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length)
+<anchor xml:id="_perlin__noise_8c_source_1l00104"/>00104 {
+<anchor xml:id="_perlin__noise_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;filename[100];
+<anchor xml:id="_perlin__noise_8c_source_1l00106"/>00106 &#32;&#32;&#32;&#32;sprintf(filename,&#32;<emphasis role="stringliteral">&quot;../data/test-images/PERLIN_%lux%lux%lu_%d.csv&quot;</emphasis>,
+<anchor xml:id="_perlin__noise_8c_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;size.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>,&#32;size.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>,&#32;size.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>,&#32;index);
+<anchor xml:id="_perlin__noise_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<link linkend="_structimage">image</link>&#32;*testImage;
+<anchor xml:id="_perlin__noise_8c_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<link linkend="_image_8h_1a61b8047c5bba5a89979d65847e4103b1">InitImage</link>(testImage,&#32;size.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>,&#32;size.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>,&#32;size.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>);
+<anchor xml:id="_perlin__noise_8c_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<link linkend="_perlin__noise_8c_1a573b5b9f4a318d5723b22ecfe2eaa87a">Perlin4</link>(testImage,&#32;length);
+<anchor xml:id="_perlin__noise_8c_source_1l00111"/>00111 
+<anchor xml:id="_perlin__noise_8c_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<link linkend="_csv-io_8h_1a214fc383a5cb483508da7bb0449a9528">SaveImageAsCSV</link>(testImage,&#32;filename);
+<anchor xml:id="_perlin__noise_8c_source_1l00113"/>00113 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#ifndef&#32;MEMORY_SAVING</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00114"/>00114 &#32;&#32;&#32;&#32;free(testImage-&gt;<link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link>);
+<anchor xml:id="_perlin__noise_8c_source_1l00115"/>00115 &#32;&#32;&#32;&#32;free(testImage);
+<anchor xml:id="_perlin__noise_8c_source_1l00116"/>00116 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;#endif</emphasis>
+<anchor xml:id="_perlin__noise_8c_source_1l00117"/>00117 }
+</programlisting></section>

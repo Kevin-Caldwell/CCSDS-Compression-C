@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00080_source" xml:lang="en-US">
+<title>body.h</title>
+<indexterm><primary>include/encoder/body.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00080_source_1l00001"/>00001 
+<anchor xml:id="_a00080_source_1l00022"/>00022 <emphasis role="preprocessor">#ifndef&#32;BODY_H</emphasis>
+<anchor xml:id="_a00080_source_1l00023"/>00023 <emphasis role="preprocessor">#define&#32;BODY_H</emphasis>
+<anchor xml:id="_a00080_source_1l00024"/>00024 
+<anchor xml:id="_a00080_source_1l00025"/>00025 <emphasis role="preprocessor">#include&#32;&lt;inttypes.h&gt;</emphasis>
+<anchor xml:id="_a00080_source_1l00026"/>00026 
+<anchor xml:id="_a00080_source_1l00027"/>00027 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00152">math/math_functions.h</link>&quot;</emphasis>
+<anchor xml:id="_a00080_source_1l00028"/>00028 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00113">dst/image.h</link>&quot;</emphasis>
+<anchor xml:id="_a00080_source_1l00029"/>00029 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00140">constants/encoder_constants.h</link>&quot;</emphasis>
+<anchor xml:id="_a00080_source_1l00030"/>00030 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00086">encoder/stream_encoder.h</link>&quot;</emphasis>
+<anchor xml:id="_a00080_source_1l00031"/>00031 
+<anchor xml:id="_a00080_source_1l00032"/>00032 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00080_1a2689c4b3931025b79053532a5f1b0a85">K</link>;
+<anchor xml:id="_a00080_source_1l00033"/>00033 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00080_1a706ff4e6123594c36b0894c248a25ff7">U_max</link>;
+<anchor xml:id="_a00080_source_1l00034"/>00034 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00080_1a14069285fee7428b1929cb23a4b1561c">Gamma1</link>;
+<anchor xml:id="_a00080_source_1l00035"/>00035 
+<anchor xml:id="_a00080_source_1l00036"/><link linkend="_a00080_1a0bbf3cd743f1631577f828fa3d85ccf7">00036</link> <emphasis role="preprocessor">#define&#32;GAMMA_STAR&#32;5</emphasis>
+<anchor xml:id="_a00080_source_1l00037"/>00037 
+<anchor xml:id="_a00080_source_1l00044"/><link linkend="_a00388">00044</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_a00388">GolombInt</link>{
+<anchor xml:id="_a00080_source_1l00045"/><link linkend="_a00388_1a1e43bf7d608e87228b625cca2c04d641">00045</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_a00388_1a1e43bf7d608e87228b625cca2c04d641">data</link>;
+<anchor xml:id="_a00080_source_1l00046"/><link linkend="_a00388_1aebb70c2aab3407a9f05334c47131a43b">00046</link> &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_a00388_1aebb70c2aab3407a9f05334c47131a43b">length</link>;
+<anchor xml:id="_a00080_source_1l00047"/><link linkend="_a00080_1ab186a3d3c48b41b71d731fb1c209cae5">00047</link> }&#32;<link linkend="_a00388">GolombInt</link>;
+<anchor xml:id="_a00080_source_1l00048"/>00048 
+<anchor xml:id="_a00080_source_1l00049"/>00049 <link linkend="_a00388">GolombInt</link>&#32;<link linkend="_a00080_1ad956397a2e57dfa4fe588564adef610f">GolombPowerTwo</link>(uint16_t&#32;j,&#32;uint16_t&#32;k);
+<anchor xml:id="_a00080_source_1l00050"/>00050 
+<anchor xml:id="_a00080_source_1l00051"/>00051 <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00080_1a8efd6761bcd40cdfb8e0ca4e1f39ef6b">InitAccumulatorValue</link>(uint32_t&#32;z);
+<anchor xml:id="_a00080_source_1l00052"/>00052 
+<anchor xml:id="_a00080_source_1l00053"/>00053 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00080_1a38c7868c2a8819e7abc16148811f2e0b">EncodeBody</link>(<link linkend="_a00380">image</link>*&#32;hIMG,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;file_name,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;write_mode,&#32;<emphasis role="keywordtype">int</emphasis>&#32;buffer_size);
+<anchor xml:id="_a00080_source_1l00054"/>00054 
+<anchor xml:id="_a00080_source_1l00055"/>00055 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;BODY_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

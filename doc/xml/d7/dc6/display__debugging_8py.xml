@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d7/dc6/display__debugging_8py" kind="file" language="Python">
+    <compoundname>display_debugging.py</compoundname>
+    <innernamespace refid="df/ded/namespacedisplay__debugging">display_debugging</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="df/ded/namespacedisplay__debugging" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>matplotlib.pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plt</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>matplotlib.animation<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>FuncAnimation</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="df/ded/namespacedisplay__debugging_1a7e69bd3f9400dc258e83fe7ecab1e317" refkind="member"><highlight class="normal">CacheFiles<sp/>=<sp/>[</highlight><highlight class="stringliteral">&quot;raw&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;predictor&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;local-sums&quot;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="df/ded/namespacedisplay__debugging_1ac3eb632b1a788eb448ac9474d94a2436" refkind="member"><highlight class="normal">num_images<sp/>=<sp/>len(CacheFiles)</highlight></codeline>
+<codeline lineno="8" refid="df/ded/namespacedisplay__debugging_1a74742cb5c8e2ac354a60cb73383d8176" refkind="member"><highlight class="normal">rows<sp/>=<sp/>2<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>num_images<sp/>&gt;<sp/>5<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>1</highlight></codeline>
+<codeline lineno="9" refid="df/ded/namespacedisplay__debugging_1aaed057ed424ced7429016ec18c2edbb6" refkind="member"><highlight class="normal">cols<sp/>=<sp/>(num_images<sp/>+<sp/>1)<sp/>//<sp/>2</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="df/ded/namespacedisplay__debugging_1addecde06ced656af71c7c68c4e780fe8" refkind="member"><highlight class="normal">fig,<sp/>axes<sp/>=<sp/>plt.subplots(rows,<sp/>cols,<sp/>figsize=(10,<sp/>5))</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">fig.tight_layout()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="df/ded/namespacedisplay__debugging_1a09fdf86df724fb528e53a740e45fb686" refkind="member"><highlight class="normal">images<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="df/ded/namespacedisplay__debugging_1a225e5b2e6406c2700aa6a6c884994dc3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="df/ded/namespacedisplay__debugging_1a225e5b2e6406c2700aa6a6c884994dc3" kindref="member">display_images</ref>(i):</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>images<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>filename<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>CacheFiles:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>images.append(plt.imread(f</highlight><highlight class="stringliteral">&apos;Python/images/{filename}{i}.png&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>num_images<sp/>&gt;<sp/>10:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Error:<sp/>Maximum<sp/>10<sp/>images<sp/>can<sp/>be<sp/>displayed.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i,<sp/>ax<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(axes.flat):</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>i<sp/>&lt;<sp/>num_images:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ax.imshow(images[i])</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ax.axis(</highlight><highlight class="stringliteral">&apos;off&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ax.axis(</highlight><highlight class="stringliteral">&apos;off&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="df/ded/namespacedisplay__debugging_1a4c913b7a4b89c523eb5240af5d344082" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>anim<sp/>=<sp/>FuncAnimation(fig,<sp/>display_images,<sp/>frames<sp/>=<sp/>100,<sp/>interval=1000)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.show()</highlight></codeline>
+    </programlisting>
+    <location file="python/display_debugging.py"/>
+  </compounddef>
+</doxygen>

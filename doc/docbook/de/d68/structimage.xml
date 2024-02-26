@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structimage" xml:lang="en-US">
+<title>image Struct Reference</title>
+<indexterm><primary>image</primary></indexterm>
+<para>
+<computeroutput>#include &lt;image.h&gt;</computeroutput>
+</para>
+Collaboration diagram for image:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../df/df2/structimage__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structdim3">dim3</link> <link linkend="_structimage_1a92c57811a03d78e56a6e8592f96a41ad">size</link></para>
+</listitem>
+            <listitem><para><link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link> * <link linkend="_structimage_1a53d0e0aad601020b80d8266c2d9f8462">data</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Image Stuct for storing all the contexts of a hyperspectral image in a linear array.</para>
+
+<para>The size member is a <link linkend="_structdim3">dim3</link> which contains the dimensions of the image in the format: {Nx, Ny, Nz} The data member is a dynamically allocated array of PIXELs arranged according to the MAP3_1 Macro defined in <link linkend="_image_8h">image.h</link></para>
+
+<para>It has only been created as a testing feature. The entire hyperspectral image cannot be stored in RAM on an embedded device such as the STM32H7. The UHI file structure replaces this struct when the MEMORY_SAVING feature is enabled through CMake. </para>
+<para>
+Definition at line <link linkend="_image_8h_source_1l00065">65</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structimage_1a53d0e0aad601020b80d8266c2d9f8462"/><section>
+    <title>data</title>
+<indexterm><primary>data</primary><secondary>image</secondary></indexterm>
+<indexterm><primary>image</primary><secondary>data</secondary></indexterm>
+<para><computeroutput><link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>* data</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00067">67</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<anchor xml:id="_structimage_1a92c57811a03d78e56a6e8592f96a41ad"/><section>
+    <title>size</title>
+<indexterm><primary>size</primary><secondary>image</secondary></indexterm>
+<indexterm><primary>image</primary><secondary>size</secondary></indexterm>
+<para><computeroutput><link linkend="_structdim3">dim3</link> size</computeroutput></para><para>
+Definition at line <link linkend="_image_8h_source_1l00066">66</link> of file <link linkend="_image_8h_source">image.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/dst/<link linkend="_image_8h">image.h</link></section>
+</section>

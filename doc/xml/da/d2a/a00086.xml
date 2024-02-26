@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="da/d2a/a00086" kind="file" language="C++">
+    <compoundname>stream_encoder.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="df/dc8/a00122" local="yes">files/file_IO.h</includes>
+    <includedby refid="da/dec/a00080" local="yes">include/encoder/body.h</includedby>
+    <includedby refid="d1/dc6/a00347" local="yes">src/decoder.c</includedby>
+    <includedby refid="d6/d82/a00293" local="yes">src/stream_encoder.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/encoder/stream_encoder.h</label>
+        <link refid="da/d2a/a00086"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>inttypes.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/encoder/body.h</label>
+        <link refid="da/dec/a00080"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/encoder/stream_encoder.h</label>
+        <link refid="da/d2a/a00086"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/decoder.c</label>
+        <link refid="d1/dc6/a00347"/>
+      </node>
+      <node id="4">
+        <label>src/encoder_body.c</label>
+        <link refid="d9/dd6/a00272"/>
+      </node>
+      <node id="5">
+        <label>src/generate_image.c</label>
+        <link refid="d3/d07/a00305"/>
+      </node>
+      <node id="6">
+        <label>src/stream_encoder.c</label>
+        <link refid="d6/d82/a00293"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d4/d27/a00392" prot="public">VarIntFileStream</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" prot="public" static="no">
+        <name>L_SHIFT</name>
+        <param><defname>x</defname></param>
+        <param><defname>s</defname></param>
+        <initializer>(s &lt; 0 ? x &gt;&gt; -s : x &lt;&lt; s)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="da/d2a/a00086" kindref="compound">stream_encoder.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+<xrefsect id="d0/dc3/a00354_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="d7/d06/a00131" kindref="compound">varIntFile_IO.h</ref> </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="15" column="9" bodyfile="include/encoder/stream_encoder.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/d2a/a00086_1a548781ef0de810de1f925dff4d5d3f9a" prot="public" static="no">
+        <name>BUFFER_REG_SIZE</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="17" column="9" bodyfile="include/encoder/stream_encoder.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" prot="public" static="no">
+        <name>BUFFER_LENGTH</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="18" column="9" bodyfile="include/encoder/stream_encoder.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="da/d2a/a00086_1a28faaa580490ca2e895b2ebe7bf22707" prot="public" static="no">
+        <type>struct <ref refid="d4/d27/a00392" kindref="compound">VarIntFileStream</ref></type>
+        <definition>typedef struct VarIntFileStream VIFS</definition>
+        <argsstring></argsstring>
+        <name>VIFS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="28" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="da/d2a/a00086_1a0db4a8ab23a4af63c99d5fbfca9073eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitializeVarIntStream</definition>
+        <argsstring>(VIFS *stream, const char *file_name, uint32_t buffer_size)</argsstring>
+        <name>InitializeVarIntStream</name>
+        <param>
+          <type><ref refid="da/d2a/a00086_1a28faaa580490ca2e895b2ebe7bf22707" kindref="member">VIFS</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>buffer_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="30" column="6" bodyfile="src/stream_encoder.c" bodystart="3" bodyend="10" declfile="include/encoder/stream_encoder.h" declline="30" declcolumn="6"/>
+        <references refid="d4/d27/a00392_1a1e5757374503c98182efdc688999f91f" compoundref="da/d2a/a00086" startline="24">VarIntFileStream::bit_ptr</references>
+        <references refid="d4/d27/a00392_1a97ecce5e0a58b1ab0ac947547d0ae8f3" compoundref="da/d2a/a00086" startline="25">VarIntFileStream::byte_ptr</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="da/d2a/a00086" startline="22">VarIntFileStream::fs</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" compoundref="df/dc8/a00122" startline="26">WRITE</references>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StreamVarInteger</definition>
+        <argsstring>(VIFS *stream, uint32_t data, uint32_t length)</argsstring>
+        <name>StreamVarInteger</name>
+        <param>
+          <type><ref refid="da/d2a/a00086_1a28faaa580490ca2e895b2ebe7bf22707" kindref="member">VIFS</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="32" column="6" bodyfile="src/stream_encoder.c" bodystart="12" bodyend="36" declfile="include/encoder/stream_encoder.h" declline="32" declcolumn="6"/>
+        <references refid="d4/d27/a00392_1a1e5757374503c98182efdc688999f91f" compoundref="da/d2a/a00086" startline="24">VarIntFileStream::bit_ptr</references>
+        <references refid="d4/d27/a00392_1a35cba028c7b885581f278e533cfc4147" compoundref="da/d2a/a00086" startline="27">VarIntFileStream::buffer</references>
+        <references refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" compoundref="da/d2a/a00086" startline="18">BUFFER_LENGTH</references>
+        <references refid="da/d2a/a00086_1a548781ef0de810de1f925dff4d5d3f9a" compoundref="da/d2a/a00086" startline="17">BUFFER_REG_SIZE</references>
+        <references refid="d4/d27/a00392_1a97ecce5e0a58b1ab0ac947547d0ae8f3" compoundref="da/d2a/a00086" startline="25">VarIntFileStream::byte_ptr</references>
+        <references refid="df/dc8/a00122_1a94d988ea4ce93357f56c0191584246a6" compoundref="dc/d5d/a00278" startline="18" endline="20">F_WRITE</references>
+        <references refid="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="da/d2a/a00086" startline="22">VarIntFileStream::fs</references>
+        <references refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" compoundref="da/d2a/a00086" startline="15">L_SHIFT</references>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="da/d2a/a00086_1afbd717a2dd8bee43593e06a3919ba72a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseVarIntegerStream</definition>
+        <argsstring>(VIFS *stream)</argsstring>
+        <name>CloseVarIntegerStream</name>
+        <param>
+          <type><ref refid="da/d2a/a00086_1a28faaa580490ca2e895b2ebe7bf22707" kindref="member">VIFS</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/encoder/stream_encoder.h" line="34" column="6" bodyfile="src/stream_encoder.c" bodystart="38" bodyend="40" declfile="include/encoder/stream_encoder.h" declline="34" declcolumn="6"/>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="da/d2a/a00086" startline="22">VarIntFileStream::fs</references>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STREAM_ENCODER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STREAM_ENCODER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="df/dc8/a00122" kindref="compound">files/file_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>L_SHIFT(x,<sp/>s)<sp/>(s<sp/>&lt;<sp/>0<sp/>?<sp/>x<sp/>&gt;&gt;<sp/>-s<sp/>:<sp/>x<sp/>&lt;&lt;<sp/>s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="da/d2a/a00086_1a548781ef0de810de1f925dff4d5d3f9a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_REG_SIZE<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_LENGTH<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d4/d27/a00392" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d4/d27/a00392" kindref="compound">VarIntFileStream</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref><sp/>*<ref refid="d4/d27/a00392_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="d4/d27/a00392_1a1e5757374503c98182efdc688999f91f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="d4/d27/a00392_1a1e5757374503c98182efdc688999f91f" kindref="member">bit_ptr</ref>;</highlight></codeline>
+<codeline lineno="25" refid="d4/d27/a00392_1a97ecce5e0a58b1ab0ac947547d0ae8f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="d4/d27/a00392_1a97ecce5e0a58b1ab0ac947547d0ae8f3" kindref="member">byte_ptr</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d4/d27/a00392_1a35cba028c7b885581f278e533cfc4147" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="d4/d27/a00392_1a35cba028c7b885581f278e533cfc4147" kindref="member">buffer</ref>[<ref refid="da/d2a/a00086_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="28" refid="da/d2a/a00086_1a28faaa580490ca2e895b2ebe7bf22707" refkind="member"><highlight class="normal">}<sp/><ref refid="da/d2a/a00086_1a28faaa580490ca2e895b2ebe7bf22707" kindref="member">VIFS</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d2a/a00086_1a0db4a8ab23a4af63c99d5fbfca9073eb" kindref="member">InitializeVarIntStream</ref>(<ref refid="d4/d27/a00392" kindref="compound">VIFS</ref><sp/>*stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_name,<sp/>uint32_t<sp/>buffer_size);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" kindref="member">StreamVarInteger</ref>(<ref refid="d4/d27/a00392" kindref="compound">VIFS</ref><sp/>*stream,<sp/>uint32_t<sp/>data,<sp/>uint32_t<sp/>length);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d2a/a00086_1afbd717a2dd8bee43593e06a3919ba72a" kindref="member">CloseVarIntegerStream</ref>(<ref refid="d4/d27/a00392" kindref="compound">VIFS</ref>*<sp/>stream);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>STREAM_ENCODER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/encoder/stream_encoder.h"/>
+  </compounddef>
+</doxygen>

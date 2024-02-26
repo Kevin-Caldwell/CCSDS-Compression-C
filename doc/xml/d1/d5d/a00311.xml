@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d1/d5d/a00311" kind="file" language="C++">
+    <compoundname>uhi_io.c</compoundname>
+    <includes refid="d1/d88/a00128" local="yes">files/uhi_io.h</includes>
+    <includes refid="d3/d00/a00113" local="yes">dst/image.h</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>constants/constants.h</label>
+        <link refid="d9/db6/a00146"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dst/image.h</label>
+        <link refid="d3/d00/a00113"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>files/uhi_io.h</label>
+        <link refid="d1/d88/a00128"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>math/math_functions.h</label>
+        <link refid="d7/d9a/a00152"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/uhi_io.c</label>
+        <link refid="d1/d5d/a00311"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+      <node id="9">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="15">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d1/d5d/a00311_1a6114b6569fbd42d5a3fa05f4cd82cc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UHI_Initialize</definition>
+        <argsstring>(UHI *stream, dim3 buffer_size, const char *file_name, FileMode file_mode)</argsstring>
+        <name>UHI_Initialize</name>
+        <param>
+          <type><ref refid="d1/d88/a00128_1ac3e22f6af3f1d9eb75f08f122711569b" kindref="member">UHI</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>buffer_size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="df/dc8/a00122_1abf7662b304505130b2e87a944038aff0" kindref="member">FileMode</ref></type>
+          <declname>file_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="4" column="5" bodyfile="src/uhi_io.c" bodystart="4" bodyend="14"/>
+        <references refid="d9/da1/a00396_1ad6ee0d6e06c4b67239464b59d806f72c" compoundref="d1/d88/a00128" startline="45">UncompressedHyperspectralImage::cache</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d1/d88/a00128" startline="43">UncompressedHyperspectralImage::fs</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" compoundref="df/dc8/a00122" startline="25">READ</references>
+        <referencedby refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" compoundref="d3/d5e/a00275" startline="5" endline="51">test_UHI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5d/a00311_1a3b81f64a9012eef50fecd6638a817aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UHI_WriteImage</definition>
+        <argsstring>(const char *filename, const image *source)</argsstring>
+        <name>UHI_WriteImage</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="d8/ddd/a00380" kindref="compound">image</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="16" column="5" bodyfile="src/uhi_io.c" bodystart="16" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5d/a00311_1ad7fd2d84633ee6e0355a950deeacd220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+        <definition>PIXEL UHI_ReadPixel</definition>
+        <argsstring>(UHI *stream, dim3 index)</argsstring>
+        <name>UHI_ReadPixel</name>
+        <param>
+          <type><ref refid="d1/d88/a00128_1ac3e22f6af3f1d9eb75f08f122711569b" kindref="member">UHI</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="27" column="7" bodyfile="src/uhi_io.c" bodystart="27" bodyend="36"/>
+        <references refid="d9/da1/a00396_1ad6ee0d6e06c4b67239464b59d806f72c" compoundref="d1/d88/a00128" startline="45">UncompressedHyperspectralImage::cache</references>
+        <references refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" compoundref="dc/d5d/a00278" startline="22" endline="24">F_READ</references>
+        <references refid="df/dc8/a00122_1a3ac9e7bef40307b69bdf5e0cb6904d83" compoundref="dc/d5d/a00278" startline="34" endline="39">F_SEEK</references>
+        <references refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d1/d88/a00128" startline="43">UncompressedHyperspectralImage::fs</references>
+        <references refid="d9/da1/a00396_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d1/d88/a00128" startline="44">UncompressedHyperspectralImage::size</references>
+        <references refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" compoundref="d7/d9a/a00152" startline="59">dim3::x</references>
+        <references refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d7/d9a/a00152" startline="60">dim3::y</references>
+        <references refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d7/d9a/a00152" startline="61">dim3::z</references>
+        <referencedby refid="d1/d88/a00128_1aad573fb88befb1cd5c553c20a32027a9" compoundref="d1/d5d/a00311" startline="51" endline="53">Proxy_GetPixel</referencedby>
+        <referencedby refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" compoundref="d3/d5e/a00275" startline="5" endline="51">test_UHI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5d/a00311_1a88066808c0a718f67bd50a325cdb5721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UHI_WritePixel</definition>
+        <argsstring>(const UHI *stream, dim3 index, PIXEL value)</argsstring>
+        <name>UHI_WritePixel</name>
+        <param>
+          <type>const <ref refid="d1/d88/a00128_1ac3e22f6af3f1d9eb75f08f122711569b" kindref="member">UHI</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/de6/a00404" kindref="compound">dim3</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="38" column="5" bodyfile="src/uhi_io.c" bodystart="38" bodyend="44"/>
+        <referencedby refid="d1/d88/a00128_1a1ec6bacb78062b9b8dde4cf3e3eeb923" compoundref="d1/d5d/a00311" startline="55" endline="57">Proxy_SetPixel</referencedby>
+        <referencedby refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" compoundref="d3/d5e/a00275" startline="5" endline="51">test_UHI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5d/a00311_1a5a6150f9d137ec78a2778fbf3b52d5be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int UHI_close</definition>
+        <argsstring>(UHI *stream)</argsstring>
+        <name>UHI_close</name>
+        <param>
+          <type><ref refid="d1/d88/a00128_1ac3e22f6af3f1d9eb75f08f122711569b" kindref="member">UHI</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="46" column="5" bodyfile="src/uhi_io.c" bodystart="46" bodyend="48"/>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" compoundref="d1/d88/a00128" startline="43">UncompressedHyperspectralImage::fs</references>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5d/a00311_1aad573fb88befb1cd5c553c20a32027a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+        <definition>PIXEL Proxy_GetPixel</definition>
+        <argsstring>(uIMG *hIMG, INDEX x, INDEX y, INDEX z)</argsstring>
+        <name>Proxy_GetPixel</name>
+        <param>
+          <type><ref refid="d1/d88/a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7" kindref="member">uIMG</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="51" column="7" bodyfile="src/uhi_io.c" bodystart="51" bodyend="53"/>
+        <references refid="d1/d5d/a00311_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d1/d5d/a00311" startline="27" endline="36">UHI_ReadPixel</references>
+      </memberdef>
+      <memberdef kind="function" id="d1/d5d/a00311_1a1ec6bacb78062b9b8dde4cf3e3eeb923" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Proxy_SetPixel</definition>
+        <argsstring>(uIMG *hIMG, INDEX x, INDEX y, INDEX z, PIXEL value)</argsstring>
+        <name>Proxy_SetPixel</name>
+        <param>
+          <type><ref refid="d1/d88/a00128_1a73f9b90ad8f0d9cbe39332bdca2c1aa7" kindref="member">uIMG</ref> *</type>
+          <declname>hIMG</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref></type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/uhi_io.c" line="55" column="6" bodyfile="src/uhi_io.c" bodystart="55" bodyend="57"/>
+        <references refid="d1/d5d/a00311_1a88066808c0a718f67bd50a325cdb5721" compoundref="d1/d5d/a00311" startline="38" endline="44">UHI_WritePixel</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d1/d88/a00128" kindref="compound">files/uhi_io.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d00/a00113" kindref="compound">dst/image.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="d1/d88/a00128_1a6114b6569fbd42d5a3fa05f4cd82cc7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/d5d/a00311_1a6114b6569fbd42d5a3fa05f4cd82cc7e" kindref="member">UHI_Initialize</ref>(</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/da1/a00396" kindref="compound">UHI</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>buffer_size,</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1abf7662b304505130b2e87a944038aff0" kindref="member">FileMode</ref><sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6" kindref="member">file_mode</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref><sp/>=<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(file_name,<sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" kindref="member">READ</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Initialize<sp/>Full<sp/>File</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>stream-&gt;<ref refid="d9/da1/a00396_1ad6ee0d6e06c4b67239464b59d806f72c" kindref="member">cache</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="d1/d5d/a00311_1a3b81f64a9012eef50fecd6638a817aef" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/d5d/a00311_1a3b81f64a9012eef50fecd6638a817aef" kindref="member">UHI_WriteImage</ref>(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename,<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d8/ddd/a00380" kindref="compound">image</ref>*<sp/>source</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>|<sp/>S<sp/>S<sp/>|<sp/>S<sp/>S<sp/>|<sp/>S<sp/>S<sp/>|<sp/>X<sp/>X<sp/>|<sp/>X<sp/>X<sp/>|</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/>Y<sp/><sp/><sp/><sp/><sp/>Z<sp/><sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d1/d88/a00128_1ad7fd2d84633ee6e0355a950deeacd220" refkind="member"><highlight class="normal"><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/><ref refid="d1/d5d/a00311_1ad7fd2d84633ee6e0355a950deeacd220" kindref="member">UHI_ReadPixel</ref>(</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/da1/a00396" kindref="compound">UHI</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>index</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/>pixel;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>s<sp/>=<sp/>stream-&gt;<ref refid="d9/da1/a00396_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1a3ac9e7bef40307b69bdf5e0cb6904d83" kindref="member">F_SEEK</ref>(stream-&gt;<ref refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>,<sp/>stream-&gt;<ref refid="d9/da1/a00396_1ad6ee0d6e06c4b67239464b59d806f72c" kindref="member">cache</ref>[6<sp/>+<sp/>2<sp/>*<sp/>(s.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>*<sp/>s.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>*<sp/>index.<ref refid="d9/de6/a00404_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref><sp/>+<sp/>s.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>*<sp/>index.<ref refid="d9/de6/a00404_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>+<sp/>index.<ref refid="d9/de6/a00404_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>)]);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" kindref="member">F_READ</ref>(&amp;pixel,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref>),<sp/>1,<sp/>stream-&gt;<ref refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="d1/d88/a00128_1a88066808c0a718f67bd50a325cdb5721" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/d5d/a00311_1a88066808c0a718f67bd50a325cdb5721" kindref="member">UHI_WritePixel</ref>(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="d9/da1/a00396" kindref="compound">UHI</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/de6/a00404" kindref="compound">dim3</ref><sp/>index,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/>value</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">){</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Replace<sp/>with<sp/>Code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="d1/d5d/a00311_1a5a6150f9d137ec78a2778fbf3b52d5be" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/d5d/a00311_1a5a6150f9d137ec78a2778fbf3b52d5be" kindref="member">UHI_close</ref>(<ref refid="d9/da1/a00396" kindref="compound">UHI</ref>*<sp/>stream){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(stream-&gt;<ref refid="d9/da1/a00396_1ab10afab4dbcbfc99227c63ee0ae694ff" kindref="member">fs</ref>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="d1/d88/a00128_1aad573fb88befb1cd5c553c20a32027a9" refkind="member"><highlight class="normal"><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/><ref refid="d1/d5d/a00311_1aad573fb88befb1cd5c553c20a32027a9" kindref="member">Proxy_GetPixel</ref>(<ref refid="d9/da1/a00396" kindref="compound">uIMG</ref>*<sp/>hIMG,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>x,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>y,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>z){</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="d1/d5d/a00311_1ad7fd2d84633ee6e0355a950deeacd220" kindref="member">UHI_ReadPixel</ref>(hIMG,<sp/>(<ref refid="d9/de6/a00404" kindref="compound">dim3</ref>)<sp/>{x,<sp/>y,<sp/>z});</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="d1/d88/a00128_1a1ec6bacb78062b9b8dde4cf3e3eeb923" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d1/d5d/a00311_1a1ec6bacb78062b9b8dde4cf3e3eeb923" kindref="member">Proxy_SetPixel</ref>(<ref refid="d9/da1/a00396" kindref="compound">uIMG</ref>*<sp/>hIMG,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>x,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>y,<sp/><ref refid="d7/d9a/a00152_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref><sp/>z,<sp/><ref refid="d7/d9a/a00152_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref><sp/>value){</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d5d/a00311_1a88066808c0a718f67bd50a325cdb5721" kindref="member">UHI_WritePixel</ref>(hIMG,<sp/>(<ref refid="d9/de6/a00404" kindref="compound">dim3</ref>)<sp/>{x,<sp/>y,<sp/>z},<sp/>value);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/uhi_io.c"/>
+  </compounddef>
+</doxygen>

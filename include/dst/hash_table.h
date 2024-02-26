@@ -19,7 +19,7 @@
  * 
  * TODO
  *  Comments
- *  Statically Allocated Memory (Low Priority)
+ *  Statically Allocated Memory (High Priority)
  * 
 */
 

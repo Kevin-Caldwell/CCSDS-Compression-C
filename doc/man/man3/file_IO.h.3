@@ -1,0 +1,137 @@
+.TH "include/files/file_IO.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/files/file_IO.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef FILE \fBfile_t\fP"
+.br
+.RI "File Handling Abstractions\&. "
+.ti -1c
+.RI "typedef enum \fBfile_mode\fP \fBFileMode\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBfile_mode\fP { \fBREAD\fP = 0, \fBWRITE\fP, \fBAPPEND\fP, \fBREAD_AND_WRITE\fP, \fBWRITING_AND_READING\fP, \fBAPPENDING_AND_READING\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfile_t\fP * \fBF_OPEN\fP (const char *file_name, \fBFileMode\fP open_mode)"
+.br
+.ti -1c
+.RI "size_t \fBF_WRITE\fP (const void *write_ptr, size_t member_size, size_t member_count, \fBfile_t\fP *file_ptr)"
+.br
+.ti -1c
+.RI "size_t \fBF_READ\fP (void *destination, size_t size, size_t arr_length, \fBfile_t\fP *file_stream)"
+.br
+.ti -1c
+.RI "int \fBF_CLOSE\fP (\fBfile_t\fP *stream)"
+.br
+.ti -1c
+.RI "int \fBF_EMPTY\fP (\fBfile_t\fP *stream)"
+.br
+.ti -1c
+.RI "int \fBF_SEEK\fP (\fBfile_t\fP *stream, long int \fBoffset\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBfile_modes_str\fP []"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef FILE \fBfile_t\fP"
+
+.PP
+File Handling Abstractions\&. \fBfile_IO\&.h\fP 
+.PP
+\fBAuthor\fP
+.RS 4
+@Kevin-Caldwell
+.RE
+.PP
+Abstracted Functions for File IO\&. Implementation in \fBfile_IO\&.c\fP should be adapted to fit the respective file system\&.
+.PP
+The datatype used throughout the code is file_t\&. 
+.PP
+Definition at line \fB22\fP of file \fBfile_IO\&.h\fP\&.
+.SS "typedef enum \fBfile_mode\fP \fBFileMode\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBfile_mode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIREAD \fP\fP
+.TP
+\fB\fIWRITE \fP\fP
+.TP
+\fB\fIAPPEND \fP\fP
+.TP
+\fB\fIREAD_AND_WRITE \fP\fP
+.TP
+\fB\fIWRITING_AND_READING \fP\fP
+.TP
+\fB\fIAPPENDING_AND_READING \fP\fP
+.PP
+Definition at line \fB24\fP of file \fBfile_IO\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int F_CLOSE (\fBfile_t\fP * stream)"
+
+.PP
+Definition at line \fB26\fP of file \fBfile_IO\&.c\fP\&.
+.SS "int F_EMPTY (\fBfile_t\fP * stream)"
+
+.PP
+Definition at line \fB30\fP of file \fBfile_IO\&.c\fP\&.
+.SS "\fBfile_t\fP * F_OPEN (const char * file_name, \fBFileMode\fP open_mode)"
+
+.PP
+Definition at line \fB11\fP of file \fBfile_IO\&.c\fP\&.
+.SS "size_t F_READ (void * destination, size_t size, size_t arr_length, \fBfile_t\fP * file_stream)"
+
+.PP
+Definition at line \fB22\fP of file \fBfile_IO\&.c\fP\&.
+.SS "int F_SEEK (\fBfile_t\fP * stream, long int offset)"
+
+.PP
+Definition at line \fB34\fP of file \fBfile_IO\&.c\fP\&.
+.SS "size_t F_WRITE (const void * write_ptr, size_t member_size, size_t member_count, \fBfile_t\fP * file_ptr)"
+
+.PP
+Definition at line \fB18\fP of file \fBfile_IO\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const char* file_modes_str[]\fC [extern]\fP"
+
+.PP
+Definition at line \fB5\fP of file \fBfile_IO\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

@@ -1,0 +1,439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d9/dea/synthetic__image__generator_8h" kind="file" language="C++">
+    <compoundname>synthetic_image_generator.h</compoundname>
+    <includes refid="d2/de2/math__functions_8h" local="yes">math/math_functions.h</includes>
+    <includes refid="dc/d9c/linear__algebra_8h" local="yes">math/linear_algebra.h</includes>
+    <includes refid="d5/db2/image_8h" local="yes">dst/image.h</includes>
+    <includedby refid="df/d7b/generate__image_8h" local="yes">include/testing/generate_image.h</includedby>
+    <includedby refid="d5/d40/synthetic__image__generator_8c" local="yes">src/synthetic_image_generator.c</includedby>
+    <includedby refid="d1/dfd/test___u_h_i_8c" local="yes">src/test_UHI.c</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>global_constants.h</label>
+        <link refid="d5/ddb/global__constants_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>constants/load_constants.h</label>
+        <link refid="d4/d3e/load__constants_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dst/hash_table.h</label>
+        <link refid="d4/ddb/hash__table_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dst/image.h</label>
+        <link refid="d5/db2/image_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/file_IO.h</label>
+        <link refid="d9/d7f/file___i_o_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>files/uhi_io.h</label>
+        <link refid="d8/d60/uhi__io_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>math/linear_algebra.h</label>
+        <link refid="dc/d9c/linear__algebra_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/testing/synthetic_image_generator.h</label>
+        <link refid="d9/dea/synthetic__image__generator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="6">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="12">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d7b/generate__image_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/testing/synthetic_image_generator.h</label>
+        <link refid="d9/dea/synthetic__image__generator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>main/compressor.c</label>
+        <link refid="da/db2/compressor_8c"/>
+      </node>
+      <node id="4">
+        <label>main/image_handler.c</label>
+        <link refid="d1/d6e/image__handler_8c"/>
+      </node>
+      <node id="5">
+        <label>src/generate_image.c</label>
+        <link refid="d6/d92/generate__image_8c"/>
+      </node>
+      <node id="6">
+        <label>src/synthetic_image_generator.c</label>
+        <link refid="d5/d40/synthetic__image__generator_8c"/>
+      </node>
+      <node id="7">
+        <label>src/test_UHI.c</label>
+        <link refid="d1/dfd/test___u_h_i_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d9/dea/synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22" prot="public" static="no">
+        <name>INIT_ARRAY</name>
+        <param><defname>T</defname></param>
+        <param><defname>count</defname></param>
+        <initializer>(T*) malloc(sizeof(T) * count)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="8" column="9" bodyfile="include/testing/synthetic_image_generator.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1a07336610b2fae60747404124a1bebbbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WithinRect2</definition>
+        <argsstring>(dim2 point, dim2 top_left, dim2 bottom_right)</argsstring>
+        <name>WithinRect2</name>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>bottom_right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="10" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="6" bodyend="10" declfile="include/testing/synthetic_image_generator.h" declline="10" declcolumn="5"/>
+        <references refid="d2/de2/math__functions_8h_1aa26f9f0c05aaa0b3935ffee8b9b040cd" compoundref="d2/de2/math__functions_8h" startline="23">INSIDE_INTERVAL</references>
+        <references refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="65">dim2::x</references>
+        <references refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="66">dim2::y</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1a5b129c029b15584f09f306c005950893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WithinRect3</definition>
+        <argsstring>(dim3 point, dim3 top_left, dim3 bottom_right)</argsstring>
+        <name>WithinRect3</name>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>top_left</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>bottom_right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="12" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="12" bodyend="17" declfile="include/testing/synthetic_image_generator.h" declline="12" declcolumn="5"/>
+        <references refid="d2/de2/math__functions_8h_1aa26f9f0c05aaa0b3935ffee8b9b040cd" compoundref="d2/de2/math__functions_8h" startline="23">INSIDE_INTERVAL</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1a9793361bc08ee3644e6f9ac73e1bee45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpreadPoint2</definition>
+        <argsstring>(dim2 **points, dim2 bounds, UINT point_count)</argsstring>
+        <name>SpreadPoint2</name>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref> **</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>bounds</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>point_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="14" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="20" bodyend="31" declfile="include/testing/synthetic_image_generator.h" declline="14" declcolumn="5"/>
+        <references refid="d9/dea/synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22" compoundref="d9/dea/synthetic__image__generator_8h" startline="8">INIT_ARRAY</references>
+        <references refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="65">dim2::x</references>
+        <references refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="66">dim2::y</references>
+        <referencedby refid="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" compoundref="d5/d40/synthetic__image__generator_8c" startline="49" endline="68">GenerateVoronoiFlat2D</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1ab7214af202e08fe839b1623f5f783f59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SpreadPoint3</definition>
+        <argsstring>(dim3 **points, dim3 bounds, UINT point_count)</argsstring>
+        <name>SpreadPoint3</name>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref> **</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>bounds</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>point_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="16" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="34" bodyend="46" declfile="include/testing/synthetic_image_generator.h" declline="16" declcolumn="5"/>
+        <references refid="d9/dea/synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22" compoundref="d9/dea/synthetic__image__generator_8h" startline="8">INIT_ARRAY</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+        <referencedby refid="d9/dea/synthetic__image__generator_8h_1a5561acefba71d729426452c73bb402dd" compoundref="d5/d40/synthetic__image__generator_8c" startline="233" endline="264">GenerateVoronoiFlat3DLocal</referencedby>
+        <referencedby refid="d9/dea/synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa" compoundref="d5/d40/synthetic__image__generator_8c" startline="88" endline="107">GenerateVoronoiFlat3DNaive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerateVoronoiFlat2D</definition>
+        <argsstring>(image2 *result, UINT sample_points)</argsstring>
+        <name>GenerateVoronoiFlat2D</name>
+        <param>
+          <type><ref refid="d5/d31/structimage2" kindref="compound">image2</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>sample_points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="18" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="49" bodyend="68" declfile="include/testing/synthetic_image_generator.h" declline="18" declcolumn="5"/>
+        <references refid="d5/d31/structimage2_1a53d0e0aad601020b80d8266c2d9f8462" compoundref="d5/db2/image_8h" startline="86">image2::data</references>
+        <references refid="d2/de2/math__functions_8h_1adf11110e70a4ca4a966622288d194681" compoundref="d3/d2d/math__functions_8c" startline="11" endline="13">Manhattan2</references>
+        <references refid="d5/d31/structimage2_1af773904b63569ed8472a1814b0f9e2af" compoundref="d5/db2/image_8h" startline="85">image2::size</references>
+        <references refid="d5/d40/synthetic__image__generator_8c_1a9793361bc08ee3644e6f9ac73e1bee45" compoundref="d5/d40/synthetic__image__generator_8c" startline="20" endline="31">SpreadPoint2</references>
+        <references refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="65">dim2::x</references>
+        <references refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="66">dim2::y</references>
+      </memberdef>
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerateVoronoiFlat3DNaive</definition>
+        <argsstring>(image3 *result, UINT sample_points)</argsstring>
+        <name>GenerateVoronoiFlat3DNaive</name>
+        <param>
+          <type><ref refid="d5/db2/image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa" kindref="member">image3</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>sample_points</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="20" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="88" bodyend="107" declfile="include/testing/synthetic_image_generator.h" declline="20" declcolumn="5"/>
+        <references refid="d5/d40/synthetic__image__generator_8c_1abe9bd17929405b7d28af71473f567f3c" compoundref="d5/d40/synthetic__image__generator_8c" startline="70" endline="86">GetMinDistance3Naive</references>
+        <references refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" compoundref="d3/d10/image_8c" startline="66" endline="69">SetPixel</references>
+        <references refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d5/db2/image_8h" startline="66">image::size</references>
+        <references refid="d5/d40/synthetic__image__generator_8c_1ab7214af202e08fe839b1623f5f783f59" compoundref="d5/d40/synthetic__image__generator_8c" startline="34" endline="46">SpreadPoint3</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+        <referencedby refid="d0/dbe/test___u_h_i_8h_1a24aa285f65de829c8a9791d901405626" compoundref="d1/dfd/test___u_h_i_8c" startline="5" endline="51">test_UHI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d9/dea/synthetic__image__generator_8h_1a5561acefba71d729426452c73bb402dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GenerateVoronoiFlat3DLocal</definition>
+        <argsstring>(image3 *result, UINT sample_points)</argsstring>
+        <name>GenerateVoronoiFlat3DLocal</name>
+        <param>
+          <type><ref refid="d5/db2/image_8h_1a030ee2c64e93fe5ac9b39ad83ac47daa" kindref="member">image3</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+          <declname>sample_points</declname>
+          <defname>point_count</defname>
+        </param>
+        <briefdescription>
+<para>Faster Method for Generating Voronoi Diagrams. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/testing/synthetic_image_generator.h" line="22" column="5" bodyfile="src/synthetic_image_generator.c" bodystart="233" bodyend="264" declfile="include/testing/synthetic_image_generator.h" declline="22" declcolumn="5"/>
+        <references refid="d5/d40/synthetic__image__generator_8c_1a2d4e6084981252d94b4287b36e85aec7" compoundref="d5/d40/synthetic__image__generator_8c" startline="109" endline="132">GeneratePointLocales</references>
+        <references refid="d5/d40/synthetic__image__generator_8c_1ae17850a552864500c4f1e1f80b8add6a" compoundref="d5/d40/synthetic__image__generator_8c" startline="134" endline="168">GetMinDistance3Locales</references>
+        <references refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" compoundref="d3/d10/image_8c" startline="66" endline="69">SetPixel</references>
+        <references refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d5/db2/image_8h" startline="66">image::size</references>
+        <references refid="d5/d40/synthetic__image__generator_8c_1ab7214af202e08fe839b1623f5f783f59" compoundref="d5/d40/synthetic__image__generator_8c" startline="34" endline="46">SpreadPoint3</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+        <referencedby refid="df/d7b/generate__image_8h_1a450c7f9206bff8de0c177e34e6b5bcf4" compoundref="d6/d92/generate__image_8c" startline="5" endline="19">GenerateVoronoiImage</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SYNTHETIC_IMAGE_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYNTHETIC_IMAGE_GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/de2/math__functions_8h" kindref="compound">math/math_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/d9c/linear__algebra_8h" kindref="compound">math/linear_algebra.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/db2/image_8h" kindref="compound">dst/image.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="d9/dea/synthetic__image__generator_8h_1a0ae07331ee7ee010e7a4dc21102dfa22" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INIT_ARRAY(T,<sp/>count)<sp/>(T*)<sp/>malloc(sizeof(T)<sp/>*<sp/>count)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1a07336610b2fae60747404124a1bebbbe" kindref="member">WithinRect2</ref>(<ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>point,<sp/><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>top_left,<sp/><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>bottom_right);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1a5b129c029b15584f09f306c005950893" kindref="member">WithinRect3</ref>(<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>point,<sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>top_left,<sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>bottom_right);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1a9793361bc08ee3644e6f9ac73e1bee45" kindref="member">SpreadPoint2</ref>(<ref refid="dd/dec/structdim2" kindref="compound">dim2</ref>**<sp/>points,<sp/><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>bounds,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>point_count);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1ab7214af202e08fe839b1623f5f783f59" kindref="member">SpreadPoint3</ref>(<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref>**<sp/>points,<sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>bounds,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>point_count);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" kindref="member">GenerateVoronoiFlat2D</ref>(<ref refid="d5/d31/structimage2" kindref="compound">image2</ref>*<sp/>result,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>sample_points);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1a1f64360c2baa3b6c2ab3589a5d25deaa" kindref="member">GenerateVoronoiFlat3DNaive</ref>(<ref refid="de/d68/structimage" kindref="compound">image3</ref>*<sp/>result,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>sample_points);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/dea/synthetic__image__generator_8h_1a5561acefba71d729426452c73bb402dd" kindref="member">GenerateVoronoiFlat3DLocal</ref>(<ref refid="de/d68/structimage" kindref="compound">image3</ref>*<sp/>result,<sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/>sample_points);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SYNTHETIC_IMAGE_GENERATOR_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/testing/synthetic_image_generator.h"/>
+  </compounddef>
+</doxygen>

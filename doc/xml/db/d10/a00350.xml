@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="db/d10/a00350" kind="file" language="C++">
+    <compoundname>load_constants.c</compoundname>
+    <includes refid="d7/dce/a00143" local="yes">constants/load_constants.h</includes>
+    <includes refid="df/dc8/a00122" local="yes">files/file_IO.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/load_constants.c</label>
+        <link refid="db/d10/a00350"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>inttypes.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="9">
+        <label>stdio.h</label>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="db/d10/a00350_1a5d642038360b72b886a5eb66e3efd14a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int LoadConstantFile</definition>
+        <argsstring>(const char *file_name, HashTable *result)</argsstring>
+        <name>LoadConstantFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="d6/db8/a00376" kindref="compound">HashTable</ref> *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d7/dce/a00143" kindref="compound">load_constants.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+Abstractions for Loading .CONST files</para>
+<para>Features Custom .CONST file format with easy-to-read Constant Parameter Storage</para>
+<para>Uses Interpreting .CONST Files to load constants for all modules Stores result in a <ref refid="d6/db8/a00376" kindref="compound">HashTable</ref> structure</para>
+<para>Dependencies <ref refid="df/d6a/a00119" kindref="compound">hash_table.h</ref></para>
+<para>Internal Dependencies stdio.h</para>
+<para>TODO Add a SaveConstantFile Function FUNCDEF: int SaveConstantFile(const char* file_name, HashTable* save_input) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/load_constants.c" line="6" column="5" bodyfile="src/load_constants.c" bodystart="6" bodyend="35"/>
+        <references refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" compoundref="dc/d5d/a00278" startline="26" endline="28">F_CLOSE</references>
+        <references refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</references>
+        <references refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" compoundref="d8/d8e/a00344" startline="7">fp</references>
+        <references refid="df/d6a/a00119_1af0c750fb9a54f590b713d6526ed263fc" compoundref="d5/d35/a00266" startline="15" endline="24">Hash_AddEntry</references>
+        <references refid="df/d6a/a00119_1a5145aca5cb4a65b79b24d162d6fd72eb" compoundref="df/d6a/a00119" startline="34">KEY_LENGTH</references>
+        <references refid="d7/d9a/a00152_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="d7/d9a/a00152" startline="17">NULL</references>
+        <references refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" compoundref="df/dc8/a00122" startline="25">READ</references>
+        <referencedby refid="df/d03/a00062_1a29f9d24093c99f0e47133d90ea4286e6" compoundref="d3/d07/a00305" startline="84" endline="98">EncodeImage</referencedby>
+        <referencedby refid="d4/d81/a00110_1ad0d5b55646a3018075f07ae472ddb312" compoundref="d3/d93/a00341" startline="6" endline="41">Reconstructor</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/dce/a00143" kindref="compound">constants/load_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="df/dc8/a00122" kindref="compound">files/file_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="d7/dce/a00143_1a5d642038360b72b886a5eb66e3efd14a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="db/d10/a00350_1a5d642038360b72b886a5eb66e3efd14a" kindref="member">LoadConstantFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file_name,<sp/><ref refid="d6/db8/a00376" kindref="compound">HashTable</ref><sp/>*result)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>line_buffer[<ref refid="df/d6a/a00119_1a5145aca5cb4a65b79b24d162d6fd72eb" kindref="member">KEY_LENGTH</ref><sp/>+<sp/>1<sp/>+<sp/>32];</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>constant_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref><sp/>*<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref><sp/>=<sp/><ref refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(file_name,<sp/><ref refid="df/dc8/a00122_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6" kindref="member">READ</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>fgets(line_buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)<sp/>*<sp/>10,<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>constant_count<sp/>=<sp/>atoi(line_buffer);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key_buffer[<ref refid="df/d6a/a00119_1a5145aca5cb4a65b79b24d162d6fd72eb" kindref="member">KEY_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>data_buffer;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>constant_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fgets(line_buffer,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)<sp/>*<sp/>(<ref refid="df/d6a/a00119_1a5145aca5cb4a65b79b24d162d6fd72eb" kindref="member">KEY_LENGTH</ref><sp/>+<sp/>1<sp/>+<sp/>32),<sp/><ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*token<sp/>=<sp/>strtok(line_buffer,<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(token)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(key_buffer,<sp/>token,<sp/><ref refid="df/d6a/a00119_1a5145aca5cb4a65b79b24d162d6fd72eb" kindref="member">KEY_LENGTH</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>token<sp/>=<sp/>strtok(<ref refid="d7/d9a/a00152_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>,<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(token)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_buffer<sp/>=<sp/>atoi(token);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="df/d6a/a00119_1af0c750fb9a54f590b713d6526ed263fc" kindref="member">Hash_AddEntry</ref>(result,<sp/>key_buffer,<sp/>data_buffer);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(<ref refid="d8/d8e/a00344_1a75189a35b23b0d484e74e07e0c237cd1" kindref="member">fp</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/load_constants.c"/>
+  </compounddef>
+</doxygen>

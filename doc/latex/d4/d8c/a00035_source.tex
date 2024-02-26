@@ -1,0 +1,45 @@
+\doxysection{mat\+\_\+to\+\_\+csv.\+py}
+\hypertarget{a00035_source}{}\label{a00035_source}\index{python/mat\_to\_csv.py@{python/mat\_to\_csv.py}}
+\mbox{\hyperlink{a00035}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00001}\mbox{\hyperlink{a00363}{00001}}\ \textcolor{keyword}{import}\ scipy}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00002}00002\ \textcolor{keyword}{import}\ numpy\ \textcolor{keyword}{as}\ np}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00003}00003\ \textcolor{keyword}{import}\ sys}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00004}00004\ \textcolor{keyword}{import}\ csv\_io}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00007}\mbox{\hyperlink{a00363_a53c8b63647024371209f34ff11f676af}{00007}}\ \textcolor{keyword}{def\ }load\_pic(file\_name,\ header="{}indian\_pines"{}):}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00009}00009\ \ \ \ \ data\ =\ scipy.io.loadmat(file\_name)}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00010}00010\ \ \ \ \ data\ =\ data[header]\ \ \textcolor{comment}{\#\ data\ is\ dictionary,\ only\ take\ the\ array\ part}}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00011}00011\ \ \ \ \ data\ =\ np.array(data,\ dtype=np.int64)}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00013}00013\ \ \ \ \ \textcolor{comment}{\#\ data\_n\ =\ np.zeros\_like(data)}}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00014}00014\ \ \ \ \ \textcolor{comment}{\#\ size\ =\ data\_n.shape}}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00016}00016\ \ \ \ \ \textcolor{comment}{\#\ for\ i\ in\ range(size[0]):}}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00017}00017\ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ for\ j\ in\ range(size[1]):}}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00018}00018\ \ \ \ \ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ for\ k\ i}}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ data}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00021}00021\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00022}\mbox{\hyperlink{a00363_a21bbd772bda66a652cb421b8dcbbb582}{00022}}\ \ \ \ \ argS\ =\ sys.argv}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{a00035_source_l00024}00024\ \ \ \ \ print(argS)}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (len(argS)\ ==\ 7):}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00026}\mbox{\hyperlink{a00363_a5c7e4f16622600cb52580b191565e2dd}{00026}}\ \ \ \ \ \ \ \ \ Nx\ =\ int(argS[4])}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00027}\mbox{\hyperlink{a00363_ac1452fdfd6ea1c8c005ac90bbfa62011}{00027}}\ \ \ \ \ \ \ \ \ Ny\ =\ int(argS[5])}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00028}\mbox{\hyperlink{a00363_af3ec54a0e6bc4935a13fb520b7d7df6e}{00028}}\ \ \ \ \ \ \ \ \ Nz\ =\ int(argS[6])}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00029}\mbox{\hyperlink{a00363_a511ae0b1c13f95e5f08f1a0dd3da3d93}{00029}}\ \ \ \ \ \ \ \ \ data\ =\ load\_pic(argS[1],\ argS[2])[:Nx,\ :Ny,\ :Nz]}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{a00356_af953609f65420e99a9c283dfa65c5453}{csv\_io.SaveCSV}}(data,\ f\textcolor{stringliteral}{"{}\{argS[3]\}.csv"{}})}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{elif}\ (len(argS)\ ==\ 5):}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00032}\mbox{\hyperlink{a00363_aeab71244afb687f16d8c4f5ee9d6ef0e}{00032}}\ \ \ \ \ \ \ \ \ n\ =\ int(argS[4])}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00033}00033\ \ \ \ \ \ \ \ \ data\ =\ load\_pic(argS[1],\ argS[2])[:n,\ :n,\ :n]}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{a00356_af953609f65420e99a9c283dfa65c5453}{csv\_io.SaveCSV}}(data,\ f\textcolor{stringliteral}{"{}\{argS[3]\}.csv"{}})}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{elif}\ (len(argS)\ ==\ 4):}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00036}00036\ \ \ \ \ \ \ \ \ data\ =\ load\_pic(argS[1],\ argS[2])}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{a00356_af953609f65420e99a9c283dfa65c5453}{csv\_io.SaveCSV}}(data,\ f\textcolor{stringliteral}{"{}\{argS[3]\}.csv"{}})}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{a00035_source_l00039}00039\ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}arg\ needed:\ src.mat\ data\_header\ destname\ (optional:\ img\_dim1\ img\_dim2\ img\_dim3)"{}})}
+
+\end{DoxyCode}

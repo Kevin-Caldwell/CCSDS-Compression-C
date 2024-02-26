@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_e14425e7f7bd68e40720ec6777e5dfc7" kind="dir">
+    <compoundname>build/CMakeFiles/CCSDS_Image_Generator.dir/main</compoundname>
+    <innerfile refid="d8/d32/image__handler_8c_8o_8d">image_handler.c.o.d</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="build/CMakeFiles/CCSDS_Image_Generator.dir/main/"/>
+  </compounddef>
+</doxygen>

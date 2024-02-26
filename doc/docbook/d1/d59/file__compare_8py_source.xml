@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_file__compare_8py_source" xml:lang="en-US">
+<title>file_compare.py</title>
+<indexterm><primary>python/file_compare.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_file__compare_8py_source_1l00001"/><link linkend="_namespacefile__compare">00001</link> <emphasis role="keyword">import</emphasis>&#32;csv_io
+<anchor xml:id="_file__compare_8py_source_1l00002"/>00002 <emphasis role="keyword">import</emphasis>&#32;sys
+<anchor xml:id="_file__compare_8py_source_1l00003"/>00003 <emphasis role="keyword">import</emphasis>&#32;numpy&#32;<emphasis role="keyword">as</emphasis>&#32;np
+<anchor xml:id="_file__compare_8py_source_1l00004"/>00004 
+<anchor xml:id="_file__compare_8py_source_1l00005"/><link linkend="_namespacefile__compare_1ac7d0b484ac5bfa8e7714915a5a0868d5">00005</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespacefile__compare_1ac7d0b484ac5bfa8e7714915a5a0868d5">CompareResults</link>(c_pred_file,&#32;python_pred_file):
+<anchor xml:id="_file__compare_8py_source_1l00006"/>00006 &#32;&#32;&#32;&#32;c_img&#32;=&#32;<link linkend="_namespacecsv__io_1a84c47e6bbcef028eda4c81cfa1b935ff">csv_io.ReadCSV</link>(c_pred_file)
+<anchor xml:id="_file__compare_8py_source_1l00007"/>00007 &#32;&#32;&#32;&#32;python_img&#32;=&#32;<link linkend="_namespacecsv__io_1a84c47e6bbcef028eda4c81cfa1b935ff">csv_io.ReadCSV</link>(python_pred_file)
+<anchor xml:id="_file__compare_8py_source_1l00008"/>00008 
+<anchor xml:id="_file__compare_8py_source_1l00009"/>00009 &#32;&#32;&#32;&#32;difference&#32;=&#32;(c_img&#32;-&#32;python_img)
+<anchor xml:id="_file__compare_8py_source_1l00010"/>00010 &#32;&#32;&#32;&#32;fp&#32;=&#32;open(<emphasis role="stringliteral">&quot;data/logs/compare-result.LOG&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;w&quot;</emphasis>)
+<anchor xml:id="_file__compare_8py_source_1l00011"/>00011 &#32;&#32;&#32;&#32;fp.write(str(difference.std())&#32;+&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>)
+<anchor xml:id="_file__compare_8py_source_1l00012"/>00012 &#32;&#32;&#32;&#32;fp.write(str(difference))
+<anchor xml:id="_file__compare_8py_source_1l00013"/>00013 &#32;&#32;&#32;&#32;
+<anchor xml:id="_file__compare_8py_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_file__compare_8py_source_1l00015"/>00015 &#32;&#32;&#32;&#32;print(np.nonzero(difference))
+<anchor xml:id="_file__compare_8py_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(difference.std())
+<anchor xml:id="_file__compare_8py_source_1l00017"/>00017 
+<anchor xml:id="_file__compare_8py_source_1l00018"/>00018 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_file__compare_8py_source_1l00019"/><link linkend="_namespacefile__compare_1aeab71244afb687f16d8c4f5ee9d6ef0e">00019</link> &#32;&#32;&#32;&#32;n&#32;=&#32;len(sys.argv)
+<anchor xml:id="_file__compare_8py_source_1l00020"/>00020 
+<anchor xml:id="_file__compare_8py_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;n&#32;==&#32;3:
+<anchor xml:id="_file__compare_8py_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;______Comparing&#32;C&#32;and&#32;Python______&quot;</emphasis>)
+<anchor xml:id="_file__compare_8py_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&quot;Error:&quot;</emphasis>,&#32;<link linkend="_namespacefile__compare_1ac7d0b484ac5bfa8e7714915a5a0868d5">CompareResults</link>(sys.argv[1],&#32;sys.argv[2]))
+</programlisting></section>

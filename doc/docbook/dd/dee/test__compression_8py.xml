@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test__compression_8py" xml:lang="en-US">
+<title>python/test_compression.py File Reference</title>
+<indexterm><primary>python/test_compression.py</primary></indexterm>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classtest__compression_1_1_test_comp">TestComp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacetest__compression">test_compression</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

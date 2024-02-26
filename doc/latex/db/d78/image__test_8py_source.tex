@@ -1,0 +1,20 @@
+\doxysection{image\+\_\+test.\+py}
+\hypertarget{image__test_8py_source}{}\label{image__test_8py_source}\index{python/image\_test.py@{python/image\_test.py}}
+\mbox{\hyperlink{image__test_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00001}\mbox{\hyperlink{namespaceimage__test}{00001}}\ \textcolor{keyword}{from}\ mat\_to\_csv\ \textcolor{keyword}{import}\ load\_pic}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00002}00002\ \textcolor{keyword}{import}\ matplotlib.pyplot\ \textcolor{keyword}{as}\ plt}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00004}\mbox{\hyperlink{namespaceimage__test_a0b47ce0c13c56f95ba8759974d6e722b}{00004}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespaceimage__test_a0b47ce0c13c56f95ba8759974d6e722b}{load\_indian\_pines}}():}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00005}00005\ \ \ \ \ ip\ =\ load\_pic(\textcolor{stringliteral}{"{}data/test-\/images/Indian\_pines.mat"{}})}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00006}00006\ \ \ \ \ \textcolor{keywordflow}{return}\ ip}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00008}00008\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00009}\mbox{\hyperlink{namespaceimage__test_afd65cf072a93c93ad52b9f25b341e10b}{00009}}\ \ \ \ \ ip\ =\ \mbox{\hyperlink{namespaceimage__test_a0b47ce0c13c56f95ba8759974d6e722b}{load\_indian\_pines}}()}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00010}\mbox{\hyperlink{namespaceimage__test_aaeb5d6c0725676dbf8a8b57680213cb9}{00010}}\ \ \ \ \ wavelength\ =\ ip[0,\ 10,\ :]}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00012}00012\ \ \ \ \ plt.plot(wavelength)}
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00013}00013\ \ \ \ \ plt.show()\ }
+\DoxyCodeLine{\Hypertarget{image__test_8py_source_l00014}00014\ }
+
+\end{DoxyCode}

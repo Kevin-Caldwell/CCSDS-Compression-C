@@ -1,3 +1,10 @@
+/**
+ * local_sum.h
+ * @author @Kevin-Caldwell
+ * 
+ * Functions for finding Local Sum
+*/
+
 #ifndef LOCAL_SUM_H
 #define LOCAL_SUM_H
 

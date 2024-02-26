@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_linear__algebra_8h_source" xml:lang="en-US">
+<title>linear_algebra.h</title>
+<indexterm><primary>include/math/linear_algebra.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_linear__algebra_8h_source_1l00001"/>00001 
+<anchor xml:id="_linear__algebra_8h_source_1l00025"/>00025 <emphasis role="preprocessor">#ifndef&#32;LINEAR_ALGEBRA_H</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00026"/>00026 <emphasis role="preprocessor">#define&#32;LINEAR_ALGEBRA_H</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00027"/>00027 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_constants_8h">constants/constants.h</link>&quot;</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00028"/>00028 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_math__functions_8h">math_functions.h</link>&quot;</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00029"/>00029 
+<anchor xml:id="_linear__algebra_8h_source_1l00030"/><link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">00030</link> <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>;
+<anchor xml:id="_linear__algebra_8h_source_1l00031"/>00031 
+<anchor xml:id="_linear__algebra_8h_source_1l00032"/>00032 
+<anchor xml:id="_linear__algebra_8h_source_1l00033"/>00033 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_linear__algebra_8h_1ab9661c8e10293140db24d4b650785939">InitVector</link>(int32_t**&#32;v,&#32;<link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;len);
+<anchor xml:id="_linear__algebra_8h_source_1l00034"/>00034 
+<anchor xml:id="_linear__algebra_8h_source_1l00035"/>00035 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_linear__algebra_8h_1ae000d0d19cf867f1ad39325993763205">DeleteVector</link>(<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v);
+<anchor xml:id="_linear__algebra_8h_source_1l00036"/>00036 
+<anchor xml:id="_linear__algebra_8h_source_1l00037"/>00037 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_linear__algebra_8h_1a2765cafcf739497b0ee51e705590039a">AddVectors</link>(<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v1,&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v2,&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;res,&#32;<link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size);
+<anchor xml:id="_linear__algebra_8h_source_1l00038"/>00038 
+<anchor xml:id="_linear__algebra_8h_source_1l00039"/>00039 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_linear__algebra_8h_1a06b11149235c5a4fe6c877aed33f55f9">SubtractVectors</link>(<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v1,&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v2,&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;res,&#32;<link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size);
+<anchor xml:id="_linear__algebra_8h_source_1l00040"/>00040 
+<anchor xml:id="_linear__algebra_8h_source_1l00041"/>00041 int64_t&#32;<link linkend="_linear__algebra_8h_1a46ade3794d4b4d5cc1eaf983858507ef">InnerProduct</link>(int32_t*&#32;v1,&#32;int32_t*&#32;v2,&#32;<link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size);
+<anchor xml:id="_linear__algebra_8h_source_1l00042"/>00042 
+<anchor xml:id="_linear__algebra_8h_source_1l00043"/>00043 <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_linear__algebra_8h_1a2c84697470e743f7c69fffbe7e0f92bc">ScalarProduct</link>(<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;v,&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>&#32;scalar,&#32;<link linkend="_linear__algebra_8h_1a5acabcf9a2b0d843de53680562e2f639">data_t</link>*&#32;res,&#32;<link linkend="_math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link>&#32;size);
+<anchor xml:id="_linear__algebra_8h_source_1l00044"/>00044 
+<anchor xml:id="_linear__algebra_8h_source_1l00045"/><link linkend="_linear__algebra_8h_1ab3884a0bbfd7dee1c68c7296b669ebab">00045</link> <emphasis role="preprocessor">#define&#32;AddToVector(v,&#32;other,&#32;size)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;AddVectors(v,&#32;other,&#32;v,&#32;size)</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00046"/><link linkend="_linear__algebra_8h_1a3551e792e31423caf9108ee7a990fb0b">00046</link> <emphasis role="preprocessor">#define&#32;SubtractFromVector(v,&#32;other,&#32;size)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SubtractVectors(v,&#32;other,&#32;v,&#32;size)</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00047"/><link linkend="_linear__algebra_8h_1a5fe8e5a199bb90a6358cee7306d3d09d">00047</link> <emphasis role="preprocessor">#define&#32;ScalarProduct_C(v,&#32;other,&#32;size)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ScalarProduct(v,&#32;other,&#32;v,&#32;size)</emphasis>
+<anchor xml:id="_linear__algebra_8h_source_1l00048"/>00048 
+<anchor xml:id="_linear__algebra_8h_source_1l00049"/>00049 
+<anchor xml:id="_linear__algebra_8h_source_1l00050"/>00050 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;LINEAR_ALGEBRA_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

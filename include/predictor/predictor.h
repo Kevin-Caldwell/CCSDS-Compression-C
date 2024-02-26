@@ -1,3 +1,13 @@
+/**
+ * predictor.h
+ * @author @Kevin-Caldwell
+ * 
+ * Top Level Function(s) for Running Predictor 
+ * on a Hyperspectral Image. Returns a predicted
+ * Hyperspectral Image.
+ * 
+*/
+
 #ifndef PREDICTOR_H
 #define PREDICTOR_H
 

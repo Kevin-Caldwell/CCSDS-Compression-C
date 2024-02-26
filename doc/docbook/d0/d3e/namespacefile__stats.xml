@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacefile__stats" xml:lang="en-US">
+<title>file_stats Namespace Reference</title>
+<indexterm><primary>file_stats</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacefile__stats_1a473892ba0152ef4e5eda5695d64603e2">compression_ratio</link> (data, compressed)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacefile__stats_1a5e923c6c785648e0a14fa3a4825120e9">file_info</link> (file_path)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacefile__stats_1aeab71244afb687f16d8c4f5ee9d6ef0e">n</link> = len(sys.argv)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacefile__stats_1a473892ba0152ef4e5eda5695d64603e2"/><section>
+    <title>compression_ratio()</title>
+<indexterm><primary>compression_ratio</primary><secondary>file_stats</secondary></indexterm>
+<indexterm><primary>file_stats</primary><secondary>compression_ratio</secondary></indexterm>
+<para><computeroutput>compression_ratio ( data,  compressed)</computeroutput></para><para>
+Definition at line <link linkend="_file__stats_8py_source_1l00005">5</link> of file <link linkend="_file__stats_8py_source">file_stats.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3e/namespacefile__stats_a473892ba0152ef4e5eda5695d64603e2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespacefile__stats_1a5e923c6c785648e0a14fa3a4825120e9"/><section>
+    <title>file_info()</title>
+<indexterm><primary>file_info</primary><secondary>file_stats</secondary></indexterm>
+<indexterm><primary>file_stats</primary><secondary>file_info</secondary></indexterm>
+<para><computeroutput>file_info ( file_path)</computeroutput></para><para>
+Definition at line <link linkend="_file__stats_8py_source_1l00013">13</link> of file <link linkend="_file__stats_8py_source">file_stats.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d3e/namespacefile__stats_a5e923c6c785648e0a14fa3a4825120e9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacefile__stats_1aeab71244afb687f16d8c4f5ee9d6ef0e"/><section>
+    <title>n</title>
+<indexterm><primary>n</primary><secondary>file_stats</secondary></indexterm>
+<indexterm><primary>file_stats</primary><secondary>n</secondary></indexterm>
+<para><computeroutput>n = len(sys.argv)</computeroutput></para><para>
+Definition at line <link linkend="_file__stats_8py_source_1l00019">19</link> of file <link linkend="_file__stats_8py_source">file_stats.py</link>.</para>
+</section>
+</section>
+</section>

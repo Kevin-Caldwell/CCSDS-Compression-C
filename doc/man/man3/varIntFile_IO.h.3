@@ -1,0 +1,144 @@
+.TH "include/files/varIntFile_IO.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/files/varIntFile_IO.h \- File Input/Output for Variable-Length Words\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <inttypes\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'files/file_IO\&.h'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBVarUnsignedIntFile\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBL_SHIFT\fP(x,  s)   (s == 32 ? 0 : (s < 0 ? (unsigned) x >> \-s : (unsigned) x << s))"
+.br
+.ti -1c
+.RI "#define \fBBUFFER_LENGTH\fP   6"
+.br
+.ti -1c
+.RI "#define \fBBUFFER_SIZE\fP   32"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBfile_modes\fP \fBfile_modes\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBVarUnsignedIntFile\fP \fBVUF\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBfile_modes\fP { \fBREAD_BINARY\fP =0, \fBWRITE_BINARY\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBVUF_initialize\fP (\fBVUF\fP *stream, const char *file_name, \fBfile_modes\fP io_mode)"
+.br
+.ti -1c
+.RI "int \fBVUF_append\fP (\fBVUF\fP *stream, uint32_t data, uint32_t length)"
+.br
+.ti -1c
+.RI "uint32_t \fBVUF_read_stack\fP (\fBVUF\fP *stream, uint32_t length)"
+.br
+.ti -1c
+.RI "int \fBVUF_close\fP (\fBVUF\fP *stream)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+File Input/Output for Variable-Length Words\&. 
+
+
+.PP
+\fBAuthors\fP
+.RS 4
+Kevin Caldwell 
+.RE
+.PP
+\fBBug\fP
+.RS 4
+Unknown, Needs Testing 
+.RE
+.PP
+
+.PP
+Definition in file \fBvarIntFile_IO\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BUFFER_LENGTH   6"
+
+.PP
+Definition at line \fB20\fP of file \fBvarIntFile_IO\&.h\fP\&.
+.SS "#define BUFFER_SIZE   32"
+
+.PP
+Definition at line \fB21\fP of file \fBvarIntFile_IO\&.h\fP\&.
+.SS "#define L_SHIFT(x, s)   (s == 32 ? 0 : (s < 0 ? (unsigned) x >> \-s : (unsigned) x << s))"
+
+.PP
+Definition at line \fB17\fP of file \fBvarIntFile_IO\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBfile_modes\fP \fBfile_modes\fP"
+
+.SS "typedef struct \fBVarUnsignedIntFile\fP \fBVUF\fP"
+Manages VUF files\&.
+.PP
+Variable Unsigned Files are designed to store integers of all sizes less than 32 bits and greater than 0 bits\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBfile_modes\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIREAD_BINARY \fP\fP
+.TP
+\fB\fIWRITE_BINARY \fP\fP
+.PP
+Definition at line \fB23\fP of file \fBvarIntFile_IO\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int VUF_append (\fBVUF\fP * stream, uint32_t data, uint32_t length)"
+
+.PP
+Definition at line \fB42\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "int VUF_close (\fBVUF\fP * stream)"
+
+.PP
+Definition at line \fB97\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "int VUF_initialize (\fBVUF\fP * stream, const char * file_name, \fBfile_modes\fP io_mode)"
+
+.PP
+Definition at line \fB14\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "uint32_t VUF_read_stack (\fBVUF\fP * stream, uint32_t length)"
+
+.PP
+Definition at line \fB73\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

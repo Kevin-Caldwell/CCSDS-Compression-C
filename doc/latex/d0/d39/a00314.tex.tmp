@@ -1,0 +1,80 @@
+\doxysection{src/image.c File Reference}
+\hypertarget{a00314}{}\label{a00314}\index{src/image.c@{src/image.c}}
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+Include dependency graph for image.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{a00314_a61b8047c5bba5a89979d65847e4103b1}{Init\+Image}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}img\+\_\+p, size\+\_\+t x, size\+\_\+t y, size\+\_\+t z)
+\item 
+\mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} \mbox{\hyperlink{a00314_a78477801fe183cdf32e60df1c92b7320}{Get\+Pixel}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z)
+\item 
+\mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00314_a5a1ef1e96ecb20d081d2e7e75e2996e2}{Get\+Frame}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y)
+\item 
+void \mbox{\hyperlink{a00314_aefaa1253ccc17864ac32b9d685b821d4}{Set\+Pixel}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} data)
+\item 
+int \mbox{\hyperlink{a00314_a1aeeb4864b63110b92099384a7a21fa8}{Image\+\_\+\+Equals}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}img1, \mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}img2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00314_a5a1ef1e96ecb20d081d2e7e75e2996e2}\label{a00314_a5a1ef1e96ecb20d081d2e7e75e2996e2} 
+\index{image.c@{image.c}!GetFrame@{GetFrame}}
+\index{GetFrame@{GetFrame}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{GetFrame()}{GetFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} \texorpdfstring{$\ast$}{*} Get\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00314_source_l00061}{61}} of file \mbox{\hyperlink{a00314_source}{image.\+c}}.
+
+\Hypertarget{a00314_a78477801fe183cdf32e60df1c92b7320}\label{a00314_a78477801fe183cdf32e60df1c92b7320} 
+\index{image.c@{image.c}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} Get\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00314_source_l00055}{55}} of file \mbox{\hyperlink{a00314_source}{image.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{a00314_a1aeeb4864b63110b92099384a7a21fa8}\label{a00314_a1aeeb4864b63110b92099384a7a21fa8} 
+\index{image.c@{image.c}!Image\_Equals@{Image\_Equals}}
+\index{Image\_Equals@{Image\_Equals}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{Image\_Equals()}{Image\_Equals()}}
+{\footnotesize\ttfamily int Image\+\_\+\+Equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{img1,  }\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{img2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00314_source_l00071}{71}} of file \mbox{\hyperlink{a00314_source}{image.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00314_a61b8047c5bba5a89979d65847e4103b1}\label{a00314_a61b8047c5bba5a89979d65847e4103b1} 
+\index{image.c@{image.c}!InitImage@{InitImage}}
+\index{InitImage@{InitImage}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{InitImage()}{InitImage()}}
+{\footnotesize\ttfamily int Init\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{img\+\_\+p,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y,  }\item[{size\+\_\+t}]{z }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00314_source_l00045}{45}} of file \mbox{\hyperlink{a00314_source}{image.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{a00314_aefaa1253ccc17864ac32b9d685b821d4}\label{a00314_aefaa1253ccc17864ac32b9d685b821d4} 
+\index{image.c@{image.c}!SetPixel@{SetPixel}}
+\index{SetPixel@{SetPixel}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{SetPixel()}{SetPixel()}}
+{\footnotesize\ttfamily void Set\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00314_source_l00066}{66}} of file \mbox{\hyperlink{a00314_source}{image.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 4

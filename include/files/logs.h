@@ -7,7 +7,7 @@ void Log_init();
 
 void Log_close();
 
-void Log_add(char* text);
+void Log_add(const char* text);
 
 void Log_error(char* text);
 

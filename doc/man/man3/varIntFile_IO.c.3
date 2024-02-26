@@ -1,0 +1,72 @@
+.TH "src/varIntFile_IO.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/varIntFile_IO.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'files/varIntFile_IO\&.h'\fP
+.br
+\fC#include 'files/logs\&.h'\fP
+.br
+\fC#include 'constants/global_constants\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_VUF_Clean\fP (\fBVUF\fP *stream, char full)"
+.br
+.ti -1c
+.RI "int \fBVUF_initialize\fP (\fBVUF\fP *stream, const char *file_name, \fBfile_modes\fP io_mode)"
+.br
+.ti -1c
+.RI "int \fBVUF_append\fP (\fBVUF\fP *stream, uint32_t data, uint32_t length)"
+.br
+.ti -1c
+.RI "uint32_t \fBVUF_read_stack\fP (\fBVUF\fP *stream, uint32_t length)"
+.br
+.ti -1c
+.RI "int \fBVUF_close\fP (\fBVUF\fP *stream)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "char * \fBfile_modes_arguments\fP [] = {'rb', 'wb'}"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void _VUF_Clean (\fBVUF\fP * stream, char full)"
+
+.PP
+Definition at line \fB7\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "int VUF_append (\fBVUF\fP * stream, uint32_t data, uint32_t length)"
+
+.PP
+Definition at line \fB42\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "int VUF_close (\fBVUF\fP * stream)"
+
+.PP
+Definition at line \fB97\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "int VUF_initialize (\fBVUF\fP * stream, const char * file_name, \fBfile_modes\fP io_mode)"
+
+.PP
+Definition at line \fB14\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SS "uint32_t VUF_read_stack (\fBVUF\fP * stream, uint32_t length)"
+
+.PP
+Definition at line \fB73\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "char* file_modes_arguments[] = {'rb', 'wb'}"
+
+.PP
+Definition at line \fB5\fP of file \fBvarIntFile_IO\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

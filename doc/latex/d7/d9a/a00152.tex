@@ -1,0 +1,322 @@
+\doxysection{include/math/math\+\_\+functions.h File Reference}
+\hypertarget{a00152}{}\label{a00152}\index{include/math/math\_functions.h@{include/math/math\_functions.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for math\+\_\+functions.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{a00404}{dim3}}
+\item 
+struct \mbox{\hyperlink{a00408}{dim2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{a00152_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}~0
+\item 
+\#define \mbox{\hyperlink{a00152_a816dcf31e408d445ca8275ad96e6eb1e}{CLIP}}(x,  min\+\_\+val,  max\+\_\+val)~((x) $<$ (min\+\_\+val) ? (min\+\_\+val) \+: ((x) $>$ (max\+\_\+val) ? (max\+\_\+val) \+: (x)))
+\item 
+\#define \mbox{\hyperlink{a00152_aa26f9f0c05aaa0b3935ffee8b9b040cd}{INSIDE\+\_\+\+INTERVAL}}(x,  min,  max)~( min $<$ x \&\& x $<$ max )
+\item 
+\#define \mbox{\hyperlink{a00152_a67f67d2902bd4730eb69f82fcf008401}{OUTSIDE\+\_\+\+INTERVAL}}(x,  min,  max)~( min $>$ x \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} x $>$ max )
+\item 
+\#define \mbox{\hyperlink{a00152_a8c5ff70b6b28cd0157c50a22406f92c4}{SIGN}}(x)~x $<$ 0 ? -\/1 \+: (x $>$ 0 ? 1 \+: 0)
+\item 
+\#define \mbox{\hyperlink{a00152_a5f76d4dda1e368d45e059912932c7b60}{SIGN\+\_\+P}}(x)~(x $<$ 0 ? -\/1 \+: 1)
+\item 
+\#define \mbox{\hyperlink{a00152_a16c5207cff1677a5fde882e81a7d58bd}{MOD}}(x,  R)~((x + \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R -\/ 1)) \% \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R) -\/ \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R -\/ 1))
+\item 
+\#define \mbox{\hyperlink{a00152_afa99ec4acc4ecb2dc3c2d05da15d0e3f}{MAX}}(a,  b)~(a $>$ b ? a \+: b)
+\item 
+\#define \mbox{\hyperlink{a00152_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(a,  b)~(a $<$ b ? a \+: b)
+\item 
+\#define \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(x)~(1 $<$$<$ (x))
+\item 
+\#define \mbox{\hyperlink{a00152_ac3644f84794a8bfdacf39c4b2c2495fc}{SQ}}(x)~((x)\texorpdfstring{$\ast$}{*}(x))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}}
+\item 
+typedef unsigned int \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}
+\item 
+typedef uint16\+\_\+t \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}
+\item 
+typedef struct \mbox{\hyperlink{a00404}{dim3}} \mbox{\hyperlink{a00152_af3273ad069a5db23c87cf0547340e6fa}{dim3}}
+\item 
+typedef struct \mbox{\hyperlink{a00408}{dim2}} \mbox{\hyperlink{a00152_a25a1b999e489d87de5f6ae6f37cba079}{dim2}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{a00152_a98cd80f4bb376e74ad19a8fa85a88d92}{Ret\+Val}} \{ \mbox{\hyperlink{a00152_a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59}{OK}} = 0
+, \mbox{\hyperlink{a00152_a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90}{ERROR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Error Codes\+: TODO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{a00152_a61e36d5241561d1bc112c291a3262565}{Euclidian2}} (\mbox{\hyperlink{a00408}{dim2}} pt1, \mbox{\hyperlink{a00408}{dim2}} pt2)
+\item 
+\mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{a00152_adfddd321b4840c92df9f1d48e11c657e}{Euclidian3}} (\mbox{\hyperlink{a00404}{dim3}} pt1, \mbox{\hyperlink{a00404}{dim3}} pt2)
+\item 
+\mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{a00152_adf11110e70a4ca4a966622288d194681}{Manhattan2}} (\mbox{\hyperlink{a00408}{dim2}} pt1, \mbox{\hyperlink{a00408}{dim2}} pt2)
+\item 
+\mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{a00152_ace80df346398f6e153166e87cee41d47}{Manhattan3}} (\mbox{\hyperlink{a00404}{dim3}} pt1, \mbox{\hyperlink{a00404}{dim3}} pt2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{a00152_a60b4b9f1152371307ebadc232149699c}\label{a00152_a60b4b9f1152371307ebadc232149699c} 
+\index{math\_functions.h@{math\_functions.h}!BPOW@{BPOW}}
+\index{BPOW@{BPOW}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{BPOW}{BPOW}}
+{\footnotesize\ttfamily \#define BPOW(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(1 $<$$<$ (x))}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00034}{34}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a816dcf31e408d445ca8275ad96e6eb1e}\label{a00152_a816dcf31e408d445ca8275ad96e6eb1e} 
+\index{math\_functions.h@{math\_functions.h}!CLIP@{CLIP}}
+\index{CLIP@{CLIP}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{CLIP}{CLIP}}
+{\footnotesize\ttfamily \#define CLIP(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{min\+\_\+val,  }\item[{}]{max\+\_\+val }\end{DoxyParamCaption})~((x) $<$ (min\+\_\+val) ? (min\+\_\+val) \+: ((x) $>$ (max\+\_\+val) ? (max\+\_\+val) \+: (x)))}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00021}{21}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_aa26f9f0c05aaa0b3935ffee8b9b040cd}\label{a00152_aa26f9f0c05aaa0b3935ffee8b9b040cd} 
+\index{math\_functions.h@{math\_functions.h}!INSIDE\_INTERVAL@{INSIDE\_INTERVAL}}
+\index{INSIDE\_INTERVAL@{INSIDE\_INTERVAL}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{INSIDE\_INTERVAL}{INSIDE\_INTERVAL}}
+{\footnotesize\ttfamily \#define INSIDE\+\_\+\+INTERVAL(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{min,  }\item[{}]{max }\end{DoxyParamCaption})~( min $<$ x \&\& x $<$ max )}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00023}{23}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{a00152_afa99ec4acc4ecb2dc3c2d05da15d0e3f} 
+\index{math\_functions.h@{math\_functions.h}!MAX@{MAX}}
+\index{MAX@{MAX}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{MAX}{MAX}}
+{\footnotesize\ttfamily \#define MAX(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(a $>$ b ? a \+: b)}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00031}{31}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a3acffbd305ee72dcd4593c0d8af64a4f}\label{a00152_a3acffbd305ee72dcd4593c0d8af64a4f} 
+\index{math\_functions.h@{math\_functions.h}!MIN@{MIN}}
+\index{MIN@{MIN}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define MIN(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~(a $<$ b ? a \+: b)}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00032}{32}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a16c5207cff1677a5fde882e81a7d58bd}\label{a00152_a16c5207cff1677a5fde882e81a7d58bd} 
+\index{math\_functions.h@{math\_functions.h}!MOD@{MOD}}
+\index{MOD@{MOD}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{MOD}{MOD}}
+{\footnotesize\ttfamily \#define MOD(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{R }\end{DoxyParamCaption})~((x + \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R -\/ 1)) \% \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R) -\/ \mbox{\hyperlink{a00152_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R -\/ 1))}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00029}{29}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{a00152_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\index{math\_functions.h@{math\_functions.h}!NULL@{NULL}}
+\index{NULL@{NULL}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \#define NULL~0}
+
+\doxylink{a00152}{math\+\_\+functions.\+h} \begin{DoxyAuthor}{Author}
+@\+Kevin-\/Caldwell
+\end{DoxyAuthor}
+Mathematical Helper Functions for use throughout code. 
+
+Definition at line \mbox{\hyperlink{a00152_source_l00017}{17}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a67f67d2902bd4730eb69f82fcf008401}\label{a00152_a67f67d2902bd4730eb69f82fcf008401} 
+\index{math\_functions.h@{math\_functions.h}!OUTSIDE\_INTERVAL@{OUTSIDE\_INTERVAL}}
+\index{OUTSIDE\_INTERVAL@{OUTSIDE\_INTERVAL}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{OUTSIDE\_INTERVAL}{OUTSIDE\_INTERVAL}}
+{\footnotesize\ttfamily \#define OUTSIDE\+\_\+\+INTERVAL(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{min,  }\item[{}]{max }\end{DoxyParamCaption})~( min $>$ x \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} x $>$ max )}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00024}{24}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a8c5ff70b6b28cd0157c50a22406f92c4}\label{a00152_a8c5ff70b6b28cd0157c50a22406f92c4} 
+\index{math\_functions.h@{math\_functions.h}!SIGN@{SIGN}}
+\index{SIGN@{SIGN}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{SIGN}{SIGN}}
+{\footnotesize\ttfamily \#define SIGN(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x $<$ 0 ? -\/1 \+: (x $>$ 0 ? 1 \+: 0)}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00026}{26}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a5f76d4dda1e368d45e059912932c7b60}\label{a00152_a5f76d4dda1e368d45e059912932c7b60} 
+\index{math\_functions.h@{math\_functions.h}!SIGN\_P@{SIGN\_P}}
+\index{SIGN\_P@{SIGN\_P}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{SIGN\_P}{SIGN\_P}}
+{\footnotesize\ttfamily \#define SIGN\+\_\+P(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x $<$ 0 ? -\/1 \+: 1)}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00027}{27}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_ac3644f84794a8bfdacf39c4b2c2495fc}\label{a00152_ac3644f84794a8bfdacf39c4b2c2495fc} 
+\index{math\_functions.h@{math\_functions.h}!SQ@{SQ}}
+\index{SQ@{SQ}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{SQ}{SQ}}
+{\footnotesize\ttfamily \#define SQ(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((x)\texorpdfstring{$\ast$}{*}(x))}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00036}{36}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}\label{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b} 
+\index{math\_functions.h@{math\_functions.h}!DIM@{DIM}}
+\index{DIM@{DIM}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{DIM}{DIM}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{a00152_ab461b1f8f4aeb9fff4c299b4aeb2103b}{DIM}}}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00038}{38}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a25a1b999e489d87de5f6ae6f37cba079}\label{a00152_a25a1b999e489d87de5f6ae6f37cba079} 
+\index{math\_functions.h@{math\_functions.h}!dim2@{dim2}}
+\index{dim2@{dim2}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dim2}{dim2}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a00408}{dim2}} \mbox{\hyperlink{a00408}{dim2}}}
+
+\Hypertarget{a00152_af3273ad069a5db23c87cf0547340e6fa}\label{a00152_af3273ad069a5db23c87cf0547340e6fa} 
+\index{math\_functions.h@{math\_functions.h}!dim3@{dim3}}
+\index{dim3@{dim3}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dim3}{dim3}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{a00404}{dim3}} \mbox{\hyperlink{a00404}{dim3}}}
+
+3D Dimension Struct, used to describe size and 3D-\/\+Indicies.
+
+Spatial Dimensions\+: x, y Spectral Band\+: z \Hypertarget{a00152_affb1df897d26e77d96c613bea67825c6}\label{a00152_affb1df897d26e77d96c613bea67825c6} 
+\index{math\_functions.h@{math\_functions.h}!INDEX@{INDEX}}
+\index{INDEX@{INDEX}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{INDEX}{INDEX}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00041}{41}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_ab11dabd4d79e8b3426010beb5831e1d9}\label{a00152_ab11dabd4d79e8b3426010beb5831e1d9} 
+\index{math\_functions.h@{math\_functions.h}!PIXEL@{PIXEL}}
+\index{PIXEL@{PIXEL}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{PIXEL}{PIXEL}}
+{\footnotesize\ttfamily typedef uint16\+\_\+t \mbox{\hyperlink{a00152_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00040}{40}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+\Hypertarget{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}\label{a00152_a36cb3b01d81ffd844bbbfb54003e06ec} 
+\index{math\_functions.h@{math\_functions.h}!UINT@{UINT}}
+\index{UINT@{UINT}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{UINT}{UINT}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}}
+
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00039}{39}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{a00152_a98cd80f4bb376e74ad19a8fa85a88d92}\label{a00152_a98cd80f4bb376e74ad19a8fa85a88d92} 
+\index{math\_functions.h@{math\_functions.h}!RetVal@{RetVal}}
+\index{RetVal@{RetVal}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{RetVal}{RetVal}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{a00152_a98cd80f4bb376e74ad19a8fa85a88d92}{Ret\+Val}}}
+
+
+
+Error Codes\+: TODO. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!math\_functions.h@{math\_functions.h}}\index{math\_functions.h@{math\_functions.h}!OK@{OK}}}\Hypertarget{a00152_a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59}\label{a00152_a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59} 
+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!math\_functions.h@{math\_functions.h}}\index{math\_functions.h@{math\_functions.h}!ERROR@{ERROR}}}\Hypertarget{a00152_a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90}\label{a00152_a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90} 
+ERROR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{a00152_source_l00044}{44}} of file \mbox{\hyperlink{a00152_source}{math\+\_\+functions.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00152_a61e36d5241561d1bc112c291a3262565}\label{a00152_a61e36d5241561d1bc112c291a3262565} 
+\index{math\_functions.h@{math\_functions.h}!Euclidian2@{Euclidian2}}
+\index{Euclidian2@{Euclidian2}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Euclidian2()}{Euclidian2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Euclidian2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00408}{dim2}}}]{pt1,  }\item[{\mbox{\hyperlink{a00408}{dim2}}}]{pt2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00320_source_l00003}{3}} of file \mbox{\hyperlink{a00320_source}{math\+\_\+functions.\+c}}.
+
+\Hypertarget{a00152_adfddd321b4840c92df9f1d48e11c657e}\label{a00152_adfddd321b4840c92df9f1d48e11c657e} 
+\index{math\_functions.h@{math\_functions.h}!Euclidian3@{Euclidian3}}
+\index{Euclidian3@{Euclidian3}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Euclidian3()}{Euclidian3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Euclidian3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00404}{dim3}}}]{pt1,  }\item[{\mbox{\hyperlink{a00404}{dim3}}}]{pt2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00320_source_l00007}{7}} of file \mbox{\hyperlink{a00320_source}{math\+\_\+functions.\+c}}.
+
+\Hypertarget{a00152_adf11110e70a4ca4a966622288d194681}\label{a00152_adf11110e70a4ca4a966622288d194681} 
+\index{math\_functions.h@{math\_functions.h}!Manhattan2@{Manhattan2}}
+\index{Manhattan2@{Manhattan2}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Manhattan2()}{Manhattan2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Manhattan2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00408}{dim2}}}]{pt1,  }\item[{\mbox{\hyperlink{a00408}{dim2}}}]{pt2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00320_source_l00011}{11}} of file \mbox{\hyperlink{a00320_source}{math\+\_\+functions.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00152_ace80df346398f6e153166e87cee41d47}\label{a00152_ace80df346398f6e153166e87cee41d47} 
+\index{math\_functions.h@{math\_functions.h}!Manhattan3@{Manhattan3}}
+\index{Manhattan3@{Manhattan3}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Manhattan3()}{Manhattan3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00152_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Manhattan3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00404}{dim3}}}]{pt1,  }\item[{\mbox{\hyperlink{a00404}{dim3}}}]{pt2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00320_source_l00015}{15}} of file \mbox{\hyperlink{a00320_source}{math\+\_\+functions.\+c}}.
+
+Here is the caller graph for this function\+:
+% FIG 3

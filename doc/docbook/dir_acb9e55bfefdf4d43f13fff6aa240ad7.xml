@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_acb9e55bfefdf4d43f13fff6aa240ad7" xml:lang="en-US">
+<title>include/encoder Directory Reference</title>
+<indexterm><primary>include/encoder Directory Reference</primary></indexterm>
+Directory dependency graph for encoder:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_acb9e55bfefdf4d43f13fff6aa240ad7_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_body_8h">body.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_encoder_8h">encoder.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_encoder__helper__functions_8h">encoder_helper_functions.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_header_8h">header.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_stream__encoder_8h">stream_encoder.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

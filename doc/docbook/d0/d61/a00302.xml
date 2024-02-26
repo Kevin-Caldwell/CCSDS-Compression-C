@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00302" xml:lang="en-US">
+<title>src/perlin_noise.c File Reference</title>
+<indexterm><primary>src/perlin_noise.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testing/perlin.h&quot;<?linebreak?>#include &quot;files/csv-io.h&quot;<?linebreak?>#include &lt;math.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &lt;time.h&gt;<?linebreak?></programlisting>Include dependency graph for perlin_noise.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../dc/d0f/a00303.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_a00416">fVector3</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef struct <link linkend="_a00416">fVector3</link> <link linkend="_a00302_1ad1fe5773deff1a734c5cc1b9e03d79fa">fVector3</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>float <link linkend="_a00302_1a7f35c7c40a9e0e57a50fd058b064e8f6">dot</link> (<link linkend="_a00416">fVector3</link> u, <link linkend="_a00416">fVector3</link> v)</para>
+</listitem>
+            <listitem><para><link linkend="_a00416">fVector3</link> <link linkend="_a00302_1ae6783c22fc9fe3e3afd30963992e383b">normalize</link> (<link linkend="_a00416">fVector3</link> v)</para>
+</listitem>
+            <listitem><para>float <link linkend="_a00302_1a0f59de4e718c144e6bfeced85324b3ac">interpolate</link> (float a0, float a1, float w)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_a00302_1a5641d0f9a07f405360fc111bf0e3e7d4">mapper</link> (float val)</para>
+</listitem>
+            <listitem><para><link linkend="_a00416">fVector3</link> <link linkend="_a00302_1af5816cb432fe4d1eeed508abdf19a429">RandomizeVector</link> (int vector_x, int vector_y, int vector_z)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_a00302_1a26dda31c4d26a5c138a6b58cb7e50910">SolvePerlin4</link> (int x, int y, int z, int len, <link linkend="_a00404">dim3</link> size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00302_1a573b5b9f4a318d5723b22ecfe2eaa87a">Perlin4</link> (<link linkend="_a00380">image</link> *result, int cube_side)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00302_1a6d727efa497a4b992c90483602583515">GeneratePerlinImage</link> (<link linkend="_a00404">dim3</link> size, int index, int length)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_a00302_1ad1fe5773deff1a734c5cc1b9e03d79fa"/><section>
+    <title>fVector3</title>
+<indexterm><primary>fVector3</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>fVector3</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_a00416">fVector3</link> <link linkend="_a00416">fVector3</link></computeroutput></para>
+<para>3D floating point vector </para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00302_1a7f35c7c40a9e0e57a50fd058b064e8f6"/><section>
+    <title>dot()</title>
+<indexterm><primary>dot</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>dot</secondary></indexterm>
+<para><computeroutput>float dot (<link linkend="_a00416">fVector3</link> u, <link linkend="_a00416">fVector3</link> v)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00016">16</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a7f35c7c40a9e0e57a50fd058b064e8f6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00302_1a6d727efa497a4b992c90483602583515"/><section>
+    <title>GeneratePerlinImage()</title>
+<indexterm><primary>GeneratePerlinImage</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>GeneratePerlinImage</secondary></indexterm>
+<para><computeroutput>void GeneratePerlinImage (<link linkend="_a00404">dim3</link> size, int index, int length)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00103">103</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a6d727efa497a4b992c90483602583515_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a6d727efa497a4b992c90483602583515_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00302_1a0f59de4e718c144e6bfeced85324b3ac"/><section>
+    <title>interpolate()</title>
+<indexterm><primary>interpolate</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>interpolate</secondary></indexterm>
+<para><computeroutput>float interpolate (float a0, float a1, float w)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00027">27</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+</section>
+<anchor xml:id="_a00302_1a5641d0f9a07f405360fc111bf0e3e7d4"/><section>
+    <title>mapper()</title>
+<indexterm><primary>mapper</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>mapper</secondary></indexterm>
+<para><computeroutput>uint16_t mapper (float val)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00032">32</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a5641d0f9a07f405360fc111bf0e3e7d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00302_1ae6783c22fc9fe3e3afd30963992e383b"/><section>
+    <title>normalize()</title>
+<indexterm><primary>normalize</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>normalize</secondary></indexterm>
+<para><computeroutput><link linkend="_a00416">fVector3</link> normalize (<link linkend="_a00416">fVector3</link> v)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00021">21</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_ae6783c22fc9fe3e3afd30963992e383b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_ae6783c22fc9fe3e3afd30963992e383b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00302_1a573b5b9f4a318d5723b22ecfe2eaa87a"/><section>
+    <title>Perlin4()</title>
+<indexterm><primary>Perlin4</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>Perlin4</secondary></indexterm>
+<para><computeroutput>void Perlin4 (<link linkend="_a00380">image</link> * result, int cube_side)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00075">75</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a573b5b9f4a318d5723b22ecfe2eaa87a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a573b5b9f4a318d5723b22ecfe2eaa87a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00302_1af5816cb432fe4d1eeed508abdf19a429"/><section>
+    <title>RandomizeVector()</title>
+<indexterm><primary>RandomizeVector</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>RandomizeVector</secondary></indexterm>
+<para><computeroutput><link linkend="_a00416">fVector3</link> RandomizeVector (int vector_x, int vector_y, int vector_z)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00037">37</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_af5816cb432fe4d1eeed508abdf19a429_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00302_1a26dda31c4d26a5c138a6b58cb7e50910"/><section>
+    <title>SolvePerlin4()</title>
+<indexterm><primary>SolvePerlin4</primary><secondary>perlin_noise.c</secondary></indexterm>
+<indexterm><primary>perlin_noise.c</primary><secondary>SolvePerlin4</secondary></indexterm>
+<para><computeroutput>uint16_t SolvePerlin4 (int x, int y, int z, int len, <link linkend="_a00404">dim3</link> size)</computeroutput></para><para>
+Definition at line <link linkend="_a00302_source_1l00050">50</link> of file <link linkend="_a00302_source">perlin_noise.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a26dda31c4d26a5c138a6b58cb7e50910_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/d61/a00302_a26dda31c4d26a5c138a6b58cb7e50910_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

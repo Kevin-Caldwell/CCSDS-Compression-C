@@ -22,6 +22,13 @@
 
 typedef enum file_modes {READ_BINARY=0, WRITE_BINARY} file_modes;
 
+/**
+ * Manages VUF files.
+ * 
+ * Variable Unsigned Files are designed to
+ * store integers of all sizes less than
+ * 32 bits and greater than 0 bits.
+*/
 typedef struct VarUnsignedIntFile{
     file_t *fs;
     uint32_t rw_buffer[BUFFER_LENGTH];

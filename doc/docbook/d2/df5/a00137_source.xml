@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00137_source" xml:lang="en-US">
+<title>global_constants.h</title>
+<indexterm><primary>include/constants/global_constants.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00137_source_1l00001"/>00001 
+<anchor xml:id="_a00137_source_1l00020"/>00020 <emphasis role="preprocessor">#ifndef&#32;GLOBAL_CONSTANTS_H</emphasis>
+<anchor xml:id="_a00137_source_1l00021"/>00021 <emphasis role="preprocessor">#define&#32;GLOBAL_CONSTANTS_H</emphasis>
+<anchor xml:id="_a00137_source_1l00022"/>00022 
+<anchor xml:id="_a00137_source_1l00023"/>00023 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00143">constants/load_constants.h</link>&quot;</emphasis>
+<anchor xml:id="_a00137_source_1l00024"/>00024 
+<anchor xml:id="_a00137_source_1l00025"/><link linkend="_a00137_1a614412df666e2cf249faa7be8d3fa841">00025</link> <emphasis role="preprocessor">#define&#32;GLOBAL_CONSTANTS_LOCATION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;/global.CONST&quot;</emphasis>
+<anchor xml:id="_a00137_source_1l00026"/><link linkend="_a00137_1a7a8fe096cc3b24ddabd9b150f4f5bdd7">00026</link> <emphasis role="preprocessor">#define&#32;PREDICTOR_CONSTANTS_LOCATION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;../data/constants/predictor.CONST&quot;</emphasis>
+<anchor xml:id="_a00137_source_1l00027"/><link linkend="_a00137_1ad4eebc138945aeff7dba131d420d1b51">00027</link> <emphasis role="preprocessor">#define&#32;ENCODER_CONSTANTS_LOCATION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;/encoder.CONST&quot;</emphasis>
+<anchor xml:id="_a00137_source_1l00028"/>00028 
+<anchor xml:id="_a00137_source_1l00029"/>00029 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_a00376">HashTable</link>&#32;<link linkend="_a00137_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link>;
+<anchor xml:id="_a00137_source_1l00030"/>00030 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_a00376">HashTable</link>&#32;<link linkend="_a00137_1a3c652412cc269bd4ae6155fed5f79c6f">encoder_constants</link>;
+<anchor xml:id="_a00137_source_1l00031"/>00031 
+<anchor xml:id="_a00137_source_1l00032"/>00032 <emphasis role="comment">//&#32;Updated&#32;through&#32;CLI&#32;Arguments</emphasis>
+<anchor xml:id="_a00137_source_1l00033"/>00033 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_a00137_1a1b0cdea94de8d08c0351a24c1e84f547">DEBUG</link>;
+<anchor xml:id="_a00137_source_1l00034"/>00034 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_a00137_1a87e78d2e71f0d53d7886e1a126f39b16">log_file</link>[];
+<anchor xml:id="_a00137_source_1l00035"/>00035 
+<anchor xml:id="_a00137_source_1l00036"/>00036 <emphasis role="comment">//&#32;#define&#32;ARM_GCC</emphasis>
+<anchor xml:id="_a00137_source_1l00037"/><link linkend="_a00137_1ae53081d61f280bba7a4a6da4facdd653">00037</link> <emphasis role="preprocessor">#define&#32;WIN_GCC</emphasis>
+<anchor xml:id="_a00137_source_1l00038"/>00038 
+<anchor xml:id="_a00137_source_1l00039"/><link linkend="_a00137_1a159ca84d25a5487d8e81e4438725df19">00039</link> <emphasis role="preprocessor">#define&#32;LOG&#32;1</emphasis>
+<anchor xml:id="_a00137_source_1l00040"/>00040 
+<anchor xml:id="_a00137_source_1l00041"/><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">00041</link> <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link>{
+<anchor xml:id="_a00137_source_1l00042"/><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737">00042</link> &#32;&#32;&#32;&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737">RES_OK</link>&#32;=&#32;0,
+<anchor xml:id="_a00137_source_1l00043"/><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f">00043</link> &#32;&#32;&#32;&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f">FILE_ACCESS_ERROR</link>,
+<anchor xml:id="_a00137_source_1l00044"/><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215">00044</link> &#32;&#32;&#32;&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215">FILE_READ_ERROR</link>,
+<anchor xml:id="_a00137_source_1l00045"/><link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a48c4ba85d5ee73f67a14a3362b9bb3cc">00045</link> &#32;&#32;&#32;&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25a48c4ba85d5ee73f67a14a3362b9bb3cc">FILE_WRITE_ERROR</link>,&#32;
+<anchor xml:id="_a00137_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25ad4ce6624264e795b9dd966f44e15956c">MEM_ALLOC_ERROR</link>
+<anchor xml:id="_a00137_source_1l00047"/><link linkend="_a00137_1ae6f57a1b4f31c934703178eaecd3d272">00047</link> }&#32;<link linkend="_a00137_1a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</link>;
+<anchor xml:id="_a00137_source_1l00048"/>00048 
+<anchor xml:id="_a00137_source_1l00049"/>00049 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;GLOBAL_CONSTANTS_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

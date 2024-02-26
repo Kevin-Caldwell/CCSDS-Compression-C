@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_uhi__io_8c_source" xml:lang="en-US">
+<title>uhi_io.c</title>
+<indexterm><primary>src/uhi_io.c</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_uhi__io_8c_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_uhi__io_8h">files/uhi_io.h</link>&quot;</emphasis>
+<anchor xml:id="_uhi__io_8c_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_image_8h">dst/image.h</link>&quot;</emphasis>
+<anchor xml:id="_uhi__io_8c_source_1l00003"/>00003 
+<anchor xml:id="_uhi__io_8c_source_1l00004"/><link linkend="_uhi__io_8h_1a6114b6569fbd42d5a3fa05f4cd82cc7e">00004</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_uhi__io_8c_1a6114b6569fbd42d5a3fa05f4cd82cc7e">UHI_Initialize</link>(
+<anchor xml:id="_uhi__io_8c_source_1l00005"/>00005 &#32;&#32;&#32;&#32;<link linkend="_struct_uncompressed_hyperspectral_image">UHI</link>*&#32;stream,&#32;
+<anchor xml:id="_uhi__io_8c_source_1l00006"/>00006 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;buffer_size,
+<anchor xml:id="_uhi__io_8c_source_1l00007"/>00007 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;file_name,&#32;
+<anchor xml:id="_uhi__io_8c_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1abf7662b304505130b2e87a944038aff0">FileMode</link>&#32;<link linkend="_file___i_o_8h_1a588666511dde277029c4c5afc30782a6">file_mode</link>
+<anchor xml:id="_uhi__io_8c_source_1l00009"/>00009 ){
+<anchor xml:id="_uhi__io_8c_source_1l00010"/>00010 &#32;&#32;&#32;&#32;stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff">fs</link>&#32;=&#32;<link linkend="_file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c">F_OPEN</link>(file_name,&#32;<link linkend="_file___i_o_8h_1a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6">READ</link>);
+<anchor xml:id="_uhi__io_8c_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO&#32;Initialize&#32;Full&#32;File</emphasis>
+<anchor xml:id="_uhi__io_8c_source_1l00012"/>00012 &#32;&#32;&#32;&#32;stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1ad6ee0d6e06c4b67239464b59d806f72c">cache</link>[0]&#32;=&#32;0;
+<anchor xml:id="_uhi__io_8c_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_uhi__io_8c_source_1l00014"/>00014 }
+<anchor xml:id="_uhi__io_8c_source_1l00015"/>00015 
+<anchor xml:id="_uhi__io_8c_source_1l00016"/><link linkend="_uhi__io_8c_1a3b81f64a9012eef50fecd6638a817aef">00016</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_uhi__io_8c_1a3b81f64a9012eef50fecd6638a817aef">UHI_WriteImage</link>(
+<anchor xml:id="_uhi__io_8c_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;filename,&#32;
+<anchor xml:id="_uhi__io_8c_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structimage">image</link>*&#32;source
+<anchor xml:id="_uhi__io_8c_source_1l00019"/>00019 )&#32;{
+<anchor xml:id="_uhi__io_8c_source_1l00020"/>00020 
+<anchor xml:id="_uhi__io_8c_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_uhi__io_8c_source_1l00022"/>00022 }
+<anchor xml:id="_uhi__io_8c_source_1l00023"/>00023 
+<anchor xml:id="_uhi__io_8c_source_1l00024"/>00024 
+<anchor xml:id="_uhi__io_8c_source_1l00025"/>00025 <emphasis role="comment">//&#32;|&#32;S&#32;S&#32;|&#32;S&#32;S&#32;|&#32;S&#32;S&#32;|&#32;X&#32;X&#32;|&#32;X&#32;X&#32;|</emphasis>
+<anchor xml:id="_uhi__io_8c_source_1l00026"/>00026 <emphasis role="comment">//&#32;&#32;&#32;&#32;X&#32;&#32;&#32;&#32;&#32;Y&#32;&#32;&#32;&#32;&#32;Z&#32;&#32;&#32;&#32;&#32;0&#32;&#32;&#32;&#32;&#32;1</emphasis>
+<anchor xml:id="_uhi__io_8c_source_1l00027"/><link linkend="_uhi__io_8h_1ad7fd2d84633ee6e0355a950deeacd220">00027</link> <link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>&#32;<link linkend="_uhi__io_8c_1ad7fd2d84633ee6e0355a950deeacd220">UHI_ReadPixel</link>(
+<anchor xml:id="_uhi__io_8c_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<link linkend="_struct_uncompressed_hyperspectral_image">UHI</link>*&#32;stream,&#32;
+<anchor xml:id="_uhi__io_8c_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;index
+<anchor xml:id="_uhi__io_8c_source_1l00030"/>00030 )&#32;{
+<anchor xml:id="_uhi__io_8c_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>&#32;pixel;
+<anchor xml:id="_uhi__io_8c_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;s&#32;=&#32;stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1a92c57811a03d78e56a6e8592f96a41ad">size</link>;
+<anchor xml:id="_uhi__io_8c_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1a3ac9e7bef40307b69bdf5e0cb6904d83">F_SEEK</link>(stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff">fs</link>,&#32;stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1ad6ee0d6e06c4b67239464b59d806f72c">cache</link>[6&#32;+&#32;2&#32;*&#32;(s.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>&#32;*&#32;s.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>&#32;*&#32;index.<link linkend="_structdim3_1a369004c0d58468e2b5a09c22d6608e1b">z</link>&#32;+&#32;s.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>&#32;*&#32;index.<link linkend="_structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b">y</link>&#32;+&#32;index.<link linkend="_structdim3_1a098d7fd50051a60dd6764a3b94978064">x</link>)]);
+<anchor xml:id="_uhi__io_8c_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1a6d14febd2771048b4a06dd86ea17718d">F_READ</link>(&amp;pixel,&#32;<emphasis role="keyword">sizeof</emphasis>(<link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>),&#32;1,&#32;stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff">fs</link>);
+<anchor xml:id="_uhi__io_8c_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_uhi__io_8c_source_1l00036"/>00036 }
+<anchor xml:id="_uhi__io_8c_source_1l00037"/>00037 
+<anchor xml:id="_uhi__io_8c_source_1l00038"/><link linkend="_uhi__io_8h_1a88066808c0a718f67bd50a325cdb5721">00038</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_uhi__io_8c_1a88066808c0a718f67bd50a325cdb5721">UHI_WritePixel</link>(
+<anchor xml:id="_uhi__io_8c_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_uncompressed_hyperspectral_image">UHI</link>*&#32;stream,&#32;
+<anchor xml:id="_uhi__io_8c_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<link linkend="_structdim3">dim3</link>&#32;index,
+<anchor xml:id="_uhi__io_8c_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>&#32;value
+<anchor xml:id="_uhi__io_8c_source_1l00042"/>00042 ){
+<anchor xml:id="_uhi__io_8c_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Replace&#32;with&#32;Code</emphasis>
+<anchor xml:id="_uhi__io_8c_source_1l00044"/>00044 }
+<anchor xml:id="_uhi__io_8c_source_1l00045"/>00045 
+<anchor xml:id="_uhi__io_8c_source_1l00046"/><link linkend="_uhi__io_8c_1a5a6150f9d137ec78a2778fbf3b52d5be">00046</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_uhi__io_8c_1a5a6150f9d137ec78a2778fbf3b52d5be">UHI_close</link>(<link linkend="_struct_uncompressed_hyperspectral_image">UHI</link>*&#32;stream){
+<anchor xml:id="_uhi__io_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<link linkend="_file___i_o_8h_1ad62e6a72675aa7b389460e97f4e6d998">F_CLOSE</link>(stream-&gt;<link linkend="_struct_uncompressed_hyperspectral_image_1ab10afab4dbcbfc99227c63ee0ae694ff">fs</link>);
+<anchor xml:id="_uhi__io_8c_source_1l00048"/>00048 }
+<anchor xml:id="_uhi__io_8c_source_1l00049"/>00049 
+<anchor xml:id="_uhi__io_8c_source_1l00050"/>00050 
+<anchor xml:id="_uhi__io_8c_source_1l00051"/><link linkend="_uhi__io_8h_1aad573fb88befb1cd5c553c20a32027a9">00051</link> <link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>&#32;<link linkend="_uhi__io_8c_1aad573fb88befb1cd5c553c20a32027a9">Proxy_GetPixel</link>(<link linkend="_struct_uncompressed_hyperspectral_image">uIMG</link>*&#32;hIMG,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z){
+<anchor xml:id="_uhi__io_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_uhi__io_8c_1ad7fd2d84633ee6e0355a950deeacd220">UHI_ReadPixel</link>(hIMG,&#32;(<link linkend="_structdim3">dim3</link>)&#32;{x,&#32;y,&#32;z});
+<anchor xml:id="_uhi__io_8c_source_1l00053"/>00053 }
+<anchor xml:id="_uhi__io_8c_source_1l00054"/>00054 
+<anchor xml:id="_uhi__io_8c_source_1l00055"/><link linkend="_uhi__io_8h_1a1ec6bacb78062b9b8dde4cf3e3eeb923">00055</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_uhi__io_8c_1a1ec6bacb78062b9b8dde4cf3e3eeb923">Proxy_SetPixel</link>(<link linkend="_struct_uncompressed_hyperspectral_image">uIMG</link>*&#32;hIMG,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;x,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;y,&#32;<link linkend="_math__functions_8h_1affb1df897d26e77d96c613bea67825c6">INDEX</link>&#32;z,&#32;<link linkend="_math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</link>&#32;value){
+<anchor xml:id="_uhi__io_8c_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<link linkend="_uhi__io_8c_1a88066808c0a718f67bd50a325cdb5721">UHI_WritePixel</link>(hIMG,&#32;(<link linkend="_structdim3">dim3</link>)&#32;{x,&#32;y,&#32;z},&#32;value);
+<anchor xml:id="_uhi__io_8c_source_1l00057"/>00057 }
+</programlisting></section>

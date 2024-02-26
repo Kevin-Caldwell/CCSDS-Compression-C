@@ -1,0 +1,26 @@
+\doxysection{image\+\_\+handler.\+c}
+\hypertarget{a00053_source}{}\label{a00053_source}\index{main/image\_handler.c@{main/image\_handler.c}}
+\mbox{\hyperlink{a00053}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00062}{testing/generate\_image.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{a00068}{testing/perlin.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{a00053_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{a00053_source_l00006}\mbox{\hyperlink{a00053_a1b0cdea94de8d08c0351a24c1e84f547}{00006}}\ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{a00053_a1b0cdea94de8d08c0351a24c1e84f547}{DEBUG}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{a00053_source_l00008}\mbox{\hyperlink{a00053_a048af25ea3eb0571ab780e44e221650e}{00008}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{a00053_a048af25ea3eb0571ab780e44e221650e}{main}}(\textcolor{keywordtype}{int}\ argInt,\ \textcolor{keywordtype}{char}**\ argS)\{}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}(argInt\ >\ 1)\{}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00010}00010\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!strcmp(argS[1],\ \textcolor{stringliteral}{"{}generate"{}}))\{}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!strcmp(argS[2],\ \textcolor{stringliteral}{"{}voronoi"{}}))\{}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{a00062_a450c7f9206bff8de0c177e34e6b5bcf4}{GenerateVoronoiImage}}((\mbox{\hyperlink{a00404}{dim3}})\ \{atoi(argS[3]),\ atoi(argS[4]),\ atoi(argS[5])\},\ atoi(argS[6]),\ atoi(argS[7]));}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{if}(!strcmp(argS[2],\ \textcolor{stringliteral}{"{}perlin"{}}))\{}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{a00068_a6d727efa497a4b992c90483602583515}{GeneratePerlinImage}}((\mbox{\hyperlink{a00404}{dim3}})\ \{atoi(argS[3]),\ atoi(argS[4]),\ atoi(argS[5])\},\ atoi(argS[6]),\ atoi(argS[7]));}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00016}00016\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{a00053_source_l00017}00017\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00018}00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{a00068_a6d727efa497a4b992c90483602583515}{GeneratePerlinImage}}((\mbox{\hyperlink{a00404}{dim3}})\ \{100,\ 100,\ 100\},\ 0,\ 10);}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00019}00019\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00053_source_l00020}00020\ \}}
+
+\end{DoxyCode}

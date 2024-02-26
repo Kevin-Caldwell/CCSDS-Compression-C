@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dc/d5d/a00278" kind="file" language="C++">
+    <compoundname>file_IO.c</compoundname>
+    <includes refid="df/dc8/a00122" local="yes">files/file_IO.h</includes>
+    <includes refid="de/d76/a00134" local="yes">files/logs.h</includes>
+    <includes refid="d2/df5/a00137" local="yes">constants/global_constants.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>constants/global_constants.h</label>
+        <link refid="d2/df5/a00137"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>constants/load_constants.h</label>
+        <link refid="d7/dce/a00143"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dst/hash_table.h</label>
+        <link refid="df/d6a/a00119"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>files/file_IO.h</label>
+        <link refid="df/dc8/a00122"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>files/logs.h</label>
+        <link refid="de/d76/a00134"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/file_IO.c</label>
+        <link refid="dc/d5d/a00278"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>inttypes.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>stdlib.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d5d/a00278_1aed9fcf257d5879cc1d4a649543e3cd12" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* file_modes_str[]</definition>
+        <argsstring>[]</argsstring>
+        <name>file_modes_str</name>
+        <initializer>= {&quot;r&quot;, &quot;w&quot;, &quot;a&quot;, &quot;r+&quot;, &quot;w+&quot;, &quot;a+&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="5" column="13" bodyfile="src/file_IO.c" bodystart="5" bodyend="5"/>
+        <referencedby refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" compoundref="dc/d5d/a00278" startline="11" endline="16">F_OPEN</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d5d/a00278_1a2c398d1da0b5890e22a9377517c54874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Initialized</definition>
+        <argsstring>()</argsstring>
+        <name>Initialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="7" column="5" bodyfile="src/file_IO.c" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d5d/a00278_1a05d25080a4592a86386f6d0d3d48496c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+        <definition>file_t * F_OPEN</definition>
+        <argsstring>(const char *file_name, FileMode open_mode)</argsstring>
+        <name>F_OPEN</name>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <param>
+          <type><ref refid="df/dc8/a00122_1abf7662b304505130b2e87a944038aff0" kindref="member">FileMode</ref></type>
+          <declname>open_mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="11" column="8" bodyfile="src/file_IO.c" bodystart="11" bodyend="16"/>
+        <references refid="dc/d5d/a00278_1aed9fcf257d5879cc1d4a649543e3cd12" compoundref="dc/d5d/a00278" startline="5" endline="5">file_modes_str</references>
+        <references refid="de/d76/a00134_1a61353ebf0328d8bd1f61f224305e64bb" compoundref="d5/d42/a00269" startline="34" endline="36">Log_add</references>
+        <referencedby refid="d3/d00/a00785_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d1/dc6/a00347" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+        <referencedby refid="da/dec/a00080_1a38c7868c2a8819e7abc16148811f2e0b" compoundref="d9/dd6/a00272" startline="44" endline="131">EncodeBody</referencedby>
+        <referencedby refid="da/d2a/a00086_1a0db4a8ab23a4af63c99d5fbfca9073eb" compoundref="d6/d82/a00293" startline="3" endline="10">InitializeVarIntStream</referencedby>
+        <referencedby refid="d7/dce/a00143_1a5d642038360b72b886a5eb66e3efd14a" compoundref="db/d10/a00350" startline="6" endline="35">LoadConstantFile</referencedby>
+        <referencedby refid="de/d76/a00134_1a0b7cf426e0ba603b54206d70e4c93f04" compoundref="d5/d42/a00269" startline="17" endline="27">Log_init</referencedby>
+        <referencedby refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a3e3e00c9789afb1d2f5f2c7004bd82ad" compoundref="df/da9/a00263" startline="9" endline="27">SaveArrayAsCSV</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</referencedby>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+        <referencedby refid="d1/d88/a00128_1a6114b6569fbd42d5a3fa05f4cd82cc7e" compoundref="d1/d5d/a00311" startline="4" endline="14">UHI_Initialize</referencedby>
+        <referencedby refid="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" compoundref="dc/d84/a00338" startline="14" endline="40">VUF_initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d5d/a00278_1a94d988ea4ce93357f56c0191584246a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t F_WRITE</definition>
+        <argsstring>(const void *write_ptr, size_t member_size, size_t member_count, file_t *file_ptr)</argsstring>
+        <name>F_WRITE</name>
+        <param>
+          <type>const void *</type>
+          <declname>write_ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>member_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>member_count</declname>
+        </param>
+        <param>
+          <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+          <declname>file_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="18" column="8" bodyfile="src/file_IO.c" bodystart="18" bodyend="20"/>
+        <referencedby refid="d8/d8e/a00344_1a498daa18fb3529e8fffc3fff08e6bef6" compoundref="d8/d8e/a00344" startline="10" endline="55">Predict</referencedby>
+        <referencedby refid="d4/d81/a00110_1a939a70de0c04a2c4e970e4c242ff0f21" compoundref="d3/d93/a00341" startline="43" endline="86">ReconstructPixel</referencedby>
+        <referencedby refid="da/d2a/a00086_1a8b42309d51939ee46f5f0d348fbbcbc0" compoundref="d6/d82/a00293" startline="12" endline="36">StreamVarInteger</referencedby>
+        <referencedby refid="d7/d06/a00131_1a744805d2f1db68081efadb9892a297e9" compoundref="dc/d84/a00338" startline="42" endline="71">VUF_append</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d5d/a00278_1a6d14febd2771048b4a06dd86ea17718d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t F_READ</definition>
+        <argsstring>(void *destination, size_t size, size_t arr_length, file_t *file_stream)</argsstring>
+        <name>F_READ</name>
+        <param>
+          <type>void *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>arr_length</declname>
+        </param>
+        <param>
+          <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+          <declname>file_stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="22" column="8" bodyfile="src/file_IO.c" bodystart="22" bodyend="24"/>
+        <referencedby refid="dc/dfe/a00125_1aba677341d6fd704867c56e0b5d6f3fc3" compoundref="df/da9/a00263" startline="67" endline="127">ReadImageFromCSV</referencedby>
+        <referencedby refid="d1/d88/a00128_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d1/d5d/a00311" startline="27" endline="36">UHI_ReadPixel</referencedby>
+        <referencedby refid="d7/d06/a00131_1a07ca21a87dab6f536b7f4d69050f5602" compoundref="dc/d84/a00338" startline="14" endline="40">VUF_initialize</referencedby>
+        <referencedby refid="d7/d06/a00131_1aafa9034f88afca6a726a84673d063889" compoundref="dc/d84/a00338" startline="73" endline="95">VUF_read_stack</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d5d/a00278_1ad62e6a72675aa7b389460e97f4e6d998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int F_CLOSE</definition>
+        <argsstring>(file_t *stream)</argsstring>
+        <name>F_CLOSE</name>
+        <param>
+          <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="26" column="5" bodyfile="src/file_IO.c" bodystart="26" bodyend="28"/>
+        <referencedby refid="da/d2a/a00086_1afbd717a2dd8bee43593e06a3919ba72a" compoundref="d6/d82/a00293" startline="38" endline="40">CloseVarIntegerStream</referencedby>
+        <referencedby refid="d7/dce/a00143_1a5d642038360b72b886a5eb66e3efd14a" compoundref="db/d10/a00350" startline="6" endline="35">LoadConstantFile</referencedby>
+        <referencedby refid="de/d76/a00134_1ad02317523a9dd7b5180cccbc0371ac6a" compoundref="d5/d42/a00269" startline="29" endline="32">Log_close</referencedby>
+        <referencedby refid="d0/dc2/a00104_1a4a94804509574a94d896a4164802bcd2" compoundref="d8/d8e/a00344" startline="57" endline="122">RunPredictor</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a3e3e00c9789afb1d2f5f2c7004bd82ad" compoundref="df/da9/a00263" startline="9" endline="27">SaveArrayAsCSV</referencedby>
+        <referencedby refid="dc/dfe/a00125_1a214fc383a5cb483508da7bb0449a9528" compoundref="df/da9/a00263" startline="31" endline="65">SaveImageAsCSV</referencedby>
+        <referencedby refid="d0/d89/a00071_1a24aa285f65de829c8a9791d901405626" compoundref="d3/d5e/a00275" startline="5" endline="51">test_UHI</referencedby>
+        <referencedby refid="d4/d81/a00110_1aadb567bbc159d00d6334e2eb36e6e253" compoundref="d3/d93/a00341" startline="88" endline="142">TestReconstructor</referencedby>
+        <referencedby refid="d1/d5d/a00311_1a5a6150f9d137ec78a2778fbf3b52d5be" compoundref="d1/d5d/a00311" startline="46" endline="48">UHI_close</referencedby>
+        <referencedby refid="d7/d06/a00131_1ad54b8d6492e4c149c7f1232e3eda58be" compoundref="dc/d84/a00338" startline="97" endline="103">VUF_close</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="dc/d5d/a00278_1a4b306680e215dfe285fa220421141d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int F_EMPTY</definition>
+        <argsstring>(file_t *stream)</argsstring>
+        <name>F_EMPTY</name>
+        <param>
+          <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="30" column="5" bodyfile="src/file_IO.c" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d5d/a00278_1a3ac9e7bef40307b69bdf5e0cb6904d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int F_SEEK</definition>
+        <argsstring>(file_t *stream, long int offset)</argsstring>
+        <name>F_SEEK</name>
+        <param>
+          <type><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref> *</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>long int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/file_IO.c" line="34" column="5" bodyfile="src/file_IO.c" bodystart="34" bodyend="39"/>
+        <references refid="d1/dc1/a00092_1a0ed063d2db07cb63fecfb70cffec43f1">offset</references>
+        <referencedby refid="d1/d88/a00128_1ad7fd2d84633ee6e0355a950deeacd220" compoundref="d1/d5d/a00311" startline="27" endline="36">UHI_ReadPixel</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="df/dc8/a00122" kindref="compound">files/file_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="de/d76/a00134" kindref="compound">files/logs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/df5/a00137" kindref="compound">constants/global_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="df/dc8/a00122_1aed9fcf257d5879cc1d4a649543e3cd12" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="dc/d5d/a00278_1aed9fcf257d5879cc1d4a649543e3cd12" kindref="member">file_modes_str</ref>[]=<sp/>{</highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;a&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;w+&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;a+&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="dc/d5d/a00278_1a2c398d1da0b5890e22a9377517c54874" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d5d/a00278_1a2c398d1da0b5890e22a9377517c54874" kindref="member">Initialized</ref>(){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="df/dc8/a00122_1a05d25080a4592a86386f6d0d3d48496c" refkind="member"><highlight class="normal"><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/><ref refid="dc/d5d/a00278_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name,<sp/><ref refid="df/dc8/a00122_1abf7662b304505130b2e87a944038aff0" kindref="member">FileMode</ref><sp/>open_mode){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>LOG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="de/d76/a00134_1a61353ebf0328d8bd1f61f224305e64bb" kindref="member">Log_add</ref>(file_name);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*)<sp/>fopen(file_name,<sp/><ref refid="dc/d5d/a00278_1aed9fcf257d5879cc1d4a649543e3cd12" kindref="member">file_modes_str</ref>[open_mode]);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="df/dc8/a00122_1a94d988ea4ce93357f56c0191584246a6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dc/d5d/a00278_1a94d988ea4ce93357f56c0191584246a6" kindref="member">F_WRITE</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>write_ptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>member_size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>member_count,<sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/>file_ptr){</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fwrite(write_ptr,<sp/>member_size,<sp/>member_count,<sp/>(FILE*)<sp/>file_ptr);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="df/dc8/a00122_1a6d14febd2771048b4a06dd86ea17718d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="dc/d5d/a00278_1a6d14febd2771048b4a06dd86ea17718d" kindref="member">F_READ</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>destination,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>arr_length,<sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/>file_stream){</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fread(destination,<sp/>size,<sp/>arr_length,<sp/>(FILE*)<sp/>file_stream);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="df/dc8/a00122_1ad62e6a72675aa7b389460e97f4e6d998" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d5d/a00278_1ad62e6a72675aa7b389460e97f4e6d998" kindref="member">F_CLOSE</ref>(<ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/>stream){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fclose((FILE*)<sp/>stream);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="df/dc8/a00122_1a4b306680e215dfe285fa220421141d38" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d5d/a00278_1a4b306680e215dfe285fa220421141d38" kindref="member">F_EMPTY</ref>(<ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/>stream)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="df/dc8/a00122_1a3ac9e7bef40307b69bdf5e0cb6904d83" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/d5d/a00278_1a3ac9e7bef40307b69bdf5e0cb6904d83" kindref="member">F_SEEK</ref>(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/dc8/a00122_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref>*<sp/>stream,<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/dc1/a00092_1a0ed063d2db07cb63fecfb70cffec43f1" kindref="member">offset</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fseek((FILE*)<sp/>stream,<sp/><ref refid="d1/dc1/a00092_1a0ed063d2db07cb63fecfb70cffec43f1" kindref="member">offset</ref>,<sp/>SEEK_SET);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/file_IO.c"/>
+  </compounddef>
+</doxygen>

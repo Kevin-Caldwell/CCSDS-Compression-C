@@ -1,0 +1,56 @@
+.TH "src/reconstructor.c" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/reconstructor.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'decompressor/reconstructor\&.h'\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBReconstructor\fP (\fBimage\fP *predicted_values, \fBimage\fP *reconstructed, FILE *file_ptr)"
+.br
+.ti -1c
+.RI "void \fBReconstructPixel\fP (\fBimage\fP *mapped, \fBimage\fP *data, \fBINDEX\fP z, \fBINDEX\fP y, \fBINDEX\fP x, FILE *file_ptr)"
+.br
+.ti -1c
+.RI "void \fBTestReconstructor\fP (char *file_name)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBimage\fP * \fBsample\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void Reconstructor (\fBimage\fP * predicted_values, \fBimage\fP * reconstructed, FILE * file_ptr)"
+
+.PP
+Definition at line \fB6\fP of file \fBreconstructor\&.c\fP\&.
+.SS "void ReconstructPixel (\fBimage\fP * mapped, \fBimage\fP * data, \fBINDEX\fP z, \fBINDEX\fP y, \fBINDEX\fP x, FILE * file_ptr)"
+
+.PP
+Definition at line \fB43\fP of file \fBreconstructor\&.c\fP\&.
+.SS "void TestReconstructor (char * file_name)"
+
+.PP
+Definition at line \fB88\fP of file \fBreconstructor\&.c\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBimage\fP* sample"
+
+.PP
+Definition at line \fB5\fP of file \fBreconstructor\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

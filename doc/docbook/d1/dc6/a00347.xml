@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00347" xml:lang="en-US">
+<title>src/decoder.c File Reference</title>
+<indexterm><primary>src/decoder.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;decompressor/decoder.h&quot;<?linebreak?>#include &lt;inttypes.h&gt;<?linebreak?>#include &lt;time.h&gt;<?linebreak?>#include &quot;encoder/stream_encoder.h&quot;<?linebreak?>#include &quot;files/varIntFile_IO.h&quot;<?linebreak?>#include &quot;math/math_functions.h&quot;<?linebreak?>#include &quot;constants/encoder_constants.h&quot;<?linebreak?>#include &quot;encoder/body.h&quot;<?linebreak?></programlisting>Include dependency graph for decoder.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../df/d03/a00348.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_a00347_1aeb5d9c2d8630941218ec7b26a666bd61">increment_xyz</link> (int *x, int *y, int *z, <link linkend="_a00152_1ab461b1f8f4aeb9fff4c299b4aeb2103b">DIM</link> <link linkend="_a00146_1abfda77b016218238359bcc3e5c1600b0">Nx</link>, <link linkend="_a00152_1ab461b1f8f4aeb9fff4c299b4aeb2103b">DIM</link> <link linkend="_a00146_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link>, <link linkend="_a00152_1ab461b1f8f4aeb9fff4c299b4aeb2103b">DIM</link> <link linkend="_a00146_1a7a7576e08f5980d322da5f48c7385edc">Nz</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00347_1aed4e95d0c6d50bc3f99264337e2f9fb8">Decoder_DecodeBody</link> (<link linkend="_a00380">image</link> *predicted_samples, const char *file_name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_a00347_1a760ca18536e4e5b09a2cad3509f700ba">TestDecoder</link> (char *filename)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00347_1aed4e95d0c6d50bc3f99264337e2f9fb8"/><section>
+    <title>Decoder_DecodeBody()</title>
+<indexterm><primary>Decoder_DecodeBody</primary><secondary>decoder.c</secondary></indexterm>
+<indexterm><primary>decoder.c</primary><secondary>Decoder_DecodeBody</secondary></indexterm>
+<para><computeroutput>void Decoder_DecodeBody (<link linkend="_a00380">image</link> * predicted_samples, const char * file_name)</computeroutput></para>
+<para>decoder.h <formalpara><title>Authors</title>
+
+<para>@Kevin-Caldwell @BrianShTsoi</para>
+</formalpara>
+Functions for Decoding an image from a .HSP file</para>
+
+<para>Features Functions for Independently Decoding the Header and Body, or both if necessary.</para>
+
+<para>Uses Core File of the Decoder Module</para>
+
+<para>Dependencies <link linkend="_a00113">image.h</link></para>
+
+<para>Internal Dependencies stdio.h inttypes.h</para>
+
+<para>TODO Finish Decoder_DecodeBody Finish Decoder_DecodeHeader Finish Decoder_DecodeImage </para>
+<para>
+Definition at line <link linkend="_a00347_source_1l00040">40</link> of file <link linkend="_a00347_source">decoder.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/dc6/a00347_aed4e95d0c6d50bc3f99264337e2f9fb8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00347_1aeb5d9c2d8630941218ec7b26a666bd61"/><section>
+    <title>increment_xyz()</title>
+<indexterm><primary>increment_xyz</primary><secondary>decoder.c</secondary></indexterm>
+<indexterm><primary>decoder.c</primary><secondary>increment_xyz</secondary></indexterm>
+<para><computeroutput>void increment_xyz (int * x, int * y, int * z, <link linkend="_a00152_1ab461b1f8f4aeb9fff4c299b4aeb2103b">DIM</link> Nx, <link linkend="_a00152_1ab461b1f8f4aeb9fff4c299b4aeb2103b">DIM</link> Ny, <link linkend="_a00152_1ab461b1f8f4aeb9fff4c299b4aeb2103b">DIM</link> Nz)</computeroutput></para><para>
+Definition at line <link linkend="_a00347_source_1l00017">17</link> of file <link linkend="_a00347_source">decoder.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/dc6/a00347_aeb5d9c2d8630941218ec7b26a666bd61_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00347_1a760ca18536e4e5b09a2cad3509f700ba"/><section>
+    <title>TestDecoder()</title>
+<indexterm><primary>TestDecoder</primary><secondary>decoder.c</secondary></indexterm>
+<indexterm><primary>decoder.c</primary><secondary>TestDecoder</secondary></indexterm>
+<para><computeroutput>void TestDecoder (char * filename)</computeroutput></para><para>
+Definition at line <link linkend="_a00347_source_1l00135">135</link> of file <link linkend="_a00347_source">decoder.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/dc6/a00347_a760ca18536e4e5b09a2cad3509f700ba_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

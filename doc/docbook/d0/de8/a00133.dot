@@ -1,0 +1,18 @@
+digraph "include/files/varIntFile_IO.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [id="Node000001",label="include/files/varIntFile_IO.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="File Input/Output for Variable-Length Words."];
+  Node1 -> Node2 [id="edge11_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="include/testing/test\l_varInt.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d3/d8b/a00059.html",tooltip=" "];
+  Node2 -> Node3 [id="edge12_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="main/compressor.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d6/d2d/a00047.html",tooltip=" "];
+  Node2 -> Node4 [id="edge13_Node000002_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="src/test_varInt.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d8/d23/a00326.html",tooltip=" "];
+  Node1 -> Node5 [id="edge14_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="src/decoder.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$d1/dc6/a00347.html",tooltip=" "];
+  Node1 -> Node6 [id="edge15_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="src/varIntFile_IO.c",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$dc/d84/a00338.html",tooltip=" "];
+}

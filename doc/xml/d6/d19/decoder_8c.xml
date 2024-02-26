@@ -1,0 +1,435 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d6/d19/decoder_8c" kind="file" language="C++">
+    <compoundname>decoder.c</compoundname>
+    <includes refid="d8/dbb/decompressor_2decoder_8h" local="yes">decompressor/decoder.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="d8/d81/stream__encoder_8h" local="yes">encoder/stream_encoder.h</includes>
+    <includes refid="d5/d5e/var_int_file___i_o_8h" local="yes">files/varIntFile_IO.h</includes>
+    <includes refid="d2/de2/math__functions_8h" local="yes">math/math_functions.h</includes>
+    <includes refid="d7/ddb/encoder__constants_8h" local="yes">constants/encoder_constants.h</includes>
+    <includes refid="d0/d77/body_8h" local="yes">encoder/body.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>constants/encoder_constants.h</label>
+        <link refid="d7/ddb/encoder__constants_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>global_constants.h</label>
+        <link refid="d5/ddb/global__constants_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>constants/load_constants.h</label>
+        <link refid="d4/d3e/load__constants_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>decompressor/decoder.h</label>
+        <link refid="d8/dbb/decompressor_2decoder_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dst/hash_table.h</label>
+        <link refid="d4/ddb/hash__table_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dst/image.h</label>
+        <link refid="d5/db2/image_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>encoder/body.h</label>
+        <link refid="d0/d77/body_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>encoder/stream_encoder.h</label>
+        <link refid="d8/d81/stream__encoder_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>files/file_IO.h</label>
+        <link refid="d9/d7f/file___i_o_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>files/uhi_io.h</label>
+        <link refid="d8/d60/uhi__io_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>files/varIntFile_IO.h</label>
+        <link refid="d5/d5e/var_int_file___i_o_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/decoder.c</label>
+        <link refid="d6/d19/decoder_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>inttypes.h</label>
+      </node>
+      <node id="6">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stddef.h</label>
+      </node>
+      <node id="16">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="13">
+        <label>string.h</label>
+      </node>
+      <node id="17">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void increment_xyz</definition>
+        <argsstring>(int *x, int *y, int *z, DIM Nx, DIM Ny, DIM Nz)</argsstring>
+        <name>increment_xyz</name>
+        <param>
+          <type>int *</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref></type>
+          <declname>Nx</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref></type>
+          <declname>Ny</declname>
+        </param>
+        <param>
+          <type><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref></type>
+          <declname>Nz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/decoder.c" line="17" column="6" bodyfile="src/decoder.c" bodystart="17" bodyend="37"/>
+        <references refid="d2/d6f/constants_8h_1abfda77b016218238359bcc3e5c1600b0" compoundref="d4/df3/constants_8c" startline="51">Nx</references>
+        <references refid="d2/d6f/constants_8h_1adcc9183c4659dc09e04e5ede1d79215b" compoundref="d4/df3/constants_8c" startline="52">Ny</references>
+        <references refid="d2/d6f/constants_8h_1a7a7576e08f5980d322da5f48c7385edc" compoundref="d4/df3/constants_8c" startline="53">Nz</references>
+        <referencedby refid="d8/dbb/decompressor_2decoder_8h_1aed4e95d0c6d50bc3f99264337e2f9fb8" compoundref="d6/d19/decoder_8c" startline="40" endline="133">Decoder_DecodeBody</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d6/d19/decoder_8c_1aed4e95d0c6d50bc3f99264337e2f9fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Decoder_DecodeBody</definition>
+        <argsstring>(image *predicted_samples, const char *file_name)</argsstring>
+        <name>Decoder_DecodeBody</name>
+        <param>
+          <type><ref refid="de/d68/structimage" kindref="compound">image</ref> *</type>
+          <declname>predicted_samples</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>decoder.h <simplesect kind="authors"><para>@Kevin-Caldwell @BrianShTsoi</para>
+</simplesect>
+Functions for Decoding an image from a .HSP file</para>
+<para>Features Functions for Independently Decoding the Header and Body, or both if necessary.</para>
+<para>Uses Core File of the Decoder Module</para>
+<para>Dependencies <ref refid="d5/db2/image_8h" kindref="compound">image.h</ref></para>
+<para>Internal Dependencies stdio.h inttypes.h</para>
+<para>TODO Finish Decoder_DecodeBody Finish Decoder_DecodeHeader Finish Decoder_DecodeImage </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/decoder.c" line="40" column="6" bodyfile="src/decoder.c" bodystart="40" bodyend="133"/>
+        <references refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" compoundref="d2/de2/math__functions_8h" startline="34">BPOW</references>
+        <references refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" compoundref="d4/df3/constants_8c" startline="63">D</references>
+        <references refid="d9/d7f/file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c" compoundref="d9/da2/file___i_o_8c" startline="11" endline="16">F_OPEN</references>
+        <references refid="d7/ddb/encoder__constants_8h_1a14069285fee7428b1929cb23a4b1561c" compoundref="d6/da2/encoder__body_8c" startline="7">Gamma1</references>
+        <references refid="d0/d77/body_8h_1a0bbf3cd743f1631577f828fa3d85ccf7" compoundref="d0/d77/body_8h" startline="36">GAMMA_STAR</references>
+        <references refid="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" compoundref="d6/d19/decoder_8c" startline="17" endline="37">increment_xyz</references>
+        <references refid="d7/ddb/encoder__constants_8h_1a2689c4b3931025b79053532a5f1b0a85" compoundref="d6/da2/encoder__body_8c" startline="5">K</references>
+        <references refid="d2/de2/math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" compoundref="d2/de2/math__functions_8h" startline="17">NULL</references>
+        <references refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" compoundref="d6/dce/reconstructor_8c" startline="5">sample</references>
+        <references refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" compoundref="d3/d10/image_8c" startline="66" endline="69">SetPixel</references>
+        <references refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" compoundref="d5/db2/image_8h" startline="66">image::size</references>
+        <references refid="d7/ddb/encoder__constants_8h_1a706ff4e6123594c36b0894c248a25ff7" compoundref="d6/da2/encoder__body_8c" startline="6">U_max</references>
+        <references refid="d5/d5e/var_int_file___i_o_8h_1ad54b8d6492e4c149c7f1232e3eda58be" compoundref="d7/db9/var_int_file___i_o_8c" startline="97" endline="103">VUF_close</references>
+        <references refid="d5/d5e/var_int_file___i_o_8h_1a07ca21a87dab6f536b7f4d69050f5602" compoundref="d7/db9/var_int_file___i_o_8c" startline="14" endline="40">VUF_initialize</references>
+        <references refid="d5/d5e/var_int_file___i_o_8h_1aafa9034f88afca6a726a84673d063889" compoundref="d7/db9/var_int_file___i_o_8c" startline="73" endline="95">VUF_read_stack</references>
+        <references refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" compoundref="d9/d7f/file___i_o_8h" startline="26">WRITE</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="d6/d19/decoder_8c_1a760ca18536e4e5b09a2cad3509f700ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TestDecoder</definition>
+        <argsstring>(char *filename)</argsstring>
+        <name>TestDecoder</name>
+        <param>
+          <type>char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/decoder.c" line="135" column="6" bodyfile="src/decoder.c" bodystart="135" bodyend="138"/>
+        <referencedby refid="df/dee/decompressor_8c_1a048af25ea3eb0571ab780e44e221650e" compoundref="df/dee/decompressor_8c" startline="8" endline="20">main</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/dbb/decompressor_2decoder_8h" kindref="compound">decompressor/decoder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/d81/stream__encoder_8h" kindref="compound">encoder/stream_encoder.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/d5e/var_int_file___i_o_8h" kindref="compound">files/varIntFile_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d2/de2/math__functions_8h" kindref="compound">math/math_functions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/d5e/var_int_file___i_o_8h" kindref="compound">files/varIntFile_IO.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/ddb/encoder__constants_8h" kindref="compound">constants/encoder_constants.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/d77/body_8h" kindref="compound">encoder/body.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>int<sp/>K<sp/>=<sp/>0;<sp/>//<sp/>CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT,<sp/>0,<sp/>MIN(D-2,<sp/>14));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>unsigned<sp/>int<sp/>U_max<sp/>=<sp/>CLIP(UNARY_LENGTH_LIMIT,<sp/>8,<sp/>32);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>int<sp/>Gamma1<sp/>=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" kindref="member">increment_xyz</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*z,<sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="d2/d6f/constants_8h_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref>,<sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="d2/d6f/constants_8h_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref>,<sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="d2/d6f/constants_8h_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*x<sp/>&lt;<sp/><ref refid="d2/d6f/constants_8h_1abfda77b016218238359bcc3e5c1600b0" kindref="member">Nx</ref><sp/>-<sp/>1)<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*x)++;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*y<sp/>&lt;<sp/><ref refid="d2/d6f/constants_8h_1adcc9183c4659dc09e04e5ede1d79215b" kindref="member">Ny</ref><sp/>-<sp/>1)<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*y)++;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*z<sp/>&lt;<sp/><ref refid="d2/d6f/constants_8h_1a7a7576e08f5980d322da5f48c7385edc" kindref="member">Nz</ref><sp/>-<sp/>1)<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*z)++;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="d8/dbb/decompressor_2decoder_8h_1aed4e95d0c6d50bc3f99264337e2f9fb8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d19/decoder_8c_1aed4e95d0c6d50bc3f99264337e2f9fb8" kindref="member">Decoder_DecodeBody</ref>(<ref refid="de/d68/structimage" kindref="compound">image</ref>*<sp/>predicted_samples,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>file_name){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/>y,<sp/>z;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>K_ZPRIME<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="d7/ddb/encoder__constants_8h_1a2689c4b3931025b79053532a5f1b0a85" kindref="member">K</ref><sp/>&lt;=<sp/>30<sp/>-<sp/><ref refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_ZPRIME<sp/>=<sp/><ref refid="d7/ddb/encoder__constants_8h_1a2689c4b3931025b79053532a5f1b0a85" kindref="member">K</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>K_ZPRIME<sp/>=<sp/>2<sp/>*<sp/><ref refid="d7/ddb/encoder__constants_8h_1a2689c4b3931025b79053532a5f1b0a85" kindref="member">K</ref><sp/>+<sp/><ref refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref><sp/>-<sp/>30;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>sz<sp/>=<sp/>predicted_samples-&gt;<ref refid="de/d68/structimage_1a92c57811a03d78e56a6e8592f96a41ad" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>gamma;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>epsilon_z;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>k_z;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d7f/file___i_o_8h_1aaa4f66633ab727c9d841db141c3da088" kindref="member">file_t</ref><sp/>*log<sp/>=<sp/><ref refid="d9/d7f/file___i_o_8h_1a05d25080a4592a86386f6d0d3d48496c" kindref="member">F_OPEN</ref>(</highlight><highlight class="stringliteral">&quot;../data/logs/c-decoder-debug.LOG&quot;</highlight><highlight class="normal">,<sp/><ref refid="d9/d7f/file___i_o_8h_1a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc" kindref="member">WRITE</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/ddd/struct_var_unsigned_int_file" kindref="compound">VUF</ref><sp/>stream;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d5e/var_int_file___i_o_8h_1a07ca21a87dab6f536b7f4d69050f5602" kindref="member">VUF_initialize</ref>(&amp;stream,<sp/>file_name,<sp/>1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>start<sp/>=<sp/>time(<ref refid="d2/de2/math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(0)<sp/>{<sp/></highlight><highlight class="comment">//TODO<sp/>/*stream<sp/>not<sp/>empty*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>y<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gamma<sp/>=<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(<ref refid="d7/ddb/encoder__constants_8h_1a14069285fee7428b1929cb23a4b1561c" kindref="member">Gamma1</ref>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>epsilon_z<sp/>=<sp/>((3<sp/>*<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int)<ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(K_ZPRIME<sp/>+<sp/>6)<sp/>-<sp/>49)<sp/>*<sp/>gamma)<sp/>/<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(7);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>read<sp/>the<sp/>first<sp/>code<sp/>word,<sp/>which<sp/>has<sp/>len<sp/>D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref><sp/>=<sp/><ref refid="d5/d5e/var_int_file___i_o_8h_1aafa9034f88afca6a726a84673d063889" kindref="member">VUF_read_stack</ref>(&amp;stream,<sp/><ref refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" kindref="member">SetPixel</ref>(predicted_samples,<sp/>x,<sp/>y,<sp/>z,<sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" kindref="member">increment_xyz</ref>(&amp;x,<sp/>&amp;y,<sp/>&amp;z,<sp/>sz.<ref refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>,<sp/>sz.<ref refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>,<sp/>sz.<ref refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(2<sp/>*<sp/>gamma<sp/>&gt;<sp/>epsilon_z<sp/>+<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)49<sp/>*<sp/>gamma)<sp/>/<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(7)))<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>;<sp/>i<sp/>&gt;=<sp/>0;<sp/>i--)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((gamma<sp/>*<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(i))<sp/>&lt;=<sp/>(epsilon_z<sp/>+<sp/>((49u<sp/>*<sp/>gamma)<sp/>&gt;&gt;<sp/>7)))</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k_z<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inverse<sp/>GolombPowerTwo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bit;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>j;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>q<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(0)<sp/>{<sp/></highlight><highlight class="comment">/*<sp/>Stream<sp/>not<sp/>empty<sp/>&amp;&amp;<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bit<sp/>=<sp/><ref refid="d5/d5e/var_int_file___i_o_8h_1aafa9034f88afca6a726a84673d063889" kindref="member">VUF_read_stack</ref>(&amp;stream,<sp/>1);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bit<sp/>==<sp/>1)<sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>q++;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q<sp/>==<sp/><ref refid="d7/ddb/encoder__constants_8h_1a706ff4e6123594c36b0894c248a25ff7" kindref="member">U_max</ref>)<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(q<sp/>==<sp/><ref refid="d7/ddb/encoder__constants_8h_1a706ff4e6123594c36b0894c248a25ff7" kindref="member">U_max</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref><sp/>=<sp/><ref refid="d5/d5e/var_int_file___i_o_8h_1aafa9034f88afca6a726a84673d063889" kindref="member">VUF_read_stack</ref>(&amp;stream,<sp/><ref refid="d2/d6f/constants_8h_1abf6d0ccec2f5157184071729f129de19" kindref="member">D</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(k_z<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref><sp/>=<sp/><ref refid="d5/d5e/var_int_file___i_o_8h_1aafa9034f88afca6a726a84673d063889" kindref="member">VUF_read_stack</ref>(&amp;stream,<sp/>k_z);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref><sp/>+=<sp/>q<sp/>*<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(k_z);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d5/db2/image_8h_1aefaa1253ccc17864ac32b9d685b821d4" kindref="member">SetPixel</ref>(predicted_samples,<sp/>x,<sp/>y,<sp/>z,<sp/><ref refid="d6/dce/reconstructor_8c_1af83a02e01aaaa90418285249879dd545" kindref="member">sample</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(x<sp/>==<sp/>sz.<ref refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref><sp/>-<sp/>1<sp/>&amp;&amp;<sp/>y<sp/>==<sp/>sz.<ref refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref><sp/>-<sp/>1<sp/>&amp;&amp;<sp/>z<sp/>==<sp/>sz.<ref refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref><sp/>-<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d6/d19/decoder_8c_1aeb5d9c2d8630941218ec7b26a666bd61" kindref="member">increment_xyz</ref>(&amp;x,<sp/>&amp;y,<sp/>&amp;z,<sp/>sz.<ref refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>,<sp/>sz.<ref refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>,<sp/>sz.<ref refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gamma<sp/>&lt;<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(<ref refid="d0/d77/body_8h_1a0bbf3cd743f1631577f828fa3d85ccf7" kindref="member">GAMMA_STAR</ref>)<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>epsilon_z<sp/>+=<sp/>data;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gamma++;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gamma<sp/>==<sp/><ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(<ref refid="d0/d77/body_8h_1a0bbf3cd743f1631577f828fa3d85ccf7" kindref="member">GAMMA_STAR</ref>)<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>epsilon_z<sp/>=<sp/>(epsilon_z<sp/>+<sp/>data<sp/>+<sp/>1)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gamma<sp/>=<sp/>(gamma<sp/>+<sp/>1)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d5e/var_int_file___i_o_8h_1ad54b8d6492e4c149c7f1232e3eda58be" kindref="member">VUF_close</ref>(&amp;stream);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>time_t<sp/>end<sp/>=<sp/>time(<ref refid="d2/de2/math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" kindref="member">NULL</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="d8/dbb/decompressor_2decoder_8h_1a760ca18536e4e5b09a2cad3509f700ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d6/d19/decoder_8c_1a760ca18536e4e5b09a2cad3509f700ba" kindref="member">TestDecoder</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Testing<sp/>Decoder...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>TODO<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/decoder.c"/>
+  </compounddef>
+</doxygen>

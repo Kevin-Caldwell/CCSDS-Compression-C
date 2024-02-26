@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_constants_8c" xml:lang="en-US">
+<title>src/constants.c File Reference</title>
+<indexterm><primary>src/constants.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;constants/constants.h&quot;<?linebreak?></programlisting>Include dependency graph for constants.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/de9/constants_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_constants_8c_1a45cfb0527526c2a0aec021d50a279091">GET_PCONST</link>(x)&#160;&#160;&#160;(<link linkend="_hash__table_8h_1a27578c1b5a3ab68d8f144ed86ea72cc2">Hash_GetValue</link>(&amp;<link linkend="_global__constants_8h_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link>, x))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_constants_8c_1af84e7b9bd8c4fa1203b0040adf941d8d">InitalizeImageConstants</link> (<link linkend="_structdim3">dim3</link> size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_constants_8c_1a6acd65af9a2f057ad3f0891038799e5b">InitalizePredictorConstants</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_constants_8c_1abfda77b016218238359bcc3e5c1600b0">Nx</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1adcc9183c4659dc09e04e5ede1d79215b">Ny</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a7a7576e08f5980d322da5f48c7385edc">Nz</link> = 0</para>
+</listitem>
+            <listitem><para><link linkend="_struct_hash_table">HashTable</link> <link linkend="_constants_8c_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_hash_table">HashTable</link> <link linkend="_constants_8c_1a3c652412cc269bd4ae6155fed5f79c6f">encoder_constants</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a9f28821bcbb645a7c3ab8a0228335fc5">kUnsignedSamples</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1ab11dcc700999baf22e51630cc1e0d7ed">LOCAL_SUM_TYPE</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1aee5860bd3e62fe2734ce27a1b1038dbc">PREDICTION_MODE</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1abf6d0ccec2f5157184071729f129de19">D</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a277c6f02ad4604307ae5ed6d8e4f9630">Da</link> = 0</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_constants_8c_1add3510c03fbe63c1b97c67aac517c930">kSmin</link> = 0</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_constants_8c_1a0dca58ddf3108a022c36b549baa6ec46">kSmid</link> = 0</para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_constants_8c_1a8329a1a244af278852519dfccd0d4814">kSmax</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a21c169290a6c782855c778bb7a0389b9">kP</link> = 0</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_constants_8c_1a43cf89f028c6b6ad01038627b83a84c0">kR</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a85fbef56eedaaa1a29a9f0c18ba53631">kVMax</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a68b61249aa9c541a3ed6d1987b8c53ce">kVMin</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a2481969fa62464bdc5889190f3e10f31">kTInc</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a515cdf0341e52056bcea8e46c952ee82">Omega</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1afe552e4b168b0821a5cb40ca9f8df744">kOmegaMin</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1a919504d752286a3ecacfab4792035e7c">kOmegaMax</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="_constants_8c_1ac27421de69856578bf77ce84bfa82974">m_z</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_constants_8c_1a45cfb0527526c2a0aec021d50a279091"/><section>
+    <title>GET_PCONST</title>
+<indexterm><primary>GET_PCONST</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>GET_PCONST</secondary></indexterm>
+<para><computeroutput>#define GET_PCONST( x)&#160;&#160;&#160;(<link linkend="_hash__table_8h_1a27578c1b5a3ab68d8f144ed86ea72cc2">Hash_GetValue</link>(&amp;<link linkend="_global__constants_8h_1a3e84b5148948a9a22f804ac78d16590c">predictor_constants</link>, x))</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00010">10</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_constants_8c_1af84e7b9bd8c4fa1203b0040adf941d8d"/><section>
+    <title>InitalizeImageConstants()</title>
+<indexterm><primary>InitalizeImageConstants</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>InitalizeImageConstants</secondary></indexterm>
+<para><computeroutput>void InitalizeImageConstants (<link linkend="_structdim3">dim3</link> size)</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00003">3</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/df3/constants_8c_af84e7b9bd8c4fa1203b0040adf941d8d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_constants_8c_1a6acd65af9a2f057ad3f0891038799e5b"/><section>
+    <title>InitalizePredictorConstants()</title>
+<indexterm><primary>InitalizePredictorConstants</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>InitalizePredictorConstants</secondary></indexterm>
+<para><computeroutput>void InitalizePredictorConstants ( )</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00012">12</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d4/df3/constants_8c_a6acd65af9a2f057ad3f0891038799e5b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_constants_8c_1abf6d0ccec2f5157184071729f129de19"/><section>
+    <title>D</title>
+<indexterm><primary>D</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>D</secondary></indexterm>
+<para><computeroutput>int D = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00063">63</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a277c6f02ad4604307ae5ed6d8e4f9630"/><section>
+    <title>Da</title>
+<indexterm><primary>Da</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>Da</secondary></indexterm>
+<para><computeroutput>int Da = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00064">64</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a3c652412cc269bd4ae6155fed5f79c6f"/><section>
+    <title>encoder_constants</title>
+<indexterm><primary>encoder_constants</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>encoder_constants</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_hash_table">HashTable</link> encoder_constants</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00056">56</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a919504d752286a3ecacfab4792035e7c"/><section>
+    <title>kOmegaMax</title>
+<indexterm><primary>kOmegaMax</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kOmegaMax</secondary></indexterm>
+<para><computeroutput>int kOmegaMax = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00079">79</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1afe552e4b168b0821a5cb40ca9f8df744"/><section>
+    <title>kOmegaMin</title>
+<indexterm><primary>kOmegaMin</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kOmegaMin</secondary></indexterm>
+<para><computeroutput>int kOmegaMin = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00078">78</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a21c169290a6c782855c778bb7a0389b9"/><section>
+    <title>kP</title>
+<indexterm><primary>kP</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kP</secondary></indexterm>
+<para><computeroutput>int kP = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00070">70</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a43cf89f028c6b6ad01038627b83a84c0"/><section>
+    <title>kR</title>
+<indexterm><primary>kR</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kR</secondary></indexterm>
+<para><computeroutput>int64_t kR = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00071">71</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a8329a1a244af278852519dfccd0d4814"/><section>
+    <title>kSmax</title>
+<indexterm><primary>kSmax</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kSmax</secondary></indexterm>
+<para><computeroutput>unsigned int kSmax = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00068">68</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a0dca58ddf3108a022c36b549baa6ec46"/><section>
+    <title>kSmid</title>
+<indexterm><primary>kSmid</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kSmid</secondary></indexterm>
+<para><computeroutput>unsigned int kSmid = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00067">67</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1add3510c03fbe63c1b97c67aac517c930"/><section>
+    <title>kSmin</title>
+<indexterm><primary>kSmin</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kSmin</secondary></indexterm>
+<para><computeroutput>unsigned int kSmin = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00066">66</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a2481969fa62464bdc5889190f3e10f31"/><section>
+    <title>kTInc</title>
+<indexterm><primary>kTInc</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kTInc</secondary></indexterm>
+<para><computeroutput>int kTInc = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00075">75</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a9f28821bcbb645a7c3ab8a0228335fc5"/><section>
+    <title>kUnsignedSamples</title>
+<indexterm><primary>kUnsignedSamples</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kUnsignedSamples</secondary></indexterm>
+<para><computeroutput>int kUnsignedSamples = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00058">58</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a85fbef56eedaaa1a29a9f0c18ba53631"/><section>
+    <title>kVMax</title>
+<indexterm><primary>kVMax</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kVMax</secondary></indexterm>
+<para><computeroutput>int kVMax = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00073">73</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a68b61249aa9c541a3ed6d1987b8c53ce"/><section>
+    <title>kVMin</title>
+<indexterm><primary>kVMin</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>kVMin</secondary></indexterm>
+<para><computeroutput>int kVMin = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00074">74</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1ab11dcc700999baf22e51630cc1e0d7ed"/><section>
+    <title>LOCAL_SUM_TYPE</title>
+<indexterm><primary>LOCAL_SUM_TYPE</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>LOCAL_SUM_TYPE</secondary></indexterm>
+<para><computeroutput>int LOCAL_SUM_TYPE = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00059">59</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1ac27421de69856578bf77ce84bfa82974"/><section>
+    <title>m_z</title>
+<indexterm><primary>m_z</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>m_z</secondary></indexterm>
+<para><computeroutput>int m_z</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00081">81</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1abfda77b016218238359bcc3e5c1600b0"/><section>
+    <title>Nx</title>
+<indexterm><primary>Nx</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>Nx</secondary></indexterm>
+<para><computeroutput>int Nx = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00051">51</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1adcc9183c4659dc09e04e5ede1d79215b"/><section>
+    <title>Ny</title>
+<indexterm><primary>Ny</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>Ny</secondary></indexterm>
+<para><computeroutput>int Ny = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00052">52</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a7a7576e08f5980d322da5f48c7385edc"/><section>
+    <title>Nz</title>
+<indexterm><primary>Nz</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>Nz</secondary></indexterm>
+<para><computeroutput>int Nz = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00053">53</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a515cdf0341e52056bcea8e46c952ee82"/><section>
+    <title>Omega</title>
+<indexterm><primary>Omega</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>Omega</secondary></indexterm>
+<para><computeroutput>int Omega = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00077">77</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1aee5860bd3e62fe2734ce27a1b1038dbc"/><section>
+    <title>PREDICTION_MODE</title>
+<indexterm><primary>PREDICTION_MODE</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>PREDICTION_MODE</secondary></indexterm>
+<para><computeroutput>int PREDICTION_MODE = 0</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00061">61</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+<anchor xml:id="_constants_8c_1a3e84b5148948a9a22f804ac78d16590c"/><section>
+    <title>predictor_constants</title>
+<indexterm><primary>predictor_constants</primary><secondary>constants.c</secondary></indexterm>
+<indexterm><primary>constants.c</primary><secondary>predictor_constants</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_hash_table">HashTable</link> predictor_constants</computeroutput></para><para>
+Definition at line <link linkend="_constants_8c_source_1l00055">55</link> of file <link linkend="_constants_8c_source">constants.c</link>.</para>
+</section>
+</section>
+</section>

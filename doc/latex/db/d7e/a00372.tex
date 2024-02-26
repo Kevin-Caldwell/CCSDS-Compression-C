@@ -1,0 +1,67 @@
+\doxysection{Predictor\+Cache Struct Reference}
+\hypertarget{a00372}{}\label{a00372}\index{PredictorCache@{PredictorCache}}
+
+
+Struct \doxylink{a00372}{Predictor\+Cache} is a struct for storing the intermediate results obtained through the predictor.  
+
+
+
+
+{\ttfamily \#include $<$cache\+\_\+predictor.\+h$>$}
+
+
+
+Collaboration diagram for Predictor\+Cache\+:
+% FIG 0
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00372_a847490dd84d456f3e80b13a3be6ddfac}{cache\+\_\+space}} \mbox{[}1\mbox{]}
+\item 
+int32\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00372_a8ffc318fbdca60414a190de33e244826}{weights}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struct \doxylink{a00372}{Predictor\+Cache} is a struct for storing the intermediate results obtained through the predictor. 
+
+cache\+\_\+space\+: dynamically allocated image array for storing multiple images
+
+weights\+: dynamcially allocated int32\+\_\+t array for storing the weights
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{a00354__deprecated000002}{Deprecated}}]The Predictor testing has been re-\/implemented to accomodate more streamlined and memory-\/efficient debugging processes.\end{DoxyRefDesc}
+
+
+See \doxylink{a00344}{predictor.\+c} for more details 
+
+Definition at line \mbox{\hyperlink{a00074_source_l00032}{32}} of file \mbox{\hyperlink{a00074_source}{cache\+\_\+predictor.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{a00372_a847490dd84d456f3e80b13a3be6ddfac}\label{a00372_a847490dd84d456f3e80b13a3be6ddfac} 
+\index{PredictorCache@{PredictorCache}!cache\_space@{cache\_space}}
+\index{cache\_space@{cache\_space}!PredictorCache@{PredictorCache}}
+\doxysubsubsection{\texorpdfstring{cache\_space}{cache\_space}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00380}{image}}\texorpdfstring{$\ast$}{*} cache\+\_\+space\mbox{[}1\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{a00074_source_l00033}{33}} of file \mbox{\hyperlink{a00074_source}{cache\+\_\+predictor.\+h}}.
+
+\Hypertarget{a00372_a8ffc318fbdca60414a190de33e244826}\label{a00372_a8ffc318fbdca60414a190de33e244826} 
+\index{PredictorCache@{PredictorCache}!weights@{weights}}
+\index{weights@{weights}!PredictorCache@{PredictorCache}}
+\doxysubsubsection{\texorpdfstring{weights}{weights}}
+{\footnotesize\ttfamily int32\+\_\+t\texorpdfstring{$\ast$}{*} weights}
+
+
+
+Definition at line \mbox{\hyperlink{a00074_source_l00034}{34}} of file \mbox{\hyperlink{a00074_source}{cache\+\_\+predictor.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/cache/\mbox{\hyperlink{a00074}{cache\+\_\+predictor.\+h}}\end{DoxyCompactItemize}

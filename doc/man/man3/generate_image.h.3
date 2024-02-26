@@ -1,0 +1,70 @@
+.TH "include/testing/generate_image.h" 3 "Version 1.0" "Hyperspectral Image Compression" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/testing/generate_image.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'predictor/predictor\&.h'\fP
+.br
+\fC#include 'encoder/header\&.h'\fP
+.br
+\fC#include 'files/csv\-io\&.h'\fP
+.br
+\fC#include 'testing/synthetic_image_generator\&.h'\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBTestHeader\fP ()"
+.br
+.ti -1c
+.RI "void \fBTestReadImage\fP ()"
+.br
+.ti -1c
+.RI "int \fBPredictImage\fP (char *source, char *destination)"
+.br
+.ti -1c
+.RI "int \fBEncodeImage\fP (char *source, char *destination)"
+.br
+.ti -1c
+.RI "int \fBCompressImage\fP (char *source, char *destination)"
+.br
+.ti -1c
+.RI "int \fBGenerateVoronoiImage\fP (\fBdim3\fP size, int index, int points)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int CompressImage (char * source, char * destination)"
+
+.PP
+Definition at line \fB100\fP of file \fBgenerate_image\&.c\fP\&.
+.SS "int EncodeImage (char * source, char * destination)"
+
+.PP
+Definition at line \fB84\fP of file \fBgenerate_image\&.c\fP\&.
+.SS "int GenerateVoronoiImage (\fBdim3\fP size, int index, int points)"
+
+.PP
+Definition at line \fB5\fP of file \fBgenerate_image\&.c\fP\&.
+.SS "int PredictImage (char * source, char * destination)"
+
+.PP
+Definition at line \fB21\fP of file \fBgenerate_image\&.c\fP\&.
+.SS "void TestHeader ()"
+
+.PP
+Definition at line \fB104\fP of file \fBgenerate_image\&.c\fP\&.
+.SS "void TestReadImage ()"
+
+.PP
+Definition at line \fB111\fP of file \fBgenerate_image\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Hyperspectral Image Compression from the source code\&.

@@ -1,0 +1,865 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d2/de2/math__functions_8h" kind="file" language="C++">
+    <compoundname>math_functions.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includedby refid="d2/d6f/constants_8h" local="yes">include/constants/constants.h</includedby>
+    <includedby refid="d7/ddb/encoder__constants_8h" local="yes">include/constants/encoder_constants.h</includedby>
+    <includedby refid="de/d32/reconstructor_8h" local="yes">include/decompressor/reconstructor.h</includedby>
+    <includedby refid="d5/db2/image_8h" local="yes">include/dst/image.h</includedby>
+    <includedby refid="d0/d77/body_8h" local="yes">include/encoder/body.h</includedby>
+    <includedby refid="d8/d60/uhi__io_8h" local="yes">include/files/uhi_io.h</includedby>
+    <includedby refid="dc/d9c/linear__algebra_8h" local="yes">include/math/linear_algebra.h</includedby>
+    <includedby refid="d2/df3/local__differences_8h" local="yes">include/predictor/local_differences.h</includedby>
+    <includedby refid="dc/d08/predictor_8h" local="yes">include/predictor/predictor.h</includedby>
+    <includedby refid="d1/d38/quantizer_8h" local="yes">include/predictor/quantizer.h</includedby>
+    <includedby refid="d9/dea/synthetic__image__generator_8h" local="yes">include/testing/synthetic_image_generator.h</includedby>
+    <includedby refid="d6/d19/decoder_8c" local="yes">src/decoder.c</includedby>
+    <includedby refid="d3/d2d/math__functions_8c" local="yes">src/math_functions.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>inttypes.h</label>
+      </node>
+      <node id="3">
+        <label>math.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="2">
+        <label>stdlib.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>include/cache/cache_predictor.h</label>
+        <link refid="df/d01/cache__predictor_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/constants/constants.h</label>
+        <link refid="d2/d6f/constants_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>include/constants/encoder_constants.h</label>
+        <link refid="d7/ddb/encoder__constants_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>include/decompressor/decoder.h</label>
+        <link refid="d8/dbb/decompressor_2decoder_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>include/decompressor/reconstructor.h</label>
+        <link refid="de/d32/reconstructor_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>include/dst/image.h</label>
+        <link refid="d5/db2/image_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>include/encoder/body.h</label>
+        <link refid="d0/d77/body_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>include/encoder/header.h</label>
+        <link refid="df/dcb/header_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>include/files/csv-io.h</label>
+        <link refid="d6/d51/csv-io_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>include/files/uhi_io.h</label>
+        <link refid="d8/d60/uhi__io_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>include/math/linear_algebra.h</label>
+        <link refid="dc/d9c/linear__algebra_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/math/math_functions.h</label>
+        <link refid="d2/de2/math__functions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>include/predictor/local_differences.h</label>
+        <link refid="d2/df3/local__differences_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>include/predictor/local_sum.h</label>
+        <link refid="d6/d9d/local__sum_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>include/predictor/predictor.h</label>
+        <link refid="dc/d08/predictor_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>include/predictor/quantizer.h</label>
+        <link refid="d1/d38/quantizer_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>include/predictor/sample_representative.h</label>
+        <link refid="df/d7d/sample__representative_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>include/predictor/weights.h</label>
+        <link refid="d2/d6a/weights_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>include/testing/generate_image.h</label>
+        <link refid="df/d7b/generate__image_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>include/testing/perlin.h</label>
+        <link refid="d1/d9c/perlin_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>include/testing/synthetic_image_generator.h</label>
+        <link refid="d9/dea/synthetic__image__generator_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>include/testing/test_UHI.h</label>
+        <link refid="d0/dbe/test___u_h_i_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>main/compressor.c</label>
+        <link refid="da/db2/compressor_8c"/>
+      </node>
+      <node id="15">
+        <label>main/decompressor.c</label>
+        <link refid="df/dee/decompressor_8c"/>
+      </node>
+      <node id="11">
+        <label>main/image_handler.c</label>
+        <link refid="d1/d6e/image__handler_8c"/>
+      </node>
+      <node id="30">
+        <label>src/cache_predictor.c</label>
+        <link refid="dc/d99/cache__predictor_8c"/>
+      </node>
+      <node id="44">
+        <label>src/constants.c</label>
+        <link refid="d4/df3/constants_8c"/>
+      </node>
+      <node id="34">
+        <label>src/csv-io.c</label>
+        <link refid="df/df6/csv-io_8c"/>
+      </node>
+      <node id="5">
+        <label>src/decoder.c</label>
+        <link refid="d6/d19/decoder_8c"/>
+      </node>
+      <node id="6">
+        <label>src/encoder_body.c</label>
+        <link refid="d6/da2/encoder__body_8c"/>
+      </node>
+      <node id="13">
+        <label>src/encoder_constants.c</label>
+        <link refid="d5/d79/encoder__constants_8c"/>
+      </node>
+      <node id="7">
+        <label>src/generate_image.c</label>
+        <link refid="d6/d92/generate__image_8c"/>
+      </node>
+      <node id="12">
+        <label>src/header.c</label>
+        <link refid="df/db9/header_8c"/>
+      </node>
+      <node id="40">
+        <label>src/image.c</label>
+        <link refid="d3/d10/image_8c"/>
+      </node>
+      <node id="43">
+        <label>src/linear_algebra.c</label>
+        <link refid="df/d91/linear__algebra_8c"/>
+      </node>
+      <node id="29">
+        <label>src/local_differences.c</label>
+        <link refid="d8/d97/local__differences_8c"/>
+      </node>
+      <node id="31">
+        <label>src/local_sum.c</label>
+        <link refid="db/d31/local__sum_8c"/>
+      </node>
+      <node id="47">
+        <label>src/math_functions.c</label>
+        <link refid="d3/d2d/math__functions_8c"/>
+      </node>
+      <node id="35">
+        <label>src/perlin_noise.c</label>
+        <link refid="d1/d32/perlin__noise_8c"/>
+      </node>
+      <node id="24">
+        <label>src/predictor.c</label>
+        <link refid="db/d25/predictor_8c"/>
+      </node>
+      <node id="27">
+        <label>src/quantizer.c</label>
+        <link refid="dc/df1/quantizer_8c"/>
+      </node>
+      <node id="16">
+        <label>src/reconstructor.c</label>
+        <link refid="d6/dce/reconstructor_8c"/>
+      </node>
+      <node id="28">
+        <label>src/sample_representative.c</label>
+        <link refid="d7/d58/sample__representative_8c"/>
+      </node>
+      <node id="38">
+        <label>src/synthetic_image_generator.c</label>
+        <link refid="d5/d40/synthetic__image__generator_8c"/>
+      </node>
+      <node id="39">
+        <label>src/test_UHI.c</label>
+        <link refid="d1/dfd/test___u_h_i_8c"/>
+      </node>
+      <node id="41">
+        <label>src/uhi_io.c</label>
+        <link refid="d6/d7a/uhi__io_8c"/>
+      </node>
+      <node id="26">
+        <label>src/weights.c</label>
+        <link refid="d0/d26/weights_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/db3/structdim3" prot="public">dim3</innerclass>
+    <innerclass refid="dd/dec/structdim2" prot="public">dim2</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="d2/de2/math__functions_8h" kindref="compound">math_functions.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+</simplesect>
+Mathematical Helper Functions for use throughout code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="17" column="9" bodyfile="include/math/math_functions.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e" prot="public" static="no">
+        <name>CLIP</name>
+        <param><defname>x</defname></param>
+        <param><defname>min_val</defname></param>
+        <param><defname>max_val</defname></param>
+        <initializer>((x) &lt; (min_val) ? (min_val) : ((x) &gt; (max_val) ? (max_val) : (x)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="21" column="9" bodyfile="include/math/math_functions.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1aa26f9f0c05aaa0b3935ffee8b9b040cd" prot="public" static="no">
+        <name>INSIDE_INTERVAL</name>
+        <param><defname>x</defname></param>
+        <param><defname>min</defname></param>
+        <param><defname>max</defname></param>
+        <initializer>( min &lt; x &amp;&amp; x &lt; max )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="23" column="9" bodyfile="include/math/math_functions.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a67f67d2902bd4730eb69f82fcf008401" prot="public" static="no">
+        <name>OUTSIDE_INTERVAL</name>
+        <param><defname>x</defname></param>
+        <param><defname>min</defname></param>
+        <param><defname>max</defname></param>
+        <initializer>( min &gt; x || x &gt; max )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="24" column="9" bodyfile="include/math/math_functions.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a8c5ff70b6b28cd0157c50a22406f92c4" prot="public" static="no">
+        <name>SIGN</name>
+        <param><defname>x</defname></param>
+        <initializer>x &lt; 0 ? -1 : (x &gt; 0 ? 1 : 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="26" column="9" bodyfile="include/math/math_functions.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a5f76d4dda1e368d45e059912932c7b60" prot="public" static="no">
+        <name>SIGN_P</name>
+        <param><defname>x</defname></param>
+        <initializer>(x &lt; 0 ? -1 : 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="27" column="9" bodyfile="include/math/math_functions.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a16c5207cff1677a5fde882e81a7d58bd" prot="public" static="no">
+        <name>MOD</name>
+        <param><defname>x</defname></param>
+        <param><defname>R</defname></param>
+        <initializer>((x + <ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(R - 1)) % <ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(R) - <ref refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" kindref="member">BPOW</ref>(R - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="29" column="9" bodyfile="include/math/math_functions.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" prot="public" static="no">
+        <name>MAX</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(a &gt; b ? a : b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="31" column="9" bodyfile="include/math/math_functions.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" prot="public" static="no">
+        <name>MIN</name>
+        <param><defname>a</defname></param>
+        <param><defname>b</defname></param>
+        <initializer>(a &lt; b ? a : b)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="32" column="9" bodyfile="include/math/math_functions.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" prot="public" static="no">
+        <name>BPOW</name>
+        <param><defname>x</defname></param>
+        <initializer>(1 &lt;&lt; (x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="34" column="9" bodyfile="include/math/math_functions.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d2/de2/math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc" prot="public" static="no">
+        <name>SQ</name>
+        <param><defname>x</defname></param>
+        <initializer>((x)*(x))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="36" column="9" bodyfile="include/math/math_functions.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92" prot="public" static="no" strong="no">
+        <type></type>
+        <name>RetVal</name>
+        <enumvalue id="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59" prot="public">
+          <name>OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Error Codes: TODO. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="44" column="1" bodyfile="include/math/math_functions.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t DIM</definition>
+        <argsstring></argsstring>
+        <name>DIM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="38" column="16" bodyfile="include/math/math_functions.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int UINT</definition>
+        <argsstring></argsstring>
+        <name>UINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="39" column="22" bodyfile="include/math/math_functions.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t PIXEL</definition>
+        <argsstring></argsstring>
+        <name>PIXEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="40" column="18" bodyfile="include/math/math_functions.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t INDEX</definition>
+        <argsstring></argsstring>
+        <name>INDEX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="41" column="18" bodyfile="include/math/math_functions.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/de2/math__functions_8h_1af3273ad069a5db23c87cf0547340e6fa" prot="public" static="no">
+        <type>struct <ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+        <definition>typedef struct dim3 dim3</definition>
+        <argsstring></argsstring>
+        <name>dim3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>3D Dimension Struct, used to describe size and 3D-Indicies.</para>
+<para>Spatial Dimensions: x, y Spectral Band: z </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="62" column="6"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d2/de2/math__functions_8h_1a25a1b999e489d87de5f6ae6f37cba079" prot="public" static="no">
+        <type>struct <ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+        <definition>typedef struct dim2 dim2</definition>
+        <argsstring></argsstring>
+        <name>dim2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="67" column="6"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="d2/de2/math__functions_8h_1a61e36d5241561d1bc112c291a3262565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Euclidian2</definition>
+        <argsstring>(dim2 pt1, dim2 pt2)</argsstring>
+        <name>Euclidian2</name>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="69" column="6" bodyfile="src/math_functions.c" bodystart="3" bodyend="5" declfile="include/math/math_functions.h" declline="69" declcolumn="6"/>
+        <references refid="d2/de2/math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc" compoundref="d2/de2/math__functions_8h" startline="36">SQ</references>
+        <references refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="65">dim2::x</references>
+        <references refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="66">dim2::y</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/de2/math__functions_8h_1adfddd321b4840c92df9f1d48e11c657e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Euclidian3</definition>
+        <argsstring>(dim3 pt1, dim3 pt2)</argsstring>
+        <name>Euclidian3</name>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="70" column="6" bodyfile="src/math_functions.c" bodystart="7" bodyend="9" declfile="include/math/math_functions.h" declline="70" declcolumn="6"/>
+        <references refid="d2/de2/math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc" compoundref="d2/de2/math__functions_8h" startline="36">SQ</references>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="d2/de2/math__functions_8h_1adf11110e70a4ca4a966622288d194681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Manhattan2</definition>
+        <argsstring>(dim2 pt1, dim2 pt2)</argsstring>
+        <name>Manhattan2</name>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="72" column="6" bodyfile="src/math_functions.c" bodystart="11" bodyend="13" declfile="include/math/math_functions.h" declline="72" declcolumn="6"/>
+        <references refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="65">dim2::x</references>
+        <references refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="66">dim2::y</references>
+        <referencedby refid="d9/dea/synthetic__image__generator_8h_1adf6a5cb5771660cb1086396d4324c4eb" compoundref="d5/d40/synthetic__image__generator_8c" startline="49" endline="68">GenerateVoronoiFlat2D</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="d2/de2/math__functions_8h_1ace80df346398f6e153166e87cee41d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref></type>
+        <definition>UINT Manhattan3</definition>
+        <argsstring>(dim3 pt1, dim3 pt2)</argsstring>
+        <name>Manhattan3</name>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>pt1</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref></type>
+          <declname>pt2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/math/math_functions.h" line="73" column="6" bodyfile="src/math_functions.c" bodystart="15" bodyend="17" declfile="include/math/math_functions.h" declline="73" declcolumn="6"/>
+        <references refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" compoundref="d2/de2/math__functions_8h" startline="59">dim3::x</references>
+        <references refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" compoundref="d2/de2/math__functions_8h" startline="60">dim3::y</references>
+        <references refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" compoundref="d2/de2/math__functions_8h" startline="61">dim3::z</references>
+        <referencedby refid="d5/d40/synthetic__image__generator_8c_1a2d4e6084981252d94b4287b36e85aec7" compoundref="d5/d40/synthetic__image__generator_8c" startline="109" endline="132">GeneratePointLocales</referencedby>
+        <referencedby refid="d5/d40/synthetic__image__generator_8c_1ae17850a552864500c4f1e1f80b8add6a" compoundref="d5/d40/synthetic__image__generator_8c" startline="134" endline="168">GetMinDistance3Locales</referencedby>
+        <referencedby refid="d5/d40/synthetic__image__generator_8c_1abe9bd17929405b7d28af71473f567f3c" compoundref="d5/d40/synthetic__image__generator_8c" startline="70" endline="86">GetMinDistance3Naive</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MATH_FUNCTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MATH_FUNCTIONS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NULL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="d2/de2/math__functions_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NULL<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="d2/de2/math__functions_8h_1a816dcf31e408d445ca8275ad96e6eb1e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CLIP(x,<sp/>min_val,<sp/>max_val)<sp/>((x)<sp/>&lt;<sp/>(min_val)<sp/>?<sp/>(min_val)<sp/>:<sp/>((x)<sp/>&gt;<sp/>(max_val)<sp/>?<sp/>(max_val)<sp/>:<sp/>(x)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="d2/de2/math__functions_8h_1aa26f9f0c05aaa0b3935ffee8b9b040cd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INSIDE_INTERVAL(x,<sp/>min,<sp/>max)<sp/><sp/><sp/><sp/>(<sp/>min<sp/>&lt;<sp/>x<sp/>&amp;&amp;<sp/>x<sp/>&lt;<sp/>max<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="d2/de2/math__functions_8h_1a67f67d2902bd4730eb69f82fcf008401" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OUTSIDE_INTERVAL(x,<sp/>min,<sp/>max)<sp/><sp/><sp/>(<sp/>min<sp/>&gt;<sp/>x<sp/>||<sp/>x<sp/>&gt;<sp/>max<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="d2/de2/math__functions_8h_1a8c5ff70b6b28cd0157c50a22406f92c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIGN(x)<sp/>x<sp/>&lt;<sp/>0<sp/>?<sp/>-1<sp/>:<sp/>(x<sp/>&gt;<sp/>0<sp/>?<sp/>1<sp/>:<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="d2/de2/math__functions_8h_1a5f76d4dda1e368d45e059912932c7b60" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIGN_P(x)<sp/>(x<sp/>&lt;<sp/>0<sp/>?<sp/>-1<sp/>:<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="d2/de2/math__functions_8h_1a16c5207cff1677a5fde882e81a7d58bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOD(x,<sp/>R)<sp/>((x<sp/>+<sp/>BPOW(R<sp/>-<sp/>1))<sp/>%<sp/>BPOW(R)<sp/>-<sp/>BPOW(R<sp/>-<sp/>1))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="d2/de2/math__functions_8h_1afa99ec4acc4ecb2dc3c2d05da15d0e3f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX(a,<sp/>b)<sp/>(a<sp/>&gt;<sp/>b<sp/>?<sp/>a<sp/>:<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="d2/de2/math__functions_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MIN(a,<sp/>b)<sp/>(a<sp/>&lt;<sp/>b<sp/>?<sp/>a<sp/>:<sp/>b)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="d2/de2/math__functions_8h_1a60b4b9f1152371307ebadc232149699c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BPOW(x)<sp/>(1<sp/>&lt;&lt;<sp/>(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="d2/de2/math__functions_8h_1ac3644f84794a8bfdacf39c4b2c2495fc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SQ(x)<sp/>((x)*(x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref>;</highlight></codeline>
+<codeline lineno="39" refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref>;</highlight></codeline>
+<codeline lineno="40" refid="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="d2/de2/math__functions_8h_1ab11dabd4d79e8b3426010beb5831e1d9" kindref="member">PIXEL</ref>;</highlight></codeline>
+<codeline lineno="41" refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="d2/de2/math__functions_8h_1affb1df897d26e77d96c613bea67825c6" kindref="member">INDEX</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92" kindref="member">RetVal</ref>{</highlight></codeline>
+<codeline lineno="45" refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2bc49ec37d6a5715dd23e85f1ff5bb59" kindref="member">OK</ref><sp/>=<sp/>0,<sp/><ref refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90" kindref="member">ERROR</ref></highlight></codeline>
+<codeline lineno="46" refid="d2/de2/math__functions_8h_1a98cd80f4bb376e74ad19a8fa85a88d92a2fd6f336d08340583bd620a7f5694c90" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//typedef<sp/>uint16_t<sp/>PIXEL;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="d3/db3/structdim3" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref>{</highlight></codeline>
+<codeline lineno="59" refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="d3/db3/structdim3_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="60" refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="d3/db3/structdim3_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="61" refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="d3/db3/structdim3_1a369004c0d58468e2b5a09c22d6608e1b" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="62" refid="d2/de2/math__functions_8h_1af3273ad069a5db23c87cf0547340e6fa" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="dd/dec/structdim2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref>{</highlight></codeline>
+<codeline lineno="65" refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><sp/><ref refid="dd/dec/structdim2_1a098d7fd50051a60dd6764a3b94978064" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="66" refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/de2/math__functions_8h_1ab461b1f8f4aeb9fff4c299b4aeb2103b" kindref="member">DIM</ref><sp/><ref refid="dd/dec/structdim2_1a2be1654d9b9e6915687f11ac13ef2f8b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="67" refid="d2/de2/math__functions_8h_1a25a1b999e489d87de5f6ae6f37cba079" refkind="member"><highlight class="normal">}<sp/><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="d2/de2/math__functions_8h_1a61e36d5241561d1bc112c291a3262565" kindref="member">Euclidian2</ref>(<ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>pt1,<sp/><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>pt2);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="d2/de2/math__functions_8h_1adfddd321b4840c92df9f1d48e11c657e" kindref="member">Euclidian3</ref>(<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>pt1,<sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>pt2);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="d2/de2/math__functions_8h_1adf11110e70a4ca4a966622288d194681" kindref="member">Manhattan2</ref>(<ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>pt1,<sp/><ref refid="dd/dec/structdim2" kindref="compound">dim2</ref><sp/>pt2);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="d2/de2/math__functions_8h_1a36cb3b01d81ffd844bbbfb54003e06ec" kindref="member">UINT</ref><sp/><ref refid="d2/de2/math__functions_8h_1ace80df346398f6e153166e87cee41d47" kindref="member">Manhattan3</ref>(<ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>pt1,<sp/><ref refid="d3/db3/structdim3" kindref="compound">dim3</ref><sp/>pt2);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MATH_FUNCTIONS_H<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="include/math/math_functions.h"/>
+  </compounddef>
+</doxygen>

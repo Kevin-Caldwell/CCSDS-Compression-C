@@ -1,0 +1,78 @@
+\doxysection{src/reconstructor.c File Reference}
+\hypertarget{a00341}{}\label{a00341}\index{src/reconstructor.c@{src/reconstructor.c}}
+{\ttfamily \#include "{}decompressor/reconstructor.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for reconstructor.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a00341_ad0d5b55646a3018075f07ae472ddb312}{Reconstructor}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}predicted\+\_\+values, \mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}reconstructed, FILE \texorpdfstring{$\ast$}{*}file\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{a00341_aeb6c4d18e6fc666235f8ef7464d1ae29}{Reconstruct\+Pixel}} (\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}mapped, \mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}data, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} z, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} y, \mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}} x, FILE \texorpdfstring{$\ast$}{*}file\+\_\+ptr)
+\item 
+void \mbox{\hyperlink{a00341_aadb567bbc159d00d6334e2eb36e6e253}{Test\+Reconstructor}} (char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{a00341_af83a02e01aaaa90418285249879dd545}{sample}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{a00341_ad0d5b55646a3018075f07ae472ddb312}\label{a00341_ad0d5b55646a3018075f07ae472ddb312} 
+\index{reconstructor.c@{reconstructor.c}!Reconstructor@{Reconstructor}}
+\index{Reconstructor@{Reconstructor}!reconstructor.c@{reconstructor.c}}
+\doxysubsubsection{\texorpdfstring{Reconstructor()}{Reconstructor()}}
+{\footnotesize\ttfamily void Reconstructor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{predicted\+\_\+values,  }\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{reconstructed,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00341_source_l00006}{6}} of file \mbox{\hyperlink{a00341_source}{reconstructor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{a00341_aeb6c4d18e6fc666235f8ef7464d1ae29}\label{a00341_aeb6c4d18e6fc666235f8ef7464d1ae29} 
+\index{reconstructor.c@{reconstructor.c}!ReconstructPixel@{ReconstructPixel}}
+\index{ReconstructPixel@{ReconstructPixel}!reconstructor.c@{reconstructor.c}}
+\doxysubsubsection{\texorpdfstring{ReconstructPixel()}{ReconstructPixel()}}
+{\footnotesize\ttfamily void Reconstruct\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{mapped,  }\item[{\mbox{\hyperlink{a00380}{image}} \texorpdfstring{$\ast$}{*}}]{data,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{a00152_affb1df897d26e77d96c613bea67825c6}{INDEX}}}]{x,  }\item[{FILE \texorpdfstring{$\ast$}{*}}]{file\+\_\+ptr }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00341_source_l00043}{43}} of file \mbox{\hyperlink{a00341_source}{reconstructor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{a00341_aadb567bbc159d00d6334e2eb36e6e253}\label{a00341_aadb567bbc159d00d6334e2eb36e6e253} 
+\index{reconstructor.c@{reconstructor.c}!TestReconstructor@{TestReconstructor}}
+\index{TestReconstructor@{TestReconstructor}!reconstructor.c@{reconstructor.c}}
+\doxysubsubsection{\texorpdfstring{TestReconstructor()}{TestReconstructor()}}
+{\footnotesize\ttfamily void Test\+Reconstructor (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{a00341_source_l00088}{88}} of file \mbox{\hyperlink{a00341_source}{reconstructor.\+c}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{a00341_af83a02e01aaaa90418285249879dd545}\label{a00341_af83a02e01aaaa90418285249879dd545} 
+\index{reconstructor.c@{reconstructor.c}!sample@{sample}}
+\index{sample@{sample}!reconstructor.c@{reconstructor.c}}
+\doxysubsubsection{\texorpdfstring{sample}{sample}}
+{\footnotesize\ttfamily \mbox{\hyperlink{a00380}{image}}\texorpdfstring{$\ast$}{*} sample}
+
+
+
+Definition at line \mbox{\hyperlink{a00341_source_l00005}{5}} of file \mbox{\hyperlink{a00341_source}{reconstructor.\+c}}.
+

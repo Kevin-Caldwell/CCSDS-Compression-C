@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stream__encoder_8c" xml:lang="en-US">
+<title>src/stream_encoder.c File Reference</title>
+<indexterm><primary>src/stream_encoder.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;encoder/stream_encoder.h&quot;<?linebreak?></programlisting>Include dependency graph for stream_encoder.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../db/daf/stream__encoder_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_stream__encoder_8c_1a0db4a8ab23a4af63c99d5fbfca9073eb">InitializeVarIntStream</link> (<link linkend="_stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707">VIFS</link> *stream, const char *file_name, uint32_t buffer_size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_stream__encoder_8c_1a8b42309d51939ee46f5f0d348fbbcbc0">StreamVarInteger</link> (<link linkend="_stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707">VIFS</link> *stream, uint32_t data, uint32_t length)</para>
+</listitem>
+            <listitem><para>void <link linkend="_stream__encoder_8c_1afbd717a2dd8bee43593e06a3919ba72a">CloseVarIntegerStream</link> (<link linkend="_stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707">VIFS</link> *stream)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_stream__encoder_8c_1afbd717a2dd8bee43593e06a3919ba72a"/><section>
+    <title>CloseVarIntegerStream()</title>
+<indexterm><primary>CloseVarIntegerStream</primary><secondary>stream_encoder.c</secondary></indexterm>
+<indexterm><primary>stream_encoder.c</primary><secondary>CloseVarIntegerStream</secondary></indexterm>
+<para><computeroutput>void CloseVarIntegerStream (<link linkend="_stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707">VIFS</link> * stream)</computeroutput></para><para>
+Definition at line <link linkend="_stream__encoder_8c_source_1l00038">38</link> of file <link linkend="_stream__encoder_8c_source">stream_encoder.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d04/stream__encoder_8c_afbd717a2dd8bee43593e06a3919ba72a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d04/stream__encoder_8c_afbd717a2dd8bee43593e06a3919ba72a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_stream__encoder_8c_1a0db4a8ab23a4af63c99d5fbfca9073eb"/><section>
+    <title>InitializeVarIntStream()</title>
+<indexterm><primary>InitializeVarIntStream</primary><secondary>stream_encoder.c</secondary></indexterm>
+<indexterm><primary>stream_encoder.c</primary><secondary>InitializeVarIntStream</secondary></indexterm>
+<para><computeroutput>void InitializeVarIntStream (<link linkend="_stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707">VIFS</link> * stream, const char * file_name, uint32_t buffer_size)</computeroutput></para><para>
+Definition at line <link linkend="_stream__encoder_8c_source_1l00003">3</link> of file <link linkend="_stream__encoder_8c_source">stream_encoder.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d04/stream__encoder_8c_a0db4a8ab23a4af63c99d5fbfca9073eb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d04/stream__encoder_8c_a0db4a8ab23a4af63c99d5fbfca9073eb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_stream__encoder_8c_1a8b42309d51939ee46f5f0d348fbbcbc0"/><section>
+    <title>StreamVarInteger()</title>
+<indexterm><primary>StreamVarInteger</primary><secondary>stream_encoder.c</secondary></indexterm>
+<indexterm><primary>stream_encoder.c</primary><secondary>StreamVarInteger</secondary></indexterm>
+<para><computeroutput>void StreamVarInteger (<link linkend="_stream__encoder_8h_1a28faaa580490ca2e895b2ebe7bf22707">VIFS</link> * stream, uint32_t data, uint32_t length)</computeroutput></para><para>
+Definition at line <link linkend="_stream__encoder_8c_source_1l00012">12</link> of file <link linkend="_stream__encoder_8c_source">stream_encoder.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d04/stream__encoder_8c_a8b42309d51939ee46f5f0d348fbbcbc0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../de/d04/stream__encoder_8c_a8b42309d51939ee46f5f0d348fbbcbc0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

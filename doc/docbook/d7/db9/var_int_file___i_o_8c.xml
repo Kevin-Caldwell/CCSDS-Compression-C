@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_var_int_file___i_o_8c" xml:lang="en-US">
+<title>src/varIntFile_IO.c File Reference</title>
+<indexterm><primary>src/varIntFile_IO.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;files/varIntFile_IO.h&quot;<?linebreak?>#include &quot;files/logs.h&quot;<?linebreak?>#include &quot;constants/global_constants.h&quot;<?linebreak?></programlisting>Include dependency graph for varIntFile_IO.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d1/d31/var_int_file___i_o_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_var_int_file___i_o_8c_1ab232dbf9e1e9abf226e94b02fe510da4">_VUF_Clean</link> (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, char full)</para>
+</listitem>
+            <listitem><para>int <link linkend="_var_int_file___i_o_8c_1a07ca21a87dab6f536b7f4d69050f5602">VUF_initialize</link> (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, const char *file_name, <link linkend="_var_int_file___i_o_8h_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> io_mode)</para>
+</listitem>
+            <listitem><para>int <link linkend="_var_int_file___i_o_8c_1a744805d2f1db68081efadb9892a297e9">VUF_append</link> (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, uint32_t data, uint32_t length)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_var_int_file___i_o_8c_1aafa9034f88afca6a726a84673d063889">VUF_read_stack</link> (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, uint32_t length)</para>
+</listitem>
+            <listitem><para>int <link linkend="_var_int_file___i_o_8c_1ad54b8d6492e4c149c7f1232e3eda58be">VUF_close</link> (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>char * <link linkend="_var_int_file___i_o_8c_1adcef86e6a920a4f9ff207599aa37b7f6">file_modes_arguments</link> [] = {&quot;rb&quot;, &quot;wb&quot;}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_var_int_file___i_o_8c_1ab232dbf9e1e9abf226e94b02fe510da4"/><section>
+    <title>_VUF_Clean()</title>
+<indexterm><primary>_VUF_Clean</primary><secondary>varIntFile_IO.c</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.c</primary><secondary>_VUF_Clean</secondary></indexterm>
+<para><computeroutput>void _VUF_Clean (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, char full)</computeroutput></para><para>
+Definition at line <link linkend="_var_int_file___i_o_8c_source_1l00007">7</link> of file <link linkend="_var_int_file___i_o_8c_source">varIntFile_IO.c</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_ab232dbf9e1e9abf226e94b02fe510da4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_var_int_file___i_o_8c_1a744805d2f1db68081efadb9892a297e9"/><section>
+    <title>VUF_append()</title>
+<indexterm><primary>VUF_append</primary><secondary>varIntFile_IO.c</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.c</primary><secondary>VUF_append</secondary></indexterm>
+<para><computeroutput>int VUF_append (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, uint32_t data, uint32_t length)</computeroutput></para><para>
+Definition at line <link linkend="_var_int_file___i_o_8c_source_1l00042">42</link> of file <link linkend="_var_int_file___i_o_8c_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_a744805d2f1db68081efadb9892a297e9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_a744805d2f1db68081efadb9892a297e9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_var_int_file___i_o_8c_1ad54b8d6492e4c149c7f1232e3eda58be"/><section>
+    <title>VUF_close()</title>
+<indexterm><primary>VUF_close</primary><secondary>varIntFile_IO.c</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.c</primary><secondary>VUF_close</secondary></indexterm>
+<para><computeroutput>int VUF_close (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream)</computeroutput></para><para>
+Definition at line <link linkend="_var_int_file___i_o_8c_source_1l00097">97</link> of file <link linkend="_var_int_file___i_o_8c_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_ad54b8d6492e4c149c7f1232e3eda58be_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_ad54b8d6492e4c149c7f1232e3eda58be_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_var_int_file___i_o_8c_1a07ca21a87dab6f536b7f4d69050f5602"/><section>
+    <title>VUF_initialize()</title>
+<indexterm><primary>VUF_initialize</primary><secondary>varIntFile_IO.c</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.c</primary><secondary>VUF_initialize</secondary></indexterm>
+<para><computeroutput>int VUF_initialize (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, const char * file_name, <link linkend="_var_int_file___i_o_8h_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> io_mode)</computeroutput></para><para>
+Definition at line <link linkend="_var_int_file___i_o_8c_source_1l00014">14</link> of file <link linkend="_var_int_file___i_o_8c_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_a07ca21a87dab6f536b7f4d69050f5602_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_a07ca21a87dab6f536b7f4d69050f5602_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_var_int_file___i_o_8c_1aafa9034f88afca6a726a84673d063889"/><section>
+    <title>VUF_read_stack()</title>
+<indexterm><primary>VUF_read_stack</primary><secondary>varIntFile_IO.c</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.c</primary><secondary>VUF_read_stack</secondary></indexterm>
+<para><computeroutput>uint32_t VUF_read_stack (<link linkend="_var_int_file___i_o_8h_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, uint32_t length)</computeroutput></para><para>
+Definition at line <link linkend="_var_int_file___i_o_8c_source_1l00073">73</link> of file <link linkend="_var_int_file___i_o_8c_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_aafa9034f88afca6a726a84673d063889_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/db9/var_int_file___i_o_8c_aafa9034f88afca6a726a84673d063889_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_var_int_file___i_o_8c_1adcef86e6a920a4f9ff207599aa37b7f6"/><section>
+    <title>file_modes_arguments</title>
+<indexterm><primary>file_modes_arguments</primary><secondary>varIntFile_IO.c</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.c</primary><secondary>file_modes_arguments</secondary></indexterm>
+<para><computeroutput>char* file_modes_arguments[] = {&quot;rb&quot;, &quot;wb&quot;}</computeroutput></para><para>
+Definition at line <link linkend="_var_int_file___i_o_8c_source_1l00005">5</link> of file <link linkend="_var_int_file___i_o_8c_source">varIntFile_IO.c</link>.</para>
+</section>
+</section>
+</section>

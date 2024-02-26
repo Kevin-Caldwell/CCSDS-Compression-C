@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="dc/d99/cache__predictor_8c">cache_predictor.c</innerfile>
+    <innerfile refid="d4/df3/constants_8c">constants.c</innerfile>
+    <innerfile refid="df/df6/csv-io_8c">csv-io.c</innerfile>
+    <innerfile refid="d6/d19/decoder_8c">decoder.c</innerfile>
+    <innerfile refid="d6/da2/encoder__body_8c">encoder_body.c</innerfile>
+    <innerfile refid="d5/d79/encoder__constants_8c">encoder_constants.c</innerfile>
+    <innerfile refid="d7/d92/encoder__helper_8c">encoder_helper.c</innerfile>
+    <innerfile refid="d9/da2/file___i_o_8c">file_IO.c</innerfile>
+    <innerfile refid="de/ddf/full__image_8c">full_image.c</innerfile>
+    <innerfile refid="d6/d92/generate__image_8c">generate_image.c</innerfile>
+    <innerfile refid="d2/daf/hash__table_8c">hash_table.c</innerfile>
+    <innerfile refid="df/db9/header_8c">header.c</innerfile>
+    <innerfile refid="d3/d10/image_8c">image.c</innerfile>
+    <innerfile refid="df/d91/linear__algebra_8c">linear_algebra.c</innerfile>
+    <innerfile refid="dd/ded/load__constants_8c">load_constants.c</innerfile>
+    <innerfile refid="d8/d97/local__differences_8c">local_differences.c</innerfile>
+    <innerfile refid="db/d31/local__sum_8c">local_sum.c</innerfile>
+    <innerfile refid="d7/d02/logs_8c">logs.c</innerfile>
+    <innerfile refid="d3/d2d/math__functions_8c">math_functions.c</innerfile>
+    <innerfile refid="d1/d32/perlin__noise_8c">perlin_noise.c</innerfile>
+    <innerfile refid="db/d25/predictor_8c">predictor.c</innerfile>
+    <innerfile refid="dc/df1/quantizer_8c">quantizer.c</innerfile>
+    <innerfile refid="d6/dce/reconstructor_8c">reconstructor.c</innerfile>
+    <innerfile refid="d7/d58/sample__representative_8c">sample_representative.c</innerfile>
+    <innerfile refid="de/d04/stream__encoder_8c">stream_encoder.c</innerfile>
+    <innerfile refid="d5/d40/synthetic__image__generator_8c">synthetic_image_generator.c</innerfile>
+    <innerfile refid="d1/dfd/test___u_h_i_8c">test_UHI.c</innerfile>
+    <innerfile refid="d8/dd4/test__var_int_8c">test_varInt.c</innerfile>
+    <innerfile refid="d6/d7a/uhi__io_8c">uhi_io.c</innerfile>
+    <innerfile refid="d7/db9/var_int_file___i_o_8c">varIntFile_IO.c</innerfile>
+    <innerfile refid="d0/d26/weights_8c">weights.c</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

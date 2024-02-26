@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="d0/dc3/a00354" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>File <ref refid="db/db6/a00074" kindref="compound">cache_predictor.h</ref>  </term></varlistentry>
+<listitem><para><anchor id="d0/dc3/a00354_1_deprecated000001"/>Large Memory Usage, ineffective for debug.  </para>
+</listitem>
+<varlistentry><term>Global <ref refid="da/d2a/a00086_1abc23dc7967a47b4db3efff8237ef3a2f" kindref="member">L_SHIFT</ref>  (x, s)</term></varlistentry>
+<listitem><para><anchor id="d0/dc3/a00354_1_deprecated000003"/>Replaced by <ref refid="d7/d06/a00131" kindref="compound">varIntFile_IO.h</ref>  </para>
+</listitem>
+<varlistentry><term>Struct <ref refid="db/d7e/a00372" kindref="compound">PredictorCache</ref>  </term></varlistentry>
+<listitem><para><anchor id="d0/dc3/a00354_1_deprecated000002"/> The Predictor testing has been re-implemented to accomodate more streamlined and memory-efficient debugging processes.</para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="d0/dc3/a00354"/>
+  </compounddef>
+</doxygen>

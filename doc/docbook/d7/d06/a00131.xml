@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00131" xml:lang="en-US">
+<title>include/files/varIntFile_IO.h File Reference</title>
+<indexterm><primary>include/files/varIntFile_IO.h</primary></indexterm>
+<para>
+
+<para>File Input/Output for Variable-Length Words. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;inttypes.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &quot;files/file_IO.h&quot;<?linebreak?></programlisting>Include dependency graph for varIntFile_IO.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d5/deb/a00132.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d0/de8/a00133.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_a00400">VarUnsignedIntFile</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_a00131_1abc23dc7967a47b4db3efff8237ef3a2f">L_SHIFT</link>(x,  s)&#160;&#160;&#160;(s == 32 ? 0 : (s &lt; 0 ? (unsigned) x &gt;&gt; -s : (unsigned) x &lt;&lt; s))</para>
+</listitem>
+            <listitem><para>#define <link linkend="_a00131_1af7b7dc9a200cb1404c280bd500fd1551">BUFFER_LENGTH</link>&#160;&#160;&#160;6</para>
+</listitem>
+            <listitem><para>#define <link linkend="_a00131_1a6b20d41d6252e9871430c242cb1a56e7">BUFFER_SIZE</link>&#160;&#160;&#160;32</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef enum <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> <link linkend="_a00131_1a260a6f6af9275cf2bfbc28e6a687710b">file_modes</link></para>
+</listitem>
+            <listitem><para>typedef struct <link linkend="_a00400">VarUnsignedIntFile</link> <link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> { <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8">READ_BINARY</link> =0
+, <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc">WRITE_BINARY</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_a00131_1a07ca21a87dab6f536b7f4d69050f5602">VUF_initialize</link> (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, const char *file_name, <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> io_mode)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00131_1a744805d2f1db68081efadb9892a297e9">VUF_append</link> (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, uint32_t data, uint32_t length)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_a00131_1aafa9034f88afca6a726a84673d063889">VUF_read_stack</link> (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream, uint32_t length)</para>
+</listitem>
+            <listitem><para>int <link linkend="_a00131_1ad54b8d6492e4c149c7f1232e3eda58be">VUF_close</link> (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> *stream)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>File Input/Output for Variable-Length Words. </para>
+
+<para><formalpara><title>Authors</title>
+
+<para>Kevin Caldwell </para>
+</formalpara>
+<para><link linkend="_a00353_1_bug000002">Bug</link> 
+<para>Unknown, Needs Testing </para>
+</para></para>
+<para>
+Definition in file <link linkend="_a00131_source">varIntFile_IO.h</link>.</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_a00131_1af7b7dc9a200cb1404c280bd500fd1551"/><section>
+    <title>BUFFER_LENGTH</title>
+<indexterm><primary>BUFFER_LENGTH</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>BUFFER_LENGTH</secondary></indexterm>
+<para><computeroutput>#define BUFFER_LENGTH&#160;&#160;&#160;6</computeroutput></para><para>
+Definition at line <link linkend="_a00131_source_1l00020">20</link> of file <link linkend="_a00131_source">varIntFile_IO.h</link>.</para>
+</section>
+<anchor xml:id="_a00131_1a6b20d41d6252e9871430c242cb1a56e7"/><section>
+    <title>BUFFER_SIZE</title>
+<indexterm><primary>BUFFER_SIZE</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>BUFFER_SIZE</secondary></indexterm>
+<para><computeroutput>#define BUFFER_SIZE&#160;&#160;&#160;32</computeroutput></para><para>
+Definition at line <link linkend="_a00131_source_1l00021">21</link> of file <link linkend="_a00131_source">varIntFile_IO.h</link>.</para>
+</section>
+<anchor xml:id="_a00131_1abc23dc7967a47b4db3efff8237ef3a2f"/><section>
+    <title>L_SHIFT</title>
+<indexterm><primary>L_SHIFT</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>L_SHIFT</secondary></indexterm>
+<para><computeroutput>#define L_SHIFT( x,  s)&#160;&#160;&#160;(s == 32 ? 0 : (s &lt; 0 ? (unsigned) x &gt;&gt; -s : (unsigned) x &lt;&lt; s))</computeroutput></para><para>
+Definition at line <link linkend="_a00131_source_1l00017">17</link> of file <link linkend="_a00131_source">varIntFile_IO.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_a00131_1a260a6f6af9275cf2bfbc28e6a687710b"/><section>
+    <title>file_modes</title>
+<indexterm><primary>file_modes</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>file_modes</secondary></indexterm>
+<para><computeroutput>typedef enum <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link></computeroutput></para></section>
+<anchor xml:id="_a00131_1aaee745b08a71023fc4d3bde412bdc006"/><section>
+    <title>VUF</title>
+<indexterm><primary>VUF</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>VUF</secondary></indexterm>
+<para><computeroutput>typedef struct <link linkend="_a00400">VarUnsignedIntFile</link> <link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link></computeroutput></para>
+<para>Manages VUF files.</para>
+
+<para>Variable Unsigned Files are designed to store integers of all sizes less than 32 bits and greater than 0 bits. </para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_a00131_1a65ff8d4f12985f7d5210a0688be998dc"/><section>
+    <title>file_modes</title>
+<indexterm><primary>file_modes</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>file_modes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>READ_BINARY</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>READ_BINARY</secondary></indexterm>
+<anchor xml:id="_a00131_1a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8"/>READ_BINARY</entry><entry></entry></row><row><entry><indexterm><primary>WRITE_BINARY</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>WRITE_BINARY</secondary></indexterm>
+<anchor xml:id="_a00131_1a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc"/>WRITE_BINARY</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_a00131_source_1l00023">23</link> of file <link linkend="_a00131_source">varIntFile_IO.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_a00131_1a744805d2f1db68081efadb9892a297e9"/><section>
+    <title>VUF_append()</title>
+<indexterm><primary>VUF_append</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>VUF_append</secondary></indexterm>
+<para><computeroutput>int VUF_append (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, uint32_t data, uint32_t length)</computeroutput></para><para>
+Definition at line <link linkend="_a00338_source_1l00042">42</link> of file <link linkend="_a00338_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_a744805d2f1db68081efadb9892a297e9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_a744805d2f1db68081efadb9892a297e9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00131_1ad54b8d6492e4c149c7f1232e3eda58be"/><section>
+    <title>VUF_close()</title>
+<indexterm><primary>VUF_close</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>VUF_close</secondary></indexterm>
+<para><computeroutput>int VUF_close (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream)</computeroutput></para><para>
+Definition at line <link linkend="_a00338_source_1l00097">97</link> of file <link linkend="_a00338_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_ad54b8d6492e4c149c7f1232e3eda58be_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_ad54b8d6492e4c149c7f1232e3eda58be_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00131_1a07ca21a87dab6f536b7f4d69050f5602"/><section>
+    <title>VUF_initialize()</title>
+<indexterm><primary>VUF_initialize</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>VUF_initialize</secondary></indexterm>
+<para><computeroutput>int VUF_initialize (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, const char * file_name, <link linkend="_a00131_1a65ff8d4f12985f7d5210a0688be998dc">file_modes</link> io_mode)</computeroutput></para><para>
+Definition at line <link linkend="_a00338_source_1l00014">14</link> of file <link linkend="_a00338_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_a07ca21a87dab6f536b7f4d69050f5602_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_a07ca21a87dab6f536b7f4d69050f5602_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_a00131_1aafa9034f88afca6a726a84673d063889"/><section>
+    <title>VUF_read_stack()</title>
+<indexterm><primary>VUF_read_stack</primary><secondary>varIntFile_IO.h</secondary></indexterm>
+<indexterm><primary>varIntFile_IO.h</primary><secondary>VUF_read_stack</secondary></indexterm>
+<para><computeroutput>uint32_t VUF_read_stack (<link linkend="_a00131_1aaee745b08a71023fc4d3bde412bdc006">VUF</link> * stream, uint32_t length)</computeroutput></para><para>
+Definition at line <link linkend="_a00338_source_1l00073">73</link> of file <link linkend="_a00338_source">varIntFile_IO.c</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_aafa9034f88afca6a726a84673d063889_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="../../d7/d06/a00131_aafa9034f88afca6a726a84673d063889_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

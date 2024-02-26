@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Data Structures</title>
+Here are the data structures with brief descriptions:<link linkend="_structdim2">dim2</link><link linkend="_structdim3">dim3</link><link linkend="_structf_vector3">fVector3</link><link linkend="_struct_golomb_int">GolombInt</link><link linkend="_struct_hash_table">HashTable</link><link linkend="_structimage">image</link><link linkend="_structimage2">image2</link><link linkend="_struct_predictor_cache">PredictorCache</link>
+<para>Struct <link linkend="_struct_predictor_cache">PredictorCache</link> is a struct for storing the intermediate results obtained through the predictor </para>
+<link linkend="_classtest__compression_1_1_test_comp">TestComp</link><link linkend="_struct_uncompressed_hyperspectral_image">UncompressedHyperspectralImage</link><link linkend="_struct_var_int_file_stream">VarIntFileStream</link><link linkend="_struct_var_unsigned_int_file">VarUnsignedIntFile</link></section>
