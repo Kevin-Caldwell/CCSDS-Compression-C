@@ -9,9 +9,6 @@ int Initialized(){
 }
 
 file_t* F_OPEN(const char* file_name, FileMode open_mode){
-    #if LOG
-        Log_add(file_name);
-    #endif
     return (file_t*) fopen(file_name, file_modes_str[open_mode]);
 }
 

@@ -3,7 +3,7 @@
 #include <time.h>
 #include <string.h>
 
-char log_file[] = "data/logs/compressor.logs";
+char log_file[] = "../data/logs/compressor.logs";
 char _time_str[100];
 
 char* _GET_PRINT_TIME(){
