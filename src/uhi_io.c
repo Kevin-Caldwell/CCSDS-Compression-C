@@ -7,11 +7,11 @@
 int UHI_Initialize(UHI* stream, dim3 buffer_size, const char* file_name,
                    FileMode file_mode) {
   file_t* file = F_OPEN(file_name, file_mode);
-  stream->fs = file;
   if(stream->fs == NULL){
     return 0;
   }
   // TODO Initialize Full File
+  stream->fs = file;
   stream->size = buffer_size;
   stream->cache[0] = 0;
   return 0;
@@ -24,16 +24,16 @@ PIXEL UHI_ReadPixel(UHI* stream, dim3 index) {
   dim3 s = stream->size;
   F_SEEK(
       stream->fs,
-      stream->cache[6 + 2 * (s.x * s.y * index.z + s.x * index.y + index.x)]);
+      6 + 2 * (MAP3_1(index.x, index.y, index.z, s)));
   F_READ(&pixel, sizeof(PIXEL), 1, stream->fs);
-  return 0;
+  return pixel;
 }
 
 int UHI_WritePixel(const UHI* stream, dim3 index, PIXEL value) {
   dim3 s = stream->size;
   F_SEEK(
       stream->fs,
-      stream->cache[6 + 2 * (s.x * s.y * index.z + s.x * index.y + index.x)]);
+      6 + 2 * (MAP3_1(index.x, index.y, index.z, s)));
   F_WRITE(&value, sizeof(PIXEL), 1, stream->fs);
   return 0;
 }

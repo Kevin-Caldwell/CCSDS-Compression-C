@@ -43,7 +43,7 @@ int Image_Equals(image* img1, image* img2){
 #else
 
 int InitImage(image* img_p, size_t x, size_t y, size_t z){
-    img_p = (image*) malloc(sizeof(image));
+    // img_p = (image*) malloc(sizeof(image));
     img_p->size.x = x;
     img_p->size.y = y;
     img_p->size.z = z;

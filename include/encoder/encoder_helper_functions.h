@@ -17,6 +17,7 @@
 #define ENCODER_HELPER_FUNCTIONS_H
 
 #include <inttypes.h>
+#include <stdio.h>
 
 void PrintBinary(uint8_t byte);
 
