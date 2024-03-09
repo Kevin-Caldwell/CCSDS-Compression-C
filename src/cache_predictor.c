@@ -42,10 +42,11 @@ int InitializePredictorCache(PredictorCache **ptr_p_cache, image *hIMG)
 
 int DeletePredictorCache(PredictorCache *p_cache)
 {
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < 0; i++)
     {
         free(p_cache->cache_space[i]);
     }
+    free(p_cache->weights);
     free(p_cache);
 
     return 0;

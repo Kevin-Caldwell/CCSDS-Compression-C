@@ -47,10 +47,13 @@ int main(int argInt, char **argS)
     else
     {
         printf("Running Base Case.\n");
-        test_UHI();
+        
+        // cv_csv_uhi("../data/test-images/indian_pines.csv", "../data/test-images/indian_pines.UHI");
+        // printf("Result: %s", test_UHI() ? "Unsuccessful Run.\n" : "Successful Run.\n");
         // printf("Result: %s", testVUF_Write() ? "Unsuccessful Run.\n" : "Successful Run.\n");
         // printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
         //PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
+        PredictImageUHI("../data/test-images/indian_pines.UHI", "../data/test-images/indian_pines_pred.UHI");
     }
 
     #if LOG

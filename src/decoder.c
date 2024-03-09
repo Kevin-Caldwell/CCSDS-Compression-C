@@ -3,7 +3,7 @@
 #include <inttypes.h>
 #include <time.h>
 
-#include "encoder/stream_encoder.h"
+// #include "encoder/stream_encoder.h"
 #include "files/varIntFile_IO.h"
 #include "math/math_functions.h"
 #include "files/varIntFile_IO.h"

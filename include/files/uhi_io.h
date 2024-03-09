@@ -48,7 +48,7 @@ typedef struct UncompressedHyperspectralImage{
 
 int UHI_Initialize(
     UHI* stream, 
-    dim3 buffer_size,
+    dim3 size,
     const char* file_name, 
     FileMode file_mode
 );

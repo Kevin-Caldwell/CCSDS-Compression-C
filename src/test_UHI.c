@@ -6,15 +6,15 @@ int test_UHI(){
     UHI stream;
     image baseImg;
 
-    int _Nx = 100;
-    int _Ny = 100;
-    int _Nz = 100;
+    int _Nx = 145;
+    int _Ny = 145;
+    int _Nz = 220;
     // Prepare Random Hyperspectral Image
     InitImage(&baseImg, _Nx, _Ny, _Nz);
     GenerateVoronoiFlat3DNaive(&baseImg, 10);
     
+    UHI_Initialize(&stream, baseImg.size, "../data/test-images/indian_pines.UHI", READ_AND_WRITE);
     
-    UHI_Initialize(&stream, baseImg.size, "../data/test-images/test.UHI", READ_AND_WRITE);
 
     for(int i = 0; i < _Nx; i++){
         for(int j = 0; j < _Ny; j++){
@@ -24,6 +24,8 @@ int test_UHI(){
                 // printf("WRITING: %d INSTEAD OF %d\n", UHI_ReadPixel(&stream, (dim3) {i, j, k}), p);
             }
         }
+        printf("%dth Frame\n", i);
+        fflush(stdout);
     }
 
     char fail = 0;
@@ -44,6 +46,8 @@ int test_UHI(){
             if(fail) break;
         }
         if(fail) break;
+        printf("%dth Frame\n", i);
+        fflush(stdout);
     }
 
     if(fail) 

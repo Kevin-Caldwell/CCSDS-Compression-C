@@ -35,7 +35,7 @@
 
 #define SQ(x) ((x)*(x))
 
-typedef size_t DIM;
+typedef uint16_t DIM;
 typedef unsigned int UINT;
 typedef uint16_t PIXEL;
 typedef uint16_t INDEX;
