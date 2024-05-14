@@ -7,7 +7,7 @@
 
 /**
  * 3D floating point vector
-*/
+ */
 typedef struct fVector3
 {
     float x, y, z;
@@ -104,14 +104,13 @@ void GeneratePerlinImage(dim3 size, int index, int length)
 {
     char filename[100];
     sprintf(filename, "../data/test-images/PERLIN_%lux%lux%lu_%d.csv",
-            size.x, size.y, size.z, index);
+            (long unsigned)size.x,
+            (long unsigned)size.y,
+            (long unsigned)size.z,
+            (int)index);
     image *testImage;
     InitImage(testImage, size.x, size.y, size.z);
     Perlin4(testImage, length);
 
     SaveImageAsCSV(testImage, filename);
-    #ifndef MEMORY_SAVING
-    free(testImage->data);
-    free(testImage);
-    #endif
 }

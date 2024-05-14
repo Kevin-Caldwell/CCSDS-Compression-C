@@ -6,6 +6,7 @@ from sklearn.metrics import mean_squared_error
 import csv
 from csv_io import ReadCSV, SaveCSV
 
+
 class TestComp(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -19,12 +20,12 @@ class TestComp(unittest.TestCase):
         cls.Nx = cls.data.shape[0]
         cls.Ny = cls.data.shape[1]
         cls.Nz = cls.data.shape[2]
-    
+
     def test_CSV(self):
         for z in range(self.Nz):
             for y in range(self.Ny):
                 for x in range(self.Nx):
-                    print(str(x) + ",", str(y) + ",", str(z) + ":", self.data[x, y ,z])
+                    print(str(x) + ",", str(y) + ",", str(z) + ":", self.data[x, y, z])
         self.assertTrue(True)
 
     def test_predictor(self):
@@ -105,12 +106,15 @@ class TestComp(unittest.TestCase):
 
         error = 0
         for z in range(Nz):
-            error += mean_squared_error(data16int[:, :, z], decompressed[:, :, z], squared=False)
+            error += mean_squared_error(
+                data16int[:, :, z], decompressed[:, :, z], squared=False
+            )
         rmse = error / Nz
         return rmse
 
     def compression_ratio(self, data, compressed):
         return data.size * comp.D / len(compressed)
+
 
 if __name__ == "__main__":
     unittest.main()

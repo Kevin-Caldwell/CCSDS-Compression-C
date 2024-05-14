@@ -61,8 +61,8 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
 
     file_t *log = F_OPEN("../data/logs/c-encoder-debug.LOG", WRITE);
 
-    VIFS stream;
-    InitializeVarIntStream(&stream, file_name, buffer_size);
+    VUF stream;
+    VUF_initialize(&stream, file_name, buffer_size);
     long int len = 0;
 
     time_t start = time(NULL);
@@ -78,7 +78,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
                 {
                     gamma = BPOW(Gamma1);
                     epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
-                    StreamVarInteger(&stream, data, D);
+                    VUF_append(&stream, data, D);
                     len += D;
                     fprintf(log, "%u:%d,%d\n", data, D, k_z);
                     continue;
@@ -103,7 +103,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
                 GolombInt res = GolombPowerTwo(data, k_z);
                 len += res.length;
                 fprintf(log, "(%d, %d, %d) %u:%d, %d, %d, %d\n", x, y, z, res.data, res.length, k_z, gamma, epsilon_z);
-                StreamVarInteger(&stream, res.data, res.length);
+                VUF_append(&stream, res.data, res.length);
 
                 if (gamma < BPOW(GAMMA_STAR) - 1)
                 {
@@ -122,10 +122,11 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
         printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
         fflush(stdout);
     }
-    CloseVarIntegerStream(&stream);
+    VUF_close(&stream);
+
     time_t end = time(NULL);
     printf("\n%d seconds for image Encoding.\n", (int)(end - start));
-    printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float) Nx * Ny * Nz * D / 8), (1 - ((float)len / ((float) Nx * Ny * Nz * D))) * 100);
+    printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float)Nx * Ny * Nz * D / 8), (1 - ((float)len / ((float)Nx * Ny * Nz * D))) * 100);
 
     return 0;
 }

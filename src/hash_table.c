@@ -1,18 +1,20 @@
 #include "dst/hash_table.h"
 
-int Hash_InitializeHashTable(HashTable **hash){
+int Hash_InitializeHashTable(HashTable **hash)
+{
     *hash = malloc(sizeof(HashTable));
     (*hash)->len = 0;
-    
+
     return 0;
 }
 
-int Hash_DeleteHashTable(HashTable* hash){
+int Hash_DeleteHashTable(HashTable *hash)
+{
     free(hash);
     return 0;
 }
 
-int Hash_AddEntry(HashTable *hash, const char* name, int32_t data)
+int Hash_AddEntry(HashTable *hash, const char *name, int32_t data)
 {
     if (hash->len == HASH_CAPACITY)
     {

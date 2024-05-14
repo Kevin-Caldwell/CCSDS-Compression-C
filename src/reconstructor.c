@@ -3,7 +3,7 @@
 #include <time.h>
 
 image *sample;
-void Reconstructor(image *predicted_values, image *reconstructed, FILE* file_ptr)
+void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr)
 {
     InitalizeImageConstants(predicted_values->size);
     LoadConstantFile(PREDICTOR_CONSTANTS_LOCATION, &predictor_constants);
@@ -15,7 +15,7 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE* file_ptr
     start = time(NULL);
     for (int z = 0; z < size.z; z++)
     {
-        if (!PREDICTION_MODE)
+        if (!kPredictionMode)
         {
             C = Ps(z) + 3;
         }
@@ -40,7 +40,7 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE* file_ptr
     printf("\n%d seconds for image prediction.\n", (int)(end - start));
 }
 
-void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FILE* file_ptr)
+void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FILE *file_ptr)
 {
     if (x == 0 && y == 0)
     {
@@ -72,8 +72,8 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
 
     // sprintf(write_buffer, "(%d,%d,%d),%d, %d, %d\n",  x, y, z, delta + predicted_sample, predicted_sample, delta);
 
-    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data, 
-        predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data,
+            predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
 
     for (int i = 0; i < C; i++)
     {
@@ -87,7 +87,7 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
 
 void TestReconstructor(char *file_name)
 {
-    file_t* file_ptr;
+    file_t *file_ptr;
 
     printf("Testing Reconstructor...\n");
     image sample_data;
@@ -100,7 +100,7 @@ void TestReconstructor(char *file_name)
 
     printf("Running Predictor...\n");
     fflush(stdout);
-    InitializePredictorCache(&global_cache, &sample_data);
+    InitializePredictorCache(&global_cache);
     printf("Cache Created..\n");
     RunPredictor(&sample_data, &predicted_data);
     printf("Completed Prediction.\n");
@@ -110,12 +110,6 @@ void TestReconstructor(char *file_name)
 
     image reconstructed_data;
     InitImage(&reconstructed_data, sample_data.size.x, sample_data.size.y, sample_data.size.z);
-
-    for(int i = 0; i < sample->size.x * sample->size.y * sample->size.z; i++){
-        #ifndef MEMORY_SAVING
-        reconstructed_data.data[i] = 0;
-        #endif
-    }
 
     printf("Running Reconstructor...\n");
     Reconstructor(&predicted_data, &reconstructed_data, file_ptr);
@@ -133,10 +127,4 @@ void TestReconstructor(char *file_name)
     }
 
     F_CLOSE(file_ptr);
-
-    #ifndef MEMORY_SAVING
-    free(sample_data.data);
-    free(predicted_data.data);
-    free(reconstructed_data.data);
-    #endif
 }

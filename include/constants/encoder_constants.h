@@ -1,21 +1,21 @@
 /**
  * encoder_constants.h
  * @author @Kevin-Caldwell
- * 
+ *
  * Contains all Encoder-Specific Constants
- * 
+ *
  * Uses
  *  Encoder Abstraction
- * 
+ *
  * Dependencies
  *  math_functions.h
  *  constants.h
- * 
+ *
  * TODO
  *  Determine Encoder-Specific Constants
  *  Add Effects of Constants in Comments
- * 
-*/
+ *
+ */
 
 #ifndef ENCODER_CONSTANTS_H
 #define ENCODER_CONSTANTS_H
@@ -25,12 +25,10 @@
 
 #define OUTPUT_WORD_SIZE 8
 
-
 // 00: Sample-Adaptive Entropy Coder
 // 01: Hybrid Entropy Coder
 // 10: Block-Adaptive Entropy Coder
 #define ENTROPY_CODER 0b00
-
 
 // 00: Lossless
 // 01: Absolute Error Limit Only
@@ -67,14 +65,12 @@
 #define FIXED_DAMPING 0
 #define FIXED_OFFSET 0
 
-
 /***********************ENTROPY CODER***************************/
-//#define UNARY_LENGTH_LIMIT BPOW(5)
-#define RESCALING_COUNTER_SIZE 1 
+// #define UNARY_LENGTH_LIMIT BPOW(5)
+#define RESCALING_COUNTER_SIZE 1
 #define INITIAL_COUNT_EXPONENT 1
 #define ACCUMULATOR_INITIALIZATION 0b1111
 #define ACCUMULATOR_INITIALIZATION_TABLE_FLAG 0
-
 
 extern const int B;
 

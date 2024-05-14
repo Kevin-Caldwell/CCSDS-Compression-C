@@ -2,7 +2,8 @@
 
 #include "testing/synthetic_image_generator.h"
 
-int test_UHI(){
+int test_UHI()
+{
     UHI stream;
     image baseImg;
 
@@ -12,53 +13,57 @@ int test_UHI(){
     // Prepare Random Hyperspectral Image
     InitImage(&baseImg, _Nx, _Ny, _Nz);
     GenerateVoronoiFlat3DNaive(&baseImg, 10);
-    
-    UHI_Initialize(&stream, baseImg.size, "../data/test-images/indian_pines.UHI", READ_AND_WRITE);
-    
 
-    for(int i = 0; i < _Nx; i++){
-        for(int j = 0; j < _Ny; j++){
-            for(int k = 0; k < _Nz; k++){
+    UHI_Initialize(&stream, baseImg.size, "../data/test-images/indian_pines.UHI", READ_AND_WRITE);
+
+    // Write baseImg into UHI file
+    for (int i = 0; i < _Nx; i++)
+    {
+        for (int j = 0; j < _Ny; j++)
+        {
+            for (int k = 0; k < _Nz; k++)
+            {
                 PIXEL p = GetPixel(&baseImg, i, j, k);
-                UHI_WritePixel(&stream, (dim3) {i, j, k}, p);
-                // printf("WRITING: %d INSTEAD OF %d\n", UHI_ReadPixel(&stream, (dim3) {i, j, k}), p);
+                UHI_WritePixel(&stream, (dim3){i, j, k}, p);
             }
         }
         printf("%dth Frame\n", i);
         fflush(stdout);
     }
 
-    char fail = 0;
+    char write_error = 0;
 
-    for(int i = 0; i < _Nx; i++){
-        for(int j = 0; j < _Ny; j++){
-            for(int k = 0; k < _Nz; k++){
-                PIXEL p0 = UHI_ReadPixel(&stream, (dim3) {i, j, k});
+    for (int i = 0; i < _Nx; i++)
+    {
+        for (int j = 0; j < _Ny; j++)
+        {
+            for (int k = 0; k < _Nz; k++)
+            {
+                PIXEL p0 = UHI_ReadPixel(&stream, (dim3){i, j, k});
                 PIXEL p1 = GetPixel(&baseImg, i, j, k);
-                // printf("%d\n", p1);
-                if(p0 != p1){
-                    fail = 1;
-                    // printf("NOT SAME at {%d,%d,%d} | UHI: %u, BASE: %u\n", i, j, k, p0, p1);
+                if (p0 != p1)
+                {
+                    write_error = 1;
                 }
 
-                if(fail) break;
+                if (write_error)
+                    break;
             }
-            if(fail) break;
+            if (write_error)
+                break;
         }
-        if(fail) break;
+        if (write_error)
+            break;
+
         printf("%dth Frame\n", i);
         fflush(stdout);
     }
 
-    if(fail) 
+    if (write_error)
         printf("Failed to Read and Write UHI Image Properly.\n");
-    else 
+    else
         printf("Successfully Written and Read UHI File.\n");
 
-    #ifndef MEMORY_SAVING
-    free(baseImg.data);
-    #endif
     F_CLOSE(stream.fs);
-    return fail;
-
+    return write_error;
 }

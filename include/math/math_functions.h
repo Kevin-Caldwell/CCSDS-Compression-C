@@ -1,9 +1,9 @@
 /**
  * math_functions.h
  * @author @Kevin-Caldwell
- * 
+ *
  * Mathematical Helper Functions for use throughout code.
-*/
+ */
 
 #ifndef MATH_FUNCTIONS_H
 #define MATH_FUNCTIONS_H
@@ -17,11 +17,10 @@
 #define NULL 0
 #endif
 
-
 #define CLIP(x, min_val, max_val) ((x) < (min_val) ? (min_val) : ((x) > (max_val) ? (max_val) : (x)))
 
-#define INSIDE_INTERVAL(x, min, max)    ( min < x && x < max )
-#define OUTSIDE_INTERVAL(x, min, max)   ( min > x || x > max )
+#define INSIDE_INTERVAL(x, min, max) (min < x && x < max)
+#define OUTSIDE_INTERVAL(x, min, max) (min > x || x > max)
 
 #define SIGN(x) x < 0 ? -1 : (x > 0 ? 1 : 0)
 #define SIGN_P(x) (x < 0 ? -1 : 1)
@@ -33,36 +32,41 @@
 
 #define BPOW(x) (1 << (x))
 
-#define SQ(x) ((x)*(x))
+#define SQ(x) ((x) * (x))
 
-typedef uint16_t DIM;
+#define Ps(z) MIN(z, kP)
+
+typedef int32_t DIM;
 typedef unsigned int UINT;
 typedef uint16_t PIXEL;
-typedef uint16_t INDEX;
+typedef int16_t INDEX;
 
 /// Error Codes: TODO
-enum RetVal{
-    OK = 0, ERROR
+enum RetVal
+{
+    OK = 0,
+    ERROR
 };
 
-//typedef uint16_t PIXEL;
-
+// typedef uint16_t PIXEL;
 
 /**
- * 3D Dimension Struct, used to describe size 
+ * 3D Dimension Struct, used to describe size
  * and 3D-Indicies.
- * 
+ *
  * Spatial Dimensions: x, y
  * Spectral Band: z
-*/
-typedef struct dim3{
+ */
+typedef struct dim3
+{
     DIM x;
     DIM y;
     DIM z;
 } dim3;
 
-typedef struct dim2{
-    DIM  x;
+typedef struct dim2
+{
+    DIM x;
     DIM y;
 } dim2;
 

@@ -13,18 +13,20 @@
 
 char DEBUG = 0;
 
+
+
 int main(int argInt, char **argS)
 {
-    #if LOG
+#if LOG
     Log_init();
-    #endif
+#endif
 
     if (argInt > 1)
     {
-    #if LOG
+#if LOG
         Log_add(argS[1]);
         printf("%s", argS[1]);
-    #endif
+#endif
         DEBUG = argInt >= 5;
 
         if (!strcmp(argS[1], "encode"))
@@ -47,18 +49,18 @@ int main(int argInt, char **argS)
     else
     {
         printf("Running Base Case.\n");
-        
+
         // cv_csv_uhi("../data/test-images/indian_pines.csv", "../data/test-images/indian_pines.UHI");
         // printf("Result: %s", test_UHI() ? "Unsuccessful Run.\n" : "Successful Run.\n");
         // printf("Result: %s", testVUF_Write() ? "Unsuccessful Run.\n" : "Successful Run.\n");
         // printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
-        //PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
+        // PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
         PredictImageUHI("../data/test-images/indian_pines.UHI", "../data/test-images/indian_pines_pred.UHI");
     }
 
-    #if LOG
+#if LOG
     Log_close();
-    #endif
+#endif
 
     return 0;
 }

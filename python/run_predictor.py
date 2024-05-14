@@ -1,14 +1,16 @@
 import numpy as np
 import compression as comp
-#from sklearn.metrics import mean_squared_error
+
+# from sklearn.metrics import mean_squared_error
 import csv
 import sys
 
 from csv_io import ReadCSV, SaveCSV
+
 if __name__ == "__main__":
     print("_________PYTHON PREDICTOR_________")
     n = len(sys.argv)
-    if(n > 1):
+    if n > 1:
         data = ReadCSV(sys.argv[1])
         Nx, Ny, Nz = data.shape
 
@@ -20,4 +22,6 @@ if __name__ == "__main__":
 
         python_predicted = comp.predictor(data)
         # encoded = comp.predictor(python_predicted)
-        SaveCSV(python_predicted, "data/results/PYTHONRESULT_indian_pines_predicted.csv")
+        SaveCSV(
+            python_predicted, "data/results/PYTHONRESULT_indian_pines_predicted.csv"
+        )

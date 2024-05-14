@@ -6,7 +6,7 @@ int InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x)
     InitVector(weight_ptr, C);
     int32_t *weight_vector = *weight_ptr; // TODO Turn into #define for optimization?
 
-    if (!PREDICTION_MODE)
+    if (!kPredictionMode)
     {
         for (int i = 0; i < 3; i++)
         {

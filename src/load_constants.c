@@ -10,7 +10,7 @@ int LoadConstantFile(const char *file_name, HashTable *result)
 
     file_t *fp = F_OPEN(file_name, READ);
 
-    char* res = fgets(line_buffer, sizeof(char) * 10, fp);
+    char *res = fgets(line_buffer, sizeof(char) * 10, fp);
     constant_count = atoi(line_buffer);
 
     char key_buffer[KEY_LENGTH];

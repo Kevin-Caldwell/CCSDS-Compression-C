@@ -1,27 +1,27 @@
 /**
  * hash_table.h
  * @authors @Kevin-Caldwell
- * 
+ *
  * Hash Table Implementation for Storing Constants.
  * Uses Dynamically allocated memory for storage
- * 
+ *
  * Dependencies
  *  stdlib
  *  inttypes
  *  string
- * 
+ *
  * Features
  *  Initialization
  *  Deletion
  *  Add Entries
  *  Get Index
  *  Get and Set Value
- * 
+ *
  * TODO
  *  Comments
  *  Statically Allocated Memory (High Priority)
- * 
-*/
+ *
+ */
 
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
@@ -42,9 +42,9 @@ typedef struct HashTable
 
 int Hash_InitializeHashTable(HashTable **hash);
 
-int Hash_DeleteHashTable(HashTable* hash);
+int Hash_DeleteHashTable(HashTable *hash);
 
-int Hash_AddEntry(HashTable *hash, const char* name, int32_t data);
+int Hash_AddEntry(HashTable *hash, const char *name, int32_t data);
 
 int Hash_GetIndex(HashTable *hash, const char *key);
 

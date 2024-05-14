@@ -7,36 +7,35 @@ import sys
 
 
 def ReadCSV(filename):
-        fulltxt = open(filename, 'r').read()
-        data = []
-        num = 0
-        for i in range(len(fulltxt)):
-            if str(fulltxt[i]).isnumeric():
-                num *= 10
-                num += int(fulltxt[i])
-            else:
-                data.append(num)
-                num = 0
-            if(i % (len(fulltxt) // 100) == 0):
-                print(f"Reading... {int(i/len(fulltxt)*100)}%", end="\r")
+    fulltxt = open(filename, "r").read()
+    data = []
+    num = 0
+    for i in range(len(fulltxt)):
+        if str(fulltxt[i]).isnumeric():
+            num *= 10
+            num += int(fulltxt[i])
+        else:
+            data.append(num)
+            num = 0
+        if i % (len(fulltxt) // 100) == 0:
+            print(f"Reading... {int(i/len(fulltxt)*100)}%", end="\r")
 
+    del fulltxt
+    del num
 
-        del fulltxt
-        del num
+    print("Finished Reading...")
 
-        print("Finished Reading...")
+    return data
 
-        return data
 
 def wavelength_to_rgb(wavelength, gamma=0.8):
-
-    '''This converts a given wavelength of light to an 
+    """This converts a given wavelength of light to an
     approximate RGB color value. The wavelength must be given
     in nanometers in the range from 380 nm through 750 nm
     (789 THz through 400 THz).
     Based on code by Dan Bruton
     http://www.physics.sfasu.edu/astro/color/spectra.html
-    '''
+    """
 
     wavelength = float(wavelength)
     if wavelength >= 380 and wavelength <= 440:
@@ -74,37 +73,36 @@ def wavelength_to_rgb(wavelength, gamma=0.8):
     B *= 255
     return (int(R), int(G), int(B))
 
+
 # CacheFiles = ["raw",
 #   "local-sums",
 #    "sample-representatives",
 #    "predicted_sample",
 #    "central_local_difference",
-#    "predicted_central_local_difference", 
+#    "predicted_central_local_difference",
 #    "clipped_quanitzer_bin_center",
 #    "predictor", "quantizer_index"]
 
 CacheFiles = [[]]
 
-#file_index = 7
+# file_index = 7
 
 if __name__ == "__main__":
     for file_index in range(len(CacheFiles)):
-        print("Starting Display Image..")   
+        print("Starting Display Image..")
 
         data = ReadCSV(f"data/test-images/VORONOI_640x512x640_1000.csv")
-        #print(data)
+        # print(data)
 
-        Nx,Ny,Nz = data[0], data[1], data[2]
+        Nx, Ny, Nz = data[0], data[1], data[2]
 
         del data[0]
         del data[0]
         del data[0]
-
 
         numbers = np.array(data, dtype=int)
         del data
-        numbers.resize((Nx,Ny,Nz))
-
+        numbers.resize((Nx, Ny, Nz))
 
         print("Table Created")
 
@@ -115,27 +113,22 @@ if __name__ == "__main__":
         print(maximum)
         print(minimum)
 
-
         print("Prepared Data..")
 
-
         for z in range(0, Nz, 1):
-            img = Image.new( 'RGB', (Nx,Ny), "black") # Create a new black image
-            pixels = img.load() # Create the pixel map
+            img = Image.new("RGB", (Nx, Ny), "black")  # Create a new black image
+            pixels = img.load()  # Create the pixel map
 
-            minimum = numbers[:,:,z].min()
-            maximum = numbers[:,:,z].max()
+            minimum = numbers[:, :, z].min()
+            maximum = numbers[:, :, z].max()
             number_range = maximum - minimum
-            for i in range(img.size[0]):    # For every pixel:
+            for i in range(img.size[0]):  # For every pixel:
                 for j in range(img.size[1]):
                     v = (numbers[i, j, z] - minimum) / number_range * 370 + 380
-                    if(math.isnan(v)):
+                    if math.isnan(v):
                         v = 0
                     d = wavelength_to_rgb(int(v))
-                    pixels[i,j] = (d) # Set the colour accordingly
+                    pixels[i, j] = d  # Set the colour accordingly
             img.save(f"python/images/{CacheFiles[file_index]}{z}.png")
             img.show()
             del img
-    
-
-    

@@ -1,6 +1,5 @@
 #include "testing/synthetic_image_generator.h"
 
-
 #define WRI(x, point, tl, br) (INSIDE_INTERVAL(point.x, top_left.x, bottom_right, x))
 
 int WithinRect2(dim2 point, dim2 top_left, dim2 bottom_right)
@@ -16,7 +15,6 @@ int WithinRect3(dim3 point, dim3 top_left, dim3 bottom_right)
            (INSIDE_INTERVAL(point.z, top_left.z, bottom_right.z));
 }
 
-
 int SpreadPoint2(dim2 **points, dim2 bounds, UINT point_count)
 {
     *points = INIT_ARRAY(dim2, point_count);
@@ -29,7 +27,6 @@ int SpreadPoint2(dim2 **points, dim2 bounds, UINT point_count)
 
     return 0;
 }
-
 
 int SpreadPoint3(dim3 **points, dim3 bounds, UINT point_count)
 {
@@ -44,7 +41,6 @@ int SpreadPoint3(dim3 **points, dim3 bounds, UINT point_count)
 
     return 0;
 }
-
 
 int GenerateVoronoiFlat2D(image2 *result, UINT point_count)
 {
@@ -167,51 +163,57 @@ UINT GetMinDistance3Locales(dim3 point, dim3 *points, UINT *locales, UINT *color
     return color_indices[index];
 }
 
-int ShadeVoronoiBox3(image3* img, dim3 top_right, dim3 bounds, dim3* points, UINT* locales, UINT* color_indices, UINT point_count){
+int ShadeVoronoiBox3(image3 *img, dim3 top_right, dim3 bounds, dim3 *points, UINT *locales, UINT *color_indices, UINT point_count)
+{
 
-    dim3 tlf_bounds = {top_right.x,             top_right.y,    top_right.z};
-    dim3 tlb_bounds = {top_right.x,             top_right.y,    top_right.z + bounds.z};
-    dim3 trf_bounds = {top_right.x + bounds.x,  top_right.y,    top_right.z};
-    dim3 trb_bounds = {top_right.x + bounds.x,  top_right.y,    top_right.z + bounds.z};
+    dim3 tlf_bounds = {top_right.x, top_right.y, top_right.z};
+    dim3 tlb_bounds = {top_right.x, top_right.y, top_right.z + bounds.z};
+    dim3 trf_bounds = {top_right.x + bounds.x, top_right.y, top_right.z};
+    dim3 trb_bounds = {top_right.x + bounds.x, top_right.y, top_right.z + bounds.z};
 
-    dim3 blf_bounds = {top_right.x,             top_right.y + bounds.y,     top_right.z};
-    dim3 blb_bounds = {top_right.x,             top_right.y + bounds.y,     top_right.z + bounds.z};
-    dim3 brf_bounds = {top_right.x + bounds.x,  top_right.y + bounds.y,     top_right.z};
-    dim3 brb_bounds = {top_right.x + bounds.x,  top_right.y + bounds.y,     top_right.z + bounds.z};
-    
+    dim3 blf_bounds = {top_right.x, top_right.y + bounds.y, top_right.z};
+    dim3 blb_bounds = {top_right.x, top_right.y + bounds.y, top_right.z + bounds.z};
+    dim3 brf_bounds = {top_right.x + bounds.x, top_right.y + bounds.y, top_right.z};
+    dim3 brb_bounds = {top_right.x + bounds.x, top_right.y + bounds.y, top_right.z + bounds.z};
+
     UINT tlf = GetMinDistance3Locales(tlf_bounds, points, locales, color_indices, point_count);
     UINT tlb = GetMinDistance3Locales(tlb_bounds, points, locales, color_indices, point_count);
     UINT trf = GetMinDistance3Locales(trf_bounds, points, locales, color_indices, point_count);
     UINT trb = GetMinDistance3Locales(trb_bounds, points, locales, color_indices, point_count);
-    
+
     UINT blf = GetMinDistance3Locales(blf_bounds, points, locales, color_indices, point_count);
     UINT blb = GetMinDistance3Locales(blb_bounds, points, locales, color_indices, point_count);
     UINT brf = GetMinDistance3Locales(brf_bounds, points, locales, color_indices, point_count);
     UINT brb = GetMinDistance3Locales(brb_bounds, points, locales, color_indices, point_count);
 
-
-    if(tlf == tlb && tlb == trf && trf == trb && trb == blf && blf == blb && brf == brb){
-        for(int i = 0; i < bounds.x; i++){
-            for(int j = 0; j < bounds.y; j++){
-                for(int k = 0; k < bounds.z; k++){
-                    SetPixel(img, i,j,k, brb);
+    if (tlf == tlb && tlb == trf && trf == trb && trb == blf && blf == blb && brf == brb)
+    {
+        for (int i = 0; i < bounds.x; i++)
+        {
+            for (int j = 0; j < bounds.y; j++)
+            {
+                for (int k = 0; k < bounds.z; k++)
+                {
+                    SetPixel(img, i, j, k, brb);
                 }
             }
         }
-    } else{
+    }
+    else
+    {
 
-        dim3 half_bounds = {bounds.x/2, bounds.y/2, bounds.z/2};
+        dim3 half_bounds = {bounds.x / 2, bounds.y / 2, bounds.z / 2};
 
-        tlf_bounds = (dim3) {top_right.x,                         top_right.y,                            top_right.z};
-        tlb_bounds = (dim3) {top_right.x,                         top_right.y,                            top_right.z + half_bounds.z};
-        trf_bounds = (dim3) {top_right.x + half_bounds.x,         top_right.y,                            top_right.z};
-        trb_bounds = (dim3) {top_right.x + half_bounds.x,         top_right.y,                            top_right.z + half_bounds.z};
+        tlf_bounds = (dim3){top_right.x, top_right.y, top_right.z};
+        tlb_bounds = (dim3){top_right.x, top_right.y, top_right.z + half_bounds.z};
+        trf_bounds = (dim3){top_right.x + half_bounds.x, top_right.y, top_right.z};
+        trb_bounds = (dim3){top_right.x + half_bounds.x, top_right.y, top_right.z + half_bounds.z};
 
-        blf_bounds = (dim3) {top_right.x,                         top_right.y + half_bounds.y,            top_right.z};
-        blb_bounds = (dim3) {top_right.x,                         top_right.y + half_bounds.y,            top_right.z + half_bounds.z};
-        brf_bounds = (dim3) {top_right.x + half_bounds.x,         top_right.y + half_bounds.y,            top_right.z};
-        brb_bounds = (dim3) {top_right.x + half_bounds.x,         top_right.y + half_bounds.y,            top_right.z + half_bounds.z};        
-        
+        blf_bounds = (dim3){top_right.x, top_right.y + half_bounds.y, top_right.z};
+        blb_bounds = (dim3){top_right.x, top_right.y + half_bounds.y, top_right.z + half_bounds.z};
+        brf_bounds = (dim3){top_right.x + half_bounds.x, top_right.y + half_bounds.y, top_right.z};
+        brb_bounds = (dim3){top_right.x + half_bounds.x, top_right.y + half_bounds.y, top_right.z + half_bounds.z};
+
         ShadeVoronoiBox3(img, tlf_bounds, half_bounds, points, locales, color_indices, point_count);
         ShadeVoronoiBox3(img, tlb_bounds, half_bounds, points, locales, color_indices, point_count);
         ShadeVoronoiBox3(img, trf_bounds, half_bounds, points, locales, color_indices, point_count);
@@ -226,9 +228,8 @@ int ShadeVoronoiBox3(image3* img, dim3 top_right, dim3 bounds, dim3* points, UIN
     return 0;
 }
 
-
 /// @brief Faster Method for Generating Voronoi Diagrams
-/// @param result 
+/// @param result
 /// @param point_count
 int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
 {
@@ -239,11 +240,11 @@ int GenerateVoronoiFlat3DLocal(image3 *result, UINT point_count)
     UINT *true_indices;
     GeneratePointLocales(points, &locales, &true_indices, point_count);
 
-    //ShadeVoronoiBox3(result, (dim3){0,0,0}, result->size, points, locales, true_indices, point_count);
+    // ShadeVoronoiBox3(result, (dim3){0,0,0}, result->size, points, locales, true_indices, point_count);
 
     for (int i = 0; i < result->size.x; i++)
     {
-        printf("Generated %d/%d of Image.\r", (int) (i+1), (int) result->size.x);
+        printf("Generated %d/%d of Image.\r", (int)(i + 1), (int)result->size.x);
         fflush(stdout);
         for (int j = 0; j < result->size.y; j++)
         {

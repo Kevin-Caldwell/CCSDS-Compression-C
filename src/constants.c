@@ -11,20 +11,20 @@ void InitalizeImageConstants(dim3 size)
 
 void InitalizePredictorConstants()
 {
-    kTInc = GET_PCONST("CHANGE_INTERVAL");
-    kVMin = GET_PCONST("WEIGHT_UPDATE_V_MIN");
-    kVMax = GET_PCONST("WEIGHT_UPDATE_V_MAX");
+    kTInc = (int)GET_PCONST("CHANGE_INTERVAL");
+    kVMin = (int)GET_PCONST("WEIGHT_UPDATE_V_MIN");
+    kVMax = (int)GET_PCONST("WEIGHT_UPDATE_V_MAX");
 
-    kUnsignedSamples = GET_PCONST("UNSIGNED_SAMPLES");
-    D = GET_PCONST("D");
-    Da = MIN(D - 1, 16);
+    kUnsignedSamples = (int)GET_PCONST("UNSIGNED_SAMPLES");
+    D = (UINT)GET_PCONST("D");
+    Da = (int)MIN(D - 1, 16);
     kSmin = -BPOW(D - 1);
 
     if (kUnsignedSamples)
     {
         kSmin = 0;
-        kSmax = BPOW(D) - 1;
-        kSmid = BPOW(D - 1);
+        kSmax = BPOW((unsigned)D) - 1;
+        kSmid = BPOW((unsigned)D - 1);
     }
     else
     {
@@ -33,41 +33,39 @@ void InitalizePredictorConstants()
         kSmid = 0;
     }
 
-    PREDICTION_MODE = GET_PCONST("PREDICTION_MODE");
-    kP = GET_PCONST("P");
-    kR = GET_PCONST("REGISTER_SIZE_PARAMETER");
+    kPredictionMode = (int)GET_PCONST("PREDICTION_MODE");
+    kP = (int32_t)GET_PCONST("P");
+    kR = (int64_t)GET_PCONST("REGISTER_SIZE_PARAMETER");
 
-    Omega = GET_PCONST("WEIGHT_RESOLUTION");
+    Omega = (int)GET_PCONST("WEIGHT_RESOLUTION");
 
-    kOmegaMin = -(BPOW(Omega + 2));
-    kOmegaMax = BPOW(Omega + 2) - 1;
+    kOmegaMin = -(BPOW((UINT)(Omega + 2)));
+    kOmegaMax = BPOW((UINT)(Omega + 2)) - 1;
 
-    LOCAL_SUM_TYPE = GET_PCONST("LOCAL_SUM_TYPE");
-    m_z = GET_PCONST("ABSOLUTE_ERROR_LIMIT");
+    kLocalSumType = (int)GET_PCONST("LOCAL_SUM_TYPE");
+    km_z = (int)GET_PCONST("ABSOLUTE_ERROR_LIMIT");
 }
 
-#pragma region Do Not Touch
-
-int Nx = 0;
-int Ny = 0;
-int Nz = 0;
+DIM Nx = (DIM)0;
+DIM Ny = (DIM)0;
+DIM Nz = (DIM)0;
 
 HashTable predictor_constants;
 HashTable encoder_constants;
 
 int kUnsignedSamples = 0;
-int LOCAL_SUM_TYPE = 0;
+t_local_sum kLocalSumType = 0;
 
-int PREDICTION_MODE = 0;
+int kPredictionMode = 0;
 
-int D = 0;
+unsigned int D;
 int Da = 0;
 
 unsigned int kSmin = 0;
 unsigned int kSmid = 0;
 unsigned int kSmax = 0;
 
-int kP = 0;
+int32_t kP = 0;
 int64_t kR = 0;
 
 int kVMax = 0;
@@ -78,6 +76,4 @@ int Omega = 0;
 int kOmegaMin = 0;
 int kOmegaMax = 0;
 
-int m_z;
-
-#pragma endregion
+int km_z;

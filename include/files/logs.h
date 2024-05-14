@@ -7,8 +7,8 @@ void Log_init();
 
 void Log_close();
 
-void Log_add(const char* text);
+void Log_add(const char *text);
 
-void Log_error(char* text);
+void Log_error(char *text);
 
 #endif /* LOGS_H */

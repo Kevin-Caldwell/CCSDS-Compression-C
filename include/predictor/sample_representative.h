@@ -1,11 +1,10 @@
 /**
  * sample_representative.h
  * @authors @Kevin-Caldwell @BrianShTsoi
- * 
- * A collection of Sample representative calculation 
+ *
+ * A collection of Sample representative calculation
  * functions.
-*/
-
+ */
 
 #ifndef SAMPLE_REPRESENTATIVE_H
 #define SAMPLE_REPRESENTATIVE_H
@@ -17,16 +16,15 @@
 #include "predictor/local_differences.h"
 #include "predictor/quantizer.h"
 
-
-#define SR(hIMG, Z, Y, X)     GetPixel(hIMG, X,Y,Z)
-//#define SAMPLE(z,y,x) (0) // TODO
+#define SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)
+// #define SAMPLE(z,y,x) (0) // TODO
 
 extern data_t damping[];
 extern data_t offset[];
 
 data_t SampleRepresentative(uint16_t sample_value);
 
-uint32_t DoubleResolutionPredictedSample(image* hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample);
+uint32_t DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample);
 
 uint16_t PredictedSample(uint32_t double_resolution_predicted_sample);
 
