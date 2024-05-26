@@ -11,9 +11,8 @@
 
 #include "dst/image.h"
 #include "constants/constants.h"
-#include "cache/cache_predictor.h"
 #include "math/linear_algebra.h"
-#include "predictor/local_differences.h"
+// #include "predictor/local_differences.h"
 #include "predictor/quantizer.h"
 
 #define SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)

@@ -12,6 +12,9 @@
 #include <stdlib.h>
 
 #include "files/file_IO.h"
+#include "files/logs.h"
+
+#include "constants/global_constants.h"
 #include "encoder/encoder_helper_functions.h"
 // #ifndef L_SHIFT
 // #define L_SHIFT(x, s) (s == 32 ? 0 : (s < 0 ? (unsigned) x >> -s : (unsigned) x << s))

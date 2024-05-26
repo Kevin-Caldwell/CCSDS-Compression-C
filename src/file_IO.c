@@ -1,6 +1,5 @@
 #include "files/file_IO.h"
 #include "files/logs.h"
-#include "constants/global_constants.h"
 
 const char *file_modes_str[] = {"r", "w", "a", "r+", "w+", "a+"};
 

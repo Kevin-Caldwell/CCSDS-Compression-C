@@ -12,18 +12,26 @@
 #define PREDICTOR_H
 
 #include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
+#include "dst/image.h"
+
+#include "constants/global_constants.h"
 #include "constants/constants.h"
+
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
-#include "dst/image.h"
+
+#include "predictor/weights.h"
 #include "predictor/quantizer.h"
+
+
+#include "files/logs.h"
 
 #define Ps(z) MIN(z, kP)
 
-extern int C;
-
-// typedef to allow for future change
-typedef uint32_t weight_t;
+extern int kC;
 
 int RunPredictor(image *hIMG, image *result);
 

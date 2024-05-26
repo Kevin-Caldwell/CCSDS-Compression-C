@@ -29,6 +29,14 @@
 
 #include "dst/image.h"
 
+#include <inttypes.h>
+#include <time.h>
+
+#include "files/varIntFile_IO.h"
+#include "math/math_functions.h"
+#include "constants/encoder_constants.h"
+#include "encoder/body.h"
+
 void Decoder_DecodeBody(image *predicted_samples, const char *file_name);
 
 void TestDecoder(char *filename);

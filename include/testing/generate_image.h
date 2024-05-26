@@ -1,10 +1,16 @@
 #ifndef GENERATE_IMAGE_H
 #define GENERATE_IMAGE_H
 
-#include "predictor/predictor.h"
-#include "encoder/header.h"
+#include "files/logs.h"
 #include "files/csv-io.h"
+
+#include "predictor/predictor.h"
+
+#include "encoder/header.h"
+#include "encoder/body.h"
+
 #include "testing/synthetic_image_generator.h"
+
 
 #include <time.h>
 

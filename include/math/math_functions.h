@@ -13,33 +13,40 @@
 #include <inttypes.h>
 #include <stddef.h>
 
+#include "constants/typedefs.h"
+
 #ifndef NULL
 #define NULL 0
 #endif
 
+// Restrict x between min_val and max_val
 #define CLIP(x, min_val, max_val) ((x) < (min_val) ? (min_val) : ((x) > (max_val) ? (max_val) : (x)))
 
+// Check if x is within [min, max]
 #define INSIDE_INTERVAL(x, min, max) (min < x && x < max)
+// Check if x is outside [min, max]
 #define OUTSIDE_INTERVAL(x, min, max) (min > x || x > max)
 
+// Return 0 if x=0, -1 if x<1, +1 if x>1
 #define SIGN(x) x < 0 ? -1 : (x > 0 ? 1 : 0)
+// Return -1 if x in (-inf., 0), 1 x in [0, inf.)
 #define SIGN_P(x) (x < 0 ? -1 : 1)
 
+// Returns an overflow-adjusted modulo
 #define MOD(x, R) ((x + BPOW(R - 1)) % BPOW(R) - BPOW(R - 1))
 
+// Max of a and b
 #define MAX(a, b) (a > b ? a : b)
+// Min of a and b
 #define MIN(a, b) (a < b ? a : b)
 
+// Returns 2^x
 #define BPOW(x) (1 << (x))
 
+// Square of x
 #define SQ(x) ((x) * (x))
 
 #define Ps(z) MIN(z, kP)
-
-typedef int32_t DIM;
-typedef unsigned int UINT;
-typedef uint16_t PIXEL;
-typedef int16_t INDEX;
 
 /// Error Codes: TODO
 enum RetVal
@@ -47,8 +54,6 @@ enum RetVal
     OK = 0,
     ERROR
 };
-
-// typedef uint16_t PIXEL;
 
 /**
  * 3D Dimension Struct, used to describe size

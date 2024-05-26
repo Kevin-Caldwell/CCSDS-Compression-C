@@ -25,9 +25,10 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
+#include <stdlib.h>
+
 #include "math/math_functions.h"
 #include "constants/constants.h"
-#include <stdlib.h>
 #include "files/uhi_io.h"
 
 #define FRAME_SIZE(size) (size.x * size.y)
@@ -37,8 +38,6 @@
 #define GetY(t) ((int)t / Nx)
 
 #define S(hIMG, z, y, x) GetPixel(hIMG, x, y, z)
-
-#include "files/uhi_io.h"
 
 typedef UHI image, image3;
 

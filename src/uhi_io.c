@@ -1,8 +1,6 @@
 #include "files/uhi_io.h"
-
-#include <stdio.h>
-
 #include "dst/image.h"
+
 
 int UHI_Initialize(UHI *stream, dim3 buffer_size, const char *file_name,
                    FileMode file_mode)
@@ -11,11 +9,10 @@ int UHI_Initialize(UHI *stream, dim3 buffer_size, const char *file_name,
 
   if (stream->fs == NULL)
   {
-    return 0;
+    return 1;
   }
 
   stream->size = buffer_size;
-  stream->cache[0] = 0;
   // DIM darr[] = {buffer_size.x, buffer_size.y, buffer_size.z};
   F_SEEK(stream->fs, 0);
   F_WRITE(&buffer_size, sizeof(dim3), 1, stream->fs);

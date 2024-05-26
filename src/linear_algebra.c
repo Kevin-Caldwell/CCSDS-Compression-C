@@ -2,7 +2,7 @@
 
 int InitVector(int32_t **v, UINT len)
 {
-    *v = (int32_t *)malloc(sizeof(int32_t) * len);
+    //*v = (int32_t *)malloc(sizeof(int32_t) * len);
 
     return 0;
 }

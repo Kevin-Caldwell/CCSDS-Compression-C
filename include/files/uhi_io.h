@@ -8,7 +8,7 @@
  * prioritizing fast read and write capabilities.
  *
  * The First 3 16-bit values store the dimensions
- * of the image, with the format: (Nx, Ny, Nz)
+ * of the image, with the format: (kNx, kNy, kNz)
  */
 
 #ifndef UHI_IO_H
@@ -16,6 +16,8 @@
 
 #include <inttypes.h>
 #include <stdlib.h>
+#include <stdio.h>
+
 #include "files/file_IO.h"
 #include "math/math_functions.h"
 
@@ -43,7 +45,6 @@ typedef struct UncompressedHyperspectralImage
 {
     file_t *fs;
     dim3 size;
-    int32_t cache[UHI_CACHE_LENGTH]; // TODO: Pixel Caching
 } F_UHI, UHI, uIMG;
 
 int UHI_Initialize(

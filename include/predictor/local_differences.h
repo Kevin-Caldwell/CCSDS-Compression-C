@@ -13,8 +13,8 @@
 #include "math/linear_algebra.h"
 #include "math/math_functions.h"
 #include "predictor/local_sum.h"
-#include "predictor/sample_representative.h"
 #include "predictor/weights.h"
+#include "predictor/sample_representative.h"
 
 #define Ps(z) MIN(z, kP)
 
@@ -34,8 +34,6 @@ int32_t CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x);
 
 int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction);
 
-int LocalDirectionVector(image *hIMG, int32_t **local_direction_vector, INDEX z, INDEX y, INDEX x);
-
-int64_t PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x);
+int LocalDirectionVector(image *hIMG, int32_t *local_direction_vector, INDEX z, INDEX y, INDEX x);
 
 #endif /* LOCAL_DIFFERENCES_H */

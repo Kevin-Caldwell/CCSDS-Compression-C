@@ -1,27 +1,16 @@
 #include "predictor/predictor.h"
 
-#include "constants/global_constants.h"
-#include <time.h>
-#include <string.h>
-
-#include "files/logs.h"
-
 file_t *fp;
-int _C = 0;
-int C = 0;
-void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
-{
+// int _C = 0;
+int kC = 0;
 
-    if (x == 0 && y == 0)
-    {
-        free(global_cache->weights);
-        InitializeWeights(&global_cache->weights, z, y, x);
-    }
+void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, weight_t* weights)
+{
 
     data_t raw_data = GetPixel(hIMG, x, y, z);
     uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
 
-    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x);
+    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x, weights);
 
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);
@@ -39,7 +28,7 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
 
     SetPixel(result, x, y, z, predicted_value);
 
-    UpdateWeights(hIMG, global_cache->weights, z, y, x, double_resolution_predicted_error);
+    UpdateWeights(hIMG, weights, z, y, x, double_resolution_predicted_error);
 
     if (DEBUG)
     {
@@ -50,9 +39,9 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x)
                 raw_data, predicted_sample, predicted_value,
                 predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
 
-        for (int i = 0; i < _C; i++)
+        for (int i = 0; i < kC; i++)
         {
-            sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
+            sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
         F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
@@ -84,28 +73,32 @@ int RunPredictor(image *hIMG, image *result)
     start = clock();
 #endif
 
+    
     for (int i = 0; i < size.z; i++)
     {
         if (!kPredictionMode)
         {
-            C = Ps(i) + 3;
+            kC = Ps(i) + 3;
         }
         else
         {
-            C = Ps(i);
+            kC = Ps(i);
         }
+        
+        weight_t weight_vector[kC];
+        InitializeWeights(weight_vector, i);
 
         for (int j = 0; j < size.y; j++)
         {
             for (int k = 0; k < size.x; k++)
             {
-                Predict(hIMG, result, i, j, k);
+                Predict(hIMG, result, i, j, k, weight_vector);
             }
         }
 
 #if LOG
         double time_elapsed = (double)(clock() - start) / (double)CLOCKS_PER_SEC;
-        double time_left = time_elapsed * (Nz - i - 1) / (i + 1);
+        double time_left = time_elapsed * (kNz - i - 1) / (i + 1);
         printf("\rPredicted %d/%d of Image. (%3.1f seconds Elapsed, %3.1f seconds Left)", (int)(i + 1), (int)hIMG->size.z, time_elapsed, time_left);
         fflush(stdout);
 #endif

@@ -1,6 +1,5 @@
 #include "testing/generate_image.h"
-#include "encoder/body.h"
-#include "files/logs.h"
+
 
 int GenerateVoronoiImage(dim3 size, int index, int points)
 {
@@ -29,15 +28,6 @@ int PredictImage(char *source, char *destination)
     if (res)
     {
         Log_error("Unable to Read Image");
-        return res;
-    }
-#endif
-
-    res = InitializePredictorCache(&global_cache);
-#if LOG
-    if (res)
-    {
-        Log_error("Unable to Create Cache");
         return res;
     }
 #endif
@@ -71,8 +61,6 @@ int PredictImage(char *source, char *destination)
         return res;
     }
 #endif
-
-    DeletePredictorCache(global_cache);
 }
 
 int PredictImageUHI(char *source, char *destination)
@@ -90,15 +78,6 @@ int PredictImageUHI(char *source, char *destination)
     if (res)
     {
         Log_error("Unable to Read Image");
-        return res;
-    }
-#endif
-
-    res = InitializePredictorCache(&global_cache);
-#if LOG
-    if (res)
-    {
-        Log_error("Unable to Create Cache");
         return res;
     }
 #endif
@@ -132,8 +111,6 @@ int PredictImageUHI(char *source, char *destination)
         return res;
     }
 #endif
-
-    DeletePredictorCache(global_cache);
 
     F_CLOSE(hIMG.fs);
     F_CLOSE(result.fs);

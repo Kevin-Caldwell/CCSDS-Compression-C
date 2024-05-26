@@ -37,20 +37,31 @@
 #ifndef RECONSTRUCTOR_H
 #define RECONSTRUCTOR_H
 
+#include <time.h>
+#include <inttypes.h>
+
 #include "constants/constants.h"
+
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
+
 #include "dst/image.h"
-#include "predictor/quantizer.h"
+
 #include "files/csv-io.h"
-#include <inttypes.h>
+
 #include "predictor/predictor.h"
+#include "predictor/sample_representative.h"
+#include "predictor/local_sum.h"
+#include "predictor/local_differences.h"
+#include "predictor/weights.h"
+#include "predictor/quantizer.h"
+
 
 #define Ps(z) MIN(z, kP)
-extern int C;
+extern int kC;
 typedef uint32_t weight_t;
 
-void ReconstructPixel(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, FILE *file_ptr);
+void ReconstructPixel(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, FILE *file_ptr, weight_t* weights);
 
 void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr);
 

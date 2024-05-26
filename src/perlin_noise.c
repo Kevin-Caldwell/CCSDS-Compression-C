@@ -1,10 +1,5 @@
 #include "testing/perlin.h"
 
-#include "files/csv-io.h"
-#include <math.h>
-#include <string.h>
-#include <time.h>
-
 /**
  * 3D floating point vector
  */

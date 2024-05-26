@@ -28,9 +28,9 @@
 #define FALSE 0
 
 // Image Size Constants
-extern DIM Nx;
-extern DIM Ny;
-extern DIM Nz;
+extern DIM kNx;
+extern DIM kNy;
+extern DIM kNz;
 
 extern int LOSSLESS;
 
@@ -57,8 +57,8 @@ typedef enum t_local_sum
 // 0b11: Narrow Column
 extern t_local_sum kLocalSumType;
 
+// Governs the Range of acceptable values
 #define DYNAMIC_RANGE 14
-#define PREVIOUS_BAND_SAMPLES 3
 
 #define RESOLUTION 100
 
@@ -72,9 +72,8 @@ extern t_local_sum kLocalSumType;
 // 2^WEIGHT_UPDATE_SCALING_EXPONENT_CHANGE_INTERVAL
 
 #pragma region Do Not Touch
-// TODO Rename ALL Constants to: kConstant
 
-extern unsigned int D;
+extern unsigned int kD;
 
 extern int kUnsignedSamples;
 
@@ -88,9 +87,9 @@ extern int64_t kR;
 extern int kOmegaMin;
 extern int kOmegaMax;
 
-extern int Da;
+extern int kDa;
 extern int km_z;
-extern int C;
+extern int kC;
 
 extern int kVMin;
 extern int kVMax;

@@ -1,6 +1,6 @@
 #include "encoder/body.h"
 #include <time.h>
-#include "encoder/encoder_helper_functions.h"
+
 
 int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
 unsigned int U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
@@ -26,10 +26,10 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
     {
 
         u <<= UNARY_LENGTH_LIMIT;
-        u <<= D;
+        u <<= kD;
         unsigned int mask = (1 << k) - 1;
         u |= j;
-        len = k + D;
+        len = k + kD;
     }
 
     return (GolombInt){u, len};
@@ -37,20 +37,20 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
 
 unsigned int InitAccumulatorValue(uint32_t z)
 {
-    unsigned int k_prime = (K <= 30 - D) ? K : (2 * K + D - 30);
+    unsigned int k_prime = (K <= 30 - kD) ? K : (2 * K + kD - 30);
     return (3 * BPOW(k_prime + 6) - 49) * Gamma1;
 }
 
 int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int buffer_size)
 {
     int K_ZPRIME = 0;
-    if (K <= 30 - D)
+    if (K <= 30 - kD)
     {
         K_ZPRIME = K;
     }
     else
     {
-        K_ZPRIME = 2 * K + D - 30;
+        K_ZPRIME = 2 * K + kD - 30;
     }
     dim3 sz = hIMG->size;
 
@@ -78,9 +78,9 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
                 {
                     gamma = BPOW(Gamma1);
                     epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
-                    VUF_append(&stream, data, D);
-                    len += D;
-                    fprintf(log, "%u:%d,%d\n", data, D, k_z);
+                    VUF_append(&stream, data, kD);
+                    len += kD;
+                    fprintf(log, "%u:%d,%d\n", data, kD, k_z);
                     continue;
                 }
 
@@ -90,7 +90,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
                 }
                 else
                 {
-                    for (int i = D; i >= 0; i--)
+                    for (int i = kD; i >= 0; i--)
                     {
                         if ((gamma * BPOW(i)) <= (epsilon_z + ((49u * gamma) >> 7)))
                         {
@@ -118,7 +118,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
             }
         }
         time_t time_elapsed = time(NULL) - start;
-        time_t time_left = time_elapsed * (Nz - z - 1) / (z + 1);
+        time_t time_left = time_elapsed * (kNz - z - 1) / (z + 1);
         printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
         fflush(stdout);
     }
@@ -126,7 +126,7 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
 
     time_t end = time(NULL);
     printf("\n%d seconds for image Encoding.\n", (int)(end - start));
-    printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float)Nx * Ny * Nz * D / 8), (1 - ((float)len / ((float)Nx * Ny * Nz * D))) * 100);
+    printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float)kNx * kNy * kNz * kD / 8), (1 - ((float)len / ((float)kNx * kNy * kNz * kD))) * 100);
 
     return 0;
 }

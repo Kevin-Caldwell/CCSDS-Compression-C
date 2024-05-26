@@ -8,7 +8,7 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
     {
     case LS_WIDE_NEIGHBOR:
     {
-        if (y > 0 && 0 < x && x < Nx - 1)
+        if (y > 0 && 0 < x && x < kNx - 1)
         {
             val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) +
                   SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1);
@@ -21,7 +21,7 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
         {
             val = 2 * (SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1));
         }
-        else if (y > 0 && x == (INDEX)Nx - 1)
+        else if (y > 0 && x == (INDEX)kNx - 1)
         {
             val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) + 2 * SR(hIMG, z, y - 1, x);
         }
@@ -33,7 +33,7 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
     }
     case LS_NARROW_NEIGHBOR:
     {
-        if (y > 0 && 0 < x && x < Nx - 1)
+        if (y > 0 && 0 < x && x < kNx - 1)
         {
             val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) +
                   SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1);
@@ -46,7 +46,7 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
         {
             val = 2 * (SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1));
         }
-        else if (y > 0 && x == Nx - 1)
+        else if (y > 0 && x == kNx - 1)
         {
             val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) + 2 * SR(hIMG, z, y - 1, x);
         }
@@ -98,7 +98,7 @@ int LocalSumBranchClassifier(INDEX x, INDEX y, INDEX z)
     {
     case LS_WIDE_NEIGHBOR:
     {
-        if (y < 0 && x > 0 && x > Nx)
+        if (y < 0 && x > 0 && x > kNx)
         {
             res = 0;
         }
@@ -110,7 +110,7 @@ int LocalSumBranchClassifier(INDEX x, INDEX y, INDEX z)
         {
             res = 2;
         }
-        else if (y > 0 && x == Nx - 1)
+        else if (y > 0 && x == kNx - 1)
         {
             res = 3;
         }
@@ -119,7 +119,7 @@ int LocalSumBranchClassifier(INDEX x, INDEX y, INDEX z)
 
     case LS_NARROW_NEIGHBOR:
     {
-        if (y > 0 && x > 0 && x > Nx - 1)
+        if (y > 0 && x > 0 && x > kNx - 1)
         {
             res = 0;
         }
@@ -127,7 +127,7 @@ int LocalSumBranchClassifier(INDEX x, INDEX y, INDEX z)
         {
             res = 1;
         }
-        else if (y > 0 && x == Nx - 1)
+        else if (y > 0 && x == kNx - 1)
         {
             res = 2;
         }

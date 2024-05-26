@@ -2,9 +2,9 @@
 
 void InitalizeImageConstants(dim3 size)
 {
-    Nx = size.x;
-    Ny = size.y;
-    Nz = size.z;
+    kNx = size.x;
+    kNy = size.y;
+    kNz = size.z;
 }
 
 #define GET_PCONST(x) (Hash_GetValue(&predictor_constants, x))
@@ -16,20 +16,20 @@ void InitalizePredictorConstants()
     kVMax = (int)GET_PCONST("WEIGHT_UPDATE_V_MAX");
 
     kUnsignedSamples = (int)GET_PCONST("UNSIGNED_SAMPLES");
-    D = (UINT)GET_PCONST("D");
-    Da = (int)MIN(D - 1, 16);
-    kSmin = -BPOW(D - 1);
+    kD = (UINT)GET_PCONST("D");
+    kDa = (int)MIN(kD - 1, 16);
+    kSmin = -BPOW(kD - 1);
 
     if (kUnsignedSamples)
     {
         kSmin = 0;
-        kSmax = BPOW((unsigned)D) - 1;
-        kSmid = BPOW((unsigned)D - 1);
+        kSmax = BPOW((unsigned)kD) - 1;
+        kSmid = BPOW((unsigned)kD - 1);
     }
     else
     {
-        kSmin = -BPOW(D - 1);
-        kSmax = BPOW(D) - 1;
+        kSmin = -BPOW(kD - 1);
+        kSmax = BPOW(kD) - 1;
         kSmid = 0;
     }
 
@@ -46,9 +46,9 @@ void InitalizePredictorConstants()
     km_z = (int)GET_PCONST("ABSOLUTE_ERROR_LIMIT");
 }
 
-DIM Nx = (DIM)0;
-DIM Ny = (DIM)0;
-DIM Nz = (DIM)0;
+DIM kNx = (DIM)0;
+DIM kNy = (DIM)0;
+DIM kNz = (DIM)0;
 
 HashTable predictor_constants;
 HashTable encoder_constants;
@@ -58,8 +58,8 @@ t_local_sum kLocalSumType = 0;
 
 int kPredictionMode = 0;
 
-unsigned int D;
-int Da = 0;
+unsigned int kD;
+int kDa = 0;
 
 unsigned int kSmin = 0;
 unsigned int kSmid = 0;

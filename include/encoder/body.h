@@ -29,6 +29,8 @@
 #include "constants/encoder_constants.h"
 #include "files/varIntFile_IO.h"
 
+#include "encoder/encoder_helper_functions.h"
+
 extern int K;
 extern unsigned int U_max;
 extern int Gamma1;

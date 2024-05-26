@@ -1,7 +1,5 @@
 #include "decompressor/reconstructor.h"
 
-#include <time.h>
-
 image *sample;
 void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr)
 {
@@ -12,27 +10,29 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr
     time_t end;
     dim3 size = predicted_values->size;
 
+    weight_t weights[kP];
+
     start = time(NULL);
     for (int z = 0; z < size.z; z++)
     {
         if (!kPredictionMode)
         {
-            C = Ps(z) + 3;
+            kC = Ps(z) + 3;
         }
         else
         {
-            C = Ps(z);
+            kC = Ps(z);
         }
         for (int y = 0; y < size.y; y++)
         {
             for (int x = 0; x < size.x; x++)
             {
-                ReconstructPixel(predicted_values, reconstructed, z, y, x, file_ptr);
+                ReconstructPixel(predicted_values, reconstructed, z, y, x, file_ptr, weights);
             }
         }
 
         time_t time_elapsed = time(NULL) - start;
-        time_t time_left = time_elapsed * (Nz - z - 1) / (z + 1);
+        time_t time_left = time_elapsed * (kNz - z - 1) / (z + 1);
         printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
         fflush(stdout);
     }
@@ -40,17 +40,13 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr
     printf("\n%d seconds for image prediction.\n", (int)(end - start));
 }
 
-void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FILE *file_ptr)
+void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FILE *file_ptr, weight_t* weights)
 {
-    if (x == 0 && y == 0)
-    {
-        free(global_cache->weights);
-        InitializeWeights(&global_cache->weights, z, y, x);
-    }
+
     data_t mapped_data = GetPixel(mapped, x, y, z);
     uint16_t local_sum = FindLocalSum(data, z, y, x);
 
-    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(data, z, y, x);
+    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(data, z, y, x, weights);
 
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
     int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(data, z, y, x, high_resolution_predicted_sample);
@@ -66,7 +62,7 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
     // int32_t double_resolution_predicted_error = 2 * (predicted_sample + delta) - double_resolution_predicted_error
     SetPixel(data, x, y, z, (uint16_t)predicted_sample + delta);
 
-    UpdateWeights(data, global_cache->weights, z, y, x, double_resolution_predicted_error);
+    UpdateWeights(data, weights, z, y, x, double_resolution_predicted_error);
 
     char write_buffer[1000];
 
@@ -75,9 +71,9 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
     sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data,
             predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
 
-    for (int i = 0; i < C; i++)
+    for (int i = 0; i < kC; i++)
     {
-        sprintf(write_buffer + strlen(write_buffer), "%d,", global_cache->weights[i]);
+        sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
     }
     sprintf(write_buffer + strlen(write_buffer), "]\n");
 
@@ -100,8 +96,6 @@ void TestReconstructor(char *file_name)
 
     printf("Running Predictor...\n");
     fflush(stdout);
-    InitializePredictorCache(&global_cache);
-    printf("Cache Created..\n");
     RunPredictor(&sample_data, &predicted_data);
     printf("Completed Prediction.\n");
 

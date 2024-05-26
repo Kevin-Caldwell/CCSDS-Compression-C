@@ -18,6 +18,8 @@
 #include <stddef.h>
 #include <stdio.h>
 
+#include "constants/global_constants.h"
+
 /// File Handling Abstractions
 typedef FILE file_t;
 

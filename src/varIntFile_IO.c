@@ -1,6 +1,4 @@
 #include "files/varIntFile_IO.h"
-#include "files/logs.h"
-#include "constants/global_constants.h"
 
 char *file_modes_arguments[] = {"rb", "wb"};
 

@@ -1,33 +1,19 @@
 #include "decompressor/decoder.h"
 
-#include <inttypes.h>
-#include <time.h>
-
-// #include "encoder/stream_encoder.h"
-#include "files/varIntFile_IO.h"
-#include "math/math_functions.h"
-#include "files/varIntFile_IO.h"
-#include "constants/encoder_constants.h"
-#include "encoder/body.h"
-
-// int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
-// unsigned int U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
-// int Gamma1 = 1;
-
-void increment_xyz(int *x, int *y, int *z, DIM Nx, DIM Ny, DIM Nz)
+void increment_xyz(int *x, int *y, int *z, DIM kNx, DIM kNy, DIM kNz)
 {
-    if (*x < Nx - 1)
+    if (*x < kNx - 1)
     {
         (*x)++;
         return;
     }
-    else if (*y < Ny - 1)
+    else if (*y < kNy - 1)
     {
         *x = 0;
         (*y)++;
         return;
     }
-    else if (*z < Nz - 1)
+    else if (*z < kNz - 1)
     {
         *x = 0;
         *y = 0;
@@ -42,13 +28,13 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
     int data = 1;
     int x, y, z;
     int K_ZPRIME = 0;
-    if (K <= 30 - D)
+    if (K <= 30 - kD)
     {
         K_ZPRIME = K;
     }
     else
     {
-        K_ZPRIME = 2 * K + D - 30;
+        K_ZPRIME = 2 * K + kD - 30;
     }
     dim3 sz = predicted_samples->size;
 
@@ -69,7 +55,7 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
             gamma = BPOW(Gamma1);
             epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
             // Then read the first code word, which has len D
-            sample = VUF_read_stack(&stream, D);
+            sample = VUF_read_stack(&stream, kD);
             SetPixel(predicted_samples, x, y, z, sample);
             increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z);
             continue;
@@ -81,7 +67,7 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
         }
         else
         {
-            for (int i = D; i >= 0; i--)
+            for (int i = kD; i >= 0; i--)
             {
                 if ((gamma * BPOW(i)) <= (epsilon_z + ((49u * gamma) >> 7)))
                 {
@@ -108,7 +94,7 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
 
         if (q == U_max)
         {
-            sample = VUF_read_stack(&stream, D);
+            sample = VUF_read_stack(&stream, kD);
         }
         else
         {

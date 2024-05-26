@@ -7,14 +7,14 @@ void PrepareImageMetadata(uint8_t *essential)
     uint8_t buf;
 
     essential[0] = 0;
-    essential[1] = (uint8_t)((uint16_t)Nx >> 8);
-    essential[2] = (uint8_t)Nx % (1 << 8);
+    essential[1] = (uint8_t)((uint16_t)kNx >> 8);
+    essential[2] = (uint8_t)kNx % (1 << 8);
 
-    essential[3] = (uint8_t)((uint16_t)Ny >> 8);
-    essential[4] = (uint8_t)Ny % (1 << 8);
+    essential[3] = (uint8_t)((uint16_t)kNy >> 8);
+    essential[4] = (uint8_t)kNy % (1 << 8);
 
-    essential[5] = (uint8_t)((uint16_t)Nz >> 8);
-    essential[6] = (uint8_t)Nz % (1 << 8);
+    essential[5] = (uint8_t)((uint16_t)kNz >> 8);
+    essential[6] = (uint8_t)kNz % (1 << 8);
 
     buf = !kUnsignedSamples;
 
@@ -32,7 +32,7 @@ void PrepareImageMetadata(uint8_t *essential)
     buf = 0;
 #endif
     Encode(essential, 7, buf, 1);
-    Encode(essential, 7, D, 4);
+    Encode(essential, 7, kD, 4);
     // TODO: Sample Encoding Order
     Encode(essential, 7, 1, 1);
 

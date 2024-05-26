@@ -1,7 +1,4 @@
 #include "files/logs.h"
-#include "constants/global_constants.h"
-#include <time.h>
-#include <string.h>
 
 char log_file[] = "../data/logs/compressor.logs";
 char _time_str[100];
