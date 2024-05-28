@@ -8,9 +8,10 @@ int Initialized()
     return 0;
 }
 
+/*@null@*/
 file_t *F_OPEN(const char *file_name, FileMode open_mode)
 {
-    return (file_t *)fopen(file_name, file_modes_str[open_mode]);
+    return (file_t *) /*@access FILE@*/ fopen(file_name, file_modes_str[open_mode]);
 }
 
 size_t F_WRITE(const void *write_ptr, size_t member_size, size_t member_count, file_t *file_ptr)
@@ -28,7 +29,7 @@ int F_CLOSE(file_t *stream)
     return fclose((FILE *)stream);
 }
 
-int F_EMPTY(file_t *stream)
+int F_EMPTY(/*@unused@*/ file_t *stream)
 {
     return 0;
 }

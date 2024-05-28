@@ -73,16 +73,16 @@ extern t_local_sum kLocalSumType;
 
 #pragma region Do Not Touch
 
-extern unsigned int kD;
+extern int32_t kD;
 
 extern int kUnsignedSamples;
 
-extern unsigned int kSmin;
-extern unsigned int kSmax;
-extern unsigned int kSmid;
+extern int kSmin;
+extern int kSmax;
+extern int kSmid;
 
 extern int32_t kP;
-extern int Omega;
+extern uint8_t Omega;
 extern int64_t kR;
 extern int kOmegaMin;
 extern int kOmegaMax;

@@ -15,7 +15,7 @@
 #include <time.h>
 
 void TestHeader();
-void TestReadImage();
+int TestReadImage();
 int PredictImage(char *source, char *destination);
 
 int PredictImageUHI(char *source, char *destination);

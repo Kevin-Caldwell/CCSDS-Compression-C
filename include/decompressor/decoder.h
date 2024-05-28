@@ -37,7 +37,7 @@
 #include "constants/encoder_constants.h"
 #include "encoder/body.h"
 
-void Decoder_DecodeBody(image *predicted_samples, const char *file_name);
+int Decoder_DecodeBody(image *predicted_samples, const char *file_name);
 
 void TestDecoder(char *filename);
 

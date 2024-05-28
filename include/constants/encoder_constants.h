@@ -72,7 +72,7 @@
 #define ACCUMULATOR_INITIALIZATION 0b1111
 #define ACCUMULATOR_INITIALIZATION_TABLE_FLAG 0
 
-extern const int B;
+extern const uint8_t B;
 
 /*************SAMPLE-ADAPTIVE ENTROPY CODER*********************/
 
@@ -80,8 +80,8 @@ extern const int B;
 #define ACCUMULATOR_INITIALIZATION_CONSTANT 14
 #define UNARY_LENGTH_LIMIT 8
 
-extern unsigned int U_max;
-extern int K;
-extern int Gamma1;
+extern uint32_t U_max;
+extern int32_t K;
+extern uint32_t Gamma1;
 
 #endif /* ENCODER_CONSTANTS_H */

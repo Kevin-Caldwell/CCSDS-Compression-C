@@ -31,9 +31,9 @@
 
 #include "encoder/encoder_helper_functions.h"
 
-extern int K;
-extern unsigned int U_max;
-extern int Gamma1;
+extern int32_t K;
+extern uint32_t U_max;
+extern uint32_t Gamma1;
 
 #define GAMMA_STAR 5
 

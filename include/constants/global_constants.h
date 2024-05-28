@@ -20,6 +20,8 @@
 #ifndef GLOBAL_CONSTANTS_H
 #define GLOBAL_CONSTANTS_H
 
+#include "constants/typedefs.h"
+
 #include "constants/load_constants.h"
 
 #define GLOBAL_CONSTANTS_LOCATION "/global.CONST"
@@ -38,13 +40,6 @@ extern char log_file[];
 
 #define LOG 1
 
-typedef enum ERROR_CODES
-{
-    RES_OK = 0,
-    FILE_ACCESS_ERROR,
-    FILE_READ_ERROR,
-    FILE_WRITE_ERROR,
-    MEM_ALLOC_ERROR
-} ERROR_CODES;
+#define global_error_handle if(res) return res;
 
 #endif /* GLOBAL_CONSTANTS_H */

@@ -2,13 +2,13 @@
 #include <time.h>
 
 
-int K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
-unsigned int U_max = CLIP(UNARY_LENGTH_LIMIT, 8, 32);
-int Gamma1 = 1;
+int32_t K = 0; // CLIP(ACCUMULATOR_INITIALIZATION_CONSTANT, 0, MIN(D-2, 14));
+uint32_t U_max = (uint32_t) CLIP(UNARY_LENGTH_LIMIT, 8, 32);
+uint32_t Gamma1 = 1;
 
 GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
 {
-    uint32_t u;
+    uint32_t u = 0;
     unsigned int len = 0;
     uint32_t div = j / (BPOW(k));
     if (div < U_max)
@@ -18,32 +18,35 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
         u <<= 1;
         u |= 1;
         u <<= k;
-        unsigned int mask = (1 << k) - 1;
+        unsigned int mask = (1 << (unsigned) k) - 1;
         u |= (j & mask);
-        len = u ? (div + 1 + k) : 1;
+        len = (unsigned int) (u ? (div + 1 + k) : 1);
     }
     else
     {
 
         u <<= UNARY_LENGTH_LIMIT;
-        u <<= kD;
-        unsigned int mask = (1 << k) - 1;
+        u <<= (uint32_t) kD;
+        /*@unused@*/
+        unsigned int mask = (1 << (unsigned) k) - 1; 
         u |= j;
-        len = k + kD;
+        len = (unsigned int) (k + kD);
     }
 
     return (GolombInt){u, len};
 }
 
-unsigned int InitAccumulatorValue(uint32_t z)
+
+unsigned int InitAccumulatorValue(/*@unused@*/ uint32_t z)
 {
-    unsigned int k_prime = (K <= 30 - kD) ? K : (2 * K + kD - 30);
-    return (3 * BPOW(k_prime + 6) - 49) * Gamma1;
+    unsigned int k_prime = (unsigned int) ((K <= 30 - kD) ? K : (2 * K + kD - 30));
+    return (unsigned int) ((3 * BPOW(k_prime + 6) - 49) * Gamma1);
 }
 
-int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int buffer_size)
+int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *write_mode, int buffer_size)
 {
-    int K_ZPRIME = 0;
+    int res = 0;
+    int32_t K_ZPRIME = 0;
     if (K <= 30 - kD)
     {
         K_ZPRIME = K;
@@ -52,20 +55,26 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
     {
         K_ZPRIME = 2 * K + kD - 30;
     }
+    /*@unused@*/
     dim3 sz = hIMG->size;
-
+    /*@unused@*/
     uint32_t gamma;
+    /*@unused@*/
     uint32_t epsilon_z;
+    /*@unused@*/
     uint32_t codeword;
+    /*@unused@*/
     uint32_t k_z;
 
+    /*@unused@*/
     file_t *log = F_OPEN("../data/logs/c-encoder-debug.LOG", WRITE);
 
-    VUF stream;
-    VUF_initialize(&stream, file_name, buffer_size);
+    VUF stream = {(file_t*)0, 0, 0, 0, };
+    res = VUF_initialize(&stream, file_name, buffer_size);
     long int len = 0;
 
     time_t start = time(NULL);
+    #ifndef S_SPLINT_S
     for (int z = 0; z < sz.z; z++)
     {
         for (int y = 0; y < sz.y; y++)
@@ -122,11 +131,12 @@ int EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int b
         printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
         fflush(stdout);
     }
-    VUF_close(&stream);
+    #endif
+    res = VUF_close(&stream);
 
     time_t end = time(NULL);
     printf("\n%d seconds for image Encoding.\n", (int)(end - start));
-    printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float)kNx * kNy * kNz * kD / 8), (1 - ((float)len / ((float)kNx * kNy * kNz * kD))) * 100);
+    printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float)kNx * kNy * kNz * kD / 8), (double) (1 - ((float)len / ((float)kNx * kNy * kNz * kD))) * 100);
 
     return 0;
 }

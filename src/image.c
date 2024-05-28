@@ -2,11 +2,18 @@
 
 int file_index = 0;
 
-int InitImage(image *img_p, size_t x, size_t y, size_t z)
+int InitImage(image *img_p, DIM x, DIM y, DIM z)
 {
+    int res = 0;
     char file_name[40];
-    sprintf(file_name, "_%lux%lux%lu_%d.UHI", x, y, z, file_index);
-    UHI_Initialize(img_p, (dim3){x, y, z}, file_name, READ_AND_WRITE);
+    
+    res = snprintf(file_name, 40, "_%dx%dx%d_%d.UHI", (int) x, (int) y, (int) z, file_index);
+    global_error_handle
+
+    res = UHI_Initialize(img_p, (dim3){x, y, z}, file_name, READ_AND_WRITE);
+    global_error_handle
+    
+    return res;
 }
 
 PIXEL GetPixel(image *hIMG, INDEX x, INDEX y, INDEX z)

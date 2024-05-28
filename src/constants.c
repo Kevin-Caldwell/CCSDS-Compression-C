@@ -16,20 +16,20 @@ void InitalizePredictorConstants()
     kVMax = (int)GET_PCONST("WEIGHT_UPDATE_V_MAX");
 
     kUnsignedSamples = (int)GET_PCONST("UNSIGNED_SAMPLES");
-    kD = (UINT)GET_PCONST("D");
+    kD = (int32_t) GET_PCONST("D");
     kDa = (int)MIN(kD - 1, 16);
-    kSmin = -BPOW(kD - 1);
+    // kSmin = -BPOW(kD - 1);
 
     if (kUnsignedSamples)
     {
         kSmin = 0;
-        kSmax = BPOW((unsigned)kD) - 1;
-        kSmid = BPOW((unsigned)kD - 1);
+        kSmax = (int) BPOW((unsigned) kD) - 1;
+        kSmid = (int) BPOW((unsigned) kD - 1);
     }
     else
     {
-        kSmin = -BPOW(kD - 1);
-        kSmax = BPOW(kD) - 1;
+        kSmin = (int) -BPOW((unsigned) kD - 1);
+        kSmax = (int) BPOW((unsigned)   kD) - 1;
         kSmid = 0;
     }
 
@@ -37,7 +37,7 @@ void InitalizePredictorConstants()
     kP = (int32_t)GET_PCONST("P");
     kR = (int64_t)GET_PCONST("REGISTER_SIZE_PARAMETER");
 
-    Omega = (int)GET_PCONST("WEIGHT_RESOLUTION");
+    Omega = (uint8_t)GET_PCONST("WEIGHT_RESOLUTION");
 
     kOmegaMin = -(BPOW((UINT)(Omega + 2)));
     kOmegaMax = BPOW((UINT)(Omega + 2)) - 1;
@@ -58,12 +58,12 @@ t_local_sum kLocalSumType = 0;
 
 int kPredictionMode = 0;
 
-unsigned int kD;
+int32_t kD;
 int kDa = 0;
 
-unsigned int kSmin = 0;
-unsigned int kSmid = 0;
-unsigned int kSmax = 0;
+int kSmin = 0;
+int kSmid = 0;
+int kSmax = 0;
 
 int32_t kP = 0;
 int64_t kR = 0;
@@ -72,7 +72,7 @@ int kVMax = 0;
 int kVMin = 0;
 int kTInc = 0;
 
-int Omega = 0;
+uint8_t Omega = 0;
 int kOmegaMin = 0;
 int kOmegaMax = 0;
 

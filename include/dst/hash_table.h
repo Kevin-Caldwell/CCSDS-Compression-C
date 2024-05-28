@@ -30,6 +30,8 @@
 #include <inttypes.h>
 #include <string.h>
 
+#include "constants/typedefs.h"
+
 #define HASH_CAPACITY 30
 #define KEY_LENGTH 30
 
@@ -40,7 +42,7 @@ typedef struct HashTable
     int len;
 } HashTable;
 
-int Hash_InitializeHashTable(HashTable **hash);
+int Hash_InitializeHashTable(HashTable *hash);
 
 int Hash_DeleteHashTable(HashTable *hash);
 

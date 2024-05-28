@@ -16,7 +16,7 @@ void PrepareImageMetadata(uint8_t *essential)
     essential[5] = (uint8_t)((uint16_t)kNz >> 8);
     essential[6] = (uint8_t)kNz % (1 << 8);
 
-    buf = !kUnsignedSamples;
+    buf = (uint8_t) !kUnsignedSamples;
 
 #ifdef UNSIGNED_SAMPLES // TODO FIX #DEFINE
     buf = 0;
@@ -32,23 +32,29 @@ void PrepareImageMetadata(uint8_t *essential)
     buf = 0;
 #endif
     Encode(essential, 7, buf, 1);
-    Encode(essential, 7, kD, 4);
+    Encode(essential, 7, (uint8_t) kD, 4);
     // TODO: Sample Encoding Order
     Encode(essential, 7, 1, 1);
 
     Encode(essential, 10, 0, 2);
     Encode(essential, 10, B, 3);
+    #ifndef S_SPLINT_S
     Encode(essential, 10, ENTROPY_CODER, 2);
+    #endif
     Encode(essential, 10, 0, 1);
 
+    #ifndef S_SPLINT_S
     Encode(essential, 11, QUANTIZER_FIDELITY_CONTROL, 2);
+    #endif
     Encode(essential, 11, 0, 2);
     Encode(essential, 11, TABLE_COUNT, 4);
 
+    #ifndef S_SPLINT_S
     for (int i = 0; i < SIZEOF_HEADER_ESSENTIAL; i++)
     {
         PrintBinary(essential[i]);
     }
+    #endif
     printf("\n");
 }
 
@@ -58,18 +64,18 @@ void PreparePredictorMetadata(uint8_t *predicted_metadata)
 
     Encode(primary, 0, 0, 1);
     Encode(primary, 0, SAMPLE_REP_FLAG, 1);
-    Encode(primary, 0, kP, 4);
-    Encode(primary, 0, kPredictionMode, 1);
+    Encode(primary, 0, (uint8_t) kP, 4);
+    Encode(primary, 0, (uint8_t) kPredictionMode, 1);
     Encode(primary, 0, WEIGHT_EXPONENT_OFFSET_FLAG, 1);
 
     Encode(primary, 1, kLocalSumType, 2);
-    Encode(primary, 1, kR, 6);
+    Encode(primary, 1, (uint8_t) kR, 6);
 
-    Encode(primary, 2, Omega, 4);
-    Encode(primary, 2, Hash_GetValue(&predictor_constants, "CHANGE_INTERVAL") - 4, 4);
+    Encode(primary, 2, (uint8_t) Omega, 4);
+    Encode(primary, 2, (uint8_t) (Hash_GetValue(&predictor_constants, "CHANGE_INTERVAL") - 4), 4);
 
-    Encode(primary, 3, kVMin + 6, 4);
-    Encode(primary, 3, kVMax + 6, 4);
+    Encode(primary, 3, (uint8_t) kVMin + 6, 4);
+    Encode(primary, 3, (uint8_t) kVMax + 6, 4);
 
     Encode(primary, 4, WEO_TABLE_FLAG, 1);
     Encode(primary, 4, WEIGHT_INITIALIZATION, 1);
@@ -97,8 +103,12 @@ void PreparePredictorMetadata(uint8_t *predicted_metadata)
 void PrepareSampleAdaptiveEntropyCoder(uint8_t *entropy_coder_metadata)
 {
     Encode(entropy_coder_metadata, 0, UNARY_LENGTH_LIMIT, 5);
+    #ifndef S_SPLINT_S
     Encode(entropy_coder_metadata, 0, RESCALING_COUNTER_SIZE, 3);
     Encode(entropy_coder_metadata, 1, INITIAL_COUNT_EXPONENT, 3);
     Encode(entropy_coder_metadata, 1, ACCUMULATOR_INITIALIZATION, 4);
     Encode(entropy_coder_metadata, 1, ACCUMULATOR_INITIALIZATION_TABLE_FLAG, 1);
+    #else
+
+    #endif
 }

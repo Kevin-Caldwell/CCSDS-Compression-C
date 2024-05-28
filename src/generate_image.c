@@ -3,27 +3,36 @@
 
 int GenerateVoronoiImage(dim3 size, int index, int points)
 {
+    int res = RES_OK;
+
     char filename[100];
-    sprintf(filename, "../data/test-images/VORONOI_%ux%ux%u_%d.csv",
-            size.x, size.y, size.z, index);
-    image testImage;
-    InitImage(&testImage, size.x, size.y, size.z);
-    GenerateVoronoiFlat3DLocal(&testImage, points);
+    res = snprintf(filename, 100, "../data/test-images/VORONOI_%ux%ux%u_%d.csv",
+            (unsigned int) size.x, (unsigned int) size.y, (unsigned int) size.z, index) >= 100;
+    
+    
+    image testImage = decl_image;
 
-    SaveImageAsCSV(&testImage, filename);
+    res = InitImage(&testImage, size.x, size.y, size.z);
+    global_error_handle
 
-    return RES_OK;
+    res = GenerateVoronoiFlat3DLocal(&testImage, (UINT) points);
+    global_error_handle
+ 
+    res = SaveImageAsCSV(&testImage, filename);
+    global_error_handle
+
+    return res;
 }
 
 int PredictImage(char *source, char *destination)
 {
-    image *hIMG;
-    image *result;
+    image hIMG = decl_image;
+    image result = decl_image;
     int res;
 
     printf("___________C PREDICTOR____________\n");
 
-    res = ReadImageFromCSV(hIMG, source);
+    res = ReadImageFromCSV(&hIMG, source);
 #if LOG
     if (res)
     {
@@ -32,7 +41,7 @@ int PredictImage(char *source, char *destination)
     }
 #endif
 
-    res = InitImage(result, hIMG->size.x, hIMG->size.y, hIMG->size.z);
+    res = InitImage(&result, hIMG.size.x, hIMG.size.y, hIMG.size.z);
 #if LOG
     if (res)
     {
@@ -44,7 +53,7 @@ int PredictImage(char *source, char *destination)
 #if LOG
     Log_add("Setup Complete! Proceeding to Predictor Setup");
 #endif
-    res = RunPredictor(hIMG, result);
+    res = RunPredictor(&hIMG, &result);
 #if LOG
     if (res)
     {
@@ -53,7 +62,7 @@ int PredictImage(char *source, char *destination)
     }
 #endif
 
-    res = SaveImageAsCSV(result, destination);
+    res = SaveImageAsCSV(&result, destination);
 #if LOG
     if (res)
     {
@@ -61,12 +70,13 @@ int PredictImage(char *source, char *destination)
         return res;
     }
 #endif
+    return res;
 }
 
 int PredictImageUHI(char *source, char *destination)
 {
-    image hIMG;
-    image result;
+    image hIMG = decl_image;
+    image result = decl_image;
     int res;
 
     dim3 size = (dim3){145, 145, 220};
@@ -112,54 +122,81 @@ int PredictImageUHI(char *source, char *destination)
     }
 #endif
 
-    F_CLOSE(hIMG.fs);
-    F_CLOSE(result.fs);
-}
-
-int EncodeImage(char *source, char *destination)
-{
-    image *predicted_image;
-    ReadImageFromCSV(predicted_image, source);
-    LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
-    InitalizeImageConstants(predicted_image->size);
-    InitalizePredictorConstants();
-    EncodeBody(predicted_image, destination, "w", 100);
-    free(predicted_image);
+    res = F_CLOSE(hIMG.fs);
+    global_error_handle
+    
+    res = F_CLOSE(result.fs);
+    global_error_handle
 
     return RES_OK;
 }
 
-int CompressImage(char *source, char *destination)
+int EncodeImage(char *source, char *destination)
 {
+    int res = RES_OK;
+    image predicted_image = decl_image;
+
+    res = ReadImageFromCSV(&predicted_image, source);
+    global_error_handle
+
+    res = LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
+    global_error_handle
+
+    InitalizeImageConstants(predicted_image.size);
+    InitalizePredictorConstants();
+    res = EncodeBody(&predicted_image, destination, "w", 100);
+    global_error_handle
+
+    return RES_OK;
+}
+
+int CompressImage(/*@unused@*/ char *source, /*@unused@*/ char *destination)
+{
+    return RES_OK;
 }
 
 void TestHeader()
 {
     uint8_t header[22];
+    memset(header, 0, 22);
+
     PrepareImageMetadata(header);
     PreparePredictorMetadata(header + 12);
     PrepareSampleAdaptiveEntropyCoder(header + 12 + 8);
 }
 
-void TestReadImage()
+int TestReadImage()
 {
-    image *img;
-    ReadImageFromCSV(img, "data_locale.csv");
-    SaveImageAsCSV(img, "data_locale2.csv");
+    int res = RES_OK;
+    image img = decl_image;
+    res = ReadImageFromCSV(&img, "data_locale.csv");
+    global_error_handle
+
+    res = SaveImageAsCSV(&img, "data_locale2.csv");
+    global_error_handle
+
+    return RES_OK;
 }
 
 int cv_csv_uhi(char *src_csv, const char *dest_uhi)
 {
-    image img;
+    int res = RES_OK;
+
+    image img = decl_image;
     dim3 size;
+    /*@unused@*/
     dim3 index;
-    UHI stream;
+    UHI stream = decl_image;
 
-    ReadImageFromCSV(&img, src_csv);
+    res = ReadImageFromCSV(&img, src_csv);
+    global_error_handle
+
     size = img.size;
-    UHI_Initialize(&stream, size, dest_uhi, WRITE);
-    printf("Read CSV\n");
+    res = UHI_Initialize(&stream, size, dest_uhi, WRITE);
+    global_error_handle
 
+    printf("Read CSV\n");
+    #ifndef S_SPLINT_S
     for (int i = 0; i < size.x; i++)
     {
         for (int j = 0; j < size.y; j++)
@@ -168,16 +205,22 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
             {
                 index = (dim3){i, j, k};
                 PIXEL p = GetPixel(&img, i, j, k);
-                UHI_WritePixel(&stream, index, p);
+
+                res = UHI_WritePixel(&stream, index, p);
+                global_error_handle
             }
         }
     }
+    #endif
     printf("Written CSV\n");
-    F_CLOSE(stream.fs);
+
+    res = F_CLOSE(stream.fs);
+    global_error_handle
 
     return 0;
 }
 
-int cv_uhi_csv(const char *src_uhi, const char *dest_csv)
+int cv_uhi_csv(/*@unused@*/ const char *src_uhi, /*@unused@*/ const char *dest_csv)
 {
+    return RES_OK;
 }

@@ -43,8 +43,8 @@
  */
 typedef struct UncompressedHyperspectralImage
 {
-    file_t *fs;
     dim3 size;
+    file_t *fs;
 } F_UHI, UHI, uIMG;
 
 int UHI_Initialize(

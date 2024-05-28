@@ -1,6 +1,6 @@
 #include "decompressor/decoder.h"
 
-void increment_xyz(int *x, int *y, int *z, DIM kNx, DIM kNy, DIM kNz)
+void increment_xyz(INDEX *x, INDEX *y, INDEX *z, DIM kNx, DIM kNy, DIM kNz)
 {
     if (*x < kNx - 1)
     {
@@ -23,11 +23,14 @@ void increment_xyz(int *x, int *y, int *z, DIM kNx, DIM kNy, DIM kNz)
     return;
 }
 
-void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
+int Decoder_DecodeBody(image *predicted_samples, const char *file_name)
 {
+    int res = 0;
+
     int data = 1;
-    int x, y, z;
-    int K_ZPRIME = 0;
+    INDEX x = 0, y = 0, z = 0;
+    int32_t K_ZPRIME = 0;
+
     if (K <= 30 - kD)
     {
         K_ZPRIME = K;
@@ -38,24 +41,33 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
     }
     dim3 sz = predicted_samples->size;
 
-    uint32_t gamma;
-    uint32_t epsilon_z;
-    uint32_t sample;
-    uint32_t k_z;
-
+    uint32_t gamma = 0, epsilon_z = 0, sample = 0, k_z = 0;
     file_t *log = F_OPEN("../data/logs/c-decoder-debug.LOG", WRITE);
-    VUF stream;
-    VUF_initialize(&stream, file_name, 1);
+    if(!log){
+        return 1;
+    }
+    VUF stream = {(file_t*) 0, (char) 0, 0, 0, };
 
-    time_t start = time(NULL);
+    res = VUF_initialize(&stream, file_name, 1);
+    if(res){
+        perror("Decoder_DecodeBody: Unable to open file.");
+        res = VUF_close(&stream);
+        global_error_handle
+
+        res = F_CLOSE(log);
+        global_error_handle
+        return res;
+    }
+
+    // time_t start = time(NULL);
     while (0)
-    { // TODO stream not empty
+    {
         if (x == 0 && y == 0)
         {
-            gamma = BPOW(Gamma1);
-            epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
+            gamma = (uint32_t) BPOW(Gamma1);
+            epsilon_z = ((3 * (unsigned int)BPOW((unsigned) K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
             // Then read the first code word, which has len D
-            sample = VUF_read_stack(&stream, kD);
+            sample = VUF_read_stack(&stream, (uint32_t) kD);
             SetPixel(predicted_samples, x, y, z, sample);
             increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z);
             continue;
@@ -67,6 +79,7 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
         }
         else
         {
+            #ifndef S_SPLINT_S
             for (int i = kD; i >= 0; i--)
             {
                 if ((gamma * BPOW(i)) <= (epsilon_z + ((49u * gamma) >> 7)))
@@ -75,11 +88,12 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
                     break;
                 }
             }
+            #endif
         }
 
         // Inverse GolombPowerTwo
-        int bit;
-        uint32_t j;
+        uint32_t bit;
+        // uint32_t j;
         uint32_t q = 0;
         while (0)
         { /* Stream not empty && */
@@ -94,7 +108,7 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
 
         if (q == U_max)
         {
-            sample = VUF_read_stack(&stream, kD);
+            sample = VUF_read_stack(&stream, (uint32_t) kD);
         }
         else
         {
@@ -116,24 +130,28 @@ void Decoder_DecodeBody(image *predicted_samples, const char *file_name)
             increment_xyz(&x, &y, &z, sz.x, sz.y, sz.z);
         }
 
-        if (gamma < BPOW(GAMMA_STAR) - 1)
+        if (gamma < (uint32_t) BPOW(GAMMA_STAR) - 1)
         {
             epsilon_z += data;
             gamma++;
         }
-        else if (gamma == BPOW(GAMMA_STAR) - 1)
+        else if (gamma == (uint32_t) BPOW(GAMMA_STAR) - 1)
         {
             epsilon_z = (epsilon_z + data + 1) / 2;
             gamma = (gamma + 1) / 2;
         }
     }
 
-    VUF_close(&stream);
-    time_t end = time(NULL);
+    res = VUF_close(&stream);
+    // time_t end = time(NULL);
+
+    return res;
 }
 
 void TestDecoder(char *filename)
 {
+
     printf("Testing Decoder...\n");
+    printf("Filename: %s", filename);
     /* TODO */
 }

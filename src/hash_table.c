@@ -1,11 +1,9 @@
 #include "dst/hash_table.h"
 
-int Hash_InitializeHashTable(HashTable **hash)
+int Hash_InitializeHashTable(HashTable *hash)
 {
-    *hash = malloc(sizeof(HashTable));
-    (*hash)->len = 0;
-
-    return 0;
+    hash->len = 0;
+    return RES_OK;
 }
 
 int Hash_DeleteHashTable(HashTable *hash)
@@ -16,13 +14,20 @@ int Hash_DeleteHashTable(HashTable *hash)
 
 int Hash_AddEntry(HashTable *hash, const char *name, int32_t data)
 {
+    char temp[KEY_LENGTH];
+
     if (hash->len == HASH_CAPACITY)
     {
-        return 1;
+        return HASH_FULL;
     }
 
     hash->data[hash->len] = data;
-    strncpy(hash->keys[hash->len++], name, KEY_LENGTH);
+
+    memcpy(temp, name, KEY_LENGTH);
+    memcpy(hash->keys[hash->len], temp, KEY_LENGTH);
+    hash->len++;
+    
+    return RES_OK;
 }
 
 int Hash_GetIndex(HashTable *hash, const char *key)

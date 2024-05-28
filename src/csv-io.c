@@ -6,29 +6,29 @@
 #include "files/logs.h"
 #endif
 
-void SaveArrayAsCSV(uint16_t *data, UINT count, char *file_name)
-{
-    file_t *fp;
-    fp = F_OPEN(file_name, WRITE);
-#if LOG
-    if (!fp)
-    {
-        Log_error("SaveArrayAsCSV: Unable to open file");
-    }
-#endif
+// void SaveArrayAsCSV(uint16_t *data, UINT _count, char *file_name)
+// {
+//     file_t *fp;
+//     fp = F_OPEN(file_name, WRITE);
+// #if LOG
+//     if (!fp)
+//     {
+//         Log_error("SaveArrayAsCSV: Unable to open file");
+//     }
+// #endif
 
-    char string_buffer[50];
+//     char string_buffer[50];
 
-    for (int i = 0; i < count; i++)
-    {
-        sprintf(string_buffer, "%hu,", data[i]);
-        fputs(string_buffer, fp);
-    }
+//     for (int i = 0; i < _count; i++)
+//     {
+//         sprintf(string_buffer, "%hu,", data[i]);
+//         fputs(string_buffer, fp);
+//     }
 
-    fputs("%hu", fp);
+//     // fputs("%hu", fp);
 
-    F_CLOSE(fp);
-}
+//     F_CLOSE(fp);
+// }
 
 int SaveImageAsCSV(image *hIMG, char *file_name)
 {
@@ -47,31 +47,50 @@ int SaveImageAsCSV(image *hIMG, char *file_name)
 #endif
 
     char string_buffer[50];
+    int res;
 
-    sprintf(string_buffer, "%ld,%ld,%ld,", (long unsigned)size.x, (long unsigned)size.y, (long unsigned)size.z);
-    fputs(string_buffer, fp);
+    res = snprintf(string_buffer, 50, "%lu,%lu,%lu,", (long unsigned)size.x, (long unsigned)size.y, (long unsigned)size.z);
+    if(res){
+        perror("SaveImageAsCSV: Unable to format String Buffer.");
+    }
 
+    res = fputs(string_buffer, fp);
+    if(res){
+        perror("SaveImageAsCSV: Unable to write String Buffer.");
+    }
+
+    #ifndef S_SPLINT_S
     for (int i = 0; i < size.z; i++)
     {
         for (int j = 0; j < size.y; j++)
         {
             for (int k = 0; k < size.x; k++)
             {
-                sprintf(string_buffer, "%hu,", GetPixel(hIMG, k, j, i));
-                fputs(string_buffer, fp);
+                res = sprintf(string_buffer, "%hu,", GetPixel(hIMG, k, j, i));
+                if(res){
+                    perror("SaveImageAsCSV: Error while formatting pixel data.");
+                }
+
+                res = fputs(string_buffer, fp);
+                if(res){
+                    perror("SaveImageAsCSV: Error while storing Pixel Data.");
+                }
             }
         }
     }
+    #endif
 
     // sprintf(string_buffer, "%hu", hIMG->data[size.x * size.y * size.z - 1]);
     // fputs(string_buffer, fp);
-    F_CLOSE(fp);
+    res = F_CLOSE(fp);
+    global_error_handle
 
-    return RES_OK;
+    return 0;
 }
 
 int ReadImageFromCSV(image *hIMG, char *file_name)
 {
+    int res = 0;
     file_t *fp;
     fp = F_OPEN(file_name, READ);
 
@@ -83,47 +102,49 @@ int ReadImageFromCSV(image *hIMG, char *file_name)
     }
 #endif
     dim3 size = {0, 0, 0};
-    char read_buffer = 1;
+    char read_buffer = (char) 1;
 
     char num_buffer[30];
     int buffer_ptr = 0;
 
-    uint16_t num;
+    int num;
 
     int img_counter = 0;
 
-    while (read_buffer != EOF)
+    while (read_buffer != (char) EOF)
     {
-        size_t res = F_READ(&read_buffer, sizeof(char), 1, fp);
+        res = (int) F_READ(&read_buffer, sizeof(char), 1, fp);
+        global_error_handle
 
         if (read_buffer == ',')
         {
 
-            num_buffer[buffer_ptr] = 0;
+            num_buffer[buffer_ptr] = (char) 0;
             num = atoi(num_buffer);
             buffer_ptr = 0;
 
-            if (!size.x)
+            if (size.x != 0)
             {
-                size.x = num;
+                size.x = (DIM) num;
             }
 
-            else if (!size.y)
+            else if (size.y != 0)
             {
-                size.y = num;
+                size.y = (DIM) num;
             }
 
-            else if (!size.z)
+            else if (size.z != 0)
             {
-                size.z = num;
-                InitImage(hIMG, size.x, size.y, size.z);
+                size.z = (DIM) num;
+                res = InitImage(hIMG, size.x, size.y, size.z);
             }
             else
             {
-                if (img_counter == size.x * size.y * size.z)
-                {
-                    break;
-                }
+                break;
+                // if (img_counter == (int) (size.x * size.y * size.z))
+                // {
+                //     break;
+                // }
             }
         }
         else

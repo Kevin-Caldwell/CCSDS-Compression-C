@@ -39,11 +39,11 @@ typedef enum file_modes
 typedef struct VarUnsignedIntFile
 {
     file_t *fs;
-    uint32_t rw_buffer[BUFFER_LENGTH];
     char io_mode;
 
     int8_t bit_index;
     int8_t byte_index;
+    uint32_t rw_buffer[BUFFER_LENGTH];
 } VUF;
 
 int VUF_initialize(

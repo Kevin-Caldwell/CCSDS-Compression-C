@@ -39,13 +39,15 @@
 
 #define S(hIMG, z, y, x) GetPixel(hIMG, x, y, z)
 
+#define decl_image {{0, 0, 0}, }
+
 typedef UHI image, image3;
 
 int InitImage(
     image *img_p,
-    size_t x,
-    size_t y,
-    size_t z);
+    DIM x,
+    DIM y,
+    DIM z);
 
 PIXEL GetPixel(image *hIMG, INDEX x, INDEX y, INDEX z);
 

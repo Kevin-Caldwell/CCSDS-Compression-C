@@ -35,6 +35,7 @@ typedef enum file_mode
 
 extern const char *file_modes_str[];
 
+/*@null@*/
 file_t *F_OPEN(
     const char *file_name,
     FileMode open_mode);
