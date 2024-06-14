@@ -112,7 +112,7 @@
     "global_constants.h": "c",
     "file_io.h": "c",
     "header.h": "c",
-    "body.h": "c"
+    "body.h": "c",
     "decoder.h": "c",
     "stddef.h": "c"
   },
@@ -123,5 +123,11 @@
   "python.formatting.provider": "none",
   "cmake.sourceDirectory": "/home/kevin/Kevin/Programming/C/CCSDS_Compression/CCSDS-Compression-C",
   "python.analysis.typeCheckingMode": "off",
-  "nvidia-smi-plus.refresh.autoRefresh": true
+  "nvidia-smi-plus.refresh.autoRefresh": true,
+  "latex-workshop.latex.clean.args": [
+    "-outdir=%OUTDIR%",
+    "-c",
+    "%TEX%",
+    "-42"
+  ]
 }

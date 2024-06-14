@@ -2,20 +2,9 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="en-US">
 <title>src Directory Reference</title>
 <indexterm><primary>src Directory Reference</primary></indexterm>
-Directory dependency graph for src:<para>
-    <informalfigure>
-        <mediaobject>
-            <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png"></imagedata>
-            </imageobject>
-        </mediaobject>
-    </informalfigure>
-</para>
 <simplesect>
     <title>Files    </title>
         <itemizedlist>
-            <listitem><para>file <link linkend="_cache__predictor_8c">cache_predictor.c</link></para>
-</listitem>
             <listitem><para>file <link linkend="_constants_8c">constants.c</link></para>
 </listitem>
             <listitem><para>file <link linkend="_csv-io_8c">csv-io.c</link></para>
@@ -29,8 +18,6 @@ Directory dependency graph for src:<para>
             <listitem><para>file <link linkend="_encoder__helper_8c">encoder_helper.c</link></para>
 </listitem>
             <listitem><para>file <link linkend="_file___i_o_8c">file_IO.c</link></para>
-</listitem>
-            <listitem><para>file <link linkend="_full__image_8c">full_image.c</link></para>
 </listitem>
             <listitem><para>file <link linkend="_generate__image_8c">generate_image.c</link></para>
 </listitem>
@@ -62,9 +49,9 @@ Directory dependency graph for src:<para>
 </listitem>
             <listitem><para>file <link linkend="_sample__representative_8c">sample_representative.c</link></para>
 </listitem>
-            <listitem><para>file <link linkend="_stream__encoder_8c">stream_encoder.c</link></para>
-</listitem>
             <listitem><para>file <link linkend="_synthetic__image__generator_8c">synthetic_image_generator.c</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_test__predictor_8c">test_predictor.c</link></para>
 </listitem>
             <listitem><para>file <link linkend="_test___u_h_i_8c">test_UHI.c</link></para>
 </listitem>

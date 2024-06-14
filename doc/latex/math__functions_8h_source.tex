@@ -1,0 +1,76 @@
+\doxysection{math\+\_\+functions.\+h}
+\hypertarget{math__functions_8h_source}{}\label{math__functions_8h_source}\index{include/math/math\_functions.h@{include/math/math\_functions.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ MATH\_FUNCTIONS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MATH\_FUNCTIONS\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{typedefs_8h}{constants/typedefs.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ NULL}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ NULL\ 0}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Restrict\ x\ between\ min\_val\ and\ max\_val}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ CLIP(x,\ min\_val,\ max\_val)\ ((x)\ <\ (min\_val)\ ?\ (min\_val)\ :\ ((x)\ >\ (max\_val)\ ?\ (max\_val)\ :\ (x)))}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ Check\ if\ x\ is\ within\ [min,\ max]}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ INSIDE\_INTERVAL(x,\ min,\ max)\ (min\ <\ x\ \&\&\ x\ <\ max)}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Check\ if\ x\ is\ outside\ [min,\ max]}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ OUTSIDE\_INTERVAL(x,\ min,\ max)\ (min\ >\ x\ ||\ x\ >\ max)}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ Return\ 0\ if\ x=0,\ -\/1\ if\ x<1,\ +1\ if\ x>1}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ SIGN(x)\ x\ <\ 0\ ?\ -\/1\ :\ (x\ >\ 0\ ?\ 1\ :\ 0)}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Return\ -\/1\ if\ x\ in\ (-\/inf.,\ 0),\ 1\ x\ in\ [0,\ inf.)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ SIGN\_P(x)\ (x\ <\ 0\ ?\ -\/1\ :\ 1)}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ Returns\ an\ overflow-\/adjusted\ modulo}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ MOD(x,\ R)\ ((x\ +\ BPOW(R\ -\/\ 1))\ \%\ BPOW(R)\ -\/\ BPOW(R\ -\/\ 1))}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{//\ Max\ of\ a\ and\ b}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ MAX(a,\ b)\ (a\ >\ b\ ?\ a\ :\ b)}}
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ Min\ of\ a\ and\ b}}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ MIN(a,\ b)\ (a\ <\ b\ ?\ a\ :\ b)}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ Returns\ 2\string^x}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ BPOW(x)\ (1\ <<\ (x))}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ Square\ of\ x}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ SQ(x)\ ((x)\ *\ (x))}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{enum}\ RetVal}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ OK\ =\ 0,}
+\DoxyCodeLine{00055\ \ \ \ \ ERROR}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdim3}{dim3}}}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ DIM\ x;}
+\DoxyCodeLine{00068\ \ \ \ \ DIM\ y;}
+\DoxyCodeLine{00069\ \ \ \ \ DIM\ z;}
+\DoxyCodeLine{00070\ \}\ \mbox{\hyperlink{structdim3}{dim3}};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdim2}{dim2}}}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ DIM\ x;}
+\DoxyCodeLine{00075\ \ \ \ \ DIM\ y;}
+\DoxyCodeLine{00076\ \}\ \mbox{\hyperlink{structdim2}{dim2}};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ Euclidian2(\mbox{\hyperlink{structdim2}{dim2}}\ pt1,\ \mbox{\hyperlink{structdim2}{dim2}}\ pt2);}
+\DoxyCodeLine{00079\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ Euclidian3(\mbox{\hyperlink{structdim3}{dim3}}\ pt1,\ \mbox{\hyperlink{structdim3}{dim3}}\ pt2);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ Manhattan2(\mbox{\hyperlink{structdim2}{dim2}}\ pt1,\ \mbox{\hyperlink{structdim2}{dim2}}\ pt2);}
+\DoxyCodeLine{00082\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ Manhattan3(\mbox{\hyperlink{structdim3}{dim3}}\ pt1,\ \mbox{\hyperlink{structdim3}{dim3}}\ pt2);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MATH\_FUNCTIONS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

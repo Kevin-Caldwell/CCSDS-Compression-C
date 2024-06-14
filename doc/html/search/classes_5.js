@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['predictorcache_0',['PredictorCache',['../d0/d18/struct_predictor_cache.html',1,'']]]
+  ['locale_5fbuffer_0',['locale_buffer',['../structlocale__buffer.html',1,'']]]
 ];

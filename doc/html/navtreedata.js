@@ -24,37 +24,29 @@
 */
 var NAVTREE =
 [
-  [ "Hyperspectral Image Compression", "index.html", [
-    [ "Sample Readme for now", "d3/dcc/md__r_e_a_d_m_e.html", null ],
-    [ "Bug List", "de/da5/bug.html", null ],
-    [ "Deprecated List", "da/d58/deprecated.html", null ],
-    [ "Namespaces", "namespaces.html", [
-      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ]
-      ] ]
+  [ "HyperC", "index.html", [
+    [ "hyperCube: A C Implementation of the CCSDS-123-B-2 Standard", "md__r_e_a_d_m_e.html", [
+      [ "Introduction", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Installation Instructions", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Title Here", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Development Highlights?", "md__r_e_a_d_m_e.html#autotoc_md5", null ]
     ] ],
+    [ "Todo List", "todo.html", null ],
+    [ "Deprecated List", "deprecated.html", null ],
+    [ "Bug List", "bug.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "All", "globals.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -63,11 +55,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"d2/df3/local__differences_8h.html#a37d2cf3f48b1b2c436f630a2b649cf52",
-"d6/da2/encoder__body_8c_source.html",
-"d9/da2/file___i_o_8c.html#a2c398d1da0b5890e22a9377517c54874",
-"de/ddf/full__image_8c_source.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

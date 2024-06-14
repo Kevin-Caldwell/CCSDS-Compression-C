@@ -1,7 +1,25 @@
-# Sample Readme for now
+# hyperCube: A C Implementation of the CCSDS-123-B-2 Standard
 
-splint command:
+An Open Source Implementation of [CCSDS-123-B-2](CCSDS_Compression.pdf), the
+Low-Complexity Lossless and Near-Lossless Multispectral and Hyperspectral
+Image Compression.
 
-```C
-splint src/*.c -I include
-```
+## Introduction
+
+This Standard describes 
+
+## Installation Instructions
+
+installation instructions here
+
+## Documentation
+
+Documentation here
+
+## Title Here
+
+Text stuff here
+
+## Development Highlights?
+
+dev

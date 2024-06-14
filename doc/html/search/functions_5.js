@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['encode_0',['encode',['../d4/d25/encoder__helper__functions_8h.html#a7050a856b982bdf5a658945d470cd683',1,'Encode(uint8_t *destination, uint8_t index, uint8_t data, uint8_t length):&#160;encoder_helper.c'],['../d7/d92/encoder__helper_8c.html#a7050a856b982bdf5a658945d470cd683',1,'Encode(uint8_t *destination, uint8_t index, uint8_t data, uint8_t length):&#160;encoder_helper.c']]],
-  ['encodebody_1',['encodebody',['../d0/d77/body_8h.html#a38c7868c2a8819e7abc16148811f2e0b',1,'EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int buffer_size):&#160;encoder_body.c'],['../d6/da2/encoder__body_8c.html#a38c7868c2a8819e7abc16148811f2e0b',1,'EncodeBody(image *hIMG, const char *file_name, const char *write_mode, int buffer_size):&#160;encoder_body.c']]],
-  ['encodeimage_2',['encodeimage',['../df/d7b/generate__image_8h.html#a29f9d24093c99f0e47133d90ea4286e6',1,'EncodeImage(char *source, char *destination):&#160;generate_image.c'],['../d6/d92/generate__image_8c.html#a29f9d24093c99f0e47133d90ea4286e6',1,'EncodeImage(char *source, char *destination):&#160;generate_image.c']]],
-  ['encoder_3',['encoder',['../d0/d0c/namespacecompression.html#ac2c565a00560593a9177b1aad41e0d3c',1,'compression']]],
-  ['euclidian2_4',['euclidian2',['../d2/de2/math__functions_8h.html#a61e36d5241561d1bc112c291a3262565',1,'Euclidian2(dim2 pt1, dim2 pt2):&#160;math_functions.c'],['../d3/d2d/math__functions_8c.html#a61e36d5241561d1bc112c291a3262565',1,'Euclidian2(dim2 pt1, dim2 pt2):&#160;math_functions.c']]],
-  ['euclidian3_5',['euclidian3',['../d2/de2/math__functions_8h.html#adfddd321b4840c92df9f1d48e11c657e',1,'Euclidian3(dim3 pt1, dim3 pt2):&#160;math_functions.c'],['../d3/d2d/math__functions_8c.html#adfddd321b4840c92df9f1d48e11c657e',1,'Euclidian3(dim3 pt1, dim3 pt2):&#160;math_functions.c']]]
+  ['f_5fclose_0',['F_CLOSE',['../file___i_o_8c.html#ad62e6a72675aa7b389460e97f4e6d998',1,'file_IO.c']]],
+  ['f_5fempty_1',['F_EMPTY',['../file___i_o_8c.html#a4b306680e215dfe285fa220421141d38',1,'file_IO.c']]],
+  ['f_5fopen_2',['F_OPEN',['../file___i_o_8c.html#a05d25080a4592a86386f6d0d3d48496c',1,'file_IO.c']]],
+  ['f_5fread_3',['F_READ',['../file___i_o_8c.html#a6d14febd2771048b4a06dd86ea17718d',1,'file_IO.c']]],
+  ['f_5fseek_4',['F_SEEK',['../file___i_o_8c.html#a3ac9e7bef40307b69bdf5e0cb6904d83',1,'file_IO.c']]],
+  ['f_5fwrite_5',['F_WRITE',['../file___i_o_8c.html#a94d988ea4ce93357f56c0191584246a6',1,'file_IO.c']]],
+  ['findlocalsum_6',['FindLocalSum',['../local__sum_8c.html#a1f0a6a3443597dab4881bb94fbc35f41',1,'local_sum.c']]]
 ];

@@ -1,13 +1,8 @@
 var searchData=
 [
-  ['dec_5fto_5fbin_0',['dec_to_bin',['../d0/d09/namespacehelperlib.html#ac0d353b52829389169d73b9a9810f866',1,'helperlib']]],
-  ['decoder_1',['decoder',['../d0/d0c/namespacecompression.html#a13bd9527fe572001978b40411c0868be',1,'compression']]],
-  ['decoder_5fdecodebody_2',['decoder_decodebody',['../d8/dbb/decompressor_2decoder_8h.html#aed4e95d0c6d50bc3f99264337e2f9fb8',1,'Decoder_DecodeBody(image *predicted_samples, const char *file_name):&#160;decoder.c'],['../d6/d19/decoder_8c.html#aed4e95d0c6d50bc3f99264337e2f9fb8',1,'Decoder_DecodeBody(image *predicted_samples, const char *file_name):&#160;decoder.c']]],
-  ['deletepredictorcache_3',['deletepredictorcache',['../df/d01/cache__predictor_8h.html#aca0d39cbaa7b58e1e75c93010c1a7750',1,'DeletePredictorCache(PredictorCache *p_cache):&#160;cache_predictor.c'],['../dc/d99/cache__predictor_8c.html#aca0d39cbaa7b58e1e75c93010c1a7750',1,'DeletePredictorCache(PredictorCache *p_cache):&#160;cache_predictor.c']]],
-  ['deletevector_4',['deletevector',['../dc/d9c/linear__algebra_8h.html#ae000d0d19cf867f1ad39325993763205',1,'DeleteVector(data_t *v):&#160;linear_algebra.c'],['../df/d91/linear__algebra_8c.html#ae000d0d19cf867f1ad39325993763205',1,'DeleteVector(data_t *v):&#160;linear_algebra.c']]],
-  ['directionallocaldifference_5',['directionallocaldifference',['../d2/df3/local__differences_8h.html#aa1779fb92c191cde51766275baaf7591',1,'DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction):&#160;local_differences.c'],['../d8/d97/local__differences_8c.html#aa1779fb92c191cde51766275baaf7591',1,'DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction):&#160;local_differences.c']]],
-  ['display_5fimages_6',['display_images',['../df/ded/namespacedisplay__debugging.html#a225e5b2e6406c2700aa6a6c884994dc3',1,'display_debugging']]],
-  ['dot_7',['dot',['../d1/d32/perlin__noise_8c.html#a7f35c7c40a9e0e57a50fd058b064e8f6',1,'perlin_noise.c']]],
-  ['doubleresolutionpredictedsample_8',['doubleresolutionpredictedsample',['../df/d7d/sample__representative_8h.html#a6c60474c610dc64773816bc445efeb77',1,'DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample):&#160;sample_representative.c'],['../d7/d58/sample__representative_8c.html#a6c60474c610dc64773816bc445efeb77',1,'DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample):&#160;sample_representative.c']]],
-  ['doubleresolutionpredictionerror_9',['doubleresolutionpredictionerror',['../d2/d6a/weights_8h.html#a286baab1384ff25cf7cf4c2061f15c4c',1,'DoubleResolutionPredictionError(int16_t clipped_quantizer_bin_center, int32_t double_resolution_predicted_sample):&#160;weights.c'],['../d0/d26/weights_8c.html#a286baab1384ff25cf7cf4c2061f15c4c',1,'DoubleResolutionPredictionError(int16_t clipped_quantizer_bin_center, int32_t double_resolution_predicted_sample):&#160;weights.c']]]
+  ['encode_0',['Encode',['../encoder__helper_8c.html#a7050a856b982bdf5a658945d470cd683',1,'encoder_helper.c']]],
+  ['encodebody_1',['EncodeBody',['../encoder__body_8c.html#a38c7868c2a8819e7abc16148811f2e0b',1,'encoder_body.c']]],
+  ['encodeimage_2',['EncodeImage',['../generate__image_8c.html#a29f9d24093c99f0e47133d90ea4286e6',1,'generate_image.c']]],
+  ['euclidian2_3',['Euclidian2',['../math__functions_8c.html#a61e36d5241561d1bc112c291a3262565',1,'math_functions.c']]],
+  ['euclidian3_4',['Euclidian3',['../math__functions_8c.html#adfddd321b4840c92df9f1d48e11c657e',1,'math_functions.c']]]
 ];

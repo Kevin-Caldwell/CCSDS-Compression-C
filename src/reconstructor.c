@@ -3,7 +3,6 @@
 image *sample;
 void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr)
 {
-    InitalizeImageConstants(predicted_values->size);
     LoadConstantFile(PREDICTOR_CONSTANTS_LOCATION, &predictor_constants);
     InitalizePredictorConstants();
     time_t start;
@@ -32,7 +31,7 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr
         }
 
         time_t time_elapsed = time(NULL) - start;
-        time_t time_left = time_elapsed * (kNz - z - 1) / (z + 1);
+        time_t time_left = time_elapsed * (predicted_values->size.z - z - 1) / (z + 1);
         printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
         fflush(stdout);
     }

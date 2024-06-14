@@ -1,0 +1,56 @@
+\doxysection{file\+\_\+\+IO.\+h}
+\hypertarget{file___i_o_8h_source}{}\label{file___i_o_8h_source}\index{include/files/file\_IO.h@{include/files/file\_IO.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ FILE\_IO\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ FILE\_IO\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{global__constants_8h}{constants/global\_constants.h}}"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{typedef}\ FILE\ file\_t;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ file\_mode}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ READ\ =\ 0,}
+\DoxyCodeLine{00029\ \ \ \ \ WRITE,}
+\DoxyCodeLine{00030\ \ \ \ \ APPEND,}
+\DoxyCodeLine{00031\ \ \ \ \ READ\_AND\_WRITE,}
+\DoxyCodeLine{00032\ \ \ \ \ WRITING\_AND\_READING,}
+\DoxyCodeLine{00033\ \ \ \ \ APPENDING\_AND\_READING}
+\DoxyCodeLine{00034\ \}\ FileMode;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_modes\_str[];}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{comment}{/*@null@*/}}
+\DoxyCodeLine{00039\ file\_t\ *F\_OPEN(}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,}
+\DoxyCodeLine{00041\ \ \ \ \ FileMode\ open\_mode);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{size\_t}\ F\_WRITE(}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *write\_ptr,}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ member\_size,}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ member\_count,}
+\DoxyCodeLine{00047\ \ \ \ \ file\_t\ *file\_ptr);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{size\_t}\ F\_READ(}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ *destination,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ size,}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ arr\_length,}
+\DoxyCodeLine{00053\ \ \ \ \ file\_t\ *file\_stream);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{int}\ F\_CLOSE(file\_t\ *stream);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ F\_EMPTY(file\_t\ *stream);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ F\_SEEK(}
+\DoxyCodeLine{00060\ \ \ \ \ file\_t\ *stream,}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{int}\ offset);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ FILE\_IO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

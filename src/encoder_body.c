@@ -45,6 +45,7 @@ unsigned int InitAccumulatorValue(/*@unused@*/ uint32_t z)
 
 int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *write_mode, int buffer_size)
 {
+    DIM kNx=0, kNy=0, kNz=0;
     int res = 0;
     int32_t K_ZPRIME = 0;
     if (K <= 30 - kD)

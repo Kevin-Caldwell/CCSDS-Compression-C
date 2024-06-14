@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_image_8c" xml:lang="en-US">
+<title>src/image.c File Reference</title>
+<indexterm><primary>src/image.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;dst/image.h&quot;<?linebreak?></programlisting>Include dependency graph for image.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_image_8c_1a8fa9b237f1e684b54af1748f9a66d666">InitImage</link> (image *img_p, DIM x, DIM y, DIM z)</para>
+</listitem>
+            <listitem><para>PIXEL <link linkend="_image_8c_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link> (image *hIMG, INDEX x, INDEX y, INDEX z)</para>
+</listitem>
+            <listitem><para>void <link linkend="_image_8c_1aefaa1253ccc17864ac32b9d685b821d4">SetPixel</link> (image *hIMG, INDEX x, INDEX y, INDEX z, PIXEL data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_image_8c_1a1aeeb4864b63110b92099384a7a21fa8">Image_Equals</link> (image *img1, image *img2)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_image_8c_1acdd688ddb6c776eddc9ee8c4c2c620d8">file_index</link> = 0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_image_8c_1a78477801fe183cdf32e60df1c92b7320"/><section>
+    <title>GetPixel()</title>
+<indexterm><primary>GetPixel</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>GetPixel</secondary></indexterm>
+<para><computeroutput>PIXEL GetPixel (image * hIMG, INDEX x, INDEX y, INDEX z)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_a78477801fe183cdf32e60df1c92b7320_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_a78477801fe183cdf32e60df1c92b7320_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_image_8c_1a1aeeb4864b63110b92099384a7a21fa8"/><section>
+    <title>Image_Equals()</title>
+<indexterm><primary>Image_Equals</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>Image_Equals</secondary></indexterm>
+<para><computeroutput>int Image_Equals (image * img1, image * img2)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_a1aeeb4864b63110b92099384a7a21fa8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_a1aeeb4864b63110b92099384a7a21fa8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_image_8c_1a8fa9b237f1e684b54af1748f9a66d666"/><section>
+    <title>InitImage()</title>
+<indexterm><primary>InitImage</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>InitImage</secondary></indexterm>
+<para><computeroutput>int InitImage (image * img_p, DIM x, DIM y, DIM z)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_a8fa9b237f1e684b54af1748f9a66d666_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_a8fa9b237f1e684b54af1748f9a66d666_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_image_8c_1aefaa1253ccc17864ac32b9d685b821d4"/><section>
+    <title>SetPixel()</title>
+<indexterm><primary>SetPixel</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>SetPixel</secondary></indexterm>
+<para><computeroutput>void SetPixel (image * hIMG, INDEX x, INDEX y, INDEX z, PIXEL data)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_aefaa1253ccc17864ac32b9d685b821d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="image_8c_aefaa1253ccc17864ac32b9d685b821d4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_image_8c_1acdd688ddb6c776eddc9ee8c4c2c620d8"/><section>
+    <title>file_index</title>
+<indexterm><primary>file_index</primary><secondary>image.c</secondary></indexterm>
+<indexterm><primary>image.c</primary><secondary>file_index</secondary></indexterm>
+<para><computeroutput>int file_index = 0</computeroutput></para></section>
+</section>
+</section>

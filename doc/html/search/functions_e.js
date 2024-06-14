@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['quantizerindex_0',['quantizerindex',['../d1/d38/quantizer_8h.html#afa51bec3d5dfdb41078f60b1a7c454ab',1,'QuantizerIndex(uint16_t sample_value, uint16_t predicted_sample):&#160;quantizer.c'],['../dc/df1/quantizer_8c.html#afa51bec3d5dfdb41078f60b1a7c454ab',1,'QuantizerIndex(uint16_t sample_value, uint16_t predicted_sample):&#160;quantizer.c']]],
-  ['quantizerindexunmapper_1',['quantizerindexunmapper',['../d1/d38/quantizer_8h.html#ae85d34759565d8a3ab498494786c395b',1,'QuantizerIndexUnmapper(uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps):&#160;quantizer.c'],['../dc/df1/quantizer_8c.html#ae85d34759565d8a3ab498494786c395b',1,'QuantizerIndexUnmapper(uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps):&#160;quantizer.c']]]
+  ['randomizevector_0',['RandomizeVector',['../perlin__noise_8c.html#af5816cb432fe4d1eeed508abdf19a429',1,'perlin_noise.c']]],
+  ['readimagefromcsv_1',['ReadImageFromCSV',['../csv-io_8c.html#aba677341d6fd704867c56e0b5d6f3fc3',1,'csv-io.c']]],
+  ['reconstructor_2',['Reconstructor',['../reconstructor_8c.html#ad0d5b55646a3018075f07ae472ddb312',1,'reconstructor.c']]],
+  ['reconstructpixel_3',['ReconstructPixel',['../reconstructor_8c.html#ad16e1f973391ba6490488d303ab55ea3',1,'reconstructor.c']]],
+  ['runpredictor_4',['RunPredictor',['../predictor_8c.html#a4a94804509574a94d896a4164802bcd2',1,'predictor.c']]]
 ];

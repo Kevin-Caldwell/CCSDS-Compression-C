@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_encoder__helper_8c" xml:lang="en-US">
+<title>src/encoder_helper.c File Reference</title>
+<indexterm><primary>src/encoder_helper.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;encoder/encoder_helper_functions.h&quot;<?linebreak?></programlisting>Include dependency graph for encoder_helper.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="encoder__helper_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_encoder__helper_8c_1aa268d136b017ba11fca74d167e36dd34">PrintBinary</link> (uint8_t byte)</para>
+</listitem>
+            <listitem><para>void <link linkend="_encoder__helper_8c_1a7050a856b982bdf5a658945d470cd683">Encode</link> (uint8_t *destination, uint8_t index, uint8_t data, uint8_t length)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_encoder__helper_8c_1a7050a856b982bdf5a658945d470cd683"/><section>
+    <title>Encode()</title>
+<indexterm><primary>Encode</primary><secondary>encoder_helper.c</secondary></indexterm>
+<indexterm><primary>encoder_helper.c</primary><secondary>Encode</secondary></indexterm>
+<para><computeroutput>void Encode (uint8_t * destination, uint8_t index, uint8_t data, uint8_t length)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="encoder__helper_8c_a7050a856b982bdf5a658945d470cd683_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="encoder__helper_8c_a7050a856b982bdf5a658945d470cd683_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_encoder__helper_8c_1aa268d136b017ba11fca74d167e36dd34"/><section>
+    <title>PrintBinary()</title>
+<indexterm><primary>PrintBinary</primary><secondary>encoder_helper.c</secondary></indexterm>
+<indexterm><primary>encoder_helper.c</primary><secondary>PrintBinary</secondary></indexterm>
+<para><computeroutput>void PrintBinary (uint8_t byte)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="encoder__helper_8c_aa268d136b017ba11fca74d167e36dd34_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

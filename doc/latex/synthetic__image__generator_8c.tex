@@ -1,0 +1,154 @@
+\doxysection{src/synthetic\+\_\+image\+\_\+generator.c File Reference}
+\hypertarget{synthetic__image__generator_8c}{}\label{synthetic__image__generator_8c}\index{src/synthetic\_image\_generator.c@{src/synthetic\_image\_generator.c}}
+{\ttfamily \#include "{}testing/synthetic\+\_\+image\+\_\+generator.\+h"{}}\newline
+Include dependency graph for synthetic\+\_\+image\+\_\+generator.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{synthetic__image__generator_8c_abe2b160fe3eb87a606ba91a9c533cd9f}{WRI}}(x,  point,  tl,  br)~(INSIDE\+\_\+\+INTERVAL(point.\+x, top\+\_\+left.\+x, bottom\+\_\+right, x))
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a07336610b2fae60747404124a1bebbbe}{Within\+Rect2}} (dim2 point, dim2 top\+\_\+left, dim2 bottom\+\_\+right)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a5b129c029b15584f09f306c005950893}{Within\+Rect3}} (dim3 point, dim3 top\+\_\+left, dim3 bottom\+\_\+right)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a9793361bc08ee3644e6f9ac73e1bee45}{Spread\+Point2}} (dim2 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}points, dim2 bounds, UINT point\+\_\+count)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_ab7214af202e08fe839b1623f5f783f59}{Spread\+Point3}} (dim3 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}points, dim3 bounds, UINT point\+\_\+count)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_ac0475627017baf40cac531ab67d58e9d}{Generate\+Voronoi\+Flat2D}} (image2 \texorpdfstring{$\ast$}{*}result, UINT point\+\_\+count)
+\item 
+UINT \mbox{\hyperlink{synthetic__image__generator_8c_abe9bd17929405b7d28af71473f567f3c}{Get\+Min\+Distance3\+Naive}} (dim3 point, dim3 \texorpdfstring{$\ast$}{*}points, UINT point\+\_\+count)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a2850e51614bbc71487c7ed52f10fae28}{Generate\+Voronoi\+Flat3\+DNaive}} (image3 \texorpdfstring{$\ast$}{*}result, UINT point\+\_\+count)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a2d4e6084981252d94b4287b36e85aec7}{Generate\+Point\+Locales}} (dim3 \texorpdfstring{$\ast$}{*}points, UINT \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+\_\+locales, UINT \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}p\+\_\+true\+\_\+indices, UINT point\+\_\+count)
+\item 
+UINT \mbox{\hyperlink{synthetic__image__generator_8c_ae17850a552864500c4f1e1f80b8add6a}{Get\+Min\+Distance3\+Locales}} (dim3 point, dim3 \texorpdfstring{$\ast$}{*}points, UINT \texorpdfstring{$\ast$}{*}locales, UINT \texorpdfstring{$\ast$}{*}color\+\_\+indices, UINT point\+\_\+count)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a7f533fab0007b8e388232d9fb654ae06}{Shade\+Voronoi\+Box3}} (image3 \texorpdfstring{$\ast$}{*}img, dim3 top\+\_\+right, dim3 bounds, dim3 \texorpdfstring{$\ast$}{*}points, UINT \texorpdfstring{$\ast$}{*}locales, UINT \texorpdfstring{$\ast$}{*}color\+\_\+indices, UINT point\+\_\+count)
+\item 
+int \mbox{\hyperlink{synthetic__image__generator_8c_a4f7681c24ad008b5b20f8147d2938bb0}{Generate\+Voronoi\+Flat3\+DLocal}} (image3 \texorpdfstring{$\ast$}{*}result, UINT point\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Faster Method for Generating Voronoi Diagrams. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{synthetic__image__generator_8c_abe2b160fe3eb87a606ba91a9c533cd9f}\label{synthetic__image__generator_8c_abe2b160fe3eb87a606ba91a9c533cd9f} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!WRI@{WRI}}
+\index{WRI@{WRI}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{WRI}{WRI}}
+{\footnotesize\ttfamily \#define WRI(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{point,  }\item[{}]{tl,  }\item[{}]{br }\end{DoxyParamCaption})~(INSIDE\+\_\+\+INTERVAL(point.\+x, top\+\_\+left.\+x, bottom\+\_\+right, x))}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{synthetic__image__generator_8c_a2d4e6084981252d94b4287b36e85aec7}\label{synthetic__image__generator_8c_a2d4e6084981252d94b4287b36e85aec7} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!GeneratePointLocales@{GeneratePointLocales}}
+\index{GeneratePointLocales@{GeneratePointLocales}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{GeneratePointLocales()}{GeneratePointLocales()}}
+{\footnotesize\ttfamily int Generate\+Point\+Locales (\begin{DoxyParamCaption}\item[{dim3 \texorpdfstring{$\ast$}{*}}]{points,  }\item[{UINT \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+\_\+locales,  }\item[{UINT \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{p\+\_\+true\+\_\+indices,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{synthetic__image__generator_8c_ac0475627017baf40cac531ab67d58e9d}\label{synthetic__image__generator_8c_ac0475627017baf40cac531ab67d58e9d} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!GenerateVoronoiFlat2D@{GenerateVoronoiFlat2D}}
+\index{GenerateVoronoiFlat2D@{GenerateVoronoiFlat2D}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{GenerateVoronoiFlat2D()}{GenerateVoronoiFlat2D()}}
+{\footnotesize\ttfamily int Generate\+Voronoi\+Flat2D (\begin{DoxyParamCaption}\item[{image2 \texorpdfstring{$\ast$}{*}}]{result,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 3
+\Hypertarget{synthetic__image__generator_8c_a4f7681c24ad008b5b20f8147d2938bb0}\label{synthetic__image__generator_8c_a4f7681c24ad008b5b20f8147d2938bb0} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!GenerateVoronoiFlat3DLocal@{GenerateVoronoiFlat3DLocal}}
+\index{GenerateVoronoiFlat3DLocal@{GenerateVoronoiFlat3DLocal}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{GenerateVoronoiFlat3DLocal()}{GenerateVoronoiFlat3DLocal()}}
+{\footnotesize\ttfamily int Generate\+Voronoi\+Flat3\+DLocal (\begin{DoxyParamCaption}\item[{image3 \texorpdfstring{$\ast$}{*}}]{result,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+
+
+Faster Method for Generating Voronoi Diagrams. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & \\
+\hline
+{\em point\+\_\+count} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\Hypertarget{synthetic__image__generator_8c_a2850e51614bbc71487c7ed52f10fae28}\label{synthetic__image__generator_8c_a2850e51614bbc71487c7ed52f10fae28} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!GenerateVoronoiFlat3DNaive@{GenerateVoronoiFlat3DNaive}}
+\index{GenerateVoronoiFlat3DNaive@{GenerateVoronoiFlat3DNaive}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{GenerateVoronoiFlat3DNaive()}{GenerateVoronoiFlat3DNaive()}}
+{\footnotesize\ttfamily int Generate\+Voronoi\+Flat3\+DNaive (\begin{DoxyParamCaption}\item[{image3 \texorpdfstring{$\ast$}{*}}]{result,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 6
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{synthetic__image__generator_8c_ae17850a552864500c4f1e1f80b8add6a}\label{synthetic__image__generator_8c_ae17850a552864500c4f1e1f80b8add6a} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!GetMinDistance3Locales@{GetMinDistance3Locales}}
+\index{GetMinDistance3Locales@{GetMinDistance3Locales}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{GetMinDistance3Locales()}{GetMinDistance3Locales()}}
+{\footnotesize\ttfamily UINT Get\+Min\+Distance3\+Locales (\begin{DoxyParamCaption}\item[{dim3}]{point,  }\item[{dim3 \texorpdfstring{$\ast$}{*}}]{points,  }\item[{UINT \texorpdfstring{$\ast$}{*}}]{locales,  }\item[{UINT \texorpdfstring{$\ast$}{*}}]{color\+\_\+indices,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 8
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{synthetic__image__generator_8c_abe9bd17929405b7d28af71473f567f3c}\label{synthetic__image__generator_8c_abe9bd17929405b7d28af71473f567f3c} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!GetMinDistance3Naive@{GetMinDistance3Naive}}
+\index{GetMinDistance3Naive@{GetMinDistance3Naive}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{GetMinDistance3Naive()}{GetMinDistance3Naive()}}
+{\footnotesize\ttfamily UINT Get\+Min\+Distance3\+Naive (\begin{DoxyParamCaption}\item[{dim3}]{point,  }\item[{dim3 \texorpdfstring{$\ast$}{*}}]{points,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 10
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{synthetic__image__generator_8c_a7f533fab0007b8e388232d9fb654ae06}\label{synthetic__image__generator_8c_a7f533fab0007b8e388232d9fb654ae06} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!ShadeVoronoiBox3@{ShadeVoronoiBox3}}
+\index{ShadeVoronoiBox3@{ShadeVoronoiBox3}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{ShadeVoronoiBox3()}{ShadeVoronoiBox3()}}
+{\footnotesize\ttfamily int Shade\+Voronoi\+Box3 (\begin{DoxyParamCaption}\item[{image3 \texorpdfstring{$\ast$}{*}}]{img,  }\item[{dim3}]{top\+\_\+right,  }\item[{dim3}]{bounds,  }\item[{dim3 \texorpdfstring{$\ast$}{*}}]{points,  }\item[{UINT \texorpdfstring{$\ast$}{*}}]{locales,  }\item[{UINT \texorpdfstring{$\ast$}{*}}]{color\+\_\+indices,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 12
+Here is the caller graph for this function\+:
+% FIG 13
+\Hypertarget{synthetic__image__generator_8c_a9793361bc08ee3644e6f9ac73e1bee45}\label{synthetic__image__generator_8c_a9793361bc08ee3644e6f9ac73e1bee45} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!SpreadPoint2@{SpreadPoint2}}
+\index{SpreadPoint2@{SpreadPoint2}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{SpreadPoint2()}{SpreadPoint2()}}
+{\footnotesize\ttfamily int Spread\+Point2 (\begin{DoxyParamCaption}\item[{dim2 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{points,  }\item[{dim2}]{bounds,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 14
+\Hypertarget{synthetic__image__generator_8c_ab7214af202e08fe839b1623f5f783f59}\label{synthetic__image__generator_8c_ab7214af202e08fe839b1623f5f783f59} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!SpreadPoint3@{SpreadPoint3}}
+\index{SpreadPoint3@{SpreadPoint3}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{SpreadPoint3()}{SpreadPoint3()}}
+{\footnotesize\ttfamily int Spread\+Point3 (\begin{DoxyParamCaption}\item[{dim3 \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{points,  }\item[{dim3}]{bounds,  }\item[{UINT}]{point\+\_\+count }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{synthetic__image__generator_8c_a07336610b2fae60747404124a1bebbbe}\label{synthetic__image__generator_8c_a07336610b2fae60747404124a1bebbbe} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!WithinRect2@{WithinRect2}}
+\index{WithinRect2@{WithinRect2}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{WithinRect2()}{WithinRect2()}}
+{\footnotesize\ttfamily int Within\+Rect2 (\begin{DoxyParamCaption}\item[{dim2}]{point,  }\item[{dim2}]{top\+\_\+left,  }\item[{dim2}]{bottom\+\_\+right }\end{DoxyParamCaption})}
+
+\Hypertarget{synthetic__image__generator_8c_a5b129c029b15584f09f306c005950893}\label{synthetic__image__generator_8c_a5b129c029b15584f09f306c005950893} 
+\index{synthetic\_image\_generator.c@{synthetic\_image\_generator.c}!WithinRect3@{WithinRect3}}
+\index{WithinRect3@{WithinRect3}!synthetic\_image\_generator.c@{synthetic\_image\_generator.c}}
+\doxysubsubsection{\texorpdfstring{WithinRect3()}{WithinRect3()}}
+{\footnotesize\ttfamily int Within\+Rect3 (\begin{DoxyParamCaption}\item[{dim3}]{point,  }\item[{dim3}]{top\+\_\+left,  }\item[{dim3}]{bottom\+\_\+right }\end{DoxyParamCaption})}
+

@@ -1,0 +1,39 @@
+\doxysection{hash\+\_\+table.\+h}
+\hypertarget{hash__table_8h_source}{}\label{hash__table_8h_source}\index{include/dst/hash\_table.h@{include/dst/hash\_table.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#ifndef\ HASH\_TABLE\_H}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ HASH\_TABLE\_H}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{typedefs_8h}{constants/typedefs.h}}"{}}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ HASH\_CAPACITY\ 30}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ KEY\_LENGTH\ 30}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{char}\ keys[HASH\_CAPACITY][KEY\_LENGTH];}
+\DoxyCodeLine{00041\ \ \ \ \ int32\_t\ data[HASH\_CAPACITY];}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{int}\ len;}
+\DoxyCodeLine{00043\ \}\ \mbox{\hyperlink{struct_hash_table}{HashTable}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ Hash\_InitializeHashTable(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{int}\ Hash\_DeleteHashTable(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{int}\ Hash\_AddEntry(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ int32\_t\ data);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{int}\ Hash\_GetIndex(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ int32\_t\ Hash\_GetValue(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{int}\ Hash\_SetValue(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key,\ int32\_t\ new\_data);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HASH\_TABLE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

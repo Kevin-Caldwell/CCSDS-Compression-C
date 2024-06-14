@@ -1,0 +1,31 @@
+\doxysection{sample\+\_\+representative.\+h}
+\hypertarget{sample__representative_8h_source}{}\label{sample__representative_8h_source}\index{include/predictor/sample\_representative.h@{include/predictor/sample\_representative.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ SAMPLE\_REPRESENTATIVE\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SAMPLE\_REPRESENTATIVE\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}dst/image.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}math/linear\_algebra.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \#include\ "{}predictor/local\_differences.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}predictor/quantizer.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SR(hIMG,\ Z,\ Y,\ X)\ GetPixel(hIMG,\ X,\ Y,\ Z)}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \#define\ SAMPLE(z,y,x)\ (0)\ //\ TODO}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{extern}\ data\_t\ damping[];}
+\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ data\_t\ offset[];}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ data\_t\ SampleRepresentative(uint16\_t\ sample\_value);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ uint32\_t\ DoubleResolutionPredictedSample(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ int64\_t\ high\_resolution\_predicted\_sample);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ uint16\_t\ PredictedSample(uint32\_t\ double\_resolution\_predicted\_sample);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ int64\_t\ HighResolutionPredictedSample(int64\_t\ predicted\_central\_local\_difference,\ uint32\_t\ local\_sum);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SAMPLE\_REPRESENTATIVE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

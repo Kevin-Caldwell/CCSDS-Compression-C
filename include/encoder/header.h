@@ -17,7 +17,7 @@
 #include "constants/encoder_constants.h"
 #include "encoder/encoder_helper_functions.h"
 
-void PrepareImageMetadata(uint8_t *essential);
+void PrepareImageMetadata(uint8_t *essential, dim3 image_size);
 
 void PreparePredictorMetadata(uint8_t *predicted_metadata);
 

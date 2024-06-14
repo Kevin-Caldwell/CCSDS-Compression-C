@@ -1,27 +1,5 @@
 var searchData=
 [
-  ['r_0',['R',['../d0/d0c/namespacecompression.html#a3d90133d3051fbc4816d02efd9566d8e',1,'compression']]],
-  ['randomizevector_1',['RandomizeVector',['../d1/d32/perlin__noise_8c.html#af5816cb432fe4d1eeed508abdf19a429',1,'perlin_noise.c']]],
-  ['read_2',['READ',['../d9/d7f/file___i_o_8h.html#a588666511dde277029c4c5afc30782a6acb9be765f361bb7efb9073730aac92c6',1,'file_IO.h']]],
-  ['read_5fand_5fwrite_3',['READ_AND_WRITE',['../d9/d7f/file___i_o_8h.html#a588666511dde277029c4c5afc30782a6a8766471eed07b5c5db8f7e9b5bf0e13e',1,'file_IO.h']]],
-  ['read_5fbinary_4',['READ_BINARY',['../d5/d5e/var_int_file___i_o_8h.html#a65ff8d4f12985f7d5210a0688be998dcae04a4d33d75ca7df3b250e69c2869be8',1,'varIntFile_IO.h']]],
-  ['readcsv_5',['readcsv',['../d2/dc7/namespaceprepare__h_image.html#a84c47e6bbcef028eda4c81cfa1b935ff',1,'prepare_hImage.ReadCSV()'],['../d6/d9b/namespacecsv__io.html#a84c47e6bbcef028eda4c81cfa1b935ff',1,'csv_io.ReadCSV()']]],
-  ['readimagefromcsv_6',['readimagefromcsv',['../df/df6/csv-io_8c.html#aba677341d6fd704867c56e0b5d6f3fc3',1,'ReadImageFromCSV(image *hIMG, char *file_name):&#160;csv-io.c'],['../d6/d51/csv-io_8h.html#aba677341d6fd704867c56e0b5d6f3fc3',1,'ReadImageFromCSV(image *hIMG, char *file_name):&#160;csv-io.c']]],
-  ['readme_20for_20now_7',['Sample Readme for now',['../d3/dcc/md__r_e_a_d_m_e.html',1,'']]],
-  ['readme_2emd_8',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
-  ['reconstructor_9',['reconstructor',['../de/d32/reconstructor_8h.html#ad0d5b55646a3018075f07ae472ddb312',1,'Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr):&#160;reconstructor.c'],['../d6/dce/reconstructor_8c.html#ad0d5b55646a3018075f07ae472ddb312',1,'Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr):&#160;reconstructor.c']]],
-  ['reconstructor_2ec_10',['reconstructor.c',['../d6/dce/reconstructor_8c.html',1,'']]],
-  ['reconstructor_2ec_2eo_2ed_11',['reconstructor.c.o.d',['../d7/d91/_c_c_s_d_s___image___generator_8dir_2src_2reconstructor_8c_8o_8d.html',1,'(Global Namespace)'],['../d7/d60/_c_c_s_d_s___decompressor_8dir_2src_2reconstructor_8c_8o_8d.html',1,'(Global Namespace)'],['../db/d5d/_c_c_s_d_s___compressor_8dir_2src_2reconstructor_8c_8o_8d.html',1,'(Global Namespace)']]],
-  ['reconstructor_2eh_12',['reconstructor.h',['../de/d32/reconstructor_8h.html',1,'']]],
-  ['reconstructpixel_13',['reconstructpixel',['../de/d32/reconstructor_8h.html#a939a70de0c04a2c4e970e4c242ff0f21',1,'ReconstructPixel(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, FILE *file_ptr):&#160;reconstructor.c'],['../d6/dce/reconstructor_8c.html#aeb6c4d18e6fc666235f8ef7464d1ae29',1,'ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FILE *file_ptr):&#160;reconstructor.c']]],
-  ['res_5fok_14',['RES_OK',['../d5/ddb/global__constants_8h.html#a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737',1,'global_constants.h']]],
-  ['rescaling_5fcounter_5fsize_15',['RESCALING_COUNTER_SIZE',['../d7/ddb/encoder__constants_8h.html#ac06b5b3d7fc01cb19295b60b4421b802',1,'encoder_constants.h']]],
-  ['resolution_16',['RESOLUTION',['../d2/d6f/constants_8h.html#a95d55ebfa2f2f1bd14867ad6a6cc9bfb',1,'constants.h']]],
-  ['retval_17',['RetVal',['../d2/de2/math__functions_8h.html#a98cd80f4bb376e74ad19a8fa85a88d92',1,'math_functions.h']]],
-  ['rmse_18',['rmse',['../d9/d7b/classtest__compression_1_1_test_comp.html#acab599e43f76a42446f7d128db6142f5',1,'test_compression::TestComp']]],
-  ['rows_19',['rows',['../df/ded/namespacedisplay__debugging.html#a74742cb5c8e2ac354a60cb73383d8176',1,'display_debugging']]],
-  ['run_5fpredictor_20',['run_predictor',['../d7/dc2/namespacerun__predictor.html',1,'']]],
-  ['run_5fpredictor_2epy_21',['run_predictor.py',['../df/db7/run__predictor_8py.html',1,'']]],
-  ['runpredictor_22',['runpredictor',['../dc/d08/predictor_8h.html#a4a94804509574a94d896a4164802bcd2',1,'RunPredictor(image *hIMG, image *result):&#160;predictor.c'],['../db/d25/predictor_8c.html#a4a94804509574a94d896a4164802bcd2',1,'RunPredictor(image *hIMG, image *result):&#160;predictor.c']]],
-  ['rw_5fbuffer_23',['rw_buffer',['../d5/ddd/struct_var_unsigned_int_file.html#ab4d491f08cdd6da71b95cf04059412c6',1,'VarUnsignedIntFile']]]
+  ['uint_0',['UINT',['../typedefs_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec',1,'typedefs.h']]],
+  ['uncompressedhyperspectralimage_1',['UncompressedHyperspectralImage',['../struct_uncompressed_hyperspectral_image.html',1,'']]]
 ];

@@ -1,0 +1,38 @@
+\doxysection{local\+\_\+differences.\+h}
+\hypertarget{local__differences_8h_source}{}\label{local__differences_8h_source}\index{include/predictor/local\_differences.h@{include/predictor/local\_differences.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ LOCAL\_DIFFERENCES\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ LOCAL\_DIFFERENCES\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}math/linear\_algebra.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}math/math\_functions.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}predictor/local\_sum.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}predictor/weights.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}predictor/sample\_representative.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{enum}\ DIRECTION}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ N\ =\ 0,}
+\DoxyCodeLine{00024\ \ \ \ \ W,}
+\DoxyCodeLine{00025\ \ \ \ \ NW}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ DLD(hIMG,\ z,\ y,\ x,\ d)\ DirectionalLocalDifference(hIMG,\ z,\ y,\ x,\ d)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DLD\_N(hIMG,\ z,\ y,\ x)\ DirectionalLocalDifference(hIMG,\ z,\ y,\ x,\ N)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ DLD\_W(hIMG,\ z,\ y,\ x)\ DirectionalLocalDifference(hIMG,\ z,\ y,\ x,\ W)}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ DLD\_NW(hIMG,\ z,\ y,\ x)\ DirectionalLocalDifference(hIMG,\ z,\ y,\ x,\ NW)}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ int32\_t\ CentralLocalDifference(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ int32\_t\ DirectionalLocalDifference(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \textcolor{keywordtype}{int}\ direction);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ LocalDirectionVector(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ int32\_t\ *local\_direction\_vector,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOCAL\_DIFFERENCES\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

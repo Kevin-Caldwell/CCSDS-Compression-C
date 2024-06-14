@@ -26,7 +26,7 @@ int InitializeWeights(weight_t *weight_ptr, INDEX z);
 int32_t DoubleResolutionPredictionError(int16_t clipped_quantizer_bin_center,
                                         int32_t double_resolution_predicted_sample);
 
-int32_t WeightUpdateScalingExponent(INDEX y, INDEX x);
+int32_t WeightUpdateScalingExponent(INDEX y, INDEX x, dim3);
 
 int UpdateWeights(image *hIMG,
                   weight_t *weights,

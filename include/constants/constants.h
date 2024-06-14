@@ -1,23 +1,14 @@
 /**
- * constants.h
- * @author @Kevin-Caldwell
- *
- * A global file for constats that need to be shared between modules.
- *
- * Features
- *  Image Constants
- *
- * Uses
- *  Values used by all modules
- *
- * Dependencies
- *  math_functions.h
- *  global_constants.h
- *
- * TODO
- *  Need to organize values into encoder_constants.h and predictor_constants.h
- *
- */
+ * @file constants.h
+ * @brief A Global File for constants shared between modules
+ * @details 
+ * Contains constants for the predictor, as well as some image-related
+ * constants.
+ * @author Kevin Caldwell
+ * @date May 29, 2024
+ * 
+ * 
+*/
 
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
@@ -27,40 +18,32 @@
 #define TRUE 1
 #define FALSE 0
 
-// Image Size Constants
-extern DIM kNx;
-extern DIM kNy;
-extern DIM kNz;
-
-extern int LOSSLESS;
-
 // Predictor Constants
 
-// Comment if using Full Prediction Mode
-// #define REDUCED_PREDICTION_MODE
+/**
+ * \brief
+ * Selects the Prediction Mode
+ * 0: Full Prediction Mode
+ * 1: Reduced Prediction Mode
+ */
+extern t_prediction_mode kPredictionMode;
 
-// 0: Full Prediction Mode
-// 1: Reduced Prediction Mode
-extern int kPredictionMode;
 
-typedef enum t_local_sum
-{
-    LS_WIDE_NEIGHBOR = 0,
-    LS_NARROW_NEIGHBOR,
-    LS_WIDE_COLUMN,
-    LS_NARROW_COLUMN
-} t_local_sum;
-
-// 0b00: Wide Neighbor
-// 0b01: Narrow Neighbor
-// 0b10: Wide Column
-// 0b11: Narrow Column
+/**
+ * \brief
+ * Local Sum Type Selected
+ * 0b00: Wide Neighbor
+ * 0b01: Narrow Neighbor
+ * 0b10: Wide Column
+ * 0b11: Narrow Column
+ */
 extern t_local_sum kLocalSumType;
 
-// Governs the Range of acceptable values
-#define DYNAMIC_RANGE 14
+/** \brief Range of Pixel values possible */
+extern uint8_t kDynamicRange;
 
-#define RESOLUTION 100
+/** \brief Sets the precision of the Damping and Offset Variables */
+extern uint8_t kResolution;
 
 // 0: Default Weight Initialization
 // 1: Custom Weight Initialization
@@ -95,8 +78,8 @@ extern int kVMin;
 extern int kVMax;
 extern int kTInc;
 
-void InitalizeImageConstants(dim3 size);
 void InitalizePredictorConstants();
+void Constants_validate();
 
 #pragma endregion
 #endif /* CONSTANTS_H */

@@ -1,0 +1,41 @@
+\doxysection{src/local\+\_\+differences.c File Reference}
+\hypertarget{local__differences_8c}{}\label{local__differences_8c}\index{src/local\_differences.c@{src/local\_differences.c}}
+{\ttfamily \#include "{}predictor/local\+\_\+differences.\+h"{}}\newline
+Include dependency graph for local\+\_\+differences.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{local__differences_8c_a37d2cf3f48b1b2c436f630a2b649cf52}{Central\+Local\+Difference}} (image \texorpdfstring{$\ast$}{*}h\+IMG, INDEX z, INDEX y, INDEX x)
+\item 
+int32\+\_\+t \mbox{\hyperlink{local__differences_8c_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}} (image \texorpdfstring{$\ast$}{*}h\+IMG, INDEX z, INDEX y, INDEX x, int direction)
+\item 
+int \mbox{\hyperlink{local__differences_8c_a6ee8aa29ecb5e47ec859cfb75580c8de}{Local\+Direction\+Vector}} (image \texorpdfstring{$\ast$}{*}h\+IMG, int32\+\_\+t \texorpdfstring{$\ast$}{*}l\+DV, INDEX z, INDEX y, INDEX x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{local__differences_8c_a37d2cf3f48b1b2c436f630a2b649cf52}\label{local__differences_8c_a37d2cf3f48b1b2c436f630a2b649cf52} 
+\index{local\_differences.c@{local\_differences.c}!CentralLocalDifference@{CentralLocalDifference}}
+\index{CentralLocalDifference@{CentralLocalDifference}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{CentralLocalDifference()}{CentralLocalDifference()}}
+{\footnotesize\ttfamily int32\+\_\+t Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{INDEX}]{z,  }\item[{INDEX}]{y,  }\item[{INDEX}]{x }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{local__differences_8c_aa1779fb92c191cde51766275baaf7591}\label{local__differences_8c_aa1779fb92c191cde51766275baaf7591} 
+\index{local\_differences.c@{local\_differences.c}!DirectionalLocalDifference@{DirectionalLocalDifference}}
+\index{DirectionalLocalDifference@{DirectionalLocalDifference}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{DirectionalLocalDifference()}{DirectionalLocalDifference()}}
+{\footnotesize\ttfamily int32\+\_\+t Directional\+Local\+Difference (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{INDEX}]{z,  }\item[{INDEX}]{y,  }\item[{INDEX}]{x,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+\Hypertarget{local__differences_8c_a6ee8aa29ecb5e47ec859cfb75580c8de}\label{local__differences_8c_a6ee8aa29ecb5e47ec859cfb75580c8de} 
+\index{local\_differences.c@{local\_differences.c}!LocalDirectionVector@{LocalDirectionVector}}
+\index{LocalDirectionVector@{LocalDirectionVector}!local\_differences.c@{local\_differences.c}}
+\doxysubsubsection{\texorpdfstring{LocalDirectionVector()}{LocalDirectionVector()}}
+{\footnotesize\ttfamily int Local\+Direction\+Vector (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{l\+DV,  }\item[{INDEX}]{z,  }\item[{INDEX}]{y,  }\item[{INDEX}]{x }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3

@@ -1,0 +1,73 @@
+\doxysection{src/image.c File Reference}
+\hypertarget{image_8c}{}\label{image_8c}\index{src/image.c@{src/image.c}}
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+Include dependency graph for image.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{image_8c_a8fa9b237f1e684b54af1748f9a66d666}{Init\+Image}} (image \texorpdfstring{$\ast$}{*}img\+\_\+p, DIM x, DIM y, DIM z)
+\item 
+PIXEL \mbox{\hyperlink{image_8c_a78477801fe183cdf32e60df1c92b7320}{Get\+Pixel}} (image \texorpdfstring{$\ast$}{*}h\+IMG, INDEX x, INDEX y, INDEX z)
+\item 
+void \mbox{\hyperlink{image_8c_aefaa1253ccc17864ac32b9d685b821d4}{Set\+Pixel}} (image \texorpdfstring{$\ast$}{*}h\+IMG, INDEX x, INDEX y, INDEX z, PIXEL data)
+\item 
+int \mbox{\hyperlink{image_8c_a1aeeb4864b63110b92099384a7a21fa8}{Image\+\_\+\+Equals}} (image \texorpdfstring{$\ast$}{*}img1, image \texorpdfstring{$\ast$}{*}img2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{image_8c_acdd688ddb6c776eddc9ee8c4c2c620d8}{file\+\_\+index}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{image_8c_a78477801fe183cdf32e60df1c92b7320}\label{image_8c_a78477801fe183cdf32e60df1c92b7320} 
+\index{image.c@{image.c}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily PIXEL Get\+Pixel (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{INDEX}]{x,  }\item[{INDEX}]{y,  }\item[{INDEX}]{z }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\Hypertarget{image_8c_a1aeeb4864b63110b92099384a7a21fa8}\label{image_8c_a1aeeb4864b63110b92099384a7a21fa8} 
+\index{image.c@{image.c}!Image\_Equals@{Image\_Equals}}
+\index{Image\_Equals@{Image\_Equals}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{Image\_Equals()}{Image\_Equals()}}
+{\footnotesize\ttfamily int Image\+\_\+\+Equals (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{img1,  }\item[{image \texorpdfstring{$\ast$}{*}}]{img2 }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\Hypertarget{image_8c_a8fa9b237f1e684b54af1748f9a66d666}\label{image_8c_a8fa9b237f1e684b54af1748f9a66d666} 
+\index{image.c@{image.c}!InitImage@{InitImage}}
+\index{InitImage@{InitImage}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{InitImage()}{InitImage()}}
+{\footnotesize\ttfamily int Init\+Image (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{img\+\_\+p,  }\item[{DIM}]{x,  }\item[{DIM}]{y,  }\item[{DIM}]{z }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 5
+Here is the caller graph for this function\+:
+% FIG 6
+\Hypertarget{image_8c_aefaa1253ccc17864ac32b9d685b821d4}\label{image_8c_aefaa1253ccc17864ac32b9d685b821d4} 
+\index{image.c@{image.c}!SetPixel@{SetPixel}}
+\index{SetPixel@{SetPixel}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{SetPixel()}{SetPixel()}}
+{\footnotesize\ttfamily void Set\+Pixel (\begin{DoxyParamCaption}\item[{image \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{INDEX}]{x,  }\item[{INDEX}]{y,  }\item[{INDEX}]{z,  }\item[{PIXEL}]{data }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{image_8c_acdd688ddb6c776eddc9ee8c4c2c620d8}\label{image_8c_acdd688ddb6c776eddc9ee8c4c2c620d8} 
+\index{image.c@{image.c}!file\_index@{file\_index}}
+\index{file\_index@{file\_index}!image.c@{image.c}}
+\doxysubsubsection{\texorpdfstring{file\_index}{file\_index}}
+{\footnotesize\ttfamily int file\+\_\+index = 0}
+

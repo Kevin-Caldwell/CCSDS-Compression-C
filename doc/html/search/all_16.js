@@ -1,26 +1,8 @@
 var searchData=
 [
-  ['w_0',['W',['../d2/df3/local__differences_8h.html#aa268a41a13430b18e933ed40207178d0ab722ceeb601c72cd78fbd35f3581fdf7',1,'local_differences.h']]],
-  ['w_5fmax_1',['W_MAX',['../d0/d0c/namespacecompression.html#add63171ca968cbd5ca4d60dfbf9a2746',1,'compression']]],
-  ['w_5fmin_2',['W_MIN',['../d0/d0c/namespacecompression.html#a999bcfcc11e2794539308d5015455f59',1,'compression']]],
-  ['w_5fres_3',['W_RES',['../d0/d0c/namespacecompression.html#aa3e9a982c10101613c6a1dd1fb3279f6',1,'compression']]],
-  ['wavelength_4',['wavelength',['../d3/d69/namespaceimage__test.html#aaeb5d6c0725676dbf8a8b57680213cb9',1,'image_test']]],
-  ['wavelength_5fto_5frgb_5',['wavelength_to_rgb',['../d2/dc7/namespaceprepare__h_image.html#a74f2b862a36db3cde75f1cc94d388c81',1,'prepare_hImage']]],
-  ['weight_5fexponent_5foffset_5fflag_6',['WEIGHT_EXPONENT_OFFSET_FLAG',['../d2/d6f/constants_8h.html#aa88d01fdf084b6477a2a70e73c56ac5a',1,'constants.h']]],
-  ['weight_5finitialization_7',['WEIGHT_INITIALIZATION',['../d2/d6f/constants_8h.html#a299d67a9aa02ae3a2bd476a639a5be37',1,'constants.h']]],
-  ['weight_5finitialization_5ftable_5fflag_8',['WEIGHT_INITIALIZATION_TABLE_FLAG',['../d7/ddb/encoder__constants_8h.html#ad2efe3db4f03ddf8a0d2494d9c643549',1,'encoder_constants.h']]],
-  ['weight_5ft_9',['weight_t',['../dc/d08/predictor_8h.html#ad4115f40f38a206246691fa2c1d1c9db',1,'weight_t:&#160;predictor.h'],['../de/d32/reconstructor_8h.html#ad4115f40f38a206246691fa2c1d1c9db',1,'weight_t:&#160;reconstructor.h']]],
-  ['weights_10',['weights',['../d0/d18/struct_predictor_cache.html#a8ffc318fbdca60414a190de33e244826',1,'PredictorCache']]],
-  ['weights_2ec_11',['weights.c',['../d0/d26/weights_8c.html',1,'']]],
-  ['weights_2ec_2eo_2ed_12',['weights.c.o.d',['../d5/d00/_c_c_s_d_s___decompressor_8dir_2src_2weights_8c_8o_8d.html',1,'(Global Namespace)'],['../d6/de2/_c_c_s_d_s___image___generator_8dir_2src_2weights_8c_8o_8d.html',1,'(Global Namespace)'],['../d5/dcd/_c_c_s_d_s___compressor_8dir_2src_2weights_8c_8o_8d.html',1,'(Global Namespace)']]],
-  ['weights_2eh_13',['weights.h',['../d2/d6a/weights_8h.html',1,'']]],
-  ['weightupdatescalingexponent_14',['weightupdatescalingexponent',['../d2/d6a/weights_8h.html#a17984670eb20b6ea122fb1e90a50dc75',1,'WeightUpdateScalingExponent(INDEX y, INDEX x):&#160;weights.c'],['../d0/d26/weights_8c.html#a17984670eb20b6ea122fb1e90a50dc75',1,'WeightUpdateScalingExponent(INDEX y, INDEX x):&#160;weights.c']]],
-  ['weo_5ftable_5fflag_15',['WEO_TABLE_FLAG',['../d7/ddb/encoder__constants_8h.html#a8b3f48be0fd9f9bee0fdaf45425a90ed',1,'encoder_constants.h']]],
-  ['win_5fgcc_16',['WIN_GCC',['../d5/ddb/global__constants_8h.html#ae53081d61f280bba7a4a6da4facdd653',1,'global_constants.h']]],
-  ['withinrect2_17',['withinrect2',['../d9/dea/synthetic__image__generator_8h.html#a07336610b2fae60747404124a1bebbbe',1,'WithinRect2(dim2 point, dim2 top_left, dim2 bottom_right):&#160;synthetic_image_generator.c'],['../d5/d40/synthetic__image__generator_8c.html#a07336610b2fae60747404124a1bebbbe',1,'WithinRect2(dim2 point, dim2 top_left, dim2 bottom_right):&#160;synthetic_image_generator.c']]],
-  ['withinrect3_18',['withinrect3',['../d9/dea/synthetic__image__generator_8h.html#a5b129c029b15584f09f306c005950893',1,'WithinRect3(dim3 point, dim3 top_left, dim3 bottom_right):&#160;synthetic_image_generator.c'],['../d5/d40/synthetic__image__generator_8c.html#a5b129c029b15584f09f306c005950893',1,'WithinRect3(dim3 point, dim3 top_left, dim3 bottom_right):&#160;synthetic_image_generator.c']]],
-  ['wri_19',['WRI',['../d5/d40/synthetic__image__generator_8c.html#abe2b160fe3eb87a606ba91a9c533cd9f',1,'synthetic_image_generator.c']]],
-  ['write_20',['WRITE',['../d9/d7f/file___i_o_8h.html#a588666511dde277029c4c5afc30782a6a61aa7ff70b76bff0fda378cf61d6afbc',1,'file_IO.h']]],
-  ['write_5fbinary_21',['WRITE_BINARY',['../d5/d5e/var_int_file___i_o_8h.html#a65ff8d4f12985f7d5210a0688be998dca43ace450ee0d4bf5400727c62d98eccc',1,'varIntFile_IO.h']]],
-  ['writing_5fand_5freading_22',['WRITING_AND_READING',['../d9/d7f/file___i_o_8h.html#a588666511dde277029c4c5afc30782a6a493a40eded29a96303feede4ff801f9d',1,'file_IO.h']]]
+  ['weights_2ec_0',['weights.c',['../weights_8c.html',1,'']]],
+  ['weightupdatescalingexponent_1',['WeightUpdateScalingExponent',['../weights_8c.html#a17984670eb20b6ea122fb1e90a50dc75',1,'weights.c']]],
+  ['withinrect2_2',['WithinRect2',['../synthetic__image__generator_8c.html#a07336610b2fae60747404124a1bebbbe',1,'synthetic_image_generator.c']]],
+  ['withinrect3_3',['WithinRect3',['../synthetic__image__generator_8c.html#a5b129c029b15584f09f306c005950893',1,'synthetic_image_generator.c']]],
+  ['wri_4',['WRI',['../synthetic__image__generator_8c.html#abe2b160fe3eb87a606ba91a9c533cd9f',1,'synthetic_image_generator.c']]]
 ];

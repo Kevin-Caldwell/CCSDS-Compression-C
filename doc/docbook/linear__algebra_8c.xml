@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_linear__algebra_8c" xml:lang="en-US">
+<title>src/linear_algebra.c File Reference</title>
+<indexterm><primary>src/linear_algebra.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;math/linear_algebra.h&quot;<?linebreak?></programlisting>Include dependency graph for linear_algebra.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="linear__algebra_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_linear__algebra_8c_1ab9661c8e10293140db24d4b650785939">InitVector</link> (int32_t **v, UINT len)</para>
+</listitem>
+            <listitem><para>int <link linkend="_linear__algebra_8c_1ae000d0d19cf867f1ad39325993763205">DeleteVector</link> (data_t *v)</para>
+</listitem>
+            <listitem><para>int <link linkend="_linear__algebra_8c_1a2765cafcf739497b0ee51e705590039a">AddVectors</link> (data_t *v1, data_t *v2, data_t *res, UINT size)</para>
+</listitem>
+            <listitem><para>int <link linkend="_linear__algebra_8c_1a06b11149235c5a4fe6c877aed33f55f9">SubtractVectors</link> (data_t *v1, data_t *v2, data_t *res, UINT size)</para>
+</listitem>
+            <listitem><para>int64_t <link linkend="_linear__algebra_8c_1a46ade3794d4b4d5cc1eaf983858507ef">InnerProduct</link> (int32_t *v1, int32_t *v2, UINT size)</para>
+</listitem>
+            <listitem><para>int <link linkend="_linear__algebra_8c_1a2c84697470e743f7c69fffbe7e0f92bc">ScalarProduct</link> (data_t *v, data_t scalar, data_t *res, UINT size)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_linear__algebra_8c_1a2765cafcf739497b0ee51e705590039a"/><section>
+    <title>AddVectors()</title>
+<indexterm><primary>AddVectors</primary><secondary>linear_algebra.c</secondary></indexterm>
+<indexterm><primary>linear_algebra.c</primary><secondary>AddVectors</secondary></indexterm>
+<para><computeroutput>int AddVectors (data_t * v1, data_t * v2, data_t * res, UINT size)</computeroutput></para></section>
+<anchor xml:id="_linear__algebra_8c_1ae000d0d19cf867f1ad39325993763205"/><section>
+    <title>DeleteVector()</title>
+<indexterm><primary>DeleteVector</primary><secondary>linear_algebra.c</secondary></indexterm>
+<indexterm><primary>linear_algebra.c</primary><secondary>DeleteVector</secondary></indexterm>
+<para><computeroutput>int DeleteVector (data_t * v)</computeroutput></para></section>
+<anchor xml:id="_linear__algebra_8c_1ab9661c8e10293140db24d4b650785939"/><section>
+    <title>InitVector()</title>
+<indexterm><primary>InitVector</primary><secondary>linear_algebra.c</secondary></indexterm>
+<indexterm><primary>linear_algebra.c</primary><secondary>InitVector</secondary></indexterm>
+<para><computeroutput>int InitVector (int32_t ** v, UINT len)</computeroutput></para></section>
+<anchor xml:id="_linear__algebra_8c_1a46ade3794d4b4d5cc1eaf983858507ef"/><section>
+    <title>InnerProduct()</title>
+<indexterm><primary>InnerProduct</primary><secondary>linear_algebra.c</secondary></indexterm>
+<indexterm><primary>linear_algebra.c</primary><secondary>InnerProduct</secondary></indexterm>
+<para><computeroutput>int64_t InnerProduct (int32_t * v1, int32_t * v2, UINT size)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="linear__algebra_8c_a46ade3794d4b4d5cc1eaf983858507ef_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_linear__algebra_8c_1a2c84697470e743f7c69fffbe7e0f92bc"/><section>
+    <title>ScalarProduct()</title>
+<indexterm><primary>ScalarProduct</primary><secondary>linear_algebra.c</secondary></indexterm>
+<indexterm><primary>linear_algebra.c</primary><secondary>ScalarProduct</secondary></indexterm>
+<para><computeroutput>int ScalarProduct (data_t * v, data_t scalar, data_t * res, UINT size)</computeroutput></para></section>
+<anchor xml:id="_linear__algebra_8c_1a06b11149235c5a4fe6c877aed33f55f9"/><section>
+    <title>SubtractVectors()</title>
+<indexterm><primary>SubtractVectors</primary><secondary>linear_algebra.c</secondary></indexterm>
+<indexterm><primary>linear_algebra.c</primary><secondary>SubtractVectors</secondary></indexterm>
+<para><computeroutput>int SubtractVectors (data_t * v1, data_t * v2, data_t * res, UINT size)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_hash__table_8c" xml:lang="en-US">
+<title>src/hash_table.c File Reference</title>
+<indexterm><primary>src/hash_table.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;dst/hash_table.h&quot;<?linebreak?></programlisting>Include dependency graph for hash_table.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="hash__table_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_hash__table_8c_1add53afa2770f4cd19f62a4d11cf35599">Hash_InitializeHashTable</link> (HashTable *hash)</para>
+</listitem>
+            <listitem><para>int <link linkend="_hash__table_8c_1a0f96cedf42d4440115356ae74e627126">Hash_DeleteHashTable</link> (HashTable *hash)</para>
+</listitem>
+            <listitem><para>int <link linkend="_hash__table_8c_1af0c750fb9a54f590b713d6526ed263fc">Hash_AddEntry</link> (HashTable *hash, const char *name, int32_t data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_hash__table_8c_1a7026562de200bd5e9813f101d9eb614b">Hash_GetIndex</link> (HashTable *hash, const char *key)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_hash__table_8c_1a27578c1b5a3ab68d8f144ed86ea72cc2">Hash_GetValue</link> (HashTable *hash, const char *key)</para>
+</listitem>
+            <listitem><para>int <link linkend="_hash__table_8c_1ae198aa5dfcbf0fa9e5fb885e34e08b0c">Hash_SetValue</link> (HashTable *hash, const char *key, int32_t new_data)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_hash__table_8c_1af0c750fb9a54f590b713d6526ed263fc"/><section>
+    <title>Hash_AddEntry()</title>
+<indexterm><primary>Hash_AddEntry</primary><secondary>hash_table.c</secondary></indexterm>
+<indexterm><primary>hash_table.c</primary><secondary>Hash_AddEntry</secondary></indexterm>
+<para><computeroutput>int Hash_AddEntry (HashTable * hash, const char * name, int32_t data)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="hash__table_8c_af0c750fb9a54f590b713d6526ed263fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_hash__table_8c_1a0f96cedf42d4440115356ae74e627126"/><section>
+    <title>Hash_DeleteHashTable()</title>
+<indexterm><primary>Hash_DeleteHashTable</primary><secondary>hash_table.c</secondary></indexterm>
+<indexterm><primary>hash_table.c</primary><secondary>Hash_DeleteHashTable</secondary></indexterm>
+<para><computeroutput>int Hash_DeleteHashTable (HashTable * hash)</computeroutput></para></section>
+<anchor xml:id="_hash__table_8c_1a7026562de200bd5e9813f101d9eb614b"/><section>
+    <title>Hash_GetIndex()</title>
+<indexterm><primary>Hash_GetIndex</primary><secondary>hash_table.c</secondary></indexterm>
+<indexterm><primary>hash_table.c</primary><secondary>Hash_GetIndex</secondary></indexterm>
+<para><computeroutput>int Hash_GetIndex (HashTable * hash, const char * key)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="hash__table_8c_a7026562de200bd5e9813f101d9eb614b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_hash__table_8c_1a27578c1b5a3ab68d8f144ed86ea72cc2"/><section>
+    <title>Hash_GetValue()</title>
+<indexterm><primary>Hash_GetValue</primary><secondary>hash_table.c</secondary></indexterm>
+<indexterm><primary>hash_table.c</primary><secondary>Hash_GetValue</secondary></indexterm>
+<para><computeroutput>int32_t Hash_GetValue (HashTable * hash, const char * key)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="hash__table_8c_a27578c1b5a3ab68d8f144ed86ea72cc2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="hash__table_8c_a27578c1b5a3ab68d8f144ed86ea72cc2_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_hash__table_8c_1add53afa2770f4cd19f62a4d11cf35599"/><section>
+    <title>Hash_InitializeHashTable()</title>
+<indexterm><primary>Hash_InitializeHashTable</primary><secondary>hash_table.c</secondary></indexterm>
+<indexterm><primary>hash_table.c</primary><secondary>Hash_InitializeHashTable</secondary></indexterm>
+<para><computeroutput>int Hash_InitializeHashTable (HashTable * hash)</computeroutput></para></section>
+<anchor xml:id="_hash__table_8c_1ae198aa5dfcbf0fa9e5fb885e34e08b0c"/><section>
+    <title>Hash_SetValue()</title>
+<indexterm><primary>Hash_SetValue</primary><secondary>hash_table.c</secondary></indexterm>
+<indexterm><primary>hash_table.c</primary><secondary>Hash_SetValue</secondary></indexterm>
+<para><computeroutput>int Hash_SetValue (HashTable * hash, const char * key, int32_t new_data)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="hash__table_8c_ae198aa5dfcbf0fa9e5fb885e34e08b0c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

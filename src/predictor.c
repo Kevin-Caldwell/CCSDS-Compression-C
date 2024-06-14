@@ -52,7 +52,6 @@ int RunPredictor(image *hIMG, image *result)
 {
     int res;
 
-    InitalizeImageConstants(hIMG->size);
     res = LoadConstantFile(PREDICTOR_CONSTANTS_LOCATION, &predictor_constants);
     InitalizePredictorConstants();
 #if LOG
@@ -98,7 +97,7 @@ int RunPredictor(image *hIMG, image *result)
 
 #if LOG
         double time_elapsed = (double)(clock() - start) / (double)CLOCKS_PER_SEC;
-        double time_left = time_elapsed * (kNz - i - 1) / (i + 1);
+        double time_left = time_elapsed * (hIMG->size.z - i - 1) / (i + 1);
         printf("\rPredicted %d/%d of Image. (%3.1f seconds Elapsed, %3.1f seconds Left)", (int)(i + 1), (int)hIMG->size.z, time_elapsed, time_left);
         fflush(stdout);
 #endif

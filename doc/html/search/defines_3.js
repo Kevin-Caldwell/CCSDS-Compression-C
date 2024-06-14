@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['c_5fversion_0',['C_VERSION',['../d1/d3a/_c_make_c_compiler_id_8c.html#adaee3ee7c5a7a22451ea25e762e1d7d5',1,'CMakeCCompilerId.c']]],
-  ['clip_1',['CLIP',['../d2/de2/math__functions_8h.html#a816dcf31e408d445ca8275ad96e6eb1e',1,'math_functions.h']]],
-  ['compiler_5fid_2',['COMPILER_ID',['../d1/d3a/_c_make_c_compiler_id_8c.html#a81dee0709ded976b2e0319239f72d174',1,'CMakeCCompilerId.c']]]
+  ['global_5fconstants_5flocation_0',['GLOBAL_CONSTANTS_LOCATION',['../global__constants_8h.html#a614412df666e2cf249faa7be8d3fa841',1,'global_constants.h']]],
+  ['global_5ferror_5fhandle_1',['global_error_handle',['../global__constants_8h.html#a62a2b2b67533b20f43102a7efee93870',1,'global_constants.h']]]
 ];

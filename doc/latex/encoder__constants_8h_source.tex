@@ -1,0 +1,60 @@
+\doxysection{encoder\+\_\+constants.\+h}
+\hypertarget{encoder__constants_8h_source}{}\label{encoder__constants_8h_source}\index{include/constants/encoder\_constants.h@{include/constants/encoder\_constants.h}}
+\mbox{\hyperlink{encoder__constants_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifndef\ ENCODER\_CONSTANTS\_H}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ ENCODER\_CONSTANTS\_H}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}math/math\_functions.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ OUTPUT\_WORD\_SIZE\ 8}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ ENTROPY\_CODER\ 0b00}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ QUANTIZER\_FIDELITY\_CONTROL\ 0b00}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ TABLE\_COUNT\ 0}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ SIZEOF\_HEADER\_ESSENTIAL\ 12}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ SAMPLE\_REP\_FLAG\ 1}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ WEO\_TABLE\_FLAG\ 0}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ WEIGHT\_INITIALIZATION\_TABLE\_FLAG\ 0}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/****************DAMPING\ AND\ OFFSET**********************/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ BAND\_VARYING\_DAMPING\_FLAG\ 0}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ DAMPING\_TABLE\_FLAG\ 0}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ BAND\_VARYING\_OFFSET\_FLAG\ 0}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ OFFSET\_TABLE\_FLAG\ 0}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ FIXED\_DAMPING\ 0}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ FIXED\_OFFSET\ 0}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{/***********************ENTROPY\ CODER***************************/}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ \#define\ UNARY\_LENGTH\_LIMIT\ BPOW(5)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ RESCALING\_COUNTER\_SIZE\ 1}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ INITIAL\_COUNT\_EXPONENT\ 1}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ ACCUMULATOR\_INITIALIZATION\ 0b1111}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ ACCUMULATOR\_INITIALIZATION\_TABLE\_FLAG\ 0}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ uint8\_t\ B;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{comment}{/*************SAMPLE-\/ADAPTIVE\ ENTROPY\ CODER*********************/}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ INITIAL\_COUNT\_EXPONENT\ 1}}
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ ACCUMULATOR\_INITIALIZATION\_CONSTANT\ 14}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ UNARY\_LENGTH\_LIMIT\ 8}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{extern}\ uint32\_t\ U\_max;}
+\DoxyCodeLine{00079\ \textcolor{keyword}{extern}\ int32\_t\ K;}
+\DoxyCodeLine{00080\ \textcolor{keyword}{extern}\ uint32\_t\ Gamma1;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ENCODER\_CONSTANTS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

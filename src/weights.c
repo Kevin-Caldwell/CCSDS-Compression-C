@@ -38,10 +38,10 @@ int32_t DoubleResolutionPredictionError(int16_t clipped_quantizer_bin_center,
     return 2 * (int32_t)clipped_quantizer_bin_center - (int32_t)double_resolution_predicted_sample;
 }
 
-int32_t WeightUpdateScalingExponent(INDEX y, INDEX x)
+int32_t WeightUpdateScalingExponent(INDEX y, INDEX x, dim3 img_dim)
 {
     int32_t res = CLIP((int32_t)kVMin +
-                           ((int32_t)y * kNx + (int32_t)x - kNx) / (int32_t)kTInc,
+                           ((int32_t)y * img_dim.x + (int32_t)x - img_dim.x) / (int32_t)kTInc,
                        (int32_t)kVMin, (int32_t)kVMax) +
                   (int32_t)kD - (int32_t)Omega;
     return res;
@@ -49,7 +49,7 @@ int32_t WeightUpdateScalingExponent(INDEX y, INDEX x)
 
 int UpdateWeights(image *hIMG, weight_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error)
 {
-    float scaling_exponent = -WeightUpdateScalingExponent(y, x);
+    float scaling_exponent = -WeightUpdateScalingExponent(y, x, hIMG->size);
     float exp = exp2f(scaling_exponent) * SIGN_P(double_resolution_prediction_error);
 
     for (int i = 0; i < 3; i++)

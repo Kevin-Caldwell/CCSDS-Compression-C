@@ -1,0 +1,13 @@
+digraph "GeneratePointLocales"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="GeneratePointLocales",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge5_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="GenerateVoronoiFlat3DLocal",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$synthetic__image__generator_8c.html#a4f7681c24ad008b5b20f8147d2938bb0",tooltip="Faster Method for Generating Voronoi Diagrams."];
+  Node2 -> Node3 [id="edge6_Node000002_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="GenerateVoronoiImage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$generate__image_8c.html#a450c7f9206bff8de0c177e34e6b5bcf4",tooltip=" "];
+}

@@ -1,19 +1,11 @@
 var searchData=
 [
-  ['image_5fequals_0',['image_equals',['../d3/d10/image_8c.html#a1aeeb4864b63110b92099384a7a21fa8',1,'Image_Equals(image *img1, image *img2):&#160;image.c'],['../d5/db2/image_8h.html#a1aeeb4864b63110b92099384a7a21fa8',1,'Image_Equals(image *img1, image *img2):&#160;image.c']]],
-  ['increment_5fxyz_1',['increment_xyz',['../d0/d0c/namespacecompression.html#a0b0449d8b52604ab8eed2bfa8c7c4277',1,'compression.increment_xyz()'],['../d6/d19/decoder_8c.html#aeb5d9c2d8630941218ec7b26a666bd61',1,'increment_xyz():&#160;decoder.c']]],
-  ['init_5fweight_5fvector_2',['init_weight_vector',['../d0/d0c/namespacecompression.html#a49c6c06e2ea0cfc20fce6d6edb0c72fa',1,'compression']]],
-  ['initaccumulatorvalue_3',['initaccumulatorvalue',['../d0/d77/body_8h.html#a8efd6761bcd40cdfb8e0ca4e1f39ef6b',1,'InitAccumulatorValue(uint32_t z):&#160;encoder_body.c'],['../d6/da2/encoder__body_8c.html#a8efd6761bcd40cdfb8e0ca4e1f39ef6b',1,'InitAccumulatorValue(uint32_t z):&#160;encoder_body.c']]],
-  ['initalizeimageconstants_4',['initalizeimageconstants',['../d2/d6f/constants_8h.html#af84e7b9bd8c4fa1203b0040adf941d8d',1,'InitalizeImageConstants(dim3 size):&#160;constants.c'],['../d4/df3/constants_8c.html#af84e7b9bd8c4fa1203b0040adf941d8d',1,'InitalizeImageConstants(dim3 size):&#160;constants.c']]],
-  ['initalizepredictorconstants_5',['initalizepredictorconstants',['../d2/d6f/constants_8h.html#a6acd65af9a2f057ad3f0891038799e5b',1,'InitalizePredictorConstants():&#160;constants.c'],['../d4/df3/constants_8c.html#a6acd65af9a2f057ad3f0891038799e5b',1,'InitalizePredictorConstants():&#160;constants.c']]],
-  ['initialized_6',['Initialized',['../d9/da2/file___i_o_8c.html#a2c398d1da0b5890e22a9377517c54874',1,'file_IO.c']]],
-  ['initializepredictorcache_7',['initializepredictorcache',['../dc/d99/cache__predictor_8c.html#a596c51dc78ec695dccf12414da82bbf5',1,'InitializePredictorCache(PredictorCache **ptr_p_cache, image *hIMG):&#160;cache_predictor.c'],['../df/d01/cache__predictor_8h.html#a400e6cd529a6a1ca3901be57ab88fb63',1,'InitializePredictorCache(PredictorCache **p_cache, image *hIMG):&#160;cache_predictor.c']]],
-  ['initializevarintstream_8',['initializevarintstream',['../d8/d81/stream__encoder_8h.html#a0db4a8ab23a4af63c99d5fbfca9073eb',1,'InitializeVarIntStream(VIFS *stream, const char *file_name, uint32_t buffer_size):&#160;stream_encoder.c'],['../de/d04/stream__encoder_8c.html#a0db4a8ab23a4af63c99d5fbfca9073eb',1,'InitializeVarIntStream(VIFS *stream, const char *file_name, uint32_t buffer_size):&#160;stream_encoder.c']]],
-  ['initializeweights_9',['initializeweights',['../d2/d6a/weights_8h.html#adcc753ae7048085817bd2c37b471f739',1,'InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x):&#160;weights.c'],['../d0/d26/weights_8c.html#adcc753ae7048085817bd2c37b471f739',1,'InitializeWeights(int32_t **weight_ptr, INDEX z, INDEX y, INDEX x):&#160;weights.c']]],
-  ['initimage_10',['initimage',['../d5/db2/image_8h.html#a61b8047c5bba5a89979d65847e4103b1',1,'InitImage(image *img_p, size_t x, size_t y, size_t z):&#160;image.c'],['../d3/d10/image_8c.html#a61b8047c5bba5a89979d65847e4103b1',1,'InitImage(image *img_p, size_t x, size_t y, size_t z):&#160;image.c']]],
-  ['initvector_11',['initvector',['../dc/d9c/linear__algebra_8h.html#ab9661c8e10293140db24d4b650785939',1,'InitVector(int32_t **v, UINT len):&#160;linear_algebra.c'],['../df/d91/linear__algebra_8c.html#ab9661c8e10293140db24d4b650785939',1,'InitVector(int32_t **v, UINT len):&#160;linear_algebra.c']]],
-  ['innerproduct_12',['innerproduct',['../dc/d9c/linear__algebra_8h.html#a46ade3794d4b4d5cc1eaf983858507ef',1,'InnerProduct(int32_t *v1, int32_t *v2, UINT size):&#160;linear_algebra.c'],['../df/d91/linear__algebra_8c.html#a46ade3794d4b4d5cc1eaf983858507ef',1,'InnerProduct(int32_t *v1, int32_t *v2, UINT size):&#160;linear_algebra.c']]],
-  ['interpolant_13',['interpolant',['../db/da0/namespaceperlin__image.html#a3fa1574eb32a9a437f406b678d378c99',1,'perlin_image']]],
-  ['interpolate_14',['interpolate',['../d1/d32/perlin__noise_8c.html#a0f59de4e718c144e6bfeced85324b3ac',1,'perlin_noise.c']]],
-  ['inv_5fgpo2_15',['inv_GPO2',['../d0/d0c/namespacecompression.html#a78bff45f9915c892f4cf129d2fd27f55',1,'compression']]]
+  ['loadconstantfile_0',['LoadConstantFile',['../load__constants_8c.html#a5d642038360b72b886a5eb66e3efd14a',1,'load_constants.c']]],
+  ['localdirectionvector_1',['LocalDirectionVector',['../local__differences_8c.html#a6ee8aa29ecb5e47ec859cfb75580c8de',1,'local_differences.c']]],
+  ['localsumbranchclassifier_2',['LocalSumBranchClassifier',['../local__sum_8c.html#acf4371fdcf9ffa65ee56047054ff5a7d',1,'local_sum.c']]],
+  ['localsumprefetcher_3',['LocalSumPreFetcher',['../local__sum_8c.html#a5e69a06989fc6a2860049583d906ea14',1,'local_sum.c']]],
+  ['log_5fadd_4',['Log_add',['../logs_8c.html#a61353ebf0328d8bd1f61f224305e64bb',1,'logs.c']]],
+  ['log_5fclose_5',['Log_close',['../logs_8c.html#ad02317523a9dd7b5180cccbc0371ac6a',1,'logs.c']]],
+  ['log_5ferror_6',['Log_error',['../logs_8c.html#ad795690a809192117add6898be812267',1,'logs.c']]],
+  ['log_5finit_7',['Log_init',['../logs_8c.html#a0b7cf426e0ba603b54206d70e4c93f04',1,'logs.c']]]
 ];

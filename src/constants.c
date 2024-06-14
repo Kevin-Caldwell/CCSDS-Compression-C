@@ -1,12 +1,5 @@
 #include "constants/constants.h"
 
-void InitalizeImageConstants(dim3 size)
-{
-    kNx = size.x;
-    kNy = size.y;
-    kNz = size.z;
-}
-
 #define GET_PCONST(x) (Hash_GetValue(&predictor_constants, x))
 
 void InitalizePredictorConstants()
@@ -56,7 +49,9 @@ HashTable encoder_constants;
 int kUnsignedSamples = 0;
 t_local_sum kLocalSumType = 0;
 
-int kPredictionMode = 0;
+t_prediction_mode kPredictionMode = PM_FULL;
+
+uint8_t kResolution = 0;
 
 int32_t kD;
 int kDa = 0;

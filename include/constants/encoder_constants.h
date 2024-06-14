@@ -1,20 +1,15 @@
 /**
- * encoder_constants.h
- * @author @Kevin-Caldwell
+ * @file encoder_constants.h
+ * @author Kevin Caldwell
  *
- * Contains all Encoder-Specific Constants
- *
+ * @brief Contains all Encoder-Specific Constants
+ * @details
  * Uses
  *  Encoder Abstraction
- *
- * Dependencies
- *  math_functions.h
- *  constants.h
- *
- * TODO
- *  Determine Encoder-Specific Constants
- *  Add Effects of Constants in Comments
- *
+ * @todo Determine Encoder-Specific Constants
+ * @todo Add comments for each Constants
+ * 
+ * 
  */
 
 #ifndef ENCODER_CONSTANTS_H
@@ -25,15 +20,15 @@
 
 #define OUTPUT_WORD_SIZE 8
 
-// 00: Sample-Adaptive Entropy Coder
-// 01: Hybrid Entropy Coder
-// 10: Block-Adaptive Entropy Coder
+/// 00: Sample-Adaptive Entropy Coder\n
+/// 01: Hybrid Entropy Coder\n
+/// 10: Block-Adaptive Entropy Coder
 #define ENTROPY_CODER 0b00
 
-// 00: Lossless
-// 01: Absolute Error Limit Only
-// 10: Relative Error Limit Only
-// 11: Both Absolute and Relative Errors
+/// 00: Lossless\n
+/// 01: Absolute Error Limit Only\n
+/// 10: Relative Error Limit Only\n
+/// 11: Both Absolute and Relative Errors
 #define QUANTIZER_FIDELITY_CONTROL 0b00
 
 #define TABLE_COUNT 0
@@ -46,20 +41,20 @@
 
 /****************DAMPING AND OFFSET**********************/
 
-// 0: All bands use same Damping Value
-// 1: Varying damping values for each band
+/// 0: All bands use same Damping Value\n
+/// 1: Varying damping values for each band
 #define BAND_VARYING_DAMPING_FLAG 0
 
-// 0: Damping Table Not included
-// 1: Samping Table Included
+/// 0: Damping Table Not included\n
+/// 1: Samping Table Included
 #define DAMPING_TABLE_FLAG 0
 
-// 0: All bands use same Offset
-// 1: Varyign Offset values for each band
+/// 0: All bands use same Offset\n
+/// 1: Varyign Offset values for each band
 #define BAND_VARYING_OFFSET_FLAG 0
 
-// 0: Offset Table not included in SR
-// 1: Offset Table included in SR
+/// 0: Offset Table not included in SR\n
+/// 1: Offset Table included in SR
 #define OFFSET_TABLE_FLAG 0
 
 #define FIXED_DAMPING 0

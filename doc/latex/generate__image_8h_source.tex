@@ -1,0 +1,37 @@
+\doxysection{generate\+\_\+image.\+h}
+\hypertarget{generate__image_8h_source}{}\label{generate__image_8h_source}\index{include/testing/generate\_image.h@{include/testing/generate\_image.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GENERATE\_IMAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GENERATE\_IMAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}files/logs.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}files/csv-\/io.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}predictor/predictor.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}encoder/header.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}encoder/body.h"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}testing/synthetic\_image\_generator.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ TestHeader();}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ TestReadImage();}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ PredictImage(\textcolor{keywordtype}{char}\ *source,\ \textcolor{keywordtype}{char}\ *destination);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ PredictImageUHI(\textcolor{keywordtype}{char}\ *source,\ \textcolor{keywordtype}{char}\ *destination);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ EncodeImage(\textcolor{keywordtype}{char}\ *source,\ \textcolor{keywordtype}{char}\ *destination);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ CompressImage(\textcolor{keywordtype}{char}\ *source,\ \textcolor{keywordtype}{char}\ *destination);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{int}\ GenerateVoronoiImage(\mbox{\hyperlink{structdim3}{dim3}}\ size,\ \textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ points);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ cv\_csv\_uhi(\textcolor{keywordtype}{char}\ *src\_csv,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *dest\_uhi);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ GENERATE\_IMAGE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

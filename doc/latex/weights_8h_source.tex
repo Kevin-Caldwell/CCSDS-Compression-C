@@ -1,0 +1,36 @@
+\doxysection{weights.\+h}
+\hypertarget{weights_8h_source}{}\label{weights_8h_source}\index{include/predictor/weights.h@{include/predictor/weights.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ WEIGHTS\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ WEIGHTS\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}dst/image.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}math/linear\_algebra.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}predictor/quantizer.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}predictor/local\_differences.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ uint32\_t\ weight\_t;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ InitializeWeights(weight\_t\ *weight\_ptr,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ int32\_t\ DoubleResolutionPredictionError(int16\_t\ clipped\_quantizer\_bin\_center,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_predicted\_sample);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ int32\_t\ WeightUpdateScalingExponent(\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ UpdateWeights(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ weight\_t\ *weights,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_prediction\_error);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ int64\_t\ PredictedCentralLocalDifference(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ weight\_t*\ weights);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ WEIGHTS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,94 @@
+\doxysection{include/files/var\+Int\+File\+\_\+\+IO.h File Reference}
+\hypertarget{var_int_file___i_o_8h}{}\label{var_int_file___i_o_8h}\index{include/files/varIntFile\_IO.h@{include/files/varIntFile\_IO.h}}
+
+
+File Input/\+Output for Variable-\/\+Length Words.  
+
+
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include "{}files/file\+\_\+\+IO.\+h"{}}\newline
+{\ttfamily \#include "{}files/logs.\+h"{}}\newline
+{\ttfamily \#include "{}constants/global\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}encoder/encoder\+\_\+helper\+\_\+functions.\+h"{}}\newline
+Include dependency graph for var\+Int\+File\+\_\+\+IO.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{var_int_file___i_o_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{var_int_file___i_o_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{var_int_file___i_o_8h_af7b7dc9a200cb1404c280bd500fd1551}\label{var_int_file___i_o_8h_af7b7dc9a200cb1404c280bd500fd1551} 
+\#define {\bfseries BUFFER\+\_\+\+LENGTH}~6
+\item 
+\Hypertarget{var_int_file___i_o_8h_a6b20d41d6252e9871430c242cb1a56e7}\label{var_int_file___i_o_8h_a6b20d41d6252e9871430c242cb1a56e7} 
+\#define {\bfseries BUFFER\+\_\+\+SIZE}~32
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{var_int_file___i_o_8h_a260a6f6af9275cf2bfbc28e6a687710b}\label{var_int_file___i_o_8h_a260a6f6af9275cf2bfbc28e6a687710b} 
+typedef enum file\+\_\+modes {\bfseries file\+\_\+modes}
+\item 
+typedef struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}} \mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{var_int_file___i_o_8h_a65ff8d4f12985f7d5210a0688be998dc}\label{var_int_file___i_o_8h_a65ff8d4f12985f7d5210a0688be998dc} 
+enum {\bfseries file\+\_\+modes} \{ {\bfseries READ\+\_\+\+BINARY} = 0
+, {\bfseries WRITE\+\_\+\+BINARY}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{var_int_file___i_o_8h_a07ca21a87dab6f536b7f4d69050f5602}\label{var_int_file___i_o_8h_a07ca21a87dab6f536b7f4d69050f5602} 
+int {\bfseries VUF\+\_\+initialize} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream, const char \texorpdfstring{$\ast$}{*}file\+\_\+name, file\+\_\+modes io\+\_\+mode)
+\item 
+\Hypertarget{var_int_file___i_o_8h_a744805d2f1db68081efadb9892a297e9}\label{var_int_file___i_o_8h_a744805d2f1db68081efadb9892a297e9} 
+int {\bfseries VUF\+\_\+append} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream, uint32\+\_\+t data, uint32\+\_\+t length)
+\item 
+\Hypertarget{var_int_file___i_o_8h_aafa9034f88afca6a726a84673d063889}\label{var_int_file___i_o_8h_aafa9034f88afca6a726a84673d063889} 
+uint32\+\_\+t {\bfseries VUF\+\_\+read\+\_\+stack} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream, uint32\+\_\+t length)
+\item 
+\Hypertarget{var_int_file___i_o_8h_ad54b8d6492e4c149c7f1232e3eda58be}\label{var_int_file___i_o_8h_ad54b8d6492e4c149c7f1232e3eda58be} 
+int {\bfseries VUF\+\_\+close} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File Input/\+Output for Variable-\/\+Length Words. 
+
+\begin{DoxyAuthor}{Authors}
+Kevin Caldwell 
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Unknown, Needs Testing \end{DoxyRefDesc}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}\label{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006} 
+\index{varIntFile\_IO.h@{varIntFile\_IO.h}!VUF@{VUF}}
+\index{VUF@{VUF}!varIntFile\_IO.h@{varIntFile\_IO.h}}
+\doxysubsubsection{\texorpdfstring{VUF}{VUF}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}} \mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}}}
+
+Manages VUF files.
+
+Variable Unsigned Files are designed to store integers of sizes less than 32 bits and greater than 0 bits. 

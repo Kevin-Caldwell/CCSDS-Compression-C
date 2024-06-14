@@ -1,0 +1,31 @@
+\doxysection{linear\+\_\+algebra.\+h}
+\hypertarget{linear__algebra_8h_source}{}\label{linear__algebra_8h_source}\index{include/math/linear\_algebra.h@{include/math/linear\_algebra.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#ifndef\ LINEAR\_ALGEBRA\_H}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ LINEAR\_ALGEBRA\_H}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}math\_functions.h"{}}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ data\_t;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ InitVector(int32\_t\ **v,\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ len);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ DeleteVector(data\_t\ *v);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ AddVectors(data\_t\ *v1,\ data\_t\ *v2,\ data\_t\ *res,\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{int}\ SubtractVectors(data\_t\ *v1,\ data\_t\ *v2,\ data\_t\ *res,\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ int64\_t\ InnerProduct(int32\_t\ *v1,\ int32\_t\ *v2,\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ ScalarProduct(data\_t\ *v,\ data\_t\ scalar,\ data\_t\ *res,\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}}\ size);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ AddToVector(v,\ other,\ size)\ AddVectors(v,\ other,\ v,\ size)}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ SubtractFromVector(v,\ other,\ size)\ SubtractVectors(v,\ other,\ v,\ size)}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ ScalarProduct\_C(v,\ other,\ size)\ ScalarProduct(v,\ other,\ v,\ size)}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LINEAR\_ALGEBRA\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

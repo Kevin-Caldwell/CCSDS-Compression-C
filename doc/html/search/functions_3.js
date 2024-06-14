@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['centrallocaldifference_0',['centrallocaldifference',['../d2/df3/local__differences_8h.html#a37d2cf3f48b1b2c436f630a2b649cf52',1,'CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x):&#160;local_differences.c'],['../d8/d97/local__differences_8c.html#a37d2cf3f48b1b2c436f630a2b649cf52',1,'CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x):&#160;local_differences.c']]],
-  ['clippedquantizerbincenter_1',['clippedquantizerbincenter',['../d1/d38/quantizer_8h.html#a9d745aa249b8a9cde3f83899b563dcc5',1,'ClippedQuantizerBinCenter(uint16_t sample_value):&#160;quantizer.c'],['../dc/df1/quantizer_8c.html#a9d745aa249b8a9cde3f83899b563dcc5',1,'ClippedQuantizerBinCenter(uint16_t sample_value):&#160;quantizer.c']]],
-  ['closevarintegerstream_2',['closevarintegerstream',['../d8/d81/stream__encoder_8h.html#afbd717a2dd8bee43593e06a3919ba72a',1,'CloseVarIntegerStream(VIFS *stream):&#160;stream_encoder.c'],['../de/d04/stream__encoder_8c.html#afbd717a2dd8bee43593e06a3919ba72a',1,'CloseVarIntegerStream(VIFS *stream):&#160;stream_encoder.c']]],
-  ['compareresults_3',['CompareResults',['../d3/d62/namespacefile__compare.html#ac7d0b484ac5bfa8e7714915a5a0868d5',1,'file_compare']]],
-  ['compressimage_4',['compressimage',['../df/d7b/generate__image_8h.html#aaa094efd7037f34ae4e485a0b97c4282',1,'CompressImage(char *source, char *destination):&#160;generate_image.c'],['../d6/d92/generate__image_8c.html#aaa094efd7037f34ae4e485a0b97c4282',1,'CompressImage(char *source, char *destination):&#160;generate_image.c']]],
-  ['compression_5fratio_5',['compression_ratio',['../d9/d7b/classtest__compression_1_1_test_comp.html#abb98cfaed1aee0349dde4e879c2ecb9e',1,'test_compression.TestComp.compression_ratio()'],['../d0/d3e/namespacefile__stats.html#a473892ba0152ef4e5eda5695d64603e2',1,'file_stats.compression_ratio()']]]
+  ['decoder_5fdecodebody_0',['Decoder_DecodeBody',['../decoder_8c.html#a92568f6a10fcb23b4699402e71a02177',1,'decoder.c']]],
+  ['deletevector_1',['DeleteVector',['../linear__algebra_8c.html#ae000d0d19cf867f1ad39325993763205',1,'linear_algebra.c']]],
+  ['directionallocaldifference_2',['DirectionalLocalDifference',['../local__differences_8c.html#aa1779fb92c191cde51766275baaf7591',1,'local_differences.c']]],
+  ['dot_3',['dot',['../perlin__noise_8c.html#a7f35c7c40a9e0e57a50fd058b064e8f6',1,'perlin_noise.c']]],
+  ['doubleresolutionpredictedsample_4',['DoubleResolutionPredictedSample',['../sample__representative_8c.html#a6c60474c610dc64773816bc445efeb77',1,'sample_representative.c']]],
+  ['doubleresolutionpredictionerror_5',['DoubleResolutionPredictionError',['../weights_8c.html#a286baab1384ff25cf7cf4c2061f15c4c',1,'weights.c']]]
 ];

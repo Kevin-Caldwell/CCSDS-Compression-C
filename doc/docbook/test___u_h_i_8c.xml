@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test___u_h_i_8c" xml:lang="en-US">
+<title>src/test_UHI.c File Reference</title>
+<indexterm><primary>src/test_UHI.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testing/test_UHI.h&quot;<?linebreak?>#include &quot;testing/synthetic_image_generator.h&quot;<?linebreak?></programlisting>Include dependency graph for test_UHI.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="test___u_h_i_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_test___u_h_i_8c_1a24aa285f65de829c8a9791d901405626">test_UHI</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_test___u_h_i_8c_1a24aa285f65de829c8a9791d901405626"/><section>
+    <title>test_UHI()</title>
+<indexterm><primary>test_UHI</primary><secondary>test_UHI.c</secondary></indexterm>
+<indexterm><primary>test_UHI.c</primary><secondary>test_UHI</secondary></indexterm>
+<para><computeroutput>int test_UHI ( )</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="test___u_h_i_8c_a24aa285f65de829c8a9791d901405626_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

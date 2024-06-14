@@ -142,7 +142,6 @@ int EncodeImage(char *source, char *destination)
     res = LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
     global_error_handle
 
-    InitalizeImageConstants(predicted_image.size);
     InitalizePredictorConstants();
     res = EncodeBody(&predicted_image, destination, "w", 100);
     global_error_handle
@@ -160,7 +159,7 @@ void TestHeader()
     uint8_t header[22];
     memset(header, 0, 22);
 
-    PrepareImageMetadata(header);
+    PrepareImageMetadata(header, (dim3){0, 0, 0});
     PreparePredictorMetadata(header + 12);
     PrepareSampleAdaptiveEntropyCoder(header + 12 + 8);
 }

@@ -1,0 +1,45 @@
+\doxysection{uhi\+\_\+io.\+h}
+\hypertarget{uhi__io_8h_source}{}\label{uhi__io_8h_source}\index{include/files/uhi\_io.h@{include/files/uhi\_io.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ UHI\_IO\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ UHI\_IO\_H}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}files/file\_IO.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}math/math\_functions.h"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ UHI\_CACHE\_LENGTH\ 3\ }\textcolor{comment}{//\ Image\ Size\ Buffer}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UncompressedHyperspectralImage}}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ size;}
+\DoxyCodeLine{00047\ \ \ \ \ file\_t\ *fs;}
+\DoxyCodeLine{00048\ \}\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{F\_UHI}},\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}},\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{uIMG}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{int}\ UHI\_Initialize(}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}}\ *stream,}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ size,}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,}
+\DoxyCodeLine{00054\ \ \ \ \ FileMode\ file\_mode);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{int}\ UHI\_WritePixel(}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}}\ *stream,}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ index,}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ value);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ UHI\_ReadPixel(}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}}\ *stream,}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ index);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ Proxy\_GetPixel(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{uIMG}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ Proxy\_SetPixel(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{uIMG}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ value);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ UHI\_IO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

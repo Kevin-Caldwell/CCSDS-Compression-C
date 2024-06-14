@@ -1,0 +1,59 @@
+\doxysection{var\+Int\+File\+\_\+\+IO.\+h}
+\hypertarget{var_int_file___i_o_8h_source}{}\label{var_int_file___i_o_8h_source}\index{include/files/varIntFile\_IO.h@{include/files/varIntFile\_IO.h}}
+\mbox{\hyperlink{var_int_file___i_o_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ VARINTFILE\_IO\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ VARINTFILE\_IO\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}files/file\_IO.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}files/logs.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{global__constants_8h}{constants/global\_constants.h}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}encoder/encoder\_helper\_functions.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \#ifndef\ L\_SHIFT}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \#define\ L\_SHIFT(x,\ s)\ (s\ ==\ 32\ ?\ 0\ :\ (s\ <\ 0\ ?\ (unsigned)\ x\ >>\ -\/s\ :\ (unsigned)\ x\ <<\ s))}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \#endif}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ BUFFER\_LENGTH\ 6}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ BUFFER\_SIZE\ 32}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ file\_modes}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ READ\_BINARY\ =\ 0,}
+\DoxyCodeLine{00029\ \ \ \ \ WRITE\_BINARY}
+\DoxyCodeLine{00030\ \}\ file\_modes;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_var_unsigned_int_file}{VarUnsignedIntFile}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ file\_t\ *fs;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{char}\ io\_mode;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ int8\_t\ bit\_index;}
+\DoxyCodeLine{00045\ \ \ \ \ int8\_t\ byte\_index;}
+\DoxyCodeLine{00046\ \ \ \ \ uint32\_t\ rw\_buffer[BUFFER\_LENGTH];}
+\DoxyCodeLine{00047\ \}\ \mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{int}\ VUF\_initialize(}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{struct_var_unsigned_int_file}{VUF}}\ *stream,}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file\_name,}
+\DoxyCodeLine{00052\ \ \ \ \ file\_modes\ io\_mode);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ VUF\_append(}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{struct_var_unsigned_int_file}{VUF}}\ *stream,}
+\DoxyCodeLine{00056\ \ \ \ \ uint32\_t\ data,}
+\DoxyCodeLine{00057\ \ \ \ \ uint32\_t\ length);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ Read\ One\ VarInt}}
+\DoxyCodeLine{00060\ uint32\_t\ VUF\_read\_stack(}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{struct_var_unsigned_int_file}{VUF}}\ *stream,}
+\DoxyCodeLine{00062\ \ \ \ \ uint32\_t\ length);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ VUF\_close(\mbox{\hyperlink{struct_var_unsigned_int_file}{VUF}}\ *stream);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ VARINTFILE\_IO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

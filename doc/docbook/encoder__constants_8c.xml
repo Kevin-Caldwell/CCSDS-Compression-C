@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_encoder__constants_8c" xml:lang="en-US">
+<title>src/encoder_constants.c File Reference</title>
+<indexterm><primary>src/encoder_constants.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;constants/encoder_constants.h&quot;<?linebreak?></programlisting>Include dependency graph for encoder_constants.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="encoder__constants_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const uint8_t <link linkend="_encoder__constants_8c_1a7549a91dd509e610aaffa3078cbe2859">B</link> = (uint8_t) (CLIP(OUTPUT_WORD_SIZE, 1, 8))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_encoder__constants_8c_1a7549a91dd509e610aaffa3078cbe2859"/><section>
+    <title>B</title>
+<indexterm><primary>B</primary><secondary>encoder_constants.c</secondary></indexterm>
+<indexterm><primary>encoder_constants.c</primary><secondary>B</secondary></indexterm>
+<para><computeroutput>const uint8_t B = (uint8_t) (CLIP(OUTPUT_WORD_SIZE, 1, 8))</computeroutput></para></section>
+</section>
+</section>

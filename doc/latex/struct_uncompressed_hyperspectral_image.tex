@@ -1,0 +1,38 @@
+\doxysection{Uncompressed\+Hyperspectral\+Image Struct Reference}
+\hypertarget{struct_uncompressed_hyperspectral_image}{}\label{struct_uncompressed_hyperspectral_image}\index{UncompressedHyperspectralImage@{UncompressedHyperspectralImage}}
+
+
+{\ttfamily \#include $<$uhi\+\_\+io.\+h$>$}
+
+
+
+Collaboration diagram for Uncompressed\+Hyperspectral\+Image\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{struct_uncompressed_hyperspectral_image__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_uncompressed_hyperspectral_image_a92c57811a03d78e56a6e8592f96a41ad}\label{struct_uncompressed_hyperspectral_image_a92c57811a03d78e56a6e8592f96a41ad} 
+\mbox{\hyperlink{structdim3}{dim3}} {\bfseries size}
+\item 
+\Hypertarget{struct_uncompressed_hyperspectral_image_ab10afab4dbcbfc99227c63ee0ae694ff}\label{struct_uncompressed_hyperspectral_image_ab10afab4dbcbfc99227c63ee0ae694ff} 
+file\+\_\+t \texorpdfstring{$\ast$}{*} {\bfseries fs}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores UHI file streams.
+
+File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.
+
+Designed to be a more RAM-\/friendly alternative to the image struct defined in \doxylink{image_8h_source}{image.\+h}. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.
+
+fs\+: file\+\_\+t object for handling file IO size\+: stores the dimensions of the Hyperspectral image cache\+: Unused 32 bit static array 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/files/uhi\+\_\+io.\+h\end{DoxyCompactItemize}

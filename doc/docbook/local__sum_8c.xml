@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_local__sum_8c" xml:lang="en-US">
+<title>src/local_sum.c File Reference</title>
+<indexterm><primary>src/local_sum.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;predictor/local_sum.h&quot;<?linebreak?></programlisting>Include dependency graph for local_sum.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="local__sum_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint32_t <link linkend="_local__sum_8c_1a1f0a6a3443597dab4881bb94fbc35f41">FindLocalSum</link> (image *hIMG, INDEX z, INDEX y, INDEX x)</para>
+</listitem>
+            <listitem><para>int <link linkend="_local__sum_8c_1acf4371fdcf9ffa65ee56047054ff5a7d">LocalSumBranchClassifier</link> (INDEX x, INDEX y, INDEX z)</para>
+</listitem>
+            <listitem><para>void <link linkend="_local__sum_8c_1a5e69a06989fc6a2860049583d906ea14">LocalSumPreFetcher</link> (INDEX x, INDEX y, INDEX z)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_local__sum_8c_1a1f0a6a3443597dab4881bb94fbc35f41"/><section>
+    <title>FindLocalSum()</title>
+<indexterm><primary>FindLocalSum</primary><secondary>local_sum.c</secondary></indexterm>
+<indexterm><primary>local_sum.c</primary><secondary>FindLocalSum</secondary></indexterm>
+<para><computeroutput>uint32_t FindLocalSum (image * hIMG, INDEX z, INDEX y, INDEX x)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="local__sum_8c_a1f0a6a3443597dab4881bb94fbc35f41_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_local__sum_8c_1acf4371fdcf9ffa65ee56047054ff5a7d"/><section>
+    <title>LocalSumBranchClassifier()</title>
+<indexterm><primary>LocalSumBranchClassifier</primary><secondary>local_sum.c</secondary></indexterm>
+<indexterm><primary>local_sum.c</primary><secondary>LocalSumBranchClassifier</secondary></indexterm>
+<para><computeroutput>int LocalSumBranchClassifier (INDEX x, INDEX y, INDEX z)</computeroutput></para></section>
+<anchor xml:id="_local__sum_8c_1a5e69a06989fc6a2860049583d906ea14"/><section>
+    <title>LocalSumPreFetcher()</title>
+<indexterm><primary>LocalSumPreFetcher</primary><secondary>local_sum.c</secondary></indexterm>
+<indexterm><primary>local_sum.c</primary><secondary>LocalSumPreFetcher</secondary></indexterm>
+<para><computeroutput>void LocalSumPreFetcher (INDEX x, INDEX y, INDEX z)</computeroutput></para></section>
+</section>
+</section>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test__predictor_8c" xml:lang="en-US">
+<title>src/test_predictor.c File Reference</title>
+<indexterm><primary>src/test_predictor.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;testing/test_local_sum.h&quot;<?linebreak?></programlisting>Include dependency graph for test_predictor.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="test__predictor_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

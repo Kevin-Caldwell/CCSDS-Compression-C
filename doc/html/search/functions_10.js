@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['samplerepresentative_0',['samplerepresentative',['../df/d7d/sample__representative_8h.html#aca1581c921d082976e7f116aa52c56f0',1,'SampleRepresentative(uint16_t sample_value):&#160;sample_representative.c'],['../d7/d58/sample__representative_8c.html#aca1581c921d082976e7f116aa52c56f0',1,'SampleRepresentative(uint16_t sample_value):&#160;sample_representative.c']]],
-  ['savearrayascsv_1',['savearrayascsv',['../d6/d51/csv-io_8h.html#a3e3e00c9789afb1d2f5f2c7004bd82ad',1,'SaveArrayAsCSV(uint16_t *data, UINT count, char *file_name):&#160;csv-io.c'],['../df/df6/csv-io_8c.html#a3e3e00c9789afb1d2f5f2c7004bd82ad',1,'SaveArrayAsCSV(uint16_t *data, UINT count, char *file_name):&#160;csv-io.c']]],
-  ['savecsv_2',['SaveCSV',['../d6/d9b/namespacecsv__io.html#af953609f65420e99a9c283dfa65c5453',1,'csv_io']]],
-  ['saveimageascsv_3',['saveimageascsv',['../d6/d51/csv-io_8h.html#a214fc383a5cb483508da7bb0449a9528',1,'SaveImageAsCSV(image *hIMG, char *file_name):&#160;csv-io.c'],['../df/df6/csv-io_8c.html#a214fc383a5cb483508da7bb0449a9528',1,'SaveImageAsCSV(image *hIMG, char *file_name):&#160;csv-io.c']]],
-  ['scalarproduct_4',['scalarproduct',['../dc/d9c/linear__algebra_8h.html#a2c84697470e743f7c69fffbe7e0f92bc',1,'ScalarProduct(data_t *v, data_t scalar, data_t *res, UINT size):&#160;linear_algebra.c'],['../df/d91/linear__algebra_8c.html#a2c84697470e743f7c69fffbe7e0f92bc',1,'ScalarProduct(data_t *v, data_t scalar, data_t *res, UINT size):&#160;linear_algebra.c']]],
-  ['setpixel_5',['setpixel',['../d3/d10/image_8c.html#aefaa1253ccc17864ac32b9d685b821d4',1,'SetPixel(image *hIMG, INDEX x, INDEX y, INDEX z, PIXEL data):&#160;image.c'],['../d5/db2/image_8h.html#aefaa1253ccc17864ac32b9d685b821d4',1,'SetPixel(image *hIMG, INDEX x, INDEX y, INDEX z, PIXEL data):&#160;image.c']]],
-  ['setupclass_6',['setUpClass',['../d9/d7b/classtest__compression_1_1_test_comp.html#ac86c73ff4bb09de46d20296fcbcbd1af',1,'test_compression::TestComp']]],
-  ['shadevoronoibox3_7',['ShadeVoronoiBox3',['../d5/d40/synthetic__image__generator_8c.html#a7f533fab0007b8e388232d9fb654ae06',1,'synthetic_image_generator.c']]],
-  ['sign_8',['sign',['../d0/d09/namespacehelperlib.html#a081f96217f1dd709e9c15859a50e68f0',1,'helperlib']]],
-  ['solveperlin4_9',['SolvePerlin4',['../d1/d32/perlin__noise_8c.html#a26dda31c4d26a5c138a6b58cb7e50910',1,'perlin_noise.c']]],
-  ['spreadpoint2_10',['spreadpoint2',['../d9/dea/synthetic__image__generator_8h.html#a9793361bc08ee3644e6f9ac73e1bee45',1,'SpreadPoint2(dim2 **points, dim2 bounds, UINT point_count):&#160;synthetic_image_generator.c'],['../d5/d40/synthetic__image__generator_8c.html#a9793361bc08ee3644e6f9ac73e1bee45',1,'SpreadPoint2(dim2 **points, dim2 bounds, UINT point_count):&#160;synthetic_image_generator.c']]],
-  ['spreadpoint3_11',['spreadpoint3',['../d9/dea/synthetic__image__generator_8h.html#ab7214af202e08fe839b1623f5f783f59',1,'SpreadPoint3(dim3 **points, dim3 bounds, UINT point_count):&#160;synthetic_image_generator.c'],['../d5/d40/synthetic__image__generator_8c.html#ab7214af202e08fe839b1623f5f783f59',1,'SpreadPoint3(dim3 **points, dim3 bounds, UINT point_count):&#160;synthetic_image_generator.c']]],
-  ['streamvarinteger_12',['streamvarinteger',['../d8/d81/stream__encoder_8h.html#a8b42309d51939ee46f5f0d348fbbcbc0',1,'StreamVarInteger(VIFS *stream, uint32_t data, uint32_t length):&#160;stream_encoder.c'],['../de/d04/stream__encoder_8c.html#a8b42309d51939ee46f5f0d348fbbcbc0',1,'StreamVarInteger(VIFS *stream, uint32_t data, uint32_t length):&#160;stream_encoder.c']]],
-  ['subtractvectors_13',['subtractvectors',['../dc/d9c/linear__algebra_8h.html#a06b11149235c5a4fe6c877aed33f55f9',1,'SubtractVectors(data_t *v1, data_t *v2, data_t *res, UINT size):&#160;linear_algebra.c'],['../df/d91/linear__algebra_8c.html#a06b11149235c5a4fe6c877aed33f55f9',1,'SubtractVectors(data_t *v1, data_t *v2, data_t *res, UINT size):&#160;linear_algebra.c']]]
+  ['test_5fuhi_0',['test_UHI',['../test___u_h_i_8c.html#a24aa285f65de829c8a9791d901405626',1,'test_UHI.c']]],
+  ['testdecoder_1',['TestDecoder',['../decoder_8c.html#a760ca18536e4e5b09a2cad3509f700ba',1,'decoder.c']]],
+  ['testheader_2',['TestHeader',['../generate__image_8c.html#a7c0526eafc78103d6067815877e28fe8',1,'generate_image.c']]],
+  ['testreadimage_3',['TestReadImage',['../generate__image_8c.html#a55cd02af0c1ee921b63db0b659b608f5',1,'generate_image.c']]],
+  ['testreconstructor_4',['TestReconstructor',['../reconstructor_8c.html#aadb567bbc159d00d6334e2eb36e6e253',1,'reconstructor.c']]],
+  ['testvuf_5fread_5',['testVUF_Read',['../test__var_int_8c.html#aaac61ccbc34855ae728a8a9d45db1105',1,'test_varInt.c']]],
+  ['testvuf_5fwrite_6',['testVUF_Write',['../test__var_int_8c.html#af925d49ae82dafea37f82c0d044a6308',1,'test_varInt.c']]]
 ];

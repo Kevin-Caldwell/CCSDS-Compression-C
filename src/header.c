@@ -2,19 +2,19 @@
 
 #include <stdio.h>
 
-void PrepareImageMetadata(uint8_t *essential)
+void PrepareImageMetadata(uint8_t *essential, dim3 img_size)
 {
     uint8_t buf;
 
     essential[0] = 0;
-    essential[1] = (uint8_t)((uint16_t)kNx >> 8);
-    essential[2] = (uint8_t)kNx % (1 << 8);
+    essential[1] = (uint8_t)((uint16_t)img_size.x >> 8);
+    essential[2] = (uint8_t)img_size.x % (1 << 8);
 
-    essential[3] = (uint8_t)((uint16_t)kNy >> 8);
-    essential[4] = (uint8_t)kNy % (1 << 8);
+    essential[3] = (uint8_t)((uint16_t)img_size.y >> 8);
+    essential[4] = (uint8_t)img_size.y % (1 << 8);
 
-    essential[5] = (uint8_t)((uint16_t)kNz >> 8);
-    essential[6] = (uint8_t)kNz % (1 << 8);
+    essential[5] = (uint8_t)((uint16_t)img_size.z >> 8);
+    essential[6] = (uint8_t)img_size.z % (1 << 8);
 
     buf = (uint8_t) !kUnsignedSamples;
 
@@ -85,7 +85,7 @@ void PreparePredictorMetadata(uint8_t *predicted_metadata)
     uint8_t *sr = predicted_metadata + 5;
 
     Encode(sr, 0, 0, 5);
-    Encode(sr, 0, RESOLUTION, 3);
+    Encode(sr, 0, kResolution, 3);
 
     Encode(sr, 1, 0, 1);
     Encode(sr, 1, BAND_VARYING_DAMPING_FLAG, 1);

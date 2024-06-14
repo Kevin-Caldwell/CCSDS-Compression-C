@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_local__differences_8c" xml:lang="en-US">
+<title>src/local_differences.c File Reference</title>
+<indexterm><primary>src/local_differences.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;predictor/local_differences.h&quot;<?linebreak?></programlisting>Include dependency graph for local_differences.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="local__differences_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int32_t <link linkend="_local__differences_8c_1a37d2cf3f48b1b2c436f630a2b649cf52">CentralLocalDifference</link> (image *hIMG, INDEX z, INDEX y, INDEX x)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_local__differences_8c_1aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</link> (image *hIMG, INDEX z, INDEX y, INDEX x, int direction)</para>
+</listitem>
+            <listitem><para>int <link linkend="_local__differences_8c_1a6ee8aa29ecb5e47ec859cfb75580c8de">LocalDirectionVector</link> (image *hIMG, int32_t *lDV, INDEX z, INDEX y, INDEX x)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_local__differences_8c_1a37d2cf3f48b1b2c436f630a2b649cf52"/><section>
+    <title>CentralLocalDifference()</title>
+<indexterm><primary>CentralLocalDifference</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>CentralLocalDifference</secondary></indexterm>
+<para><computeroutput>int32_t CentralLocalDifference (image * hIMG, INDEX z, INDEX y, INDEX x)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="local__differences_8c_a37d2cf3f48b1b2c436f630a2b649cf52_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_local__differences_8c_1aa1779fb92c191cde51766275baaf7591"/><section>
+    <title>DirectionalLocalDifference()</title>
+<indexterm><primary>DirectionalLocalDifference</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>DirectionalLocalDifference</secondary></indexterm>
+<para><computeroutput>int32_t DirectionalLocalDifference (image * hIMG, INDEX z, INDEX y, INDEX x, int direction)</computeroutput></para></section>
+<anchor xml:id="_local__differences_8c_1a6ee8aa29ecb5e47ec859cfb75580c8de"/><section>
+    <title>LocalDirectionVector()</title>
+<indexterm><primary>LocalDirectionVector</primary><secondary>local_differences.c</secondary></indexterm>
+<indexterm><primary>local_differences.c</primary><secondary>LocalDirectionVector</secondary></indexterm>
+<para><computeroutput>int LocalDirectionVector (image * hIMG, int32_t * lDV, INDEX z, INDEX y, INDEX x)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="local__differences_8c_a6ee8aa29ecb5e47ec859cfb75580c8de_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="local__differences_8c_a6ee8aa29ecb5e47ec859cfb75580c8de_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

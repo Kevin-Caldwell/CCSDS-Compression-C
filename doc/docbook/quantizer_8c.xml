@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_quantizer_8c" xml:lang="en-US">
+<title>src/quantizer.c File Reference</title>
+<indexterm><primary>src/quantizer.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;predictor/quantizer.h&quot;<?linebreak?></programlisting>Include dependency graph for quantizer.c:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_quantizer_8c_1a9d745aa249b8a9cde3f83899b563dcc5">ClippedQuantizerBinCenter</link> (uint16_t sample_value)</para>
+</listitem>
+            <listitem><para>int16_t <link linkend="_quantizer_8c_1a93be7d02ed2acce98f53818c98ac6cca">PredictionResidual</link> (uint16_t sample_value, uint16_t predicted_sample)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_quantizer_8c_1afa51bec3d5dfdb41078f60b1a7c454ab">QuantizerIndex</link> (uint16_t sample_value, uint16_t predicted_sample)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_quantizer_8c_1ae831d86258458d0a68d3d2143db43d19">minTheta</link> (uint32_t predicted_sample)</para>
+</listitem>
+            <listitem><para>int32_t <link linkend="_quantizer_8c_1ae85d34759565d8a3ab498494786c395b">QuantizerIndexUnmapper</link> (uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)</para>
+</listitem>
+            <listitem><para>data_t <link linkend="_quantizer_8c_1a1f491e0a435427669942c932394d7c1a">MappedQuantizerIndex</link> (int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_quantizer_8c_1a9d745aa249b8a9cde3f83899b563dcc5"/><section>
+    <title>ClippedQuantizerBinCenter()</title>
+<indexterm><primary>ClippedQuantizerBinCenter</primary><secondary>quantizer.c</secondary></indexterm>
+<indexterm><primary>quantizer.c</primary><secondary>ClippedQuantizerBinCenter</secondary></indexterm>
+<para><computeroutput>uint16_t ClippedQuantizerBinCenter (uint16_t sample_value)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_a9d745aa249b8a9cde3f83899b563dcc5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_quantizer_8c_1a1f491e0a435427669942c932394d7c1a"/><section>
+    <title>MappedQuantizerIndex()</title>
+<indexterm><primary>MappedQuantizerIndex</primary><secondary>quantizer.c</secondary></indexterm>
+<indexterm><primary>quantizer.c</primary><secondary>MappedQuantizerIndex</secondary></indexterm>
+<para><computeroutput>data_t MappedQuantizerIndex (int32_t quantizer_index, int32_t predicted_sample, uint32_t double_res_predicted_sample)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_a1f491e0a435427669942c932394d7c1a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_a1f491e0a435427669942c932394d7c1a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_quantizer_8c_1ae831d86258458d0a68d3d2143db43d19"/><section>
+    <title>minTheta()</title>
+<indexterm><primary>minTheta</primary><secondary>quantizer.c</secondary></indexterm>
+<indexterm><primary>quantizer.c</primary><secondary>minTheta</secondary></indexterm>
+<para><computeroutput>uint16_t minTheta (uint32_t predicted_sample)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_ae831d86258458d0a68d3d2143db43d19_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_quantizer_8c_1a93be7d02ed2acce98f53818c98ac6cca"/><section>
+    <title>PredictionResidual()</title>
+<indexterm><primary>PredictionResidual</primary><secondary>quantizer.c</secondary></indexterm>
+<indexterm><primary>quantizer.c</primary><secondary>PredictionResidual</secondary></indexterm>
+<para><computeroutput>int16_t PredictionResidual (uint16_t sample_value, uint16_t predicted_sample)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_a93be7d02ed2acce98f53818c98ac6cca_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_quantizer_8c_1afa51bec3d5dfdb41078f60b1a7c454ab"/><section>
+    <title>QuantizerIndex()</title>
+<indexterm><primary>QuantizerIndex</primary><secondary>quantizer.c</secondary></indexterm>
+<indexterm><primary>quantizer.c</primary><secondary>QuantizerIndex</secondary></indexterm>
+<para><computeroutput>int32_t QuantizerIndex (uint16_t sample_value, uint16_t predicted_sample)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_afa51bec3d5dfdb41078f60b1a7c454ab_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_afa51bec3d5dfdb41078f60b1a7c454ab_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_quantizer_8c_1ae85d34759565d8a3ab498494786c395b"/><section>
+    <title>QuantizerIndexUnmapper()</title>
+<indexterm><primary>QuantizerIndexUnmapper</primary><secondary>quantizer.c</secondary></indexterm>
+<indexterm><primary>quantizer.c</primary><secondary>QuantizerIndexUnmapper</secondary></indexterm>
+<para><computeroutput>int32_t QuantizerIndexUnmapper (uint16_t mapped_delta, uint16_t predicted_sample, int32_t drps)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_ae85d34759565d8a3ab498494786c395b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="quantizer_8c_ae85d34759565d8a3ab498494786c395b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

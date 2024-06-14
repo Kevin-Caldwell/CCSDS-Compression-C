@@ -1,0 +1,61 @@
+\doxysection{src/linear\+\_\+algebra.c File Reference}
+\hypertarget{linear__algebra_8c}{}\label{linear__algebra_8c}\index{src/linear\_algebra.c@{src/linear\_algebra.c}}
+{\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
+Include dependency graph for linear\+\_\+algebra.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{linear__algebra_8c_ab9661c8e10293140db24d4b650785939}{Init\+Vector}} (int32\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}v, UINT len)
+\item 
+int \mbox{\hyperlink{linear__algebra_8c_ae000d0d19cf867f1ad39325993763205}{Delete\+Vector}} (data\+\_\+t \texorpdfstring{$\ast$}{*}v)
+\item 
+int \mbox{\hyperlink{linear__algebra_8c_a2765cafcf739497b0ee51e705590039a}{Add\+Vectors}} (data\+\_\+t \texorpdfstring{$\ast$}{*}v1, data\+\_\+t \texorpdfstring{$\ast$}{*}v2, data\+\_\+t \texorpdfstring{$\ast$}{*}res, UINT size)
+\item 
+int \mbox{\hyperlink{linear__algebra_8c_a06b11149235c5a4fe6c877aed33f55f9}{Subtract\+Vectors}} (data\+\_\+t \texorpdfstring{$\ast$}{*}v1, data\+\_\+t \texorpdfstring{$\ast$}{*}v2, data\+\_\+t \texorpdfstring{$\ast$}{*}res, UINT size)
+\item 
+int64\+\_\+t \mbox{\hyperlink{linear__algebra_8c_a46ade3794d4b4d5cc1eaf983858507ef}{Inner\+Product}} (int32\+\_\+t \texorpdfstring{$\ast$}{*}v1, int32\+\_\+t \texorpdfstring{$\ast$}{*}v2, UINT size)
+\item 
+int \mbox{\hyperlink{linear__algebra_8c_a2c84697470e743f7c69fffbe7e0f92bc}{Scalar\+Product}} (data\+\_\+t \texorpdfstring{$\ast$}{*}v, data\+\_\+t scalar, data\+\_\+t \texorpdfstring{$\ast$}{*}res, UINT size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{linear__algebra_8c_a2765cafcf739497b0ee51e705590039a}\label{linear__algebra_8c_a2765cafcf739497b0ee51e705590039a} 
+\index{linear\_algebra.c@{linear\_algebra.c}!AddVectors@{AddVectors}}
+\index{AddVectors@{AddVectors}!linear\_algebra.c@{linear\_algebra.c}}
+\doxysubsubsection{\texorpdfstring{AddVectors()}{AddVectors()}}
+{\footnotesize\ttfamily int Add\+Vectors (\begin{DoxyParamCaption}\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{v1,  }\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{v2,  }\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{res,  }\item[{UINT}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{linear__algebra_8c_ae000d0d19cf867f1ad39325993763205}\label{linear__algebra_8c_ae000d0d19cf867f1ad39325993763205} 
+\index{linear\_algebra.c@{linear\_algebra.c}!DeleteVector@{DeleteVector}}
+\index{DeleteVector@{DeleteVector}!linear\_algebra.c@{linear\_algebra.c}}
+\doxysubsubsection{\texorpdfstring{DeleteVector()}{DeleteVector()}}
+{\footnotesize\ttfamily int Delete\+Vector (\begin{DoxyParamCaption}\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{v }\end{DoxyParamCaption})}
+
+\Hypertarget{linear__algebra_8c_ab9661c8e10293140db24d4b650785939}\label{linear__algebra_8c_ab9661c8e10293140db24d4b650785939} 
+\index{linear\_algebra.c@{linear\_algebra.c}!InitVector@{InitVector}}
+\index{InitVector@{InitVector}!linear\_algebra.c@{linear\_algebra.c}}
+\doxysubsubsection{\texorpdfstring{InitVector()}{InitVector()}}
+{\footnotesize\ttfamily int Init\+Vector (\begin{DoxyParamCaption}\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{v,  }\item[{UINT}]{len }\end{DoxyParamCaption})}
+
+\Hypertarget{linear__algebra_8c_a46ade3794d4b4d5cc1eaf983858507ef}\label{linear__algebra_8c_a46ade3794d4b4d5cc1eaf983858507ef} 
+\index{linear\_algebra.c@{linear\_algebra.c}!InnerProduct@{InnerProduct}}
+\index{InnerProduct@{InnerProduct}!linear\_algebra.c@{linear\_algebra.c}}
+\doxysubsubsection{\texorpdfstring{InnerProduct()}{InnerProduct()}}
+{\footnotesize\ttfamily int64\+\_\+t Inner\+Product (\begin{DoxyParamCaption}\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{v1,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{v2,  }\item[{UINT}]{size }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+% FIG 1
+\Hypertarget{linear__algebra_8c_a2c84697470e743f7c69fffbe7e0f92bc}\label{linear__algebra_8c_a2c84697470e743f7c69fffbe7e0f92bc} 
+\index{linear\_algebra.c@{linear\_algebra.c}!ScalarProduct@{ScalarProduct}}
+\index{ScalarProduct@{ScalarProduct}!linear\_algebra.c@{linear\_algebra.c}}
+\doxysubsubsection{\texorpdfstring{ScalarProduct()}{ScalarProduct()}}
+{\footnotesize\ttfamily int Scalar\+Product (\begin{DoxyParamCaption}\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{v,  }\item[{data\+\_\+t}]{scalar,  }\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{res,  }\item[{UINT}]{size }\end{DoxyParamCaption})}
+
+\Hypertarget{linear__algebra_8c_a06b11149235c5a4fe6c877aed33f55f9}\label{linear__algebra_8c_a06b11149235c5a4fe6c877aed33f55f9} 
+\index{linear\_algebra.c@{linear\_algebra.c}!SubtractVectors@{SubtractVectors}}
+\index{SubtractVectors@{SubtractVectors}!linear\_algebra.c@{linear\_algebra.c}}
+\doxysubsubsection{\texorpdfstring{SubtractVectors()}{SubtractVectors()}}
+{\footnotesize\ttfamily int Subtract\+Vectors (\begin{DoxyParamCaption}\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{v1,  }\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{v2,  }\item[{data\+\_\+t \texorpdfstring{$\ast$}{*}}]{res,  }\item[{UINT}]{size }\end{DoxyParamCaption})}
+

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['c_0',['c',['../d2/d6f/constants_8h.html#a5464533d23b59ba11030432e73528730',1,'C:&#160;predictor.c'],['../de/d32/reconstructor_8h.html#a5464533d23b59ba11030432e73528730',1,'C:&#160;predictor.c'],['../dc/d08/predictor_8h.html#a5464533d23b59ba11030432e73528730',1,'C:&#160;predictor.c'],['../db/d25/predictor_8c.html#a5464533d23b59ba11030432e73528730',1,'C:&#160;predictor.c']]],
-  ['cache_1',['cache',['../db/db5/struct_uncompressed_hyperspectral_image.html#ad6ee0d6e06c4b67239464b59d806f72c',1,'UncompressedHyperspectralImage']]],
-  ['cache_5fspace_2',['cache_space',['../d0/d18/struct_predictor_cache.html#a847490dd84d456f3e80b13a3be6ddfac',1,'PredictorCache']]],
-  ['cachefiles_3',['cachefiles',['../df/d01/cache__predictor_8h.html#a01a11e19b54bb1195243f037c3d93b7b',1,'CacheFiles:&#160;cache_predictor.c'],['../df/ded/namespacedisplay__debugging.html#a7e69bd3f9400dc258e83fe7ecab1e317',1,'display_debugging.CacheFiles'],['../d2/dc7/namespaceprepare__h_image.html#a7e69bd3f9400dc258e83fe7ecab1e317',1,'prepare_hImage.CacheFiles'],['../dc/d99/cache__predictor_8c.html#a01a11e19b54bb1195243f037c3d93b7b',1,'CacheFiles:&#160;cache_predictor.c']]],
-  ['cols_4',['cols',['../df/ded/namespacedisplay__debugging.html#aaed057ed424ced7429016ec18c2edbb6',1,'display_debugging']]]
+  ['file_5findex_0',['file_index',['../image_8c.html#acdd688ddb6c776eddc9ee8c4c2c620d8',1,'image.c']]],
+  ['file_5fmodes_5farguments_1',['file_modes_arguments',['../var_int_file___i_o_8c.html#adcef86e6a920a4f9ff207599aa37b7f6',1,'varIntFile_IO.c']]],
+  ['file_5fmodes_5fstr_2',['file_modes_str',['../file___i_o_8c.html#aed9fcf257d5879cc1d4a649543e3cd12',1,'file_IO.c']]],
+  ['fp_3',['fp',['../predictor_8c.html#a75189a35b23b0d484e74e07e0c237cd1',1,'predictor.c']]]
 ];
