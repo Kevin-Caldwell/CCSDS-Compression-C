@@ -3,7 +3,7 @@
 
 /**
  * header.h
- * @author @Kevin-Caldwell
+ * @author Kevin Caldwell
  *
  * File Contains Functions for Preparing
  * Image, Predictor, Encoder and Entropy
@@ -16,6 +16,7 @@
 #include "constants/constants.h"
 #include "constants/encoder_constants.h"
 #include "encoder/encoder_helper_functions.h"
+#include "constants/global_constants.h"
 
 void PrepareImageMetadata(uint8_t *essential, dim3 image_size);
 

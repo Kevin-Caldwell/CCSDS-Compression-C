@@ -442,7 +442,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d7/d9a/a00152" kindref="compound">math_functions.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="d7/d9a/a00152" kindref="compound">math_functions.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 Mathematical Helper Functions for use throughout code. </para>
         </detaileddescription>

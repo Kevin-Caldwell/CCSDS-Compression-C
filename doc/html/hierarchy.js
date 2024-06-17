@@ -6,7 +6,8 @@ var hierarchy =
     [ "GolombInt", "struct_golomb_int.html", null ],
     [ "HashTable", "struct_hash_table.html", null ],
     [ "image2", "structimage2.html", null ],
-    [ "locale_buffer", "structlocale__buffer.html", null ],
+    [ "LocaleBuffer", "struct_locale_buffer.html", null ],
+    [ "s_predictor_constants", "structs__predictor__constants.html", null ],
     [ "TestCase", null, [
       [ "TestComp", "classtest__compression_1_1_test_comp.html", null ]
     ] ],

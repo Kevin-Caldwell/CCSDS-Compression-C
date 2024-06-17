@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['error_5fcodes_0',['ERROR_CODES',['../d5/ddb/global__constants_8h.html#a938a8c46255e5666f6a434ca0eb87f25',1,'global_constants.h']]]
+  ['t_5flocal_5fsum_0',['t_local_sum',['../typedefs_8h.html#ae33c4e202ff6a95f1edbf5aed1542a59',1,'typedefs.h']]],
+  ['t_5fprediction_5fmode_1',['t_prediction_mode',['../typedefs_8h.html#aa8979f300abc80c56dcedc2c1cc8a95c',1,'typedefs.h']]]
 ];

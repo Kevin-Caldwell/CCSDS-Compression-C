@@ -13,10 +13,13 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 #include "math/math_functions.h"
-#include "global_constants.h"
+// #include "global_constants.h"
 
 #define TRUE 1
 #define FALSE 0
+
+#define THREE_DIM 3
+#define TWO_DIM 2
 
 // Predictor Constants
 
@@ -52,7 +55,7 @@ extern uint8_t kResolution;
 // 0: WEO values are zero
 // 1: WEO values can be non-zero
 #define WEIGHT_EXPONENT_OFFSET_FLAG 0
-// 2^WEIGHT_UPDATE_SCALING_EXPONENT_CHANGE_INTERVAL
+// 2^4
 
 #pragma region Do Not Touch
 
@@ -79,7 +82,6 @@ extern int kVMax;
 extern int kTInc;
 
 void InitalizePredictorConstants();
-void Constants_validate();
 
 #pragma endregion
 #endif /* CONSTANTS_H */

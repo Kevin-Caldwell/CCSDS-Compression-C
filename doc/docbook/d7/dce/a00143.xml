@@ -36,7 +36,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>int LoadConstantFile (const char * file_name, <link linkend="_a00376">HashTable</link> * result)</computeroutput></para>
 <para><link linkend="_a00143">load_constants.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Abstractions for Loading .CONST files</para>
 

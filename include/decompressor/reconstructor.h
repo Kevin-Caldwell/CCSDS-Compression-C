@@ -1,6 +1,6 @@
 /**
  * reconstructor.h
- * @authors @Kevin-Caldwell
+ * @authors Kevin Caldwell
  *
  * Major Function Definitions of Reconstructor Module
  *

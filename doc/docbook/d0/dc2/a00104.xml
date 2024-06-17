@@ -57,7 +57,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>#define Ps( z)&#160;&#160;&#160;<link linkend="_a00152_1a3acffbd305ee72dcd4593c0d8af64a4f">MIN</link>(z, <link linkend="_a00146_1a21c169290a6c782855c778bb7a0389b9">kP</link>)</computeroutput></para>
 <para><link linkend="_a00104">predictor.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Top Level Function(s) for Running Predictor on a Hyperspectral Image. Returns a predicted Hyperspectral Image. </para>
 <para>

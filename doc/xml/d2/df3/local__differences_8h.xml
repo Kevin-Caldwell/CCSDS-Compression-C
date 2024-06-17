@@ -328,7 +328,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d2/df3/local__differences_8h" kindref="compound">local_differences.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell @BrianShTsoi</para>
+<para><ref refid="d2/df3/local__differences_8h" kindref="compound">local_differences.h</ref> <simplesect kind="authors"><para>Kevin Caldwell @BrianShTsoi</para>
 </simplesect>
 Central and Directional Local Difference Functions and Definitions </para>
         </detaileddescription>

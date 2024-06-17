@@ -1,6 +1,6 @@
 /**
  * encoder_helper_functions.h
- * @author @Kevin-Caldwell
+ * @author Kevin Caldwell
  *
  * Global Functions for Encoding the image
  *

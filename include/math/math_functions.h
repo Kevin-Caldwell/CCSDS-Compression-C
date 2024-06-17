@@ -1,6 +1,6 @@
 /**
  * math_functions.h
- * @author @Kevin-Caldwell
+ * @author Kevin Caldwell
  *
  * Mathematical Helper Functions for use throughout code.
  */
@@ -47,13 +47,6 @@
 #define SQ(x) ((x) * (x))
 
 #define Ps(z) MIN(z, kP)
-
-/// Error Codes: TODO
-enum RetVal
-{
-    OK = 0,
-    ERROR
-};
 
 /**
  * 3D Dimension Struct, used to describe size

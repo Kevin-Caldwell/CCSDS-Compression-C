@@ -79,7 +79,7 @@ Definition at line <link linkend="_stream__encoder_8h_source_1l00017">17</link> 
 <para><computeroutput>#define L_SHIFT( x,  s)&#160;&#160;&#160;(s &lt; 0 ? x &gt;&gt; -s : x &lt;&lt; s)</computeroutput></para>
 <para><link linkend="_stream__encoder_8h">stream_encoder.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 <para><link linkend="_deprecated_1_deprecated000003">Deprecated</link> 
 <para>Replaced by <link linkend="_var_int_file___i_o_8h">varIntFile_IO.h</link> </para>

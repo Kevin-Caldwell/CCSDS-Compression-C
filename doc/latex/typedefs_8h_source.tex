@@ -7,23 +7,43 @@
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ TYPEDEFS\_H}}
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{typedef}\ int32\_t\ DIM;\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}};\ \ \ \ \ \ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{typedef}\ uint16\_t\ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ DIM\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\_CODES}}\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00017\ \{}
-\DoxyCodeLine{00018\ \ \ \ \ RES\_OK\ =\ 0,}
-\DoxyCodeLine{00019\ \ \ \ \ FILE\_ACCESS\_ERROR,}
-\DoxyCodeLine{00020\ \ \ \ \ FILE\_READ\_ERROR,}
-\DoxyCodeLine{00021\ \ \ \ \ FILE\_WRITE\_ERROR,}
-\DoxyCodeLine{00022\ \ \ \ \ MEM\_ALLOC\_ERROR,}
-\DoxyCodeLine{00023\ \ \ \ \ HASH\_FULL}
-\DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\_CODES}},\ EXIT\_CODES;}
-\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\_CODES}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ RES\_OK\ =\ 0,}
+\DoxyCodeLine{00018\ \ \ \ \ FILE\_ACCESS\_ERROR,}
+\DoxyCodeLine{00019\ \ \ \ \ FILE\_READ\_ERROR,}
+\DoxyCodeLine{00020\ \ \ \ \ FILE\_WRITE\_ERROR,}
+\DoxyCodeLine{00021\ \ \ \ \ MEM\_ALLOC\_ERROR,}
+\DoxyCodeLine{00022\ \ \ \ \ HASH\_FULL}
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}},\ \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\_CODES}},\ EXIT\_CODES;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/PREDICTOR\ TYPEDEFS-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
 \DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TYPEDEFS\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\_local\_sum}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ LS\_WIDE\_NEIGHBOR\ =\ 0,}
+\DoxyCodeLine{00031\ \ \ \ \ LS\_NARROW\_NEIGHBOR,}
+\DoxyCodeLine{00032\ \ \ \ \ LS\_WIDE\_COLUMN,}
+\DoxyCodeLine{00033\ \ \ \ \ LS\_NARROW\_COLUMN}
+\DoxyCodeLine{00034\ \}\ \mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\_local\_sum}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\_prediction\_mode}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ PM\_FULL\ =\ 0,}
+\DoxyCodeLine{00040\ \ \ \ \ PM\_REDUCED}
+\DoxyCodeLine{00041\ \}\ \mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\_prediction\_mode}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ uint8\_t\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ int32\_t\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{typedef}\ uint16\_t\ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ TYPEDEFS\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

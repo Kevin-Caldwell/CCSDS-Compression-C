@@ -1,6 +1,6 @@
 /**
  * local_sum.h
- * @author @Kevin-Caldwell
+ * @author Kevin-Caldwell
  *
  * Functions for finding Local Sum
  */

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixel_0',['PIXEL',['../typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9',1,'typedefs.h']]]
+  ['error_5ft_0',['error_t',['../typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5',1,'typedefs.h']]]
 ];

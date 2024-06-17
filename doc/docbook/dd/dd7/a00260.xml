@@ -54,7 +54,7 @@ Here is the caller graph for this function:<para>
 <para><computeroutput>void PrintBinary (uint8_t byte)</computeroutput></para>
 <para><link linkend="_a00083">encoder_helper_functions.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Global Functions for Encoding the image</para>
 

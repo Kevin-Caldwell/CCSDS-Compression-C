@@ -417,7 +417,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d2/d6f/constants_8h" kindref="compound">constants.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="d2/d6f/constants_8h" kindref="compound">constants.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 A global file for constats that need to be shared between modules.</para>
 <para>Features Image Constants</para>

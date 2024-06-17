@@ -83,7 +83,7 @@ Definition at line <link linkend="_global__constants_8h_source_1l00027">27</link
 <para><computeroutput>#define GLOBAL_CONSTANTS_LOCATION&#160;&#160;&#160;&quot;/global.CONST&quot;</computeroutput></para>
 <para><link linkend="_global__constants_8h">global_constants.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Contains Application-Level Constants</para>
 

@@ -430,7 +430,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d4/ddb/hash__table_8h" kindref="compound">hash_table.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell</para>
+<para><ref refid="d4/ddb/hash__table_8h" kindref="compound">hash_table.h</ref> <simplesect kind="authors"><para>Kevin Caldwell</para>
 </simplesect>
 Hash Table Implementation for Storing Constants. Uses Dynamically allocated memory for storage</para>
 <para>Dependencies stdlib inttypes string</para>

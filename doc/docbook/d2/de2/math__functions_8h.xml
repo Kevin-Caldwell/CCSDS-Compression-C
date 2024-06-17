@@ -148,7 +148,7 @@ Definition at line <link linkend="_math__functions_8h_source_1l00029">29</link> 
 <para><computeroutput>#define NULL&#160;&#160;&#160;0</computeroutput></para>
 <para><link linkend="_math__functions_8h">math_functions.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Mathematical Helper Functions for use throughout code. </para>
 <para>

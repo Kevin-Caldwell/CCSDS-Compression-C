@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['varunsignedintfile_0',['VarUnsignedIntFile',['../struct_var_unsigned_int_file.html',1,'']]]
+  ['uncompressedhyperspectralimage_0',['UncompressedHyperspectralImage',['../struct_uncompressed_hyperspectral_image.html',1,'']]]
 ];

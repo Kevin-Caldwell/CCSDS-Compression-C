@@ -1,6 +1,6 @@
 /**
  * sample_representative.h
- * @authors @Kevin-Caldwell @BrianShTsoi
+ * @authors Kevin-Caldwell @BrianShTsoi
  *
  * A collection of Sample representative calculation
  * functions.

@@ -142,7 +142,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>decoder.h <simplesect kind="authors"><para>@Kevin-Caldwell @BrianShTsoi</para>
+<para>decoder.h <simplesect kind="authors"><para>Kevin Caldwell @BrianShTsoi</para>
 </simplesect>
 Functions for Decoding an image from a .HSP file</para>
 <para>Features Functions for Independently Decoding the Header and Body, or both if necessary.</para>

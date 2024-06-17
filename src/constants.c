@@ -1,4 +1,5 @@
 #include "constants/constants.h"
+#include "constants/global_constants.h"
 
 #define GET_PCONST(x) (Hash_GetValue(&predictor_constants, x))
 

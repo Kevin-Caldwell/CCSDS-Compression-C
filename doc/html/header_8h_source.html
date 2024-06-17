@@ -106,15 +106,18 @@ $(document).ready(function(){initNavTree('header_8h_source.html',''); initResiza
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants/constants.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="encoder__constants_8h.html">constants/encoder_constants.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;encoder/encoder_helper_functions.h&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> PrepareImageMetadata(uint8_t *essential);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> PreparePredictorMetadata(uint8_t *predicted_metadata);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> PrepareSampleAdaptiveEntropyCoder(uint8_t *entropy_coder_metadata);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif </span><span class="comment">/* HEADER_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">A global file for constats that need to be shared between modules.</div></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="global__constants_8h.html">constants/global_constants.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> PrepareImageMetadata(uint8_t *essential, <a class="code hl_struct" href="structdim3.html">dim3</a> image_size);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> PreparePredictorMetadata(uint8_t *predicted_metadata);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> PrepareSampleAdaptiveEntropyCoder(uint8_t *entropy_coder_metadata);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span><span class="comment">/* HEADER_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">A Global File for constants shared between modules.</div></div>
 <div class="ttc" id="aencoder__constants_8h_html"><div class="ttname"><a href="encoder__constants_8h.html">encoder_constants.h</a></div><div class="ttdoc">Contains all Encoder-Specific Constants.</div></div>
+<div class="ttc" id="aglobal__constants_8h_html"><div class="ttname"><a href="global__constants_8h.html">global_constants.h</a></div><div class="ttdoc">Contains Application-Level Constants.</div></div>
+<div class="ttc" id="astructdim3_html"><div class="ttname"><a href="structdim3.html">dim3</a></div><div class="ttdef"><b>Definition</b> math_functions.h:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

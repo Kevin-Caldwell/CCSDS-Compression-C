@@ -100,7 +100,7 @@ Definition at line <link linkend="_encoder__body_8c_source_1l00007">7</link> of 
 <para><computeroutput>int K = 0</computeroutput></para>
 <para><link linkend="_body_8h">body.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Helper Functions for Encoding the body of the Compressed Image</para>
 

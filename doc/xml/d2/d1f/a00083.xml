@@ -84,7 +84,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d2/d1f/a00083" kindref="compound">encoder_helper_functions.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="d2/d1f/a00083" kindref="compound">encoder_helper_functions.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 Global Functions for Encoding the image</para>
 <para>Features Print a byte in Binary Encode n bit data into m bit buffer, n &lt; 8, data &lt; 8</para>

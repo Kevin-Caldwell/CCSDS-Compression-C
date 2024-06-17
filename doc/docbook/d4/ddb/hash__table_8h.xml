@@ -69,7 +69,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>#define HASH_CAPACITY&#160;&#160;&#160;30</computeroutput></para>
 <para><link linkend="_hash__table_8h">hash_table.h</link> <formalpara><title>Authors</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Hash Table Implementation for Storing Constants. Uses Dynamically allocated memory for storage</para>
 

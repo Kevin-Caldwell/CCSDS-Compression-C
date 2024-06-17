@@ -27,7 +27,7 @@
 <para><computeroutput>int LoadConstantFile (const char * file_name, <link linkend="_struct_hash_table">HashTable</link> * result)</computeroutput></para>
 <para><link linkend="_load__constants_8h">load_constants.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Abstractions for Loading .CONST files</para>
 

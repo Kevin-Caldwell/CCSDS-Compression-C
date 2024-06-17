@@ -1,9 +1,9 @@
 /**
- * decoder.h
- * @authors @Kevin-Caldwell @BrianShTsoi
+ * \file decoder.h
+ * \authors Kevin Caldwell @BrianShTsoi
  *
- * Functions for Decoding an image from a .HSP file
- *
+ * \brief unctions for Decoding an image from a .HSP file
+ * \details
  * Features
  *  Functions for Independently Decoding the Header and Body, or both
  *  if necessary.
@@ -18,15 +18,15 @@
  *  stdio.h
  *  inttypes.h
  *
- * TODO
- *  Finish Decoder_DecodeBody
- *  Finish Decoder_DecodeHeader
- *  Finish Decoder_DecodeImage
+ * \todo Finish Decoder_DecodeBody
+ * \todo Finish Decoder_DecodeHeader
+ * \todo Finish Decoder_DecodeImage
  */
 
 #ifndef DECODER_H
 #define DECODER_H
 
+// INCLUDES
 #include "dst/image.h"
 
 #include <inttypes.h>
@@ -36,6 +36,8 @@
 #include "math/math_functions.h"
 #include "constants/encoder_constants.h"
 #include "encoder/body.h"
+
+// FUNCTION DECLARATIONS
 
 int Decoder_DecodeBody(image *predicted_samples, const char *file_name);
 

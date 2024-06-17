@@ -101,14 +101,42 @@ $(document).ready(function(){initNavTree('locale__buffer_8h_source.html',''); in
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LOCALE_BUFFER_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LOCALE_BUFFER_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structlocale__buffer.html">    9</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structlocale__buffer.html">locale_buffer</a>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>} <a class="code hl_struct" href="structlocale__buffer.html">locale_buffer</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="typedefs_8h.html">constants/typedefs.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants/constants.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="image_8h.html">dst/image.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define MAX_PRECEDING_BANDS 16</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define MAX_NEIGHBORS 4</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define PIXEL_BUFFER_SPACE 1</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define LOCAL_BUFFER_NEIGHBOR_SIZE \</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">    (MAX_NEIGHBORS + PIXEL_BUFFER_SPACE)</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define LOCAL_BUFFER_TOTAL_SIZE \</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">    (MAX_PRECEDING_BANDS + MAX_NEIGHBORS + PIXEL_BUFFER_SPACE)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> LocaleBuffer_neighbor_index_x[LOCAL_BUFFER_NEIGHBOR_SIZE];</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">extern</span> <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> LocaleBuffer_neighbor_index_y[LOCAL_BUFFER_NEIGHBOR_SIZE];</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_locale_buffer.html">   36</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_locale_buffer.html">LocaleBuffer</a>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> data[LOCAL_BUFFER_TOTAL_SIZE];</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <a class="code hl_struct" href="struct_locale_buffer.html">LocaleBuffer</a>;</div>
 </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif </span><span class="comment">/* LOCALE_BUFFER_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astructlocale__buffer_html"><div class="ttname"><a href="structlocale__buffer.html">locale_buffer</a></div><div class="ttdef"><b>Definition</b> locale_buffer.h:9</div></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> LocaleBuffer_SimpleLoad(<a class="code hl_struct" href="struct_locale_buffer.html">LocaleBuffer</a>* buf, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a>* hIMG);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> LocaleBuffer_SmartLoad(<a class="code hl_struct" href="struct_locale_buffer.html">LocaleBuffer</a>* buf, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a>* hIMG);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif </span><span class="comment">/* LOCALE_BUFFER_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">A Global File for constants shared between modules.</div></div>
+<div class="ttc" id="aimage_8h_html"><div class="ttname"><a href="image_8h.html">image.h</a></div></div>
+<div class="ttc" id="astruct_locale_buffer_html"><div class="ttname"><a href="struct_locale_buffer.html">LocaleBuffer</a></div><div class="ttdef"><b>Definition</b> locale_buffer.h:36</div></div>
+<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:45</div></div>
+<div class="ttc" id="atypedefs_8h_html"><div class="ttname"><a href="typedefs_8h.html">typedefs.h</a></div><div class="ttdoc">A file containing univerally used typedefs.</div></div>
+<div class="ttc" id="atypedefs_8h_html_a762a038a8611999e554c912cf3c72cea"><div class="ttname"><a href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a></div><div class="ttdeci">DIM INDEX</div><div class="ttdoc">Type representing Indices of Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:56</div></div>
+<div class="ttc" id="atypedefs_8h_html_a9686e3aa2c29c9c208c0cf15d69516e5"><div class="ttname"><a href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a></div><div class="ttdeci">enum ERROR_CODES error_t</div></div>
+<div class="ttc" id="atypedefs_8h_html_ab11dabd4d79e8b3426010beb5831e1d9"><div class="ttname"><a href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a></div><div class="ttdeci">uint16_t PIXEL</div><div class="ttdoc">Type representing each pixel in Hyperspectral Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:53</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

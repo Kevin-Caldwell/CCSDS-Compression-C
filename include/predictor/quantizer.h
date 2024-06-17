@@ -1,6 +1,6 @@
 /**
  * quantizer.h
- * @author @Kevin-Caldwell
+ * @author Kevin-Caldwell
  *
  * Functions For Quantizer
  */

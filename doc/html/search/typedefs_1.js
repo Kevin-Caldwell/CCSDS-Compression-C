@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['index_0',['INDEX',['../typedefs_8h.html#a762a038a8611999e554c912cf3c72cea',1,'typedefs.h']]]
+  ['dim_0',['DIM',['../typedefs_8h.html#a1578d2632e13e6bbdc95fe7ad2beef19',1,'typedefs.h']]]
 ];

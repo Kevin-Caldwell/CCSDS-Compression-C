@@ -31,7 +31,7 @@
 <para><computeroutput>void PrepareImageMetadata (uint8_t * essential)</computeroutput></para>
 <para><link linkend="_header_8h">header.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 File Contains Functions for Preparing Image, Predictor, Encoder and Entropy coder Header Sections of the Compressed Image. </para>
 <para>

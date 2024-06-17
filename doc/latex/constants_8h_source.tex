@@ -3,86 +3,64 @@
 \mbox{\hyperlink{constants_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#ifndef\ CONSTANTS\_H}}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ CONSTANTS\_H}}
-\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ "{}math/math\_functions.h"{}}}
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{global__constants_8h}{global\_constants.h}}"{}}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ TRUE\ 1}}
-\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ FALSE\ 0}}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \textcolor{comment}{//\ Image\ Size\ Constants}}
-\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ DIM\ kNx;}
-\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ DIM\ kNy;}
-\DoxyCodeLine{00045\ \textcolor{keyword}{extern}\ DIM\ kNz;}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ LOSSLESS;}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{comment}{//\ Predictor\ Constants}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ CONSTANTS\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ CONSTANTS\_H}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}math/math\_functions.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \#include\ "{}global\_constants.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ TRUE\ 1}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ FALSE\ 0}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ THREE\_DIM\ 3}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ TWO\_DIM\ 2}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Predictor\ Constants}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\_prediction\_mode}}\ \mbox{\hyperlink{constants_8h_a6dce68db93344a8211cd177b207172cb}{kPredictionMode}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\_local\_sum}}\ \mbox{\hyperlink{constants_8h_a7df57565dff909730e48b198f2de2ddf}{kLocalSumType}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{extern}\ uint8\_t\ \mbox{\hyperlink{constants_8h_a259eb38bab418aa26b68d33d542cfdcb}{kDynamicRange}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{extern}\ uint8\_t\ \mbox{\hyperlink{constants_8h_a348b4c90b73804fe84893ec23aae3faa}{kResolution}};}
 \DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{comment}{//\ Comment\ if\ using\ Full\ Prediction\ Mode}}
-\DoxyCodeLine{00052\ \textcolor{comment}{//\ \#define\ REDUCED\_PREDICTION\_MODE}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{comment}{//\ 0:\ Full\ Prediction\ Mode}}
-\DoxyCodeLine{00055\ \textcolor{comment}{//\ 1:\ Reduced\ Prediction\ Mode}}
-\DoxyCodeLine{00056\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kPredictionMode;}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ t\_local\_sum}
-\DoxyCodeLine{00059\ \{}
-\DoxyCodeLine{00060\ \ \ \ \ LS\_WIDE\_NEIGHBOR\ =\ 0,}
-\DoxyCodeLine{00061\ \ \ \ \ LS\_NARROW\_NEIGHBOR,}
-\DoxyCodeLine{00062\ \ \ \ \ LS\_WIDE\_COLUMN,}
-\DoxyCodeLine{00063\ \ \ \ \ LS\_NARROW\_COLUMN}
-\DoxyCodeLine{00064\ \}\ t\_local\_sum;}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ 0:\ Default\ Weight\ Initialization}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ 1:\ Custom\ Weight\ Initialization}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ WEIGHT\_INITIALIZATION\ 0}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ 0:\ WEO\ values\ are\ zero}}
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ 1:\ WEO\ values\ can\ be\ non-\/zero}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ WEIGHT\_EXPONENT\_OFFSET\_FLAG\ 0}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ 2\string^4}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#pragma\ region\ Do\ Not\ Touch}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{extern}\ int32\_t\ kD;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kUnsignedSamples;}
 \DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \textcolor{comment}{//\ 0b00:\ Wide\ Neighbor}}
-\DoxyCodeLine{00067\ \textcolor{comment}{//\ 0b01:\ Narrow\ Neighbor}}
-\DoxyCodeLine{00068\ \textcolor{comment}{//\ 0b10:\ Wide\ Column}}
-\DoxyCodeLine{00069\ \textcolor{comment}{//\ 0b11:\ Narrow\ Column}}
-\DoxyCodeLine{00070\ \textcolor{keyword}{extern}\ t\_local\_sum\ kLocalSumType;}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \textcolor{comment}{//\ Governs\ the\ Range\ of\ acceptable\ values}}
-\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ DYNAMIC\_RANGE\ 14}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ RESOLUTION\ 100}}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \textcolor{comment}{//\ 0:\ Default\ Weight\ Initialization}}
-\DoxyCodeLine{00078\ \textcolor{comment}{//\ 1:\ Custom\ Weight\ Initialization}}
-\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ WEIGHT\_INITIALIZATION\ 0}}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \textcolor{comment}{//\ 0:\ WEO\ values\ are\ zero}}
-\DoxyCodeLine{00082\ \textcolor{comment}{//\ 1:\ WEO\ values\ can\ be\ non-\/zero}}
-\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ WEIGHT\_EXPONENT\_OFFSET\_FLAG\ 0}}
-\DoxyCodeLine{00084\ \textcolor{comment}{//\ 2\string^WEIGHT\_UPDATE\_SCALING\_EXPONENT\_CHANGE\_INTERVAL}}
+\DoxyCodeLine{00066\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kSmin;}
+\DoxyCodeLine{00067\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kSmax;}
+\DoxyCodeLine{00068\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kSmid;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{extern}\ int32\_t\ kP;}
+\DoxyCodeLine{00071\ \textcolor{keyword}{extern}\ uint8\_t\ Omega;}
+\DoxyCodeLine{00072\ \textcolor{keyword}{extern}\ int64\_t\ kR;}
+\DoxyCodeLine{00073\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kOmegaMin;}
+\DoxyCodeLine{00074\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kOmegaMax;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kDa;}
+\DoxyCodeLine{00077\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ km\_z;}
+\DoxyCodeLine{00078\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kC;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kVMin;}
+\DoxyCodeLine{00081\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kVMax;}
+\DoxyCodeLine{00082\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kTInc;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ InitalizePredictorConstants();}
 \DoxyCodeLine{00085\ }
-\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#pragma\ region\ Do\ Not\ Touch}}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \textcolor{keyword}{extern}\ int32\_t\ kD;}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kUnsignedSamples;}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00092\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kSmin;}
-\DoxyCodeLine{00093\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kSmax;}
-\DoxyCodeLine{00094\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kSmid;}
-\DoxyCodeLine{00095\ }
-\DoxyCodeLine{00096\ \textcolor{keyword}{extern}\ int32\_t\ kP;}
-\DoxyCodeLine{00097\ \textcolor{keyword}{extern}\ uint8\_t\ Omega;}
-\DoxyCodeLine{00098\ \textcolor{keyword}{extern}\ int64\_t\ kR;}
-\DoxyCodeLine{00099\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kOmegaMin;}
-\DoxyCodeLine{00100\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kOmegaMax;}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00102\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kDa;}
-\DoxyCodeLine{00103\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ km\_z;}
-\DoxyCodeLine{00104\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kC;}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00106\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kVMin;}
-\DoxyCodeLine{00107\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kVMax;}
-\DoxyCodeLine{00108\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kTInc;}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ \textcolor{keywordtype}{void}\ InitalizeImageConstants(\mbox{\hyperlink{structdim3}{dim3}}\ size);}
-\DoxyCodeLine{00111\ \textcolor{keywordtype}{void}\ InitalizePredictorConstants();}
-\DoxyCodeLine{00112\ }
-\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#pragma\ endregion}}
-\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CONSTANTS\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CONSTANTS\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

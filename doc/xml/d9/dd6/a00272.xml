@@ -162,7 +162,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="da/dec/a00080" kindref="compound">body.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="da/dec/a00080" kindref="compound">body.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 Helper Functions for Encoding the body of the Compressed Image</para>
 <para>Features Golomb Power-of-Two Accumulator Value Encoding the Body of the Compressed file</para>

@@ -2,11 +2,10 @@
 \hypertarget{constants_8h}{}\label{constants_8h}\index{include/constants/constants.h@{include/constants/constants.h}}
 
 
-A global file for constats that need to be shared between modules.  
+A Global File for constants shared between modules.  
 
 
 {\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
-{\ttfamily \#include "{}global\+\_\+constants.\+h"{}}\newline
 Include dependency graph for constants.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -14,7 +13,8 @@ Include dependency graph for constants.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{constants_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,11 +30,11 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \Hypertarget{constants_8h_aa93f0eb578d23995850d61f7d61c55c1}\label{constants_8h_aa93f0eb578d23995850d61f7d61c55c1} 
 \#define {\bfseries FALSE}~0
 \item 
-\Hypertarget{constants_8h_a7f5757914e027b5d5df1f4bacd8278da}\label{constants_8h_a7f5757914e027b5d5df1f4bacd8278da} 
-\#define {\bfseries DYNAMIC\+\_\+\+RANGE}~14
+\Hypertarget{constants_8h_abb5955080778e0c4d7860d81c9a6c678}\label{constants_8h_abb5955080778e0c4d7860d81c9a6c678} 
+\#define {\bfseries THREE\+\_\+\+DIM}~3
 \item 
-\Hypertarget{constants_8h_a95d55ebfa2f2f1bd14867ad6a6cc9bfb}\label{constants_8h_a95d55ebfa2f2f1bd14867ad6a6cc9bfb} 
-\#define {\bfseries RESOLUTION}~100
+\Hypertarget{constants_8h_a99458d419e5ee4b6d0043dfdfa60d2b8}\label{constants_8h_a99458d419e5ee4b6d0043dfdfa60d2b8} 
+\#define {\bfseries TWO\+\_\+\+DIM}~2
 \item 
 \Hypertarget{constants_8h_a299d67a9aa02ae3a2bd476a639a5be37}\label{constants_8h_a299d67a9aa02ae3a2bd476a639a5be37} 
 \#define {\bfseries WEIGHT\+\_\+\+INITIALIZATION}~0
@@ -42,27 +42,8 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \Hypertarget{constants_8h_aa88d01fdf084b6477a2a70e73c56ac5a}\label{constants_8h_aa88d01fdf084b6477a2a70e73c56ac5a} 
 \#define {\bfseries WEIGHT\+\_\+\+EXPONENT\+\_\+\+OFFSET\+\_\+\+FLAG}~0
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{constants_8h_aa9a4caa4aa9fa6f38c6d270cc61e0537}\label{constants_8h_aa9a4caa4aa9fa6f38c6d270cc61e0537} 
-typedef enum t\+\_\+local\+\_\+sum {\bfseries t\+\_\+local\+\_\+sum}
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Enumerations}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{constants_8h_ae33c4e202ff6a95f1edbf5aed1542a59}\label{constants_8h_ae33c4e202ff6a95f1edbf5aed1542a59} 
-enum {\bfseries t\+\_\+local\+\_\+sum} \{ {\bfseries LS\+\_\+\+WIDE\+\_\+\+NEIGHBOR} = 0
-, {\bfseries LS\+\_\+\+NARROW\+\_\+\+NEIGHBOR}
-, {\bfseries LS\+\_\+\+WIDE\+\_\+\+COLUMN}
-, {\bfseries LS\+\_\+\+NARROW\+\_\+\+COLUMN}
- \}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
-\item 
-\Hypertarget{constants_8h_af84e7b9bd8c4fa1203b0040adf941d8d}\label{constants_8h_af84e7b9bd8c4fa1203b0040adf941d8d} 
-void {\bfseries Initalize\+Image\+Constants} (\mbox{\hyperlink{structdim3}{dim3}} size)
 \item 
 \Hypertarget{constants_8h_a6acd65af9a2f057ad3f0891038799e5b}\label{constants_8h_a6acd65af9a2f057ad3f0891038799e5b} 
 void {\bfseries Initalize\+Predictor\+Constants} ()
@@ -70,24 +51,18 @@ void {\bfseries Initalize\+Predictor\+Constants} ()
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{constants_8h_ac6e7784a9a7e64078690556637f42505}\label{constants_8h_ac6e7784a9a7e64078690556637f42505} 
-DIM {\bfseries k\+Nx}
-\item 
-\Hypertarget{constants_8h_ab613d411102d41d56ffa9dca38b127f6}\label{constants_8h_ab613d411102d41d56ffa9dca38b127f6} 
-DIM {\bfseries k\+Ny}
-\item 
-\Hypertarget{constants_8h_a298cadf1b354d7a0b8130d1da561970d}\label{constants_8h_a298cadf1b354d7a0b8130d1da561970d} 
-DIM {\bfseries k\+Nz}
-\item 
-\Hypertarget{constants_8h_a7616eb54bbcdaa3da50f879837bbe020}\label{constants_8h_a7616eb54bbcdaa3da50f879837bbe020} 
-int {\bfseries LOSSLESS}
-\item 
-\Hypertarget{constants_8h_a42319d5acd475766984a0888aa01cf83}\label{constants_8h_a42319d5acd475766984a0888aa01cf83} 
-int {\bfseries k\+Prediction\+Mode}
-\item 
+\Hypertarget{constants_8h_a6dce68db93344a8211cd177b207172cb}\label{constants_8h_a6dce68db93344a8211cd177b207172cb} 
+\mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\+\_\+prediction\+\_\+mode}} {\bfseries k\+Prediction\+Mode}
+\begin{DoxyCompactList}\small\item\em Selects the Prediction Mode 0\+: Full Prediction Mode 1\+: Reduced Prediction Mode. \end{DoxyCompactList}\item 
 \Hypertarget{constants_8h_a7df57565dff909730e48b198f2de2ddf}\label{constants_8h_a7df57565dff909730e48b198f2de2ddf} 
-t\+\_\+local\+\_\+sum {\bfseries k\+Local\+Sum\+Type}
-\item 
+\mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\+\_\+local\+\_\+sum}} {\bfseries k\+Local\+Sum\+Type}
+\begin{DoxyCompactList}\small\item\em Local Sum Type Selected 0b00\+: Wide Neighbor 0b01\+: Narrow Neighbor 0b10\+: Wide Column 0b11\+: Narrow Column. \end{DoxyCompactList}\item 
+\Hypertarget{constants_8h_a259eb38bab418aa26b68d33d542cfdcb}\label{constants_8h_a259eb38bab418aa26b68d33d542cfdcb} 
+uint8\+\_\+t {\bfseries k\+Dynamic\+Range}
+\begin{DoxyCompactList}\small\item\em Range of Pixel values possible. \end{DoxyCompactList}\item 
+\Hypertarget{constants_8h_a348b4c90b73804fe84893ec23aae3faa}\label{constants_8h_a348b4c90b73804fe84893ec23aae3faa} 
+uint8\+\_\+t {\bfseries k\+Resolution}
+\begin{DoxyCompactList}\small\item\em Sets the precision of the Damping and Offset Variables. \end{DoxyCompactList}\item 
 \Hypertarget{constants_8h_a945da5b699b9d05f05e8dd74cbc755b9}\label{constants_8h_a945da5b699b9d05f05e8dd74cbc755b9} 
 int32\+\_\+t {\bfseries kD}
 \item 
@@ -139,22 +114,7 @@ int {\bfseries k\+TInc}
 
 
 \doxysubsection{Detailed Description}
-A global file for constats that need to be shared between modules. 
-
-\doxylink{constants_8h}{constants.\+h} \begin{DoxyAuthor}{Author}
-@\+Kevin-\/Caldwell
-\end{DoxyAuthor}
-
-
-Features Image Constants
-
-Uses Values used by all modules
-
-Dependencies \doxylink{math__functions_8h_source}{math\+\_\+functions.\+h} \doxylink{global__constants_8h}{global\+\_\+constants.\+h}
-
-TODO Need to organize values into \doxylink{encoder__constants_8h}{encoder\+\_\+constants.\+h} and predictor\+\_\+constants.\+h
-
-A Global File for constants shared between modules
+A Global File for constants shared between modules. 
 
 Contains constants for the predictor, as well as some image-\/related constants. \begin{DoxyAuthor}{Author}
 Kevin Caldwell 

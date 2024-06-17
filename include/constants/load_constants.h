@@ -17,7 +17,6 @@
 #include "dst/hash_table.h"
 
 /**
- * \fn LoadConstantFile
  * \author Kevin Caldwell
  * \brief Loads a .CONST file into a HashTable filled with constants.
 */

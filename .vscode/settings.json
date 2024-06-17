@@ -114,7 +114,9 @@
     "header.h": "c",
     "body.h": "c",
     "decoder.h": "c",
-    "stddef.h": "c"
+    "stddef.h": "c",
+    "locale_buffer.h": "c",
+    "typedefs.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

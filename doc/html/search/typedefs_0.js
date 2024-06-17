@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_5fcodes_0',['ERROR_CODES',['../typedefs_8h.html#ae6f57a1b4f31c934703178eaecd3d272',1,'typedefs.h']]]
+  ['bool_0',['BOOL',['../typedefs_8h.html#ad2f8ed01c1733d4eab0932d970abaa4c',1,'typedefs.h']]]
 ];

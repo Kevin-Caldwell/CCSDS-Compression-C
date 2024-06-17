@@ -1,0 +1,123 @@
+\doxysection{s\+\_\+predictor\+\_\+constants Struct Reference}
+\hypertarget{structs__predictor__constants}{}\label{structs__predictor__constants}\index{s\_predictor\_constants@{s\_predictor\_constants}}
+
+
+{\ttfamily \#include $<$predictor\+\_\+constants.\+h$>$}
+
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} \mbox{\hyperlink{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9}{k\+Lossless\+Compression}}
+\begin{DoxyCompactList}\small\item\em Choose between lossy and lossless compression 0\+: Lossy 1\+: Lossless. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb}\label{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb} 
+\mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\+\_\+prediction\+\_\+mode}} {\bfseries k\+Prediction\+Mode}
+\begin{DoxyCompactList}\small\item\em Select Prediction Mode. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}\label{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf} 
+\mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\+\_\+local\+\_\+sum}} {\bfseries k\+Local\+Sum\+Type}
+\begin{DoxyCompactList}\small\item\em Determines the type of local sum used. Affects the compression ratio and execution time. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb}\label{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb} 
+uint8\+\_\+t {\bfseries k\+Dynamic\+Range}
+\begin{DoxyCompactList}\small\item\em Number of bits needed to represent values in the image. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f}\label{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f} 
+uint8\+\_\+t {\bfseries k\+Weight\+Resolution}
+\begin{DoxyCompactList}\small\item\em Number of Bits used to represent weight values. Must be between 4 and 19 inclusive. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} \mbox{\hyperlink{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd}{k\+Weight\+Initialization}}
+\begin{DoxyCompactList}\small\item\em Selects the Weight Initialization Method 0\+: Default Weight Initialization 1\+: Custom Weight Initialization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} \mbox{\hyperlink{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b}{k\+Weight\+Exponent\+Offset\+Flag}}
+\begin{DoxyCompactList}\small\item\em Selects the Weight Exponent Offset Flag 0\+: WEO values are zero 1\+: WEO values can be non-\/zero. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a9f28821bcbb645a7c3ab8a0228335fc5}\label{structs__predictor__constants_a9f28821bcbb645a7c3ab8a0228335fc5} 
+int {\bfseries k\+Unsigned\+Samples}
+\item 
+\Hypertarget{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae}\label{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae} 
+int {\bfseries k\+Smin}
+\item 
+\Hypertarget{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b}\label{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b} 
+int {\bfseries k\+Smax}
+\item 
+\Hypertarget{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533}\label{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533} 
+int {\bfseries k\+Smid}
+\item 
+\Hypertarget{structs__predictor__constants_a59c1d13456fd2629d287d9e230138cae}\label{structs__predictor__constants_a59c1d13456fd2629d287d9e230138cae} 
+int32\+\_\+t {\bfseries k\+Prediction\+Bands}
+\begin{DoxyCompactList}\small\item\em The number of prediction bands. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a8f171e5001e449e32ed32687ce59c7f1}\label{structs__predictor__constants_a8f171e5001e449e32ed32687ce59c7f1} 
+uint8\+\_\+t {\bfseries k\+Weight\+Component\+Resolution}
+\begin{DoxyCompactList}\small\item\em ~\newline
+ \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a43cf89f028c6b6ad01038627b83a84c0}\label{structs__predictor__constants_a43cf89f028c6b6ad01038627b83a84c0} 
+int64\+\_\+t {\bfseries kR}
+\begin{DoxyCompactList}\small\item\em Register Size. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_afe552e4b168b0821a5cb40ca9f8df744}\label{structs__predictor__constants_afe552e4b168b0821a5cb40ca9f8df744} 
+int {\bfseries k\+Omega\+Min}
+\begin{DoxyCompactList}\small\item\em Minimum value possible for Weight Components. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a919504d752286a3ecacfab4792035e7c}\label{structs__predictor__constants_a919504d752286a3ecacfab4792035e7c} 
+int {\bfseries k\+Omega\+Max}
+\begin{DoxyCompactList}\small\item\em Maximum value possible for Weight Components. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_ae99676ea504885778ac496421cbfb1de}\label{structs__predictor__constants_ae99676ea504885778ac496421cbfb1de} 
+int {\bfseries k\+Absolute\+Error\+Limit\+Bit\+Depth}
+\begin{DoxyCompactList}\small\item\em Absolute Error Limit Bit Depth. \end{DoxyCompactList}\item 
+\Hypertarget{structs__predictor__constants_a6514dccff2601aaea9fb9f4ff5c56892}\label{structs__predictor__constants_a6514dccff2601aaea9fb9f4ff5c56892} 
+int {\bfseries k\+Maximum\+Error\+Value}
+\item 
+\Hypertarget{structs__predictor__constants_a4e6f06fbe7f6b462853492abfbd0bec2}\label{structs__predictor__constants_a4e6f06fbe7f6b462853492abfbd0bec2} 
+int {\bfseries kC}
+\item 
+\Hypertarget{structs__predictor__constants_a68b61249aa9c541a3ed6d1987b8c53ce}\label{structs__predictor__constants_a68b61249aa9c541a3ed6d1987b8c53ce} 
+int {\bfseries k\+VMin}
+\item 
+\Hypertarget{structs__predictor__constants_a85fbef56eedaaa1a29a9f0c18ba53631}\label{structs__predictor__constants_a85fbef56eedaaa1a29a9f0c18ba53631} 
+int {\bfseries k\+VMax}
+\item 
+\Hypertarget{structs__predictor__constants_a2481969fa62464bdc5889190f3e10f31}\label{structs__predictor__constants_a2481969fa62464bdc5889190f3e10f31} 
+int {\bfseries k\+TInc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure containing all Predictor Constants 
+
+\doxysubsection{Field Documentation}
+\Hypertarget{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9}\label{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kLosslessCompression@{kLosslessCompression}}
+\index{kLosslessCompression@{kLosslessCompression}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kLosslessCompression}{kLosslessCompression}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} k\+Lossless\+Compression}
+
+
+
+Choose between lossy and lossless compression 0\+: Lossy 1\+: Lossless. 
+
+\begin{DoxyNote}{Note}
+Lossy Compression not fully supported yet 
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Implement use case \end{DoxyRefDesc}
+\Hypertarget{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b}\label{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightExponentOffsetFlag@{kWeightExponentOffsetFlag}}
+\index{kWeightExponentOffsetFlag@{kWeightExponentOffsetFlag}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kWeightExponentOffsetFlag}{kWeightExponentOffsetFlag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} k\+Weight\+Exponent\+Offset\+Flag}
+
+
+
+Selects the Weight Exponent Offset Flag 0\+: WEO values are zero 1\+: WEO values can be non-\/zero. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
+\Hypertarget{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd}\label{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightInitialization@{kWeightInitialization}}
+\index{kWeightInitialization@{kWeightInitialization}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kWeightInitialization}{kWeightInitialization}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} k\+Weight\+Initialization}
+
+
+
+Selects the Weight Initialization Method 0\+: Default Weight Initialization 1\+: Custom Weight Initialization. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/constants/\mbox{\hyperlink{predictor__constants_8h}{predictor\+\_\+constants.\+h}}\end{DoxyCompactItemize}

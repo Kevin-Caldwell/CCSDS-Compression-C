@@ -333,7 +333,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="df/d7d/sample__representative_8h" kindref="compound">sample_representative.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell @BrianShTsoi</para>
+<para><ref refid="df/d7d/sample__representative_8h" kindref="compound">sample_representative.h</ref> <simplesect kind="authors"><para>Kevin Caldwell @BrianShTsoi</para>
 </simplesect>
 A collection of Sample representative calculation functions. </para>
         </detaileddescription>

@@ -56,7 +56,7 @@ Here is the caller graph for this function:<para>
 <para><computeroutput>void SaveArrayAsCSV (uint16_t * data, <link linkend="_a00152_1a36cb3b01d81ffd844bbbfb54003e06ec">UINT</link> count, char * file_name)</computeroutput></para>
 <para><link linkend="_a00125">csv-io.h</link> <formalpara><title>Authors</title>
 
-<para>@Kevin-Caldwell and @BrianShTsoi</para>
+<para>Kevin Caldwell and @BrianShTsoi</para>
 </formalpara>
 Functions for image file read and write to CSV </para>
 <para>

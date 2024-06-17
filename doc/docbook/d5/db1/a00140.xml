@@ -173,7 +173,7 @@ Definition at line <link linkend="_a00140_source_1l00065">65</link> of file <lin
 <para><computeroutput>#define OUTPUT_WORD_SIZE&#160;&#160;&#160;8</computeroutput></para>
 <para><link linkend="_a00140">encoder_constants.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Contains all Encoder-Specific Constants</para>
 

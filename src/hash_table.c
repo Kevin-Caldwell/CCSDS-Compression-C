@@ -1,18 +1,18 @@
 #include "dst/hash_table.h"
 
-int Hash_InitializeHashTable(HashTable *hash)
+error_t Hash_InitializeHashTable(HashTable *hash)
 {
     hash->len = 0;
     return RES_OK;
 }
 
-int Hash_DeleteHashTable(HashTable *hash)
+error_t Hash_DeleteHashTable(HashTable *hash)
 {
     free(hash);
-    return 0;
+    return RES_OK;
 }
 
-int Hash_AddEntry(HashTable *hash, const char *name, int32_t data)
+error_t Hash_AddEntry(HashTable *hash, const char *name, int32_t data)
 {
     char temp[KEY_LENGTH];
 
@@ -30,17 +30,17 @@ int Hash_AddEntry(HashTable *hash, const char *name, int32_t data)
     return RES_OK;
 }
 
-int Hash_GetIndex(HashTable *hash, const char *key)
+INDEX Hash_GetIndex(HashTable *hash, const char *key)
 {
     int index = 0;
     for (index = 0; index < hash->len; index++)
     {
         if (!strncmp(hash->keys[index], key, KEY_LENGTH))
         {
-            break;
+            return index;
         }
     }
-    return index;
+    return -1;
 }
 
 int32_t Hash_GetValue(HashTable *hash, const char *key)
@@ -48,8 +48,8 @@ int32_t Hash_GetValue(HashTable *hash, const char *key)
     return hash->data[Hash_GetIndex(hash, key)];
 }
 
-int Hash_SetValue(HashTable *hash, const char *key, int32_t new_data)
+error_t Hash_SetValue(HashTable *hash, const char *key, int32_t new_data)
 {
     hash->data[Hash_GetIndex(hash, key)] = new_data;
-    return 0;
+    return RES_OK;
 }

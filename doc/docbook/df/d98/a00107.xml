@@ -43,7 +43,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>#define LS( hIMG,  z,  y,  x)&#160;&#160;&#160;<link linkend="_a00107_1a1f0a6a3443597dab4881bb94fbc35f41">FindLocalSum</link>(hIMG, z, y, x)</computeroutput></para>
 <para><link linkend="_a00107">local_sum.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Functions for finding Local Sum </para>
 <para>

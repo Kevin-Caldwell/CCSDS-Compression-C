@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['locale_5fbuffer_0',['locale_buffer',['../structlocale__buffer.html',1,'']]]
+  ['localebuffer_0',['LocaleBuffer',['../struct_locale_buffer.html',1,'']]]
 ];

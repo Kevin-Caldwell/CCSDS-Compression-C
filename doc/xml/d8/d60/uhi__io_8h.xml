@@ -338,7 +338,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d8/d60/uhi__io_8h" kindref="compound">uhi_io.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell @lalalalinn</para>
+<para><ref refid="d8/d60/uhi__io_8h" kindref="compound">uhi_io.h</ref> <simplesect kind="authors"><para>Kevin Caldwell @lalalalinn</para>
 </simplesect>
 Functions for Uncompressed Hyperspectral Image files. The file consists of 14-bit pixel data stored as 16-bit data, prioritizing fast read and write capabilities.</para>
 <para>The First 3 16-bit values store the dimensions of the image, with the format: (Nx, Ny, Nz) </para>

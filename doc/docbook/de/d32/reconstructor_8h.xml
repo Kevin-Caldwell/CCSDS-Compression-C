@@ -61,7 +61,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>#define Ps( z)&#160;&#160;&#160;<link linkend="_math__functions_8h_1a3acffbd305ee72dcd4593c0d8af64a4f">MIN</link>(z, <link linkend="_constants_8h_1a21c169290a6c782855c778bb7a0389b9">kP</link>)</computeroutput></para>
 <para><link linkend="_reconstructor_8h">reconstructor.h</link> <formalpara><title>Authors</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Major Function Definitions of Reconstructor Module</para>
 

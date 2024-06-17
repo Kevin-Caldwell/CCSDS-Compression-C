@@ -81,7 +81,7 @@ This graph shows which files directly or indirectly include this file:<para>
 
 <para><link linkend="_file___i_o_8h">file_IO.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Abstracted Functions for File IO. Implementation in <link linkend="_file___i_o_8c">file_IO.c</link> should be adapted to fit the respective file system.</para>
 

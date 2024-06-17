@@ -377,7 +377,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d3/d00/a00113" kindref="compound">image.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell</para>
+<para><ref refid="d3/d00/a00113" kindref="compound">image.h</ref> <simplesect kind="authors"><para>Kevin Caldwell</para>
 </simplesect>
 Image Structure for Storing 3D bitmaps with a maximum dynamic range of 16 bits</para>
 <para>Features Initialize Image Get/Set Pixels Image Compare Coordinate Transform from x,y,z to t,z</para>

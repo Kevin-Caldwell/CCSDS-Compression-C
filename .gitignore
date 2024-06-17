@@ -7,3 +7,4 @@ data/logs/**
 data/results/**
 data/test-images/**
 .vscode
+.VSCodeCounter

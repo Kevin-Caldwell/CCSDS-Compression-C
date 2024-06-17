@@ -1,6 +1,6 @@
 /**
  * predictor.h
- * @author @Kevin-Caldwell
+ * @author Kevin-Caldwell
  *
  * Top Level Function(s) for Running Predictor
  * on a Hyperspectral Image. Returns a predicted
@@ -19,9 +19,12 @@
 
 #include "constants/global_constants.h"
 #include "constants/constants.h"
+#include "constants/predictor_constants.h"
 
 #include "math/math_functions.h"
 #include "math/linear_algebra.h"
+
+#include "dst/locale_buffer.h"
 
 #include "predictor/weights.h"
 #include "predictor/quantizer.h"

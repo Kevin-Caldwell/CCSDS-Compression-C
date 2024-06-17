@@ -269,7 +269,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="de/d32/reconstructor_8h" kindref="compound">reconstructor.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell</para>
+<para><ref refid="de/d32/reconstructor_8h" kindref="compound">reconstructor.h</ref> <simplesect kind="authors"><para>Kevin Caldwell</para>
 </simplesect>
 Major Function Definitions of Reconstructor Module</para>
 <para>Features Reconstructing an Image Reconstructing Individual Pixels Reconstructor Testing</para>

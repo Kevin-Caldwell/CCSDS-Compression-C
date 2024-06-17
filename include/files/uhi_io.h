@@ -1,6 +1,6 @@
 /**
  * uhi_io.h
- * @authors @Kevin-Caldwell @lalalalinn
+ * @authors Kevin Caldwell @lalalalinn
  *
  * Functions for Uncompressed Hyperspectral
  * Image files. The file consists of

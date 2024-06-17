@@ -1,6 +1,6 @@
 /**
  * body.h
- * @author @Kevin-Caldwell
+ * @author Kevin Caldwell
  *
  * Helper Functions for Encoding the body of the Compressed Image
  *

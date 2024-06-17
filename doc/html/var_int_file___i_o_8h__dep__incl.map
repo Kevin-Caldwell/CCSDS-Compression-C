@@ -1,6 +1,6 @@
 <map id="include/files/varIntFile_IO.h" name="include/files/varIntFile_IO.h">
 <area shape="rect" id="Node000001" title="File Input/Output for Variable&#45;Length Words." alt="" coords="111,5,310,31"/>
-<area shape="rect" id="Node000002" href="$decoder_8h_source.html" title=" " alt="" coords="5,167,171,207"/>
+<area shape="rect" id="Node000002" href="$decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="5,167,171,207"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,39,140,56,115,80,104,101,97,125,91,167,86,166,91,123,99,99,111,77,136,52,166,34"/>
 <area shape="rect" id="Node000003" href="$body_8h_source.html" title=" " alt="" coords="125,86,296,111"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,44,213,86,208,86,208,44"/>

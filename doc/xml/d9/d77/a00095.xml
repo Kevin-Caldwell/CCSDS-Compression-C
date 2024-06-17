@@ -326,7 +326,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d9/d77/a00095" kindref="compound">weights.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="d9/d77/a00095" kindref="compound">weights.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor. </para>
         </detaileddescription>

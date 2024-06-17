@@ -95,20 +95,31 @@ $(document).ready(function(){initNavTree('struct_hash_table.html',''); initResiz
   <div class="headertitle"><div class="title">HashTable Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A Hash Table which retrieves the integer value of a text key. Designed for storing the contents of .CONST files.  
+ <a href="struct_hash_table.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hash__table_8h_source.html">hash_table.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aa429745e164770f5a9545fd31ba633b1" id="r_aa429745e164770f5a9545fd31ba633b1"><td class="memItemLeft" align="right" valign="top"><a id="aa429745e164770f5a9545fd31ba633b1" name="aa429745e164770f5a9545fd31ba633b1"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>keys</b> [HASH_CAPACITY][KEY_LENGTH]</td></tr>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>keys</b> [<a class="el" href="hash__table_8h.html#ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</a>][<a class="el" href="hash__table_8h.html#a5145aca5cb4a65b79b24d162d6fd72eb">KEY_LENGTH</a>]</td></tr>
+<tr class="memdesc:aa429745e164770f5a9545fd31ba633b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores String Keys in an array. <br /></td></tr>
 <tr class="separator:aa429745e164770f5a9545fd31ba633b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe6af42ae11ea67b9e6403bd99a4f99d" id="r_afe6af42ae11ea67b9e6403bd99a4f99d"><td class="memItemLeft" align="right" valign="top"><a id="afe6af42ae11ea67b9e6403bd99a4f99d" name="afe6af42ae11ea67b9e6403bd99a4f99d"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> [HASH_CAPACITY]</td></tr>
+int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> [<a class="el" href="hash__table_8h.html#ac5ff60f58cdc7ee42543e2812a8cae47">HASH_CAPACITY</a>]</td></tr>
+<tr class="memdesc:afe6af42ae11ea67b9e6403bd99a4f99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores integer data in a 1-1 relation to keys. <br /></td></tr>
 <tr class="separator:afe6af42ae11ea67b9e6403bd99a4f99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afed088663f8704004425cdae2120b9b3" id="r_afed088663f8704004425cdae2120b9b3"><td class="memItemLeft" align="right" valign="top"><a id="afed088663f8704004425cdae2120b9b3" name="afed088663f8704004425cdae2120b9b3"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
+<tr class="memdesc:afed088663f8704004425cdae2120b9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the number of values used up. <br /></td></tr>
 <tr class="separator:afed088663f8704004425cdae2120b9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A Hash Table which retrieves the integer value of a text key. Designed for storing the contents of .CONST files. </p>
+<dl class="section note"><dt>Note</dt><dd>Might be Deprecated in the future due to its limited functionality. </dd></dl>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/dst/<a class="el" href="hash__table_8h_source.html">hash_table.h</a></li>
 </ul>
 </div><!-- contents -->

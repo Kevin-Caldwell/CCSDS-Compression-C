@@ -1,6 +1,6 @@
 /**
  * local_differences.h
- * @authors @Kevin-Caldwell @BrianShTsoi
+ * @authors Kevin Caldwell @BrianShTsoi
  *
  * Central and Directional Local Difference
  * Functions and Definitions

@@ -455,7 +455,7 @@
 <para>File Handling Abstractions. </para>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d9/d7f/file___i_o_8h" kindref="compound">file_IO.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="d9/d7f/file___i_o_8h" kindref="compound">file_IO.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 Abstracted Functions for File IO. Implementation in <ref refid="d9/da2/file___i_o_8c" kindref="compound">file_IO.c</ref> should be adapted to fit the respective file system.</para>
 <para>The datatype used throughout the code is file_t. </para>

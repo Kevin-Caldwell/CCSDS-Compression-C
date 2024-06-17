@@ -58,7 +58,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>#define SR( hIMG,  Z,  Y,  X)&#160;&#160;&#160;<link linkend="_a00113_1a78477801fe183cdf32e60df1c92b7320">GetPixel</link>(hIMG, X,Y,Z)</computeroutput></para>
 <para><link linkend="_a00092">sample_representative.h</link> <formalpara><title>Authors</title>
 
-<para>@Kevin-Caldwell @BrianShTsoi</para>
+<para>Kevin Caldwell @BrianShTsoi</para>
 </formalpara>
 A collection of Sample representative calculation functions. </para>
 <para>

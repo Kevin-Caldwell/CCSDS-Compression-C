@@ -152,7 +152,7 @@ Definition at line <link linkend="_a00272_source_1l00007">7</link> of file <link
 <para><computeroutput>int K<computeroutput>[extern]</computeroutput></computeroutput></para>
 <para><link linkend="_a00080">body.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Helper Functions for Encoding the body of the Compressed Image</para>
 

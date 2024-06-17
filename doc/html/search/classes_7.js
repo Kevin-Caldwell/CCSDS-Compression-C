@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uncompressedhyperspectralimage_0',['UncompressedHyperspectralImage',['../struct_uncompressed_hyperspectral_image.html',1,'']]]
+  ['testcomp_0',['TestComp',['../classtest__compression_1_1_test_comp.html',1,'test_compression']]]
 ];

@@ -134,7 +134,7 @@ Definition at line <link linkend="_constants_8h_source_1l00056">56</link> of fil
 <para><computeroutput>#define TRUE&#160;&#160;&#160;1</computeroutput></para>
 <para><link linkend="_constants_8h">constants.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 A global file for constats that need to be shared between modules.</para>
 

@@ -81,7 +81,7 @@ This graph shows which files directly or indirectly include this file:<para>
 <para><computeroutput>#define FRAME_SIZE( size)&#160;&#160;&#160;(size.x * size.y)</computeroutput></para>
 <para><link linkend="_image_8h">image.h</link> <formalpara><title>Authors</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Image Structure for Storing 3D bitmaps with a maximum dynamic range of 16 bits</para>
 

@@ -1,6 +1,6 @@
 <map id="include/constants/encoder_constants.h" name="include/constants/encoder_constants.h">
 <area shape="rect" id="Node000001" title="Contains all Encoder&#45;Specific Constants." alt="" coords="53,5,245,45"/>
-<area shape="rect" id="Node000002" href="$decoder_8h_source.html" title=" " alt="" coords="5,167,171,207"/>
+<area shape="rect" id="Node000002" href="$decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="5,167,171,207"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,55,72,72,54,94,50,112,54,131,74,165,69,168,49,133,45,112,50,92,68,68,91,50"/>
 <area shape="rect" id="Node000003" href="$body_8h_source.html" title=" " alt="" coords="64,93,235,119"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,59,152,93,147,93,147,59"/>

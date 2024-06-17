@@ -139,7 +139,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="dc/dfe/a00125" kindref="compound">csv-io.h</ref> <simplesect kind="authors"><para>@Kevin-Caldwell and @BrianShTsoi</para>
+<para><ref refid="dc/dfe/a00125" kindref="compound">csv-io.h</ref> <simplesect kind="authors"><para>Kevin Caldwell and @BrianShTsoi</para>
 </simplesect>
 Functions for image file read and write to CSV </para>
         </detaileddescription>

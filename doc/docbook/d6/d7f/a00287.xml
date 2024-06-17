@@ -110,7 +110,7 @@ Here is the caller graph for this function:<para>
 <para><computeroutput>int32_t QuantizerIndex (uint16_t sample_value, uint16_t predicted_sample)</computeroutput></para>
 <para><link linkend="_a00098">quantizer.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 Functions For Quantizer </para>
 <para>

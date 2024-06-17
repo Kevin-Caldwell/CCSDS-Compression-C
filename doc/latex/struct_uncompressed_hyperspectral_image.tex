@@ -29,7 +29,7 @@ Stores UHI file streams.
 
 File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.
 
-Designed to be a more RAM-\/friendly alternative to the image struct defined in \doxylink{image_8h_source}{image.\+h}. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.
+Designed to be a more RAM-\/friendly alternative to the image struct defined in \doxylink{image_8h}{image.\+h}. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.
 
 fs\+: file\+\_\+t object for handling file IO size\+: stores the dimensions of the Hyperspectral image cache\+: Unused 32 bit static array 
 

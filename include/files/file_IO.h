@@ -1,7 +1,7 @@
 /**
- * file_IO.h
- * @author @Kevin-Caldwell
- *
+ * @file file_IO.h
+ * @author Kevin Caldwell
+ * @details
  * Abstracted Functions for File IO.
  * Implementation in file_IO.c should
  * be adapted to fit the respective

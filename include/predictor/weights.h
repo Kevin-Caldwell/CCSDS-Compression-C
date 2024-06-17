@@ -1,6 +1,6 @@
 /**
  * weights.h
- * @author @Kevin-Caldwell
+ * @author Kevin-Caldwell
  *
  * Functions for Initializing, Calculating
  * and Updating Weights for Predictor and

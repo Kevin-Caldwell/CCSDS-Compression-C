@@ -90,7 +90,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="d8/d81/stream__encoder_8h" kindref="compound">stream_encoder.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="d8/d81/stream__encoder_8h" kindref="compound">stream_encoder.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 <xrefsect id="da/d58/deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="d5/d5e/var_int_file___i_o_8h" kindref="compound">varIntFile_IO.h</ref> </para>
 </xrefdescription></xrefsect></para>

@@ -113,7 +113,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><ref refid="df/dcb/header_8h" kindref="compound">header.h</ref> <simplesect kind="author"><para>@Kevin-Caldwell</para>
+<para><ref refid="df/dcb/header_8h" kindref="compound">header.h</ref> <simplesect kind="author"><para>Kevin Caldwell</para>
 </simplesect>
 File Contains Functions for Preparing Image, Predictor, Encoder and Entropy coder Header Sections of the Compressed Image. </para>
         </detaileddescription>

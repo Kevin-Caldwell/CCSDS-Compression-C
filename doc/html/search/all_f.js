@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['standard_0',['hyperCube: A C Implementation of the CCSDS-123-B-2 Standard',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['quantizer_5ffidelity_5fcontrol_0',['QUANTIZER_FIDELITY_CONTROL',['../encoder__constants_8h.html#a7b753f7db0f750b0010df61a3046d2f2',1,'encoder_constants.h']]]
 ];

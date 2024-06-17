@@ -31,7 +31,7 @@
 <para><computeroutput>void Decoder_DecodeBody (<link linkend="_structimage">image</link> * predicted_samples, const char * file_name)</computeroutput></para>
 <para>decoder.h <formalpara><title>Authors</title>
 
-<para>@Kevin-Caldwell @BrianShTsoi</para>
+<para>Kevin Caldwell @BrianShTsoi</para>
 </formalpara>
 Functions for Decoding an image from a .HSP file</para>
 

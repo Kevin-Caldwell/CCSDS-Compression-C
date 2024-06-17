@@ -5,10 +5,31 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOCALE\_BUFFER\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOCALE\_BUFFER\_H}}
 \DoxyCodeLine{00003\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlocale__buffer}{locale\_buffer}}\{}
-\DoxyCodeLine{00010\ \ \ \ \ }
-\DoxyCodeLine{00011\ \}\ \mbox{\hyperlink{structlocale__buffer}{locale\_buffer}};}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOCALE\_BUFFER\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{typedefs_8h}{constants/typedefs.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ MAX\_PRECEDING\_BANDS\ 16}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ MAX\_NEIGHBORS\ 4}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ PIXEL\_BUFFER\_SPACE\ 1}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ LOCAL\_BUFFER\_NEIGHBOR\_SIZE\ \(\backslash\)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \ \ \ (MAX\_NEIGHBORS\ +\ PIXEL\_BUFFER\_SPACE)}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ LOCAL\_BUFFER\_TOTAL\_SIZE\ \(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ (MAX\_PRECEDING\_BANDS\ +\ MAX\_NEIGHBORS\ +\ PIXEL\_BUFFER\_SPACE)}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ LocaleBuffer\_neighbor\_index\_x[LOCAL\_BUFFER\_NEIGHBOR\_SIZE];}
+\DoxyCodeLine{00026\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ LocaleBuffer\_neighbor\_index\_y[LOCAL\_BUFFER\_NEIGHBOR\_SIZE];}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}\{}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ data[LOCAL\_BUFFER\_TOTAL\_SIZE];}
+\DoxyCodeLine{00038\ \}\ \mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ LocaleBuffer\_SimpleLoad(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}*\ hIMG);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ LocaleBuffer\_SmartLoad(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}*\ hIMG);}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOCALE\_BUFFER\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

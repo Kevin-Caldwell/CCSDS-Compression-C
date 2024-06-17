@@ -1,0 +1,53 @@
+\doxysection{include/decompressor/decoder.h File Reference}
+\hypertarget{decoder_8h}{}\label{decoder_8h}\index{include/decompressor/decoder.h@{include/decompressor/decoder.h}}
+
+
+unctions for Decoding an image from a .HSP file  
+
+
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}files/var\+Int\+File\+\_\+\+IO.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
+{\ttfamily \#include "{}constants/encoder\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}encoder/body.\+h"{}}\newline
+Include dependency graph for decoder.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{decoder_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{decoder_8h_a92568f6a10fcb23b4699402e71a02177}\label{decoder_8h_a92568f6a10fcb23b4699402e71a02177} 
+int {\bfseries Decoder\+\_\+\+Decode\+Body} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}predicted\+\_\+samples, const char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+\Hypertarget{decoder_8h_a760ca18536e4e5b09a2cad3509f700ba}\label{decoder_8h_a760ca18536e4e5b09a2cad3509f700ba} 
+void {\bfseries Test\+Decoder} (char \texorpdfstring{$\ast$}{*}filename)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+unctions for Decoding an image from a .HSP file 
+
+\begin{DoxyAuthor}{Authors}
+Kevin Caldwell @\+Brian\+Sh\+Tsoi
+\end{DoxyAuthor}
+Features Functions for Independently Decoding the Header and Body, or both if necessary.
+
+Uses Core File of the Decoder Module
+
+Dependencies \doxylink{image_8h}{image.\+h}
+
+Internal Dependencies stdio.\+h inttypes.\+h
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Finish Decoder\+\_\+\+Decode\+Body 
+
+Finish Decoder\+\_\+\+Decode\+Header 
+
+Finish Decoder\+\_\+\+Decode\+Image \end{DoxyRefDesc}

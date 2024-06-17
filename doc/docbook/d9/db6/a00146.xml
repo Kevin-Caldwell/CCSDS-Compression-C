@@ -134,7 +134,7 @@ Definition at line <link linkend="_a00146_source_1l00056">56</link> of file <lin
 <para><computeroutput>#define TRUE&#160;&#160;&#160;1</computeroutput></para>
 <para><link linkend="_a00146">constants.h</link> <formalpara><title>Author</title>
 
-<para>@Kevin-Caldwell</para>
+<para>Kevin Caldwell</para>
 </formalpara>
 A global file for constats that need to be shared between modules.</para>
 
