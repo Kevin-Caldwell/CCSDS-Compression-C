@@ -4,7 +4,6 @@
  * @details 
  * Contains constants for the predictor, as well as some image-related
  * constants.
- * @author Kevin Caldwell
  * @date May 29, 2024
  * 
  * 
@@ -24,7 +23,7 @@
 // Predictor Constants
 
 /**
- * \brief
+ * @brief
  * Selects the Prediction Mode
  * 0: Full Prediction Mode
  * 1: Reduced Prediction Mode
@@ -33,7 +32,7 @@ extern t_prediction_mode kPredictionMode;
 
 
 /**
- * \brief
+ * @brief
  * Local Sum Type Selected
  * 0b00: Wide Neighbor
  * 0b01: Narrow Neighbor
@@ -42,10 +41,10 @@ extern t_prediction_mode kPredictionMode;
  */
 extern t_local_sum kLocalSumType;
 
-/** \brief Range of Pixel values possible */
+/** @brief Range of Pixel values possible */
 extern uint8_t kDynamicRange;
 
-/** \brief Sets the precision of the Damping and Offset Variables */
+/** @brief Sets the precision of the Damping and Offset Variables */
 extern uint8_t kResolution;
 
 // 0: Default Weight Initialization

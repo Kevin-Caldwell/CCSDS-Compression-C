@@ -1,0 +1,10 @@
+<map id="UpdateWeights" name="UpdateWeights">
+<area shape="rect" id="Node000001" title="Update Weights Calculations." alt="" coords="5,67,127,92"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="30,68,23,58,27,48,41,42,66,40,96,44,108,53,105,57,94,49,66,45,43,47,30,52,28,58,34,65"/>
+<area shape="rect" id="Node000002" href="$local__differences_8c.html#a37d2cf3f48b1b2c436f630a2b649cf52" title="Finds the Central Local Difference using Direct Image Access." alt="" coords="201,29,371,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,67,196,54,197,60,127,72"/>
+<area shape="rect" id="Node000003" href="$weights_8c.html#aa2ee574fad65a220fa95637b2c9bd2af" title="Weight Update Scaling Exponent Calculation." alt="" coords="175,103,397,128"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="127,87,195,98,194,103,126,92"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="250,31,243,21,247,11,261,5,286,3,316,6,328,15,325,20,314,11,286,8,263,10,250,15,248,20,254,28"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="250,104,243,94,247,84,261,78,286,76,316,80,328,89,325,93,314,85,286,81,263,83,250,88,248,94,254,101"/>
+</map>

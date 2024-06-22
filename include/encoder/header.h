@@ -3,7 +3,6 @@
 
 /**
  * header.h
- * @author Kevin Caldwell
  *
  * File Contains Functions for Preparing
  * Image, Predictor, Encoder and Entropy

@@ -1,8 +1,8 @@
 /**
- * sample_representative.h
- * @authors Kevin-Caldwell @BrianShTsoi
+ * @file sample_representative.h
+ * @authors Kevin Caldwell BrianShTsoi
  *
- * A collection of Sample representative calculation
+ * @brief A collection of Sample representative calculation
  * functions.
  */
 
@@ -12,21 +12,59 @@
 #include "dst/image.h"
 #include "constants/constants.h"
 #include "math/linear_algebra.h"
-// #include "predictor/local_differences.h"
 #include "predictor/quantizer.h"
 
+/** 
+ * @brief Shorthand for GetPixel 
+ * @warning Direct Image Access
+ */
 #define SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)
 // #define SAMPLE(z,y,x) (0) // TODO
 
+/** 
+ * @brief Damping Offsets
+ * @todo Move into Predictor Constants
+ */
 extern data_t damping[];
+
+/** 
+ * @brief Offset Coefficients
+ * @todo Move into Predictor Constants
+ */
 extern data_t offset[];
 
+/**
+ * @brief Sample Representative Calculation
+ * @details 
+ * For Lossy Compression, this is calculated according to 
+ * the CCSDS-123 Standard.
+ * 
+ * For Lossless Compression, the Sample Representative returns
+ * the value of the pixel.
+ * @note Use SR definition when using lossless compression.
+ */
 data_t SampleRepresentative(uint16_t sample_value);
 
+/**
+ * @brief Double Resolution Prediction Sample Calculation
+ * @details
+ * See Standard for Details.
+ * @warning Direct Image Access
+ */
 uint32_t DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample);
 
+/**
+ * @brief Predicted Sample Calculation
+ * @details 
+ * See Standard for Details.
+ */
 uint16_t PredictedSample(uint32_t double_resolution_predicted_sample);
 
+/**
+ * @brief High Resolution Prediction Sample Calculation
+ * @details
+ * See Standard for Details.
+ */
 int64_t HighResolutionPredictedSample(int64_t predicted_central_local_difference, uint32_t local_sum);
 
 #endif /* SAMPLE_REPRESENTATIVE_H */

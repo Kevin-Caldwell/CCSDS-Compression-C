@@ -1,0 +1,71 @@
+\doxysection{include/predictor/local\+\_\+sum.h File Reference}
+\hypertarget{local__sum_8h}{}\label{local__sum_8h}\index{include/predictor/local\_sum.h@{include/predictor/local\_sum.h}}
+
+
+Functions for finding Local Sum.  
+
+
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+{\ttfamily \#include "{}sample\+\_\+representative.\+h"{}}\newline
+Include dependency graph for local\+\_\+sum.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{local__sum_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{local__sum_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{local__sum_8h_a010a797f4917c1fb48527b5e26827dba}\label{local__sum_8h_a010a797f4917c1fb48527b5e26827dba} 
+\#define {\bfseries LS}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__sum_8h_a1f0a6a3443597dab4881bb94fbc35f41}{Find\+Local\+Sum}}(h\+IMG, z, y, x)
+\begin{DoxyCompactList}\small\item\em Local Sum Shorthand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{local__sum_8h_a1f0a6a3443597dab4881bb94fbc35f41}{Find\+Local\+Sum}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x)
+\begin{DoxyCompactList}\small\item\em Local Sum Calculations using direct Image Access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for finding Local Sum. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{local__sum_8h_a1f0a6a3443597dab4881bb94fbc35f41}\label{local__sum_8h_a1f0a6a3443597dab4881bb94fbc35f41} 
+\index{local\_sum.h@{local\_sum.h}!FindLocalSum@{FindLocalSum}}
+\index{FindLocalSum@{FindLocalSum}!local\_sum.h@{local\_sum.h}}
+\doxysubsubsection{\texorpdfstring{FindLocalSum()}{FindLocalSum()}}
+{\footnotesize\ttfamily uint32\+\_\+t Find\+Local\+Sum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Local Sum Calculations using direct Image Access. 
+
+\begin{DoxyNote}{Note}
+Soon Deprecated. 
+\end{DoxyNote}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{local__sum_8h_a1f0a6a3443597dab4881bb94fbc35f41_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{local__sum_8h_a1f0a6a3443597dab4881bb94fbc35f41_icgraph}
+\end{center}
+\end{figure}

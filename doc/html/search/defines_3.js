@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['global_5fconstants_5flocation_0',['GLOBAL_CONSTANTS_LOCATION',['../global__constants_8h.html#a614412df666e2cf249faa7be8d3fa841',1,'global_constants.h']]],
-  ['global_5ferror_5fhandle_1',['global_error_handle',['../global__constants_8h.html#a62a2b2b67533b20f43102a7efee93870',1,'global_constants.h']]]
+  ['encoder_5fconstants_5flocation_0',['ENCODER_CONSTANTS_LOCATION',['../global__constants_8h.html#ad4eebc138945aeff7dba131d420d1b51',1,'global_constants.h']]],
+  ['entropy_5fcoder_1',['ENTROPY_CODER',['../encoder__constants_8h.html#aab2a3fdc0e63fde9690b44450a35e26b',1,'encoder_constants.h']]]
 ];

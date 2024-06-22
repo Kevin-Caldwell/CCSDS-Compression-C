@@ -99,44 +99,54 @@ $(document).ready(function(){initNavTree('reconstructor_8h_source.html',''); ini
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#ifndef RECONSTRUCTOR_H</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#define RECONSTRUCTOR_H</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants/constants.h</a>&quot;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;math/math_functions.h&quot;</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#include &quot;math/linear_algebra.h&quot;</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#include &quot;<a class="code" href="image_8h.html">dst/image.h</a>&quot;</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#include &quot;files/csv-io.h&quot;</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &quot;predictor/predictor.h&quot;</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &quot;predictor/sample_representative.h&quot;</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &quot;predictor/local_sum.h&quot;</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;predictor/local_differences.h&quot;</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;predictor/weights.h&quot;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#include &quot;predictor/quantizer.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifndef RECONSTRUCTOR_H</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define RECONSTRUCTOR_H</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants/constants.h</a>&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="math__functions_8h.html">math/math_functions.h</a>&quot;</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;<a class="code" href="linear__algebra_8h.html">math/linear_algebra.h</a>&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &quot;<a class="code" href="image_8h.html">dst/image.h</a>&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#include &quot;<a class="code" href="csv-io_8h.html">files/csv-io.h</a>&quot;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#include &quot;<a class="code" href="predictor_8h.html">predictor/predictor.h</a>&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &quot;<a class="code" href="sample__representative_8h.html">predictor/sample_representative.h</a>&quot;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &quot;<a class="code" href="local__sum_8h.html">predictor/local_sum.h</a>&quot;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &quot;<a class="code" href="local__differences_8h.html">predictor/local_differences.h</a>&quot;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="weights_8h.html">predictor/weights.h</a>&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="quantizer_8h.html">predictor/quantizer.h</a>&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define Ps(z) MIN(z, kP)</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">extern</span> <span class="keywordtype">int</span> kC;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">typedef</span> uint32_t weight_t;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordtype">void</span> ReconstructPixel(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *hIMG, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *result, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, FILE *file_ptr, weight_t* weights);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> Reconstructor(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *predicted_values, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *reconstructed, FILE *file_ptr);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> TestReconstructor(<span class="keywordtype">char</span> *file_name);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">/* RECONSTRUCTOR_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define Ps(z) MIN(z, kP)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">extern</span> <span class="keywordtype">int</span> kC;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">typedef</span> uint32_t <a class="code hl_typedef" href="typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db">weight_t</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> ReconstructPixel(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *hIMG, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *result, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, FILE *file_ptr, <a class="code hl_typedef" href="typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db">weight_t</a>* weights);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">void</span> Reconstructor(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *predicted_values, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *reconstructed, FILE *file_ptr);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> TestReconstructor(<span class="keywordtype">char</span> *file_name);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">/* RECONSTRUCTOR_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">A Global File for constants shared between modules.</div></div>
+<div class="ttc" id="acsv-io_8h_html"><div class="ttname"><a href="csv-io_8h.html">csv-io.h</a></div><div class="ttdoc">Functions for image file read and write to CSV.</div></div>
 <div class="ttc" id="aimage_8h_html"><div class="ttname"><a href="image_8h.html">image.h</a></div></div>
-<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:45</div></div>
+<div class="ttc" id="alinear__algebra_8h_html"><div class="ttname"><a href="linear__algebra_8h.html">linear_algebra.h</a></div><div class="ttdoc">Skeleton File for Generin Vector Operations.</div></div>
+<div class="ttc" id="alocal__differences_8h_html"><div class="ttname"><a href="local__differences_8h.html">local_differences.h</a></div><div class="ttdoc">Central and Directional Local Difference Functions and Definitions.</div></div>
+<div class="ttc" id="alocal__sum_8h_html"><div class="ttname"><a href="local__sum_8h.html">local_sum.h</a></div><div class="ttdoc">Functions for finding Local Sum.</div></div>
+<div class="ttc" id="amath__functions_8h_html"><div class="ttname"><a href="math__functions_8h.html">math_functions.h</a></div><div class="ttdoc">Mathematical Helper Functions for use throughout code.</div></div>
+<div class="ttc" id="apredictor_8h_html"><div class="ttname"><a href="predictor_8h.html">predictor.h</a></div><div class="ttdoc">Functions for the Predictor System.</div></div>
+<div class="ttc" id="aquantizer_8h_html"><div class="ttname"><a href="quantizer_8h.html">quantizer.h</a></div><div class="ttdoc">Functions For the Quantizer Steps.</div></div>
+<div class="ttc" id="asample__representative_8h_html"><div class="ttname"><a href="sample__representative_8h.html">sample_representative.h</a></div><div class="ttdoc">A collection of Sample representative calculation functions.</div></div>
+<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:53</div></div>
 <div class="ttc" id="atypedefs_8h_html_a762a038a8611999e554c912cf3c72cea"><div class="ttname"><a href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a></div><div class="ttdeci">DIM INDEX</div><div class="ttdoc">Type representing Indices of Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:56</div></div>
+<div class="ttc" id="atypedefs_8h_html_ad4115f40f38a206246691fa2c1d1c9db"><div class="ttname"><a href="typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db">weight_t</a></div><div class="ttdeci">uint32_t weight_t</div><div class="ttdoc">Type representing weight values in weights.h.</div><div class="ttdef"><b>Definition</b> typedefs.h:62</div></div>
+<div class="ttc" id="aweights_8h_html"><div class="ttname"><a href="weights_8h.html">weights.h</a></div><div class="ttdoc">Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

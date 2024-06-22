@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uint_0',['UINT',['../typedefs_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec',1,'typedefs.h']]],
-  ['uncompressedhyperspectralimage_1',['UncompressedHyperspectralImage',['../struct_uncompressed_hyperspectral_image.html',1,'']]]
+  ['readimagefromcsv_0',['ReadImageFromCSV',['../csv-io_8h.html#aba677341d6fd704867c56e0b5d6f3fc3',1,'csv-io.c']]],
+  ['runpredictor_1',['RunPredictor',['../predictor_8h.html#a4a94804509574a94d896a4164802bcd2',1,'predictor.c']]]
 ];

@@ -2,7 +2,7 @@
  * \file decoder.h
  * \authors Kevin Caldwell @BrianShTsoi
  *
- * \brief unctions for Decoding an image from a .HSP file
+ * @brief unctions for Decoding an image from a .HSP file
  * \details
  * Features
  *  Functions for Independently Decoding the Header and Body, or both

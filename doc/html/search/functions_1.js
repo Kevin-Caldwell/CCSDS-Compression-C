@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['loadconstantfile_0',['LoadConstantFile',['../load__constants_8h.html#a5d642038360b72b886a5eb66e3efd14a',1,'load_constants.c']]]
+  ['centrallocaldifference_0',['CentralLocalDifference',['../local__differences_8h.html#a37d2cf3f48b1b2c436f630a2b649cf52',1,'local_differences.c']]],
+  ['clippedquantizerbincenter_1',['ClippedQuantizerBinCenter',['../quantizer_8h.html#a9d745aa249b8a9cde3f83899b563dcc5',1,'quantizer.c']]]
 ];

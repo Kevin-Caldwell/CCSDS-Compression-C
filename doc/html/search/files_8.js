@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['typedefs_2eh_0',['typedefs.h',['../typedefs_8h.html',1,'']]]
+  ['math_5ffunctions_2eh_0',['math_functions.h',['../math__functions_8h.html',1,'']]]
 ];

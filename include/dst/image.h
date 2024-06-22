@@ -1,6 +1,5 @@
 /**
  * @file image.h
- * @authors Kevin-Caldwell
  * @details
  * Image Structure for Storing 3D bitmaps with a
  * maximum dynamic range of 16 bits

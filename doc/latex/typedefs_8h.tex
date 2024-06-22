@@ -5,8 +5,15 @@
 A file containing univerally used typedefs.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+Include dependency graph for typedefs.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{typedefs_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -44,13 +51,19 @@ typedef uint16\+\_\+t {\bfseries PIXEL}
 \begin{DoxyCompactList}\small\item\em Type representing each pixel in Hyperspectral Image. \end{DoxyCompactList}\item 
 \Hypertarget{typedefs_8h_a762a038a8611999e554c912cf3c72cea}\label{typedefs_8h_a762a038a8611999e554c912cf3c72cea} 
 typedef \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}} {\bfseries INDEX}
-\begin{DoxyCompactList}\small\item\em Type representing Indices of Image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Type representing Indices of Image. \end{DoxyCompactList}\item 
+\Hypertarget{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}\label{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639} 
+typedef \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} {\bfseries data\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Type representing vector units in \doxylink{linear__algebra_8h}{linear\+\_\+algebra.\+h}. \end{DoxyCompactList}\item 
+\Hypertarget{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}\label{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db} 
+typedef uint32\+\_\+t {\bfseries weight\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Type representing weight values in \doxylink{weights_8h}{weights.\+h}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\+\_\+\+CODES}} \{ \newline
 {\bfseries RES\+\_\+\+OK} = 0
-, {\bfseries FILE\+\_\+\+ACCESS\+\_\+\+ERROR}
+, {\bfseries FILE\+\_\+\+NON\+\_\+\+EXISTENT}
 , {\bfseries FILE\+\_\+\+READ\+\_\+\+ERROR}
 , {\bfseries FILE\+\_\+\+WRITE\+\_\+\+ERROR}
 , \newline
@@ -75,9 +88,6 @@ enum \mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\+\_\+pred
 \doxysubsection{Detailed Description}
 A file containing univerally used typedefs. 
 
-\begin{DoxyAuthor}{Author}
-Kevin Caldwell 
-\end{DoxyAuthor}
 \begin{DoxyDate}{Date}
 May 29, 2024 
 \end{DoxyDate}

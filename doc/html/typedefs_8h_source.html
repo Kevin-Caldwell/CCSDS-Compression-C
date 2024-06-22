@@ -99,16 +99,17 @@ $(document).ready(function(){initNavTree('typedefs_8h_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="typedefs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef TYPEDEFS_H</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define TYPEDEFS_H</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef TYPEDEFS_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define TYPEDEFS_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25">   15</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</a></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    RES_OK = 0,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    FILE_ACCESS_ERROR,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    FILE_NON_EXISTENT,</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    FILE_READ_ERROR,</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    FILE_WRITE_ERROR,</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    MEM_ALLOC_ERROR,</div>
@@ -146,15 +147,21 @@ $(document).ready(function(){initNavTree('typedefs_8h_source.html',''); initResi
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">   56</a></span><span class="keyword">typedef</span> <a class="code hl_typedef" href="typedefs_8h.html#a1578d2632e13e6bbdc95fe7ad2beef19">DIM</a>             <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">/* TYPEDEFS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">   59</a></span><span class="keyword">typedef</span> <a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a>           <a class="code hl_typedef" href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">data_t</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db">   62</a></span><span class="keyword">typedef</span> uint32_t        <a class="code hl_typedef" href="typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db">weight_t</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">/* TYPEDEFS_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="atypedefs_8h_html_a1578d2632e13e6bbdc95fe7ad2beef19"><div class="ttname"><a href="typedefs_8h.html#a1578d2632e13e6bbdc95fe7ad2beef19">DIM</a></div><div class="ttdeci">int32_t DIM</div><div class="ttdoc">Type encoding a Dimension of the Hyperspectral Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:47</div></div>
 <div class="ttc" id="atypedefs_8h_html_a36cb3b01d81ffd844bbbfb54003e06ec"><div class="ttname"><a href="typedefs_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec">UINT</a></div><div class="ttdeci">unsigned int UINT</div><div class="ttdoc">unsigned int shorthand</div><div class="ttdef"><b>Definition</b> typedefs.h:50</div></div>
+<div class="ttc" id="atypedefs_8h_html_a5acabcf9a2b0d843de53680562e2f639"><div class="ttname"><a href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">data_t</a></div><div class="ttdeci">PIXEL data_t</div><div class="ttdoc">Type representing vector units in linear_algebra.h.</div><div class="ttdef"><b>Definition</b> typedefs.h:59</div></div>
 <div class="ttc" id="atypedefs_8h_html_a762a038a8611999e554c912cf3c72cea"><div class="ttname"><a href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a></div><div class="ttdeci">DIM INDEX</div><div class="ttdoc">Type representing Indices of Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:56</div></div>
 <div class="ttc" id="atypedefs_8h_html_a938a8c46255e5666f6a434ca0eb87f25"><div class="ttname"><a href="typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25">ERROR_CODES</a></div><div class="ttdeci">ERROR_CODES</div><div class="ttdef"><b>Definition</b> typedefs.h:16</div></div>
 <div class="ttc" id="atypedefs_8h_html_a9686e3aa2c29c9c208c0cf15d69516e5"><div class="ttname"><a href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a></div><div class="ttdeci">enum ERROR_CODES error_t</div></div>
 <div class="ttc" id="atypedefs_8h_html_aa8979f300abc80c56dcedc2c1cc8a95c"><div class="ttname"><a href="typedefs_8h.html#aa8979f300abc80c56dcedc2c1cc8a95c">t_prediction_mode</a></div><div class="ttdeci">t_prediction_mode</div><div class="ttdoc">Enumeration for Prediction Modes.</div><div class="ttdef"><b>Definition</b> typedefs.h:38</div></div>
 <div class="ttc" id="atypedefs_8h_html_ab11dabd4d79e8b3426010beb5831e1d9"><div class="ttname"><a href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a></div><div class="ttdeci">uint16_t PIXEL</div><div class="ttdoc">Type representing each pixel in Hyperspectral Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:53</div></div>
 <div class="ttc" id="atypedefs_8h_html_ad2f8ed01c1733d4eab0932d970abaa4c"><div class="ttname"><a href="typedefs_8h.html#ad2f8ed01c1733d4eab0932d970abaa4c">BOOL</a></div><div class="ttdeci">uint8_t BOOL</div><div class="ttdoc">char redefined to BOOL</div><div class="ttdef"><b>Definition</b> typedefs.h:44</div></div>
+<div class="ttc" id="atypedefs_8h_html_ad4115f40f38a206246691fa2c1d1c9db"><div class="ttname"><a href="typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db">weight_t</a></div><div class="ttdeci">uint32_t weight_t</div><div class="ttdoc">Type representing weight values in weights.h.</div><div class="ttdef"><b>Definition</b> typedefs.h:62</div></div>
 <div class="ttc" id="atypedefs_8h_html_ae33c4e202ff6a95f1edbf5aed1542a59"><div class="ttname"><a href="typedefs_8h.html#ae33c4e202ff6a95f1edbf5aed1542a59">t_local_sum</a></div><div class="ttdeci">t_local_sum</div><div class="ttdoc">Enum for Types of Local Sum Calculators.</div><div class="ttdef"><b>Definition</b> typedefs.h:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

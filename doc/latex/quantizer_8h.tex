@@ -1,0 +1,178 @@
+\doxysection{include/predictor/quantizer.h File Reference}
+\hypertarget{quantizer_8h}{}\label{quantizer_8h}\index{include/predictor/quantizer.h@{include/predictor/quantizer.h}}
+
+
+Functions For the Quantizer Steps.  
+
+
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
+{\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
+{\ttfamily \#include "{}predictor/sample\+\_\+representative.\+h"{}}\newline
+Include dependency graph for quantizer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{quantizer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{quantizer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{quantizer_8h_afa51bec3d5dfdb41078f60b1a7c454ab}{Quantizer\+Index}} (uint16\+\_\+t sample\+\_\+value, uint16\+\_\+t predicted\+\_\+sample)
+\begin{DoxyCompactList}\small\item\em Finds the Quantizer Index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\+\_\+t}} \mbox{\hyperlink{quantizer_8h_a1f491e0a435427669942c932394d7c1a}{Mapped\+Quantizer\+Index}} (int32\+\_\+t quantizer\+\_\+index, int32\+\_\+t predicted\+\_\+sample, uint32\+\_\+t double\+\_\+res\+\_\+predicted\+\_\+sample)
+\begin{DoxyCompactList}\small\item\em Finds the Mapped Quantizer Index. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{quantizer_8h_ae85d34759565d8a3ab498494786c395b}{Quantizer\+Index\+Unmapper}} (uint16\+\_\+t mapped\+\_\+delta, uint16\+\_\+t predicted\+\_\+sample, int32\+\_\+t drps)
+\begin{DoxyCompactList}\small\item\em Finds the Quantizer Index Unmapper. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{quantizer_8h_a93be7d02ed2acce98f53818c98ac6cca}{Prediction\+Residual}} (uint16\+\_\+t sample\+\_\+value, uint16\+\_\+t predicted\+\_\+sample)
+\begin{DoxyCompactList}\small\item\em Finds the Prediction Residual. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{quantizer_8h_a9d745aa249b8a9cde3f83899b563dcc5}{Clipped\+Quantizer\+Bin\+Center}} (uint16\+\_\+t sample\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Finds the Clipped Quantizer Bin Center. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions For the Quantizer Steps. 
+
+Quantizer Functions do not need direct access to the image. \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000022}{Todo}}]Reorganize Functions to have less cyclic inclusions. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{quantizer_8h_a9d745aa249b8a9cde3f83899b563dcc5}\label{quantizer_8h_a9d745aa249b8a9cde3f83899b563dcc5} 
+\index{quantizer.h@{quantizer.h}!ClippedQuantizerBinCenter@{ClippedQuantizerBinCenter}}
+\index{ClippedQuantizerBinCenter@{ClippedQuantizerBinCenter}!quantizer.h@{quantizer.h}}
+\doxysubsubsection{\texorpdfstring{ClippedQuantizerBinCenter()}{ClippedQuantizerBinCenter()}}
+{\footnotesize\ttfamily uint16\+\_\+t Clipped\+Quantizer\+Bin\+Center (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Finds the Clipped Quantizer Bin Center. 
+
+Refer to the CCSDS-\/123 Standard. Does not need Image Access. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{quantizer_8h_a9d745aa249b8a9cde3f83899b563dcc5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{quantizer_8h_a9d745aa249b8a9cde3f83899b563dcc5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{quantizer_8h_a1f491e0a435427669942c932394d7c1a}\label{quantizer_8h_a1f491e0a435427669942c932394d7c1a} 
+\index{quantizer.h@{quantizer.h}!MappedQuantizerIndex@{MappedQuantizerIndex}}
+\index{MappedQuantizerIndex@{MappedQuantizerIndex}!quantizer.h@{quantizer.h}}
+\doxysubsubsection{\texorpdfstring{MappedQuantizerIndex()}{MappedQuantizerIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\+\_\+t}} Mapped\+Quantizer\+Index (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{quantizer\+\_\+index,  }\item[{int32\+\_\+t}]{predicted\+\_\+sample,  }\item[{uint32\+\_\+t}]{double\+\_\+res\+\_\+predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Finds the Mapped Quantizer Index. 
+
+Refer to the CCSDS-\/123 Standard. Does not need Image Access. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{quantizer_8h_a1f491e0a435427669942c932394d7c1a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{quantizer_8h_a1f491e0a435427669942c932394d7c1a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{quantizer_8h_a93be7d02ed2acce98f53818c98ac6cca}\label{quantizer_8h_a93be7d02ed2acce98f53818c98ac6cca} 
+\index{quantizer.h@{quantizer.h}!PredictionResidual@{PredictionResidual}}
+\index{PredictionResidual@{PredictionResidual}!quantizer.h@{quantizer.h}}
+\doxysubsubsection{\texorpdfstring{PredictionResidual()}{PredictionResidual()}}
+{\footnotesize\ttfamily int16\+\_\+t Prediction\+Residual (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value,  }\item[{uint16\+\_\+t}]{predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Finds the Prediction Residual. 
+
+Refer to the CCSDS-\/123 Standard. Does not need Image Access. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{quantizer_8h_a93be7d02ed2acce98f53818c98ac6cca_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{quantizer_8h_a93be7d02ed2acce98f53818c98ac6cca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{quantizer_8h_afa51bec3d5dfdb41078f60b1a7c454ab}\label{quantizer_8h_afa51bec3d5dfdb41078f60b1a7c454ab} 
+\index{quantizer.h@{quantizer.h}!QuantizerIndex@{QuantizerIndex}}
+\index{QuantizerIndex@{QuantizerIndex}!quantizer.h@{quantizer.h}}
+\doxysubsubsection{\texorpdfstring{QuantizerIndex()}{QuantizerIndex()}}
+{\footnotesize\ttfamily int32\+\_\+t Quantizer\+Index (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sample\+\_\+value,  }\item[{uint16\+\_\+t}]{predicted\+\_\+sample }\end{DoxyParamCaption})}
+
+
+
+Finds the Quantizer Index. 
+
+Refer to the CCSDS-\/123 Standard. Does not need Image Access. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{quantizer_8h_afa51bec3d5dfdb41078f60b1a7c454ab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{quantizer_8h_afa51bec3d5dfdb41078f60b1a7c454ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{quantizer_8h_ae85d34759565d8a3ab498494786c395b}\label{quantizer_8h_ae85d34759565d8a3ab498494786c395b} 
+\index{quantizer.h@{quantizer.h}!QuantizerIndexUnmapper@{QuantizerIndexUnmapper}}
+\index{QuantizerIndexUnmapper@{QuantizerIndexUnmapper}!quantizer.h@{quantizer.h}}
+\doxysubsubsection{\texorpdfstring{QuantizerIndexUnmapper()}{QuantizerIndexUnmapper()}}
+{\footnotesize\ttfamily int32\+\_\+t Quantizer\+Index\+Unmapper (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mapped\+\_\+delta,  }\item[{uint16\+\_\+t}]{predicted\+\_\+sample,  }\item[{int32\+\_\+t}]{drps }\end{DoxyParamCaption})}
+
+
+
+Finds the Quantizer Index Unmapper. 
+
+Refer to the CCSDS-\/123 Standard. Does not need Image Access. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{quantizer_8h_ae85d34759565d8a3ab498494786c395b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{quantizer_8h_ae85d34759565d8a3ab498494786c395b_icgraph}
+\end{center}
+\end{figure}

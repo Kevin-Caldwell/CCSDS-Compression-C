@@ -1,6 +1,6 @@
 /** 
  * \file predictor_constants.h
- * \brief 
+ * @brief 
  * Contains the Struct and relevant functions for 
  * Creating and Accessing Predictor Constants.
  * \todo Comments
@@ -14,7 +14,7 @@
 /** Structure containing all Predictor Constants */
 typedef struct{
     /**
-     * \brief 
+     * @brief 
      * Choose between lossy and lossless compression 
      * 0: Lossy
      * 1: Lossless
@@ -24,33 +24,33 @@ typedef struct{
     BOOL kLosslessCompression;
 
     /**
-     * \brief 
+     * @brief 
      * Select Prediction Mode
      */
     t_prediction_mode kPredictionMode;
 
     /**
-     * \brief
+     * @brief
      * Determines the type of local sum used. Affects the compression
      * ratio and execution time.
      */
     t_local_sum kLocalSumType;
 
     /** 
-     * \brief
+     * @brief
      * Number of bits needed to represent values in the image.
      */
     uint8_t kDynamicRange;
 
     /**
-     * \brief 
+     * @brief 
      * Number of Bits used to represent weight values.
      * Must be between 4 and 19 inclusive.
      */
     uint8_t kWeightResolution;
 
     /**
-     * \brief Selects the Weight Initialization Method
+     * @brief Selects the Weight Initialization Method
      * 0: Default Weight Initialization
      * 1: Custom Weight Initialization
      * \todo Implement in Predictor
@@ -58,7 +58,7 @@ typedef struct{
     BOOL kWeightInitialization;
 
     /**
-     * \brief Selects the Weight Exponent Offset Flag
+     * @brief Selects the Weight Exponent Offset Flag
      * 0: WEO values are zero
      * 1: WEO values can be non-zero
      * \todo Implement in Predictor
@@ -71,21 +71,21 @@ typedef struct{
     int kSmax;
     int kSmid;
     
-    /** \brief The number of prediction bands */
+    /** @brief The number of prediction bands */
     int32_t kPredictionBands;
 
-    /** \brief  */
+    /** @brief  */
     uint8_t kWeightComponentResolution;
 
-    /** \brief Register Size */
+    /** @brief Register Size */
     int64_t kR;
 
-    /** \brief Minimum value possible for Weight Components */
+    /** @brief Minimum value possible for Weight Components */
     int kOmegaMin;
-    /** \brief Maximum value possible for Weight Components */
+    /** @brief Maximum value possible for Weight Components */
     int kOmegaMax;
     
-    /** \brief Absolute Error Limit Bit Depth */
+    /** @brief Absolute Error Limit Bit Depth */
     int kAbsoluteErrorLimitBitDepth;
     int kMaximumErrorValue;
     int kC;

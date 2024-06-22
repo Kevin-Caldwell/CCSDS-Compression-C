@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['weights_2ec_0',['weights.c',['../weights_8c.html',1,'']]],
-  ['weightupdatescalingexponent_1',['WeightUpdateScalingExponent',['../weights_8c.html#a17984670eb20b6ea122fb1e90a50dc75',1,'weights.c']]],
-  ['withinrect2_2',['WithinRect2',['../synthetic__image__generator_8c.html#a07336610b2fae60747404124a1bebbbe',1,'synthetic_image_generator.c']]],
-  ['withinrect3_3',['WithinRect3',['../synthetic__image__generator_8c.html#a5b129c029b15584f09f306c005950893',1,'synthetic_image_generator.c']]],
-  ['wri_4',['WRI',['../synthetic__image__generator_8c.html#abe2b160fe3eb87a606ba91a9c533cd9f',1,'synthetic_image_generator.c']]]
+  ['varintfile_5fio_2eh_0',['varIntFile_IO.h',['../var_int_file___i_o_8h.html',1,'']]],
+  ['varunsignedintfile_1',['VarUnsignedIntFile',['../struct_var_unsigned_int_file.html',1,'']]],
+  ['vuf_2',['VUF',['../var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006',1,'varIntFile_IO.h']]],
+  ['vuf_5fappend_3',['VUF_append',['../var_int_file___i_o_8h.html#acd17b6ab96cbfb4911978141bfbfaa84',1,'varIntFile_IO.c']]],
+  ['vuf_5finitialize_4',['VUF_initialize',['../var_int_file___i_o_8h.html#ad87d7d041a638f17308bffa039efb58d',1,'varIntFile_IO.c']]],
+  ['vuf_5fread_5fstack_5',['VUF_read_stack',['../var_int_file___i_o_8h.html#aafa9034f88afca6a726a84673d063889',1,'varIntFile_IO.c']]]
 ];

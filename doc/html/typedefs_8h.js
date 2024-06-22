@@ -1,6 +1,7 @@
 var typedefs_8h =
 [
     [ "BOOL", "typedefs_8h.html#ad2f8ed01c1733d4eab0932d970abaa4c", null ],
+    [ "data_t", "typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639", null ],
     [ "DIM", "typedefs_8h.html#a1578d2632e13e6bbdc95fe7ad2beef19", null ],
     [ "error_t", "typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5", null ],
     [ "INDEX", "typedefs_8h.html#a762a038a8611999e554c912cf3c72cea", null ],
@@ -8,9 +9,10 @@ var typedefs_8h =
     [ "t_local_sum", "typedefs_8h.html#aa9a4caa4aa9fa6f38c6d270cc61e0537", null ],
     [ "t_prediction_mode", "typedefs_8h.html#a6a4e41e240a469cc73b47d17e0e8f314", null ],
     [ "UINT", "typedefs_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec", null ],
+    [ "weight_t", "typedefs_8h.html#ad4115f40f38a206246691fa2c1d1c9db", null ],
     [ "ERROR_CODES", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25", [
       [ "RES_OK", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25a2ea4b6ef3fffc17dd1d38ab5c2837737", null ],
-      [ "FILE_ACCESS_ERROR", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25a9e112f3803cd55fe35ba531532741d5f", null ],
+      [ "FILE_NON_EXISTENT", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25ac17dc890268a35fc71529d2db4cc6462", null ],
       [ "FILE_READ_ERROR", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25a08e594c1afff0b7a6fc5a16b80801215", null ],
       [ "FILE_WRITE_ERROR", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25a48c4ba85d5ee73f67a14a3362b9bb3cc", null ],
       [ "MEM_ALLOC_ERROR", "typedefs_8h.html#a938a8c46255e5666f6a434ca0eb87f25ad4ce6624264e795b9dd966f44e15956c", null ],

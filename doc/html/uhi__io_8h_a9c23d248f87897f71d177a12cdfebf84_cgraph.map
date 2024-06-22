@@ -1,0 +1,10 @@
+<map id="UHI_WritePixel" name="UHI_WritePixel">
+<area shape="rect" id="Node000001" title="Writes a PIXEL value into an index on a UHI image." alt="" coords="5,67,124,92"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="40,68,35,58,37,49,48,42,65,40,85,44,94,52,90,56,82,48,65,45,49,47,42,52,40,58,44,65"/>
+<area shape="rect" id="Node000002" href="$file___i_o_8c.html#a3ac9e7bef40307b69bdf5e0cb6904d83" title=" " alt="" coords="176,29,247,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,64,162,52,163,57,116,69"/>
+<area shape="rect" id="Node000003" href="$file___i_o_8c.html#a94d988ea4ce93357f56c0191584246a6" title=" " alt="" coords="172,103,251,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="117,89,159,100,158,105,116,95"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="186,31,181,21,184,11,194,5,211,3,232,6,240,15,237,18,229,11,211,8,196,10,188,15,187,20,191,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="186,104,181,94,184,85,194,78,211,76,232,80,240,88,237,92,229,84,211,81,196,83,188,88,187,94,191,101"/>
+</map>

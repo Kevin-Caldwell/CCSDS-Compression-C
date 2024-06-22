@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['map3_5f1_0',['MAP3_1',['../d5/db2/image_8h.html#a38f6fc4c8999b95f1f75294a52c32e4c',1,'image.h']]],
-  ['max_1',['MAX',['../d2/de2/math__functions_8h.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f',1,'math_functions.h']]],
-  ['min_2',['MIN',['../d2/de2/math__functions_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f',1,'math_functions.h']]],
-  ['mod_3',['MOD',['../d2/de2/math__functions_8h.html#a16c5207cff1677a5fde882e81a7d58bd',1,'math_functions.h']]]
+  ['pixel_5fbuffer_5fspace_0',['PIXEL_BUFFER_SPACE',['../locale__buffer_8h.html#ab29a43e7b76dc9cc5c56868f9d554934',1,'locale_buffer.h']]],
+  ['predictor_5fconstants_5flocation_1',['PREDICTOR_CONSTANTS_LOCATION',['../global__constants_8h.html#a7a8fe096cc3b24ddabd9b150f4f5bdd7',1,'global_constants.h']]],
+  ['ps_2',['ps',['../math__functions_8h.html#a2fee6f8dd7f3cd3ed1ae75161294c4c4',1,'Ps:&#160;math_functions.h'],['../local__differences_8h.html#a2fee6f8dd7f3cd3ed1ae75161294c4c4',1,'Ps:&#160;local_differences.h'],['../predictor_8h.html#a2fee6f8dd7f3cd3ed1ae75161294c4c4',1,'Ps:&#160;predictor.h'],['../weights_8h.html#a2fee6f8dd7f3cd3ed1ae75161294c4c4',1,'Ps:&#160;weights.h']]]
 ];

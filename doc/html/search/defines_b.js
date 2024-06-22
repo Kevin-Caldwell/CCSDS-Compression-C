@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['l_5fshift_0',['l_shift',['../d8/d81/stream__encoder_8h.html#abc23dc7967a47b4db3efff8237ef3a2f',1,'L_SHIFT:&#160;stream_encoder.h'],['../d5/d5e/var_int_file___i_o_8h.html#abc23dc7967a47b4db3efff8237ef3a2f',1,'L_SHIFT:&#160;varIntFile_IO.h']]],
-  ['log_1',['LOG',['../d5/ddb/global__constants_8h.html#a159ca84d25a5487d8e81e4438725df19',1,'global_constants.h']]],
-  ['ls_2',['LS',['../d6/d9d/local__sum_8h.html#a010a797f4917c1fb48527b5e26827dba',1,'local_sum.h']]]
+  ['offset_5ftable_5fflag_0',['OFFSET_TABLE_FLAG',['../encoder__constants_8h.html#a01ae0a84ae74aeda76855e3248f8de30',1,'encoder_constants.h']]],
+  ['outside_5finterval_1',['OUTSIDE_INTERVAL',['../math__functions_8h.html#a67f67d2902bd4730eb69f82fcf008401',1,'math_functions.h']]]
 ];

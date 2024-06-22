@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['centrallocaldifference_0',['CentralLocalDifference',['../local__differences_8c.html#a37d2cf3f48b1b2c436f630a2b649cf52',1,'local_differences.c']]],
-  ['clippedquantizerbincenter_1',['ClippedQuantizerBinCenter',['../quantizer_8c.html#a9d745aa249b8a9cde3f83899b563dcc5',1,'quantizer.c']]],
-  ['compressimage_2',['CompressImage',['../generate__image_8c.html#aaa094efd7037f34ae4e485a0b97c4282',1,'generate_image.c']]],
-  ['cv_5fcsv_5fuhi_3',['cv_csv_uhi',['../generate__image_8c.html#a368bf7c6ccf50b0ba22d8b011172bd48',1,'generate_image.c']]],
-  ['cv_5fuhi_5fcsv_4',['cv_uhi_csv',['../generate__image_8c.html#a73ac6ae7fd6ddbed3fc18f73b6bff292',1,'generate_image.c']]]
+  ['deletevector_0',['DeleteVector',['../linear__algebra_8h.html#a9feddc49bf0fbb6efcbd15f5ac2adcfb',1,'linear_algebra.c']]],
+  ['directionallocaldifference_1',['DirectionalLocalDifference',['../local__differences_8h.html#aa1779fb92c191cde51766275baaf7591',1,'local_differences.c']]],
+  ['doubleresolutionpredictedsample_2',['DoubleResolutionPredictedSample',['../sample__representative_8h.html#a6c60474c610dc64773816bc445efeb77',1,'sample_representative.c']]],
+  ['doubleresolutionpredictionerror_3',['DoubleResolutionPredictionError',['../weights_8h.html#a286baab1384ff25cf7cf4c2061f15c4c',1,'weights.c']]]
 ];

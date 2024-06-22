@@ -1,0 +1,13 @@
+<map id="VUF_initialize" name="VUF_initialize">
+<area shape="rect" id="Node000001" title="Initializes a VUF file." alt="" coords="5,103,117,128"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="37,104,32,94,34,85,45,78,61,76,81,80,90,88,86,92,79,84,61,81,46,83,39,88,37,94,41,101"/>
+<area shape="rect" id="Node000002" href="$file___i_o_8c.html#a05d25080a4592a86386f6d0d3d48496c" title=" " alt="" coords="170,29,243,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,100,167,59,169,63,89,105"/>
+<area shape="rect" id="Node000003" href="$file___i_o_8c.html#a6d14febd2771048b4a06dd86ea17718d" title=" " alt="" coords="170,103,243,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="117,113,156,113,156,118,117,118"/>
+<area shape="rect" id="Node000004" href="$logs_8c.html#ad795690a809192117add6898be812267" title=" " alt="" coords="165,176,248,201"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="89,126,169,167,167,172,86,130"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="182,30,177,21,180,11,190,5,207,3,227,6,235,15,231,18,224,11,207,8,192,10,184,15,182,20,187,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="182,104,177,94,180,85,190,78,207,76,227,80,235,88,231,92,224,84,207,81,192,83,184,88,182,94,187,101"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="182,177,177,168,180,158,190,152,207,149,227,153,235,161,231,165,224,158,207,155,192,157,184,161,182,167,187,175"/>
+</map>

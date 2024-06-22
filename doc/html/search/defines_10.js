@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quantizer_5ffidelity_5fcontrol_0',['QUANTIZER_FIDELITY_CONTROL',['../d7/ddb/encoder__constants_8h.html#a7b753f7db0f750b0010df61a3046d2f2',1,'encoder_constants.h']]]
+  ['x86_5fgcc_0',['x86_GCC',['../global__constants_8h.html#a2098ddebdb26af02b8f4bcf35a665815',1,'global_constants.h']]]
 ];

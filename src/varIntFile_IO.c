@@ -1,5 +1,9 @@
 #include "files/varIntFile_IO.h"
 
+// #ifndef L_SHIFT
+// #define L_SHIFT(x, s) (s == 32 ? 0 : (s < 0 ? (unsigned) x >> -s : (unsigned) x << s))
+// #endif
+
 char *file_modes_arguments[] = {"rb", "wb"};
 
 void _VUF_Clean(VUF *stream, char full)
@@ -11,7 +15,7 @@ void _VUF_Clean(VUF *stream, char full)
     }
 }
 
-int VUF_initialize(VUF *stream, const char *file_name, file_modes io_mode)
+error_t VUF_initialize(VUF *stream, const char *file_name, file_modes io_mode)
 {
     // File IO Constants
     stream->io_mode = io_mode;
@@ -21,7 +25,7 @@ int VUF_initialize(VUF *stream, const char *file_name, file_modes io_mode)
     if (!stream->fs)
     {
         Log_error("Unable to open File");
-        return FILE_ACCESS_ERROR;
+        return FILE_NON_EXISTENT;
     }
 #endif
     // printf("stream opening: %x, %d, %s.\n", (unsigned int) stream->fs, (unsigned) stream->io_mode, file_modes_arguments[stream->io_mode]);
@@ -44,7 +48,7 @@ int VUF_initialize(VUF *stream, const char *file_name, file_modes io_mode)
     return RES_OK;
 }
 
-int VUF_append(VUF *stream, uint32_t data, uint32_t length)
+error_t VUF_append(VUF *stream, uint32_t data, uint32_t length)
 {
     stream->bit_index += length; // Shift Bit Pointer
     uint32_t clean = (data
@@ -105,7 +109,7 @@ uint32_t VUF_read_stack(VUF *stream, uint32_t length)
     return varInt;
 }
 
-int VUF_close(VUF *stream)
+error_t VUF_close(VUF *stream)
 {
     stream->bit_index = 0;
     stream->byte_index = 0;

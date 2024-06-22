@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('predictor_8h_source.html',''); initRes
   <div class="headertitle"><div class="title">predictor.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="predictor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef PREDICTOR_H</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define PREDICTOR_H</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
@@ -112,35 +112,43 @@ $(document).ready(function(){initNavTree('predictor_8h_source.html',''); initRes
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants/constants.h</a>&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="predictor__constants_8h.html">constants/predictor_constants.h</a>&quot;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;math/math_functions.h&quot;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;math/linear_algebra.h&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="math__functions_8h.html">math/math_functions.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="linear__algebra_8h.html">math/linear_algebra.h</a>&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;dst/locale_buffer.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="locale__buffer_8h.html">dst/locale_buffer.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;predictor/weights.h&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;predictor/quantizer.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="weights_8h.html">predictor/weights.h</a>&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="quantizer_8h.html">predictor/quantizer.h</a>&quot;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;files/logs.h&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="logs_8h.html">files/logs.h</a>&quot;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define Ps(z) MIN(z, kP)</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">extern</span> <span class="keywordtype">int</span> kC;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">int</span> RunPredictor(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *hIMG, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *result);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="predictor_8h.html#a2fee6f8dd7f3cd3ed1ae75161294c4c4">   39</a></span><span class="preprocessor">#define Ps(z) MIN(z, kP)</span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif </span><span class="comment">/* PREDICTOR_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="predictor_8h.html#a4e6f06fbe7f6b462853492abfbd0bec2">kC</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">int</span> <a class="code hl_function" href="predictor_8h.html#a4a94804509574a94d896a4164802bcd2">RunPredictor</a>(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *hIMG, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *result);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#endif </span><span class="comment">/* PREDICTOR_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">A Global File for constants shared between modules.</div></div>
 <div class="ttc" id="aglobal__constants_8h_html"><div class="ttname"><a href="global__constants_8h.html">global_constants.h</a></div><div class="ttdoc">Contains Application-Level Constants.</div></div>
 <div class="ttc" id="aimage_8h_html"><div class="ttname"><a href="image_8h.html">image.h</a></div></div>
+<div class="ttc" id="alinear__algebra_8h_html"><div class="ttname"><a href="linear__algebra_8h.html">linear_algebra.h</a></div><div class="ttdoc">Skeleton File for Generin Vector Operations.</div></div>
+<div class="ttc" id="alocale__buffer_8h_html"><div class="ttname"><a href="locale__buffer_8h.html">locale_buffer.h</a></div><div class="ttdoc">Contains Pixel Buffer Functions.</div></div>
+<div class="ttc" id="alogs_8h_html"><div class="ttname"><a href="logs_8h.html">logs.h</a></div><div class="ttdoc">Logging Execution and Errors in Code.</div></div>
+<div class="ttc" id="amath__functions_8h_html"><div class="ttname"><a href="math__functions_8h.html">math_functions.h</a></div><div class="ttdoc">Mathematical Helper Functions for use throughout code.</div></div>
+<div class="ttc" id="apredictor_8h_html_a4a94804509574a94d896a4164802bcd2"><div class="ttname"><a href="predictor_8h.html#a4a94804509574a94d896a4164802bcd2">RunPredictor</a></div><div class="ttdeci">int RunPredictor(image *hIMG, image *result)</div><div class="ttdoc">Run Predictor on hIMG.</div><div class="ttdef"><b>Definition</b> predictor.c:51</div></div>
+<div class="ttc" id="apredictor_8h_html_a4e6f06fbe7f6b462853492abfbd0bec2"><div class="ttname"><a href="predictor_8h.html#a4e6f06fbe7f6b462853492abfbd0bec2">kC</a></div><div class="ttdeci">int kC</div><div class="ttdoc">Finds the kC constant, updated every pass.</div><div class="ttdef"><b>Definition</b> predictor.c:5</div></div>
 <div class="ttc" id="apredictor__constants_8h_html"><div class="ttname"><a href="predictor__constants_8h.html">predictor_constants.h</a></div><div class="ttdoc">Contains the Struct and relevant functions for Creating and Accessing Predictor Constants.</div></div>
-<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:45</div></div>
+<div class="ttc" id="aquantizer_8h_html"><div class="ttname"><a href="quantizer_8h.html">quantizer.h</a></div><div class="ttdoc">Functions For the Quantizer Steps.</div></div>
+<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:53</div></div>
+<div class="ttc" id="aweights_8h_html"><div class="ttname"><a href="weights_8h.html">weights.h</a></div><div class="ttdoc">Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bcb0e1c297d4eac1568cd8ae7fb42a08.html">predictor</a></li><li class="navelem"><b>predictor.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bcb0e1c297d4eac1568cd8ae7fb42a08.html">predictor</a></li><li class="navelem"><a class="el" href="predictor_8h.html">predictor.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

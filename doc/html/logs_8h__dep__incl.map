@@ -1,0 +1,21 @@
+<map id="include/files/logs.h" name="include/files/logs.h">
+<area shape="rect" id="Node000001" title="Logging Execution and Errors in Code." alt="" coords="343,5,486,31"/>
+<area shape="rect" id="Node000002" href="$var_int_file___i_o_8h.html" title="File Input/Output for Variable&#45;Length Words." alt="" coords="102,79,301,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="368,37,237,81,235,76,367,32"/>
+<area shape="rect" id="Node000005" href="$generate__image_8h_source.html" title=" " alt="" coords="353,240,533,280"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="420,44,443,239,438,240,415,45"/>
+<area shape="rect" id="Node000006" href="$test__var_int_8h_source.html" title=" " alt="" coords="259,152,405,192"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="404,44,345,153,340,150,400,41"/>
+<area shape="rect" id="Node000007" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="481,79,685,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="455,34,556,76,554,81,453,38"/>
+<area shape="rect" id="Node000003" href="$decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="5,240,171,280"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,111,81,128,54,153,48,174,51,197,62,219,74,238,70,241,57,222,46,199,42,174,50,151,78,123,113,106"/>
+<area shape="rect" id="Node000004" href="$body_8h_source.html" title=" " alt="" coords="64,159,235,185"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="188,117,159,161,155,158,184,114"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="234,109,302,150,299,154,231,114"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="135,197,104,241,100,238,131,194"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="203,186,379,237,377,242,201,191"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="560,115,521,154,485,200,457,241,452,238,480,197,517,150,557,111"/>
+<area shape="rect" id="Node000008" href="$reconstructor_8h_source.html" title=" " alt="" coords="531,152,696,192"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="595,116,608,151,603,153,590,118"/>
+</map>

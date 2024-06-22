@@ -1,0 +1,102 @@
+\doxysection{include/dst/locale\+\_\+buffer.h File Reference}
+\hypertarget{locale__buffer_8h}{}\label{locale__buffer_8h}\index{include/dst/locale\_buffer.h@{include/dst/locale\_buffer.h}}
+
+
+Contains Pixel Buffer Functions.  
+
+
+{\ttfamily \#include "{}constants/typedefs.\+h"{}}\newline
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+Include dependency graph for locale\+\_\+buffer.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{locale__buffer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{locale__buffer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{locale__buffer_8h_a97d155ce5ce2b3c4276abde001d02632}\label{locale__buffer_8h_a97d155ce5ce2b3c4276abde001d02632} 
+\#define {\bfseries MAX\+\_\+\+PRECEDING\+\_\+\+BANDS}~16
+\begin{DoxyCompactList}\small\item\em Defined in the standard. \end{DoxyCompactList}\item 
+\Hypertarget{locale__buffer_8h_a2b1d39159e4114f433745f15a201c93c}\label{locale__buffer_8h_a2b1d39159e4114f433745f15a201c93c} 
+\#define {\bfseries MAX\+\_\+\+NEIGHBORS}~4
+\begin{DoxyCompactList}\small\item\em Defines in the standard. \end{DoxyCompactList}\item 
+\Hypertarget{locale__buffer_8h_ab29a43e7b76dc9cc5c56868f9d554934}\label{locale__buffer_8h_ab29a43e7b76dc9cc5c56868f9d554934} 
+\#define {\bfseries PIXEL\+\_\+\+BUFFER\+\_\+\+SPACE}~1
+\begin{DoxyCompactList}\small\item\em Assume Pixel takes one buffer space. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\+\_\+\+BUFFER\+\_\+\+NEIGHBOR\+\_\+\+SIZE}}~    (\mbox{\hyperlink{locale__buffer_8h_a2b1d39159e4114f433745f15a201c93c}{MAX\+\_\+\+NEIGHBORS}} + \mbox{\hyperlink{locale__buffer_8h_ab29a43e7b76dc9cc5c56868f9d554934}{PIXEL\+\_\+\+BUFFER\+\_\+\+SPACE}})
+\item 
+\Hypertarget{locale__buffer_8h_a581acc00e1c1624e91212d1233fbf777}\label{locale__buffer_8h_a581acc00e1c1624e91212d1233fbf777} 
+\#define {\bfseries LOCAL\+\_\+\+BUFFER\+\_\+\+TOTAL\+\_\+\+SIZE}~    (\mbox{\hyperlink{locale__buffer_8h_a97d155ce5ce2b3c4276abde001d02632}{MAX\+\_\+\+PRECEDING\+\_\+\+BANDS}} + \mbox{\hyperlink{locale__buffer_8h_a2b1d39159e4114f433745f15a201c93c}{MAX\+\_\+\+NEIGHBORS}} + \mbox{\hyperlink{locale__buffer_8h_ab29a43e7b76dc9cc5c56868f9d554934}{PIXEL\+\_\+\+BUFFER\+\_\+\+SPACE}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1}\label{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1} 
+typedef struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} {\bfseries Locale\+Buffer}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{locale__buffer_8h_a6f0f835958a84b1fb3173c4f0a6d4155}\label{locale__buffer_8h_a6f0f835958a84b1fb3173c4f0a6d4155} 
+\mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}} {\bfseries Locale\+Buffer\+\_\+\+Simple\+Load} (\mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} \texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG)
+\begin{DoxyCompactList}\small\item\em Initializes the values in \doxylink{struct_locale_buffer}{Locale\+Buffer} based on the indices in neighbor\+\_\+index lookup table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}} \mbox{\hyperlink{locale__buffer_8h_aafe3d5c7c1f0f2b689902c0bf1f7e4eb}{Locale\+Buffer\+\_\+\+Smart\+Load}} (\mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} \texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG)
+\begin{DoxyCompactList}\small\item\em Initializes the values in \doxylink{struct_locale_buffer}{Locale\+Buffer} using values from the previous buffer. It assumes the \doxylink{struct_locale_buffer}{Locale\+Buffer} object persists for each pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{locale__buffer_8h_abb8e4f43db4e7bdb6760bc84df3b28fc}\label{locale__buffer_8h_abb8e4f43db4e7bdb6760bc84df3b28fc} 
+\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} {\bfseries Locale\+Buffer\+\_\+neighbor\+\_\+index\+\_\+x} \mbox{[}\mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\+\_\+\+BUFFER\+\_\+\+NEIGHBOR\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array containing order of relative x-\/coordinates in Buffer. \end{DoxyCompactList}\item 
+\Hypertarget{locale__buffer_8h_aa4dbfb1da03f162a3bc10400b370f34e}\label{locale__buffer_8h_aa4dbfb1da03f162a3bc10400b370f34e} 
+\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} {\bfseries Locale\+Buffer\+\_\+neighbor\+\_\+index\+\_\+y} \mbox{[}\mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\+\_\+\+BUFFER\+\_\+\+NEIGHBOR\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array containing order of relative y-\/coordinates in Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains Pixel Buffer Functions. 
+
+Contains Includes, Macros, Structures and Functions for loading the neighborhood of a Pixel from storage into memory. \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]Implement Locale\+Buffer\+\_\+\+Simple\+Load 
+
+Implement Locale\+Buffer\+\_\+\+Smart\+Load \end{DoxyRefDesc}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}\label{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f} 
+\index{locale\_buffer.h@{locale\_buffer.h}!LOCAL\_BUFFER\_NEIGHBOR\_SIZE@{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}}
+\index{LOCAL\_BUFFER\_NEIGHBOR\_SIZE@{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}!locale\_buffer.h@{locale\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}}
+{\footnotesize\ttfamily \#define LOCAL\+\_\+\+BUFFER\+\_\+\+NEIGHBOR\+\_\+\+SIZE~    (\mbox{\hyperlink{locale__buffer_8h_a2b1d39159e4114f433745f15a201c93c}{MAX\+\_\+\+NEIGHBORS}} + \mbox{\hyperlink{locale__buffer_8h_ab29a43e7b76dc9cc5c56868f9d554934}{PIXEL\+\_\+\+BUFFER\+\_\+\+SPACE}})}
+
+Length of the Neighbor Index Lookup list 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{locale__buffer_8h_aafe3d5c7c1f0f2b689902c0bf1f7e4eb}\label{locale__buffer_8h_aafe3d5c7c1f0f2b689902c0bf1f7e4eb} 
+\index{locale\_buffer.h@{locale\_buffer.h}!LocaleBuffer\_SmartLoad@{LocaleBuffer\_SmartLoad}}
+\index{LocaleBuffer\_SmartLoad@{LocaleBuffer\_SmartLoad}!locale\_buffer.h@{locale\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{LocaleBuffer\_SmartLoad()}{LocaleBuffer\_SmartLoad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}} Locale\+Buffer\+\_\+\+Smart\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} \texorpdfstring{$\ast$}{*}}]{buf,  }\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG }\end{DoxyParamCaption})}
+
+
+
+Initializes the values in \doxylink{struct_locale_buffer}{Locale\+Buffer} using values from the previous buffer. It assumes the \doxylink{struct_locale_buffer}{Locale\+Buffer} object persists for each pixel. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]Finish Implementation (More complex than Simple\+Load) \end{DoxyRefDesc}

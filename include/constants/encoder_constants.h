@@ -1,6 +1,5 @@
 /**
  * @file encoder_constants.h
- * @author Kevin Caldwell
  *
  * @brief Contains all Encoder-Specific Constants
  * @details

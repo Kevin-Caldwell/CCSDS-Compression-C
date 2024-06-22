@@ -1,8 +1,7 @@
 /**
  * \file load_constants.h
- * \author Kevin Caldwell
  *
- * \brief Abstractions for Loading .CONST files
+ * @brief Abstractions for Loading .CONST files
  * \details
  * Features
  *  Custom .CONST file format with easy-to-read Constant Parameter Storage
@@ -17,8 +16,7 @@
 #include "dst/hash_table.h"
 
 /**
- * \author Kevin Caldwell
- * \brief Loads a .CONST file into a HashTable filled with constants.
+ * @brief Loads a .CONST file into a HashTable filled with constants.
 */
 int LoadConstantFile(const char *file_name, HashTable *result);
 

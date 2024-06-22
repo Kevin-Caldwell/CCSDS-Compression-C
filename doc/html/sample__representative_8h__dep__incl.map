@@ -1,0 +1,27 @@
+<map id="include/predictor/sample_representative.h" name="include/predictor/sample_representative.h">
+<area shape="rect" id="Node000001" title="A collection of Sample representative calculation functions." alt="" coords="182,5,365,45"/>
+<area shape="rect" id="Node000002" href="$reconstructor_8h_source.html" title=" " alt="" coords="91,416,256,456"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,44,111,63,84,78,59,95,34,119,19,141,10,166,8,200,8,283,11,306,20,327,32,346,49,363,87,392,127,414,124,418,84,397,45,367,28,349,15,330,6,307,3,284,3,200,5,165,14,139,30,115,56,91,81,73,109,58,167,39"/>
+<area shape="rect" id="Node000003" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="94,181,261,221"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="273,59,266,97,250,135,229,162,206,183,202,179,226,158,246,132,261,95,268,58"/>
+<area shape="rect" id="Node000007" href="$local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="69,93,235,133"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="237,55,180,95,177,91,234,51"/>
+<area shape="rect" id="Node000008" href="$quantizer_8h.html" title="Functions For the Quantizer Steps." alt="" coords="285,189,491,214"/>
+<area shape="poly" id="edge13_Node000001_Node000008" title=" " alt="" coords="289,56,333,126,378,187,373,190,329,129,284,59"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="154,233,135,270,130,310,137,350,150,386,164,414,159,417,145,388,132,351,125,310,129,269,149,231"/>
+<area shape="rect" id="Node000004" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="143,269,342,295"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="195,230,228,267,224,271,191,234"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="234,308,184,417,180,415,229,306"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="230,260,199,223,203,220,234,256"/>
+<area shape="rect" id="Node000005" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="331,343,535,368"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="287,297,403,340,401,345,285,302"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="383,374,237,418,235,413,382,369"/>
+<area shape="rect" id="Node000006" href="$generate__image_8h_source.html" title=" " alt="" coords="343,416,523,456"/>
+<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="436,382,436,416,431,416,431,382"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="115,144,98,162,85,182,82,201,85,221,100,296,129,367,160,414,155,417,124,369,95,298,80,222,76,201,80,180,94,159,111,140"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="164,146,174,180,169,182,159,147"/>
+<area shape="poly" id="edge16_Node000008_Node000001" title=" " alt="" coords="376,178,335,111,290,47,294,44,339,108,381,175"/>
+<area shape="poly" id="edge14_Node000008_Node000002" title=" " alt="" coords="386,228,375,262,357,296,323,335,283,369,210,418,207,414,280,365,319,331,352,293,370,260,380,227"/>
+<area shape="poly" id="edge17_Node000008_Node000004" title=" " alt="" coords="356,223,265,271,263,267,353,218"/>
+<area shape="poly" id="edge15_Node000008_Node000005" title=" " alt="" coords="398,226,432,342,427,343,393,228"/>
+</map>

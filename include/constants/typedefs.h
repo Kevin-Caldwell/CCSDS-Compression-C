@@ -1,12 +1,12 @@
 /**
- * \file typedefs.h
- * \author Kevin Caldwell
- * \brief A file containing univerally used typedefs
- * \date May 29, 2024
+ * @file typedefs.h
+ * @brief A file containing univerally used typedefs
+ * @date May 29, 2024
 */
 #ifndef TYPEDEFS_H
 #define TYPEDEFS_H
 
+#include <inttypes.h>
 
 
 /**
@@ -15,7 +15,7 @@
 typedef enum ERROR_CODES
 {
     RES_OK = 0,
-    FILE_ACCESS_ERROR,
+    FILE_NON_EXISTENT,
     FILE_READ_ERROR,
     FILE_WRITE_ERROR,
     MEM_ALLOC_ERROR,
@@ -24,7 +24,7 @@ typedef enum ERROR_CODES
 
 //-----------------PREDICTOR TYPEDEFS------------------//
 
-/** \brief Enum for Types of Local Sum Calculators */
+/** @brief Enum for Types of Local Sum Calculators */
 typedef enum t_local_sum
 {
     LS_WIDE_NEIGHBOR = 0,
@@ -33,26 +33,32 @@ typedef enum t_local_sum
     LS_NARROW_COLUMN
 } t_local_sum;
 
-/** \brief Enumeration for Prediction Modes. */
+/** @brief Enumeration for Prediction Modes. */
 typedef enum t_prediction_mode
 {
     PM_FULL = 0,
     PM_REDUCED
 } t_prediction_mode;
 
-/** \brief char redefined to BOOL */
+/** @brief char redefined to BOOL */
 typedef uint8_t         BOOL;
 
-/** \brief Type encoding a Dimension of the Hyperspectral Image */
+/** @brief Type encoding a Dimension of the Hyperspectral Image */
 typedef int32_t         DIM;
 
-/** \brief unsigned int shorthand */
+/** @brief unsigned int shorthand */
 typedef unsigned int    UINT;
 
-/** \brief Type representing each pixel in Hyperspectral Image */
+/** @brief Type representing each pixel in Hyperspectral Image */
 typedef uint16_t        PIXEL;
 
-/** \brief Type representing Indices of Image */
+/** @brief Type representing Indices of Image */
 typedef DIM             INDEX;
+
+/** @brief Type representing vector units in linear_algebra.h */
+typedef PIXEL           data_t;
+
+/** @brief Type representing weight values in weights.h */
+typedef uint32_t        weight_t;
 
 #endif /* TYPEDEFS_H */

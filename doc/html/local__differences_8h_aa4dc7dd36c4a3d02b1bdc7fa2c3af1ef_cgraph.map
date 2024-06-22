@@ -1,0 +1,13 @@
+<map id="LocalDirectionVector" name="LocalDirectionVector">
+<area shape="rect" id="Node000001" title="Finds the Local Direction Vector using Direct Image Access." alt="" coords="5,67,161,92"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="49,68,41,58,45,48,60,42,83,40,113,44,124,53,121,57,111,49,83,45,61,47,49,52,47,58,53,65"/>
+<area shape="rect" id="Node000002" href="$local__differences_8c.html#a37d2cf3f48b1b2c436f630a2b649cf52" title="Finds the Central Local Difference using Direct Image Access." alt="" coords="209,29,380,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,64,209,54,210,60,156,69"/>
+<area shape="rect" id="Node000003" href="$hash__table_8c.html#a27578c1b5a3ab68d8f144ed86ea72cc2" title="Returns the value associated with a key." alt="" coords="234,103,355,128"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="159,89,221,100,220,105,158,95"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="263,31,256,21,260,11,273,5,295,3,321,6,332,15,329,19,319,11,295,8,274,10,264,15,261,20,267,28"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="263,104,256,94,260,84,273,78,295,76,321,80,332,88,329,92,319,84,295,81,274,83,264,88,261,94,267,101"/>
+<area shape="rect" id="Node000004" href="$hash__table_8c.html#a8889e063ac5cf3e79cb21bcba454b054" title=" " alt="" coords="428,103,549,128"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="355,113,414,113,414,118,355,118"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="457,104,450,94,454,84,467,78,489,76,515,80,526,88,523,92,513,84,489,81,468,83,458,88,455,94,461,101"/>
+</map>

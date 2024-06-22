@@ -1,39 +1,40 @@
 <map id="include/files/varIntFile_IO.h" name="include/files/varIntFile_IO.h">
-<area shape="rect" id="Node000001" title="File Input/Output for Variable&#45;Length Words." alt="" coords="265,5,463,31"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="82,460,169,485"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="265,23,180,34,137,44,96,58,61,78,33,102,15,133,8,171,8,327,10,347,17,366,39,400,67,429,96,450,93,455,64,433,34,403,12,368,5,348,3,327,3,170,10,131,29,99,58,73,94,53,135,39,179,28,264,18"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="590,460,661,485"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="452,28,515,45,575,72,601,90,622,113,635,140,640,170,640,327,637,392,631,447,626,446,632,392,635,327,635,171,630,141,617,116,598,94,573,76,513,50,450,33"/>
-<area shape="rect" id="Node000004" href="$file___i_o_8h_source.html" title=" " alt="" coords="245,159,352,185"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="362,32,311,148,307,146,357,30"/>
-<area shape="rect" id="Node000007" href="$global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="339,240,549,265"/>
-<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="369,30,387,99,417,191,434,227,429,229,412,193,382,101,364,32"/>
-<area shape="rect" id="Node000012" href="$logs_8h_source.html" title=" " alt="" coords="427,79,519,104"/>
-<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="383,28,445,69,442,73,380,33"/>
-<area shape="rect" id="Node000014" href="$encoder__helper__functions_8h_source.html" title=" " alt="" coords="43,152,221,192"/>
-<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="348,33,174,146,171,142,345,28"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="285,187,258,210,230,242,197,296,170,354,135,448,130,446,165,352,192,294,226,238,254,207,282,183"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="240,240,315,265"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="298,186,287,227,282,226,293,184"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="99,240,165,265"/>
-<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="276,187,170,237,168,232,273,182"/>
-<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="321,182,412,231,409,236,319,187"/>
-<area shape="rect" id="Node000008" href="$typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="246,460,405,485"/>
-<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="408,268,372,286,355,299,342,315,328,347,322,383,321,417,324,446,318,447,316,418,316,383,323,346,338,312,352,295,369,282,405,263"/>
-<area shape="rect" id="Node000009" href="$load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="351,313,550,339"/>
-<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="448,265,451,300,446,300,442,266"/>
-<area shape="rect" id="Node000010" href="$hash__table_8h.html" title=" " alt="" coords="386,387,515,412"/>
-<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="453,339,453,373,448,373,448,339"/>
-<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="399,415,183,462,182,456,398,409"/>
-<area shape="poly" id="edge11_Node000010_Node000003" title=" " alt="" coords="480,410,585,452,583,457,478,414"/>
-<area shape="poly" id="edge14_Node000010_Node000008" title=" " alt="" coords="432,414,359,455,356,451,429,410"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="473,460,543,485"/>
-<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="462,411,492,447,488,451,458,414"/>
-<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="449,106,338,156,336,151,447,102"/>
-<area shape="poly" id="edge17_Node000012_Node000007" title=" " alt="" coords="484,103,504,143,509,168,505,193,491,215,473,233,470,230,487,212,500,191,504,168,499,145,480,106"/>
-<area shape="poly" id="edge19_Node000012_Node000011" title=" " alt="" coords="491,102,520,126,552,160,578,203,586,226,589,251,589,328,583,364,569,398,550,428,531,451,527,448,545,425,564,395,578,362,584,327,584,251,581,228,573,205,548,163,516,130,488,106"/>
-<area shape="rect" id="Node000013" title=" " alt="" coords="427,159,491,185"/>
-<area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="474,105,466,146,461,145,469,104"/>
-<area shape="poly" id="edge22_Node000014_Node000002" title=" " alt="" coords="117,194,101,215,89,241,83,269,82,297,88,355,101,406,117,446,112,448,96,408,82,355,76,297,78,268,84,239,97,213,113,191"/>
-<area shape="poly" id="edge23_Node000014_Node000006" title=" " alt="" coords="135,192,135,226,129,226,129,192"/>
+<area shape="rect" id="Node000001" title="File Input/Output for Variable&#45;Length Words." alt="" coords="301,5,499,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="183,533,270,559"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="471,28,530,45,589,73,615,91,635,114,648,140,653,170,653,401,652,449,644,468,627,487,601,503,565,515,473,532,371,542,284,546,284,541,371,537,472,527,564,510,599,498,624,483,640,465,647,448,648,401,648,171,643,142,631,117,611,95,587,77,528,50,469,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="542,460,613,485"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="443,28,493,47,545,76,567,95,586,117,598,142,603,170,603,327,597,392,586,447,581,446,592,392,597,327,597,171,593,144,581,120,564,99,542,80,491,52,441,33"/>
+<area shape="rect" id="Node000004" href="$file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="211,159,317,185"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="390,33,342,80,283,150,279,147,338,77,386,29"/>
+<area shape="rect" id="Node000007" href="$global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="301,240,512,265"/>
+<area shape="poly" id="edge21_Node000001_Node000007" title=" " alt="" coords="399,32,388,79,381,136,387,191,398,227,393,228,381,193,376,135,383,78,394,30"/>
+<area shape="rect" id="Node000012" href="$logs_8h.html" title="Logging Execution and Errors in Code." alt="" coords="397,79,489,104"/>
+<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="409,30,431,66,427,68,405,32"/>
+<area shape="rect" id="Node000014" href="$encoder__helper__functions_8h_source.html" title=" " alt="" coords="5,152,184,192"/>
+<area shape="poly" id="edge22_Node000001_Node000014" title=" " alt="" coords="378,33,146,148,144,143,376,28"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="248,187,220,210,193,241,173,281,168,325,168,400,172,435,183,467,213,521,208,523,179,469,167,436,163,401,163,325,168,279,188,239,216,206,245,183"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="203,240,277,265"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="263,186,250,227,245,226,258,184"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="61,240,128,265"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="240,187,133,237,130,232,238,182"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="286,183,375,231,373,236,284,187"/>
+<area shape="rect" id="Node000008" href="$typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="265,460,423,485"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="417,264,431,286,441,313,447,342,446,365,438,388,424,414,403,437,379,455,376,451,399,433,419,410,433,386,441,364,441,342,436,314,426,288,413,267"/>
+<area shape="rect" id="Node000009" href="$load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="229,313,427,339"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="396,267,353,306,349,302,392,263"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="327,488,259,528,256,524,324,483"/>
+<area shape="rect" id="Node000010" href="$hash__table_8h.html" title=" " alt="" coords="279,387,409,412"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="333,338,341,373,336,374,328,340"/>
+<area shape="poly" id="edge13_Node000010_Node000002" title=" " alt="" coords="318,414,284,434,254,462,239,491,232,520,227,519,234,489,250,458,281,429,315,410"/>
+<area shape="poly" id="edge12_Node000010_Node000003" title=" " alt="" coords="382,409,530,454,528,459,381,415"/>
+<area shape="poly" id="edge15_Node000010_Node000008" title=" " alt="" coords="347,412,347,446,341,446,341,412"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="447,460,518,485"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="367,410,449,451,447,456,365,414"/>
+<area shape="poly" id="edge17_Node000012_Node000004" title=" " alt="" coords="418,106,303,156,301,151,416,102"/>
+<area shape="poly" id="edge18_Node000012_Node000007" title=" " alt="" coords="453,103,474,143,479,168,474,193,459,216,440,234,436,230,455,212,470,191,474,168,469,144,449,105"/>
+<area shape="poly" id="edge20_Node000012_Node000011" title=" " alt="" coords="459,102,486,126,517,161,542,203,549,227,552,251,552,328,547,363,535,397,503,450,498,448,530,394,542,362,547,327,547,251,544,228,537,205,512,164,482,130,456,106"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="396,159,460,185"/>
+<area shape="poly" id="edge19_Node000012_Node000013" title=" " alt="" coords="443,105,435,146,430,145,438,104"/>
+<area shape="poly" id="edge23_Node000014_Node000002" title=" " alt="" coords="82,194,64,218,46,250,32,287,27,325,27,400,30,425,41,447,56,467,76,483,123,510,171,528,169,533,121,515,73,488,53,470,36,450,25,427,21,401,21,324,27,285,41,248,60,216,77,191"/>
+<area shape="poly" id="edge24_Node000014_Node000006" title=" " alt="" coords="97,192,97,226,92,226,92,192"/>
 </map>

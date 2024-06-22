@@ -1,0 +1,7 @@
+<map id="UHI_WritePixel" name="UHI_WritePixel">
+<area shape="rect" id="Node000001" title="Writes a PIXEL value into an index on a UHI image." alt="" coords="172,29,291,55"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="260,19,252,11,231,8,214,10,205,15,203,20,208,28,204,31,198,21,201,11,212,5,231,3,254,6,264,15"/>
+<area shape="rect" id="Node000002" href="$uhi__io_8c.html#a1ec6bacb78062b9b8dde4cf3e3eeb923" title="Proxy function behaves the same way as image SetPixel." alt="" coords="5,29,124,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,45,124,45,124,39,158,39"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="94,19,85,11,65,8,47,10,38,15,36,20,41,28,37,31,31,21,34,11,46,5,65,3,87,6,97,15"/>
+</map>

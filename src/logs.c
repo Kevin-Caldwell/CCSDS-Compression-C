@@ -28,7 +28,7 @@ void Log_init()
 
 void Log_close()
 {
-    Log_add("Stopped Logging\n");
+Log_add("Stopped Logging\n");
     F_CLOSE(log_fptr);
 }
 

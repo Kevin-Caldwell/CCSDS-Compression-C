@@ -98,57 +98,69 @@ $(document).ready(function(){initNavTree('uhi__io_8h_source.html',''); initResiz
   <div class="headertitle"><div class="title">uhi_io.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef UHI_IO_H</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define UHI_IO_H</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;files/file_IO.h&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;math/math_functions.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define UHI_CACHE_LENGTH 3 </span><span class="comment">// Image Size Buffer</span></div>
+<a href="uhi__io_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef UHI_IO_H</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define UHI_IO_H</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="file___i_o_8h.html">files/file_IO.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="math__functions_8h.html">math/math_functions.h</a>&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="struct_uncompressed_hyperspectral_image.html">   44</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> size;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    file_t *fs;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">F_UHI</a>, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a>, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">uIMG</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="uhi__io_8h.html#a6aba86f49a9e77ca452352dd1ef8d4af">   31</a></span><span class="preprocessor">#define UHI_CACHE_LENGTH 3 </span><span class="comment">// Image Size Buffer</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_uncompressed_hyperspectral_image.html">   52</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> size;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_typedef" href="file___i_o_8h.html#aaa4f66633ab727c9d841db141c3da088">file_t</a> *fs;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="uhi__io_8h.html#aabf4f060c3ec7817f143c3cbf63ba0c0">   56</a></span>} <a class="code hl_typedef" href="uhi__io_8h.html#aabf4f060c3ec7817f143c3cbf63ba0c0">F_UHI</a>, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a>, <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">uIMG</a>;</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keywordtype">int</span> UHI_Initialize(</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a> *stream,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> size,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    FileMode file_mode);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">int</span> UHI_WritePixel(</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a> *stream,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> index,</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> value);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> UHI_ReadPixel(</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a> *stream,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> index);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> Proxy_GetPixel(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">uIMG</a> *hIMG, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> Proxy_SetPixel(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">uIMG</a> *hIMG, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z, <a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> value);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">/* UHI_IO_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:45</div></div>
-<div class="ttc" id="astructdim3_html"><div class="ttname"><a href="structdim3.html">dim3</a></div><div class="ttdef"><b>Definition</b> math_functions.h:59</div></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="uhi__io_8h.html#a75bd0b5f041d0076b18d196adf4c4e39">UHI_Initialize</a>(</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a> *stream,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> size,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_typedef" href="file___i_o_8h.html#abf7662b304505130b2e87a944038aff0">FileMode</a> <a class="code hl_enumeration" href="file___i_o_8h.html#a588666511dde277029c4c5afc30782a6">file_mode</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="uhi__io_8h.html#a9c23d248f87897f71d177a12cdfebf84">UHI_WritePixel</a>(</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">const</span> <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a> *stream,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> index,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> value);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> <a class="code hl_function" href="uhi__io_8h.html#ad7fd2d84633ee6e0355a950deeacd220">UHI_ReadPixel</a>(</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">UHI</a> *stream,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_struct" href="structdim3.html">dim3</a> index);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> <a class="code hl_function" href="uhi__io_8h.html#aad573fb88befb1cd5c553c20a32027a9">Proxy_GetPixel</a>(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">uIMG</a> *hIMG, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keywordtype">void</span> <a class="code hl_function" href="uhi__io_8h.html#a1ec6bacb78062b9b8dde4cf3e3eeb923">Proxy_SetPixel</a>(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">uIMG</a> *hIMG, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z, <a class="code hl_typedef" href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a> value);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif </span><span class="comment">/* UHI_IO_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="afile___i_o_8h_html"><div class="ttname"><a href="file___i_o_8h.html">file_IO.h</a></div><div class="ttdoc">Abstract Functions for File IO.</div></div>
+<div class="ttc" id="afile___i_o_8h_html_a588666511dde277029c4c5afc30782a6"><div class="ttname"><a href="file___i_o_8h.html#a588666511dde277029c4c5afc30782a6">file_mode</a></div><div class="ttdeci">file_mode</div><div class="ttdef"><b>Definition</b> file_IO.h:32</div></div>
+<div class="ttc" id="afile___i_o_8h_html_aaa4f66633ab727c9d841db141c3da088"><div class="ttname"><a href="file___i_o_8h.html#aaa4f66633ab727c9d841db141c3da088">file_t</a></div><div class="ttdeci">FILE file_t</div><div class="ttdoc">File Handling Abstractions.</div><div class="ttdef"><b>Definition</b> file_IO.h:24</div></div>
+<div class="ttc" id="afile___i_o_8h_html_abf7662b304505130b2e87a944038aff0"><div class="ttname"><a href="file___i_o_8h.html#abf7662b304505130b2e87a944038aff0">FileMode</a></div><div class="ttdeci">enum file_mode FileMode</div></div>
+<div class="ttc" id="amath__functions_8h_html"><div class="ttname"><a href="math__functions_8h.html">math_functions.h</a></div><div class="ttdoc">Mathematical Helper Functions for use throughout code.</div></div>
+<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:53</div></div>
+<div class="ttc" id="astructdim3_html"><div class="ttname"><a href="structdim3.html">dim3</a></div><div class="ttdoc">struct for 3d coordinates.</div><div class="ttdef"><b>Definition</b> math_functions.h:61</div></div>
 <div class="ttc" id="atypedefs_8h_html_a762a038a8611999e554c912cf3c72cea"><div class="ttname"><a href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a></div><div class="ttdeci">DIM INDEX</div><div class="ttdoc">Type representing Indices of Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:56</div></div>
+<div class="ttc" id="atypedefs_8h_html_a9686e3aa2c29c9c208c0cf15d69516e5"><div class="ttname"><a href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a></div><div class="ttdeci">enum ERROR_CODES error_t</div></div>
 <div class="ttc" id="atypedefs_8h_html_ab11dabd4d79e8b3426010beb5831e1d9"><div class="ttname"><a href="typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9">PIXEL</a></div><div class="ttdeci">uint16_t PIXEL</div><div class="ttdoc">Type representing each pixel in Hyperspectral Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:53</div></div>
+<div class="ttc" id="auhi__io_8h_html_a1ec6bacb78062b9b8dde4cf3e3eeb923"><div class="ttname"><a href="uhi__io_8h.html#a1ec6bacb78062b9b8dde4cf3e3eeb923">Proxy_SetPixel</a></div><div class="ttdeci">void Proxy_SetPixel(uIMG *hIMG, INDEX x, INDEX y, INDEX z, PIXEL value)</div><div class="ttdoc">Proxy function behaves the same way as image SetPixel.</div><div class="ttdef"><b>Definition</b> uhi_io.c:57</div></div>
+<div class="ttc" id="auhi__io_8h_html_a75bd0b5f041d0076b18d196adf4c4e39"><div class="ttname"><a href="uhi__io_8h.html#a75bd0b5f041d0076b18d196adf4c4e39">UHI_Initialize</a></div><div class="ttdeci">error_t UHI_Initialize(UHI *stream, dim3 size, const char *file_name, FileMode file_mode)</div><div class="ttdoc">Initializes a UHI stream for storing/retrieving image pixels.</div><div class="ttdef"><b>Definition</b> uhi_io.c:5</div></div>
+<div class="ttc" id="auhi__io_8h_html_a9c23d248f87897f71d177a12cdfebf84"><div class="ttname"><a href="uhi__io_8h.html#a9c23d248f87897f71d177a12cdfebf84">UHI_WritePixel</a></div><div class="ttdeci">error_t UHI_WritePixel(const UHI *stream, dim3 index, PIXEL value)</div><div class="ttdoc">Writes a PIXEL value into an index on a UHI image.</div><div class="ttdef"><b>Definition</b> uhi_io.c:36</div></div>
+<div class="ttc" id="auhi__io_8h_html_aabf4f060c3ec7817f143c3cbf63ba0c0"><div class="ttname"><a href="uhi__io_8h.html#aabf4f060c3ec7817f143c3cbf63ba0c0">F_UHI</a></div><div class="ttdeci">struct UncompressedHyperspectralImage F_UHI</div></div>
+<div class="ttc" id="auhi__io_8h_html_aad573fb88befb1cd5c553c20a32027a9"><div class="ttname"><a href="uhi__io_8h.html#aad573fb88befb1cd5c553c20a32027a9">Proxy_GetPixel</a></div><div class="ttdeci">PIXEL Proxy_GetPixel(uIMG *hIMG, INDEX x, INDEX y, INDEX z)</div><div class="ttdoc">Proxy function behaves the same way as image GetPixel.</div><div class="ttdef"><b>Definition</b> uhi_io.c:52</div></div>
+<div class="ttc" id="auhi__io_8h_html_ad7fd2d84633ee6e0355a950deeacd220"><div class="ttname"><a href="uhi__io_8h.html#ad7fd2d84633ee6e0355a950deeacd220">UHI_ReadPixel</a></div><div class="ttdeci">PIXEL UHI_ReadPixel(UHI *stream, dim3 index)</div><div class="ttdoc">Reads a PIXEL value from an index in an UHI image.</div><div class="ttdef"><b>Definition</b> uhi_io.c:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_70468730f0c354a354bfa0a2dbc63183.html">files</a></li><li class="navelem"><b>uhi_io.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_70468730f0c354a354bfa0a2dbc63183.html">files</a></li><li class="navelem"><a class="el" href="uhi__io_8h.html">uhi_io.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

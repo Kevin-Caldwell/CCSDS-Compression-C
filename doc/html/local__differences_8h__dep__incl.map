@@ -1,0 +1,14 @@
+<map id="include/predictor/local_differences.h" name="include/predictor/local_differences.h">
+<area shape="rect" id="Node000001" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="115,5,282,45"/>
+<area shape="rect" id="Node000002" href="$reconstructor_8h_source.html" title=" " alt="" coords="5,240,171,280"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,54,109,72,90,95,77,132,75,172,79,209,85,239,80,240,73,210,69,172,72,131,86,92,106,68,131,50"/>
+<area shape="rect" id="Node000003" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="99,93,298,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,59,195,93,189,93,187,59"/>
+<area shape="poly" id="edge4_Node000003_Node000001" title=" " alt="" coords="204,79,204,46,209,45,210,79"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="177,130,142,168,118,206,99,241,94,239,113,204,138,165,173,126"/>
+<area shape="rect" id="Node000004" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="151,167,355,192"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="218,128,247,165,242,168,214,131"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="218,200,129,242,127,237,216,195"/>
+<area shape="rect" id="Node000005" href="$generate__image_8h_source.html" title=" " alt="" coords="195,240,375,280"/>
+<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="266,204,280,239,275,241,261,206"/>
+</map>

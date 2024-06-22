@@ -1,15 +1,14 @@
 <map id="include/constants/constants.h" name="include/constants/constants.h">
-<area shape="rect" id="Node000001" title="A Global File for constants shared between modules." alt="" coords="128,5,343,31"/>
-<area shape="rect" id="Node000002" href="$math__functions_8h_source.html" title=" " alt="" coords="149,79,322,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="238,31,238,65,233,65,233,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,76,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,107,86,150,84,145,203,102"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="100,152,168,177"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="221,106,163,146,160,142,218,102"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="192,152,279,177"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="238,104,238,138,233,138,233,104"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="303,152,378,177"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="254,102,314,142,311,147,251,106"/>
-<area shape="rect" id="Node000007" href="$typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="403,152,561,177"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="276,101,430,146,428,151,274,107"/>
+<area shape="rect" id="Node000001" title="A Global File for constants shared between modules." alt="" coords="61,5,276,31"/>
+<area shape="rect" id="Node000002" href="$math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="82,79,255,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,31,171,65,166,65,166,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,73,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="149,106,74,147,72,143,147,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,152,168,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="165,106,147,141,142,138,160,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="221,225,308,251"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="179,103,252,212,247,215,174,106"/>
+<area shape="rect" id="Node000006" href="$typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="244,152,403,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="195,102,287,144,285,149,192,106"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="316,179,285,217,281,213,312,176"/>
 </map>

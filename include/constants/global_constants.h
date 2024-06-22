@@ -1,6 +1,5 @@
 /**
- * \file global_constants.h
- * \author Kevin-Caldwell
+ * @file global_constants.h
  *
  * @brief Contains Application-Level Constants
  *

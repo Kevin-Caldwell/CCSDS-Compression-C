@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['damping_5ftable_5fflag_0',['DAMPING_TABLE_FLAG',['../encoder__constants_8h.html#a37bf74bce23e349834ae376bfd7d66e7',1,'encoder_constants.h']]]
+  ['clip_0',['CLIP',['../math__functions_8h.html#a816dcf31e408d445ca8275ad96e6eb1e',1,'math_functions.h']]]
 ];

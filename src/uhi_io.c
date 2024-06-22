@@ -2,22 +2,22 @@
 #include "dst/image.h"
 
 
-int UHI_Initialize(UHI *stream, dim3 buffer_size, const char *file_name,
+error_t UHI_Initialize(UHI *stream, dim3 buffer_size, const char *file_name,
                    FileMode file_mode)
 {
   stream->fs = F_OPEN(file_name, file_mode);
-
-  if (stream->fs == NULL)
+  if (!stream->fs)
   {
-    return 1;
+    return FILE_NON_EXISTENT;
   }
 
   stream->size = buffer_size;
-  // DIM darr[] = {buffer_size.x, buffer_size.y, buffer_size.z};
+
+  // Prepare Image for Writing.
   F_SEEK(stream->fs, 0);
   F_WRITE(&buffer_size, sizeof(dim3), 1, stream->fs);
 
-  return 0;
+  return RES_OK;
 }
 
 // | S S | S S | S S | X X | X X |
@@ -33,20 +33,20 @@ PIXEL UHI_ReadPixel(UHI *stream, dim3 index)
   return pixel;
 }
 
-int UHI_WritePixel(const UHI *stream, dim3 index, PIXEL value)
+error_t UHI_WritePixel(const UHI *stream, dim3 index, PIXEL value)
 {
   dim3 s = stream->size;
   F_SEEK(
       stream->fs,
       6 + 2 * (MAP3_1(index.x, index.y, index.z, s)));
   F_WRITE(&value, sizeof(PIXEL), 1, stream->fs);
-  return 0;
+  return RES_OK;
 }
 
-int UHI_close(UHI *stream)
+error_t UHI_close(UHI *stream)
 {
   F_CLOSE(stream->fs);
-  return 0;
+  return RES_OK;
 }
 
 PIXEL Proxy_GetPixel(uIMG *hIMG, INDEX x, INDEX y, INDEX z)

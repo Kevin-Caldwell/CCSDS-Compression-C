@@ -1,9 +1,24 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(CCSDS_Compressor VERSION 0.1.0 LANGUAGES C)
-project(CCSDS_Image_Generator VERSION 0.1.0 LANGUAGES C)
-project(CCSDS_Decompressor VERSION 0.1.0 LANGUAGES C)
+cmake_minimum_required(VERSION 3.22.1)
 
-include(CTest)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+set(ARM_COMPILE 0)
+
+if(ARM_COMPILE)
+    set(CMAKE_SYSTEM_NAME Generic)
+    set(CMAKE_SYSTEM_PROCESSOR arm)
+    set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+    set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+    set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
+    add_compile_options(-mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -Wall -Og -specs=nosys.specs --specs=nosys.specs)
+endif()
+
+project(CCSDS_Compressor VERSION 0.1.0 LANGUAGES C ASM)
+project(CCSDS_Image_Generator VERSION 0.1.0 LANGUAGES C ASM)
+project(CCSDS_Decompressor VERSION 0.1.0 LANGUAGES C ASM)
+# include(CTest)
+
 
 # Add all C files in src and set the include path
 include_directories(include)
@@ -26,7 +41,3 @@ if(MATH_LIBRARY)
     target_link_libraries(CCSDS_Compressor PUBLIC ${MATH_LIBRARY})
     target_link_libraries(CCSDS_Decompressor PUBLIC ${MATH_LIBRARY})
 endif()
-
-enable_testing()
-
-add_test(NAME TEST_TEST COMMAND CCSDS_Compressor)

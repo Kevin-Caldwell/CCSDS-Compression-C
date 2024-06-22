@@ -98,41 +98,50 @@ $(document).ready(function(){initNavTree('sample__representative_8h_source.html'
   <div class="headertitle"><div class="title">sample_representative.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="sample__representative_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SAMPLE_REPRESENTATIVE_H</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define SAMPLE_REPRESENTATIVE_H</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="image_8h.html">dst/image.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="constants_8h.html">constants/constants.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;math/linear_algebra.h&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// #include &quot;predictor/local_differences.h&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;predictor/quantizer.h&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// #define SAMPLE(z,y,x) (0) // TODO</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">extern</span> data_t damping[];</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">extern</span> data_t offset[];</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="linear__algebra_8h.html">math/linear_algebra.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="quantizer_8h.html">predictor/quantizer.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="sample__representative_8h.html#a9d318d5c2a1d81d6f70cbf34e917e47d">   21</a></span><span class="preprocessor">#define SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// #define SAMPLE(z,y,x) (0) // TODO</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>data_t SampleRepresentative(uint16_t sample_value);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>uint32_t DoubleResolutionPredictedSample(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *hIMG, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, int64_t high_resolution_predicted_sample);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>uint16_t PredictedSample(uint32_t double_resolution_predicted_sample);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">extern</span> <a class="code hl_typedef" href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">data_t</a> <a class="code hl_variable" href="sample__representative_8h.html#aa25f2ddef46c2c5466643b137580700a">damping</a>[];</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>int64_t HighResolutionPredictedSample(int64_t predicted_central_local_difference, uint32_t local_sum);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif </span><span class="comment">/* SAMPLE_REPRESENTATIVE_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">extern</span> <a class="code hl_typedef" href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">data_t</a> <a class="code hl_variable" href="sample__representative_8h.html#a0ed063d2db07cb63fecfb70cffec43f1">offset</a>[];</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_typedef" href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">data_t</a> <a class="code hl_function" href="sample__representative_8h.html#aca1581c921d082976e7f116aa52c56f0">SampleRepresentative</a>(uint16_t sample_value);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>uint32_t <a class="code hl_function" href="sample__representative_8h.html#a6c60474c610dc64773816bc445efeb77">DoubleResolutionPredictedSample</a>(<a class="code hl_struct" href="struct_uncompressed_hyperspectral_image.html">image</a> *hIMG, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> z, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> y, <a class="code hl_typedef" href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a> x, int64_t high_resolution_predicted_sample);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>uint16_t <a class="code hl_function" href="sample__representative_8h.html#a14cff7c59ac94b0387e8b95a433521e9">PredictedSample</a>(uint32_t double_resolution_predicted_sample);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>int64_t <a class="code hl_function" href="sample__representative_8h.html#a441e8d0fe639d45889aab5b88c4138f4">HighResolutionPredictedSample</a>(int64_t predicted_central_local_difference, uint32_t local_sum);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">/* SAMPLE_REPRESENTATIVE_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aconstants_8h_html"><div class="ttname"><a href="constants_8h.html">constants.h</a></div><div class="ttdoc">A Global File for constants shared between modules.</div></div>
 <div class="ttc" id="aimage_8h_html"><div class="ttname"><a href="image_8h.html">image.h</a></div></div>
-<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:45</div></div>
+<div class="ttc" id="alinear__algebra_8h_html"><div class="ttname"><a href="linear__algebra_8h.html">linear_algebra.h</a></div><div class="ttdoc">Skeleton File for Generin Vector Operations.</div></div>
+<div class="ttc" id="aquantizer_8h_html"><div class="ttname"><a href="quantizer_8h.html">quantizer.h</a></div><div class="ttdoc">Functions For the Quantizer Steps.</div></div>
+<div class="ttc" id="asample__representative_8h_html_a0ed063d2db07cb63fecfb70cffec43f1"><div class="ttname"><a href="sample__representative_8h.html#a0ed063d2db07cb63fecfb70cffec43f1">offset</a></div><div class="ttdeci">data_t offset[]</div><div class="ttdoc">Offset Coefficients.</div></div>
+<div class="ttc" id="asample__representative_8h_html_a14cff7c59ac94b0387e8b95a433521e9"><div class="ttname"><a href="sample__representative_8h.html#a14cff7c59ac94b0387e8b95a433521e9">PredictedSample</a></div><div class="ttdeci">uint16_t PredictedSample(uint32_t double_resolution_predicted_sample)</div><div class="ttdoc">Predicted Sample Calculation.</div><div class="ttdef"><b>Definition</b> sample_representative.c:9</div></div>
+<div class="ttc" id="asample__representative_8h_html_a441e8d0fe639d45889aab5b88c4138f4"><div class="ttname"><a href="sample__representative_8h.html#a441e8d0fe639d45889aab5b88c4138f4">HighResolutionPredictedSample</a></div><div class="ttdeci">int64_t HighResolutionPredictedSample(int64_t predicted_central_local_difference, uint32_t local_sum)</div><div class="ttdoc">High Resolution Prediction Sample Calculation.</div><div class="ttdef"><b>Definition</b> sample_representative.c:32</div></div>
+<div class="ttc" id="asample__representative_8h_html_a6c60474c610dc64773816bc445efeb77"><div class="ttname"><a href="sample__representative_8h.html#a6c60474c610dc64773816bc445efeb77">DoubleResolutionPredictedSample</a></div><div class="ttdeci">uint32_t DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample)</div><div class="ttdoc">Double Resolution Prediction Sample Calculation.</div><div class="ttdef"><b>Definition</b> sample_representative.c:14</div></div>
+<div class="ttc" id="asample__representative_8h_html_aa25f2ddef46c2c5466643b137580700a"><div class="ttname"><a href="sample__representative_8h.html#aa25f2ddef46c2c5466643b137580700a">damping</a></div><div class="ttdeci">data_t damping[]</div><div class="ttdoc">Damping Offsets.</div></div>
+<div class="ttc" id="asample__representative_8h_html_aca1581c921d082976e7f116aa52c56f0"><div class="ttname"><a href="sample__representative_8h.html#aca1581c921d082976e7f116aa52c56f0">SampleRepresentative</a></div><div class="ttdeci">data_t SampleRepresentative(uint16_t sample_value)</div><div class="ttdoc">Sample Representative Calculation.</div><div class="ttdef"><b>Definition</b> sample_representative.c:4</div></div>
+<div class="ttc" id="astruct_uncompressed_hyperspectral_image_html"><div class="ttname"><a href="struct_uncompressed_hyperspectral_image.html">UncompressedHyperspectralImage</a></div><div class="ttdef"><b>Definition</b> uhi_io.h:53</div></div>
+<div class="ttc" id="atypedefs_8h_html_a5acabcf9a2b0d843de53680562e2f639"><div class="ttname"><a href="typedefs_8h.html#a5acabcf9a2b0d843de53680562e2f639">data_t</a></div><div class="ttdeci">PIXEL data_t</div><div class="ttdoc">Type representing vector units in linear_algebra.h.</div><div class="ttdef"><b>Definition</b> typedefs.h:59</div></div>
 <div class="ttc" id="atypedefs_8h_html_a762a038a8611999e554c912cf3c72cea"><div class="ttname"><a href="typedefs_8h.html#a762a038a8611999e554c912cf3c72cea">INDEX</a></div><div class="ttdeci">DIM INDEX</div><div class="ttdoc">Type representing Indices of Image.</div><div class="ttdef"><b>Definition</b> typedefs.h:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bcb0e1c297d4eac1568cd8ae7fb42a08.html">predictor</a></li><li class="navelem"><b>sample_representative.h</b></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_bcb0e1c297d4eac1568cd8ae7fb42a08.html">predictor</a></li><li class="navelem"><a class="el" href="sample__representative_8h.html">sample_representative.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

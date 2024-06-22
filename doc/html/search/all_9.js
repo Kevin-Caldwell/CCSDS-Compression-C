@@ -11,5 +11,6 @@ var searchData=
   ['hashtable_8',['HashTable',['../struct_hash_table.html',1,'']]],
   ['here_9',['Title Here',['../md__r_e_a_d_m_e.html#autotoc_md4',1,'']]],
   ['highlights_10',['Development Highlights?',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
-  ['hypercube_3a_20a_20c_20implementation_20of_20the_20ccsds_20123_20b_202_20standard_11',['hyperCube: A C Implementation of the CCSDS-123-B-2 Standard',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['highresolutionpredictedsample_11',['HighResolutionPredictedSample',['../sample__representative_8h.html#a441e8d0fe639d45889aab5b88c4138f4',1,'sample_representative.c']]],
+  ['hypercube_3a_20a_20c_20implementation_20of_20the_20ccsds_20123_20b_202_20standard_12',['hyperCube: A C Implementation of the CCSDS-123-B-2 Standard',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

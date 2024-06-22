@@ -1,0 +1,210 @@
+\doxysection{include/math/math\+\_\+functions.h File Reference}
+\hypertarget{math__functions_8h}{}\label{math__functions_8h}\index{include/math/math\_functions.h@{include/math/math\_functions.h}}
+
+
+Mathematical Helper Functions for use throughout code.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include "{}constants/typedefs.\+h"{}}\newline
+Include dependency graph for math\+\_\+functions.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{math__functions_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{math__functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdim3}{dim3}}
+\begin{DoxyCompactList}\small\item\em struct for 3d coordinates. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdim2}{dim2}}
+\begin{DoxyCompactList}\small\item\em struct for 2d coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{math__functions_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{math__functions_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4} 
+\#define {\bfseries NULL}~0
+\begin{DoxyCompactList}\small\item\em NULL typedef to 0 if it does not exist yet. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a816dcf31e408d445ca8275ad96e6eb1e}\label{math__functions_8h_a816dcf31e408d445ca8275ad96e6eb1e} 
+\#define {\bfseries CLIP}(x,  min\+\_\+val,  max\+\_\+val)~((x) $<$ (min\+\_\+val) ? (min\+\_\+val) \+: ((x) $>$ (max\+\_\+val) ? (max\+\_\+val) \+: (x)))
+\begin{DoxyCompactList}\small\item\em Restrict x between min\+\_\+val and max\+\_\+val. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_aa26f9f0c05aaa0b3935ffee8b9b040cd}\label{math__functions_8h_aa26f9f0c05aaa0b3935ffee8b9b040cd} 
+\#define {\bfseries INSIDE\+\_\+\+INTERVAL}(x,  min,  max)~(min $<$ x \&\& x $<$ max)
+\begin{DoxyCompactList}\small\item\em Check if x is within \mbox{[}min, max\mbox{]}. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a67f67d2902bd4730eb69f82fcf008401}\label{math__functions_8h_a67f67d2902bd4730eb69f82fcf008401} 
+\#define {\bfseries OUTSIDE\+\_\+\+INTERVAL}(x,  min,  max)~(min $>$ x \texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|} x $>$ max)
+\begin{DoxyCompactList}\small\item\em Check if x is outside \mbox{[}min, max\mbox{]}. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a8c5ff70b6b28cd0157c50a22406f92c4}\label{math__functions_8h_a8c5ff70b6b28cd0157c50a22406f92c4} 
+\#define {\bfseries SIGN}(x)~x $<$ 0 ? -\/1 \+: (x $>$ 0 ? 1 \+: 0)
+\begin{DoxyCompactList}\small\item\em Return 0 if x=0, -\/1 if x\texorpdfstring{$<$}{<}1, +1 if x\texorpdfstring{$>$}{>}1. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a5f76d4dda1e368d45e059912932c7b60}\label{math__functions_8h_a5f76d4dda1e368d45e059912932c7b60} 
+\#define {\bfseries SIGN\+\_\+P}(x)~(x $<$ 0 ? -\/1 \+: 1)
+\begin{DoxyCompactList}\small\item\em Return -\/1 if x in (-\/inf., 0), 1 x in \mbox{[}0, inf.) \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a16c5207cff1677a5fde882e81a7d58bd}\label{math__functions_8h_a16c5207cff1677a5fde882e81a7d58bd} 
+\#define {\bfseries MOD}(x,  R)~((x + \mbox{\hyperlink{math__functions_8h_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R -\/ 1)) \% \mbox{\hyperlink{math__functions_8h_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R) -\/ \mbox{\hyperlink{math__functions_8h_a60b4b9f1152371307ebadc232149699c}{BPOW}}(R -\/ 1))
+\begin{DoxyCompactList}\small\item\em Returns an overflow-\/adjusted modulo. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f}\label{math__functions_8h_afa99ec4acc4ecb2dc3c2d05da15d0e3f} 
+\#define {\bfseries MAX}(a,  b)~(a $>$ b ? a \+: b)
+\begin{DoxyCompactList}\small\item\em Max of a and b. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\label{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f} 
+\#define {\bfseries MIN}(a,  b)~(a $<$ b ? a \+: b)
+\begin{DoxyCompactList}\small\item\em Min of a and b. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a60b4b9f1152371307ebadc232149699c}\label{math__functions_8h_a60b4b9f1152371307ebadc232149699c} 
+\#define {\bfseries BPOW}(x)~(1 $<$$<$ (x))
+\begin{DoxyCompactList}\small\item\em Returns 2\texorpdfstring{$^\wedge$}{\string^}x. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_ac3644f84794a8bfdacf39c4b2c2495fc}\label{math__functions_8h_ac3644f84794a8bfdacf39c4b2c2495fc} 
+\#define {\bfseries SQ}(x)~((x) \texorpdfstring{$\ast$}{*} (x))
+\begin{DoxyCompactList}\small\item\em Square of x. \end{DoxyCompactList}\item 
+\Hypertarget{math__functions_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}\label{math__functions_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4} 
+\#define {\bfseries Ps}(z)~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, kP)
+\begin{DoxyCompactList}\small\item\em Calculates Ps, Refer to Standard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{math__functions_8h_af3273ad069a5db23c87cf0547340e6fa}{dim3}}
+\begin{DoxyCompactList}\small\item\em struct for 3d coordinates. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structdim2}{dim2}} \mbox{\hyperlink{math__functions_8h_a25a1b999e489d87de5f6ae6f37cba079}{dim2}}
+\begin{DoxyCompactList}\small\item\em struct for 2d coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{math__functions_8h_a61e36d5241561d1bc112c291a3262565}{Euclidian2}} (\mbox{\hyperlink{structdim2}{dim2}} pt1, \mbox{\hyperlink{structdim2}{dim2}} pt2)
+\item 
+\mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{math__functions_8h_adfddd321b4840c92df9f1d48e11c657e}{Euclidian3}} (\mbox{\hyperlink{structdim3}{dim3}} pt1, \mbox{\hyperlink{structdim3}{dim3}} pt2)
+\item 
+\mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{math__functions_8h_adf11110e70a4ca4a966622288d194681}{Manhattan2}} (\mbox{\hyperlink{structdim2}{dim2}} pt1, \mbox{\hyperlink{structdim2}{dim2}} pt2)
+\item 
+\mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} \mbox{\hyperlink{math__functions_8h_ace80df346398f6e153166e87cee41d47}{Manhattan3}} (\mbox{\hyperlink{structdim3}{dim3}} pt1, \mbox{\hyperlink{structdim3}{dim3}} pt2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mathematical Helper Functions for use throughout code. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{math__functions_8h_a25a1b999e489d87de5f6ae6f37cba079}\label{math__functions_8h_a25a1b999e489d87de5f6ae6f37cba079} 
+\index{math\_functions.h@{math\_functions.h}!dim2@{dim2}}
+\index{dim2@{dim2}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dim2}{dim2}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdim2}{dim2}} \mbox{\hyperlink{structdim2}{dim2}}}
+
+
+
+struct for 2d coordinates. 
+
+2D Struct, used to describe size and 2D Indices. \Hypertarget{math__functions_8h_af3273ad069a5db23c87cf0547340e6fa}\label{math__functions_8h_af3273ad069a5db23c87cf0547340e6fa} 
+\index{math\_functions.h@{math\_functions.h}!dim3@{dim3}}
+\index{dim3@{dim3}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{dim3}{dim3}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdim3}{dim3}} \mbox{\hyperlink{structdim3}{dim3}}}
+
+
+
+struct for 3d coordinates. 
+
+3D Dimension Struct, used to describe size and 3D-\/\+Indicies.
+
+Spatial Dimensions\+: x, y Spectral Band\+: z 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{math__functions_8h_a61e36d5241561d1bc112c291a3262565}\label{math__functions_8h_a61e36d5241561d1bc112c291a3262565} 
+\index{math\_functions.h@{math\_functions.h}!Euclidian2@{Euclidian2}}
+\index{Euclidian2@{Euclidian2}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Euclidian2()}{Euclidian2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Euclidian2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdim2}{dim2}}}]{pt1,  }\item[{\mbox{\hyperlink{structdim2}{dim2}}}]{pt2 }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]Relocate to reduce scope \end{DoxyRefDesc}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{math__functions_8h_a61e36d5241561d1bc112c291a3262565_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{math__functions_8h_a61e36d5241561d1bc112c291a3262565_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{math__functions_8h_adfddd321b4840c92df9f1d48e11c657e}\label{math__functions_8h_adfddd321b4840c92df9f1d48e11c657e} 
+\index{math\_functions.h@{math\_functions.h}!Euclidian3@{Euclidian3}}
+\index{Euclidian3@{Euclidian3}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Euclidian3()}{Euclidian3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Euclidian3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{pt1,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{pt2 }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000017}{Todo}}]Relocate to reduce scope \end{DoxyRefDesc}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{math__functions_8h_adfddd321b4840c92df9f1d48e11c657e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{math__functions_8h_adfddd321b4840c92df9f1d48e11c657e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{math__functions_8h_adf11110e70a4ca4a966622288d194681}\label{math__functions_8h_adf11110e70a4ca4a966622288d194681} 
+\index{math\_functions.h@{math\_functions.h}!Manhattan2@{Manhattan2}}
+\index{Manhattan2@{Manhattan2}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Manhattan2()}{Manhattan2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Manhattan2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdim2}{dim2}}}]{pt1,  }\item[{\mbox{\hyperlink{structdim2}{dim2}}}]{pt2 }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000018}{Todo}}]Relocate to reduce scope \end{DoxyRefDesc}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{math__functions_8h_adf11110e70a4ca4a966622288d194681_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{math__functions_8h_adf11110e70a4ca4a966622288d194681_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{math__functions_8h_ace80df346398f6e153166e87cee41d47}\label{math__functions_8h_ace80df346398f6e153166e87cee41d47} 
+\index{math\_functions.h@{math\_functions.h}!Manhattan3@{Manhattan3}}
+\index{Manhattan3@{Manhattan3}!math\_functions.h@{math\_functions.h}}
+\doxysubsubsection{\texorpdfstring{Manhattan3()}{Manhattan3()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a36cb3b01d81ffd844bbbfb54003e06ec}{UINT}} Manhattan3 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{pt1,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{pt2 }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000019}{Todo}}]Relocate to reduce scope \end{DoxyRefDesc}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{math__functions_8h_ace80df346398f6e153166e87cee41d47_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{math__functions_8h_ace80df346398f6e153166e87cee41d47_icgraph}
+\end{center}
+\end{figure}

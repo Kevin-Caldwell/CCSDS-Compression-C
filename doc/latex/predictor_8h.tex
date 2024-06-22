@@ -1,0 +1,120 @@
+\doxysection{include/predictor/predictor.h File Reference}
+\hypertarget{predictor_8h}{}\label{predictor_8h}\index{include/predictor/predictor.h@{include/predictor/predictor.h}}
+
+
+Functions for the Predictor System.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}dst/image.\+h"{}}\newline
+{\ttfamily \#include "{}constants/global\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
+{\ttfamily \#include "{}constants/predictor\+\_\+constants.\+h"{}}\newline
+{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
+{\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
+{\ttfamily \#include "{}dst/locale\+\_\+buffer.\+h"{}}\newline
+{\ttfamily \#include "{}predictor/weights.\+h"{}}\newline
+{\ttfamily \#include "{}predictor/quantizer.\+h"{}}\newline
+{\ttfamily \#include "{}files/logs.\+h"{}}\newline
+Include dependency graph for predictor.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{predictor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{predictor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{predictor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}{Ps}}(z)~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, kP)
+\begin{DoxyCompactList}\small\item\em Redundant Definition from \doxylink{math__functions_8h}{math\+\_\+functions.\+h}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{predictor_8h_a4a94804509574a94d896a4164802bcd2}{Run\+Predictor}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}result)
+\begin{DoxyCompactList}\small\item\em Run Predictor on h\+IMG. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{predictor_8h_a4e6f06fbe7f6b462853492abfbd0bec2}{kC}}
+\begin{DoxyCompactList}\small\item\em Finds the kC constant, updated every pass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for the Predictor System. 
+
+Top Level Function(s) for Running Predictor on a Hyperspectral Image. Returns a predicted Hyperspectral Image. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{predictor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}\label{predictor_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4} 
+\index{predictor.h@{predictor.h}!Ps@{Ps}}
+\index{Ps@{Ps}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{Ps}{Ps}}
+{\footnotesize\ttfamily \#define Ps(\begin{DoxyParamCaption}\item[{}]{z }\end{DoxyParamCaption})~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, kP)}
+
+
+
+Redundant Definition from \doxylink{math__functions_8h}{math\+\_\+functions.\+h}. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000020}{Todo}}]remove this \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{predictor_8h_a4a94804509574a94d896a4164802bcd2}\label{predictor_8h_a4a94804509574a94d896a4164802bcd2} 
+\index{predictor.h@{predictor.h}!RunPredictor@{RunPredictor}}
+\index{RunPredictor@{RunPredictor}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{RunPredictor()}{RunPredictor()}}
+{\footnotesize\ttfamily int Run\+Predictor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{result }\end{DoxyParamCaption})}
+
+
+
+Run Predictor on h\+IMG. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+IMG} & Hyperspectral Image to run prediction \\
+\hline
+{\em result} & Store Prediction Result \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{predictor_8h_a4a94804509574a94d896a4164802bcd2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{predictor_8h_a4a94804509574a94d896a4164802bcd2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{predictor_8h_a4e6f06fbe7f6b462853492abfbd0bec2}\label{predictor_8h_a4e6f06fbe7f6b462853492abfbd0bec2} 
+\index{predictor.h@{predictor.h}!kC@{kC}}
+\index{kC@{kC}!predictor.h@{predictor.h}}
+\doxysubsubsection{\texorpdfstring{kC}{kC}}
+{\footnotesize\ttfamily int kC\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Finds the kC constant, updated every pass. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000021}{Todo}}]Remove or Integrate with Predictor\+Constants Structure. \end{DoxyRefDesc}

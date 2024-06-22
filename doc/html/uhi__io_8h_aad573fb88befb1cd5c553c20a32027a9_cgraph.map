@@ -1,0 +1,13 @@
+<map id="Proxy_GetPixel" name="Proxy_GetPixel">
+<area shape="rect" id="Node000001" title="Proxy function behaves the same way as image GetPixel." alt="" coords="5,67,125,92"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="38,68,32,58,35,49,46,42,65,40,88,43,98,52,94,56,86,48,65,45,48,47,39,52,37,58,42,65"/>
+<area shape="rect" id="Node000002" href="$uhi__io_8c.html#ad7fd2d84633ee6e0355a950deeacd220" title="Reads a PIXEL value from an index in an UHI image." alt="" coords="173,67,291,92"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="125,77,159,77,159,82,125,82"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="208,68,203,58,206,49,216,42,232,40,252,44,260,52,256,56,249,48,232,45,217,47,210,52,208,58,213,65"/>
+<area shape="rect" id="Node000003" href="$file___i_o_8c.html#a6d14febd2771048b4a06dd86ea17718d" title=" " alt="" coords="339,29,412,55"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="281,64,325,52,326,57,282,69"/>
+<area shape="rect" id="Node000004" href="$file___i_o_8c.html#a3ac9e7bef40307b69bdf5e0cb6904d83" title=" " alt="" coords="340,103,411,128"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="284,89,327,101,326,106,282,95"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="351,30,346,21,349,11,359,5,375,3,395,6,403,15,400,18,392,11,375,8,361,10,353,15,352,20,356,28"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="351,104,346,94,349,85,359,78,375,76,395,80,403,88,400,92,392,84,375,81,361,83,353,88,352,94,356,101"/>
+</map>

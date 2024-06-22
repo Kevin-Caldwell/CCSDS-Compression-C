@@ -42,7 +42,7 @@ int SaveImageAsCSV(image *hIMG, char *file_name)
     if (!fp)
     {
         Log_error("SaveImageAsCSV: Unable to open file");
-        return FILE_ACCESS_ERROR;
+        return FILE_NON_EXISTENT;
     }
 #endif
 
@@ -98,7 +98,7 @@ int ReadImageFromCSV(image *hIMG, char *file_name)
     if (!fp)
     {
         Log_error("ReadImageFromCSV: Unable to open File");
-        return FILE_ACCESS_ERROR;
+        return FILE_NON_EXISTENT;
     }
 #endif
     dim3 size = {0, 0, 0};

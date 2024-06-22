@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['offset_5ftable_5fflag_0',['OFFSET_TABLE_FLAG',['../d7/ddb/encoder__constants_8h.html#a01ae0a84ae74aeda76855e3248f8de30',1,'encoder_constants.h']]],
-  ['output_5fword_5fsize_1',['OUTPUT_WORD_SIZE',['../d7/ddb/encoder__constants_8h.html#ad01e1c682be1b33d6ea8287bb7d5fff5',1,'encoder_constants.h']]],
-  ['outside_5finterval_2',['OUTSIDE_INTERVAL',['../d2/de2/math__functions_8h.html#a67f67d2902bd4730eb69f82fcf008401',1,'math_functions.h']]]
+  ['sign_0',['SIGN',['../math__functions_8h.html#a8c5ff70b6b28cd0157c50a22406f92c4',1,'math_functions.h']]],
+  ['sign_5fp_1',['SIGN_P',['../math__functions_8h.html#a5f76d4dda1e368d45e059912932c7b60',1,'math_functions.h']]],
+  ['sq_2',['SQ',['../math__functions_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc',1,'math_functions.h']]],
+  ['sr_3',['SR',['../sample__representative_8h.html#a9d318d5c2a1d81d6f70cbf34e917e47d',1,'sample_representative.h']]]
 ];
