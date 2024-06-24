@@ -1,78 +1,49 @@
 <map id="include/constants/constants.h" name="include/constants/constants.h">
-<area shape="rect" id="Node000001" title="A Global File for constants shared between modules." alt="" coords="1497,5,1712,31"/>
-<area shape="rect" id="Node000002" href="$encoder__constants_8h.html" title="Contains all Encoder&#45;Specific Constants." alt="" coords="279,79,471,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1484,30,472,94,471,89,1484,24"/>
-<area shape="rect" id="Node000006" href="$header_8h_source.html" title=" " alt="" coords="5,174,191,199"/>
-<area shape="poly" id="edge44_Node000001_Node000006" title=" " alt="" coords="1484,24,1180,30,803,41,463,58,340,69,268,81,220,101,176,127,112,176,109,172,173,123,218,96,267,76,339,64,462,53,803,36,1180,25,1484,18"/>
-<area shape="rect" id="Node000007" href="$reconstructor_8h_source.html" title=" " alt="" coords="1569,665,1734,705"/>
-<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="1726,19,1792,25,1865,36,1939,52,2010,76,2063,94,2109,111,2128,123,2143,138,2152,158,2155,185,2155,533,2152,549,2143,565,2109,592,2059,614,1997,634,1860,662,1734,679,1734,674,1859,657,1996,628,2057,609,2106,587,2139,561,2147,547,2150,532,2150,185,2147,160,2138,141,2125,127,2107,116,2061,99,2008,81,1937,57,1864,41,1792,30,1725,24"/>
-<area shape="rect" id="Node000008" href="$image_8h.html" title=" " alt="" coords="864,86,1015,111"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="1495,35,1015,91,1015,86,1494,30"/>
-<area shape="rect" id="Node000009" href="$locale__buffer_8h.html" title="Contains Pixel Buffer Functions." alt="" coords="690,167,826,207"/>
-<area shape="poly" id="edge43_Node000001_Node000009" title=" " alt="" coords="1484,27,1114,47,946,62,887,71,852,81,826,99,803,122,770,168,766,165,799,119,822,95,850,76,886,66,945,57,1113,41,1484,21"/>
-<area shape="rect" id="Node000010" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="1177,592,1381,617"/>
-<area shape="poly" id="edge55_Node000001_Node000010" title=" " alt="" coords="1485,34,1412,51,1377,64,1345,80,1317,100,1296,124,1282,152,1277,186,1277,452,1281,592,1276,592,1271,452,1271,185,1277,151,1291,121,1314,96,1342,76,1375,59,1411,46,1484,29"/>
-<area shape="rect" id="Node000014" href="$sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="1667,255,1849,295"/>
-<area shape="poly" id="edge56_Node000001_Node000014" title=" " alt="" coords="1726,27,1770,46,1789,60,1806,77,1817,99,1822,123,1820,148,1815,173,1795,220,1774,255,1769,253,1791,217,1809,172,1815,148,1816,124,1812,101,1801,80,1786,64,1767,50,1724,32"/>
-<area shape="rect" id="Node000015" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="1731,431,1897,471"/>
-<area shape="poly" id="edge53_Node000001_Node000015" title=" " alt="" coords="1709,30,1832,51,1961,84,2017,104,2063,128,2093,154,2102,169,2105,185,2105,276,2099,310,2084,340,2062,366,2033,387,2001,404,1966,419,1898,438,1897,433,1965,414,1999,400,2030,382,2058,362,2080,337,2094,309,2099,276,2099,186,2097,171,2089,158,2060,132,2015,109,1959,89,1831,57,1708,35"/>
-<area shape="rect" id="Node000016" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="1463,519,1661,544"/>
-<area shape="poly" id="edge57_Node000001_Node000016" title=" " alt="" coords="1605,45,1566,519,1560,518,1600,44"/>
-<area shape="rect" id="Node000017" href="$local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="1847,343,2013,383"/>
-<area shape="poly" id="edge54_Node000001_Node000017" title=" " alt="" coords="1727,27,1782,45,1807,59,1830,77,1858,107,1880,142,1897,180,1910,218,1926,290,1932,342,1926,343,1920,291,1905,220,1892,182,1875,145,1854,111,1827,81,1804,64,1779,50,1725,32"/>
-<area shape="rect" id="Node000019" href="$linear__algebra_8h.html" title="Skeleton File for Generin Vector Operations." alt="" coords="1643,79,1791,119"/>
-<area shape="poly" id="edge45_Node000001_Node000019" title=" " alt="" coords="1634,36,1691,76,1688,81,1631,41"/>
-<area shape="rect" id="Node000003" href="$decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="341,255,506,295"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="389,131,401,166,422,254,417,255,395,167,384,133"/>
-<area shape="rect" id="Node000004" href="$body_8h_source.html" title=" " alt="" coords="215,174,386,199"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="352,131,313,175,309,172,348,128"/>
-<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="302,125,136,177,134,171,301,120"/>
-<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="330,205,398,252,395,257,327,209"/>
-<area shape="rect" id="Node000005" href="$generate__image_8h_source.html" title=" " alt="" coords="477,665,657,705"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="304,213,305,361,305,532,309,561,321,585,339,606,362,624,418,651,478,668,476,673,416,656,359,628,335,610,316,588,304,562,299,533,299,361,298,213"/>
-<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="118,209,137,238,156,275,172,317,178,361,178,532,180,544,186,554,208,575,241,595,284,613,382,643,478,665,476,670,380,648,282,618,239,600,205,580,181,558,175,545,173,533,173,362,167,318,151,277,132,241,113,212"/>
-<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="851,108,757,116,655,128,563,146,527,157,501,169,478,188,459,211,433,256,429,253,455,208,474,184,498,164,525,152,562,141,654,123,756,111,850,103"/>
-<area shape="poly" id="edge16_Node000008_Node000004" title=" " alt="" coords="851,115,386,177,386,171,850,109"/>
-<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="936,125,924,192,917,273,917,532,922,555,936,575,959,593,990,610,1071,636,1169,655,1277,668,1385,676,1569,682,1568,687,1385,681,1277,673,1169,660,1070,641,988,614,956,598,932,579,917,557,911,533,911,273,918,191,931,125"/>
-<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="904,120,799,169,797,164,902,115"/>
-<area shape="poly" id="edge21_Node000008_Node000010" title=" " alt="" coords="954,123,973,166,994,225,1011,292,1018,361,1018,452,1023,481,1035,506,1055,528,1080,546,1139,573,1200,589,1199,595,1137,578,1077,550,1051,532,1031,509,1018,483,1013,452,1013,361,1006,293,989,226,968,168,949,125"/>
-<area shape="rect" id="Node000011" href="$csv-io_8h.html" title="Functions for image file read and write to CSV." alt="" coords="511,174,666,199"/>
-<area shape="poly" id="edge17_Node000008_Node000011" title=" " alt="" coords="880,117,636,177,635,171,879,112"/>
-<area shape="rect" id="Node000012" href="$perlin_8h_source.html" title=" " alt="" coords="655,262,826,287"/>
-<area shape="poly" id="edge40_Node000008_Node000012" title=" " alt="" coords="923,124,886,164,840,209,799,240,761,264,758,260,795,236,836,205,882,161,919,120"/>
-<area shape="rect" id="Node000013" href="$quantizer_8h.html" title="Functions For the Quantizer Steps." alt="" coords="1363,174,1569,199"/>
-<area shape="poly" id="edge22_Node000008_Node000013" title=" " alt="" coords="1024,111,1396,171,1396,177,1023,116"/>
-<area shape="poly" id="edge38_Node000008_Node000014" title=" " alt="" coords="1029,102,1324,124,1474,141,1535,152,1582,164,1627,183,1669,206,1736,252,1733,257,1666,211,1624,188,1580,169,1534,157,1473,147,1324,129,1028,107"/>
-<area shape="poly" id="edge39_Node000008_Node000016" title=" " alt="" coords="1029,109,1113,129,1157,144,1198,164,1262,206,1322,254,1378,306,1429,359,1510,454,1556,517,1552,520,1505,458,1425,362,1375,310,1319,258,1259,210,1195,169,1155,149,1112,134,1028,114"/>
-<area shape="rect" id="Node000018" href="$synthetic__image__generator_8h_source.html" title=" " alt="" coords="1003,167,1185,207"/>
-<area shape="poly" id="edge41_Node000008_Node000018" title=" " alt="" coords="973,116,1061,164,1059,169,971,120"/>
-<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="802,213,823,231,840,253,855,281,863,305,866,361,866,452,869,475,877,491,890,503,906,512,949,525,998,541,1042,558,1089,571,1178,589,1177,595,1087,577,1041,563,996,547,947,530,904,517,887,507,873,494,864,476,861,452,861,361,858,306,850,283,836,256,819,235,798,217"/>
-<area shape="poly" id="edge15_Node000010_Node000005" title=" " alt="" coords="1164,621,658,677,658,671,1164,616"/>
-<area shape="poly" id="edge14_Node000010_Node000007" title=" " alt="" coords="1347,618,1569,664,1568,669,1346,623"/>
-<area shape="poly" id="edge19_Node000011_Node000005" title=" " alt="" coords="586,213,576,280,570,361,570,533,570,665,565,665,565,533,565,361,570,280,581,213"/>
-<area shape="poly" id="edge18_Node000011_Node000007" title=" " alt="" coords="600,211,634,293,661,348,695,407,735,467,782,524,836,574,897,615,951,636,1025,652,1113,663,1210,672,1407,681,1568,682,1568,688,1407,686,1210,677,1113,669,1024,657,949,641,894,620,833,578,778,527,731,470,690,410,656,350,629,296,595,213"/>
-<area shape="poly" id="edge20_Node000011_Node000012" title=" " alt="" coords="622,204,721,259,719,264,620,209"/>
-<area shape="poly" id="edge23_Node000013_Node000007" title=" " alt="" coords="1460,213,1442,274,1427,359,1425,406,1427,453,1437,499,1454,543,1483,584,1522,617,1564,644,1603,663,1601,668,1561,648,1519,621,1479,587,1449,545,1431,501,1422,454,1420,406,1422,358,1437,273,1455,211"/>
-<area shape="poly" id="edge24_Node000013_Node000010" title=" " alt="" coords="1448,211,1426,239,1403,276,1385,317,1378,362,1378,452,1376,480,1371,502,1346,546,1322,573,1297,594,1294,590,1318,569,1341,542,1366,500,1371,479,1373,452,1373,361,1380,316,1398,273,1421,236,1444,208"/>
-<area shape="poly" id="edge25_Node000013_Node000014" title=" " alt="" coords="1513,201,1687,252,1685,257,1511,206"/>
-<area shape="poly" id="edge37_Node000013_Node000016" title=" " alt="" coords="1480,211,1498,254,1521,332,1540,409,1563,518,1557,519,1535,410,1516,333,1493,256,1475,213"/>
-<area shape="poly" id="edge26_Node000014_Node000007" title=" " alt="" coords="1752,309,1659,666,1654,664,1747,308"/>
-<area shape="poly" id="edge36_Node000014_Node000013" title=" " alt="" coords="1687,253,1511,202,1513,197,1689,248"/>
-<area shape="poly" id="edge27_Node000014_Node000015" title=" " alt="" coords="1770,307,1793,382,1809,429,1804,431,1787,384,1765,309"/>
-<area shape="poly" id="edge33_Node000014_Node000017" title=" " alt="" coords="1809,298,1894,340,1891,345,1807,303"/>
-<area shape="poly" id="edge28_Node000015_Node000007" title=" " alt="" coords="1801,484,1766,548,1719,619,1674,667,1670,664,1715,616,1761,545,1796,481"/>
-<area shape="poly" id="edge29_Node000015_Node000016" title=" " alt="" coords="1733,477,1593,521,1591,516,1732,472"/>
-<area shape="poly" id="edge30_Node000016_Node000007" title=" " alt="" coords="1578,554,1642,664,1638,666,1573,557"/>
-<area shape="poly" id="edge32_Node000016_Node000010" title=" " alt="" coords="1504,550,1326,594,1324,589,1503,545"/>
-<area shape="poly" id="edge31_Node000016_Node000015" title=" " alt="" coords="1618,512,1761,468,1762,473,1620,517"/>
-<area shape="poly" id="edge34_Node000017_Node000007" title=" " alt="" coords="1932,397,1926,434,1912,472,1890,506,1863,538,1803,593,1741,637,1690,668,1687,663,1738,632,1799,589,1859,534,1885,503,1908,469,1921,433,1927,396"/>
-<area shape="poly" id="edge35_Node000017_Node000015" title=" " alt="" coords="1895,393,1841,433,1838,428,1892,389"/>
-<area shape="poly" id="edge42_Node000018_Node000005" title=" " alt="" coords="1066,218,589,667,586,663,1062,215"/>
-<area shape="poly" id="edge46_Node000019_Node000007" title=" " alt="" coords="1805,105,1886,122,1927,135,1966,152,2001,174,2029,201,2047,234,2054,273,2054,533,2052,546,2045,559,2020,581,1983,602,1938,621,1834,651,1735,673,1734,667,1833,646,1936,616,1981,597,2017,577,2040,555,2047,544,2049,532,2049,274,2042,236,2025,204,1998,178,1964,157,1925,140,1884,127,1804,110"/>
-<area shape="poly" id="edge48_Node000019_Node000010" title=" " alt="" coords="1629,108,1551,115,1469,127,1398,145,1371,156,1352,169,1333,192,1327,215,1327,273,1327,452,1323,494,1312,534,1288,593,1283,591,1307,532,1318,493,1322,452,1322,273,1321,214,1329,189,1348,165,1368,151,1396,140,1468,122,1550,110,1629,102"/>
-<area shape="poly" id="edge49_Node000019_Node000013" title=" " alt="" coords="1649,126,1500,177,1499,171,1648,121"/>
-<area shape="poly" id="edge50_Node000019_Node000014" title=" " alt="" coords="1727,131,1756,254,1751,255,1722,133"/>
-<area shape="poly" id="edge47_Node000019_Node000015" title=" " alt="" coords="1757,125,1786,149,1816,179,1844,214,1865,254,1869,274,1865,295,1859,310,1852,320,1838,344,1825,390,1819,431,1813,430,1820,389,1833,342,1847,317,1854,308,1859,294,1863,274,1859,256,1839,217,1812,183,1782,153,1754,129"/>
-<area shape="poly" id="edge51_Node000019_Node000016" title=" " alt="" coords="1708,133,1679,208,1658,256,1640,316,1631,364,1620,412,1599,472,1572,520,1568,517,1594,470,1615,411,1625,363,1635,314,1653,254,1674,206,1703,131"/>
-<area shape="poly" id="edge52_Node000019_Node000018" title=" " alt="" coords="1629,115,1186,175,1185,170,1628,109"/>
+<area shape="rect" id="Node000001" title="A Global File for constants shared between modules." alt="" coords="588,5,803,31"/>
+<area shape="rect" id="Node000002" href="$encoder__constants_8h.html" title="Contains all Encoder&#45;Specific Constants." alt="" coords="23,79,215,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="599,35,216,87,215,82,598,30"/>
+<area shape="rect" id="Node000007" href="$image_8h.html" title=" " alt="" coords="452,86,603,111"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="660,39,553,88,551,84,657,34"/>
+<area shape="rect" id="Node000018" href="$linear__algebra_8h.html" title="Skeleton File for Generin Vector Operations." alt="" coords="725,79,873,119"/>
+<area shape="poly" id="edge24_Node000001_Node000018" title=" " alt="" coords="723,37,776,76,773,81,720,41"/>
+<area shape="rect" id="Node000019" href="$quantizer_8h.html" title="Functions For the Quantizer Steps." alt="" coords="857,350,1064,375"/>
+<area shape="poly" id="edge27_Node000001_Node000019" title=" " alt="" coords="796,32,844,49,886,77,914,108,935,145,949,185,958,225,965,300,964,350,959,350,960,300,953,226,944,186,930,147,910,111,883,81,841,54,794,37"/>
+<area shape="rect" id="Node000003" href="$decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="71,255,237,295"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,132,84,168,82,187,86,206,103,232,126,253,123,257,99,235,81,208,76,187,79,167,95,130"/>
+<area shape="rect" id="Node000004" href="$body_8h_source.html" title=" " alt="" coords="95,174,266,199"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="143,128,174,172,170,175,139,131"/>
+<area shape="rect" id="Node000006" href="$header_8h_source.html" title=" " alt="" coords="5,431,191,456"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="97,131,76,168,65,210,62,255,62,294,78,372,96,430,91,431,73,373,57,295,57,255,60,209,72,166,93,128"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="176,213,163,255,157,253,170,212"/>
+<area shape="rect" id="Node000005" href="$generate__image_8h_source.html" title=" " alt="" coords="240,577,420,617"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="212,205,246,232,281,268,308,311,316,336,319,361,319,445,323,518,330,577,325,577,318,518,314,445,314,361,311,337,303,314,276,271,242,236,209,209"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="128,461,302,575,300,579,125,466"/>
+<area shape="poly" id="edge10_Node000007_Node000004" title=" " alt="" coords="469,117,227,177,226,171,467,112"/>
+<area shape="rect" id="Node000008" href="$locale__buffer_8h.html" title="Contains Pixel Buffer Functions." alt="" coords="290,167,426,207"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="494,120,397,169,394,164,491,115"/>
+<area shape="rect" id="Node000009" href="$csv-io_8h.html" title="Functions for image file read and write to CSV." alt="" coords="450,504,605,529"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="514,125,491,168,472,219,466,273,466,364,472,405,487,445,521,503,516,505,482,447,467,407,461,364,461,273,467,218,486,166,509,122"/>
+<area shape="rect" id="Node000012" href="$sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="501,167,684,207"/>
+<area shape="poly" id="edge15_Node000007_Node000012" title=" " alt="" coords="547,121,580,165,576,168,542,124"/>
+<area shape="rect" id="Node000017" href="$synthetic__image__generator_8h_source.html" title=" " alt="" coords="708,167,891,207"/>
+<area shape="poly" id="edge22_Node000007_Node000017" title=" " alt="" coords="578,113,740,164,739,169,576,118"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="487,537,378,580,376,575,485,532"/>
+<area shape="rect" id="Node000010" href="$reconstructor_8h_source.html" title=" " alt="" coords="645,577,810,617"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="570,532,680,575,678,580,568,537"/>
+<area shape="rect" id="Node000011" href="$perlin_8h_source.html" title=" " alt="" coords="445,585,615,610"/>
+<area shape="poly" id="edge14_Node000009_Node000011" title=" " alt="" coords="531,543,532,584,527,585,526,543"/>
+<area shape="rect" id="Node000013" href="$local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="600,255,767,295"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="624,214,665,253,661,256,621,218"/>
+<area shape="rect" id="Node000014" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="648,343,815,383"/>
+<area shape="poly" id="edge17_Node000013_Node000014" title=" " alt="" coords="703,305,723,341,718,344,698,308"/>
+<area shape="rect" id="Node000015" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="632,431,831,456"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="734,396,734,430,729,430,729,396"/>
+<area shape="rect" id="Node000016" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="629,504,833,529"/>
+<area shape="poly" id="edge19_Node000015_Node000016" title=" " alt="" coords="734,470,734,504,729,504,729,470"/>
+<area shape="poly" id="edge21_Node000016_Node000005" title=" " alt="" coords="660,535,421,581,420,576,659,529"/>
+<area shape="poly" id="edge20_Node000016_Node000010" title=" " alt="" coords="733,543,731,577,726,577,727,543"/>
+<area shape="poly" id="edge23_Node000017_Node000005" title=" " alt="" coords="695,210,640,229,589,257,543,294,500,337,462,383,428,430,374,517,341,578,336,576,369,514,423,427,457,380,496,333,539,290,586,252,638,224,694,205"/>
+<area shape="poly" id="edge25_Node000018_Node000014" title=" " alt="" coords="861,123,885,141,904,165,911,186,904,208,877,253,841,291,802,322,767,345,764,340,799,318,837,287,873,249,900,206,905,186,900,168,882,145,858,128"/>
+<area shape="poly" id="edge26_Node000018_Node000017" title=" " alt="" coords="802,133,802,166,797,166,797,133"/>
+<area shape="poly" id="edge28_Node000019_Node000016" title=" " alt="" coords="939,386,895,421,843,458,757,506,754,502,841,454,892,417,935,382"/>
 </map>

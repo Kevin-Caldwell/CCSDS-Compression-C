@@ -94,60 +94,63 @@ $(document).ready(function(){initNavTree('image_8h.html',''); initResizable(); }
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">image.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="math__functions_8h_source.html">math/math_functions.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="constants_8h_source.html">constants/constants.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="constants_8h_source.html">constants/constants.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="uhi__io_8h_source.html">files/uhi_io.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for image.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="image_8h__incl.png" border="0" usemap="#ainclude_2dst_2image_8h" alt=""/></div>
 <map name="ainclude_2dst_2image_8h" id="ainclude_2dst_2image_8h">
-<area shape="rect" title=" " alt="" coords="115,5,266,31"/>
-<area shape="rect" title=" " alt="" coords="215,445,286,471"/>
-<area shape="poly" title=" " alt="" coords="202,30,234,85,248,123,253,163,253,313,253,432,248,432,248,313,248,164,242,124,229,87,197,32"/>
-<area shape="rect" href="math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="40,152,213,177"/>
-<area shape="poly" title=" " alt="" coords="116,32,72,50,54,63,38,80,34,89,34,98,43,115,63,131,86,144,83,148,60,135,39,118,29,99,29,88,34,77,50,59,70,45,114,27"/>
-<area shape="rect" href="constants_8h.html" title="A Global File for constants shared between modules." alt="" coords="49,79,213,104"/>
-<area shape="poly" title=" " alt="" coords="183,33,151,70,147,66,179,29"/>
-<area shape="rect" href="uhi__io_8h.html" title="Uncompressed Hyperspectral Image file IO for storing pixel values as 16&#45;bit values." alt="" coords="424,79,528,104"/>
-<area shape="poly" title=" " alt="" coords="237,28,417,73,416,78,236,33"/>
-<area shape="poly" title=" " alt="" coords="116,179,98,200,84,226,81,238,84,250,95,280,111,308,149,360,190,403,226,435,223,439,186,407,145,364,106,311,91,282,79,251,76,238,79,224,94,197,112,176"/>
-<area shape="rect" title=" " alt="" coords="94,225,162,251"/>
-<area shape="poly" title=" " alt="" coords="130,178,130,212,125,212,124,178"/>
-<area shape="rect" title=" " alt="" coords="463,519,550,544"/>
-<area shape="poly" title=" " alt="" coords="108,180,78,200,45,230,19,267,11,288,8,310,8,386,11,401,21,416,37,430,57,442,112,465,179,483,325,509,450,523,449,528,324,515,177,488,110,470,55,447,33,434,17,420,6,404,3,386,3,310,6,287,14,265,41,227,75,196,105,175"/>
-<area shape="rect" href="typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="310,445,469,471"/>
-<area shape="poly" title=" " alt="" coords="139,176,372,433,368,437,135,179"/>
-<area shape="poly" title=" " alt="" coords="410,468,477,509,474,514,407,473"/>
-<area shape="poly" title=" " alt="" coords="133,104,131,139,125,138,127,104"/>
-<area shape="poly" title=" " alt="" coords="441,106,398,125,353,153,334,170,318,190,308,212,304,237,304,313,300,347,291,380,267,434,262,432,286,378,295,346,299,313,299,236,303,210,314,187,330,166,350,148,396,120,439,102"/>
-<area shape="poly" title=" " alt="" coords="424,106,197,152,196,147,423,101"/>
-<area shape="poly" title=" " alt="" coords="528,89,616,94,666,101,715,114,759,133,796,158,810,174,820,193,827,213,829,237,829,386,827,407,822,426,800,458,769,482,731,501,688,514,644,523,564,532,563,526,643,518,687,509,729,496,766,478,797,454,817,424,822,406,824,386,824,237,822,215,815,195,805,178,792,162,757,137,713,119,665,107,616,99,528,94"/>
-<area shape="rect" title=" " alt="" coords="723,225,789,251"/>
-<area shape="poly" title=" " alt="" coords="529,98,602,116,641,131,677,150,714,180,742,212,738,216,711,184,675,154,639,136,600,121,528,103"/>
-<area shape="rect" href="file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="557,152,664,177"/>
-<area shape="poly" title=" " alt="" coords="499,102,578,143,575,148,496,106"/>
-<area shape="poly" title=" " alt="" coords="625,176,644,197,662,224,682,265,688,310,688,386,685,410,675,432,661,452,642,469,600,497,558,516,556,511,598,492,639,465,657,448,670,430,679,409,683,386,683,310,677,267,658,227,640,200,621,179"/>
-<area shape="poly" title=" " alt="" coords="635,175,721,217,719,222,633,180"/>
-<area shape="rect" title=" " alt="" coords="573,225,648,251"/>
-<area shape="poly" title=" " alt="" coords="613,178,613,212,608,212,608,178"/>
-<area shape="rect" href="global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="339,225,549,251"/>
-<area shape="poly" title=" " alt="" coords="585,180,485,222,483,217,583,175"/>
-<area shape="poly" title=" " alt="" coords="436,253,420,274,406,300,397,334,392,370,391,432,385,432,387,370,392,333,402,298,415,271,431,249"/>
-<area shape="rect" href="load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="417,299,615,324"/>
-<area shape="poly" title=" " alt="" coords="458,249,496,287,493,291,454,253"/>
-<area shape="rect" href="hash__table_8h.html" title=" " alt="" coords="442,372,571,397"/>
-<area shape="poly" title=" " alt="" coords="517,325,513,359,507,358,512,324"/>
-<area shape="poly" title=" " alt="" coords="466,400,300,446,298,441,465,395"/>
-<area shape="poly" title=" " alt="" coords="509,398,509,505,504,505,504,398"/>
-<area shape="poly" title=" " alt="" coords="489,400,422,440,419,436,486,395"/>
-<area shape="rect" title=" " alt="" coords="545,445,615,471"/>
-<area shape="poly" title=" " alt="" coords="521,396,560,434,556,438,517,400"/>
+<area shape="rect" title=" " alt="" coords="106,5,257,31"/>
+<area shape="rect" href="constants_8h.html" title="A Global File for constants shared between modules." alt="" coords="21,79,185,104"/>
+<area shape="poly" title=" " alt="" coords="170,33,127,71,124,68,167,29"/>
+<area shape="rect" href="uhi__io_8h.html" title="Uncompressed Hyperspectral Image file IO for storing pixel values as 16&#45;bit values." alt="" coords="213,79,317,104"/>
+<area shape="poly" title=" " alt="" coords="197,29,243,67,239,72,193,33"/>
+<area shape="rect" href="math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="5,445,179,471"/>
+<area shape="poly" title=" " alt="" coords="104,104,97,237,97,313,95,432,90,432,92,313,92,237,99,104"/>
+<area shape="rect" title=" " alt="" coords="14,519,82,544"/>
+<area shape="poly" title=" " alt="" coords="87,472,65,508,60,506,82,470"/>
+<area shape="rect" title=" " alt="" coords="158,519,229,544"/>
+<area shape="poly" title=" " alt="" coords="110,468,167,508,164,513,107,473"/>
+<area shape="rect" title=" " alt="" coords="365,592,451,617"/>
+<area shape="poly" title=" " alt="" coords="98,470,116,506,129,526,147,542,196,569,250,586,304,596,351,600,351,605,303,601,249,591,194,573,144,546,125,529,111,509,93,472"/>
+<area shape="rect" href="typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="446,519,605,544"/>
+<area shape="poly" title=" " alt="" coords="162,468,443,514,442,519,161,473"/>
+<area shape="poly" title=" " alt="" coords="508,546,440,587,438,582,505,542"/>
+<area shape="poly" title=" " alt="" coords="249,106,222,128,191,158,167,195,160,215,157,237,157,313,153,348,141,382,111,435,106,433,136,379,148,347,152,312,152,237,155,214,162,192,187,154,218,124,246,102"/>
+<area shape="poly" title=" " alt="" coords="261,105,235,161,223,198,219,237,219,386,213,451,202,506,197,505,208,450,213,386,213,237,218,197,230,159,256,103"/>
+<area shape="poly" title=" " alt="" coords="268,104,269,237,269,459,272,480,279,500,305,534,338,562,372,583,369,588,335,567,301,538,275,502,267,482,264,460,264,237,263,104"/>
+<area shape="rect" title=" " alt="" coords="304,299,371,324"/>
+<area shape="poly" title=" " alt="" coords="272,103,288,151,332,285,327,287,283,153,267,105"/>
+<area shape="rect" href="logs_8h.html" title="Logging Execution and Errors in Code." alt="" coords="603,152,695,177"/>
+<area shape="poly" title=" " alt="" coords="318,100,590,150,589,155,317,105"/>
+<area shape="rect" href="file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="445,225,520,251"/>
+<area shape="poly" title=" " alt="" coords="624,180,523,222,521,217,622,175"/>
+<area shape="rect" href="global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="544,299,755,324"/>
+<area shape="poly" title=" " alt="" coords="652,178,652,285,647,285,647,178"/>
+<area shape="rect" title=" " alt="" coords="719,519,790,544"/>
+<area shape="poly" title=" " alt="" coords="676,175,712,195,751,225,768,243,782,263,791,286,795,310,795,386,792,419,785,452,767,507,762,505,780,451,787,419,789,386,789,310,786,287,777,266,764,246,747,229,709,200,674,180"/>
+<area shape="rect" title=" " alt="" coords="829,225,893,251"/>
+<area shape="poly" title=" " alt="" coords="684,175,817,219,815,224,683,180"/>
+<area shape="poly" title=" " alt="" coords="472,253,454,274,436,300,416,340,411,384,411,459,411,578,405,578,405,459,405,383,411,338,431,297,449,270,469,249"/>
+<area shape="poly" title=" " alt="" coords="460,253,374,295,372,290,458,248"/>
+<area shape="rect" title=" " alt="" coords="445,299,520,324"/>
+<area shape="poly" title=" " alt="" coords="485,251,485,285,480,285,480,251"/>
+<area shape="poly" title=" " alt="" coords="510,248,611,291,609,296,508,253"/>
+<area shape="poly" title=" " alt="" coords="611,327,574,345,557,358,544,373,529,406,522,442,521,476,524,505,519,505,516,476,517,441,524,404,539,371,553,354,571,340,608,322"/>
+<area shape="rect" href="load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="553,372,751,397"/>
+<area shape="poly" title=" " alt="" coords="652,324,654,358,648,359,647,324"/>
+<area shape="rect" href="hash__table_8h.html" title=" " alt="" coords="578,445,707,471"/>
+<area shape="poly" title=" " alt="" coords="653,398,649,432,643,431,648,397"/>
+<area shape="poly" title=" " alt="" coords="578,472,242,525,242,520,577,467"/>
+<area shape="poly" title=" " alt="" coords="645,471,640,508,632,528,619,546,584,572,544,589,503,599,465,604,465,599,502,594,543,584,582,567,615,542,627,526,635,506,640,471"/>
+<area shape="poly" title=" " alt="" coords="625,473,558,514,555,509,622,468"/>
+<area shape="poly" title=" " alt="" coords="662,468,726,509,723,513,659,473"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -155,56 +158,37 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="image_8h__dep__incl.png" border="0" usemap="#ainclude_2dst_2image_8hdep" alt=""/></div>
 <map name="ainclude_2dst_2image_8hdep" id="ainclude_2dst_2image_8hdep">
-<area shape="rect" title=" " alt="" coords="573,5,723,31"/>
-<area shape="rect" href="decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="5,152,171,192"/>
-<area shape="poly" title=" " alt="" coords="559,26,294,46,176,62,136,71,114,81,102,96,94,115,90,152,84,152,89,114,97,93,110,77,134,66,175,57,294,41,559,21"/>
-<area shape="rect" href="reconstructor_8h_source.html" title=" " alt="" coords="1091,563,1256,603"/>
-<area shape="poly" title=" " alt="" coords="737,17,913,25,1015,34,1115,48,1207,67,1283,93,1312,109,1334,127,1348,148,1353,170,1353,430,1350,455,1341,477,1327,497,1309,515,1269,544,1227,565,1224,560,1266,539,1306,511,1323,493,1336,474,1345,453,1348,430,1348,171,1343,150,1330,131,1309,113,1280,98,1206,72,1114,53,1014,39,913,30,737,23"/>
-<area shape="rect" href="locale__buffer_8h.html" title="Contains Pixel Buffer Functions." alt="" coords="681,240,817,280"/>
-<area shape="poly" title=" " alt="" coords="661,43,744,239,739,241,656,45"/>
-<area shape="rect" href="predictor_8h.html" title="Functions for the Predictor System." alt="" coords="737,489,941,515"/>
-<area shape="poly" title=" " alt="" coords="648,45,646,90,647,150,654,215,672,279,687,313,706,346,751,406,794,455,828,487,824,491,791,459,747,410,702,349,683,316,667,281,649,216,642,150,641,90,643,44"/>
-<area shape="rect" href="body_8h_source.html" title=" " alt="" coords="124,79,295,104"/>
-<area shape="poly" title=" " alt="" coords="565,35,280,81,280,76,564,30"/>
-<area shape="rect" href="csv-io_8h.html" title="Functions for image file read and write to CSV." alt="" coords="456,79,611,104"/>
-<area shape="poly" title=" " alt="" coords="620,40,553,81,551,76,617,35"/>
-<area shape="rect" href="perlin_8h_source.html" title=" " alt="" coords="335,159,505,185"/>
-<area shape="poly" title=" " alt="" coords="560,28,499,46,470,61,446,80,434,99,426,120,422,159,417,158,421,119,429,97,442,77,467,56,497,41,558,23"/>
-<area shape="rect" href="quantizer_8h.html" title="Functions For the Quantizer Steps." alt="" coords="893,79,1099,104"/>
-<area shape="poly" title=" " alt="" coords="718,31,940,76,939,81,717,36"/>
-<area shape="rect" href="sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="1015,152,1198,192"/>
-<area shape="poly" title=" " alt="" coords="737,22,964,42,1062,57,1095,66,1114,77,1123,95,1125,115,1117,153,1112,151,1120,115,1118,96,1110,81,1093,71,1061,62,963,47,737,27"/>
-<area shape="rect" href="weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="913,416,1111,441"/>
-<area shape="poly" title=" " alt="" coords="707,32,756,52,805,80,826,99,842,120,853,144,857,170,857,261,861,288,872,313,887,336,906,357,950,391,989,414,986,418,947,395,903,361,883,339,867,316,856,290,852,262,852,171,848,145,838,122,822,102,802,85,754,57,705,37"/>
-<area shape="rect" href="synthetic__image__generator_8h_source.html" title=" " alt="" coords="303,328,486,368"/>
-<area shape="poly" title=" " alt="" coords="559,28,495,40,428,63,397,79,368,100,344,124,325,153,317,176,316,200,321,225,330,249,354,293,380,326,375,329,350,296,325,251,316,226,311,201,312,175,320,151,340,121,365,96,394,75,426,58,493,35,558,23"/>
-<area shape="poly" title=" " alt="" coords="764,292,837,488,832,490,759,294"/>
-<area shape="poly" title=" " alt="" coords="901,515,1093,560,1092,565,900,520"/>
-<area shape="rect" href="generate__image_8h_source.html" title=" " alt="" coords="403,563,583,603"/>
-<area shape="poly" title=" " alt="" coords="776,520,577,565,575,560,775,515"/>
-<area shape="poly" title=" " alt="" coords="181,114,119,154,116,150,178,109"/>
-<area shape="poly" title=" " alt="" coords="221,116,239,180,246,219,249,259,249,430,253,456,263,479,280,499,300,516,350,543,404,562,402,567,348,548,297,521,276,503,259,482,248,458,244,430,244,259,241,220,234,181,216,118"/>
-<area shape="poly" title=" " alt="" coords="550,115,580,178,591,218,596,259,596,430,600,447,610,463,627,478,650,492,709,516,782,535,863,550,945,561,1090,574,1090,580,945,566,862,555,781,540,707,521,647,497,624,482,606,467,595,449,591,430,591,259,586,219,575,180,545,117"/>
-<area shape="poly" title=" " alt="" coords="538,118,545,259,545,430,541,468,531,505,506,563,501,561,526,503,536,467,540,430,540,259,533,118"/>
-<area shape="poly" title=" " alt="" coords="507,114,438,161,435,157,504,110"/>
-<area shape="poly" title=" " alt="" coords="1103,104,1171,123,1205,136,1236,153,1262,173,1284,197,1298,226,1303,258,1303,430,1300,452,1293,473,1268,511,1237,542,1206,565,1203,560,1234,538,1264,507,1288,471,1295,451,1297,430,1297,259,1293,227,1279,200,1259,177,1233,157,1202,141,1170,128,1102,109"/>
-<area shape="poly" title=" " alt="" coords="989,118,974,153,845,490,840,488,970,151,984,116"/>
-<area shape="poly" title=" " alt="" coords="1018,110,1074,150,1071,154,1015,115"/>
-<area shape="poly" title=" " alt="" coords="993,119,984,166,977,228,976,298,985,367,995,393,1007,414,1002,417,990,395,980,369,971,298,972,228,979,165,988,118"/>
-<area shape="poly" title=" " alt="" coords="1173,196,1202,214,1226,238,1243,265,1250,289,1252,347,1252,430,1246,470,1231,507,1211,539,1192,564,1188,561,1207,536,1226,504,1241,468,1247,430,1247,347,1245,290,1238,267,1222,242,1198,218,1170,200"/>
-<area shape="poly" title=" " alt="" coords="1076,146,1017,106,1020,102,1079,142"/>
-<area shape="rect" href="local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="994,328,1161,368"/>
-<area shape="poly" title=" " alt="" coords="1067,202,1049,220,1036,241,1032,263,1037,286,1049,308,1062,326,1058,329,1044,311,1032,288,1027,264,1031,239,1045,217,1063,199"/>
-<area shape="rect" href="local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="1045,240,1211,280"/>
-<area shape="poly" title=" " alt="" coords="1117,205,1126,239,1121,240,1112,206"/>
-<area shape="poly" title=" " alt="" coords="1103,378,1126,415,1143,455,1156,495,1172,562,1167,563,1151,497,1138,457,1122,417,1099,380"/>
-<area shape="poly" title=" " alt="" coords="1047,380,1017,417,1013,414,1042,377"/>
-<area shape="poly" title=" " alt="" coords="1036,449,1155,560,1151,564,1032,453"/>
-<area shape="poly" title=" " alt="" coords="973,449,868,492,866,487,971,444"/>
-<area shape="poly" title=" " alt="" coords="1036,404,1067,367,1071,370,1040,408"/>
-<area shape="poly" title=" " alt="" coords="1156,289,1176,327,1189,394,1190,461,1186,520,1180,563,1174,562,1181,519,1185,461,1183,394,1171,329,1151,292"/>
-<area shape="poly" title=" " alt="" coords="1112,293,1091,329,1086,326,1107,291"/>
-<area shape="poly" title=" " alt="" coords="411,380,488,561,483,563,406,382"/>
+<area shape="rect" title=" " alt="" coords="233,5,383,31"/>
+<area shape="rect" href="locale__buffer_8h.html" title="Contains Pixel Buffer Functions." alt="" coords="5,79,141,119"/>
+<area shape="poly" title=" " alt="" coords="262,37,131,81,129,76,260,32"/>
+<area shape="rect" href="body_8h_source.html" title=" " alt="" coords="424,86,595,111"/>
+<area shape="poly" title=" " alt="" coords="351,33,481,83,479,88,349,38"/>
+<area shape="rect" href="csv-io_8h.html" title="Functions for image file read and write to CSV." alt="" coords="111,416,265,441"/>
+<area shape="poly" title=" " alt="" coords="263,38,232,56,206,80,190,106,183,129,181,185,181,276,184,356,189,416,184,416,179,356,176,276,176,185,178,128,185,104,202,77,229,52,260,34"/>
+<area shape="rect" href="sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="217,79,399,119"/>
+<area shape="poly" title=" " alt="" coords="311,44,311,79,305,79,305,44"/>
+<area shape="rect" href="synthetic__image__generator_8h_source.html" title=" " alt="" coords="649,255,831,295"/>
+<area shape="poly" title=" " alt="" coords="398,17,448,22,503,33,558,50,608,76,633,95,655,118,691,167,718,215,735,253,730,255,713,217,687,170,651,121,629,99,605,81,556,55,502,38,448,28,397,22"/>
+<area shape="rect" href="decoder_8h.html" title="unctions for Decoding an image from a .HSP file" alt="" coords="408,167,573,207"/>
+<area shape="poly" title=" " alt="" coords="506,125,497,167,492,166,501,124"/>
+<area shape="rect" href="generate__image_8h_source.html" title=" " alt="" coords="511,489,691,529"/>
+<area shape="poly" title=" " alt="" coords="541,117,566,138,588,165,602,193,610,217,613,273,613,357,606,489,601,489,608,357,608,273,605,218,597,195,583,168,562,142,537,121"/>
+<area shape="poly" title=" " alt="" coords="262,441,512,488,511,494,261,447"/>
+<area shape="rect" href="reconstructor_8h_source.html" title=" " alt="" coords="303,489,468,529"/>
+<area shape="poly" title=" " alt="" coords="230,444,339,487,337,492,228,449"/>
+<area shape="rect" href="perlin_8h_source.html" title=" " alt="" coords="103,497,273,522"/>
+<area shape="poly" title=" " alt="" coords="191,455,191,496,185,496,185,455"/>
+<area shape="rect" href="local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="217,167,383,207"/>
+<area shape="poly" title=" " alt="" coords="308,132,304,167,299,166,302,132"/>
+<area shape="rect" href="local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="246,255,413,295"/>
+<area shape="poly" title=" " alt="" coords="313,219,325,254,320,255,308,221"/>
+<area shape="rect" href="weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="258,343,457,368"/>
+<area shape="poly" title=" " alt="" coords="343,307,356,341,351,343,338,308"/>
+<area shape="rect" href="predictor_8h.html" title="Functions for the Predictor System." alt="" coords="290,416,494,441"/>
+<area shape="poly" title=" " alt="" coords="371,379,389,415,384,417,367,382"/>
+<area shape="poly" title=" " alt="" coords="436,444,552,487,550,492,434,449"/>
+<area shape="poly" title=" " alt="" coords="393,455,390,489,384,489,387,455"/>
+<area shape="poly" title=" " alt="" coords="724,308,615,490,611,487,719,306"/>
 </map>
 </div>
 </div>
@@ -213,6 +197,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structimage2.html">image2</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused Struct for 2-D images.  <a href="structimage2.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -247,7 +232,9 @@ typedef <a class="el" href="struct_uncompressed_hyperspectral_image.html">UHI</a
 <tr class="memitem:a7114880eaabe764ab5785123fa0a1587" id="r_a7114880eaabe764ab5785123fa0a1587"><td class="memItemLeft" align="right" valign="top"><a id="a7114880eaabe764ab5785123fa0a1587" name="a7114880eaabe764ab5785123fa0a1587"></a>
 typedef <a class="el" href="struct_uncompressed_hyperspectral_image.html">UHI</a>&#160;</td><td class="memItemRight" valign="bottom"><b>image3</b></td></tr>
 <tr class="separator:a7114880eaabe764ab5785123fa0a1587"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64ee4969f267712e06a948fdf5bfe902" id="r_a64ee4969f267712e06a948fdf5bfe902"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structimage2.html">image2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="image_8h.html#a64ee4969f267712e06a948fdf5bfe902">image2</a></td></tr>
+<tr class="memitem:a64ee4969f267712e06a948fdf5bfe902" id="r_a64ee4969f267712e06a948fdf5bfe902"><td class="memItemLeft" align="right" valign="top"><a id="a64ee4969f267712e06a948fdf5bfe902" name="a64ee4969f267712e06a948fdf5bfe902"></a>
+typedef struct <a class="el" href="structimage2.html">image2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>image2</b></td></tr>
+<tr class="memdesc:a64ee4969f267712e06a948fdf5bfe902"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unused Struct for 2-D images. <br /></td></tr>
 <tr class="separator:a64ee4969f267712e06a948fdf5bfe902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -264,29 +251,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPixel</b> (<a clas
 <tr class="memitem:a1aeeb4864b63110b92099384a7a21fa8" id="r_a1aeeb4864b63110b92099384a7a21fa8"><td class="memItemLeft" align="right" valign="top"><a id="a1aeeb4864b63110b92099384a7a21fa8" name="a1aeeb4864b63110b92099384a7a21fa8"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>Image_Equals</b> (<a class="el" href="struct_uncompressed_hyperspectral_image.html">image</a> *img1, <a class="el" href="struct_uncompressed_hyperspectral_image.html">image</a> *img2)</td></tr>
 <tr class="separator:a1aeeb4864b63110b92099384a7a21fa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6ede1f7c2675150ba4833ca067c29dd0" id="r_a6ede1f7c2675150ba4833ca067c29dd0"><td class="memItemLeft" align="right" valign="top"><a id="a6ede1f7c2675150ba4833ca067c29dd0" name="a6ede1f7c2675150ba4833ca067c29dd0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Log_memread</b></td></tr>
+<tr class="separator:a6ede1f7c2675150ba4833ca067c29dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Image Structure for Storing 3D bitmaps with a maximum dynamic range of 16 bits</p>
 <p>Features Initialize Image Get/Set Pixels Image Compare Coordinate Transform from x,y,z to t,z</p>
 <p>Uses Raw Data Predicted Image</p>
 <p>Dependencies <a class="el" href="math__functions_8h.html" title="Mathematical Helper Functions for use throughout code.">math_functions.h</a> <a class="el" href="constants_8h.html" title="A Global File for constants shared between modules.">constants.h</a> stdlib.h </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a64ee4969f267712e06a948fdf5bfe902" name="a64ee4969f267712e06a948fdf5bfe902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64ee4969f267712e06a948fdf5bfe902">&#9670;&#160;</a></span>image2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structimage2.html">image2</a> <a class="el" href="structimage2.html">image2</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Unused Struct for 2-D images. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

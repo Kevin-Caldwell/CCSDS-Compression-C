@@ -100,89 +100,70 @@ $(document).ready(function(){initNavTree('local__differences_8h.html',''); initR
 
 <p>Central and Directional Local Difference Functions and Definitions.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="constants_8h_source.html">constants/constants.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="linear__algebra_8h_source.html">math/linear_algebra.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="math__functions_8h_source.html">math/math_functions.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="linear__algebra_8h_source.html">math/linear_algebra.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="local__sum_8h_source.html">predictor/local_sum.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="weights_8h_source.html">predictor/weights.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="sample__representative_8h_source.html">predictor/sample_representative.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for local_differences.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="local__differences_8h__incl.png" border="0" usemap="#ainclude_2predictor_2local__differences_8h" alt=""/></div>
 <map name="ainclude_2predictor_2local__differences_8h" id="ainclude_2predictor_2local__differences_8h">
-<area shape="rect" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="375,5,542,45"/>
-<area shape="rect" href="constants_8h.html" title="A Global File for constants shared between modules." alt="" coords="178,387,342,412"/>
-<area shape="poly" title=" " alt="" coords="375,41,267,61,153,91,103,109,63,130,36,153,29,165,27,178,27,254,30,280,41,302,57,321,78,338,128,364,181,381,179,386,126,369,75,342,53,325,37,305,25,281,21,254,21,178,24,164,32,150,60,126,101,104,151,86,266,56,374,36"/>
-<area shape="rect" href="math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="352,460,525,485"/>
-<area shape="poly" title=" " alt="" coords="531,43,579,63,625,91,644,109,660,129,670,152,673,178,673,254,669,300,662,319,647,340,610,380,567,412,522,438,483,457,480,452,520,433,564,408,607,376,643,337,657,316,664,299,668,254,668,178,665,154,655,132,640,112,622,95,577,67,529,48"/>
-<area shape="rect" href="linear__algebra_8h.html" title="Skeleton File for Generin Vector Operations." alt="" coords="468,313,633,339"/>
-<area shape="poly" title=" " alt="" coords="476,44,512,97,531,130,547,166,555,201,559,238,557,300,551,300,553,238,550,202,541,168,526,133,508,100,472,47"/>
-<area shape="rect" href="local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="188,93,351,119"/>
-<area shape="poly" title=" " alt="" coords="414,48,311,90,309,85,412,43"/>
-<area shape="rect" href="sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="177,167,361,192"/>
-<area shape="poly" title=" " alt="" coords="443,47,408,83,364,121,303,162,300,157,361,117,404,79,439,44"/>
-<area shape="rect" href="weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="385,167,532,192"/>
-<area shape="poly" title=" " alt="" coords="455,46,452,98,454,153,449,153,447,98,450,46"/>
-<area shape="poly" title=" " alt="" coords="290,410,398,452,396,457,288,415"/>
-<area shape="rect" title=" " alt="" coords="435,533,503,559"/>
-<area shape="poly" title=" " alt="" coords="446,485,461,520,457,522,441,487"/>
-<area shape="rect" title=" " alt="" coords="362,753,433,779"/>
-<area shape="poly" title=" " alt="" coords="438,486,425,534,409,649,401,740,396,739,404,648,420,533,432,485"/>
-<area shape="rect" title=" " alt="" coords="522,827,609,852"/>
-<area shape="poly" title=" " alt="" coords="526,473,609,479,698,489,777,506,807,517,828,531,857,560,879,590,897,621,907,652,911,684,906,716,893,748,871,780,855,794,830,805,765,822,691,832,623,838,622,833,690,827,764,816,828,800,852,789,867,777,889,745,901,714,905,683,902,653,892,623,875,593,853,564,825,535,804,522,775,511,698,494,609,484,525,479"/>
-<area shape="rect" href="typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="698,753,857,779"/>
-<area shape="poly" title=" " alt="" coords="526,473,604,478,687,488,758,505,785,517,803,532,819,556,827,584,829,613,826,642,811,698,793,741,788,739,806,696,820,641,823,613,821,585,814,558,799,535,782,522,756,510,686,493,604,483,525,478"/>
-<area shape="poly" title=" " alt="" coords="744,781,613,825,612,820,742,776"/>
-<area shape="poly" title=" " alt="" coords="505,341,321,386,319,381,503,336"/>
-<area shape="poly" title=" " alt="" coords="544,341,458,451,454,448,539,337"/>
-<area shape="poly" title=" " alt="" coords="553,339,550,402,540,486,517,564,483,637,447,699,416,744,412,741,442,696,478,634,512,562,535,485,545,402,548,339"/>
-<area shape="poly" title=" " alt="" coords="578,336,631,364,700,406,770,463,802,496,829,532,852,577,858,618,850,659,830,707,817,728,802,746,798,742,813,724,826,704,845,658,853,618,846,578,824,535,798,499,766,466,697,411,629,368,575,341"/>
-<area shape="poly" title=" " alt="" coords="231,121,196,139,180,152,167,168,158,180,148,188,140,195,135,205,135,221,142,246,188,337,206,360,228,377,225,381,202,363,183,340,137,248,130,222,130,204,136,192,145,183,154,176,163,165,176,148,193,135,229,116"/>
-<area shape="poly" title=" " alt="" coords="272,119,272,153,267,153,267,119"/>
-<area shape="poly" title=" " alt="" coords="246,194,218,214,205,226,196,241,191,258,190,283,192,311,201,338,215,358,233,376,229,380,211,362,196,340,187,312,184,283,186,257,191,239,201,223,215,210,243,190"/>
-<area shape="poly" title=" " alt="" coords="293,190,517,305,515,309,291,195"/>
-<area shape="rect" href="image_8h.html" title=" " alt="" coords="211,313,309,339"/>
-<area shape="poly" title=" " alt="" coords="250,194,224,214,204,241,201,258,207,274,219,289,233,303,230,307,215,293,203,277,196,258,199,239,220,210,247,190"/>
-<area shape="rect" href="quantizer_8h.html" title="Functions For the Quantizer Steps." alt="" coords="214,240,370,265"/>
-<area shape="poly" title=" " alt="" coords="269,192,278,227,273,228,264,193"/>
-<area shape="poly" title=" " alt="" coords="263,339,263,373,257,373,257,339"/>
-<area shape="poly" title=" " alt="" coords="282,337,317,358,355,385,391,417,421,448,417,451,387,421,352,389,314,362,280,341"/>
-<area shape="poly" title=" " alt="" coords="211,331,170,335,124,345,79,362,39,389,22,407,13,425,9,445,8,471,8,547,11,575,18,600,30,622,46,643,88,677,139,705,195,726,251,741,349,758,348,763,250,746,193,731,136,710,85,682,42,646,26,625,13,602,5,576,3,547,3,471,3,445,8,423,18,404,36,385,76,357,122,340,169,330,210,325"/>
-<area shape="rect" href="uhi__io_8h.html" title="Uncompressed Hyperspectral Image file IO for storing pixel values as 16&#45;bit values." alt="" coords="49,387,153,412"/>
-<area shape="poly" title=" " alt="" coords="236,341,141,383,139,379,233,336"/>
-<area shape="poly" title=" " alt="" coords="154,409,372,455,371,460,153,414"/>
-<area shape="poly" title=" " alt="" coords="104,412,108,477,117,519,134,557,158,590,185,621,247,674,310,716,362,745,360,750,307,720,244,678,182,625,154,594,130,560,112,520,103,478,98,413"/>
-<area shape="poly" title=" " alt="" coords="97,413,73,469,63,506,59,545,59,694,62,710,72,725,88,738,109,751,165,774,233,792,382,818,509,831,508,837,381,823,232,797,163,779,107,756,85,743,68,728,57,712,53,694,53,545,58,505,68,467,93,411"/>
-<area shape="rect" title=" " alt="" coords="144,533,211,559"/>
-<area shape="poly" title=" " alt="" coords="110,411,167,520,163,523,105,414"/>
-<area shape="rect" href="file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="195,460,301,485"/>
-<area shape="poly" title=" " alt="" coords="126,410,213,452,211,456,124,414"/>
-<area shape="poly" title=" " alt="" coords="251,486,251,618,251,694,253,714,258,731,278,762,308,785,345,803,387,817,430,826,509,834,508,840,429,831,385,822,343,808,305,790,274,765,253,734,247,715,245,694,245,618,245,486"/>
-<area shape="poly" title=" " alt="" coords="238,488,200,526,196,522,234,484"/>
-<area shape="rect" title=" " alt="" coords="285,533,360,559"/>
-<area shape="poly" title=" " alt="" coords="262,483,302,522,299,526,258,487"/>
-<area shape="rect" href="global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="579,533,789,559"/>
-<area shape="poly" title=" " alt="" coords="302,480,601,529,600,534,301,485"/>
-<area shape="poly" title=" " alt="" coords="705,557,730,577,753,605,767,640,776,676,781,739,775,740,771,677,762,642,748,608,727,581,701,561"/>
-<area shape="rect" href="load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="541,607,739,632"/>
-<area shape="poly" title=" " alt="" coords="679,560,657,596,652,594,674,558"/>
-<area shape="rect" href="hash__table_8h.html" title=" " alt="" coords="574,680,703,705"/>
-<area shape="poly" title=" " alt="" coords="642,632,642,667,636,666,637,632"/>
-<area shape="poly" title=" " alt="" coords="601,708,447,753,445,748,599,703"/>
-<area shape="poly" title=" " alt="" coords="629,707,610,729,593,755,581,785,573,814,568,812,576,783,588,752,606,725,625,704"/>
-<area shape="poly" title=" " alt="" coords="662,703,744,745,741,749,660,708"/>
-<area shape="rect" title=" " alt="" coords="603,753,674,779"/>
-<area shape="poly" title=" " alt="" coords="641,706,641,740,636,740,636,706"/>
-<area shape="poly" title=" " alt="" coords="303,264,389,385,427,447,423,449,384,388,298,267"/>
-<area shape="poly" title=" " alt="" coords="334,263,496,307,495,312,333,268"/>
-<area shape="poly" title=" " alt="" coords="293,241,283,205,288,204,298,239"/>
-<area shape="poly" title=" " alt="" coords="289,267,273,302,268,300,284,265"/>
-<area shape="poly" title=" " alt="" coords="461,166,465,117,464,60,469,59,470,117,466,167"/>
-<area shape="poly" title=" " alt="" coords="457,194,441,228,417,267,386,301,352,333,290,381,287,377,348,329,382,298,413,264,436,225,452,191"/>
-<area shape="poly" title=" " alt="" coords="480,190,506,211,530,239,544,269,551,299,545,300,539,271,526,241,502,215,476,195"/>
-<area shape="poly" title=" " alt="" coords="452,194,424,229,383,267,344,292,305,310,303,306,342,287,380,263,420,225,448,191"/>
-<area shape="poly" title=" " alt="" coords="433,194,333,237,331,232,431,190"/>
+<area shape="rect" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="726,5,893,45"/>
+<area shape="rect" href="linear__algebra_8h.html" title="Skeleton File for Generin Vector Operations." alt="" coords="792,533,957,559"/>
+<area shape="poly" title=" " alt="" coords="826,44,859,102,872,139,877,178,877,401,877,520,872,520,872,401,872,178,867,140,854,104,821,47"/>
+<area shape="rect" href="local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="669,93,832,119"/>
+<area shape="poly" title=" " alt="" coords="797,47,770,84,766,80,793,44"/>
+<area shape="rect" href="typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="478,753,637,779"/>
+<area shape="poly" title=" " alt="" coords="813,561,753,579,722,593,694,609,655,640,621,677,573,743,569,740,617,673,651,636,690,604,720,588,751,574,811,556"/>
+<area shape="rect" href="constants_8h.html" title="A Global File for constants shared between modules." alt="" coords="703,607,867,632"/>
+<area shape="poly" title=" " alt="" coords="862,561,812,600,809,596,859,557"/>
+<area shape="rect" href="math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="683,680,856,705"/>
+<area shape="poly" title=" " alt="" coords="882,558,890,593,889,614,882,633,858,660,827,677,825,672,855,655,878,631,884,613,884,593,877,559"/>
+<area shape="rect" title=" " alt="" coords="661,753,731,779"/>
+<area shape="poly" title=" " alt="" coords="884,558,895,580,904,606,908,637,904,662,891,685,870,707,841,728,809,743,745,761,744,756,807,738,838,723,866,703,887,682,899,660,902,637,899,607,890,582,879,560"/>
+<area shape="rect" title=" " alt="" coords="397,827,483,852"/>
+<area shape="poly" title=" " alt="" coords="540,781,472,822,470,817,537,776"/>
+<area shape="poly" title=" " alt="" coords="785,633,777,667,772,666,780,632"/>
+<area shape="poly" title=" " alt="" coords="736,708,605,751,604,746,734,703"/>
+<area shape="poly" title=" " alt="" coords="772,706,767,743,759,763,746,781,728,792,702,802,637,818,564,829,497,836,497,831,563,824,636,813,701,797,725,788,742,777,754,761,762,741,767,705"/>
+<area shape="rect" title=" " alt="" coords="807,753,875,779"/>
+<area shape="poly" title=" " alt="" coords="783,704,822,742,818,746,779,708"/>
+<area shape="poly" title=" " alt="" coords="759,708,720,746,716,742,755,704"/>
+<area shape="rect" href="sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="653,167,837,192"/>
+<area shape="poly" title=" " alt="" coords="752,119,750,153,745,153,747,119"/>
+<area shape="rect" href="image_8h.html" title=" " alt="" coords="696,240,795,265"/>
+<area shape="poly" title=" " alt="" coords="748,192,748,226,743,226,743,192"/>
+<area shape="poly" title=" " alt="" coords="749,265,753,398,753,474,756,507,762,539,778,593,773,595,757,540,751,507,748,474,748,398,743,266"/>
+<area shape="rect" href="uhi__io_8h.html" title="Uncompressed Hyperspectral Image file IO for storing pixel values as 16&#45;bit values." alt="" coords="495,313,599,339"/>
+<area shape="poly" title=" " alt="" coords="714,268,593,311,591,306,713,263"/>
+<area shape="poly" title=" " alt="" coords="494,333,361,344,280,355,199,369,125,387,64,410,40,424,23,439,12,454,8,472,8,694,11,707,19,720,49,744,95,765,151,784,275,812,383,829,383,834,274,817,149,789,93,770,46,749,15,724,6,709,3,694,3,471,7,452,19,435,37,420,61,406,123,382,198,364,279,349,360,339,494,327"/>
+<area shape="poly" title=" " alt="" coords="568,337,598,358,630,388,657,426,665,448,668,471,668,547,673,592,694,630,715,653,738,671,735,675,711,657,690,634,668,593,663,547,663,472,660,449,652,429,626,392,594,362,565,341"/>
+<area shape="poly" title=" " alt="" coords="553,338,598,486,673,704,688,740,683,742,668,706,593,487,548,340"/>
+<area shape="rect" title=" " alt="" coords="477,533,544,559"/>
+<area shape="poly" title=" " alt="" coords="547,339,517,520,512,519,542,339"/>
+<area shape="rect" href="logs_8h.html" title="Logging Execution and Errors in Code." alt="" coords="225,387,317,412"/>
+<area shape="poly" title=" " alt="" coords="503,341,329,386,328,381,502,336"/>
+<area shape="rect" href="file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="328,460,403,485"/>
+<area shape="poly" title=" " alt="" coords="287,410,340,449,337,454,284,414"/>
+<area shape="rect" href="global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="93,533,304,559"/>
+<area shape="poly" title=" " alt="" coords="262,414,246,435,229,461,216,492,207,521,202,519,211,490,224,459,241,432,258,411"/>
+<area shape="rect" title=" " alt="" coords="147,753,218,779"/>
+<area shape="poly" title=" " alt="" coords="225,413,173,429,118,455,95,473,76,493,63,517,59,545,59,621,61,641,68,660,91,694,121,723,151,744,148,748,118,727,87,698,63,662,56,642,53,621,53,544,58,516,71,490,91,469,115,451,171,424,224,407"/>
+<area shape="rect" title=" " alt="" coords="239,460,303,485"/>
+<area shape="poly" title=" " alt="" coords="273,412,273,446,268,446,268,412"/>
+<area shape="poly" title=" " alt="" coords="379,484,399,505,417,532,437,573,443,618,443,694,443,813,437,813,437,694,437,618,432,575,412,535,394,508,376,487"/>
+<area shape="poly" title=" " alt="" coords="390,483,476,525,474,530,388,488"/>
+<area shape="rect" title=" " alt="" coords="328,533,403,559"/>
+<area shape="poly" title=" " alt="" coords="368,486,368,520,363,520,363,486"/>
+<area shape="poly" title=" " alt="" coords="340,488,239,530,237,525,338,483"/>
+<area shape="poly" title=" " alt="" coords="232,556,283,577,339,604,396,640,451,678,535,743,532,747,447,682,393,644,336,609,281,582,230,561"/>
+<area shape="rect" href="load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="127,607,326,632"/>
+<area shape="poly" title=" " alt="" coords="206,558,220,593,215,595,201,560"/>
+<area shape="rect" href="hash__table_8h.html" title=" " alt="" coords="222,680,351,705"/>
+<area shape="poly" title=" " alt="" coords="239,631,270,668,266,671,235,634"/>
+<area shape="poly" title=" " alt="" coords="331,703,501,747,500,752,329,708"/>
+<area shape="poly" title=" " alt="" coords="301,704,420,815,416,819,297,708"/>
+<area shape="poly" title=" " alt="" coords="352,700,485,721,648,750,647,756,484,726,351,706"/>
+<area shape="poly" title=" " alt="" coords="271,708,213,747,210,743,268,703"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -190,18 +171,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="local__differences_8h__dep__incl.png" border="0" usemap="#ainclude_2predictor_2local__differences_8hdep" alt=""/></div>
 <map name="ainclude_2predictor_2local__differences_8hdep" id="ainclude_2predictor_2local__differences_8hdep">
-<area shape="rect" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="115,5,282,45"/>
+<area shape="rect" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="103,5,270,45"/>
+<area shape="rect" href="weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="87,93,286,119"/>
+<area shape="poly" title=" " alt="" coords="189,59,189,93,184,93,184,59"/>
+<area shape="rect" href="predictor_8h.html" title="Functions for the Predictor System." alt="" coords="85,167,289,192"/>
+<area shape="poly" title=" " alt="" coords="189,132,189,167,184,167,184,132"/>
 <area shape="rect" href="reconstructor_8h_source.html" title=" " alt="" coords="5,240,171,280"/>
-<area shape="poly" title=" " alt="" coords="134,54,109,72,90,95,77,132,75,172,79,209,85,239,80,240,73,210,69,172,72,131,86,92,106,68,131,50"/>
-<area shape="rect" href="weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="99,93,298,119"/>
-<area shape="poly" title=" " alt="" coords="192,59,195,93,189,93,187,59"/>
-<area shape="poly" title=" " alt="" coords="204,79,204,46,209,45,210,79"/>
-<area shape="poly" title=" " alt="" coords="177,130,142,168,118,206,99,241,94,239,113,204,138,165,173,126"/>
-<area shape="rect" href="predictor_8h.html" title="Functions for the Predictor System." alt="" coords="151,167,355,192"/>
-<area shape="poly" title=" " alt="" coords="218,128,247,165,242,168,214,131"/>
-<area shape="poly" title=" " alt="" coords="218,200,129,242,127,237,216,195"/>
+<area shape="poly" title=" " alt="" coords="163,203,113,242,110,238,160,199"/>
 <area shape="rect" href="generate__image_8h_source.html" title=" " alt="" coords="195,240,375,280"/>
-<area shape="poly" title=" " alt="" coords="266,204,280,239,275,241,261,206"/>
+<area shape="poly" title=" " alt="" coords="214,199,263,238,260,242,210,203"/>
 </map>
 </div>
 </div>
@@ -212,21 +190,17 @@ Macros</h2></td></tr>
 <tr class="memitem:a2fee6f8dd7f3cd3ed1ae75161294c4c4" id="r_a2fee6f8dd7f3cd3ed1ae75161294c4c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="local__differences_8h.html#a2fee6f8dd7f3cd3ed1ae75161294c4c4">Ps</a>(z)&#160;&#160;&#160;<a class="el" href="math__functions_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">MIN</a>(z, kP)</td></tr>
 <tr class="memdesc:a2fee6f8dd7f3cd3ed1ae75161294c4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redundant Definition of Ps in math_function.h.  <br /></td></tr>
 <tr class="separator:a2fee6f8dd7f3cd3ed1ae75161294c4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0875819772a3917e5a6f648c0a3292" id="r_add0875819772a3917e5a6f648c0a3292"><td class="memItemLeft" align="right" valign="top"><a id="add0875819772a3917e5a6f648c0a3292" name="add0875819772a3917e5a6f648c0a3292"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DLD</b>(hIMG,  z,  y,  x,  d)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, d)</td></tr>
-<tr class="memdesc:add0875819772a3917e5a6f648c0a3292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for Direct Local Difference. <br /></td></tr>
+<tr class="memitem:add0875819772a3917e5a6f648c0a3292" id="r_add0875819772a3917e5a6f648c0a3292"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="local__differences_8h.html#add0875819772a3917e5a6f648c0a3292">DLD</a>(hIMG,  z,  y,  x,  d)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, d)</td></tr>
+<tr class="memdesc:add0875819772a3917e5a6f648c0a3292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for Direct Local Difference.  <br /></td></tr>
 <tr class="separator:add0875819772a3917e5a6f648c0a3292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21b79785d586c939ebdd71a1602e9b5c" id="r_a21b79785d586c939ebdd71a1602e9b5c"><td class="memItemLeft" align="right" valign="top"><a id="a21b79785d586c939ebdd71a1602e9b5c" name="a21b79785d586c939ebdd71a1602e9b5c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DLD_N</b>(hIMG,  z,  y,  x)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, N)</td></tr>
-<tr class="memdesc:a21b79785d586c939ebdd71a1602e9b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for North Direct Local Difference. <br /></td></tr>
+<tr class="memitem:a21b79785d586c939ebdd71a1602e9b5c" id="r_a21b79785d586c939ebdd71a1602e9b5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="local__differences_8h.html#a21b79785d586c939ebdd71a1602e9b5c">DLD_N</a>(hIMG,  z,  y,  x)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, N)</td></tr>
+<tr class="memdesc:a21b79785d586c939ebdd71a1602e9b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for North Direct Local Difference.  <br /></td></tr>
 <tr class="separator:a21b79785d586c939ebdd71a1602e9b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad68845bcfb3f6bd01382ba8a2550f21f" id="r_ad68845bcfb3f6bd01382ba8a2550f21f"><td class="memItemLeft" align="right" valign="top"><a id="ad68845bcfb3f6bd01382ba8a2550f21f" name="ad68845bcfb3f6bd01382ba8a2550f21f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DLD_W</b>(hIMG,  z,  y,  x)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, W)</td></tr>
-<tr class="memdesc:ad68845bcfb3f6bd01382ba8a2550f21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for West Direct Local Difference. <br /></td></tr>
+<tr class="memitem:ad68845bcfb3f6bd01382ba8a2550f21f" id="r_ad68845bcfb3f6bd01382ba8a2550f21f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="local__differences_8h.html#ad68845bcfb3f6bd01382ba8a2550f21f">DLD_W</a>(hIMG,  z,  y,  x)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, W)</td></tr>
+<tr class="memdesc:ad68845bcfb3f6bd01382ba8a2550f21f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for West Direct Local Difference.  <br /></td></tr>
 <tr class="separator:ad68845bcfb3f6bd01382ba8a2550f21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05c0b8c3e6a3ae85df713a1cd5a99cd5" id="r_a05c0b8c3e6a3ae85df713a1cd5a99cd5"><td class="memItemLeft" align="right" valign="top"><a id="a05c0b8c3e6a3ae85df713a1cd5a99cd5" name="a05c0b8c3e6a3ae85df713a1cd5a99cd5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DLD_NW</b>(hIMG,  z,  y,  x)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, NW)</td></tr>
-<tr class="memdesc:a05c0b8c3e6a3ae85df713a1cd5a99cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for NorthWest Direct Local Difference. <br /></td></tr>
+<tr class="memitem:a05c0b8c3e6a3ae85df713a1cd5a99cd5" id="r_a05c0b8c3e6a3ae85df713a1cd5a99cd5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="local__differences_8h.html#a05c0b8c3e6a3ae85df713a1cd5a99cd5">DLD_NW</a>(hIMG,  z,  y,  x)&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, NW)</td></tr>
+<tr class="memdesc:a05c0b8c3e6a3ae85df713a1cd5a99cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand for NorthWest Direct Local Difference.  <br /></td></tr>
 <tr class="separator:a05c0b8c3e6a3ae85df713a1cd5a99cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -254,6 +228,184 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Central and Directional Local Difference Functions and Definitions. </p>
 <dl class="section author"><dt>Authors</dt><dd>Kevin Caldwell @BrianShTsoi </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="add0875819772a3917e5a6f648c0a3292" name="add0875819772a3917e5a6f648c0a3292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0875819772a3917e5a6f648c0a3292">&#9670;&#160;</a></span>DLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DLD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hIMG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">d&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, d)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shorthand for Direct Local Difference. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
+
+</div>
+</div>
+<a id="a21b79785d586c939ebdd71a1602e9b5c" name="a21b79785d586c939ebdd71a1602e9b5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21b79785d586c939ebdd71a1602e9b5c">&#9670;&#160;</a></span>DLD_N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DLD_N</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hIMG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, N)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shorthand for North Direct Local Difference. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
+
+</div>
+</div>
+<a id="a05c0b8c3e6a3ae85df713a1cd5a99cd5" name="a05c0b8c3e6a3ae85df713a1cd5a99cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c0b8c3e6a3ae85df713a1cd5a99cd5">&#9670;&#160;</a></span>DLD_NW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DLD_NW</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hIMG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, NW)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shorthand for NorthWest Direct Local Difference. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
+
+</div>
+</div>
+<a id="ad68845bcfb3f6bd01382ba8a2550f21f" name="ad68845bcfb3f6bd01382ba8a2550f21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad68845bcfb3f6bd01382ba8a2550f21f">&#9670;&#160;</a></span>DLD_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DLD_W</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">hIMG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="local__differences_8h.html#aa1779fb92c191cde51766275baaf7591">DirectionalLocalDifference</a>(hIMG, z, y, x, W)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Shorthand for West Direct Local Difference. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
+
+</div>
+</div>
 <a id="a2fee6f8dd7f3cd3ed1ae75161294c4c4" name="a2fee6f8dd7f3cd3ed1ae75161294c4c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fee6f8dd7f3cd3ed1ae75161294c4c4">&#9670;&#160;</a></span>Ps</h2>
 
@@ -316,6 +468,7 @@ Functions</h2></td></tr>
 
 <p>Finds the Central Local Difference using Direct Image Access. </p>
 <dl class="section note"><dt>Note</dt><dd>Soon Deprecated </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -392,6 +545,7 @@ Here is the caller graph for this function:</div>
 
 <p>Finds the Directional Local Difference using Direct Image Access. </p>
 <dl class="section note"><dt>Note</dt><dd>Soon Deprecated </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -459,6 +613,7 @@ Here is the caller graph for this function:</div>
 
 <p>Finds the Local Direction Vector using Direct Image Access. </p>
 <dl class="section note"><dt>Note</dt><dd>Soon Deprecated </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Direct Image Access </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

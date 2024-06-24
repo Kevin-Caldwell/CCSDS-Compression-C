@@ -116,7 +116,13 @@
     "decoder.h": "c",
     "stddef.h": "c",
     "locale_buffer.h": "c",
-    "typedefs.h": "c"
+    "typedefs.h": "c",
+    "bitset": "c",
+    "ranges": "c",
+    "queue": "c",
+    "set": "c",
+    "test_varint.h": "c",
+    "varintfile_io.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

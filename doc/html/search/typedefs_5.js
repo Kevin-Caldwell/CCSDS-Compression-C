@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixel_0',['PIXEL',['../typedefs_8h.html#ab11dabd4d79e8b3426010beb5831e1d9',1,'typedefs.h']]]
+  ['localebuffer_0',['LocaleBuffer',['../locale__buffer_8h.html#ad3a2d8479e14ece9e92788017fc72eb1',1,'locale_buffer.h']]]
 ];

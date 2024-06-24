@@ -5,8 +5,6 @@
 Contains Pixel Buffer Functions.  
 
 
-{\ttfamily \#include "{}constants/typedefs.\+h"{}}\newline
-{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
 {\ttfamily \#include "{}dst/image.\+h"{}}\newline
 Include dependency graph for locale\+\_\+buffer.\+h\+:\nopagebreak
 \begin{figure}[H]
@@ -15,18 +13,11 @@ Include dependency graph for locale\+\_\+buffer.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{locale__buffer_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{locale__buffer_8h__dep__incl}
-\end{center}
-\end{figure}
 \doxysubsubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stores Pixel Neighborhood in Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,9 +38,8 @@ struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1}\label{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1} 
-typedef struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} {\bfseries Locale\+Buffer}
-\end{DoxyCompactItemize}
+typedef struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} \mbox{\hyperlink{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1}{Locale\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Stores Pixel Neighborhood in Buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,7 +63,7 @@ typedef struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} {\bfserie
 Contains Pixel Buffer Functions. 
 
 Contains Includes, Macros, Structures and Functions for loading the neighborhood of a Pixel from storage into memory. \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]Implement Locale\+Buffer\+\_\+\+Simple\+Load 
+\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]Implement Locale\+Buffer\+\_\+\+Simple\+Load 
 
 Implement Locale\+Buffer\+\_\+\+Smart\+Load \end{DoxyRefDesc}
 
@@ -87,6 +77,19 @@ Implement Locale\+Buffer\+\_\+\+Smart\+Load \end{DoxyRefDesc}
 
 Length of the Neighbor Index Lookup list 
 
+\doxysubsection{Typedef Documentation}
+\Hypertarget{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1}\label{locale__buffer_8h_ad3a2d8479e14ece9e92788017fc72eb1} 
+\index{locale\_buffer.h@{locale\_buffer.h}!LocaleBuffer@{LocaleBuffer}}
+\index{LocaleBuffer@{LocaleBuffer}!locale\_buffer.h@{locale\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{LocaleBuffer}{LocaleBuffer}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}} \mbox{\hyperlink{struct_locale_buffer}{Locale\+Buffer}}}
+
+
+
+Stores Pixel Neighborhood in Buffer. 
+
+The Locale Buffer is designed to store the Neighborhood of the current Pixel being compressed. 
+
 \doxysubsection{Function Documentation}
 \Hypertarget{locale__buffer_8h_aafe3d5c7c1f0f2b689902c0bf1f7e4eb}\label{locale__buffer_8h_aafe3d5c7c1f0f2b689902c0bf1f7e4eb} 
 \index{locale\_buffer.h@{locale\_buffer.h}!LocaleBuffer\_SmartLoad@{LocaleBuffer\_SmartLoad}}
@@ -99,4 +102,4 @@ Length of the Neighbor Index Lookup list
 Initializes the values in \doxylink{struct_locale_buffer}{Locale\+Buffer} using values from the previous buffer. It assumes the \doxylink{struct_locale_buffer}{Locale\+Buffer} object persists for each pixel. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000011}{Todo}}]Finish Implementation (More complex than Simple\+Load) \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000012}{Todo}}]Finish Implementation (More complex than Simple\+Load) \end{DoxyRefDesc}

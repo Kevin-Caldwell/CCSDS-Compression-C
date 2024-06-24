@@ -1,37 +1,16 @@
 <map id="include/math/linear_algebra.h" name="include/math/linear_algebra.h">
-<area shape="rect" id="Node000001" title="Skeleton File for Generin Vector Operations." alt="" coords="448,5,596,45"/>
-<area shape="rect" id="Node000002" href="$reconstructor_8h_source.html" title=" " alt="" coords="167,577,332,617"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="556,53,579,79,602,110,619,146,626,185,626,445,624,492,616,512,599,531,580,544,554,555,485,572,407,584,333,593,332,587,406,579,484,567,552,550,578,539,596,527,612,509,619,491,620,445,620,186,614,148,597,113,575,82,552,57"/>
-<area shape="rect" id="Node000003" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="216,343,382,383"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="504,58,314,344,309,341,499,55"/>
-<area shape="rect" id="Node000004" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="286,431,485,456"/>
-<area shape="poly" id="edge23_Node000001_Node000004" title=" " alt="" coords="516,59,477,201,449,292,416,384,394,432,389,429,411,382,443,291,472,200,511,58"/>
-<area shape="rect" id="Node000005" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="381,504,585,529"/>
-<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="540,57,563,115,572,150,575,185,575,364,573,387,566,409,546,449,520,482,498,506,494,502,516,479,541,446,561,407,567,386,570,364,570,185,566,151,558,117,535,59"/>
-<area shape="rect" id="Node000007" href="$quantizer_8h.html" title="Functions For the Quantizer Steps." alt="" coords="145,93,352,119"/>
-<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="444,52,289,96,288,91,442,47"/>
-<area shape="rect" id="Node000008" href="$sample__representative_8h.html" title="A collection of Sample representative calculation functions." alt="" coords="28,167,210,207"/>
-<area shape="poly" id="edge22_Node000001_Node000008" title=" " alt="" coords="434,33,350,39,261,51,183,69,154,81,134,95,124,111,119,130,119,166,113,166,114,129,119,109,130,91,152,76,182,64,260,46,350,34,434,27"/>
-<area shape="rect" id="Node000010" href="$synthetic__image__generator_8h_source.html" title=" " alt="" coords="661,167,844,207"/>
-<area shape="poly" id="edge24_Node000001_Node000010" title=" " alt="" coords="573,49,643,91,693,129,734,164,730,168,690,133,640,96,570,54"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="289,396,278,431,262,512,254,577,249,577,257,511,272,430,284,395"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="324,390,368,428,364,432,320,394"/>
-<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="368,468,269,579,265,575,364,464"/>
-<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="368,422,326,385,330,381,372,418"/>
-<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="414,462,469,502,465,506,411,466"/>
-<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="437,536,307,580,305,575,435,531"/>
-<area shape="rect" id="Node000006" href="$generate__image_8h_source.html" title=" " alt="" coords="508,577,688,617"/>
-<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="513,535,571,575,568,579,510,539"/>
-<area shape="poly" id="edge12_Node000007_Node000002" title=" " alt="" coords="249,133,241,206,224,295,214,320,206,343,204,363,206,382,225,493,247,576,241,577,220,494,200,383,198,363,200,342,209,318,219,294,236,205,244,132"/>
-<area shape="poly" id="edge21_Node000007_Node000004" title=" " alt="" coords="270,127,300,165,336,216,371,277,396,342,400,366,399,391,392,431,387,430,394,390,395,367,391,343,366,279,332,219,296,168,266,131"/>
-<area shape="poly" id="edge13_Node000007_Node000005" title=" " alt="" coords="282,124,309,142,334,165,395,230,438,285,470,346,499,430,502,450,500,471,491,504,485,503,495,470,496,451,494,431,466,349,433,288,391,233,330,169,305,146,279,128"/>
-<area shape="poly" id="edge14_Node000007_Node000008" title=" " alt="" coords="212,128,144,169,141,164,210,123"/>
-<area shape="poly" id="edge15_Node000008_Node000002" title=" " alt="" coords="74,216,52,234,33,256,18,283,11,306,8,361,8,444,12,471,23,495,40,515,61,532,113,560,168,578,166,583,111,565,58,537,36,519,19,497,7,473,3,445,3,361,6,305,13,281,29,253,48,231,71,212"/>
-<area shape="poly" id="edge16_Node000008_Node000003" title=" " alt="" coords="168,211,196,230,224,253,263,298,290,341,286,344,258,302,220,257,193,235,165,216"/>
-<area shape="poly" id="edge20_Node000008_Node000007" title=" " alt="" coords="169,157,234,117,237,121,172,162"/>
-<area shape="rect" id="Node000009" href="$local__sum_8h.html" title="Functions for finding Local Sum." alt="" coords="44,255,210,295"/>
-<area shape="poly" id="edge17_Node000008_Node000009" title=" " alt="" coords="125,220,128,254,123,255,119,220"/>
-<area shape="poly" id="edge18_Node000009_Node000002" title=" " alt="" coords="126,308,124,354,127,411,138,472,148,501,161,528,184,555,213,575,210,579,181,559,157,531,143,503,133,473,121,412,119,354,121,308"/>
-<area shape="poly" id="edge19_Node000009_Node000003" title=" " alt="" coords="178,298,263,340,260,345,176,303"/>
-<area shape="poly" id="edge25_Node000010_Node000006" title=" " alt="" coords="743,221,725,285,718,323,715,361,715,445,713,466,706,487,684,524,655,555,627,579,624,575,651,552,679,521,701,485,707,465,710,445,710,361,712,322,719,284,738,219"/>
+<area shape="rect" id="Node000001" title="Skeleton File for Generin Vector Operations." alt="" coords="137,5,285,45"/>
+<area shape="rect" id="Node000002" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="68,93,235,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,58,167,95,162,92,188,55"/>
+<area shape="rect" id="Node000007" href="$synthetic__image__generator_8h_source.html" title=" " alt="" coords="228,181,411,221"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="233,56,310,180,305,183,228,59"/>
+<area shape="rect" id="Node000003" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="5,189,204,214"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,147,113,189,109,187,132,144"/>
+<area shape="rect" id="Node000004" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="11,269,215,295"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="110,228,114,269,109,269,105,228"/>
+<area shape="rect" id="Node000005" href="$reconstructor_8h_source.html" title=" " alt="" coords="30,343,195,383"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="115,308,115,343,110,343,110,308"/>
+<area shape="rect" id="Node000006" href="$generate__image_8h_source.html" title=" " alt="" coords="224,343,404,383"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="156,297,267,340,265,345,154,302"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="321,235,317,343,312,342,316,235"/>
 </map>

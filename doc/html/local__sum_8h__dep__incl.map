@@ -1,17 +1,13 @@
 <map id="include/predictor/local_sum.h" name="include/predictor/local_sum.h">
-<area shape="rect" id="Node000001" title="Functions for finding Local Sum." alt="" coords="14,5,181,45"/>
-<area shape="rect" id="Node000002" href="$reconstructor_8h_source.html" title=" " alt="" coords="5,328,171,368"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,59,86,158,84,280,88,327,83,328,79,280,81,158,90,59"/>
-<area shape="rect" id="Node000003" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="107,93,274,133"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,53,172,91,168,95,126,57"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="151,143,131,161,116,183,100,221,92,261,89,328,84,328,87,260,95,219,111,180,127,158,147,139"/>
-<area shape="rect" id="Node000004" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="125,181,323,207"/>
-<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="198,145,215,180,210,182,193,147"/>
-<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="204,218,167,256,105,330,101,326,163,253,200,215"/>
-<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="220,169,204,135,209,132,224,167"/>
-<area shape="rect" id="Node000005" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="177,255,381,280"/>
-<area shape="poly" id="edge7_Node000004_Node000005" title=" " alt="" coords="243,216,272,253,268,256,239,219"/>
-<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="240,288,135,330,133,325,238,283"/>
+<area shape="rect" id="Node000001" title="Functions for finding Local Sum." alt="" coords="103,5,270,45"/>
+<area shape="rect" id="Node000002" href="$local__differences_8h.html" title="Central and Directional Local Difference Functions and Definitions." alt="" coords="103,93,270,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,59,189,93,184,93,184,59"/>
+<area shape="rect" id="Node000003" href="$weights_8h.html" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="87,181,286,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="189,147,189,181,184,181,184,147"/>
+<area shape="rect" id="Node000004" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="85,255,289,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="189,220,189,255,184,255,184,220"/>
+<area shape="rect" id="Node000005" href="$reconstructor_8h_source.html" title=" " alt="" coords="5,328,171,368"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="163,291,113,330,110,326,160,287"/>
 <area shape="rect" id="Node000006" href="$generate__image_8h_source.html" title=" " alt="" coords="195,328,375,368"/>
-<area shape="poly" id="edge9_Node000005_Node000006" title=" " alt="" coords="283,294,286,328,281,328,278,294"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="214,287,263,326,260,330,210,291"/>
 </map>

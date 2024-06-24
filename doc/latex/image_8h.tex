@@ -1,7 +1,5 @@
 \doxysection{include/dst/image.h File Reference}
 \hypertarget{image_8h}{}\label{image_8h}\index{include/dst/image.h@{include/dst/image.h}}
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
 {\ttfamily \#include "{}constants/constants.\+h"{}}\newline
 {\ttfamily \#include "{}files/uhi\+\_\+io.\+h"{}}\newline
 Include dependency graph for image.\+h\+:\nopagebreak
@@ -22,7 +20,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structimage2}{image2}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Unused Struct for 2-\/D images. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -56,8 +54,9 @@ typedef \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}} {\bfseri
 \Hypertarget{image_8h_a7114880eaabe764ab5785123fa0a1587}\label{image_8h_a7114880eaabe764ab5785123fa0a1587} 
 typedef \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{UHI}} {\bfseries image3}
 \item 
-typedef struct \mbox{\hyperlink{structimage2}{image2}} \mbox{\hyperlink{image_8h_a64ee4969f267712e06a948fdf5bfe902}{image2}}
-\end{DoxyCompactItemize}
+\Hypertarget{image_8h_a64ee4969f267712e06a948fdf5bfe902}\label{image_8h_a64ee4969f267712e06a948fdf5bfe902} 
+typedef struct \mbox{\hyperlink{structimage2}{image2}} {\bfseries image2}
+\begin{DoxyCompactList}\small\item\em Unused Struct for 2-\/D images. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -73,6 +72,12 @@ void {\bfseries Set\+Pixel} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_
 \Hypertarget{image_8h_a1aeeb4864b63110b92099384a7a21fa8}\label{image_8h_a1aeeb4864b63110b92099384a7a21fa8} 
 int {\bfseries Image\+\_\+\+Equals} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}img1, \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}img2)
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{image_8h_a6ede1f7c2675150ba4833ca067c29dd0}\label{image_8h_a6ede1f7c2675150ba4833ca067c29dd0} 
+int {\bfseries Log\+\_\+memread}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -83,12 +88,3 @@ Features Initialize Image Get/\+Set Pixels Image Compare Coordinate Transform fr
 Uses Raw Data Predicted Image
 
 Dependencies \doxylink{math__functions_8h}{math\+\_\+functions.\+h} \doxylink{constants_8h}{constants.\+h} stdlib.\+h 
-
-\doxysubsection{Typedef Documentation}
-\Hypertarget{image_8h_a64ee4969f267712e06a948fdf5bfe902}\label{image_8h_a64ee4969f267712e06a948fdf5bfe902} 
-\index{image.h@{image.h}!image2@{image2}}
-\index{image2@{image2}!image.h@{image.h}}
-\doxysubsubsection{\texorpdfstring{image2}{image2}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structimage2}{image2}} \mbox{\hyperlink{structimage2}{image2}}}
-
-Unused Struct for 2-\/D images. 

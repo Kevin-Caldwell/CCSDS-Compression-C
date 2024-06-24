@@ -10,7 +10,7 @@ var searchData=
   ['local_5fsum_2eh_7',['local_sum.h',['../local__sum_8h.html',1,'']]],
   ['localdirectionvector_8',['LocalDirectionVector',['../local__differences_8h.html#aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef',1,'local_differences.c']]],
   ['locale_5fbuffer_2eh_9',['locale_buffer.h',['../locale__buffer_8h.html',1,'']]],
-  ['localebuffer_10',['LocaleBuffer',['../struct_locale_buffer.html',1,'']]],
+  ['localebuffer_10',['localebuffer',['../struct_locale_buffer.html',1,'LocaleBuffer'],['../locale__buffer_8h.html#ad3a2d8479e14ece9e92788017fc72eb1',1,'LocaleBuffer:&#160;locale_buffer.h']]],
   ['localebuffer_5fneighbor_5findex_5fx_11',['LocaleBuffer_neighbor_index_x',['../locale__buffer_8h.html#abb8e4f43db4e7bdb6760bc84df3b28fc',1,'locale_buffer.c']]],
   ['localebuffer_5fneighbor_5findex_5fy_12',['LocaleBuffer_neighbor_index_y',['../locale__buffer_8h.html#aa4dbfb1da03f162a3bc10400b370f34e',1,'locale_buffer.c']]],
   ['localebuffer_5fsimpleload_13',['LocaleBuffer_SimpleLoad',['../locale__buffer_8h.html#a6f0f835958a84b1fb3173c4f0a6d4155',1,'locale_buffer.h']]],

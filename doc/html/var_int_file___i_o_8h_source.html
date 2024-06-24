@@ -105,63 +105,59 @@ $(document).ready(function(){initNavTree('var_int_file___i_o_8h_source.html','')
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="file___i_o_8h.html">files/file_IO.h</a>&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="logs_8h.html">files/logs.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="logs_8h.html">files/logs.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;encoder/encoder_helper_functions.h&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="global__constants_8h.html">constants/global_constants.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;encoder/encoder_helper_functions.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="var_int_file___i_o_8h.html#af7b7dc9a200cb1404c280bd500fd1551">   27</a></span><span class="preprocessor">#define BUFFER_LENGTH 6</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="var_int_file___i_o_8h.html#a6b20d41d6252e9871430c242cb1a56e7">   31</a></span><span class="preprocessor">#define BUFFER_SIZE 32</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">typedef</span> <span class="keyword">enum</span> file_modes</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    READ_BINARY = 0,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    WRITE_BINARY</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} file_modes;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_var_unsigned_int_file.html">   47</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_var_unsigned_int_file.html">VarUnsignedIntFile</a></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_typedef" href="file___i_o_8h.html#aaa4f66633ab727c9d841db141c3da088">file_t</a> *fs;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">char</span> io_mode;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    int8_t bit_index;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    int8_t byte_index;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    uint32_t rw_buffer[<a class="code hl_define" href="var_int_file___i_o_8h.html#af7b7dc9a200cb1404c280bd500fd1551">BUFFER_LENGTH</a>];</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006">   55</a></span>} <a class="code hl_typedef" href="var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006">VUF</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="var_int_file___i_o_8h.html#af7b7dc9a200cb1404c280bd500fd1551">   24</a></span><span class="preprocessor">#define BUFFER_LENGTH 6</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="var_int_file___i_o_8h.html#a6b20d41d6252e9871430c242cb1a56e7">   28</a></span><span class="preprocessor">#define BUFFER_SIZE 32</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">typedef</span> <span class="keyword">enum</span> file_modes</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    READ_BINARY = 0,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    WRITE_BINARY</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} file_modes;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_var_unsigned_int_file.html">   43</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_var_unsigned_int_file.html">VarUnsignedIntFile</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_typedef" href="file___i_o_8h.html#aaa4f66633ab727c9d841db141c3da088">file_t</a> *fs;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">char</span> io_mode;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    int8_t bit_index;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    int8_t byte_index;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    uint32_t rw_buffer[<a class="code hl_define" href="var_int_file___i_o_8h.html#af7b7dc9a200cb1404c280bd500fd1551">BUFFER_LENGTH</a>];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006">   51</a></span>} <a class="code hl_typedef" href="var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006">VUF</a>;</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="var_int_file___i_o_8h.html#ad87d7d041a638f17308bffa039efb58d">VUF_initialize</a>(</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    file_modes io_mode);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="var_int_file___i_o_8h.html#acd17b6ab96cbfb4911978141bfbfaa84">VUF_append</a>(</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream,</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    uint32_t data,</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    uint32_t length);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">// Read One VarInt</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>uint32_t <a class="code hl_function" href="var_int_file___i_o_8h.html#aafa9034f88afca6a726a84673d063889">VUF_read_stack</a>(</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream,</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    uint32_t length);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> VUF_close(<a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif </span><span class="comment">/* VARINTFILE_IO_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="afile___i_o_8h_html"><div class="ttname"><a href="file___i_o_8h.html">file_IO.h</a></div><div class="ttdoc">Abstract Functions for File IO.</div></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="var_int_file___i_o_8h.html#ad87d7d041a638f17308bffa039efb58d">VUF_initialize</a>(</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *file_name,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    file_modes io_mode);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="var_int_file___i_o_8h.html#acd17b6ab96cbfb4911978141bfbfaa84">VUF_append</a>(</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    uint32_t data,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    uint32_t length);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">// Read One VarInt</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>uint32_t <a class="code hl_function" href="var_int_file___i_o_8h.html#aafa9034f88afca6a726a84673d063889">VUF_read_stack</a>(</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    uint32_t length);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="var_int_file___i_o_8h.html#ab856b51c917ab7e19c72f1cb25f22923">VUF_close</a>(<a class="code hl_struct" href="struct_var_unsigned_int_file.html">VUF</a> *stream);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif </span><span class="comment">/* VARINTFILE_IO_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="afile___i_o_8h_html_aaa4f66633ab727c9d841db141c3da088"><div class="ttname"><a href="file___i_o_8h.html#aaa4f66633ab727c9d841db141c3da088">file_t</a></div><div class="ttdeci">FILE file_t</div><div class="ttdoc">File Handling Abstractions.</div><div class="ttdef"><b>Definition</b> file_IO.h:24</div></div>
-<div class="ttc" id="aglobal__constants_8h_html"><div class="ttname"><a href="global__constants_8h.html">global_constants.h</a></div><div class="ttdoc">Contains Application-Level Constants.</div></div>
 <div class="ttc" id="alogs_8h_html"><div class="ttname"><a href="logs_8h.html">logs.h</a></div><div class="ttdoc">Logging Execution and Errors in Code.</div></div>
-<div class="ttc" id="astruct_var_unsigned_int_file_html"><div class="ttname"><a href="struct_var_unsigned_int_file.html">VarUnsignedIntFile</a></div><div class="ttdef"><b>Definition</b> varIntFile_IO.h:48</div></div>
+<div class="ttc" id="astruct_var_unsigned_int_file_html"><div class="ttname"><a href="struct_var_unsigned_int_file.html">VarUnsignedIntFile</a></div><div class="ttdoc">Manages VUF Files.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.h:44</div></div>
 <div class="ttc" id="atypedefs_8h_html_a9686e3aa2c29c9c208c0cf15d69516e5"><div class="ttname"><a href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a></div><div class="ttdeci">enum ERROR_CODES error_t</div></div>
-<div class="ttc" id="avar_int_file___i_o_8h_html_aaee745b08a71023fc4d3bde412bdc006"><div class="ttname"><a href="var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006">VUF</a></div><div class="ttdeci">struct VarUnsignedIntFile VUF</div></div>
+<div class="ttc" id="avar_int_file___i_o_8h_html_aaee745b08a71023fc4d3bde412bdc006"><div class="ttname"><a href="var_int_file___i_o_8h.html#aaee745b08a71023fc4d3bde412bdc006">VUF</a></div><div class="ttdeci">struct VarUnsignedIntFile VUF</div><div class="ttdoc">Manages VUF Files.</div></div>
 <div class="ttc" id="avar_int_file___i_o_8h_html_aafa9034f88afca6a726a84673d063889"><div class="ttname"><a href="var_int_file___i_o_8h.html#aafa9034f88afca6a726a84673d063889">VUF_read_stack</a></div><div class="ttdeci">uint32_t VUF_read_stack(VUF *stream, uint32_t length)</div><div class="ttdoc">Reads the next value of size length from the VUF file.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.c:85</div></div>
+<div class="ttc" id="avar_int_file___i_o_8h_html_ab856b51c917ab7e19c72f1cb25f22923"><div class="ttname"><a href="var_int_file___i_o_8h.html#ab856b51c917ab7e19c72f1cb25f22923">VUF_close</a></div><div class="ttdeci">error_t VUF_close(VUF *stream)</div><div class="ttdoc">Empty Buffer and Close Stream.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.c:112</div></div>
 <div class="ttc" id="avar_int_file___i_o_8h_html_acd17b6ab96cbfb4911978141bfbfaa84"><div class="ttname"><a href="var_int_file___i_o_8h.html#acd17b6ab96cbfb4911978141bfbfaa84">VUF_append</a></div><div class="ttdeci">error_t VUF_append(VUF *stream, uint32_t data, uint32_t length)</div><div class="ttdoc">Appends a VUF file with data of a certain length.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.c:51</div></div>
 <div class="ttc" id="avar_int_file___i_o_8h_html_ad87d7d041a638f17308bffa039efb58d"><div class="ttname"><a href="var_int_file___i_o_8h.html#ad87d7d041a638f17308bffa039efb58d">VUF_initialize</a></div><div class="ttdeci">error_t VUF_initialize(VUF *stream, const char *file_name, file_modes io_mode)</div><div class="ttdoc">Initializes a VUF file.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.c:18</div></div>
-<div class="ttc" id="avar_int_file___i_o_8h_html_af7b7dc9a200cb1404c280bd500fd1551"><div class="ttname"><a href="var_int_file___i_o_8h.html#af7b7dc9a200cb1404c280bd500fd1551">BUFFER_LENGTH</a></div><div class="ttdeci">#define BUFFER_LENGTH</div><div class="ttdoc">Number of Buffer Elements.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.h:27</div></div>
+<div class="ttc" id="avar_int_file___i_o_8h_html_af7b7dc9a200cb1404c280bd500fd1551"><div class="ttname"><a href="var_int_file___i_o_8h.html#af7b7dc9a200cb1404c280bd500fd1551">BUFFER_LENGTH</a></div><div class="ttdeci">#define BUFFER_LENGTH</div><div class="ttdoc">Number of Buffer Elements.</div><div class="ttdef"><b>Definition</b> varIntFile_IO.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

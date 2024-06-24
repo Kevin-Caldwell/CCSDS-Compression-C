@@ -5,12 +5,8 @@
 Central and Directional Local Difference Functions and Definitions.  
 
 
-{\ttfamily \#include "{}constants/constants.\+h"{}}\newline
 {\ttfamily \#include "{}math/linear\+\_\+algebra.\+h"{}}\newline
-{\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
 {\ttfamily \#include "{}predictor/local\+\_\+sum.\+h"{}}\newline
-{\ttfamily \#include "{}predictor/weights.\+h"{}}\newline
-{\ttfamily \#include "{}predictor/sample\+\_\+representative.\+h"{}}\newline
 Include dependency graph for local\+\_\+differences.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -30,17 +26,13 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 \#define \mbox{\hyperlink{local__differences_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}{Ps}}(z)~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, kP)
 \begin{DoxyCompactList}\small\item\em Redundant Definition of Ps in math\+\_\+function.\+h. \end{DoxyCompactList}\item 
-\Hypertarget{local__differences_8h_add0875819772a3917e5a6f648c0a3292}\label{local__differences_8h_add0875819772a3917e5a6f648c0a3292} 
-\#define {\bfseries DLD}(h\+IMG,  z,  y,  x,  d)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, d)
+\#define \mbox{\hyperlink{local__differences_8h_add0875819772a3917e5a6f648c0a3292}{DLD}}(h\+IMG,  z,  y,  x,  d)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, d)
 \begin{DoxyCompactList}\small\item\em Shorthand for Direct Local Difference. \end{DoxyCompactList}\item 
-\Hypertarget{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c}\label{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c} 
-\#define {\bfseries DLD\+\_\+N}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, N)
+\#define \mbox{\hyperlink{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c}{DLD\+\_\+N}}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, N)
 \begin{DoxyCompactList}\small\item\em Shorthand for North Direct Local Difference. \end{DoxyCompactList}\item 
-\Hypertarget{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f}\label{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f} 
-\#define {\bfseries DLD\+\_\+W}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, W)
+\#define \mbox{\hyperlink{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f}{DLD\+\_\+W}}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, W)
 \begin{DoxyCompactList}\small\item\em Shorthand for West Direct Local Difference. \end{DoxyCompactList}\item 
-\Hypertarget{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5}\label{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5} 
-\#define {\bfseries DLD\+\_\+\+NW}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, NW)
+\#define \mbox{\hyperlink{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5}{DLD\+\_\+\+NW}}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, NW)
 \begin{DoxyCompactList}\small\item\em Shorthand for North\+West Direct Local Difference. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -71,6 +63,58 @@ Kevin Caldwell @\+Brian\+Sh\+Tsoi
 
 
 \doxysubsection{Macro Definition Documentation}
+\Hypertarget{local__differences_8h_add0875819772a3917e5a6f648c0a3292}\label{local__differences_8h_add0875819772a3917e5a6f648c0a3292} 
+\index{local\_differences.h@{local\_differences.h}!DLD@{DLD}}
+\index{DLD@{DLD}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{DLD}{DLD}}
+{\footnotesize\ttfamily \#define DLD(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x,  }\item[{}]{d }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, d)}
+
+
+
+Shorthand for Direct Local Difference. 
+
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+\Hypertarget{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c}\label{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c} 
+\index{local\_differences.h@{local\_differences.h}!DLD\_N@{DLD\_N}}
+\index{DLD\_N@{DLD\_N}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{DLD\_N}{DLD\_N}}
+{\footnotesize\ttfamily \#define DLD\+\_\+N(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, N)}
+
+
+
+Shorthand for North Direct Local Difference. 
+
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+\Hypertarget{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5}\label{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5} 
+\index{local\_differences.h@{local\_differences.h}!DLD\_NW@{DLD\_NW}}
+\index{DLD\_NW@{DLD\_NW}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{DLD\_NW}{DLD\_NW}}
+{\footnotesize\ttfamily \#define DLD\+\_\+\+NW(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, NW)}
+
+
+
+Shorthand for North\+West Direct Local Difference. 
+
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+\Hypertarget{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f}\label{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f} 
+\index{local\_differences.h@{local\_differences.h}!DLD\_W@{DLD\_W}}
+\index{DLD\_W@{DLD\_W}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{DLD\_W}{DLD\_W}}
+{\footnotesize\ttfamily \#define DLD\+\_\+W(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, W)}
+
+
+
+Shorthand for West Direct Local Difference. 
+
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
 \Hypertarget{local__differences_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}\label{local__differences_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4} 
 \index{local\_differences.h@{local\_differences.h}!Ps@{Ps}}
 \index{Ps@{Ps}!local\_differences.h@{local\_differences.h}}
@@ -99,16 +143,17 @@ Finds the Central Local Difference using Direct Image Access.
 \begin{DoxyNote}{Note}
 Soon Deprecated 
 \end{DoxyNote}
-Here is the call graph for this function\+:
-\nopagebreak
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=208pt]{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -128,16 +173,17 @@ Finds the Directional Local Difference using Direct Image Access.
 \begin{DoxyNote}{Note}
 Soon Deprecated 
 \end{DoxyNote}
-Here is the call graph for this function\+:
-\nopagebreak
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=226pt]{local__differences_8h_aa1779fb92c191cde51766275baaf7591_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -157,16 +203,17 @@ Finds the Local Direction Vector using Direct Image Access.
 \begin{DoxyNote}{Note}
 Soon Deprecated 
 \end{DoxyNote}
-Here is the call graph for this function\+:
-\nopagebreak
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{local__differences_8h_aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -96,13 +96,16 @@ $(document).ready(function(){initNavTree('struct_uncompressed_hyperspectral_imag
 </div><!--header-->
 <div class="contents">
 
+<p>Stores Hyperspectral Images in 16-bit chunks.  
+ <a href="struct_uncompressed_hyperspectral_image.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="uhi__io_8h_source.html">uhi_io.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for UncompressedHyperspectralImage:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_uncompressed_hyperspectral_image__coll__graph.png" border="0" usemap="#a_uncompressed_hyperspectral_image_coll__map" alt="Collaboration graph"/></div>
 <map name="a_uncompressed_hyperspectral_image_coll__map" id="a_uncompressed_hyperspectral_image_coll__map">
-<area shape="rect" title=" " alt="" coords="5,93,216,133"/>
+<area shape="rect" title="Stores Hyperspectral Images in 16&#45;bit chunks." alt="" coords="5,93,216,133"/>
 <area shape="rect" href="structdim3.html" title="struct for 3d coordinates." alt="" coords="83,5,138,31"/>
 <area shape="poly" title=" " alt="" coords="113,44,113,93,108,93,108,44"/>
 </map>
@@ -118,7 +121,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:ab10afab4dbcbfc99227c63ee0ae694ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores UHI file streams.</p>
+<div class="textblock"><p>Stores Hyperspectral Images in 16-bit chunks. </p>
+<p>Stores UHI file streams.</p>
 <p>File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.</p>
 <p>Designed to be a more RAM-friendly alternative to the image struct defined in <a class="el" href="image_8h.html">image.h</a>. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.</p>
 <p>fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array </p>
