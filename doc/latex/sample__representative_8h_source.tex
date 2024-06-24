@@ -7,25 +7,22 @@
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ SAMPLE\_REPRESENTATIVE\_H}}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{linear__algebra_8h}{math/linear\_algebra.h}}"{}}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{quantizer_8h}{predictor/quantizer.h}}"{}}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ SR(hIMG,\ Z,\ Y,\ X)\ GetPixel(hIMG,\ X,\ Y,\ Z)}}
-\DoxyCodeLine{00022\ \textcolor{comment}{//\ \#define\ SAMPLE(z,y,x)\ (0)\ //\ TODO}}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{sample__representative_8h_aa25f2ddef46c2c5466643b137580700a}{damping}}[];}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00034\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{sample__representative_8h_a0ed063d2db07cb63fecfb70cffec43f1}{offset}}[];}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00046\ \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{sample__representative_8h_aca1581c921d082976e7f116aa52c56f0}{SampleRepresentative}}(uint16\_t\ sample\_value);}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00054\ uint32\_t\ \mbox{\hyperlink{sample__representative_8h_a6c60474c610dc64773816bc445efeb77}{DoubleResolutionPredictedSample}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ int64\_t\ high\_resolution\_predicted\_sample);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00061\ uint16\_t\ \mbox{\hyperlink{sample__representative_8h_a14cff7c59ac94b0387e8b95a433521e9}{PredictedSample}}(uint32\_t\ double\_resolution\_predicted\_sample);}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00068\ int64\_t\ \mbox{\hyperlink{sample__representative_8h_a441e8d0fe639d45889aab5b88c4138f4}{HighResolutionPredictedSample}}(int64\_t\ predicted\_central\_local\_difference,\ uint32\_t\ local\_sum);}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SAMPLE\_REPRESENTATIVE\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SR(hIMG,\ Z,\ Y,\ X)\ GetPixel(hIMG,\ X,\ Y,\ Z)}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \#define\ SAMPLE(z,y,x)\ (0)\ //\ TODO}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{sample__representative_8h_aa25f2ddef46c2c5466643b137580700a}{damping}}[];}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{sample__representative_8h_a0ed063d2db07cb63fecfb70cffec43f1}{offset}}[];}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00043\ \mbox{\hyperlink{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}{data\_t}}\ \mbox{\hyperlink{sample__representative_8h_aca1581c921d082976e7f116aa52c56f0}{SampleRepresentative}}(uint16\_t\ sample\_value);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ uint32\_t\ \mbox{\hyperlink{sample__representative_8h_a6c60474c610dc64773816bc445efeb77}{DoubleResolutionPredictedSample}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ int64\_t\ high\_resolution\_predicted\_sample);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ uint16\_t\ \mbox{\hyperlink{sample__representative_8h_a14cff7c59ac94b0387e8b95a433521e9}{PredictedSample}}(uint32\_t\ double\_resolution\_predicted\_sample);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ int64\_t\ \mbox{\hyperlink{sample__representative_8h_a441e8d0fe639d45889aab5b88c4138f4}{HighResolutionPredictedSample}}(int64\_t\ predicted\_central\_local\_difference,\ uint32\_t\ local\_sum);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SAMPLE\_REPRESENTATIVE\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

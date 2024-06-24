@@ -13,13 +13,13 @@ int GenerateVoronoiImage(dim3 size, int index, int points)
     image testImage = decl_image;
 
     res = InitImage(&testImage, size.x, size.y, size.z);
-    global_error_handle
+    log_global_error_handle
 
     res = GenerateVoronoiFlat3DLocal(&testImage, (UINT) points);
-    global_error_handle
+    log_global_error_handle
  
     res = SaveImageAsCSV(&testImage, filename);
-    global_error_handle
+    log_global_error_handle
 
     return res;
 }
@@ -123,10 +123,10 @@ int PredictImageUHI(char *source, char *destination)
 #endif
 
     res = F_CLOSE(hIMG.fs);
-    global_error_handle
+    log_global_error_handle
     
     res = F_CLOSE(result.fs);
-    global_error_handle
+    log_global_error_handle
 
     return RES_OK;
 }
@@ -137,14 +137,14 @@ int EncodeImage(char *source, char *destination)
     image predicted_image = decl_image;
 
     res = ReadImageFromCSV(&predicted_image, source);
-    global_error_handle
+    log_global_error_handle
 
     res = LoadConstantFile("../data/constants/predictor.CONST", &predictor_constants);
-    global_error_handle
+    log_global_error_handle
 
     InitalizePredictorConstants();
     res = EncodeBody(&predicted_image, destination, "w", 100);
-    global_error_handle
+    log_global_error_handle
 
     return RES_OK;
 }
@@ -169,10 +169,10 @@ int TestReadImage()
     int res = RES_OK;
     image img = decl_image;
     res = ReadImageFromCSV(&img, "data_locale.csv");
-    global_error_handle
+    log_global_error_handle
 
     res = SaveImageAsCSV(&img, "data_locale2.csv");
-    global_error_handle
+    log_global_error_handle
 
     return RES_OK;
 }
@@ -188,11 +188,11 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
     UHI stream = decl_image;
 
     res = ReadImageFromCSV(&img, src_csv);
-    global_error_handle
+    log_global_error_handle
 
     size = img.size;
     res = UHI_Initialize(&stream, size, dest_uhi, WRITE);
-    global_error_handle
+    log_global_error_handle
 
     printf("Read CSV\n");
     #ifndef S_SPLINT_S
@@ -206,7 +206,7 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
                 PIXEL p = GetPixel(&img, i, j, k);
 
                 res = UHI_WritePixel(&stream, index, p);
-                global_error_handle
+                log_global_error_handle
             }
         }
     }
@@ -214,7 +214,7 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
     printf("Written CSV\n");
 
     res = F_CLOSE(stream.fs);
-    global_error_handle
+    log_global_error_handle
 
     return 0;
 }

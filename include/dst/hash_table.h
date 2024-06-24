@@ -4,7 +4,6 @@
  * Hash Table Implementation for Storing Constants.
  *
  * Dependencies
- *  stdlib
  *  inttypes
  *  string
  *
@@ -22,7 +21,7 @@
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 
-#include <stdlib.h>
+// #include <stdlib.h>
 #include <inttypes.h>
 #include <string.h>
 #include "constants/typedefs.h"

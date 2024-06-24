@@ -1,6 +1,5 @@
 #include "predictor/sample_representative.h"
 
-// TODO REMOVE, Use GetPixel instaed
 data_t SampleRepresentative(uint16_t sample_value)
 {
     return sample_value;

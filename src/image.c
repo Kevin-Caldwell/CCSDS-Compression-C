@@ -1,5 +1,7 @@
 #include "dst/image.h"
 
+int Log_memread = 0;
+
 int file_index = 0;
 
 int InitImage(image *img_p, DIM x, DIM y, DIM z)
@@ -8,16 +10,19 @@ int InitImage(image *img_p, DIM x, DIM y, DIM z)
     char file_name[40];
     
     res = snprintf(file_name, 40, "_%dx%dx%d_%d.UHI", (int) x, (int) y, (int) z, file_index);
-    global_error_handle
+    log_global_error_handle
 
     res = UHI_Initialize(img_p, (dim3){x, y, z}, file_name, READ_AND_WRITE);
-    global_error_handle
+    log_global_error_handle
+
+    
     
     return res;
 }
 
 PIXEL GetPixel(image *hIMG, INDEX x, INDEX y, INDEX z)
 {
+    Log_memread++;
     return UHI_ReadPixel(hIMG, (dim3){x, y, z});
 }
 

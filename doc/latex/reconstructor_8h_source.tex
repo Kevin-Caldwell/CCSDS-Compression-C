@@ -9,33 +9,20 @@
 \DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <time.h>}}
 \DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
 \DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{math__functions_8h}{math/math\_functions.h}}"{}}}
-\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{linear__algebra_8h}{math/linear\_algebra.h}}"{}}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csv-io_8h}{files/csv-\/io.h}}"{}}}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{predictor_8h}{predictor/predictor.h}}"{}}}
-\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sample__representative_8h}{predictor/sample\_representative.h}}"{}}}
-\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{local__sum_8h}{predictor/local\_sum.h}}"{}}}
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{local__differences_8h}{predictor/local\_differences.h}}"{}}}
-\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{weights_8h}{predictor/weights.h}}"{}}}
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{quantizer_8h}{predictor/quantizer.h}}"{}}}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
-\DoxyCodeLine{00060\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kC;}
-\DoxyCodeLine{00061\ \textcolor{keyword}{typedef}\ uint32\_t\ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ ReconstructPixel(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *result,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ FILE\ *file\_ptr,\ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}*\ weights);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ Reconstructor(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *predicted\_values,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *reconstructed,\ FILE\ *file\_ptr);}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ TestReconstructor(\textcolor{keywordtype}{char}\ *file\_name);}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ RECONSTRUCTOR\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{csv-io_8h}{files/csv-\/io.h}}"{}}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{predictor_8h}{predictor/predictor.h}}"{}}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
+\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{int}\ kC;}
+\DoxyCodeLine{00048\ \textcolor{keyword}{typedef}\ uint32\_t\ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ ReconstructPixel(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *result,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ FILE\ *file\_ptr,\ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}*\ weights);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ Reconstructor(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *predicted\_values,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *reconstructed,\ FILE\ *file\_ptr);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ TestReconstructor(\textcolor{keywordtype}{char}\ *file\_name);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ RECONSTRUCTOR\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

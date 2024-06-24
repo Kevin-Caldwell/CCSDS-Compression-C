@@ -2,24 +2,25 @@
 \hypertarget{structs__predictor__constants}{}\label{structs__predictor__constants}\index{s\_predictor\_constants@{s\_predictor\_constants}}
 
 
+Structure containing all Predictor Constants.  
+
+
+
+
 {\ttfamily \#include $<$predictor\+\_\+constants.\+h$>$}
 
 \doxysubsubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} \mbox{\hyperlink{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9}{k\+Lossless\+Compression}}
-\begin{DoxyCompactList}\small\item\em Choose between lossy and lossless compression 0\+: Lossy 1\+: Lossless. \end{DoxyCompactList}\item 
-\Hypertarget{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb}\label{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb} 
-\mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\+\_\+prediction\+\_\+mode}} {\bfseries k\+Prediction\+Mode}
+\begin{DoxyCompactList}\small\item\em Choose between lossy and lossless compression. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\+\_\+prediction\+\_\+mode}} \mbox{\hyperlink{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb}{k\+Prediction\+Mode}}
 \begin{DoxyCompactList}\small\item\em Select Prediction Mode. \end{DoxyCompactList}\item 
-\Hypertarget{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}\label{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf} 
-\mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\+\_\+local\+\_\+sum}} {\bfseries k\+Local\+Sum\+Type}
+\mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\+\_\+local\+\_\+sum}} \mbox{\hyperlink{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}{k\+Local\+Sum\+Type}}
 \begin{DoxyCompactList}\small\item\em Determines the type of local sum used. Affects the compression ratio and execution time. \end{DoxyCompactList}\item 
-\Hypertarget{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb}\label{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb} 
-uint8\+\_\+t {\bfseries k\+Dynamic\+Range}
+uint8\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb}{k\+Dynamic\+Range}}
 \begin{DoxyCompactList}\small\item\em Number of bits needed to represent values in the image. \end{DoxyCompactList}\item 
-\Hypertarget{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f}\label{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f} 
-uint8\+\_\+t {\bfseries k\+Weight\+Resolution}
+uint8\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f}{k\+Weight\+Resolution}}
 \begin{DoxyCompactList}\small\item\em Number of Bits used to represent weight values. Must be between 4 and 19 inclusive. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} \mbox{\hyperlink{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd}{k\+Weight\+Initialization}}
 \begin{DoxyCompactList}\small\item\em Selects the Weight Initialization Method 0\+: Default Weight Initialization 1\+: Custom Weight Initialization. \end{DoxyCompactList}\item 
@@ -74,10 +75,32 @@ int {\bfseries k\+TInc}
 
 
 \doxysubsection{Detailed Description}
-Structure containing all Predictor Constants 
+Structure containing all Predictor Constants. 
 
 \doxysubsection{Field Documentation}
-\Hypertarget{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9}\label{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9} 
+\Hypertarget{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb}\label{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kDynamicRange@{kDynamicRange}}
+\index{kDynamicRange@{kDynamicRange}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kDynamicRange}{kDynamicRange}}
+{\footnotesize\ttfamily uint8\+\_\+t k\+Dynamic\+Range}
+
+
+
+Number of bits needed to represent values in the image. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Move to image properties \end{DoxyRefDesc}
+\Hypertarget{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}\label{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kLocalSumType@{kLocalSumType}}
+\index{kLocalSumType@{kLocalSumType}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kLocalSumType}{kLocalSumType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\+\_\+local\+\_\+sum}} k\+Local\+Sum\+Type}
+
+
+
+Determines the type of local sum used. Affects the compression ratio and execution time. 
+
+User Defined Constant \Hypertarget{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9}\label{structs__predictor__constants_aa9543722f3ac4cee7db1aa2c20c289e9} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kLosslessCompression@{kLosslessCompression}}
 \index{kLosslessCompression@{kLosslessCompression}!s\_predictor\_constants@{s\_predictor\_constants}}
 \doxysubsubsection{\texorpdfstring{kLosslessCompression}{kLosslessCompression}}
@@ -85,14 +108,24 @@ Structure containing all Predictor Constants
 
 
 
-Choose between lossy and lossless compression 0\+: Lossy 1\+: Lossless. 
+Choose between lossy and lossless compression. 
 
-\begin{DoxyNote}{Note}
+0\+: Lossy 1\+: Lossless User Defined Constant \begin{DoxyNote}{Note}
 Lossy Compression not fully supported yet 
 \end{DoxyNote}
 \begin{DoxyRefDesc}{Todo}
 \item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Implement use case \end{DoxyRefDesc}
-\Hypertarget{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b}\label{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b} 
+\Hypertarget{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb}\label{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kPredictionMode@{kPredictionMode}}
+\index{kPredictionMode@{kPredictionMode}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kPredictionMode}{kPredictionMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_aa8979f300abc80c56dcedc2c1cc8a95c}{t\+\_\+prediction\+\_\+mode}} k\+Prediction\+Mode}
+
+
+
+Select Prediction Mode. 
+
+User Defined Constant \Hypertarget{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b}\label{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightExponentOffsetFlag@{kWeightExponentOffsetFlag}}
 \index{kWeightExponentOffsetFlag@{kWeightExponentOffsetFlag}!s\_predictor\_constants@{s\_predictor\_constants}}
 \doxysubsubsection{\texorpdfstring{kWeightExponentOffsetFlag}{kWeightExponentOffsetFlag}}
@@ -103,7 +136,7 @@ Lossy Compression not fully supported yet
 Selects the Weight Exponent Offset Flag 0\+: WEO values are zero 1\+: WEO values can be non-\/zero. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Implement in Predictor\end{DoxyRefDesc}
 \Hypertarget{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd}\label{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightInitialization@{kWeightInitialization}}
 \index{kWeightInitialization@{kWeightInitialization}!s\_predictor\_constants@{s\_predictor\_constants}}
@@ -115,8 +148,20 @@ Selects the Weight Exponent Offset Flag 0\+: WEO values are zero 1\+: WEO values
 Selects the Weight Initialization Method 0\+: Default Weight Initialization 1\+: Custom Weight Initialization. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
 
+
+User Defined Constant \Hypertarget{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f}\label{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightResolution@{kWeightResolution}}
+\index{kWeightResolution@{kWeightResolution}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kWeightResolution}{kWeightResolution}}
+{\footnotesize\ttfamily uint8\+\_\+t k\+Weight\+Resolution}
+
+
+
+Number of Bits used to represent weight values. Must be between 4 and 19 inclusive. 
+
+User Defined Constant 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

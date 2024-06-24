@@ -11,8 +11,6 @@
  * @todo Implement LocaleBuffer_SmartLoad
  */
 
-#include "constants/typedefs.h"
-#include "constants/constants.h"
 #include "dst/image.h"
 
 /** @brief Defined in the standard */
@@ -37,8 +35,8 @@ extern INDEX LocaleBuffer_neighbor_index_y[LOCAL_BUFFER_NEIGHBOR_SIZE];
 
 
 /**
- * \struct
- * @brief
+ * @brief Stores Pixel Neighborhood in Buffer
+ * @details
  * The Locale Buffer is designed to store the
  * Neighborhood of the current Pixel being 
  * compressed.

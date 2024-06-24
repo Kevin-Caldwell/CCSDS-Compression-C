@@ -2,6 +2,7 @@
 
 char log_file[] = "../data/logs/compressor.logs";
 char _time_str[100];
+char log_write_buffer[100];
 
 char *_GET_PRINT_TIME()
 {

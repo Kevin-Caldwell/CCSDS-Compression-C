@@ -83,7 +83,7 @@ int SaveImageAsCSV(image *hIMG, char *file_name)
     // sprintf(string_buffer, "%hu", hIMG->data[size.x * size.y * size.z - 1]);
     // fputs(string_buffer, fp);
     res = F_CLOSE(fp);
-    global_error_handle
+    log_global_error_handle
 
     return 0;
 }
@@ -109,12 +109,12 @@ int ReadImageFromCSV(image *hIMG, char *file_name)
 
     int num;
 
-    int img_counter = 0;
+    // int img_counter = 0;
 
     while (read_buffer != (char) EOF)
     {
         res = (int) F_READ(&read_buffer, sizeof(char), 1, fp);
-        global_error_handle
+        log_global_error_handle
 
         if (read_buffer == ',')
         {

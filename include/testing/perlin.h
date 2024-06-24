@@ -1,8 +1,6 @@
 #ifndef PERLIN_H
 #define PERLIN_H
 
-#include "dst/image.h"
-
 #include "files/csv-io.h"
 #include <math.h>
 #include <string.h>

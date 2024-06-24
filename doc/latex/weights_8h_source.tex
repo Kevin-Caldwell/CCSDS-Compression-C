@@ -6,28 +6,24 @@
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ WEIGHTS\_H}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ WEIGHTS\_H}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{constants_8h}{constants/constants.h}}"{}}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{linear__algebra_8h}{math/linear\_algebra.h}}"{}}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{quantizer_8h}{predictor/quantizer.h}}"{}}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{local__differences_8h}{predictor/local\_differences.h}}"{}}}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00022\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{weights_8h_a4d0af751debaaf6b3f8c5e845277b8a0}{InitializeWeights}}(\mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}\ *weight\_ptr,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z);}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00029\ int32\_t\ \mbox{\hyperlink{weights_8h_a286baab1384ff25cf7cf4c2061f15c4c}{DoubleResolutionPredictionError}}(int16\_t\ clipped\_quantizer\_bin\_center,}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_predicted\_sample);}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00037\ int32\_t\ \mbox{\hyperlink{weights_8h_aa2ee574fad65a220fa95637b2c9bd2af}{WeightUpdateScalingExponent}}(\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \mbox{\hyperlink{structdim3}{dim3}}\ img\_dim);}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0}{UpdateWeights}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}\ *weights,}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_prediction\_error);}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00056\ int64\_t\ \mbox{\hyperlink{weights_8h_acf58304d4d853a358ca999e417090596}{PredictedCentralLocalDifference}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}*\ weights);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ WEIGHTS\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{local__differences_8h}{predictor/local\_differences.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ Ps(z)\ MIN(z,\ kP)}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{weights_8h_a4d0af751debaaf6b3f8c5e845277b8a0}{InitializeWeights}}(\mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}\ *weight\_ptr,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ int32\_t\ \mbox{\hyperlink{weights_8h_a286baab1384ff25cf7cf4c2061f15c4c}{DoubleResolutionPredictionError}}(int16\_t\ clipped\_quantizer\_bin\_center,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_predicted\_sample);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ int32\_t\ \mbox{\hyperlink{weights_8h_aa2ee574fad65a220fa95637b2c9bd2af}{WeightUpdateScalingExponent}}(\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \mbox{\hyperlink{structdim3}{dim3}}\ img\_dim);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0}{UpdateWeights}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}\ *weights,}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int32\_t\ double\_resolution\_prediction\_error);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ int64\_t\ \mbox{\hyperlink{weights_8h_acf58304d4d853a358ca999e417090596}{PredictedCentralLocalDifference}}(\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}\ *hIMG,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ z,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ y,\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ x,\ \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\_t}}*\ weights);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ WEIGHTS\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

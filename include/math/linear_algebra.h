@@ -29,7 +29,6 @@
 #include "constants/constants.h"
 #include "math_functions.h"
 
-#include <stdlib.h>
 
 /**
  * @brief Initializes the vector

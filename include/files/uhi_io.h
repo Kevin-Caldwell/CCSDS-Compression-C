@@ -20,7 +20,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "files/file_IO.h"
+#include "files/logs.h"
 #include "math/math_functions.h"
 
 /** 
@@ -31,6 +31,7 @@
 #define UHI_CACHE_LENGTH 3 // Image Size Buffer
 
 /**
+ * @brief Stores Hyperspectral Images in 16-bit chunks
  * @details
  * Stores UHI file streams.
  *

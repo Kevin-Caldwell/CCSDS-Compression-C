@@ -4,23 +4,49 @@ file_t *fp;
 // int _C = 0;
 int kC = 0;
 
-void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, weight_t* weights)
-{
+void Predict(
+    image *hIMG, 
+    image *result, 
+    INDEX z, 
+    INDEX y, 
+    INDEX x, 
+    weight_t* weights
+) {
 
     data_t raw_data = GetPixel(hIMG, x, y, z);
     uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
 
-    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(hIMG, z, y, x, weights);
+    int64_t predicted_central_local_difference = 
+        PredictedCentralLocalDifference(hIMG, z, y, x, weights);
 
-    int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
-    int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(hIMG, z, y, x, high_resolution_predicted_sample);
+    int64_t high_resolution_predicted_sample = 
+        HighResolutionPredictedSample(
+            predicted_central_local_difference, 
+            local_sum
+        );
+    
+    int32_t double_resolution_predicted_sample = 
+        DoubleResolutionPredictedSample(
+            hIMG, 
+            z, 
+            y, 
+            x, 
+            high_resolution_predicted_sample
+        );
 
-    uint16_t predicted_sample = PredictedSample(double_resolution_predicted_sample);
-    int32_t quantizer_index = QuantizerIndex(raw_data, predicted_sample);
+    uint16_t predicted_sample = 
+        PredictedSample(double_resolution_predicted_sample);
+    int32_t quantizer_index = 
+        QuantizerIndex(raw_data, predicted_sample);
 
-    uint16_t clipped_quantizer_bin_center = ClippedQuantizerBinCenter(raw_data);
-    int32_t double_resolution_predicted_error = DoubleResolutionPredictionError(clipped_quantizer_bin_center,
-                                                                                double_resolution_predicted_sample);
+    uint16_t clipped_quantizer_bin_center = 
+        ClippedQuantizerBinCenter(raw_data);
+    int32_t double_resolution_predicted_error = 
+        DoubleResolutionPredictionError(
+            clipped_quantizer_bin_center,
+            double_resolution_predicted_sample
+        );
+
     data_t predicted_value = MappedQuantizerIndex(
         quantizer_index,
         predicted_sample,
@@ -37,7 +63,9 @@ void Predict(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, weight_t* we
         sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
                 x, y, z,
                 raw_data, predicted_sample, predicted_value,
-                predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+                predicted_central_local_difference, 
+                double_resolution_predicted_sample, 
+                high_resolution_predicted_sample);
 
         for (int i = 0; i < kC; i++)
         {
@@ -63,17 +91,18 @@ int RunPredictor(image *hIMG, image *result)
 #endif
 
     clock_t start, end;
-    dim3 size = hIMG->size;
+    dim3 s = hIMG->size;
 
 #if LOG
     fp = F_OPEN("../data/logs/c-debug.LOG", WRITE);
+    Log_memread = 0;
 
     Log_add("Setup Complete. Running C Predictor");
     start = clock();
 #endif
 
     
-    for (int i = 0; i < size.z; i++)
+    for (int i = 0; i < s.z; i++)
     {
         if (!kPredictionMode)
         {
@@ -87,9 +116,9 @@ int RunPredictor(image *hIMG, image *result)
         weight_t weight_vector[kC];
         InitializeWeights(weight_vector, i);
 
-        for (int j = 0; j < size.y; j++)
+        for (int j = 0; j < s.y; j++)
         {
-            for (int k = 0; k < size.x; k++)
+            for (int k = 0; k < s.x; k++)
             {
                 Predict(hIMG, result, i, j, k, weight_vector);
             }
@@ -97,24 +126,27 @@ int RunPredictor(image *hIMG, image *result)
 
 #if LOG
         double time_elapsed = (double)(clock() - start) / (double)CLOCKS_PER_SEC;
-        double time_left = time_elapsed * (hIMG->size.z - i - 1) / (i + 1);
-        printf("\rPredicted %d/%d of Image. (%3.1f seconds Elapsed, %3.1f seconds Left)", (int)(i + 1), (int)hIMG->size.z, time_elapsed, time_left);
+        double time_left = time_elapsed * (s.z - i - 1) / (i + 1);
+        printf("\rPredicted %d/%d of Image. (%3.1f seconds Elapsed, %3.1f seconds Left)", (int)(i + 1), (int)s.z, time_elapsed, time_left);
         fflush(stdout);
 #endif
     }
 
 #if LOG
+    sprintf(log_write_buffer, "Image File accessed %d times.", Log_memread);
+    Log_add(log_write_buffer);
+    sprintf(log_write_buffer, "%f Image File Accesses per pixel. (%d, %d, %d)", (float) Log_memread / (s.x * s.y * s.z), s.x, s.y, s.z);
+    Log_add(log_write_buffer);
     F_CLOSE(fp);
 
     end = clock();
     double time_elapsed = (double)(end - start) / (double)CLOCKS_PER_SEC;
     printf("\n%3.3f seconds for image prediction.\n", time_elapsed);
 
-    char out_buff[100];
-    sprintf(out_buff, "Time taken for prediction: %3.3f seconds", time_elapsed);
+    sprintf(log_write_buffer, "Time taken for prediction: %3.3f seconds", time_elapsed);
+    Log_add(log_write_buffer);
 
-    Log_add(out_buff);
-    Log_add("Prediction Complete");
+    Log_add("Prediction Completed Successfully!");
 #endif
 
     return RES_OK;

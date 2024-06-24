@@ -1,7 +1,9 @@
 #include "testing/perlin.h"
 
 /**
- * 3D floating point vector
+ * @brief 3D floating point vector
+ * @details
+ * Struct for 3D vector with floaitng point x, y, z coordinates
  */
 typedef struct fVector3
 {

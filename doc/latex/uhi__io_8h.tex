@@ -8,7 +8,7 @@ Uncompressed Hyperspectral Image file IO for storing pixel values as 16-\/bit va
 {\ttfamily \#include $<$inttypes.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include "{}files/file\+\_\+\+IO.\+h"{}}\newline
+{\ttfamily \#include "{}files/logs.\+h"{}}\newline
 {\ttfamily \#include "{}math/math\+\_\+functions.\+h"{}}\newline
 Include dependency graph for uhi\+\_\+io.\+h\+:\nopagebreak
 \begin{figure}[H]
@@ -28,7 +28,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{Uncompressed\+Hyperspectral\+Image}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stores Hyperspectral Images in 16-\/bit chunks. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,7 +38,7 @@ struct \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{Uncompressed\+H
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{Uncompressed\+Hyperspectral\+Image}} \mbox{\hyperlink{uhi__io_8h_aabf4f060c3ec7817f143c3cbf63ba0c0}{F\+\_\+\+UHI}}
-\item 
+\begin{DoxyCompactList}\small\item\em Stores Hyperspectral Images in 16-\/bit chunks. \end{DoxyCompactList}\item 
 \Hypertarget{uhi__io_8h_ac3e22f6af3f1d9eb75f08f122711569b}\label{uhi__io_8h_ac3e22f6af3f1d9eb75f08f122711569b} 
 typedef struct \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{Uncompressed\+Hyperspectral\+Image}} {\bfseries UHI}
 \item 
@@ -91,6 +91,10 @@ Image Size Buffer.
 \index{F\_UHI@{F\_UHI}!uhi\_io.h@{uhi\_io.h}}
 \doxysubsubsection{\texorpdfstring{F\_UHI}{F\_UHI}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{Uncompressed\+Hyperspectral\+Image}} \mbox{\hyperlink{uhi__io_8h_aabf4f060c3ec7817f143c3cbf63ba0c0}{F\+\_\+\+UHI}}}
+
+
+
+Stores Hyperspectral Images in 16-\/bit chunks. 
 
 Stores UHI file streams.
 
@@ -200,7 +204,7 @@ Reads a 16 bit value from 2 bytes at the respective index. The Index is specifie
 \hline
 \end{DoxyParams}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]Handle Errors (Read Error, Index\+Out\+Of\+Bounds Error) 
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]Handle Errors (Read Error, Index\+Out\+Of\+Bounds Error) 
 
 Make the seek calculation more flexible \end{DoxyRefDesc}
 Here is the call graph for this function\+:\nopagebreak
@@ -247,7 +251,7 @@ Stores a 16 bit value into 2 bytes at the index specified by
 RES\+\_\+\+OK if success 
 \end{DoxyReturn}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Handle index outside image dimensions. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000015}{Todo}}]Handle index outside image dimensions. \end{DoxyRefDesc}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}

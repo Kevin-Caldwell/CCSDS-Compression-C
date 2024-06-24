@@ -27,12 +27,10 @@
 #define DECODER_H
 
 // INCLUDES
-#include "dst/image.h"
 
 #include <inttypes.h>
 #include <time.h>
 
-#include "files/varIntFile_IO.h"
 #include "math/math_functions.h"
 #include "constants/encoder_constants.h"
 #include "encoder/body.h"

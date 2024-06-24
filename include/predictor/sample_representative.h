@@ -10,9 +10,6 @@
 #define SAMPLE_REPRESENTATIVE_H
 
 #include "dst/image.h"
-#include "constants/constants.h"
-#include "math/linear_algebra.h"
-#include "predictor/quantizer.h"
 
 /** 
  * @brief Shorthand for GetPixel 

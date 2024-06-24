@@ -10,10 +10,7 @@
 #ifndef QUANTIZER_H
 #define QUANTIZER_H
 
-#include "dst/image.h"
-#include "math/math_functions.h"
-#include "math/linear_algebra.h"
-#include "predictor/sample_representative.h"
+#include "constants/constants.h"
 
 /**
  * @brief Finds the Quantizer Index

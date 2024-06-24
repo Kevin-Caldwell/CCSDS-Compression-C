@@ -7,9 +7,7 @@ File Input/\+Output for Variable-\/\+Length Words.
 
 {\ttfamily \#include $<$inttypes.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include "{}files/file\+\_\+\+IO.\+h"{}}\newline
 {\ttfamily \#include "{}files/logs.\+h"{}}\newline
-{\ttfamily \#include "{}constants/global\+\_\+constants.\+h"{}}\newline
 {\ttfamily \#include "{}encoder/encoder\+\_\+helper\+\_\+functions.\+h"{}}\newline
 Include dependency graph for var\+Int\+File\+\_\+\+IO.\+h\+:\nopagebreak
 \begin{figure}[H]
@@ -29,7 +27,7 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Manages VUF Files. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +44,7 @@ struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}}
 typedef enum file\+\_\+modes {\bfseries file\+\_\+modes}
 \item 
 typedef struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}} \mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Manages VUF Files. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -64,9 +62,8 @@ enum {\bfseries file\+\_\+modes} \{ {\bfseries READ\+\_\+\+BINARY} = 0
 \begin{DoxyCompactList}\small\item\em Appends a VUF file with data of a certain length. \end{DoxyCompactList}\item 
 uint32\+\_\+t \mbox{\hyperlink{var_int_file___i_o_8h_aafa9034f88afca6a726a84673d063889}{VUF\+\_\+read\+\_\+stack}} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream, uint32\+\_\+t length)
 \begin{DoxyCompactList}\small\item\em Reads the next value of size length from the VUF file. \end{DoxyCompactList}\item 
-\Hypertarget{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923}\label{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923} 
-\mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}} {\bfseries VUF\+\_\+close} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}} \mbox{\hyperlink{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923}{VUF\+\_\+close}} (\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}stream)
+\begin{DoxyCompactList}\small\item\em Empty Buffer and Close Stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -86,7 +83,9 @@ Base Functionality Tested
 \doxysubsubsection{\texorpdfstring{VUF}{VUF}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_var_unsigned_int_file}{Var\+Unsigned\+Int\+File}} \mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}}}
 
-Manages VUF files.
+
+
+Manages VUF Files. 
 
 Variable Unsigned Files are designed to store integers of sizes less than 32 bits and greater than 0 bits. 
 
@@ -122,6 +121,30 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=158pt]{var_int_file___i_o_8h_acd17b6ab96cbfb4911978141bfbfaa84_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923}\label{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923} 
+\index{varIntFile\_IO.h@{varIntFile\_IO.h}!VUF\_close@{VUF\_close}}
+\index{VUF\_close@{VUF\_close}!varIntFile\_IO.h@{varIntFile\_IO.h}}
+\doxysubsubsection{\texorpdfstring{VUF\_close()}{VUF\_close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}} VUF\+\_\+close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{var_int_file___i_o_8h_aaee745b08a71023fc4d3bde412bdc006}{VUF}} \texorpdfstring{$\ast$}{*}}]{stream }\end{DoxyParamCaption})}
+
+
+
+Empty Buffer and Close Stream. 
+
+Writes back buffer that has not been filled, then closes the file. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{var_int_file___i_o_8h_ab856b51c917ab7e19c72f1cb25f22923_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{var_int_file___i_o_8h_ad87d7d041a638f17308bffa039efb58d}\label{var_int_file___i_o_8h_ad87d7d041a638f17308bffa039efb58d} 

@@ -9,10 +9,6 @@
 #ifndef WEIGHTS_H
 #define WEIGHTS_H
 
-#include "constants/constants.h"
-#include "dst/image.h"
-#include "math/linear_algebra.h"
-#include "predictor/quantizer.h"
 #include "predictor/local_differences.h"
 
 /** @brief Redefinition of Ps @todo Remove Redundant defintions */

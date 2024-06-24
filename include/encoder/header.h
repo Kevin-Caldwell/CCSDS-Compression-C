@@ -12,7 +12,6 @@
 
 #include <inttypes.h>
 
-#include "constants/constants.h"
 #include "constants/encoder_constants.h"
 #include "encoder/encoder_helper_functions.h"
 #include "constants/global_constants.h"

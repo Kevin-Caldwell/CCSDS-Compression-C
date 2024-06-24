@@ -20,10 +20,12 @@
 #define log_global_error_handle \
     if(res) {\
     char error_msg[30];\
-    sprintf(error_msg, "Error Code %d was Registered.", res);\
+    snprintf(error_msg, 30, "Error Code %d was Registered.", res);\
     Log_error(error_msg);\
     return res;\
     }
+
+extern char log_write_buffer[100];
 
 /**
  * @brief

@@ -56,8 +56,6 @@ extern uint8_t kResolution;
 #define WEIGHT_EXPONENT_OFFSET_FLAG 0
 // 2^4
 
-#pragma region Do Not Touch
-
 extern int32_t kD;
 
 extern int kUnsignedSamples;
@@ -82,5 +80,4 @@ extern int kTInc;
 
 void InitalizePredictorConstants();
 
-#pragma endregion
 #endif /* CONSTANTS_H */

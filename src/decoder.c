@@ -52,10 +52,10 @@ int Decoder_DecodeBody(image *predicted_samples, const char *file_name)
     if(res){
         perror("Decoder_DecodeBody: Unable to open file.");
         res = VUF_close(&stream);
-        global_error_handle
+        log_global_error_handle
 
         res = F_CLOSE(log);
-        global_error_handle
+        log_global_error_handle
         return res;
     }
 

@@ -11,13 +11,15 @@
 
 #include "constants/typedefs.h"
 
-/** Structure containing all Predictor Constants */
+/** @brief Structure containing all Predictor Constants */
 typedef struct{
     /**
      * @brief 
-     * Choose between lossy and lossless compression 
+     * Choose between lossy and lossless compression.
+     * @details 
      * 0: Lossy
      * 1: Lossless
+     * User Defined Constant
      * \note Lossy Compression not fully supported yet
      * \todo Implement use case
      */
@@ -26,6 +28,8 @@ typedef struct{
     /**
      * @brief 
      * Select Prediction Mode
+     * @details
+     * User Defined Constant
      */
     t_prediction_mode kPredictionMode;
 
@@ -33,12 +37,17 @@ typedef struct{
      * @brief
      * Determines the type of local sum used. Affects the compression
      * ratio and execution time.
+     * @details
+     * User Defined Constant
      */
     t_local_sum kLocalSumType;
 
     /** 
      * @brief
      * Number of bits needed to represent values in the image.
+     * @todo Move to image properties
+     * @details
+     * Range: [2, 32]
      */
     uint8_t kDynamicRange;
 
@@ -46,6 +55,9 @@ typedef struct{
      * @brief 
      * Number of Bits used to represent weight values.
      * Must be between 4 and 19 inclusive.
+     * @details 
+     * User Defined Constant
+     * Range: [4, 19]
      */
     uint8_t kWeightResolution;
 
@@ -53,7 +65,9 @@ typedef struct{
      * @brief Selects the Weight Initialization Method
      * 0: Default Weight Initialization
      * 1: Custom Weight Initialization
-     * \todo Implement in Predictor
+     * @todo Implement in Predictor
+     * @details
+     * User Defined Constant
      */
     BOOL kWeightInitialization;
 
@@ -61,18 +75,77 @@ typedef struct{
      * @brief Selects the Weight Exponent Offset Flag
      * 0: WEO values are zero
      * 1: WEO values can be non-zero
-     * \todo Implement in Predictor
+     * @todo Implement in Predictor
+     * 
      */
     BOOL kWeightExponentOffsetFlag;
 
     int kUnsignedSamples;
 
+    /** 
+     * @brief Lower Sample Value Limit
+     * @details
+     * If samples are unsigned, 
+     * @code kSmin = 0 @endcode
+     * If samples are signed, 
+     * @code kSmin = -2^(D-1) @endcode
+     * 
+     * Calculated Constant.
+     */
     int kSmin;
+
+    /**
+     * @brief Middle Sample Value
+     * @details 
+     * If samples are unsigned, 
+     * @code kSmid = 2^(D-1) @endcode
+     * If samples are signed, 
+     * @code kSmid = 0 @endcode
+     * 
+     * Calculated Constant
+     */
     int kSmax;
+
+    /**
+     * @brief Maximum Sample Value
+     * @details 
+     * If samples are unsigned, 
+     * @code kSmax = 2^(D)-1 @endcode
+     * If samples are signed, 
+     * @code kSmax = 2^(D-1)-1 @endcode
+     * 
+     * Calculated Constant
+     */
     int kSmid;
     
-    /** @brief The number of prediction bands */
-    int32_t kPredictionBands;
+    /** 
+     * @brief The number of prediction bands 
+     * @details
+     * Range: [0,15]
+     * 
+     * User Specified Constant.
+     */
+    int32_t kP;
+
+    /**
+     * @brief Prediction Bands for a Spectral Band z
+     * @details
+     * Pz* = min{z, P}
+     * 
+     * Calculated Constant.
+     */
+    int32_t kPz;
+
+    /**
+     * @brief Number of Local Difference Values used for prediction
+     * @details
+     * In Reduced Prediction Mode, 
+     * Cz = Pz
+     * 
+     * 
+     * Calculated Constant.
+     */
+    int32_t kCz;
 
     /** @brief  */
     uint8_t kWeightComponentResolution;

@@ -13,12 +13,8 @@
 #define VARINTFILE_IO_H
 
 #include <inttypes.h>
-#include <stdlib.h>
 
-#include "files/file_IO.h"
 #include "files/logs.h"
-
-#include "constants/global_constants.h"
 #include "encoder/encoder_helper_functions.h"
 
 /**
@@ -37,9 +33,8 @@ typedef enum file_modes
 } file_modes;
 
 /**
+ * @brief Manages VUF Files
  * @details
- * Manages VUF files.
- *
  * Variable Unsigned Files are designed to
  * store integers of sizes less than
  * 32 bits and greater than 0 bits.
@@ -96,6 +91,11 @@ uint32_t VUF_read_stack(
     VUF *stream,
     uint32_t length);
 
+/**
+ * @brief Empty Buffer and Close Stream
+ * @details 
+ * Writes back buffer that has not been filled, then closes the file.
+ */
 error_t VUF_close(VUF *stream);
 
 #endif /* VARINTFILE_IO_H */

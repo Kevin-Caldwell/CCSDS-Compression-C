@@ -11,7 +11,6 @@
 #include <inttypes.h>
 
 #include "dst/image.h"
-#include "files/file_IO.h"
 
 /**
  * @brief Save contents of an array as a CSV file.

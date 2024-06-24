@@ -11,26 +11,10 @@
 #ifndef PREDICTOR_H
 #define PREDICTOR_H
 
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-
-#include "dst/image.h"
-
-#include "constants/global_constants.h"
-#include "constants/constants.h"
-#include "constants/predictor_constants.h"
-
-#include "math/math_functions.h"
-#include "math/linear_algebra.h"
-
-#include "dst/locale_buffer.h"
+#include "files/logs.h"
 
 #include "predictor/weights.h"
 #include "predictor/quantizer.h"
-
-
-#include "files/logs.h"
 
 /** 
  * @brief Redundant Definition from math_functions.h

@@ -17,16 +17,12 @@
  * Dependencies
  *  math_functions.h
  *  constants.h
- *  stdlib.h
  *
  */
 
 #ifndef IMAGE_H
 #define IMAGE_H
 
-#include <stdlib.h>
-
-#include "math/math_functions.h"
 #include "constants/constants.h"
 #include "files/uhi_io.h"
 
@@ -39,6 +35,8 @@
 #define S(hIMG, z, y, x) GetPixel(hIMG, x, y, z)
 
 #define decl_image {{0, 0, 0}, }
+
+extern int Log_memread;
 
 typedef UHI image, image3;
 
@@ -55,7 +53,7 @@ void SetPixel(image *hIMG, INDEX x, INDEX y, INDEX z, PIXEL data);
 int Image_Equals(image *img1, image *img2);
 
 /**
- * Unused Struct for 2-D images.
+ * @brief Unused Struct for 2-D images.
  */
 typedef struct image2
 {

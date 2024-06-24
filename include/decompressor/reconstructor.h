@@ -39,21 +39,8 @@
 #include <time.h>
 #include <inttypes.h>
 
-#include "constants/constants.h"
-
-#include "math/math_functions.h"
-#include "math/linear_algebra.h"
-
-#include "dst/image.h"
-
 #include "files/csv-io.h"
-
 #include "predictor/predictor.h"
-#include "predictor/sample_representative.h"
-#include "predictor/local_sum.h"
-#include "predictor/local_differences.h"
-#include "predictor/weights.h"
-#include "predictor/quantizer.h"
 
 
 #define Ps(z) MIN(z, kP)
