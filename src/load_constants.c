@@ -10,15 +10,15 @@ int LoadConstantFile(const char *file_name, HashTable *result)
 
     file_t *fp = F_OPEN(file_name, READ);
 
-    char *res = fgets(line_buffer, sizeof(char) * 10, fp);
+    fgets(line_buffer, sizeof(char) * 10, fp);
     constant_count = atoi(line_buffer);
 
     char key_buffer[KEY_LENGTH];
-    int32_t data_buffer;
+    int32_t data_buffer = 0;
 
     for (int i = 0; i < constant_count; i++)
     {
-        res = fgets(line_buffer, sizeof(char) * (KEY_LENGTH + 1 + 32), fp);
+        fgets(line_buffer, sizeof(char) * (KEY_LENGTH + 1 + 32), fp);
         char *token = strtok(line_buffer, ":");
         if (token)
         {
@@ -33,4 +33,6 @@ int LoadConstantFile(const char *file_name, HashTable *result)
         Hash_AddEntry(result, key_buffer, data_buffer);
     }
     F_CLOSE(fp);
+
+    return RES_OK;
 }

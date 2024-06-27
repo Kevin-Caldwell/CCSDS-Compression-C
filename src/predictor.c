@@ -36,11 +36,13 @@ error_t Predict_BufferSimple(
 
     uint16_t predicted_sample = 
         PredictedSample(double_resolution_predicted_sample);
+
     int32_t quantizer_index = 
         QuantizerIndex(raw_data, predicted_sample);
 
     uint16_t clipped_quantizer_bin_center = 
         ClippedQuantizerBinCenter(raw_data);
+        
     int32_t double_resolution_predicted_error = 
         DoubleResolutionPredictionError(
             clipped_quantizer_bin_center,
@@ -52,15 +54,13 @@ error_t Predict_BufferSimple(
         predicted_sample,
         double_resolution_predicted_sample);
 
-    
-
     UpdateWeights(&pixel_buffer, s, weights, z, y, x, double_resolution_predicted_error);
 
     if (DEBUG)
     {
         char write_buffer[1000];
 
-        snprintf(write_buffer, 1000, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
+        snprintf(write_buffer, 1000, "(%ld,%ld,%ld),%u, %d, %d, %lld, %ld, %lld, [",
                 x, y, z,
                 raw_data, predicted_sample, *predicted_value,
                 predicted_central_local_difference, 
@@ -69,13 +69,14 @@ error_t Predict_BufferSimple(
 
         for (int i = 0; i < kC; i++)
         {
-            sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
+            sprintf(write_buffer + strlen(write_buffer), "%ld,", weights[i]);
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
         F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
         
         return RES_OK;
     }
+    return RES_OK;
 }
 
 
@@ -131,7 +132,7 @@ int RunPredictor(image *hIMG, image *result)
                 log_global_error_handle
 
                 Predict_BufferSimple(&pixel_buffer, hIMG->size, i, j, k, weight_vector, &predicted_value);
-
+                // printf("%d\n", predicted_value);
                 SetPixel(result, i, j, k, predicted_value);
             }
         }
@@ -147,8 +148,9 @@ int RunPredictor(image *hIMG, image *result)
 #if LOG
     sprintf(log_write_buffer, "Image File accessed %d times.", Log_memread);
     Log_add(log_write_buffer);
-    sprintf(log_write_buffer, "%f Image File Accesses per pixel. (%d, %d, %d)", (float) Log_memread / (s.x * s.y * s.z), s.x, s.y, s.z);
+    sprintf(log_write_buffer, "%f Image File Accesses per pixel. (%ld, %ld, %ld)", (float) Log_memread / (s.x * s.y * s.z), s.x, s.y, s.z);
     Log_add(log_write_buffer);
+
     F_CLOSE(fp);
 
     end = clock();

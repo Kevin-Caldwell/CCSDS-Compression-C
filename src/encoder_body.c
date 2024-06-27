@@ -28,7 +28,7 @@ GolombInt GolombPowerTwo(uint16_t j, uint16_t k)
         u <<= UNARY_LENGTH_LIMIT;
         u <<= (uint32_t) kD;
         /*@unused@*/
-        unsigned int mask = (1 << (unsigned) k) - 1; 
+        // unsigned int mask = (1 << (unsigned) k) - 1; 
         u |= j;
         len = (unsigned int) (k + kD);
     }
@@ -59,13 +59,13 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
     /*@unused@*/
     dim3 sz = hIMG->size;
     /*@unused@*/
-    uint32_t gamma;
+    uint32_t gamma = 0;
     /*@unused@*/
-    uint32_t epsilon_z;
+    uint32_t epsilon_z = 0;
     /*@unused@*/
-    uint32_t codeword;
+    // uint32_t codeword;
     /*@unused@*/
-    uint32_t k_z;
+    uint32_t k_z = 0;
 
     /*@unused@*/
     file_t *log = F_OPEN("../data/logs/c-encoder-debug.LOG", WRITE);
@@ -89,7 +89,7 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
                     epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
                     VUF_append(&stream, data, kD);
                     len += kD;
-                    fprintf(log, "%u:%d,%d\n", data, kD, k_z);
+                    fprintf(log, "%u:%ld,%ld\n", data, kD, k_z);
                     continue;
                 }
 
@@ -111,7 +111,7 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
 
                 GolombInt res = GolombPowerTwo(data, k_z);
                 len += res.length;
-                fprintf(log, "(%d, %d, %d) %u:%d, %d, %d, %d\n", x, y, z, res.data, res.length, k_z, gamma, epsilon_z);
+                fprintf(log, "(%d, %d, %d) %lu:%ld, %ld, %ld, %ld\n", x, y, z, res.data, res.length, k_z, gamma, epsilon_z);
                 VUF_append(&stream, res.data, res.length);
 
                 if (gamma < BPOW(GAMMA_STAR) - 1)
@@ -128,7 +128,7 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
         }
         time_t time_elapsed = time(NULL) - start;
         time_t time_left = time_elapsed * (kNz - z - 1) / (z + 1);
-        printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
+        printf("\rEncoded %d/%d of Image. (%lld seconds Elapsed, %lld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
         fflush(stdout);
     }
     res = VUF_close(&stream);
@@ -137,5 +137,5 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
     printf("\n%d seconds for image Encoding.\n", (int)(end - start));
     printf("%ld / %ld bytes=%2.f%% Compression\n", len / 8, (long)((float)kNx * kNy * kNz * kD / 8), (double) (1 - ((float)len / ((float)kNx * kNy * kNz * kD))) * 100);
 
-    return 0;
+    return res;
 }

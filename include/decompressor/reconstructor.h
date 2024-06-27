@@ -45,7 +45,7 @@
 
 #define Ps(z) MIN(z, kP)
 extern int kC;
-typedef uint32_t weight_t;
+// typedef uint32_t weight_t;
 
 void ReconstructPixel(image *hIMG, image *result, INDEX z, INDEX y, INDEX x, FILE *file_ptr, weight_t* weights);
 

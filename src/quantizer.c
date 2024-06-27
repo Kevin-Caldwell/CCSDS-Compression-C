@@ -42,7 +42,7 @@ int32_t QuantizerIndexUnmapper(uint16_t mapped_delta, uint16_t predicted_sample,
 {
 
     int32_t theta = minTheta(predicted_sample);
-    int a = drps % 2 ? -1 : 1;
+    // int a = drps % 2 ? -1 : 1;
 
     if (mapped_delta - theta > theta)
     {

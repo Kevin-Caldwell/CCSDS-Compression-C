@@ -74,4 +74,5 @@ int LocalDirectionVector(LBuf *buf, dim3 s, int32_t *lDV, INDEX z, INDEX y, INDE
             lDV[i] = CentralLocalDifference(buf, s, - 1 - i, 0, 0);
         }
     }
+    return RES_OK;
 }

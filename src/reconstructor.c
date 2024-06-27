@@ -32,7 +32,7 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr
 
         time_t time_elapsed = time(NULL) - start;
         time_t time_left = time_elapsed * (predicted_values->size.z - z - 1) / (z + 1);
-        printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
+        printf("\rPredicted %d/%d of Image. (%lld seconds Elapsed, %lld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
         fflush(stdout);
     }
     end = time(NULL);
@@ -67,16 +67,16 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
 
     // sprintf(write_buffer, "(%d,%d,%d),%d, %d, %d\n",  x, y, z, delta + predicted_sample, predicted_sample, delta);
 
-    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data,
+    sprintf(write_buffer, "(%ld,%ld,%ld),%lu, %d, %d, %lld, %ld, %lld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data,
             predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
 
     for (int i = 0; i < kC; i++)
     {
-        sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
+        sprintf(write_buffer + strlen(write_buffer), "%ld,", weights[i]);
     }
     sprintf(write_buffer + strlen(write_buffer), "]\n");
 
-    sprintf(write_buffer + strlen(write_buffer), "UpdateWeights args: %d %d %d %d\n", z, y, x, double_resolution_predicted_error);
+    sprintf(write_buffer + strlen(write_buffer), "UpdateWeights args: %ld %ld %ld %ld\n", z, y, x, double_resolution_predicted_error);
     F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), file_ptr);
 }
 

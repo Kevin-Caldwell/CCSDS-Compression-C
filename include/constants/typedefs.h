@@ -8,6 +8,16 @@
 
 #include <inttypes.h>
 
+typedef enum ACTIONS{
+    COMPRESS = 0, 
+    PREDICT, 
+    ENCODE, 
+    TEST_PREDICTOR, 
+    TEST_ENCODER,
+    TEST_COMPRESSOR, 
+    TEST_UHI, 
+    TEST_VUF
+} ACTION;
 
 /**
  * All Error Codes in Program.
@@ -15,6 +25,8 @@
 typedef enum ERROR_CODES
 {
     RES_OK = 0,
+    NO_TASK,
+    TASK_NOT_DEFINED,
     ERROR_GENERIC, 
     FILE_NON_EXISTENT,
     FILE_READ_ERROR,
@@ -62,6 +74,6 @@ typedef DIM             INDEX;
 typedef PIXEL           data_t;
 
 /** @brief Type representing weight values in weights.h */
-typedef uint32_t        weight_t;
+typedef int32_t        weight_t;
 
 #endif /* TYPEDEFS_H */

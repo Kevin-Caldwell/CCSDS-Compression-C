@@ -25,7 +25,7 @@ void print_buffer(VUF *f)
     {
         printf("%d:\t", i);
         printBits(4, f->rw_buffer + i);
-        printf("  %08X", f->rw_buffer[i]);
+        printf("  %08lX", f->rw_buffer[i]);
         printf("\n");
     }
 
@@ -54,7 +54,7 @@ int testVUF_Write()
 
     for (int i = 0; i < count; i++)
     {
-        printf("Writing %d Digits of %d\n", array[i], bounce);
+        printf("Writing %d Digits of %ld\n", array[i], bounce);
         VUF_append(&stream, bounce, array[i]);
         print_buffer(&stream);
         bounce = bounce ? 0 : -1;
@@ -75,14 +75,14 @@ int testVUF_Read()
     print_buffer(&stream);
     printf("Opened File.\n");
 
-    uint32_t bounce = 0;
+    // uint32_t bounce = 0;
 
     for (int i = 0; i < count; i++)
     {
         printf("IDNEEEX %d\n", i);
         printf("INDEX: %d\n", array[i]);
         uint32_t read = VUF_read_stack(&stream, array[i]);
-        printf("POPPPED: %08X\t%0u\n", read, read);
+        printf("POPPPED: %08lX\t%0lu\n", read, read);
         print_buffer(&stream);
     }
 

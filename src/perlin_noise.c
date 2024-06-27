@@ -46,25 +46,25 @@ fVector3 RandomizeVector(int vector_x, int vector_y, int vector_z)
 
 uint16_t SolvePerlin4(int x, int y, int z, int len, dim3 size)
 {
-    int vertexX = x - x % len;
-    int vertexY = y - y % len;
-    int vertexZ = z - z % len;
+    // int vertexX = x - x % len;
+    // int vertexY = y - y % len;
+    // int vertexZ = z - z % len;
 
-    fVector3 offset_vector = normalize((fVector3){x % len, y % len, z % len});
+    // fVector3 offset_vector = normalize((fVector3){x % len, y % len, z % len});
 
     float value = 0;
 
-    for (int i = 0; i <= len; i += len)
-    {
-        for (int j = 0; j <= len; j += len)
-        {
-            for (int k = 0; k <= len; k += len)
-            {
-                fVector3 grid_vector = RandomizeVector(vertexX + i * len, vertexY + j * len, vertexZ + k * len);
-                float dot_product = dot(grid_vector, offset_vector);
-            }
-        }
-    }
+    // for (int i = 0; i <= len; i += len)
+    // {
+    //     for (int j = 0; j <= len; j += len)
+    //     {
+    //         for (int k = 0; k <= len; k += len)
+    //         {
+    //             // fVector3 grid_vector = RandomizeVector(vertexX + i * len, vertexY + j * len, vertexZ + k * len);
+    //             // float dot_product = dot(grid_vector, offset_vector);
+    //         }
+    //     }
+    // }
 
     return mapper(value);
 }
@@ -88,7 +88,7 @@ void Perlin4(image *result, int cube_side)
 
             time_t time_elapsed = time(NULL) - start;
             time_t time_left = time_elapsed * ((result->size.x - x - 1) * result->size.y + (result->size.y - y - 1)) / (result->size.y * (x + 1) + (y + 1));
-            printf("\rGenerated %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(x + 1), (int)result->size.x, time_elapsed, time_left);
+            printf("\rGenerated %d/%d of Image. (%lld seconds Elapsed, %lld seconds Left)", (int)(x + 1), (int)result->size.x, time_elapsed, time_left);
             fflush(stdout);
         }
     }
@@ -105,9 +105,9 @@ void GeneratePerlinImage(dim3 size, int index, int length)
             (long unsigned)size.y,
             (long unsigned)size.z,
             (int)index);
-    image *testImage;
-    InitImage(testImage, size.x, size.y, size.z);
-    Perlin4(testImage, length);
+    image testImage = decl_image;
+    InitImage(&testImage, size.x, size.y, size.z);
+    Perlin4(&testImage, length);
 
-    SaveImageAsCSV(testImage, filename);
+    SaveImageAsCSV(&testImage, filename);
 }

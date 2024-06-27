@@ -122,7 +122,8 @@
     "queue": "c",
     "set": "c",
     "test_varint.h": "c",
-    "varintfile_io.h": "c"
+    "varintfile_io.h": "c",
+    "locale_t.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "[python]": {

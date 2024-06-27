@@ -56,7 +56,7 @@ error_t Predict(
     {
         char write_buffer[1000];
 
-        sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
+        sprintf(write_buffer, "(%ld,%ld,%ld),%u, %d, %d, %lld, %ld, %lld, [",
                 x, y, z,
                 raw_data, predicted_sample, predicted_value,
                 predicted_central_local_difference, 
@@ -65,13 +65,15 @@ error_t Predict(
 
         for (int i = 0; i < kC; i++)
         {
-            sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
+            sprintf(write_buffer + strlen(write_buffer), "%ld,", weights[i]);
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
         F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
         
         return RES_OK;
     }
+
+    return RES_OK;
 }
 
 int64_t
@@ -86,7 +88,7 @@ L_PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, weight
     int32_t local_direction_vector[kC];
 
     L_LocalDirectionVector(hIMG, local_direction_vector, z, y, x);
-    pcld = InnerProduct(weight_vector, local_direction_vector, kC);
+    pcld = 0; //InnerProduct(weight_vector, local_direction_vector, kC);
 
     return pcld;
 }
@@ -300,4 +302,5 @@ int L_LocalDirectionVector(image *hIMG, int32_t *lDV, INDEX z, INDEX y, INDEX x)
             lDV[i] = L_CentralLocalDifference(hIMG, z - 1 - i, y, x);
         }
     }
+    return RES_OK;
 }

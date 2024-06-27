@@ -15,10 +15,10 @@ file_t *log_fptr;
 
 void Log_init()
 {
-    if (!log_file)
-    {
-        return;
-    }
+    // if (!log_file)
+    // {
+    //     return;
+    // }
 
     log_fptr = (file_t *)F_OPEN(log_file, APPEND);
     if (log_fptr)

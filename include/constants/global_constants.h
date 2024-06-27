@@ -28,6 +28,11 @@ extern HashTable encoder_constants;
 //! Updated through CLI Arguments
 extern char DEBUG;
 extern char log_file[];
+extern const char default_image_source[];
+extern const char default_image_destination[];
+extern const ACTION default_action;
+extern const char default_debug;
+
 //! @deprecated Replaced by CMake Compile Definitions
 #define x86_GCC
 // #define ARM_GCC

@@ -20,7 +20,7 @@ PIXEL LocaleBuffer_FetchPixel_Direct(LocaleBuffer* buf, DIM z, DIM y, DIM x){
         return buf->data[LOCAL_BUFFER_NEIGHBOR_SIZE + z];
     }
 
-    snprintf(log_write_buffer, 100, "UNABLE TO ACCESS PIXEL AT (x,y,z): %d %d %d", x, y, z);
+    snprintf(log_write_buffer, 100, "UNABLE TO ACCESS PIXEL AT (x,y,z): %ld %ld %ld", x, y, z);
     Log_error(log_write_buffer);
     return -1;
 }
@@ -44,7 +44,7 @@ error_t LocaleBuffer_SimpleLoad(LocaleBuffer* buf, image* hIMG, dim3 index){
     alx = index.x, 
     aly = index.y;
     alz = index.z;
-    for(i; i < LOCAL_BUFFER_TOTAL_SIZE; i++){
+    for(; i < LOCAL_BUFFER_TOTAL_SIZE; i++){
         alz--;
         if(_index_within_bounds(alx, aly, alz, hIMG->size)){
             buf->data[i] = GetPixel(hIMG, alx, aly, alz);

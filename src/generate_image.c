@@ -187,6 +187,7 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
     dim3 index;
     UHI stream = decl_image;
 
+    printf("Reading Source Image From CSV...\n");
     res = ReadImageFromCSV(&img, src_csv);
     log_global_error_handle
 
@@ -195,7 +196,6 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
     log_global_error_handle
 
     printf("Read CSV\n");
-    #ifndef S_
     for (int i = 0; i < size.x; i++)
     {
         for (int j = 0; j < size.y; j++)
@@ -210,7 +210,6 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
             }
         }
     }
-    #endif
     printf("Written CSV\n");
 
     res = F_CLOSE(stream.fs);

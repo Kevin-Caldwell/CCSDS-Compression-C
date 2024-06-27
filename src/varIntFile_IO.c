@@ -9,7 +9,7 @@ char *file_modes_arguments[] = {"rb", "wb"};
 void _VUF_Clean(VUF *stream, char full)
 {
     int start = !full;
-    for (start; start < BUFFER_LENGTH; start++)
+    for(; start < BUFFER_LENGTH; start++)
     {
         stream->rw_buffer[start] = 0;
     }
@@ -56,7 +56,7 @@ error_t VUF_append(VUF *stream, uint32_t data, uint32_t length)
                      (BUFFER_SIZE - length);
 
     stream->rw_buffer[stream->byte_index] |=
-        L_SHIFT(clean, BUFFER_SIZE - stream->bit_index);
+        L_SHIFT(clean, (BUFFER_SIZE - stream->bit_index));
 
     // Variable Bit Encoding
     if ((stream->bit_index >= BUFFER_SIZE))
@@ -87,7 +87,7 @@ uint32_t VUF_read_stack(VUF *stream, uint32_t length)
     uint32_t varInt = stream->rw_buffer[stream->byte_index] << stream->bit_index;
     stream->bit_index += length;
     varInt >>= (BUFFER_SIZE - length);
-    printf("Reading, %08X\n", varInt);
+    printf("Reading, %08lX\n", varInt);
 
     if (stream->bit_index >= BUFFER_SIZE)
     {
@@ -104,7 +104,7 @@ uint32_t VUF_read_stack(VUF *stream, uint32_t length)
         F_READ(stream->rw_buffer + 1, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
     }
 
-    printf("%08X\n", varInt >> (BUFFER_SIZE - length));
+    printf("%08lX\n", varInt >> (BUFFER_SIZE - length));
 
     return varInt;
 }
