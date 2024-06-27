@@ -59,7 +59,6 @@ int SaveImageAsCSV(image *hIMG, char *file_name)
         perror("SaveImageAsCSV: Unable to write String Buffer.");
     }
 
-    #ifndef S_SPLINT_S
     for (int i = 0; i < size.z; i++)
     {
         for (int j = 0; j < size.y; j++)
@@ -78,7 +77,6 @@ int SaveImageAsCSV(image *hIMG, char *file_name)
             }
         }
     }
-    #endif
 
     // sprintf(string_buffer, "%hu", hIMG->data[size.x * size.y * size.z - 1]);
     // fputs(string_buffer, fp);

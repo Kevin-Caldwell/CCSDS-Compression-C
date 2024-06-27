@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.22.1)
-# set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 
-project(CCSDS_Image_Generator C ASM)
-# project(CCSDS_Compressor VERSION 0.1.0 LANGUAGES C ASM)
-# project(CCSDS_Decompressor VERSION 0.1.0 LANGUAGES C ASM)
+project(CCSDS_Image_Generator VERSION 0.1.0 LANGUAGES C ASM)
+project(CCSDS_Compressor VERSION 0.1.0 LANGUAGES C ASM)
+project(CCSDS_Decompressor VERSION 0.1.0 LANGUAGES C ASM)
 
 
-set(ARM_COMPILE 1)
+set(ARM_COMPILE 0)
 
 if(ARM_COMPILE)
     add_compile_definitions(ARM_COMPILE)
@@ -18,20 +17,8 @@ if(ARM_COMPILE)
     set(CMAKE_CXX_COMPILER          arm-none-eabi-g++)
     set(CMAKE_ASM_COMPILER          arm-none-eabi-as)
     set(CMAKE_LINKER                arm-none-eabi-ld)
-    add_compile_options(-mcpu=cortex-m7
-                        -mthumb
-                        -mfpu=fpv5-sp-d16
-                        -mfloat-abi=hard
-                        -Wall
-                        -Og
-                        # -specs=nosys.specs
-                        --specs=nosys.specs
-                        # -lm
-                    )
-    # target_link_libraries(CCSDS_Image_Generator -Wl, -start-group -lgcc -lc -lm -lrdimon -Wl,-end-group)
+    add_compile_options(-mcpu=cortex-m7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -Wall -Og -specs=nosys.specs --specs=nosys.specs)
 endif()
-
-# include(CTest)
 
 add_compile_definitions(STM32H743xx)
 

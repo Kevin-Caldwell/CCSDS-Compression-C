@@ -4,20 +4,23 @@ file_t *fp;
 // int _C = 0;
 int kC = 0;
 
-void Predict(
-    image *hIMG, 
-    image *result, 
-    INDEX z, 
-    INDEX y, 
-    INDEX x, 
-    weight_t* weights
-) {
+error_t Predict_BufferSimple(
+    LBuf* buf, dim3 s, 
+    INDEX z, INDEX y, INDEX x,
+    weight_t* weights,
+    PIXEL* predicted_value
+){
+    error_t res;
+    
+    LBuf pixel_buffer = *buf;
+    data_t raw_data;
 
-    data_t raw_data = GetPixel(hIMG, x, y, z);
-    uint16_t local_sum = FindLocalSum(hIMG, z, y, x);
+    res = LocaleBuffer_FetchPixel(&pixel_buffer, &raw_data, 0, 0, 0);
+    log_global_error_handle
 
+    uint16_t local_sum = FindLocalSum(&pixel_buffer, s, z, y, x);
     int64_t predicted_central_local_difference = 
-        PredictedCentralLocalDifference(hIMG, z, y, x, weights);
+        PredictedCentralLocalDifference(&pixel_buffer, s, z, y, x, weights);
 
     int64_t high_resolution_predicted_sample = 
         HighResolutionPredictedSample(
@@ -27,12 +30,9 @@ void Predict(
     
     int32_t double_resolution_predicted_sample = 
         DoubleResolutionPredictedSample(
-            hIMG, 
-            z, 
-            y, 
-            x, 
-            high_resolution_predicted_sample
-        );
+            &pixel_buffer, 
+            z, y, x, 
+            high_resolution_predicted_sample);
 
     uint16_t predicted_sample = 
         PredictedSample(double_resolution_predicted_sample);
@@ -47,22 +47,22 @@ void Predict(
             double_resolution_predicted_sample
         );
 
-    data_t predicted_value = MappedQuantizerIndex(
+    *predicted_value = MappedQuantizerIndex(
         quantizer_index,
         predicted_sample,
         double_resolution_predicted_sample);
 
-    SetPixel(result, x, y, z, predicted_value);
+    
 
-    UpdateWeights(hIMG, weights, z, y, x, double_resolution_predicted_error);
+    UpdateWeights(&pixel_buffer, s, weights, z, y, x, double_resolution_predicted_error);
 
     if (DEBUG)
     {
         char write_buffer[1000];
 
-        sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
+        snprintf(write_buffer, 1000, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
                 x, y, z,
-                raw_data, predicted_sample, predicted_value,
+                raw_data, predicted_sample, *predicted_value,
                 predicted_central_local_difference, 
                 double_resolution_predicted_sample, 
                 high_resolution_predicted_sample);
@@ -73,8 +73,11 @@ void Predict(
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
         F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
+        
+        return RES_OK;
     }
 }
+
 
 int RunPredictor(image *hIMG, image *result)
 {
@@ -101,6 +104,9 @@ int RunPredictor(image *hIMG, image *result)
     start = clock();
 #endif
 
+    LBuf pixel_buffer;
+    PIXEL predicted_value;
+
     
     for (int i = 0; i < s.z; i++)
     {
@@ -120,7 +126,13 @@ int RunPredictor(image *hIMG, image *result)
         {
             for (int k = 0; k < s.x; k++)
             {
-                Predict(hIMG, result, i, j, k, weight_vector);
+                // Load all necessary pixels from image
+                res = LocaleBuffer_Load(&pixel_buffer, hIMG, (dim3){i, j, k});
+                log_global_error_handle
+
+                Predict_BufferSimple(&pixel_buffer, hIMG->size, i, j, k, weight_vector, &predicted_value);
+
+                SetPixel(result, i, j, k, predicted_value);
             }
         }
 

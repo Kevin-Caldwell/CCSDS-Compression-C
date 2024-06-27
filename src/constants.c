@@ -3,6 +3,8 @@
 
 #define GET_PCONST(x) (Hash_GetValue(&predictor_constants, x))
 
+// char DEBUG = 0;
+
 void InitalizePredictorConstants()
 {
     kTInc = (int)GET_PCONST("CHANGE_INTERVAL");

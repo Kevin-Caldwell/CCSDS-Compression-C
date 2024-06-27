@@ -1,22 +1,41 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "constants/load_constants.h"
 #include "testing/generate_image.h"
-#include "decompressor/reconstructor.h"
-#include "testing/test_varInt.h"
-#include "testing/test_UHI.h"
-
-#if LOG
 #include "files/logs.h"
-#endif
+
+typedef enum ACTIONS{
+    COMPRESS = 0, 
+    PREDICT, 
+    ENCODE, 
+    TEST_PREDICTOR, 
+    TEST_ENCODER,
+    TEST_COMPRESSOR, 
+    TEST_UHI, 
+    TEST_VUF
+} ACTIONS;
+
+
+char* ACTIONS_str[] = {
+    "compress", 
+    "predict", 
+    "encode", 
+    "test_predictor", 
+    "test_encoder", 
+    "test_compressor", 
+    "test_uhi", 
+    "test_vuf"
+};
 
 char DEBUG = 0;
 
+char default_image_source[] = "../data/test-images/indian_pines.UHI";
+char default_image_destination[] = "../data/test-images/indian_pines.UHI";
 
 
 int main(int argInt, char **argS)
 {
+
 #if LOG
     Log_init();
 #endif
@@ -51,11 +70,8 @@ int main(int argInt, char **argS)
         printf("Running Base Case.\n");
 
         // cv_csv_uhi("../data/test-images/indian_pines.csv", "../data/test-images/indian_pines.UHI");
-        // printf("Result: %s", test_UHI() ? "Unsuccessful Run.\n" : "Successful Run.\n");
-        // printf("Result: %s", testVUF_Write() ? "Unsuccessful Run.\n" : "Successful Run.\n");
-        // printf("Result: %s", testVUF_Read() ? "Failed.\n" : "Passed.\n");
         // PredictImage("../data/test-images/indian_pines.csv", "../data/results/CRESULT_indian_pines_predicted.csv");
-        PredictImageUHI("../data/test-images/indian_pines.UHI", "../data/test-images/indian_pines_pred.UHI");
+        PredictImageUHI(default_image_source, "../data/test-images/indian_pines_pred.UHI");
     }
 
 #if LOG

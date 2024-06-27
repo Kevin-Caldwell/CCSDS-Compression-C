@@ -2,13 +2,11 @@
 
 void PrintBinary(/*@unused@*/ uint8_t byte)
 {
-    #ifndef S_SPLINT_S
     for (int i = 0; i < 8; i++)
     {
         printf("%u", (byte & (1 << 7)) >> 7);
         byte <<= 1;
     }
-    #endif
     printf("|");
 }
 

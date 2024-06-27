@@ -10,12 +10,15 @@
 #define SAMPLE_REPRESENTATIVE_H
 
 #include "dst/image.h"
+#include "dst/locale_buffer.h"
 
 /** 
  * @brief Shorthand for GetPixel 
  * @warning Direct Image Access
  */
-#define SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)
+#define L_SR(hIMG, Z, Y, X) GetPixel(hIMG, X, Y, Z)
+#define SR(B, Z, Y, X) LocaleBuffer_FetchPixel_Direct(B, Z, Y, X)
+
 // #define SAMPLE(z,y,x) (0) // TODO
 
 /** 
@@ -48,8 +51,9 @@ data_t SampleRepresentative(uint16_t sample_value);
  * See Standard for Details.
  * @warning Direct Image Access
  */
-uint32_t DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample);
+uint32_t L_DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample);
 
+uint32_t DoubleResolutionPredictedSample(LBuf* buf, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample);
 /**
  * @brief Predicted Sample Calculation
  * @details 

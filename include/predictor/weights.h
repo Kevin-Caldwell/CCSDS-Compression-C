@@ -38,10 +38,12 @@ int32_t WeightUpdateScalingExponent(INDEX y, INDEX x, dim3 img_dim);
  * See Standard for Details.
  * @warning Direct Image Access
  */
-int UpdateWeights(image *hIMG,
+int L_UpdateWeights(image *hIMG,
                   weight_t *weights,
                   INDEX z, INDEX y, INDEX x,
                   int32_t double_resolution_prediction_error);
+
+int UpdateWeights(LBuf *buf, dim3 s, weight_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error);
 
 /** 
  * @brief Predicted Central Local Difference Calculation
@@ -49,6 +51,9 @@ int UpdateWeights(image *hIMG,
  * See Standard for Details.
  * @warning Direct Image Access
  */
-int64_t PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, weight_t* weights);
+int64_t L_PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, weight_t* weights);
+
+int64_t
+PredictedCentralLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x, weight_t* weight_vector);
 
 #endif /* WEIGHTS_H */

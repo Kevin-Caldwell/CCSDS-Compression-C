@@ -1,8 +1,7 @@
 #include "predictor/local_sum.h"
 
-uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
+uint32_t FindLocalSum(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x)
 {
-    dim3 s = hIMG->size;
     uint32_t val = 0;
 
     switch (kLocalSumType)
@@ -11,20 +10,20 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
     {
         if (y > 0 && 0 < x && x < s.x - 1)
         {
-            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) +
-                  SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1);
+            val = SR(buf, 0, 0, -1) + SR(buf, 0, -1, -1) +
+                  SR(buf, 0, -1, 0) + SR(buf, 0, -1, 1);
         }
         else if (y == 0 && x > 0)
         {
-            val = 4 * SR(hIMG, z, y, x - 1);
+            val = 4 * SR(buf, 0, 0, -1);
         }
         else if (y > 0 && x == 0)
         {
-            val = 2 * (SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1));
+            val = 2 * (SR(buf, 0, -1, 0) + SR(buf, 0, -1, 1));
         }
         else if (y > 0 && x == (INDEX)s.x - 1)
         {
-            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) + 2 * SR(hIMG, z, y - 1, x);
+            val = SR(buf, 0, 0, -1) + SR(buf, 0, -1, -1) + 2 * SR(buf, 0, -1, 0);
         }
         else if (y == 0 && x == 0)
         {
@@ -36,20 +35,20 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
     {
         if (y > 0 && 0 < x && x < s.x - 1)
         {
-            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) +
-                  SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1);
+            val = SR(buf, 0, -1, -1) + 2 * SR(buf, 0, -1, 0) +
+                  SR(buf, 0, -1, 1);
         }
         else if (y == 0 && x > 0 && z > 0)
         {
-            val = 4 * SR(hIMG, z, y, x - 1);
+            val = 4 * SR(buf, -1, 0, -1);
         }
         else if (y > 0 && x == 0)
         {
-            val = 2 * (SR(hIMG, z, y - 1, x) + SR(hIMG, z, y - 1, x + 1));
+            val = 2 * (SR(buf, 0, -1, 0) + SR(buf, 0, -1, 1));
         }
         else if (y > 0 && x == s.x - 1)
         {
-            val = SR(hIMG, z, y, x - 1) + SR(hIMG, z, y - 1, x - 1) + 2 * SR(hIMG, z, y - 1, x);
+            val = 2 * (SR(buf, 0, -1, -1) + 2 * SR(buf, 0, -1, -1));
         }
         else if (y == 0 && x > 0 && z == 0)
         {
@@ -61,11 +60,11 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
     {
         if (y > 0)
         {
-            val = 4 * SR(hIMG, z, y - 1, x);
+            val = 4 * SR(buf, 0, -1, 0);
         }
         else if (y == 0 && x > 0)
         {
-            val = 4 * SR(hIMG, z, y, x - 1);
+            val = 4 * SR(buf, 0, 0, -1);
         }
         break;
     }
@@ -73,11 +72,11 @@ uint32_t FindLocalSum(image *hIMG, INDEX z, INDEX y, INDEX x)
     {
         if (y > 0)
         {
-            val = 4 * SR(hIMG, z, y - 1, x);
+            val = 4 * SR(buf, 0, -1, 0);
         }
         else if (y == 0 && x > 0 && z > 0)
         {
-            val = 4 * SR(hIMG, z - 1, y, x - 1);
+            val = 4 * SR(buf, -1, 0, -1);
         }
         else if (y == 0 && x > 0 && z == 0)
         {
@@ -171,8 +170,4 @@ int LocalSumBranchClassifier(INDEX x, INDEX y, INDEX z, dim3 s)
     }
 
     return res;
-}
-
-void LocalSumPreFetcher(INDEX x, INDEX y, INDEX z)
-{
 }

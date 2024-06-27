@@ -38,23 +38,17 @@ void PrepareImageMetadata(uint8_t *essential, dim3 img_size)
 
     Encode(essential, 10, 0, 2);
     Encode(essential, 10, B, 3);
-    #ifndef S_SPLINT_S
     Encode(essential, 10, ENTROPY_CODER, 2);
-    #endif
     Encode(essential, 10, 0, 1);
 
-    #ifndef S_SPLINT_S
     Encode(essential, 11, QUANTIZER_FIDELITY_CONTROL, 2);
-    #endif
     Encode(essential, 11, 0, 2);
     Encode(essential, 11, TABLE_COUNT, 4);
 
-    #ifndef S_SPLINT_S
     for (int i = 0; i < SIZEOF_HEADER_ESSENTIAL; i++)
     {
         PrintBinary(essential[i]);
     }
-    #endif
     printf("\n");
 }
 

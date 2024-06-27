@@ -79,7 +79,6 @@ int Decoder_DecodeBody(image *predicted_samples, const char *file_name)
         }
         else
         {
-            #ifndef S_SPLINT_S
             for (int i = kD; i >= 0; i--)
             {
                 if ((gamma * BPOW(i)) <= (epsilon_z + ((49u * gamma) >> 7)))
@@ -88,7 +87,6 @@ int Decoder_DecodeBody(image *predicted_samples, const char *file_name)
                     break;
                 }
             }
-            #endif
         }
 
         // Inverse GolombPowerTwo

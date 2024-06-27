@@ -46,20 +46,21 @@ int32_t WeightUpdateScalingExponent(INDEX y, INDEX x, dim3 img_dim)
     return res;
 }
 
-int UpdateWeights(image *hIMG, weight_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error)
+int UpdateWeights(LBuf *buf, dim3 s, weight_t *weights, INDEX z, INDEX y, INDEX x, int32_t double_resolution_prediction_error)
 {
-    float scaling_exponent = -WeightUpdateScalingExponent(y, x, hIMG->size);
+    float scaling_exponent = -WeightUpdateScalingExponent(y, x, s);
     float exp = exp2f(scaling_exponent) * SIGN_P(double_resolution_prediction_error);
+
 
     for (int i = 0; i < 3; i++)
     {
-        float val = floor((exp * (float)DLD(hIMG, z, y, x, i) + 1) / 2);
+        float val = floor((exp * (float)DLD(buf, s, 0, 0, 0, i) + 1) / 2);
         weights[i] += val;
     }
 
     for (int i = 3; i < kC; i++)
     {
-        float val = floor((exp * (float)CentralLocalDifference(hIMG, z - i + 2, y, x) + 1) / 2);
+        float val = floor((exp * (float)CentralLocalDifference(buf, s, - i + 2, 0, 0) + 1) / 2);
         weights[i] += val;
     }
 
@@ -71,7 +72,7 @@ int UpdateWeights(image *hIMG, weight_t *weights, INDEX z, INDEX y, INDEX x, int
 }
 
 int64_t
-PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, weight_t* weight_vector)
+PredictedCentralLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x, weight_t* weight_vector)
 {
     int64_t pcld;
     if (x == 0 && y == 0)
@@ -81,7 +82,7 @@ PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, weight_t
     
     int32_t local_direction_vector[kC];
 
-    LocalDirectionVector(hIMG, local_direction_vector, z, y, x);
+    LocalDirectionVector(buf, s, local_direction_vector, z, y, x);
     pcld = InnerProduct(weight_vector, local_direction_vector, kC);
 
     return pcld;

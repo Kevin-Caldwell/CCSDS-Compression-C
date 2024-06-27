@@ -10,7 +10,7 @@ uint16_t PredictedSample(uint32_t double_resolution_predicted_sample)
     return double_resolution_predicted_sample / 2;
 }
 
-uint32_t DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample)
+uint32_t DoubleResolutionPredictedSample(LBuf* buf, INDEX z, INDEX y, INDEX x, int64_t high_resolution_predicted_sample)
 {
     if (x > 0 || y > 0)
     { // ? Substitute for t>0
@@ -18,7 +18,7 @@ uint32_t DoubleResolutionPredictedSample(image *hIMG, INDEX z, INDEX y, INDEX x,
     }
     else if ((x == 0 && y == 0) && kP > 0 && z > 0) // ? Substitute for t == 0
     {
-        return 2 * S(hIMG, z - 1, y, x);
+        return 2 * SR(buf, -1, 0, 0);
     }
     else if ((x == 0 && y == 0) && (kP == 0 || z == 0)) // ? Substitute for t == 0
     {

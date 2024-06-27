@@ -75,7 +75,6 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
     long int len = 0;
 
     time_t start = time(NULL);
-    #ifndef S_SPLINT_S
     for (int z = 0; z < sz.z; z++)
     {
         for (int y = 0; y < sz.y; y++)
@@ -132,7 +131,6 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
         printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
         fflush(stdout);
     }
-    #endif
     res = VUF_close(&stream);
 
     time_t end = time(NULL);

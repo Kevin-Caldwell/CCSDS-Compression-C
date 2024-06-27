@@ -29,7 +29,8 @@ enum DIRECTION
  * @brief Shorthand for Direct Local Difference 
  * @warning Direct Image Access
  */
-#define DLD(hIMG, z, y, x, d) DirectionalLocalDifference(hIMG, z, y, x, d)
+#define L_DLD(hIMG, z, y, x, d) L_DirectionalLocalDifference(hIMG, z, y, x, d)
+#define DLD(hIMG, s, z, y, x, d) DirectionalLocalDifference(hIMG, s, z, y, x, d)
 /** 
  * @brief Shorthand for North Direct Local Difference
  * @warning Direct Image Access
@@ -51,19 +52,23 @@ enum DIRECTION
  * @note Soon Deprecated
  * @warning Direct Image Access
  */
-int32_t CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x);
+int32_t L_CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x);
+int32_t CentralLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x);
 
 /** @brief Finds the Directional Local Difference using Direct Image Access
  * @note Soon Deprecated
  * @warning Direct Image Access
  */
-int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction);
+int32_t DirectionalLocalDifference(LBuf *hIMG, dim3 s, INDEX z, INDEX y, INDEX x, int direction);
+
+int32_t L_DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction);
 
 /**
  * @brief Finds the Local Direction Vector using Direct Image Access
  * @note Soon Deprecated
  * @warning Direct Image Access
  */
-int LocalDirectionVector(image *hIMG, int32_t *local_direction_vector, INDEX z, INDEX y, INDEX x);
+int L_LocalDirectionVector(image *hIMG, int32_t *local_direction_vector, INDEX z, INDEX y, INDEX x);
+int LocalDirectionVector(LBuf *buf, dim3 s, int32_t *lDV, INDEX z, INDEX y, INDEX x);
 
 #endif /* LOCAL_DIFFERENCES_H */

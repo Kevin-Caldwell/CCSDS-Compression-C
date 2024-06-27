@@ -1,18 +1,18 @@
 #include "predictor/local_differences.h"
 
-int32_t CentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x)
+int32_t CentralLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x)
 {
-    return 4 * SR(hIMG, z, y, x) - LS(hIMG, z, y, x);
+    return 4 * SR(buf, z, y, x) - LS(buf, s, z, y, x);
 }
 
-int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int direction)
+int32_t DirectionalLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x, int direction)
 {
     switch (direction)
     {
     case N:
         if (y > 0)
         {
-            return 4 * SR(hIMG, z, y - 1, x) - LS(hIMG, z, y, x);
+            return 4 * SR(buf, 0, -1, 0) - LS(buf, s, z, y, x);
         }
         else if (y == 0)
         {
@@ -22,11 +22,11 @@ int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int d
     case W:
         if (x > 0 && y > 0)
         {
-            return 4 * SR(hIMG, z, y, x - 1) - LS(hIMG, z, y, x);
+            return 4 * SR(buf, 0, 0, -1) - LS(buf, s, z, y, x);
         }
         else if (x == 0 && y > 0)
         {
-            return 4 * SR(hIMG, z, y - 1, x) - LS(hIMG, z, y, x);
+            return 4 * SR(buf, 0, -1, 0) - LS(buf, s, z, y, x);
         }
         else if (y == 0)
         {
@@ -35,11 +35,11 @@ int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int d
     case NW:
         if (x > 0 && y > 0)
         {
-            return 4 * SR(hIMG, z, y - 1, x - 1) - LS(hIMG, z, y, x);
+            return 4 * SR(buf, 0, -1, -1) - LS(buf, s, z, y, x);
         }
         else if (x == 0 && y > 0)
         {
-            return 4 * SR(hIMG, z, y - 1, x) - LS(hIMG, z, y, x);
+            return 4 * SR(buf, 0, -1, 0) - LS(buf, s, z, y, x);
         }
         else if (y == 0)
         {
@@ -52,18 +52,18 @@ int32_t DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int d
     return 0;
 }
 
-int LocalDirectionVector(image *hIMG, int32_t *lDV, INDEX z, INDEX y, INDEX x)
+int LocalDirectionVector(LBuf *buf, dim3 s, int32_t *lDV, INDEX z, INDEX y, INDEX x)
 {
     if (!Hash_GetValue(&predictor_constants, "PREDICTION_MODE"))
     {
         for (int i = N; i <= NW; i++)
         {
-            lDV[i] = DLD(hIMG, z, y, x, i);
+            lDV[i] = DLD(buf, s, 0, 0, 0, i);
         }
 
         for (unsigned long int i = 0; i < Ps(z); i++)
         {
-            lDV[i + 3] = CentralLocalDifference(hIMG, (signed int)(z - i - 1), y, x);
+            lDV[i + 3] = CentralLocalDifference(buf, s, (signed int)(- i - 1), 0, 0);
         }
     }
     else
@@ -71,7 +71,7 @@ int LocalDirectionVector(image *hIMG, int32_t *lDV, INDEX z, INDEX y, INDEX x)
 
         for (int i = 0; i < kC; i++)
         {
-            lDV[i] = CentralLocalDifference(hIMG, z - 1 - i, y, x);
+            lDV[i] = CentralLocalDifference(buf, s, - 1 - i, 0, 0);
         }
     }
 }

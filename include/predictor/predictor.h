@@ -16,6 +16,7 @@
 #include "predictor/weights.h"
 #include "predictor/quantizer.h"
 
+extern file_t* fp;
 /** 
  * @brief Redundant Definition from math_functions.h
  * @todo remove this

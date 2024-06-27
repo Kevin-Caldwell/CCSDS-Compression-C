@@ -43,12 +43,12 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
 {
 
     data_t mapped_data = GetPixel(mapped, x, y, z);
-    uint16_t local_sum = FindLocalSum(data, z, y, x);
+    uint16_t local_sum = L_FindLocalSum(data, z, y, x);
 
-    int64_t predicted_central_local_difference = PredictedCentralLocalDifference(data, z, y, x, weights);
+    int64_t predicted_central_local_difference = L_PredictedCentralLocalDifference(data, z, y, x, weights);
 
     int64_t high_resolution_predicted_sample = HighResolutionPredictedSample(predicted_central_local_difference, local_sum);
-    int32_t double_resolution_predicted_sample = DoubleResolutionPredictedSample(data, z, y, x, high_resolution_predicted_sample);
+    int32_t double_resolution_predicted_sample = L_DoubleResolutionPredictedSample(data, z, y, x, high_resolution_predicted_sample);
 
     uint16_t predicted_sample = PredictedSample(double_resolution_predicted_sample);
 
@@ -61,7 +61,7 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
     // int32_t double_resolution_predicted_error = 2 * (predicted_sample + delta) - double_resolution_predicted_error
     SetPixel(data, x, y, z, (uint16_t)predicted_sample + delta);
 
-    UpdateWeights(data, weights, z, y, x, double_resolution_predicted_error);
+    L_UpdateWeights(data, weights, z, y, x, double_resolution_predicted_error);
 
     char write_buffer[1000];
 

@@ -195,7 +195,7 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
     log_global_error_handle
 
     printf("Read CSV\n");
-    #ifndef S_SPLINT_S
+    #ifndef S_
     for (int i = 0; i < size.x; i++)
     {
         for (int j = 0; j < size.y; j++)
