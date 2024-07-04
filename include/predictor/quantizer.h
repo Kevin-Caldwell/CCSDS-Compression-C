@@ -4,7 +4,6 @@
  * @brief Functions For the Quantizer Steps
  * @details
  * Quantizer Functions do not need direct access to the image.
- * @todo Reorganize Functions to have less cyclic inclusions.
  */
 
 #ifndef QUANTIZER_H

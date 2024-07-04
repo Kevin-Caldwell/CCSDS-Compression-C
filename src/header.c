@@ -66,7 +66,7 @@ void PreparePredictorMetadata(uint8_t *predicted_metadata)
     Encode(primary, 1, (uint8_t) kR, 6);
 
     Encode(primary, 2, (uint8_t) Omega, 4);
-    Encode(primary, 2, (uint8_t) (Hash_GetValue(&predictor_constants, "CHANGE_INTERVAL") - 4), 4);
+    Encode(primary, 2, (uint8_t) (kTInc - 4), 4);
 
     Encode(primary, 3, (uint8_t) kVMin + 6, 4);
     Encode(primary, 3, (uint8_t) kVMax + 6, 4);

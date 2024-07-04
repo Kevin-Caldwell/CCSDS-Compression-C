@@ -88,7 +88,11 @@ void Perlin4(image *result, int cube_side)
 
             time_t time_elapsed = time(NULL) - start;
             time_t time_left = time_elapsed * ((result->size.x - x - 1) * result->size.y + (result->size.y - y - 1)) / (result->size.y * (x + 1) + (y + 1));
+            #ifdef ARM_COMPILE
             printf("\rGenerated %d/%d of Image. (%lld seconds Elapsed, %lld seconds Left)", (int)(x + 1), (int)result->size.x, time_elapsed, time_left);
+            #else
+            printf("\rGenerated %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(x + 1), (int)result->size.x, time_elapsed, time_left);
+            #endif
             fflush(stdout);
         }
     }

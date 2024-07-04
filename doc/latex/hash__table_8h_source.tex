@@ -3,40 +3,40 @@
 \mbox{\hyperlink{hash__table_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ HASH\_TABLE\_H}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ HASH\_TABLE\_H}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <string.h>}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{typedefs_8h}{constants/typedefs.h}}"{}}}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ HASH\_CAPACITY\ 30}}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ KEY\_LENGTH\ 30}}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00048\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}}
-\DoxyCodeLine{00049\ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_hash_table_aa429745e164770f5a9545fd31ba633b1}{keys}}[\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\_CAPACITY}}][\mbox{\hyperlink{hash__table_8h_a5145aca5cb4a65b79b24d162d6fd72eb}{KEY\_LENGTH}}];}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00054\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_hash_table_afe6af42ae11ea67b9e6403bd99a4f99d}{data}}[\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\_CAPACITY}}];}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_afed088663f8704004425cdae2120b9b3}{len}};}
-\DoxyCodeLine{00058\ \};}
-\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}\ \mbox{\hyperlink{struct_hash_table}{HashTable}};}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00065\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_a622d1c468749ab68c391f463bda0335c}{Hash\_InitializeHashTable}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash);}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00071\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_ac8f1faa6debf15cdd31b24336055ad07}{Hash\_DeleteHashTable}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash);}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00078\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_a168e04b561db13aa48b8c2675b4c3df8}{Hash\_AddEntry}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ int32\_t\ \mbox{\hyperlink{struct_hash_table_afe6af42ae11ea67b9e6403bd99a4f99d}{data}});}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00083\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ \mbox{\hyperlink{hash__table_8h_a8889e063ac5cf3e79cb21bcba454b054}{Hash\_GetIndex}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
-\DoxyCodeLine{00084\ }
-\DoxyCodeLine{00093\ int32\_t\ \mbox{\hyperlink{hash__table_8h_a27578c1b5a3ab68d8f144ed86ea72cc2}{Hash\_GetValue}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00101\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_a3895b9b37a2ed859af17b8d22e06bab0}{Hash\_SetValue}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key,\ int32\_t\ new\_data);}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HASH\_TABLE\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ HASH\_TABLE\_H}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ HASH\_TABLE\_H}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \#include\ <stdlib.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <inttypes.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{typedefs_8h}{constants/typedefs.h}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ HASH\_CAPACITY\ 30}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ KEY\_LENGTH\ 30}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_hash_table_aa429745e164770f5a9545fd31ba633b1}{keys}}[\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\_CAPACITY}}][\mbox{\hyperlink{hash__table_8h_a5145aca5cb4a65b79b24d162d6fd72eb}{KEY\_LENGTH}}];}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ int32\_t\ \mbox{\hyperlink{struct_hash_table_afe6af42ae11ea67b9e6403bd99a4f99d}{data}}[\mbox{\hyperlink{hash__table_8h_ac5ff60f58cdc7ee42543e2812a8cae47}{HASH\_CAPACITY}}];}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_hash_table_afed088663f8704004425cdae2120b9b3}{len}};}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_hash_table}{HashTable}}\ \mbox{\hyperlink{struct_hash_table}{HashTable}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_a622d1c468749ab68c391f463bda0335c}{Hash\_InitializeHashTable}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_ac8f1faa6debf15cdd31b24336055ad07}{Hash\_DeleteHashTable}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_a168e04b561db13aa48b8c2675b4c3df8}{Hash\_AddEntry}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *name,\ int32\_t\ \mbox{\hyperlink{struct_hash_table_afe6af42ae11ea67b9e6403bd99a4f99d}{data}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ \mbox{\hyperlink{hash__table_8h_a8889e063ac5cf3e79cb21bcba454b054}{Hash\_GetIndex}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00089\ int32\_t\ \mbox{\hyperlink{hash__table_8h_a27578c1b5a3ab68d8f144ed86ea72cc2}{Hash\_GetValue}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00097\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{hash__table_8h_a3895b9b37a2ed859af17b8d22e06bab0}{Hash\_SetValue}}(\mbox{\hyperlink{struct_hash_table}{HashTable}}\ *hash,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key,\ int32\_t\ new\_data);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ HASH\_TABLE\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

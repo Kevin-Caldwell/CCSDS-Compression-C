@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['manhattan2_0',['Manhattan2',['../math__functions_8h.html#adf11110e70a4ca4a966622288d194681',1,'math_functions.c']]],
-  ['manhattan3_1',['Manhattan3',['../math__functions_8h.html#ace80df346398f6e153166e87cee41d47',1,'math_functions.c']]],
-  ['mappedquantizerindex_2',['MappedQuantizerIndex',['../quantizer_8h.html#a1f491e0a435427669942c932394d7c1a',1,'quantizer.c']]]
+  ['predictedsample_0',['PredictedSample',['../sample__representative_8h.html#a14cff7c59ac94b0387e8b95a433521e9',1,'sample_representative.c']]],
+  ['predictionresidual_1',['PredictionResidual',['../quantizer_8h.html#a93be7d02ed2acce98f53818c98ac6cca',1,'quantizer.c']]],
+  ['proxy_5fgetpixel_2',['Proxy_GetPixel',['../uhi__io_8h.html#aad573fb88befb1cd5c553c20a32027a9',1,'uhi_io.c']]],
+  ['proxy_5fsetpixel_3',['Proxy_SetPixel',['../uhi__io_8h.html#a1ec6bacb78062b9b8dde4cf3e3eeb923',1,'uhi_io.c']]]
 ];

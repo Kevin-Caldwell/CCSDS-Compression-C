@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['sign_0',['SIGN',['../math__functions_8h.html#a8c5ff70b6b28cd0157c50a22406f92c4',1,'math_functions.h']]],
-  ['sign_5fp_1',['SIGN_P',['../math__functions_8h.html#a5f76d4dda1e368d45e059912932c7b60',1,'math_functions.h']]],
-  ['sq_2',['SQ',['../math__functions_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc',1,'math_functions.h']]],
-  ['sr_3',['SR',['../sample__representative_8h.html#a9d318d5c2a1d81d6f70cbf34e917e47d',1,'sample_representative.h']]]
+  ['uhi_5fcache_5flength_0',['UHI_CACHE_LENGTH',['../uhi__io_8h.html#a6aba86f49a9e77ca452352dd1ef8d4af',1,'uhi_io.h']]]
 ];

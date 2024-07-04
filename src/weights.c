@@ -54,7 +54,7 @@ int UpdateWeights(LBuf *buf, dim3 s, weight_t *weights, INDEX z, INDEX y, INDEX 
 
     for (int i = 0; i < 3; i++)
     {
-        float val = floor((exp * (float)DLD(buf, s, 0, 0, 0, i) + 1) / 2);
+        float val = floor((exp * (float)DLD(buf, s, i) + 1) / 2);
         weights[i] += val;
     }
 
@@ -72,17 +72,17 @@ int UpdateWeights(LBuf *buf, dim3 s, weight_t *weights, INDEX z, INDEX y, INDEX 
 }
 
 int64_t
-PredictedCentralLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x, weight_t* weight_vector)
+PredictedCentralLocalDifference(LBuf *buf, dim3 s, weight_t* weight_vector)
 {
     int64_t pcld;
-    if (x == 0 && y == 0)
+    if (buf->pixel_index.x == 0 && buf->pixel_index.y == 0)
     {
         return 0;
     }
     
     int32_t local_direction_vector[kC];
 
-    LocalDirectionVector(buf, s, local_direction_vector, z, y, x);
+    LocalDirectionVector(buf, s, local_direction_vector);
     pcld = InnerProduct(weight_vector, local_direction_vector, kC);
 
     return pcld;

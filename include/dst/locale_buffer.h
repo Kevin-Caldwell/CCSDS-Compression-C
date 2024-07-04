@@ -7,9 +7,7 @@
  * Contains Includes, Macros, Structures and 
  * Functions for loading the neighborhood of a 
  * Pixel from storage into memory.
- * @todo Implement LocaleBuffer_SimpleLoad
  * @todo Implement LocaleBuffer_SmartLoad
- * @todo Implement LocaleBuffer_FetchPixel
  */
 
 #include "dst/image.h"
@@ -46,6 +44,7 @@ extern const int LocaleBuffer_neighbor_index_y[LOCAL_BUFFER_NEIGHBOR_SIZE];
 */
 typedef struct LocaleBuffer{
     PIXEL data[LOCAL_BUFFER_TOTAL_SIZE];
+    dim3 pixel_index;
 } LocaleBuffer, LBuf;
 
 /**

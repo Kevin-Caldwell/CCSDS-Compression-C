@@ -12,7 +12,7 @@ void InitalizePredictorConstants()
     kVMax = (int)GET_PCONST("WEIGHT_UPDATE_V_MAX");
 
     kUnsignedSamples = (int)GET_PCONST("UNSIGNED_SAMPLES");
-    kD = (int32_t) GET_PCONST("D");
+    kD = (int32_t) GET_PCONST("DYNAMIC_RANGE");
     kDa = (int)MIN(kD - 1, 16);
     // kSmin = -BPOW(kD - 1);
 
@@ -30,7 +30,7 @@ void InitalizePredictorConstants()
     }
 
     kPredictionMode = (int)GET_PCONST("PREDICTION_MODE");
-    kP = (int32_t)GET_PCONST("P");
+    kP = (int32_t)GET_PCONST("PREDICTION_BANDS");
     kR = (int64_t)GET_PCONST("REGISTER_SIZE_PARAMETER");
 
     Omega = (uint8_t)GET_PCONST("WEIGHT_RESOLUTION");

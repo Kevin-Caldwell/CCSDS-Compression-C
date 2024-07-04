@@ -116,6 +116,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a92c57811a03d78e56a6e8592f96a41ad" id="r_a92c57811a03d78e56a6e8592f96a41ad"><td class="memItemLeft" align="right" valign="top"><a id="a92c57811a03d78e56a6e8592f96a41ad" name="a92c57811a03d78e56a6e8592f96a41ad"></a>
 <a class="el" href="structdim3.html">dim3</a>&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
 <tr class="separator:a92c57811a03d78e56a6e8592f96a41ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259eb38bab418aa26b68d33d542cfdcb" id="r_a259eb38bab418aa26b68d33d542cfdcb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_uncompressed_hyperspectral_image.html#a259eb38bab418aa26b68d33d542cfdcb">kDynamicRange</a></td></tr>
+<tr class="memdesc:a259eb38bab418aa26b68d33d542cfdcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bits needed to represent values in the image.  <br /></td></tr>
+<tr class="separator:a259eb38bab418aa26b68d33d542cfdcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab10afab4dbcbfc99227c63ee0ae694ff" id="r_ab10afab4dbcbfc99227c63ee0ae694ff"><td class="memItemLeft" align="right" valign="top"><a id="ab10afab4dbcbfc99227c63ee0ae694ff" name="ab10afab4dbcbfc99227c63ee0ae694ff"></a>
 <a class="el" href="file___i_o_8h.html#aaa4f66633ab727c9d841db141c3da088">file_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>fs</b></td></tr>
 <tr class="separator:ab10afab4dbcbfc99227c63ee0ae694ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,7 +129,25 @@ Data Fields</h2></td></tr>
 <p>File format designed to store 16 bit pixel data for Hyperspectral Images. The first 3 data values represent the size of the hyperspectral image, and are followed by the pixel values.</p>
 <p>Designed to be a more RAM-friendly alternative to the image struct defined in <a class="el" href="image_8h.html">image.h</a>. The data is accessed from the filesystem instead of RAM, which increases latency and runtime, but reduces the RAM footprint of the overall program.</p>
 <p>fs: file_t object for handling file IO size: stores the dimensions of the Hyperspectral image cache: Unused 32 bit static array </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a259eb38bab418aa26b68d33d542cfdcb" name="a259eb38bab418aa26b68d33d542cfdcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259eb38bab418aa26b68d33d542cfdcb">&#9670;&#160;</a></span>kDynamicRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t kDynamicRange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of bits needed to represent values in the image. </p>
+<p>Range: [2, 32] </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>include/files/<a class="el" href="uhi__io_8h_source.html">uhi_io.h</a></li>
 </ul>
 </div><!-- contents -->

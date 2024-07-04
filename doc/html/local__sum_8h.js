@@ -1,5 +1,5 @@
 var local__sum_8h =
 [
-    [ "LS", "local__sum_8h.html#a010a797f4917c1fb48527b5e26827dba", null ],
-    [ "FindLocalSum", "local__sum_8h.html#a1f0a6a3443597dab4881bb94fbc35f41", null ]
+    [ "LS", "local__sum_8h.html#a050f054582aca8ab9f4d4da6eda97884", null ],
+    [ "FindLocalSum", "local__sum_8h.html#a004a2914d44de6bcf9641fd771c280be", null ]
 ];

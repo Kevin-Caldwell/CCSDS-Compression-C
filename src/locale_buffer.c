@@ -20,13 +20,19 @@ PIXEL LocaleBuffer_FetchPixel_Direct(LocaleBuffer* buf, DIM z, DIM y, DIM x){
         return buf->data[LOCAL_BUFFER_NEIGHBOR_SIZE + z];
     }
 
+    #ifdef ARM_COMPILE
     snprintf(log_write_buffer, 100, "UNABLE TO ACCESS PIXEL AT (x,y,z): %ld %ld %ld", x, y, z);
+    #else
+    snprintf(log_write_buffer, 100, "UNABLE TO ACCESS PIXEL AT (x,y,z): %d %d %d", x, y, z);
+    #endif
+
     Log_error(log_write_buffer);
     return -1;
 }
 
 error_t LocaleBuffer_SimpleLoad(LocaleBuffer* buf, image* hIMG, dim3 index){
     int i = 0;
+    buf->pixel_index = index;
     int alx = index.x;
     int aly = index.y;
     int alz = index.z;

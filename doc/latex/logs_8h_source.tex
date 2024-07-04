@@ -3,33 +3,31 @@
 \mbox{\hyperlink{logs_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ LOGS\_H}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ LOGS\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ LOGS\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ LOGS\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{file___i_o_8h}{file\_IO.h}}"{}}}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{file___i_o_8h}{file\_IO.h}}"{}}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{global__constants_8h}{constants/global\_constants.h}}"{}}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <time.h>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <string.h>}}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ log\_global\_error\_handle\ \(\backslash\)}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ if(res)\ \{\(\backslash\)}}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ char\ error\_msg[30];\(\backslash\)}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ sprintf(error\_msg,\ "{}Error\ Code\ \%d\ was\ Registered."{},\ res);\(\backslash\)}}
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \ \ \ Log\_error(error\_msg);\(\backslash\)}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ return\ res;\(\backslash\)}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ \}}}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ log\_write\_buffer[100];}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_a0b7cf426e0ba603b54206d70e4c93f04}{Log\_init}}();}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_ad02317523a9dd7b5180cccbc0371ac6a}{Log\_close}}();}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_a61353ebf0328d8bd1f61f224305e64bb}{Log\_add}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_ad795690a809192117add6898be812267}{Log\_error}}(\textcolor{keywordtype}{char}\ *text);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOGS\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ log\_global\_error\_handle\ \(\backslash\)}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ if(res)\ \{\(\backslash\)}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ snprintf(log\_write\_buffer,\ 100,\ "{}Error\ Code\ \%d\ was\ Registered."{},\ res);\(\backslash\)}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ Log\_error(log\_write\_buffer);\(\backslash\)}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \ \ \ return\ res;\(\backslash\)}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \ \ \ \}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{char}\ log\_write\_buffer[100];}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_a0b7cf426e0ba603b54206d70e4c93f04}{Log\_init}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_ad02317523a9dd7b5180cccbc0371ac6a}{Log\_close}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_a61353ebf0328d8bd1f61f224305e64bb}{Log\_add}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *text);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logs_8h_ad795690a809192117add6898be812267}{Log\_error}}(\textcolor{keywordtype}{char}\ *text);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOGS\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

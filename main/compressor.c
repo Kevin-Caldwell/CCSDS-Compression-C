@@ -95,6 +95,9 @@ int main(int argInt, char **argS)
         }
     }
 
+    // printf("Source: %s\n", image_source);
+    // printf("Destination: %s\n", image_destination);
+
     error_t res = execute(image_source, image_destination, action);
 
 

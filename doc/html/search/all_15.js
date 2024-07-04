@@ -6,6 +6,5 @@ var searchData=
   ['uhi_5freadpixel_3',['UHI_ReadPixel',['../uhi__io_8h.html#ad7fd2d84633ee6e0355a950deeacd220',1,'uhi_io.c']]],
   ['uhi_5fwritepixel_4',['UHI_WritePixel',['../uhi__io_8h.html#a9c23d248f87897f71d177a12cdfebf84',1,'uhi_io.c']]],
   ['uint_5',['UINT',['../typedefs_8h.html#a36cb3b01d81ffd844bbbfb54003e06ec',1,'typedefs.h']]],
-  ['uncompressedhyperspectralimage_6',['UncompressedHyperspectralImage',['../struct_uncompressed_hyperspectral_image.html',1,'']]],
-  ['updateweights_7',['UpdateWeights',['../weights_8h.html#a3c2f868e18c430abf7f6c6171ea253e0',1,'weights.c']]]
+  ['uncompressedhyperspectralimage_6',['UncompressedHyperspectralImage',['../struct_uncompressed_hyperspectral_image.html',1,'']]]
 ];

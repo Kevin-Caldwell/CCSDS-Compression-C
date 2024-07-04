@@ -95,20 +95,82 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> An Open Source Implementation of <a href="CCSDS_Compression.pdf">CCSDS-123-B-2</a>, the Low-Complexity Lossless and Near-Lossless Multispectral and Hyperspectral Image Compression.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Introduction</h1>
-<p>This Standard describes</p>
+Table of Contents</h1>
+<ol type="1">
+<li>Introduction</li>
+<li>Installation Instructions</li>
+<li>Command Line Interface</li>
+<li>General Documentation</li>
+<li>Code Structure?</li>
+</ol>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Installation Instructions</h1>
-<p>installation instructions here</p>
+Introduction</h1>
+<p>HyperC is an implementation of the <a href="CCSDS_Compression.pdf">CCSDS-123 B-2</a>, designed to meet the FINCH-PayloadController-LosslessCompression requirement. The required Compression Speed is givenby the <a href="https://www.notion.so/utat-ss/FINCH-PayloadController-CompressionSpeed-0a9a3c2992e44a239bd1d1e7e464b6c9">FINCH-PayloadController-CompressionSpeed</a> requirement. The compression rate required is provided by the <a href="https://www.notion.so/utat-ss/FINCH-PayloadController-CompressionRate-8cabbe2393b147b6ae5e73e8ee58c9f4">FINCH-PayloadController-CompressionRate</a> requirement.</p>
+<p>This project contains:</p>
+<ul>
+<li>Compressor</li>
+<li>Decompressor</li>
+<li>Hyperspectral Image formatting and generation</li>
+</ul>
+<p>The raw hyperspectral image files are expected to be .uhi (Uncompressed Hyperspectral Image) files, which makes getting and storing individual pixels much faster than csv or mat files.</p>
+<p>Compressed Images are stored in .vuf files (Variable Unsigned Files), which are capable of storing unsigned integers of any length less than 32 bits.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Documentation</h1>
-<p>Documentation here</p>
+Installation Instructions</h1>
+<p>Download the repository using the command:</p>
+<div class="fragment"><div class="line">git clone https://github.com/Kevin-Caldwell/CCSDS-Compression-C.git</div>
+</div><!-- fragment --><p>The build system for this project is CMake. In order to assemble the binaries, run the commands</p>
+<div class="fragment"><div class="line">mkdir build; cd build</div>
+<div class="line">cmake .</div>
+<div class="line">make</div>
+</div><!-- fragment --><p>The assembled binaries should be found in the build folder:</p>
+<ul>
+<li>hc-imgen</li>
+<li>hc-compress</li>
+<li>hc-decompress</li>
+</ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
-Title Here</h1>
-<p>Text stuff here</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Development Highlights?</h1>
-<p>dev </p>
+Command Line Interface</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Image Generator</h2>
+<p>Hyperspectral Image Tools are available in the hc-imgen executable. It provides a CLI for</p>
+<ul>
+<li>Image Generation using Perlin or Voronoi Noise</li>
+<li>Image Conversion from .csv to .uhi</li>
+<li>Image Conversion from .uhi to .csv</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Compressor</h2>
+<p>hc-compress is the Image Compressor, and the CLI Tags are:</p>
+<ul>
+<li><code>-s</code> : Set Source File</li>
+<li><code>-d</code> : Set Destionation File</li>
+<li><code>-a</code> : Set Action (See Below)</li>
+<li><code>-D</code> : Enable <code>DEBUG MODE</code></li>
+<li><code>-l</code> : Set Log File</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Actions</h3>
+<p>Actions describe all the functions you can execute using hc-compress. The list of possible actions are:</p>
+<ul>
+<li><code>compress</code>: Compress an image in a .uhi file to a .vuf file</li>
+<li><code>predict</code>: Run the predictor on an image. Input and output files are .uhi</li>
+<li><code>encode</code>: Run Encoder on an image in a .uhi file into a .vuf file</li>
+<li><code>test-x</code>: Validate x (predictor, encoder, compressor, uhi, vuf)</li>
+</ul>
+<p>Defaults:</p>
+<ul>
+<li>Source File: <code>../data/test-images/indian_pines.UHI</code></li>
+<li>Destination File: <code>../data/results/indian_pines.UHI</code></li>
+<li>Action: <code>predict</code></li>
+<li>Debug: <code>False</code></li>
+<li>Log File: <code>../data/logs/compressor.logs</code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Decompressor</h2>
+<p>The Decompressor has not been fully implemented yet.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Project Structure</h1>
+<p>a </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

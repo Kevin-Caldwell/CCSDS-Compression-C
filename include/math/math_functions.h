@@ -76,25 +76,4 @@ typedef struct dim2
     DIM y;
 } dim2;
 
-/**
- * @todo Relocate to reduce scope
- */
-UINT Euclidian2(dim2 pt1, dim2 pt2);
-
-/**
- * @todo Relocate to reduce scope
- */
-UINT Euclidian3(dim3 pt1, dim3 pt2);
-
-
-/**
- * @todo Relocate to reduce scope
- */
-UINT Manhattan2(dim2 pt1, dim2 pt2);
-
-/**
- * @todo Relocate to reduce scope
- */
-UINT Manhattan3(dim3 pt1, dim3 pt2);
-
 #endif /* MATH_FUNCTIONS_H */

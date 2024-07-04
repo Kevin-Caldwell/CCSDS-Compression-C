@@ -9,7 +9,6 @@
 #ifndef SAMPLE_REPRESENTATIVE_H
 #define SAMPLE_REPRESENTATIVE_H
 
-#include "dst/image.h"
 #include "dst/locale_buffer.h"
 
 /** 

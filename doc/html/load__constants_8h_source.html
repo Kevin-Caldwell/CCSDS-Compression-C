@@ -99,17 +99,26 @@ $(document).ready(function(){initNavTree('load__constants_8h_source.html',''); i
 </div><!--header-->
 <div class="contents">
 <a href="load__constants_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#ifndef LOAD_CONSTANTS_H</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define LOAD_CONSTANTS_H</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="hash__table_8h.html">dst/hash_table.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">int</span> <a class="code hl_function" href="load__constants_8h.html#a5d642038360b72b886a5eb66e3efd14a">LoadConstantFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file_name, <a class="code hl_struct" href="struct_hash_table.html">HashTable</a> *result);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef LOAD_CONSTANTS_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define LOAD_CONSTANTS_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="hash__table_8h.html">dst/hash_table.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="predictor__constants_8h.html">constants/predictor_constants.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span> <a class="code hl_function" href="load__constants_8h.html#a5d642038360b72b886a5eb66e3efd14a">LoadConstantFile</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *file_name, <a class="code hl_struct" href="struct_hash_table.html">HashTable</a> *result);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">/* LOAD_CONSTANTS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><a class="code hl_typedef" href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a> <a class="code hl_function" href="load__constants_8h.html#a6bc1e294fbb3e8f0d399039cce75cf89">SavePredictorConstants</a>(<a class="code hl_struct" href="structs__predictor__constants.html">S_kPred</a>* kPred, <span class="keywordtype">char</span>* file_name);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif </span><span class="comment">/* LOAD_CONSTANTS_H */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="ahash__table_8h_html"><div class="ttname"><a href="hash__table_8h.html">hash_table.h</a></div></div>
 <div class="ttc" id="aload__constants_8h_html_a5d642038360b72b886a5eb66e3efd14a"><div class="ttname"><a href="load__constants_8h.html#a5d642038360b72b886a5eb66e3efd14a">LoadConstantFile</a></div><div class="ttdeci">int LoadConstantFile(const char *file_name, HashTable *result)</div><div class="ttdoc">Loads a .CONST file into a HashTable filled with constants.</div><div class="ttdef"><b>Definition</b> load_constants.c:6</div></div>
-<div class="ttc" id="astruct_hash_table_html"><div class="ttname"><a href="struct_hash_table.html">HashTable</a></div><div class="ttdoc">A Hash Table which retrieves the integer value of a text key. Designed for storing the contents of ....</div><div class="ttdef"><b>Definition</b> hash_table.h:49</div></div>
+<div class="ttc" id="aload__constants_8h_html_a6bc1e294fbb3e8f0d399039cce75cf89"><div class="ttname"><a href="load__constants_8h.html#a6bc1e294fbb3e8f0d399039cce75cf89">SavePredictorConstants</a></div><div class="ttdeci">error_t SavePredictorConstants(S_kPred *kPred, char *file_name)</div><div class="ttdoc">Saves the current predictor configuration into a file.</div><div class="ttdef"><b>Definition</b> load_constants.c:53</div></div>
+<div class="ttc" id="apredictor__constants_8h_html"><div class="ttname"><a href="predictor__constants_8h.html">predictor_constants.h</a></div><div class="ttdoc">Contains the Struct and relevant functions for Creating and Accessing Predictor Constants.</div></div>
+<div class="ttc" id="astruct_hash_table_html"><div class="ttname"><a href="struct_hash_table.html">HashTable</a></div><div class="ttdoc">A Hash Table which retrieves the integer value of a text key. Designed for storing the contents of ....</div><div class="ttdef"><b>Definition</b> hash_table.h:45</div></div>
+<div class="ttc" id="astructs__predictor__constants_html"><div class="ttname"><a href="structs__predictor__constants.html">s_predictor_constants</a></div><div class="ttdoc">Structure containing all Predictor Constants.</div><div class="ttdef"><b>Definition</b> predictor_constants.h:15</div></div>
+<div class="ttc" id="atypedefs_8h_html_a9686e3aa2c29c9c208c0cf15d69516e5"><div class="ttname"><a href="typedefs_8h.html#a9686e3aa2c29c9c208c0cf15d69516e5">error_t</a></div><div class="ttdeci">enum ERROR_CODES error_t</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

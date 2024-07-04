@@ -11,6 +11,6 @@ var annotated_dup =
     [ "image2", "structimage2.html", null ],
     [ "LocaleBuffer", "struct_locale_buffer.html", null ],
     [ "s_predictor_constants", "structs__predictor__constants.html", "structs__predictor__constants" ],
-    [ "UncompressedHyperspectralImage", "struct_uncompressed_hyperspectral_image.html", null ],
+    [ "UncompressedHyperspectralImage", "struct_uncompressed_hyperspectral_image.html", "struct_uncompressed_hyperspectral_image" ],
     [ "VarUnsignedIntFile", "struct_var_unsigned_int_file.html", null ]
 ];

@@ -1,6 +1,6 @@
 var uhi__io_8h =
 [
-    [ "UncompressedHyperspectralImage", "struct_uncompressed_hyperspectral_image.html", null ],
+    [ "UncompressedHyperspectralImage", "struct_uncompressed_hyperspectral_image.html", "struct_uncompressed_hyperspectral_image" ],
     [ "UHI_CACHE_LENGTH", "uhi__io_8h.html#a6aba86f49a9e77ca452352dd1ef8d4af", null ],
     [ "F_UHI", "uhi__io_8h.html#aabf4f060c3ec7817f143c3cbf63ba0c0", null ],
     [ "Proxy_GetPixel", "uhi__io_8h.html#aad573fb88befb1cd5c553c20a32027a9", null ],

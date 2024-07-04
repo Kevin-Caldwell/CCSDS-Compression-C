@@ -29,16 +29,22 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{weights_8h_a4d0af751debaaf6b3f8c5e845277b8a0}\label{weights_8h_a4d0af751debaaf6b3f8c5e845277b8a0} 
-int {\bfseries Initialize\+Weights} (\mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weight\+\_\+ptr, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z)
+int {\bfseries Initialize\+Weights} (\mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weight\+\_\+ptr, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z)
 \begin{DoxyCompactList}\small\item\em Initialize Weights using Default Initialization. \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{weights_8h_a286baab1384ff25cf7cf4c2061f15c4c}{Double\+Resolution\+Prediction\+Error}} (int16\+\_\+t clipped\+\_\+quantizer\+\_\+bin\+\_\+center, int32\+\_\+t double\+\_\+resolution\+\_\+predicted\+\_\+sample)
 \begin{DoxyCompactList}\small\item\em Double Resolution Prediction Error Calculation. \end{DoxyCompactList}\item 
 int32\+\_\+t \mbox{\hyperlink{weights_8h_aa2ee574fad65a220fa95637b2c9bd2af}{Weight\+Update\+Scaling\+Exponent}} (\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, \mbox{\hyperlink{structdim3}{dim3}} img\+\_\+dim)
 \begin{DoxyCompactList}\small\item\em Weight Update Scaling Exponent Calculation. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0}{Update\+Weights}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weights, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, int32\+\_\+t double\+\_\+resolution\+\_\+prediction\+\_\+error)
+int \mbox{\hyperlink{weights_8h_a47a3bd87a35a168c3b4718d8e5eb312f}{L\+\_\+\+Update\+Weights}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weights, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, int32\+\_\+t double\+\_\+resolution\+\_\+prediction\+\_\+error)
 \begin{DoxyCompactList}\small\item\em Update Weights Calculations. \end{DoxyCompactList}\item 
-int64\+\_\+t \mbox{\hyperlink{weights_8h_acf58304d4d853a358ca999e417090596}{Predicted\+Central\+Local\+Difference}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, \mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weights)
-\begin{DoxyCompactList}\small\item\em Predicted Central Local Difference Calculation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\Hypertarget{weights_8h_a7c5c420f47b4ab6eda66d9e5ed163f9f}\label{weights_8h_a7c5c420f47b4ab6eda66d9e5ed163f9f} 
+int {\bfseries Update\+Weights} (\mbox{\hyperlink{struct_locale_buffer}{LBuf}} \texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{structdim3}{dim3}} s, \mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weights, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, int32\+\_\+t double\+\_\+resolution\+\_\+prediction\+\_\+error)
+\item 
+int64\+\_\+t \mbox{\hyperlink{weights_8h_aea625030b97e89b13363dd91e98ad3c4}{L\+\_\+\+Predicted\+Central\+Local\+Difference}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, \mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weights)
+\begin{DoxyCompactList}\small\item\em Predicted Central Local Difference Calculation. \end{DoxyCompactList}\item 
+\Hypertarget{weights_8h_a32eac33b5812dd3a88666e99d44916e7}\label{weights_8h_a32eac33b5812dd3a88666e99d44916e7} 
+int64\+\_\+t {\bfseries Predicted\+Central\+Local\+Difference} (\mbox{\hyperlink{struct_locale_buffer}{LBuf}} \texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{structdim3}{dim3}} s, \mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}weight\+\_\+vector)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -58,7 +64,7 @@ Functions for Initializing, Calculating and Updating Weights for Predictor and R
 Redefinition of Ps. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000026}{Todo}}]Remove Redundant defintions \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000016}{Todo}}]Remove Redundant defintions \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
@@ -86,11 +92,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=232pt]{weights_8h_a286baab1384ff25cf7cf4c2061f15c4c_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{weights_8h_acf58304d4d853a358ca999e417090596}\label{weights_8h_acf58304d4d853a358ca999e417090596} 
-\index{weights.h@{weights.h}!PredictedCentralLocalDifference@{PredictedCentralLocalDifference}}
-\index{PredictedCentralLocalDifference@{PredictedCentralLocalDifference}!weights.h@{weights.h}}
-\doxysubsubsection{\texorpdfstring{PredictedCentralLocalDifference()}{PredictedCentralLocalDifference()}}
-{\footnotesize\ttfamily int64\+\_\+t Predicted\+Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x,  }\item[{\mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{weights }\end{DoxyParamCaption})}
+\Hypertarget{weights_8h_aea625030b97e89b13363dd91e98ad3c4}\label{weights_8h_aea625030b97e89b13363dd91e98ad3c4} 
+\index{weights.h@{weights.h}!L\_PredictedCentralLocalDifference@{L\_PredictedCentralLocalDifference}}
+\index{L\_PredictedCentralLocalDifference@{L\_PredictedCentralLocalDifference}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{L\_PredictedCentralLocalDifference()}{L\_PredictedCentralLocalDifference()}}
+{\footnotesize\ttfamily int64\+\_\+t L\+\_\+\+Predicted\+Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x,  }\item[{\mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{weights }\end{DoxyParamCaption})}
 
 
 
@@ -103,21 +109,21 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{weights_8h_acf58304d4d853a358ca999e417090596_cgraph}
+\includegraphics[width=350pt]{weights_8h_aea625030b97e89b13363dd91e98ad3c4_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=253pt]{weights_8h_acf58304d4d853a358ca999e417090596_icgraph}
+\includegraphics[width=264pt]{weights_8h_aea625030b97e89b13363dd91e98ad3c4_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0}\label{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0} 
-\index{weights.h@{weights.h}!UpdateWeights@{UpdateWeights}}
-\index{UpdateWeights@{UpdateWeights}!weights.h@{weights.h}}
-\doxysubsubsection{\texorpdfstring{UpdateWeights()}{UpdateWeights()}}
-{\footnotesize\ttfamily int Update\+Weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{weights,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x,  }\item[{int32\+\_\+t}]{double\+\_\+resolution\+\_\+prediction\+\_\+error }\end{DoxyParamCaption})}
+\Hypertarget{weights_8h_a47a3bd87a35a168c3b4718d8e5eb312f}\label{weights_8h_a47a3bd87a35a168c3b4718d8e5eb312f} 
+\index{weights.h@{weights.h}!L\_UpdateWeights@{L\_UpdateWeights}}
+\index{L\_UpdateWeights@{L\_UpdateWeights}!weights.h@{weights.h}}
+\doxysubsubsection{\texorpdfstring{L\_UpdateWeights()}{L\_UpdateWeights()}}
+{\footnotesize\ttfamily int L\+\_\+\+Update\+Weights (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}{weight\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{weights,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x,  }\item[{int32\+\_\+t}]{double\+\_\+resolution\+\_\+prediction\+\_\+error }\end{DoxyParamCaption})}
 
 
 
@@ -130,14 +136,14 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0_cgraph}
+\includegraphics[width=350pt]{weights_8h_a47a3bd87a35a168c3b4718d8e5eb312f_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=171pt]{weights_8h_a3c2f868e18c430abf7f6c6171ea253e0_icgraph}
+\includegraphics[width=181pt]{weights_8h_a47a3bd87a35a168c3b4718d8e5eb312f_icgraph}
 \end{center}
 \end{figure}
 \Hypertarget{weights_8h_aa2ee574fad65a220fa95637b2c9bd2af}\label{weights_8h_aa2ee574fad65a220fa95637b2c9bd2af} 

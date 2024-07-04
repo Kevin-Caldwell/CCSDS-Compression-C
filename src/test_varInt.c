@@ -25,7 +25,11 @@ void print_buffer(VUF *f)
     {
         printf("%d:\t", i);
         printBits(4, f->rw_buffer + i);
+        #ifdef ARM_COMPILE
         printf("  %08lX", f->rw_buffer[i]);
+        #else
+        printf("  %08X", f->rw_buffer[i]);
+        #endif
         printf("\n");
     }
 
@@ -54,7 +58,11 @@ int testVUF_Write()
 
     for (int i = 0; i < count; i++)
     {
+        #ifdef ARM_COMPILE
         printf("Writing %d Digits of %ld\n", array[i], bounce);
+        #else 
+        printf("Writing %d Digits of %d\n", array[i], bounce);
+        #endif
         VUF_append(&stream, bounce, array[i]);
         print_buffer(&stream);
         bounce = bounce ? 0 : -1;
@@ -82,7 +90,11 @@ int testVUF_Read()
         printf("IDNEEEX %d\n", i);
         printf("INDEX: %d\n", array[i]);
         uint32_t read = VUF_read_stack(&stream, array[i]);
+        #ifdef ARM_COMPILE
         printf("POPPPED: %08lX\t%0lu\n", read, read);
+        #else 
+        printf("POPPPED: %08X\t%0u\n", read, read);
+        #endif
         print_buffer(&stream);
     }
 

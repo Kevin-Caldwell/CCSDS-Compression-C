@@ -89,7 +89,11 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
                     epsilon_z = ((3 * (unsigned int)BPOW(K_ZPRIME + 6) - 49) * gamma) / BPOW(7);
                     VUF_append(&stream, data, kD);
                     len += kD;
+                    #ifdef ARM_COMPILE
                     fprintf(log, "%u:%ld,%ld\n", data, kD, k_z);
+                    #else 
+                    fprintf(log, "%u:%d,%d\n", data, kD, k_z);
+                    #endif
                     continue;
                 }
 
@@ -111,7 +115,13 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
 
                 GolombInt res = GolombPowerTwo(data, k_z);
                 len += res.length;
+
+                #ifdef ARM_COMPILE
                 fprintf(log, "(%d, %d, %d) %lu:%ld, %ld, %ld, %ld\n", x, y, z, res.data, res.length, k_z, gamma, epsilon_z);
+                #else
+                fprintf(log, "(%d, %d, %d) %u:%d, %d, %d, %d\n", x, y, z, res.data, res.length, k_z, gamma, epsilon_z);
+                #endif
+
                 VUF_append(&stream, res.data, res.length);
 
                 if (gamma < BPOW(GAMMA_STAR) - 1)
@@ -128,7 +138,12 @@ int EncodeBody(image *hIMG, const char *file_name, /*@unused@*/ const char *writ
         }
         time_t time_elapsed = time(NULL) - start;
         time_t time_left = time_elapsed * (kNz - z - 1) / (z + 1);
+
+        #ifdef ARM_COMPILE
         printf("\rEncoded %d/%d of Image. (%lld seconds Elapsed, %lld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
+        #else 
+        printf("\rEncoded %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)hIMG->size.x, time_elapsed, time_left);
+        #endif
         fflush(stdout);
     }
     res = VUF_close(&stream);

@@ -1,19 +1,18 @@
 <map id="include/math/linear_algebra.h" name="include/math/linear_algebra.h">
-<area shape="rect" id="Node000001" title="Skeleton File for Generin Vector Operations." alt="" coords="188,5,336,45"/>
+<area shape="rect" id="Node000001" title="Skeleton File for Generin Vector Operations." alt="" coords="131,5,279,45"/>
 <area shape="rect" id="Node000002" href="$typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="5,240,164,265"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,44,145,64,126,78,109,95,93,127,85,162,82,197,84,226,79,227,77,197,79,162,88,125,105,92,122,74,143,59,187,39"/>
-<area shape="rect" id="Node000004" href="$constants_8h.html" title="A Global File for constants shared between modules." alt="" coords="120,93,284,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="250,47,221,84,217,81,245,44"/>
-<area shape="rect" id="Node000005" href="$math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="142,167,315,192"/>
-<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="280,44,299,79,303,99,299,120,283,143,263,161,259,157,279,139,294,118,298,99,294,81,276,47"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="336,240,407,265"/>
-<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="283,44,302,66,319,92,350,163,368,226,363,227,345,165,314,95,297,69,279,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,48,136,68,112,95,97,128,89,163,86,227,80,226,84,163,92,126,108,92,133,64,163,43"/>
+<area shape="rect" id="Node000004" href="$constants_8h.html" title="A Global File for constants shared between modules." alt="" coords="123,93,287,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,46,207,79,202,79,202,46"/>
+<area shape="rect" id="Node000005" href="$math__functions_8h.html" title="Mathematical Helper Functions for use throughout code." alt="" coords="154,167,327,192"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="250,43,279,64,302,92,305,111,299,130,286,146,271,160,268,156,282,143,294,127,300,111,297,94,275,68,246,48"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="100,313,187,339"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,264,127,301,123,305,92,267"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="209,118,222,153,217,155,204,120"/>
-<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="207,194,122,236,119,231,204,190"/>
-<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="224,194,159,303,155,300,219,191"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,118,231,153,226,156,208,120"/>
+<area shape="poly" id="edge8_Node000005_Node000002" title=" " alt="" coords="217,194,124,237,122,232,215,190"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="235,194,161,303,157,300,230,191"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="240,240,308,265"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="238,191,262,227,257,230,234,194"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="253,190,337,231,335,236,250,194"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="249,191,265,227,260,229,244,193"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="332,240,403,265"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="262,190,336,231,333,235,260,194"/>
 </map>

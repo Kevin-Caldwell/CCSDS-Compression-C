@@ -2,9 +2,95 @@
 \hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{hyperCube: A C Implementation of the CCSDS-\/123-\/B-\/2 Standard@{hyperCube: A C Implementation of the CCSDS-\/123-\/B-\/2 Standard}}
 \label{md__r_e_a_d_m_e_autotoc_md0}%
 \Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
- An Open Source Implementation of \href{CCSDS_Compression.pdf}{\texttt{ CCSDS-\/123-\/\+B-\/2}}, the Low-\/\+Complexity Lossless and Near-\/\+Lossless Multispectral and Hyperspectral Image Compression.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{md__r_e_a_d_m_e_autotoc_md1}
-This Standard describes\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Installation Instructions}{Installation Instructions}}\label{md__r_e_a_d_m_e_autotoc_md2}
-installation instructions here\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{md__r_e_a_d_m_e_autotoc_md3}
-Documentation here\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Title Here}{Title Here}}\label{md__r_e_a_d_m_e_autotoc_md4}
-Text stuff here\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Development Highlights?}{Development Highlights?}}\label{md__r_e_a_d_m_e_autotoc_md5}
-dev 
+ An Open Source Implementation of \href{CCSDS_Compression.pdf}{\texttt{ CCSDS-\/123-\/\+B-\/2}}, the Low-\/\+Complexity Lossless and Near-\/\+Lossless Multispectral and Hyperspectral Image Compression.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Table of Contents}{Table of Contents}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item Introduction
+\item Installation Instructions
+\item Command Line Interface
+\item General Documentation
+\item Code Structure?
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{md__r_e_a_d_m_e_autotoc_md2}
+HyperC is an implementation of the \href{CCSDS_Compression.pdf}{\texttt{ CCSDS-\/123 B-\/2}}, designed to meet the FINCH-\/\+Payload\+Controller-\/\+Lossless\+Compression requirement. The required Compression Speed is givenby the \href{https://www.notion.so/utat-ss/FINCH-PayloadController-CompressionSpeed-0a9a3c2992e44a239bd1d1e7e464b6c9}{\texttt{ FINCH-\/\+Payload\+Controller-\/\+Compression\+Speed}} requirement. The compression rate required is provided by the \href{https://www.notion.so/utat-ss/FINCH-PayloadController-CompressionRate-8cabbe2393b147b6ae5e73e8ee58c9f4}{\texttt{ FINCH-\/\+Payload\+Controller-\/\+Compression\+Rate}} requirement.
+
+This project contains\+:
+
+
+\begin{DoxyItemize}
+\item Compressor
+\item Decompressor
+\item Hyperspectral Image formatting and generation
+\end{DoxyItemize}
+
+The raw hyperspectral image files are expected to be .uhi (Uncompressed Hyperspectral Image) files, which makes getting and storing individual pixels much faster than csv or mat files.
+
+Compressed Images are stored in .vuf files (Variable Unsigned Files), which are capable of storing unsigned integers of any length less than 32 bits.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Installation Instructions}{Installation Instructions}}\label{md__r_e_a_d_m_e_autotoc_md3}
+Download the repository using the command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/Kevin-\/Caldwell/CCSDS-\/Compression-\/C.git}
+
+\end{DoxyCode}
+
+
+The build system for this project is CMake. In order to assemble the binaries, run the commands
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build;\ cd\ build}
+\DoxyCodeLine{cmake\ .}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+
+
+The assembled binaries should be found in the build folder\+:
+
+
+\begin{DoxyItemize}
+\item hc-\/imgen
+\item hc-\/compress
+\item hc-\/decompress
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Command Line Interface}{Command Line Interface}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{Image Generator}{Image Generator}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Hyperspectral Image Tools are available in the hc-\/imgen executable. It provides a CLI for
+
+
+\begin{DoxyItemize}
+\item Image Generation using Perlin or Voronoi Noise
+\item Image Conversion from .csv to .uhi
+\item Image Conversion from .uhi to .csv
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Compressor}{Compressor}}\label{md__r_e_a_d_m_e_autotoc_md6}
+hc-\/compress is the Image Compressor, and the CLI Tags are\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/s} \+: Set Source File
+\item {\ttfamily -\/d} \+: Set Destionation File
+\item {\ttfamily -\/a} \+: Set Action (See Below)
+\item {\ttfamily -\/D} \+: Enable {\ttfamily DEBUG MODE}
+\item {\ttfamily -\/l} \+: Set Log File
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Actions}{Actions}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Actions describe all the functions you can execute using hc-\/compress. The list of possible actions are\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily compress}\+: Compress an image in a .uhi file to a .vuf file
+\item {\ttfamily predict}\+: Run the predictor on an image. Input and output files are .uhi
+\item {\ttfamily encode}\+: Run Encoder on an image in a .uhi file into a .vuf file
+\item {\ttfamily test-\/x}\+: Validate x (predictor, encoder, compressor, uhi, vuf)
+\end{DoxyItemize}
+
+Defaults\+:
+
+
+\begin{DoxyItemize}
+\item Source File\+: {\ttfamily ../data/test-\/images/indian\+\_\+pines.UHI}
+\item Destination File\+: {\ttfamily ../data/results/indian\+\_\+pines.UHI}
+\item Action\+: {\ttfamily predict}
+\item Debug\+: {\ttfamily False}
+\item Log File\+: {\ttfamily ../data/logs/compressor.logs}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsection{\texorpdfstring{Decompressor}{Decompressor}}\label{md__r_e_a_d_m_e_autotoc_md8}
+The Decompressor has not been fully implemented yet.\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{Project Structure}{Project Structure}}\label{md__r_e_a_d_m_e_autotoc_md9}
+a 

@@ -26,11 +26,17 @@ var NAVTREE =
 [
   [ "HyperC", "index.html", [
     [ "hyperCube: A C Implementation of the CCSDS-123-B-2 Standard", "md__r_e_a_d_m_e.html", [
-      [ "Introduction", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Installation Instructions", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
-      [ "Title Here", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
-      [ "Development Highlights?", "md__r_e_a_d_m_e.html#autotoc_md5", null ]
+      [ "Table of Contents", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Introduction", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Installation Instructions", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Command Line Interface", "md__r_e_a_d_m_e.html#autotoc_md4", [
+        [ "Image Generator", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+        [ "Compressor", "md__r_e_a_d_m_e.html#autotoc_md6", [
+          [ "Actions", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+        ] ],
+        [ "Decompressor", "md__r_e_a_d_m_e.html#autotoc_md8", null ]
+      ] ],
+      [ "Project Structure", "md__r_e_a_d_m_e.html#autotoc_md9", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
@@ -61,7 +67,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"uhi__io_8h.html#a75bd0b5f041d0076b18d196adf4c4e39"
+"typedefs_8h.html#ae33c4e202ff6a95f1edbf5aed1542a59a840878cfb57a8831e1e6ee082d5a94f6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

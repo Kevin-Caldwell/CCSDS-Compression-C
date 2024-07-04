@@ -20,7 +20,7 @@ error_t Predict_BufferSimple(
 
     uint16_t local_sum = FindLocalSum(&pixel_buffer, s, z, y, x);
     int64_t predicted_central_local_difference = 
-        PredictedCentralLocalDifference(&pixel_buffer, s, z, y, x, weights);
+        PredictedCentralLocalDifference(&pixel_buffer, s, weights);
 
     int64_t high_resolution_predicted_sample = 
         HighResolutionPredictedSample(
@@ -60,16 +60,29 @@ error_t Predict_BufferSimple(
     {
         char write_buffer[1000];
 
+        #ifdef ARM_COMPILE
         snprintf(write_buffer, 1000, "(%ld,%ld,%ld),%u, %d, %d, %lld, %ld, %lld, [",
                 x, y, z,
                 raw_data, predicted_sample, *predicted_value,
                 predicted_central_local_difference, 
                 double_resolution_predicted_sample, 
                 high_resolution_predicted_sample);
+        #else
+       snprintf(write_buffer, 1000, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
+                x, y, z,
+                raw_data, predicted_sample, *predicted_value,
+                predicted_central_local_difference, 
+                double_resolution_predicted_sample, 
+                high_resolution_predicted_sample);        
+        #endif
 
         for (int i = 0; i < kC; i++)
         {
+            #ifdef ARM_COMPILE
             sprintf(write_buffer + strlen(write_buffer), "%ld,", weights[i]);
+            #else
+            sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
+            #endif
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
         F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
@@ -148,7 +161,11 @@ int RunPredictor(image *hIMG, image *result)
 #if LOG
     sprintf(log_write_buffer, "Image File accessed %d times.", Log_memread);
     Log_add(log_write_buffer);
+    #ifdef ARM_COMPILE
     sprintf(log_write_buffer, "%f Image File Accesses per pixel. (%ld, %ld, %ld)", (float) Log_memread / (s.x * s.y * s.z), s.x, s.y, s.z);
+    #else
+    sprintf(log_write_buffer, "%f Image File Accesses per pixel. (%d, %d, %d)", (float) Log_memread / (s.x * s.y * s.z), s.x, s.y, s.z);
+    #endif
     Log_add(log_write_buffer);
 
     F_CLOSE(fp);

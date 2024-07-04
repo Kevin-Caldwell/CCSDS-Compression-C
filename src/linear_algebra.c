@@ -2,14 +2,11 @@
 
 error_t InitVector(int32_t **v, UINT len)
 {
-    // *v = (int32_t *)malloc(sizeof(int32_t) * len);
-
     return RES_OK;
 }
 
 error_t DeleteVector(data_t *v)
 {
-    free(v);
     return RES_OK;
 }
 

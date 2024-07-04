@@ -87,7 +87,12 @@ uint32_t VUF_read_stack(VUF *stream, uint32_t length)
     uint32_t varInt = stream->rw_buffer[stream->byte_index] << stream->bit_index;
     stream->bit_index += length;
     varInt >>= (BUFFER_SIZE - length);
+    
+    #ifdef ARM_COMPILE
     printf("Reading, %08lX\n", varInt);
+    #else 
+    printf("Reading, %08X\n", varInt);
+    #endif
 
     if (stream->bit_index >= BUFFER_SIZE)
     {
@@ -104,7 +109,11 @@ uint32_t VUF_read_stack(VUF *stream, uint32_t length)
         F_READ(stream->rw_buffer + 1, BUFFER_SIZE, BUFFER_LENGTH, stream->fs);
     }
 
+    #ifdef ARM_COMPILE
     printf("%08lX\n", varInt >> (BUFFER_SIZE - length));
+    #else
+    printf("%08X\n", varInt >> (BUFFER_SIZE - length));
+    #endif
 
     return varInt;
 }

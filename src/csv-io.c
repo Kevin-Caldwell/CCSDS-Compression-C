@@ -106,43 +106,68 @@ int ReadImageFromCSV(image *hIMG, char *file_name)
     int buffer_ptr = 0;
 
     int num;
+    int size_counter = 0;
 
-    // int img_counter = 0;
+    int img_counter = 0;
+    int i=0, j=0, k=0;
 
     while (read_buffer != (char) EOF)
     {
-        res = (int) F_READ(&read_buffer, sizeof(char), 1, fp);
+        res = (int) (F_READ(&read_buffer, sizeof(char), 1, fp)) != 1;
         log_global_error_handle
 
-        if (read_buffer == ',')
+        if (read_buffer == ',' || read_buffer == (char) EOF)
         {
-
             num_buffer[buffer_ptr] = (char) 0;
             num = atoi(num_buffer);
             buffer_ptr = 0;
 
-            if (size.x != 0)
+            if (size_counter == 0)
             {
                 size.x = (DIM) num;
+                size_counter++;
             }
 
-            else if (size.y != 0)
+            else if (size_counter == 1)
             {
                 size.y = (DIM) num;
+                size_counter++;
             }
 
-            else if (size.z != 0)
+            else if (size_counter == 2)
             {
                 size.z = (DIM) num;
                 res = InitImage(hIMG, size.x, size.y, size.z);
+                log_global_error_handle
+                
+                printf("Size Calculated: {%d, %d, %d}\n", size.x, size.y, size.z);
+                size_counter++;
             }
             else
             {
-                break;
-                // if (img_counter == (int) (size.x * size.y * size.z))
-                // {
-                //     break;
-                // }
+                printf("{(%d %d %d): %d} ", i, j, k, num);
+                SetPixel(hIMG, i, j, k, num);
+
+                i++;
+                img_counter++;
+
+                if(i == size.x){
+                    i = 0;
+                    j++;
+                }
+
+                if(j == size.y) {
+                    j = 0;
+                    k++;
+                }
+
+                if(k == size.z){
+                    printf("%d Pixels Found, out of %d total pixels.\n", img_counter, size.x * size.y * size.z);
+                    printf("End of data reached.\n");
+                    break;
+
+                }
+                
             }
         }
         else

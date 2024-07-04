@@ -53,6 +53,13 @@
 typedef struct UncompressedHyperspectralImage
 {
     dim3 size;
+    /** 
+     * @brief
+     * Number of bits needed to represent values in the image.
+     * @details
+     * Range: [2, 32]
+     */
+    uint8_t kDynamicRange;
     file_t *fs;
 } F_UHI, UHI, uIMG;
 

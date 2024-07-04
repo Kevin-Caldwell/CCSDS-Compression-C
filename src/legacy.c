@@ -56,16 +56,29 @@ error_t Predict(
     {
         char write_buffer[1000];
 
+        #ifdef ARM_COMPILE
         sprintf(write_buffer, "(%ld,%ld,%ld),%u, %d, %d, %lld, %ld, %lld, [",
                 x, y, z,
                 raw_data, predicted_sample, predicted_value,
                 predicted_central_local_difference, 
                 double_resolution_predicted_sample, 
                 high_resolution_predicted_sample);
+        #else 
+        sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [",
+                x, y, z,
+                raw_data, predicted_sample, predicted_value,
+                predicted_central_local_difference, 
+                double_resolution_predicted_sample, 
+                high_resolution_predicted_sample);
+        #endif
 
         for (int i = 0; i < kC; i++)
         {
+            #ifdef ARM_COMPILE
             sprintf(write_buffer + strlen(write_buffer), "%ld,", weights[i]);
+            #else
+            sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
+            #endif
         }
         sprintf(write_buffer + strlen(write_buffer), "]\n");
         F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), fp);
@@ -282,7 +295,7 @@ int32_t L_DirectionalLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, int
 
 int L_LocalDirectionVector(image *hIMG, int32_t *lDV, INDEX z, INDEX y, INDEX x)
 {
-    if (!Hash_GetValue(&predictor_constants, "PREDICTION_MODE"))
+    if (!kPredictionMode)
     {
         for (int i = N; i <= NW; i++)
         {

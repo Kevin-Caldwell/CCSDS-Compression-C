@@ -32,7 +32,13 @@ void Reconstructor(image *predicted_values, image *reconstructed, FILE *file_ptr
 
         time_t time_elapsed = time(NULL) - start;
         time_t time_left = time_elapsed * (predicted_values->size.z - z - 1) / (z + 1);
+
+        #ifdef ARM_COMPILE
         printf("\rPredicted %d/%d of Image. (%lld seconds Elapsed, %lld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
+        #else 
+        printf("\rPredicted %d/%d of Image. (%ld seconds Elapsed, %ld seconds Left)", (int)(z + 1), (int)size.z, time_elapsed, time_left);
+        #endif
+
         fflush(stdout);
     }
     end = time(NULL);
@@ -65,19 +71,32 @@ void ReconstructPixel(image *mapped, image *data, INDEX z, INDEX y, INDEX x, FIL
 
     char write_buffer[1000];
 
-    // sprintf(write_buffer, "(%d,%d,%d),%d, %d, %d\n",  x, y, z, delta + predicted_sample, predicted_sample, delta);
-
+    #ifdef ARM_COMPILE
     sprintf(write_buffer, "(%ld,%ld,%ld),%lu, %d, %d, %lld, %ld, %lld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data,
             predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+    #else 
+    sprintf(write_buffer, "(%d,%d,%d),%u, %d, %d, %ld, %d, %ld, [", x, y, z, delta + predicted_sample, predicted_sample, mapped_data,
+        predicted_central_local_difference, double_resolution_predicted_sample, high_resolution_predicted_sample);
+    #endif
 
     for (int i = 0; i < kC; i++)
     {
+        #ifdef ARM_COMPILE
         sprintf(write_buffer + strlen(write_buffer), "%ld,", weights[i]);
+        #else 
+        sprintf(write_buffer + strlen(write_buffer), "%d,", weights[i]);
+        #endif
     }
     sprintf(write_buffer + strlen(write_buffer), "]\n");
 
+    #ifdef ARM_COMPILE
     sprintf(write_buffer + strlen(write_buffer), "UpdateWeights args: %ld %ld %ld %ld\n", z, y, x, double_resolution_predicted_error);
+    #else
+    sprintf(write_buffer + strlen(write_buffer), "UpdateWeights args: %d %d %d %d\n", z, y, x, double_resolution_predicted_error);
+    #endif
+
     F_WRITE(write_buffer, sizeof(char), strlen(write_buffer), file_ptr);
+    
 }
 
 void TestReconstructor(char *file_name)

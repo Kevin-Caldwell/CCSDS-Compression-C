@@ -54,6 +54,6 @@ int UpdateWeights(LBuf *buf, dim3 s, weight_t *weights, INDEX z, INDEX y, INDEX 
 int64_t L_PredictedCentralLocalDifference(image *hIMG, INDEX z, INDEX y, INDEX x, weight_t* weights);
 
 int64_t
-PredictedCentralLocalDifference(LBuf *buf, dim3 s, INDEX z, INDEX y, INDEX x, weight_t* weight_vector);
+PredictedCentralLocalDifference(LBuf *buf, dim3 s, weight_t* weight_vector);
 
 #endif /* WEIGHTS_H */

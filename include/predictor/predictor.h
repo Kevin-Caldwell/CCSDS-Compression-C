@@ -11,8 +11,6 @@
 #ifndef PREDICTOR_H
 #define PREDICTOR_H
 
-#include "files/logs.h"
-
 #include "predictor/weights.h"
 #include "predictor/quantizer.h"
 
@@ -22,6 +20,8 @@ extern file_t* fp;
  * @todo remove this
  */
 #define Ps(z) MIN(z, kP)
+
+
 
 /** 
  * @brief Finds the kC constant, updated every pass.

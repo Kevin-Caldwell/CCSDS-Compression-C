@@ -44,7 +44,8 @@ int InitImage(
     image *img_p,
     DIM x,
     DIM y,
-    DIM z);
+    DIM z
+    );
 
 PIXEL GetPixel(image *hIMG, INDEX x, INDEX y, INDEX z);
 

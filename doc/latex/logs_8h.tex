@@ -6,7 +6,6 @@ Logging Execution and Errors in Code.
 
 
 {\ttfamily \#include "{}file\+\_\+\+IO.\+h"{}}\newline
-{\ttfamily \#include "{}constants/global\+\_\+constants.\+h"{}}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 Include dependency graph for logs.\+h\+:\nopagebreak
@@ -52,11 +51,7 @@ char {\bfseries log\+\_\+write\+\_\+buffer} \mbox{[}100\mbox{]}
 \doxysubsection{Detailed Description}
 Logging Execution and Errors in Code. 
 
-Stores logs in the file specified by log\+\_\+file in \doxylink{global__constants_8h}{global\+\_\+constants.\+h} Logs the start, end of the program and task, Logs the success/failure of various checkpoints in the code. \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000014}{Todo}}]Log the number of fetches from storage in predictor 
-
-Log (all) errors in the code. \end{DoxyRefDesc}
-
+Stores logs in the file specified by log\+\_\+file in \doxylink{global__constants_8h}{global\+\_\+constants.\+h} Logs the start, end of the program and task, Logs the success/failure of various checkpoints in the code. 
 
 \doxysubsection{Macro Definition Documentation}
 \Hypertarget{logs_8h_a72c9934c23cc7d419664eb6f51d2748d}\label{logs_8h_a72c9934c23cc7d419664eb6f51d2748d} 
@@ -68,9 +63,8 @@ Log (all) errors in the code. \end{DoxyRefDesc}
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}(res)\ \{\(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ error\_msg[30];\(\backslash\)}
-\DoxyCodeLine{\ \ \ \ sprintf(error\_msg,\ \textcolor{stringliteral}{"{}Error\ Code\ \%d\ was\ Registered."{}},\ res);\(\backslash\)}
-\DoxyCodeLine{\ \ \ \ Log\_error(error\_msg);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ snprintf(log\_write\_buffer,\ 100,\ \textcolor{stringliteral}{"{}Error\ Code\ \%d\ was\ Registered."{}},\ res);\(\backslash\)}
+\DoxyCodeLine{\ \ \ \ Log\_error(log\_write\_buffer);\(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ res;\(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \}}
 

@@ -13,9 +13,6 @@
  *  Add Entries
  *  Get Index
  *  Get and Set Value
- *
- * \todo Comments
- * \todo Statically Allocated Memory (High Priority)
  */
 
 #ifndef HASH_TABLE_H

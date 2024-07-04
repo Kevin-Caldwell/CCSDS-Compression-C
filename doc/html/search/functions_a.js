@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['quantizerindex_0',['QuantizerIndex',['../quantizer_8h.html#afa51bec3d5dfdb41078f60b1a7c454ab',1,'quantizer.c']]],
-  ['quantizerindexunmapper_1',['QuantizerIndexUnmapper',['../quantizer_8h.html#ae85d34759565d8a3ab498494786c395b',1,'quantizer.c']]]
+  ['readimagefromcsv_0',['ReadImageFromCSV',['../csv-io_8h.html#aba677341d6fd704867c56e0b5d6f3fc3',1,'csv-io.c']]],
+  ['runpredictor_1',['RunPredictor',['../predictor_8h.html#a4a94804509574a94d896a4164802bcd2',1,'predictor.c']]]
 ];

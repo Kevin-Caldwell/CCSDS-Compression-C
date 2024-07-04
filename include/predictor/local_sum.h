@@ -8,7 +8,6 @@
 #define LOCAL_SUM_H
 
 #include "sample_representative.h"
-#include "dst/locale_buffer.h"
 
 /** 
  * @brief Local Sum Shorthand 

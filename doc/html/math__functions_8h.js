@@ -15,9 +15,5 @@ var math__functions_8h =
     [ "SIGN_P", "math__functions_8h.html#a5f76d4dda1e368d45e059912932c7b60", null ],
     [ "SQ", "math__functions_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc", null ],
     [ "dim2", "math__functions_8h.html#a25a1b999e489d87de5f6ae6f37cba079", null ],
-    [ "dim3", "math__functions_8h.html#af3273ad069a5db23c87cf0547340e6fa", null ],
-    [ "Euclidian2", "math__functions_8h.html#a61e36d5241561d1bc112c291a3262565", null ],
-    [ "Euclidian3", "math__functions_8h.html#adfddd321b4840c92df9f1d48e11c657e", null ],
-    [ "Manhattan2", "math__functions_8h.html#adf11110e70a4ca4a966622288d194681", null ],
-    [ "Manhattan3", "math__functions_8h.html#ace80df346398f6e153166e87cee41d47", null ]
+    [ "dim3", "math__functions_8h.html#af3273ad069a5db23c87cf0547340e6fa", null ]
 ];

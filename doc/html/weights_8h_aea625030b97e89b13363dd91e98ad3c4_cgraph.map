@@ -1,0 +1,10 @@
+<map id="L_PredictedCentralLocalDifference" name="L_PredictedCentralLocalDifference">
+<area shape="rect" id="Node000001" title="Predicted Central Local Difference Calculation." alt="" coords="5,29,251,55"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="87,31,78,21,82,11,99,5,128,3,164,7,174,11,178,17,174,20,171,15,163,12,128,8,100,10,86,15,83,20,90,27"/>
+<area shape="rect" id="Node000002" href="$legacy_8c.html#ad7e7877c94925819861e8e294460a9ea" title="Finds the Local Direction Vector using Direct Image Access." alt="" coords="299,29,469,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,39,285,39,285,45,251,45"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="347,31,340,21,344,11,359,5,384,3,416,7,428,16,424,20,414,11,384,8,360,10,347,15,345,20,352,27"/>
+<area shape="rect" id="Node000003" href="$legacy_8c.html#a945a88b7ee631a8cb9bf5236c33b639a" title="Finds the Central Local Difference using Direct Image Access." alt="" coords="517,29,701,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="470,39,504,39,504,45,470,45"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="573,31,565,21,569,11,584,5,609,3,641,7,653,16,650,20,639,11,609,8,585,10,573,15,570,20,577,27"/>
+</map>

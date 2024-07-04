@@ -6,17 +6,16 @@ int file_index = 0;
 
 int InitImage(image *img_p, DIM x, DIM y, DIM z)
 {
+    printf("Init Image.\n");
     int res = 0;
     char file_name[40];
     
-    res = snprintf(file_name, 40, "_%dx%dx%d_%d.UHI", (int) x, (int) y, (int) z, file_index);
+    res = snprintf(file_name, 40, "../data/temp/_%dx%dx%d_%d.UHI", (int) x, (int) y, (int) z, file_index) <= 0;
     log_global_error_handle
 
-    res = UHI_Initialize(img_p, (dim3){x, y, z}, file_name, READ_AND_WRITE);
+    res = UHI_Initialize(img_p, (dim3){x, y, z}, file_name, WRITING_AND_READING);
     log_global_error_handle
 
-    
-    
     return res;
 }
 

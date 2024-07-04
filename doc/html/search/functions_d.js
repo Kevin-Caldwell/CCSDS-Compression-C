@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['uhi_5finitialize_0',['UHI_Initialize',['../uhi__io_8h.html#a75bd0b5f041d0076b18d196adf4c4e39',1,'uhi_io.c']]],
-  ['uhi_5freadpixel_1',['UHI_ReadPixel',['../uhi__io_8h.html#ad7fd2d84633ee6e0355a950deeacd220',1,'uhi_io.c']]],
-  ['uhi_5fwritepixel_2',['UHI_WritePixel',['../uhi__io_8h.html#a9c23d248f87897f71d177a12cdfebf84',1,'uhi_io.c']]],
-  ['updateweights_3',['UpdateWeights',['../weights_8h.html#a3c2f868e18c430abf7f6c6171ea253e0',1,'weights.c']]]
+  ['vuf_5fappend_0',['VUF_append',['../var_int_file___i_o_8h.html#acd17b6ab96cbfb4911978141bfbfaa84',1,'varIntFile_IO.c']]],
+  ['vuf_5fclose_1',['VUF_close',['../var_int_file___i_o_8h.html#ab856b51c917ab7e19c72f1cb25f22923',1,'varIntFile_IO.c']]],
+  ['vuf_5finitialize_2',['VUF_initialize',['../var_int_file___i_o_8h.html#ad87d7d041a638f17308bffa039efb58d',1,'varIntFile_IO.c']]],
+  ['vuf_5fread_5fstack_3',['VUF_read_stack',['../var_int_file___i_o_8h.html#aafa9034f88afca6a726a84673d063889',1,'varIntFile_IO.c']]]
 ];

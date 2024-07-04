@@ -18,8 +18,6 @@ Structure containing all Predictor Constants.
 \begin{DoxyCompactList}\small\item\em Select Prediction Mode. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}{t\+\_\+local\+\_\+sum}} \mbox{\hyperlink{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}{k\+Local\+Sum\+Type}}
 \begin{DoxyCompactList}\small\item\em Determines the type of local sum used. Affects the compression ratio and execution time. \end{DoxyCompactList}\item 
-uint8\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb}{k\+Dynamic\+Range}}
-\begin{DoxyCompactList}\small\item\em Number of bits needed to represent values in the image. \end{DoxyCompactList}\item 
 uint8\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f}{k\+Weight\+Resolution}}
 \begin{DoxyCompactList}\small\item\em Number of Bits used to represent weight values. Must be between 4 and 19 inclusive. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}} \mbox{\hyperlink{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd}{k\+Weight\+Initialization}}
@@ -29,18 +27,18 @@ uint8\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a1233790319c8bbfd6bb
 \Hypertarget{structs__predictor__constants_a9f28821bcbb645a7c3ab8a0228335fc5}\label{structs__predictor__constants_a9f28821bcbb645a7c3ab8a0228335fc5} 
 int {\bfseries k\+Unsigned\+Samples}
 \item 
-\Hypertarget{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae}\label{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae} 
-int {\bfseries k\+Smin}
-\item 
-\Hypertarget{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b}\label{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b} 
-int {\bfseries k\+Smax}
-\item 
-\Hypertarget{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533}\label{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533} 
-int {\bfseries k\+Smid}
-\item 
-\Hypertarget{structs__predictor__constants_a59c1d13456fd2629d287d9e230138cae}\label{structs__predictor__constants_a59c1d13456fd2629d287d9e230138cae} 
-int32\+\_\+t {\bfseries k\+Prediction\+Bands}
+int \mbox{\hyperlink{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae}{k\+Smin}}
+\begin{DoxyCompactList}\small\item\em Lower Sample Value Limit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b}{k\+Smax}}
+\begin{DoxyCompactList}\small\item\em Middle Sample Value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533}{k\+Smid}}
+\begin{DoxyCompactList}\small\item\em Maximum Sample Value. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a2cab427e66b714539c05eba8126168b8}{kP}}
 \begin{DoxyCompactList}\small\item\em The number of prediction bands. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structs__predictor__constants_abc4db1c2f612e0cb02ed34ce2fcbd0b3}{k\+Pz}}
+\begin{DoxyCompactList}\small\item\em Prediction Bands for a Spectral Band z. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{structs__predictor__constants_a253a6b3f670035bcc6cf31e86e1a7287}{k\+Cz}}
+\begin{DoxyCompactList}\small\item\em Number of Local Difference Values used for prediction. \end{DoxyCompactList}\item 
 \Hypertarget{structs__predictor__constants_a8f171e5001e449e32ed32687ce59c7f1}\label{structs__predictor__constants_a8f171e5001e449e32ed32687ce59c7f1} 
 uint8\+\_\+t {\bfseries k\+Weight\+Component\+Resolution}
 \begin{DoxyCompactList}\small\item\em ~\newline
@@ -78,19 +76,19 @@ int {\bfseries k\+TInc}
 Structure containing all Predictor Constants. 
 
 \doxysubsection{Field Documentation}
-\Hypertarget{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb}\label{structs__predictor__constants_a259eb38bab418aa26b68d33d542cfdcb} 
-\index{s\_predictor\_constants@{s\_predictor\_constants}!kDynamicRange@{kDynamicRange}}
-\index{kDynamicRange@{kDynamicRange}!s\_predictor\_constants@{s\_predictor\_constants}}
-\doxysubsubsection{\texorpdfstring{kDynamicRange}{kDynamicRange}}
-{\footnotesize\ttfamily uint8\+\_\+t k\+Dynamic\+Range}
+\Hypertarget{structs__predictor__constants_a253a6b3f670035bcc6cf31e86e1a7287}\label{structs__predictor__constants_a253a6b3f670035bcc6cf31e86e1a7287} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kCz@{kCz}}
+\index{kCz@{kCz}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kCz}{kCz}}
+{\footnotesize\ttfamily int32\+\_\+t k\+Cz}
 
 
 
-Number of bits needed to represent values in the image. 
+Number of Local Difference Values used for prediction. 
 
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]Move to image properties \end{DoxyRefDesc}
-\Hypertarget{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}\label{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf} 
+In Reduced Prediction Mode, Cz = Pz
+
+Calculated Constant. \Hypertarget{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf}\label{structs__predictor__constants_a7df57565dff909730e48b198f2de2ddf} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kLocalSumType@{kLocalSumType}}
 \index{kLocalSumType@{kLocalSumType}!s\_predictor\_constants@{s\_predictor\_constants}}
 \doxysubsubsection{\texorpdfstring{kLocalSumType}{kLocalSumType}}
@@ -114,8 +112,20 @@ Choose between lossy and lossless compression.
 Lossy Compression not fully supported yet 
 \end{DoxyNote}
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Implement use case \end{DoxyRefDesc}
-\Hypertarget{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb}\label{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb} 
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Implement use case \end{DoxyRefDesc}
+\Hypertarget{structs__predictor__constants_a2cab427e66b714539c05eba8126168b8}\label{structs__predictor__constants_a2cab427e66b714539c05eba8126168b8} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kP@{kP}}
+\index{kP@{kP}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kP}{kP}}
+{\footnotesize\ttfamily int32\+\_\+t kP}
+
+
+
+The number of prediction bands. 
+
+Range\+: \mbox{[}0,15\mbox{]}
+
+User Specified Constant. \Hypertarget{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb}\label{structs__predictor__constants_a6dce68db93344a8211cd177b207172cb} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kPredictionMode@{kPredictionMode}}
 \index{kPredictionMode@{kPredictionMode}!s\_predictor\_constants@{s\_predictor\_constants}}
 \doxysubsubsection{\texorpdfstring{kPredictionMode}{kPredictionMode}}
@@ -125,7 +135,85 @@ Lossy Compression not fully supported yet
 
 Select Prediction Mode. 
 
-User Defined Constant \Hypertarget{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b}\label{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b} 
+User Defined Constant \Hypertarget{structs__predictor__constants_abc4db1c2f612e0cb02ed34ce2fcbd0b3}\label{structs__predictor__constants_abc4db1c2f612e0cb02ed34ce2fcbd0b3} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kPz@{kPz}}
+\index{kPz@{kPz}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kPz}{kPz}}
+{\footnotesize\ttfamily int32\+\_\+t k\+Pz}
+
+
+
+Prediction Bands for a Spectral Band z. 
+
+Pz\texorpdfstring{$\ast$}{*} = min\{z, P\}
+
+Calculated Constant. \Hypertarget{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b}\label{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kSmax@{kSmax}}
+\index{kSmax@{kSmax}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kSmax}{kSmax}}
+{\footnotesize\ttfamily int k\+Smax}
+
+
+
+Middle Sample Value. 
+
+If samples are unsigned, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533}{kSmid}}\ =\ 2\string^(D-\/1)\ }
+
+\end{DoxyCode}
+ If samples are signed, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533}{kSmid}}\ =\ 0\ }
+
+\end{DoxyCode}
+
+
+Calculated Constant \Hypertarget{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533}\label{structs__predictor__constants_af9f0ce390db39a8f170fb0cac2021533} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kSmid@{kSmid}}
+\index{kSmid@{kSmid}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kSmid}{kSmid}}
+{\footnotesize\ttfamily int k\+Smid}
+
+
+
+Maximum Sample Value. 
+
+If samples are unsigned, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b}{kSmax}}\ =\ 2\string^(D)-\/1\ }
+
+\end{DoxyCode}
+ If samples are signed, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structs__predictor__constants_ab24ae7b116b2059c4ddc8a76be084a2b}{kSmax}}\ =\ 2\string^(D-\/1)-\/1\ }
+
+\end{DoxyCode}
+
+
+Calculated Constant \Hypertarget{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae}\label{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae} 
+\index{s\_predictor\_constants@{s\_predictor\_constants}!kSmin@{kSmin}}
+\index{kSmin@{kSmin}!s\_predictor\_constants@{s\_predictor\_constants}}
+\doxysubsubsection{\texorpdfstring{kSmin}{kSmin}}
+{\footnotesize\ttfamily int k\+Smin}
+
+
+
+Lower Sample Value Limit. 
+
+If samples are unsigned, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae}{kSmin}}\ =\ 0\ }
+
+\end{DoxyCode}
+ If samples are signed, 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{structs__predictor__constants_a63e80c9a70ef511c45281b6d5bba05ae}{kSmin}}\ =\ -\/2\string^(D-\/1)\ }
+
+\end{DoxyCode}
+
+
+Calculated Constant. \Hypertarget{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b}\label{structs__predictor__constants_a28a0b943ff8fd3c6785446e6e6bee86b} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightExponentOffsetFlag@{kWeightExponentOffsetFlag}}
 \index{kWeightExponentOffsetFlag@{kWeightExponentOffsetFlag}!s\_predictor\_constants@{s\_predictor\_constants}}
 \doxysubsubsection{\texorpdfstring{kWeightExponentOffsetFlag}{kWeightExponentOffsetFlag}}
@@ -136,7 +224,7 @@ User Defined Constant \Hypertarget{structs__predictor__constants_a28a0b943ff8fd3
 Selects the Weight Exponent Offset Flag 0\+: WEO values are zero 1\+: WEO values can be non-\/zero. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Implement in Predictor\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Implement in Predictor\end{DoxyRefDesc}
 \Hypertarget{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd}\label{structs__predictor__constants_adbe6968c0ea7ede4b53717162999a6dd} 
 \index{s\_predictor\_constants@{s\_predictor\_constants}!kWeightInitialization@{kWeightInitialization}}
 \index{kWeightInitialization@{kWeightInitialization}!s\_predictor\_constants@{s\_predictor\_constants}}
@@ -148,7 +236,7 @@ Selects the Weight Exponent Offset Flag 0\+: WEO values are zero 1\+: WEO values
 Selects the Weight Initialization Method 0\+: Default Weight Initialization 1\+: Custom Weight Initialization. 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Implement in Predictor \end{DoxyRefDesc}
 
 
 User Defined Constant \Hypertarget{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f}\label{structs__predictor__constants_a1233790319c8bbfd6bb21d2fef1f885f} 
@@ -161,7 +249,7 @@ User Defined Constant \Hypertarget{structs__predictor__constants_a1233790319c8bb
 
 Number of Bits used to represent weight values. Must be between 4 and 19 inclusive. 
 
-User Defined Constant 
+User Defined Constant Range\+: \mbox{[}4, 19\mbox{]} 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

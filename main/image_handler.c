@@ -7,6 +7,11 @@ char DEBUG = 0;
 
 int main(int argInt, char **argS)
 {
+#if LOG
+    Log_init();
+#endif
+
+    printf("Starting Image Handler..\n");
     if (argInt > 1)
     {
         if (!strcmp(argS[1], "generate"))
@@ -29,4 +34,7 @@ int main(int argInt, char **argS)
     {
         GeneratePerlinImage((dim3){100, 100, 100}, 0, 10);
     }
+#if LOG
+    Log_close();
+#endif
 }

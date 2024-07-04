@@ -23,6 +23,9 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{typedefs_8h_a963672d32952debc4e85853b5eb0f3f3}\label{typedefs_8h_a963672d32952debc4e85853b5eb0f3f3} 
+typedef enum ACTIONS {\bfseries ACTION}
+\item 
 typedef enum \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\+\_\+\+CODES}} \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\+\_\+t}}
 \item 
 \Hypertarget{typedefs_8h_ae6f57a1b4f31c934703178eaecd3d272}\label{typedefs_8h_ae6f57a1b4f31c934703178eaecd3d272} 
@@ -55,20 +58,39 @@ typedef \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}} {\
 \Hypertarget{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639}\label{typedefs_8h_a5acabcf9a2b0d843de53680562e2f639} 
 typedef \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}} {\bfseries data\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Type representing vector units in \doxylink{linear__algebra_8h}{linear\+\_\+algebra.\+h}. \end{DoxyCompactList}\item 
-\Hypertarget{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db}\label{typedefs_8h_ad4115f40f38a206246691fa2c1d1c9db} 
-typedef uint32\+\_\+t {\bfseries weight\+\_\+t}
+\Hypertarget{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe}\label{typedefs_8h_a8c4cc58e073079c8be5013d017fcc2fe} 
+typedef int32\+\_\+t {\bfseries weight\+\_\+t}
 \begin{DoxyCompactList}\small\item\em Type representing weight values in \doxylink{weights_8h}{weights.\+h}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{typedefs_8h_abd505ece4ed03e704c3c8674188adeec}\label{typedefs_8h_abd505ece4ed03e704c3c8674188adeec} 
+enum {\bfseries ACTIONS} \{ \newline
+{\bfseries COMPRESS} = 0
+, {\bfseries PREDICT}
+, {\bfseries ENCODE}
+, {\bfseries TEST\+\_\+\+PREDICTOR}
+, \newline
+{\bfseries TEST\+\_\+\+ENCODER}
+, {\bfseries TEST\+\_\+\+COMPRESSOR}
+, {\bfseries TEST\+\_\+\+UHI}
+, {\bfseries TEST\+\_\+\+VUF}
+ \}
+\item 
 enum \mbox{\hyperlink{typedefs_8h_a938a8c46255e5666f6a434ca0eb87f25}{ERROR\+\_\+\+CODES}} \{ \newline
 {\bfseries RES\+\_\+\+OK} = 0
-, {\bfseries FILE\+\_\+\+NON\+\_\+\+EXISTENT}
+, {\bfseries ERROR\+\_\+\+GENERIC}
+, {\bfseries NO\+\_\+\+TASK}
+, {\bfseries TASK\+\_\+\+NOT\+\_\+\+DEFINED}
+, \newline
+{\bfseries FILE\+\_\+\+NON\+\_\+\+EXISTENT}
 , {\bfseries FILE\+\_\+\+READ\+\_\+\+ERROR}
 , {\bfseries FILE\+\_\+\+WRITE\+\_\+\+ERROR}
+, {\bfseries MEM\+\_\+\+ALLOC\+\_\+\+ERROR}
 , \newline
-{\bfseries MEM\+\_\+\+ALLOC\+\_\+\+ERROR}
-, {\bfseries HASH\+\_\+\+FULL}
+{\bfseries HASH\+\_\+\+FULL}
+, {\bfseries PIXEL\+\_\+\+BUFFER\+\_\+\+INDEX\+\_\+\+INVALID}
+, {\bfseries PIXEL\+\_\+\+BUFFER\+\_\+\+PIXEL\+\_\+\+NOT\+\_\+\+FOUND}
  \}
 \item 
 \Hypertarget{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59}\label{typedefs_8h_ae33c4e202ff6a95f1edbf5aed1542a59} 

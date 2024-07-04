@@ -4,29 +4,47 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOCALE\_BUFFER\_H}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOCALE\_BUFFER\_H}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ MAX\_PRECEDING\_BANDS\ 16}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ MAX\_NEIGHBORS\ 4}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ PIXEL\_BUFFER\_SPACE\ 1}}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ LOCAL\_BUFFER\_NEIGHBOR\_SIZE\ \(\backslash\)}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \ \ \ (MAX\_NEIGHBORS\ +\ PIXEL\_BUFFER\_SPACE)}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ LOCAL\_BUFFER\_TOTAL\_SIZE\ \(\backslash\)}}
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\ \ \ \ (MAX\_PRECEDING\_BANDS\ +\ MAX\_NEIGHBORS\ +\ PIXEL\_BUFFER\_SPACE)}}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ \mbox{\hyperlink{locale__buffer_8h_abb8e4f43db4e7bdb6760bc84df3b28fc}{LocaleBuffer\_neighbor\_index\_x}}[\mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}}];}
-\DoxyCodeLine{00034\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}\ \mbox{\hyperlink{locale__buffer_8h_aa4dbfb1da03f162a3bc10400b370f34e}{LocaleBuffer\_neighbor\_index\_y}}[\mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}}];}
-\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{image_8h}{dst/image.h}}"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ LocaleBuffer\_Load\ LocaleBuffer\_SimpleLoad}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ MAX\_PRECEDING\_BANDS\ 16}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ MAX\_NEIGHBORS\ 4}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ PIXEL\_BUFFER\_SPACE\ 1}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ LOCAL\_BUFFER\_NEIGHBOR\_SIZE\ \(\backslash\)}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \ \ \ (MAX\_NEIGHBORS\ +\ PIXEL\_BUFFER\_SPACE)}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ LOCAL\_BUFFER\_TOTAL\_SIZE\ \(\backslash\)}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ (MAX\_PRECEDING\_BANDS\ +\ MAX\_NEIGHBORS\ +\ PIXEL\_BUFFER\_SPACE)}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{locale__buffer_8h_a2e618d9d144289d84a66ce7eb105db98}{LocaleBuffer\_neighbor\_index\_x}}[\mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}}];}
+\DoxyCodeLine{00035\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{locale__buffer_8h_a4673580feb1876e1b6049bb5767b4033}{LocaleBuffer\_neighbor\_index\_y}}[\mbox{\hyperlink{locale__buffer_8h_a07be08855f9109e81f4f738fcddef57f}{LOCAL\_BUFFER\_NEIGHBOR\_SIZE}}];}
 \DoxyCodeLine{00036\ }
-\DoxyCodeLine{00044\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}\{}
-\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ data[LOCAL\_BUFFER\_TOTAL\_SIZE];}
-\DoxyCodeLine{00046\ \}\ \mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00053\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{locale__buffer_8h_a6f0f835958a84b1fb3173c4f0a6d4155}{LocaleBuffer\_SimpleLoad}}(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}*\ hIMG);}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00062\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{locale__buffer_8h_aafe3d5c7c1f0f2b689902c0bf1f7e4eb}{LocaleBuffer\_SmartLoad}}(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}*\ hIMG);}
-\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOCALE\_BUFFER\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ data[\mbox{\hyperlink{locale__buffer_8h_a581acc00e1c1624e91212d1233fbf777}{LOCAL\_BUFFER\_TOTAL\_SIZE}}];}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{structdim3}{dim3}}\ pixel\_index;}
+\DoxyCodeLine{00048\ \}\ \mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}},\ \mbox{\hyperlink{struct_locale_buffer}{LBuf}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{locale__buffer_8h_a722a7b78d70ebb6506d6714613e9d063}{LocaleBuffer\_SimpleLoad}}(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}*\ hIMG,\ \mbox{\hyperlink{structdim3}{dim3}}\ index);}
+\DoxyCodeLine{00063\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{locale__buffer_8h_af3d15cfc9f56982d6e407e18dae59cf6}{LocaleBuffer\_SmartLoad}}(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}}*\ hIMG,\ \mbox{\hyperlink{structdim3}{dim3}}\ index);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00077\ \mbox{\hyperlink{typedefs_8h_a9686e3aa2c29c9c208c0cf15d69516e5}{error\_t}}\ \mbox{\hyperlink{locale__buffer_8h_aad5675e65f87af86acf1f4530ec9ab02}{LocaleBuffer\_FetchPixel}}(}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}*\ data,}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ offset\_x,\ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ offset\_y,\ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ offset\_z}
+\DoxyCodeLine{00083\ );}
+\DoxyCodeLine{00084\ \mbox{\hyperlink{typedefs_8h_ab11dabd4d79e8b3426010beb5831e1d9}{PIXEL}}\ LocaleBuffer\_FetchPixel\_Direct(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ buf,\ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ z,\ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ y,\ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ x);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ print\_locale\_buffer(\mbox{\hyperlink{struct_locale_buffer}{LocaleBuffer}}*\ pixel\_buffer);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{typedefs_8h_ad2f8ed01c1733d4eab0932d970abaa4c}{BOOL}}\ \_index\_within\_bounds(\mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ x,\ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ y,\ \mbox{\hyperlink{typedefs_8h_a1578d2632e13e6bbdc95fe7ad2beef19}{DIM}}\ z,\ \mbox{\hyperlink{structdim3}{dim3}}\ s)\{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{return}\ (0\ <=\ x\ \&\&\ x\ <\ s.x)\ \&\&\ (0\ <=\ y\ \&\&\ y\ <\ s.y)\ \&\&\ (0\ <=\ z\ \&\&\ z\ <\ s.z);}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ LOCALE\_BUFFER\_H\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

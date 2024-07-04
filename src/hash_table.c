@@ -8,7 +8,6 @@ error_t Hash_InitializeHashTable(HashTable *hash)
 
 error_t Hash_DeleteHashTable(HashTable *hash)
 {
-    // free(hash);
     return RES_OK;
 }
 

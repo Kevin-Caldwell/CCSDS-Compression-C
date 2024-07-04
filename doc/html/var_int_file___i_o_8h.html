@@ -103,7 +103,6 @@ $(document).ready(function(){initNavTree('var_int_file___i_o_8h.html',''); initR
 <p>File Input/Output for Variable-Length Words.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;inttypes.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="logs_8h_source.html">files/logs.h</a>&quot;</code><br />
 <code>#include &quot;encoder/encoder_helper_functions.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -111,42 +110,43 @@ Include dependency graph for varIntFile_IO.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="var_int_file___i_o_8h__incl.png" border="0" usemap="#ainclude_2files_2var_int_file___i_o_8h" alt=""/></div>
 <map name="ainclude_2files_2var_int_file___i_o_8h" id="ainclude_2files_2var_int_file___i_o_8h">
-<area shape="rect" title="File Input/Output for Variable&#45;Length Words." alt="" coords="360,5,559,31"/>
-<area shape="rect" title=" " alt="" coords="400,533,487,559"/>
-<area shape="poly" title=" " alt="" coords="527,28,587,45,645,73,670,92,690,114,704,140,709,170,709,401,703,434,687,462,663,484,633,503,600,517,565,528,501,541,499,536,564,523,598,512,631,498,660,480,683,458,698,432,703,400,703,171,699,142,686,117,667,96,642,78,585,50,526,33"/>
-<area shape="rect" title=" " alt="" coords="5,460,76,485"/>
-<area shape="poly" title=" " alt="" coords="387,33,284,54,173,84,125,103,85,124,59,147,52,158,50,171,50,327,45,446,40,446,45,327,45,170,47,157,55,143,82,119,122,98,172,79,283,49,386,28"/>
-<area shape="rect" href="logs_8h.html" title="Logging Execution and Errors in Code." alt="" coords="295,79,387,104"/>
-<area shape="poly" title=" " alt="" coords="442,33,373,74,371,69,439,28"/>
-<area shape="rect" href="encoder__helper__functions_8h_source.html" title=" " alt="" coords="490,152,669,192"/>
-<area shape="poly" title=" " alt="" coords="470,29,558,139,554,143,466,32"/>
-<area shape="rect" href="file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="303,159,378,185"/>
-<area shape="poly" title=" " alt="" coords="343,104,343,145,338,145,338,104"/>
-<area shape="rect" href="global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="162,240,373,265"/>
-<area shape="poly" title=" " alt="" coords="330,106,311,127,294,153,280,191,273,227,268,226,275,190,289,151,307,124,326,102"/>
-<area shape="rect" title=" " alt="" coords="100,460,171,485"/>
-<area shape="poly" title=" " alt="" coords="295,104,236,121,174,151,146,170,125,193,110,220,105,252,105,327,107,360,113,392,129,446,124,448,108,393,102,361,99,327,99,251,105,218,120,190,143,166,171,146,234,116,294,99"/>
-<area shape="rect" title=" " alt="" coords="402,159,466,185"/>
-<area shape="poly" title=" " alt="" coords="356,102,411,148,408,152,353,106"/>
-<area shape="poly" title=" " alt="" coords="352,183,370,208,387,239,413,317,429,396,444,519,439,520,424,397,407,318,382,241,366,211,348,186"/>
-<area shape="rect" title=" " alt="" coords="447,240,522,265"/>
-<area shape="poly" title=" " alt="" coords="363,182,453,231,450,236,361,187"/>
-<area shape="rect" title=" " alt="" coords="546,240,613,265"/>
-<area shape="poly" title=" " alt="" coords="371,182,391,189,534,235,532,240,389,195,369,187"/>
-<area shape="poly" title=" " alt="" coords="332,187,290,231,286,228,328,183"/>
-<area shape="rect" href="typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="247,460,405,485"/>
-<area shape="poly" title=" " alt="" coords="296,263,327,282,341,296,352,312,362,348,360,385,352,420,340,449,335,447,347,419,355,384,357,349,348,314,337,299,324,287,293,268"/>
-<area shape="rect" href="load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="139,313,337,339"/>
-<area shape="poly" title=" " alt="" coords="265,267,250,302,246,300,260,265"/>
-<area shape="poly" title=" " alt="" coords="346,483,414,524,411,528,343,488"/>
-<area shape="rect" href="hash__table_8h.html" title=" " alt="" coords="144,387,273,412"/>
-<area shape="poly" title=" " alt="" coords="236,340,221,375,216,373,231,338"/>
-<area shape="poly" title=" " alt="" coords="212,412,218,448,225,467,237,483,271,508,309,524,349,535,386,540,385,545,348,540,307,529,268,512,233,487,220,469,212,449,206,413"/>
-<area shape="poly" title=" " alt="" coords="183,414,82,457,80,452,181,410"/>
-<area shape="poly" title=" " alt="" coords="229,410,296,450,294,455,226,414"/>
-<area shape="poly" title=" " alt="" coords="198,414,159,452,155,448,195,410"/>
-<area shape="poly" title=" " alt="" coords="597,191,614,216,633,248,647,285,653,324,653,401,649,427,637,451,621,471,600,489,550,516,501,534,499,529,548,511,597,484,617,468,633,448,644,426,647,400,647,325,642,287,628,250,610,218,592,194"/>
-<area shape="poly" title=" " alt="" coords="582,192,582,226,577,226,577,192"/>
+<area shape="rect" title="File Input/Output for Variable&#45;Length Words." alt="" coords="587,5,786,31"/>
+<area shape="rect" title=" " alt="" coords="283,548,370,573"/>
+<area shape="poly" title=" " alt="" coords="711,29,746,50,784,82,801,101,815,122,825,145,828,170,828,408,824,426,814,442,797,456,776,470,721,493,654,513,508,541,384,557,383,552,507,536,653,508,719,488,773,465,794,452,810,438,819,424,823,408,823,171,819,147,810,125,797,104,780,85,743,54,708,33"/>
+<area shape="rect" href="logs_8h.html" title="Logging Execution and Errors in Code." alt="" coords="641,79,733,104"/>
+<area shape="poly" title=" " alt="" coords="689,31,689,65,684,65,684,31"/>
+<area shape="rect" href="encoder__helper__functions_8h_source.html" title=" " alt="" coords="5,152,184,192"/>
+<area shape="poly" title=" " alt="" coords="643,33,182,151,181,146,642,28"/>
+<area shape="rect" href="file___i_o_8h.html" title="Abstract Functions for File IO." alt="" coords="271,159,345,185"/>
+<area shape="poly" title=" " alt="" coords="641,105,359,163,358,158,640,100"/>
+<area shape="rect" title=" " alt="" coords="578,475,649,500"/>
+<area shape="poly" title=" " alt="" coords="689,104,689,251,689,327,684,379,664,428,637,466,632,463,659,425,679,378,684,327,684,251,684,104"/>
+<area shape="rect" title=" " alt="" coords="724,159,788,185"/>
+<area shape="poly" title=" " alt="" coords="699,102,739,147,735,151,695,106"/>
+<area shape="poly" title=" " alt="" coords="275,187,232,209,211,224,193,242,179,262,171,280,168,325,168,408,171,431,180,452,193,472,209,489,248,519,287,540,284,545,245,523,206,493,189,475,175,455,166,432,163,408,163,325,166,279,174,259,189,238,207,220,229,204,272,182"/>
+<area shape="rect" title=" " alt="" coords="437,240,512,265"/>
+<area shape="poly" title=" " alt="" coords="333,182,439,232,437,237,331,187"/>
+<area shape="rect" title=" " alt="" coords="61,240,128,265"/>
+<area shape="poly" title=" " alt="" coords="278,187,139,238,137,233,276,182"/>
+<area shape="rect" href="global__constants_8h.html" title="Contains Application&#45;Level Constants." alt="" coords="203,240,413,265"/>
+<area shape="poly" title=" " alt="" coords="311,185,311,226,305,226,305,185"/>
+<area shape="rect" href="typedefs_8h.html" title="A file containing univerally used typedefs." alt="" coords="247,475,406,500"/>
+<area shape="poly" title=" " alt="" coords="299,267,275,296,250,336,241,359,236,381,237,404,244,425,262,449,287,466,284,470,259,453,239,428,231,405,231,381,236,357,246,334,271,293,295,264"/>
+<area shape="rect" href="load__constants_8h.html" title="Abstractions for Loading .CONST files." alt="" coords="321,313,519,339"/>
+<area shape="poly" title=" " alt="" coords="327,263,391,303,388,308,325,268"/>
+<area shape="poly" title=" " alt="" coords="329,500,329,534,324,534,324,500"/>
+<area shape="rect" title=" " alt="" coords="578,394,649,419"/>
+<area shape="poly" title=" " alt="" coords="449,336,574,386,572,391,447,341"/>
+<area shape="rect" href="hash__table_8h.html" title=" " alt="" coords="425,394,554,419"/>
+<area shape="poly" title=" " alt="" coords="432,337,472,382,468,385,428,341"/>
+<area shape="rect" href="predictor__constants_8h.html" title="Contains the Struct and relevant functions for Creating and Accessing Predictor Constants." alt="" coords="253,387,400,427"/>
+<area shape="poly" title=" " alt="" coords="408,341,361,380,358,376,405,337"/>
+<area shape="poly" title=" " alt="" coords="484,421,458,459,420,502,392,525,362,543,359,539,389,520,417,498,454,456,480,418"/>
+<area shape="poly" title=" " alt="" coords="467,422,364,471,361,466,465,417"/>
+<area shape="poly" title=" " alt="" coords="509,417,585,465,582,469,506,422"/>
+<area shape="poly" title=" " alt="" coords="329,427,329,461,324,461,324,427"/>
+<area shape="poly" title=" " alt="" coords="82,194,64,218,46,250,32,287,27,325,27,408,33,444,52,474,80,498,115,517,154,531,195,542,270,553,269,559,194,547,153,537,113,522,77,503,48,478,28,446,21,408,21,324,27,285,41,248,60,216,77,191"/>
+<area shape="poly" title=" " alt="" coords="97,192,97,226,92,226,92,192"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">

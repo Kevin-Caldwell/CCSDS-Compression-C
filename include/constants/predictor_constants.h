@@ -42,15 +42,6 @@ typedef struct{
      */
     t_local_sum kLocalSumType;
 
-    /** 
-     * @brief
-     * Number of bits needed to represent values in the image.
-     * @todo Move to image properties
-     * @details
-     * Range: [2, 32]
-     */
-    uint8_t kDynamicRange;
-
     /**
      * @brief 
      * Number of Bits used to represent weight values.
@@ -168,5 +159,7 @@ typedef struct{
     int kTInc;
 
 } s_predictor_constants, S_kPred;
+
+error_t InitializePredictorConstants(S_kPred* kPred, char* file_name);
 
 #endif /* PREDICTOR_CONSTANTS_H */

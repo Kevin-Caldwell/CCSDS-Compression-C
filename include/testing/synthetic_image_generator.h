@@ -5,6 +5,14 @@
 #include "math/linear_algebra.h"
 #include "dst/image.h"
 
+UINT Euclidian2(dim2 pt1, dim2 pt2);
+
+UINT Euclidian3(dim3 pt1, dim3 pt2);
+
+UINT Manhattan2(dim2 pt1, dim2 pt2);
+
+UINT Manhattan3(dim3 pt1, dim3 pt2);
+
 #define INIT_ARRAY(T, count) (T *)malloc(sizeof(T) * count)
 
 int WithinRect2(dim2 point, dim2 top_left, dim2 bottom_right);

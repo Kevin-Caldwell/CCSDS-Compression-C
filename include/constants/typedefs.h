@@ -25,9 +25,9 @@ typedef enum ACTIONS{
 typedef enum ERROR_CODES
 {
     RES_OK = 0,
+    ERROR_GENERIC, 
     NO_TASK,
     TASK_NOT_DEFINED,
-    ERROR_GENERIC, 
     FILE_NON_EXISTENT,
     FILE_READ_ERROR,
     FILE_WRITE_ERROR,

@@ -26,13 +26,16 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \item 
 \#define \mbox{\hyperlink{local__differences_8h_a2fee6f8dd7f3cd3ed1ae75161294c4c4}{Ps}}(z)~\mbox{\hyperlink{math__functions_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(z, kP)
 \begin{DoxyCompactList}\small\item\em Redundant Definition of Ps in math\+\_\+function.\+h. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{local__differences_8h_add0875819772a3917e5a6f648c0a3292}{DLD}}(h\+IMG,  z,  y,  x,  d)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, d)
+\#define \mbox{\hyperlink{local__differences_8h_ad97796e7b2a05fa45b148dcf5f5c4b8e}{L\+\_\+\+DLD}}(h\+IMG,  z,  y,  x,  d)~L\+\_\+\+Directional\+Local\+Difference(h\+IMG, z, y, x, d)
 \begin{DoxyCompactList}\small\item\em Shorthand for Direct Local Difference. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c}{DLD\+\_\+N}}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, N)
+\Hypertarget{local__differences_8h_a252ad11423294c23f8f5db09716b9fcf}\label{local__differences_8h_a252ad11423294c23f8f5db09716b9fcf} 
+\#define {\bfseries DLD}(h\+IMG,  s,  d)~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, s, d)
+\item 
+\#define \mbox{\hyperlink{local__differences_8h_a6b9ae43fab1bc44b5b5d058ac0c28a8f}{DLD\+\_\+N}}(h\+IMG)~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, N)
 \begin{DoxyCompactList}\small\item\em Shorthand for North Direct Local Difference. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f}{DLD\+\_\+W}}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, W)
+\#define \mbox{\hyperlink{local__differences_8h_ab4216ef204567a70fbf198187f3bdab8}{DLD\+\_\+W}}(h\+IMG)~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, W)
 \begin{DoxyCompactList}\small\item\em Shorthand for West Direct Local Difference. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5}{DLD\+\_\+\+NW}}(h\+IMG,  z,  y,  x)~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, NW)
+\#define \mbox{\hyperlink{local__differences_8h_a491eaf7c2305dec6ded74f892491d853}{DLD\+\_\+\+NW}}(h\+IMG)~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, NW)
 \begin{DoxyCompactList}\small\item\em Shorthand for North\+West Direct Local Difference. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
@@ -46,12 +49,21 @@ enum \mbox{\hyperlink{local__differences_8h_aa268a41a13430b18e933ed40207178d0}{D
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int32\+\_\+t \mbox{\hyperlink{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52}{Central\+Local\+Difference}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x)
+int32\+\_\+t \mbox{\hyperlink{local__differences_8h_a945a88b7ee631a8cb9bf5236c33b639a}{L\+\_\+\+Central\+Local\+Difference}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x)
 \begin{DoxyCompactList}\small\item\em Finds the Central Local Difference using Direct Image Access. \end{DoxyCompactList}\item 
-int32\+\_\+t \mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, int direction)
+\Hypertarget{local__differences_8h_a7d54bf4fdde7270e6939ba0a175e5672}\label{local__differences_8h_a7d54bf4fdde7270e6939ba0a175e5672} 
+int32\+\_\+t {\bfseries Central\+Local\+Difference} (\mbox{\hyperlink{struct_locale_buffer}{LBuf}} \texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{structdim3}{dim3}} s, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x)
+\item 
+int32\+\_\+t \mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}} (\mbox{\hyperlink{struct_locale_buffer}{LBuf}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{structdim3}{dim3}} s, int direction)
 \begin{DoxyCompactList}\small\item\em Finds the Directional Local Difference using Direct Image Access. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{local__differences_8h_aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef}{Local\+Direction\+Vector}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, int32\+\_\+t \texorpdfstring{$\ast$}{*}local\+\_\+direction\+\_\+vector, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x)
-\begin{DoxyCompactList}\small\item\em Finds the Local Direction Vector using Direct Image Access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\Hypertarget{local__differences_8h_a4e74352da9484a167d43c31fd93c05ef}\label{local__differences_8h_a4e74352da9484a167d43c31fd93c05ef} 
+int32\+\_\+t {\bfseries L\+\_\+\+Directional\+Local\+Difference} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x, int direction)
+\item 
+int \mbox{\hyperlink{local__differences_8h_a5608545cba4375d1c51341869125cb95}{L\+\_\+\+Local\+Direction\+Vector}} (\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}h\+IMG, int32\+\_\+t \texorpdfstring{$\ast$}{*}local\+\_\+direction\+\_\+vector, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} z, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} y, \mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}} x)
+\begin{DoxyCompactList}\small\item\em Finds the Local Direction Vector using Direct Image Access. \end{DoxyCompactList}\item 
+\Hypertarget{local__differences_8h_a34d123e5d7cd3faac07eb9b45c5d6a02}\label{local__differences_8h_a34d123e5d7cd3faac07eb9b45c5d6a02} 
+int {\bfseries Local\+Direction\+Vector} (\mbox{\hyperlink{struct_locale_buffer}{LBuf}} \texorpdfstring{$\ast$}{*}buf, \mbox{\hyperlink{structdim3}{dim3}} s, int32\+\_\+t \texorpdfstring{$\ast$}{*}l\+DV)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -63,24 +75,11 @@ Kevin Caldwell @\+Brian\+Sh\+Tsoi
 
 
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{local__differences_8h_add0875819772a3917e5a6f648c0a3292}\label{local__differences_8h_add0875819772a3917e5a6f648c0a3292} 
-\index{local\_differences.h@{local\_differences.h}!DLD@{DLD}}
-\index{DLD@{DLD}!local\_differences.h@{local\_differences.h}}
-\doxysubsubsection{\texorpdfstring{DLD}{DLD}}
-{\footnotesize\ttfamily \#define DLD(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x,  }\item[{}]{d }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, d)}
-
-
-
-Shorthand for Direct Local Difference. 
-
-\begin{DoxyWarning}{Warning}
-Direct Image Access 
-\end{DoxyWarning}
-\Hypertarget{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c}\label{local__differences_8h_a21b79785d586c939ebdd71a1602e9b5c} 
+\Hypertarget{local__differences_8h_a6b9ae43fab1bc44b5b5d058ac0c28a8f}\label{local__differences_8h_a6b9ae43fab1bc44b5b5d058ac0c28a8f} 
 \index{local\_differences.h@{local\_differences.h}!DLD\_N@{DLD\_N}}
 \index{DLD\_N@{DLD\_N}!local\_differences.h@{local\_differences.h}}
 \doxysubsubsection{\texorpdfstring{DLD\_N}{DLD\_N}}
-{\footnotesize\ttfamily \#define DLD\+\_\+N(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, N)}
+{\footnotesize\ttfamily \#define DLD\+\_\+N(\begin{DoxyParamCaption}\item[{}]{h\+IMG }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, N)}
 
 
 
@@ -89,11 +88,11 @@ Shorthand for North Direct Local Difference.
 \begin{DoxyWarning}{Warning}
 Direct Image Access 
 \end{DoxyWarning}
-\Hypertarget{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5}\label{local__differences_8h_a05c0b8c3e6a3ae85df713a1cd5a99cd5} 
+\Hypertarget{local__differences_8h_a491eaf7c2305dec6ded74f892491d853}\label{local__differences_8h_a491eaf7c2305dec6ded74f892491d853} 
 \index{local\_differences.h@{local\_differences.h}!DLD\_NW@{DLD\_NW}}
 \index{DLD\_NW@{DLD\_NW}!local\_differences.h@{local\_differences.h}}
 \doxysubsubsection{\texorpdfstring{DLD\_NW}{DLD\_NW}}
-{\footnotesize\ttfamily \#define DLD\+\_\+\+NW(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, NW)}
+{\footnotesize\ttfamily \#define DLD\+\_\+\+NW(\begin{DoxyParamCaption}\item[{}]{h\+IMG }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, NW)}
 
 
 
@@ -102,15 +101,28 @@ Shorthand for North\+West Direct Local Difference.
 \begin{DoxyWarning}{Warning}
 Direct Image Access 
 \end{DoxyWarning}
-\Hypertarget{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f}\label{local__differences_8h_ad68845bcfb3f6bd01382ba8a2550f21f} 
+\Hypertarget{local__differences_8h_ab4216ef204567a70fbf198187f3bdab8}\label{local__differences_8h_ab4216ef204567a70fbf198187f3bdab8} 
 \index{local\_differences.h@{local\_differences.h}!DLD\_W@{DLD\_W}}
 \index{DLD\_W@{DLD\_W}!local\_differences.h@{local\_differences.h}}
 \doxysubsubsection{\texorpdfstring{DLD\_W}{DLD\_W}}
-{\footnotesize\ttfamily \#define DLD\+\_\+W(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_aa1779fb92c191cde51766275baaf7591}{Directional\+Local\+Difference}}(h\+IMG, z, y, x, W)}
+{\footnotesize\ttfamily \#define DLD\+\_\+W(\begin{DoxyParamCaption}\item[{}]{h\+IMG }\end{DoxyParamCaption})~\mbox{\hyperlink{local__differences_8h_a02960b965a208951717c49ec8795c554}{Directional\+Local\+Difference}}(h\+IMG, W)}
 
 
 
 Shorthand for West Direct Local Difference. 
+
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+\Hypertarget{local__differences_8h_ad97796e7b2a05fa45b148dcf5f5c4b8e}\label{local__differences_8h_ad97796e7b2a05fa45b148dcf5f5c4b8e} 
+\index{local\_differences.h@{local\_differences.h}!L\_DLD@{L\_DLD}}
+\index{L\_DLD@{L\_DLD}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{L\_DLD}{L\_DLD}}
+{\footnotesize\ttfamily \#define L\+\_\+\+DLD(\begin{DoxyParamCaption}\item[{}]{h\+IMG,  }\item[{}]{z,  }\item[{}]{y,  }\item[{}]{x,  }\item[{}]{d }\end{DoxyParamCaption})~L\+\_\+\+Directional\+Local\+Difference(h\+IMG, z, y, x, d)}
+
+
+
+Shorthand for Direct Local Difference. 
 
 \begin{DoxyWarning}{Warning}
 Direct Image Access 
@@ -126,45 +138,15 @@ Direct Image Access
 Redundant Definition of Ps in math\+\_\+function.\+h. 
 
 \begin{DoxyRefDesc}{Deprecated}
-\item[\mbox{\hyperlink{deprecated__deprecated000008}{Deprecated}}]Soon \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{deprecated__deprecated000007}{Deprecated}}]Soon \end{DoxyRefDesc}
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52}\label{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52} 
-\index{local\_differences.h@{local\_differences.h}!CentralLocalDifference@{CentralLocalDifference}}
-\index{CentralLocalDifference@{CentralLocalDifference}!local\_differences.h@{local\_differences.h}}
-\doxysubsubsection{\texorpdfstring{CentralLocalDifference()}{CentralLocalDifference()}}
-{\footnotesize\ttfamily int32\+\_\+t Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x }\end{DoxyParamCaption})}
-
-
-
-Finds the Central Local Difference using Direct Image Access. 
-
-\begin{DoxyNote}{Note}
-Soon Deprecated 
-\end{DoxyNote}
-\begin{DoxyWarning}{Warning}
-Direct Image Access 
-\end{DoxyWarning}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=208pt]{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{local__differences_8h_a37d2cf3f48b1b2c436f630a2b649cf52_icgraph}
-\end{center}
-\end{figure}
-\Hypertarget{local__differences_8h_aa1779fb92c191cde51766275baaf7591}\label{local__differences_8h_aa1779fb92c191cde51766275baaf7591} 
+\Hypertarget{local__differences_8h_a02960b965a208951717c49ec8795c554}\label{local__differences_8h_a02960b965a208951717c49ec8795c554} 
 \index{local\_differences.h@{local\_differences.h}!DirectionalLocalDifference@{DirectionalLocalDifference}}
 \index{DirectionalLocalDifference@{DirectionalLocalDifference}!local\_differences.h@{local\_differences.h}}
 \doxysubsubsection{\texorpdfstring{DirectionalLocalDifference()}{DirectionalLocalDifference()}}
-{\footnotesize\ttfamily int32\+\_\+t Directional\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int32\+\_\+t Directional\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_locale_buffer}{LBuf}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{structdim3}{dim3}}}]{s,  }\item[{int}]{direction }\end{DoxyParamCaption})}
 
 
 
@@ -180,21 +162,51 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=226pt]{local__differences_8h_aa1779fb92c191cde51766275baaf7591_cgraph}
+\includegraphics[width=226pt]{local__differences_8h_a02960b965a208951717c49ec8795c554_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=226pt]{local__differences_8h_aa1779fb92c191cde51766275baaf7591_icgraph}
+\includegraphics[width=226pt]{local__differences_8h_a02960b965a208951717c49ec8795c554_icgraph}
 \end{center}
 \end{figure}
-\Hypertarget{local__differences_8h_aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef}\label{local__differences_8h_aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef} 
-\index{local\_differences.h@{local\_differences.h}!LocalDirectionVector@{LocalDirectionVector}}
-\index{LocalDirectionVector@{LocalDirectionVector}!local\_differences.h@{local\_differences.h}}
-\doxysubsubsection{\texorpdfstring{LocalDirectionVector()}{LocalDirectionVector()}}
-{\footnotesize\ttfamily int Local\+Direction\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{local\+\_\+direction\+\_\+vector,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x }\end{DoxyParamCaption})}
+\Hypertarget{local__differences_8h_a945a88b7ee631a8cb9bf5236c33b639a}\label{local__differences_8h_a945a88b7ee631a8cb9bf5236c33b639a} 
+\index{local\_differences.h@{local\_differences.h}!L\_CentralLocalDifference@{L\_CentralLocalDifference}}
+\index{L\_CentralLocalDifference@{L\_CentralLocalDifference}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{L\_CentralLocalDifference()}{L\_CentralLocalDifference()}}
+{\footnotesize\ttfamily int32\+\_\+t L\+\_\+\+Central\+Local\+Difference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x }\end{DoxyParamCaption})}
+
+
+
+Finds the Central Local Difference using Direct Image Access. 
+
+\begin{DoxyNote}{Note}
+Soon Deprecated 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Direct Image Access 
+\end{DoxyWarning}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{local__differences_8h_a945a88b7ee631a8cb9bf5236c33b639a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{local__differences_8h_a945a88b7ee631a8cb9bf5236c33b639a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{local__differences_8h_a5608545cba4375d1c51341869125cb95}\label{local__differences_8h_a5608545cba4375d1c51341869125cb95} 
+\index{local\_differences.h@{local\_differences.h}!L\_LocalDirectionVector@{L\_LocalDirectionVector}}
+\index{L\_LocalDirectionVector@{L\_LocalDirectionVector}!local\_differences.h@{local\_differences.h}}
+\doxysubsubsection{\texorpdfstring{L\_LocalDirectionVector()}{L\_LocalDirectionVector()}}
+{\footnotesize\ttfamily int L\+\_\+\+Local\+Direction\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_uncompressed_hyperspectral_image}{image}} \texorpdfstring{$\ast$}{*}}]{h\+IMG,  }\item[{int32\+\_\+t \texorpdfstring{$\ast$}{*}}]{local\+\_\+direction\+\_\+vector,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{z,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{y,  }\item[{\mbox{\hyperlink{typedefs_8h_a762a038a8611999e554c912cf3c72cea}{INDEX}}}]{x }\end{DoxyParamCaption})}
 
 
 
@@ -210,13 +222,13 @@ Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{local__differences_8h_aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef_cgraph}
+\includegraphics[width=350pt]{local__differences_8h_a5608545cba4375d1c51341869125cb95_cgraph}
 \end{center}
 \end{figure}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{local__differences_8h_aa4dc7dd36c4a3d02b1bdc7fa2c3af1ef_icgraph}
+\includegraphics[width=350pt]{local__differences_8h_a5608545cba4375d1c51341869125cb95_icgraph}
 \end{center}
 \end{figure}

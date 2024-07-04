@@ -5,23 +5,19 @@
  * Stores logs in the file specified by log_file in global_constants.h
  * Logs the start, end of the program and task, 
  * Logs the success/failure of various checkpoints in the code.
- * @todo Log the number of fetches from storage in predictor
- * @todo Log (all) errors in the code.
  */
 #ifndef LOGS_H
 #define LOGS_H
 
 #include "file_IO.h"
 
-#include "constants/global_constants.h"
 #include <time.h>
 #include <string.h>
 
 #define log_global_error_handle \
     if(res) {\
-    char error_msg[30];\
-    snprintf(error_msg, 31, "Error Code %d was Registered.", res);\
-    Log_error(error_msg);\
+    snprintf(log_write_buffer, 100, "Error Code %d was Registered.", res);\
+    Log_error(log_write_buffer);\
     return res;\
     }
 

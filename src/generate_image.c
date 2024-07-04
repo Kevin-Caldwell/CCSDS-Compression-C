@@ -183,7 +183,7 @@ int cv_csv_uhi(char *src_csv, const char *dest_uhi)
 
     image img = decl_image;
     dim3 size;
-    /*@unused@*/
+    
     dim3 index;
     UHI stream = decl_image;
 
