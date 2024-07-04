@@ -5,7 +5,6 @@ python/*.csv
 python/__pycache__
 data/logs/**
 data/results/**
-data/test-images/**
 data/temp/**
 .vscode
 .VSCodeCounter

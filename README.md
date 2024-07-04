@@ -8,15 +8,17 @@ Image Compression.
 - [hyperCube: A C Implementation of the CCSDS-123-B-2 Standard](#hypercube-a-c-implementation-of-the-ccsds-123-b-2-standard)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [Installation Instructions](#installation-instructions)
+  - [Roadmap](#roadmap)
+  - [Installation](#installation)
   - [Command Line Interface](#command-line-interface)
     - [Image Generator](#image-generator)
     - [Compressor](#compressor)
       - [Actions](#actions)
       - [Defaults](#defaults)
     - [Decompressor](#decompressor)
-  - [Project Structure](#project-structure)
   - [Compiling for ARM](#compiling-for-arm)
+  - [Documentation](#documentation)
+  - [Authors and Acknowledgement](#authors-and-acknowledgement)
 
 ## Introduction
 
@@ -42,7 +44,17 @@ much faster than csv or mat files.
 Compressed Images are stored in .vuf files (Variable Unsigned Files), which
 are capable of storing unsigned integers of any length less than 32 bits.
 
-## Installation Instructions
+## Roadmap
+
+- [x] August 31: Finish Preliminary C Implementation
+- [x] August 23: Present Progress to Industry Experts at Critical Design Review
+- [x] Remove Dynamic Memory Allocation
+- [x] Compile Project for ARM32, target: stm32h743zi 
+- [ ] July 6: Run Predictor on NUCLEO-H743ZI2 board without external memory
+- [ ] July 6: Run Predictor on NUCLEO-H743ZI2 board with    external memory
+- [ ] August 6: Finish Encoder, Decoder, Reconstructor
+
+## Installation
 
 Download the repository using the command:
 
@@ -107,7 +119,6 @@ The list of possible actions are:
 
 The Decompressor has not been fully implemented yet.
 
-## Project Structure
 
 
 ## Compiling for ARM 
@@ -117,3 +128,24 @@ Using the arm-none-eabi-gcc compiler, the build command for this project is
 ```bash
 arm-none-eabi-gcc --specs=nosys.specs  main/compressor.c src/**.c -I include -lm -o build/hc-compress
 ```
+
+## Documentation
+
+Documentation for all features have been documented in code, and can be
+compiled for Doxygen using the preset file Doxyfile0:
+
+```bash
+doxygen Doxyfile0
+```
+
+The documentation can be viewed by opening the `doc/html/index.html` file in a browser.
+
+## Authors and Acknowledgement
+
+Developed by [Kevin Caldwell](https://github.com/Kevin-Caldwell), 
+[Mirai Shinjo](https://github.com/mshinjo),
+[Brian Tsoi](https://github.com/BrianShTsoi) and 
+[Lanlin He](https://github.com/lalalalinn), assisted by the 
+University of Toronto Aerospace Team (UTAT) Space Systems Team.
+
+Developed for the Field Imaging Nanosatellite for Crop residue Hyperspectral mapping (FINCH) mission.

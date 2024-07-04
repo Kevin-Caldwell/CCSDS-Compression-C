@@ -5,7 +5,7 @@ DECOMPRESSOR="./hc-decompress"
 IMAGE_HANDLER="./hc-imgen"
 
 
-IMG="TEST_3x3x3_0"
+IMG="indian_pines"
 
 # echo "Converting $IMG from csv to uhi"
 $IMAGE_HANDLER cv-csv-uhi "../data/test-images/$IMG.csv" "../data/test-images/$IMG.UHI"

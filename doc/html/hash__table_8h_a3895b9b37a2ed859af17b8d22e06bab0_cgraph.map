@@ -1,7 +1,0 @@
-<map id="Hash_SetValue" name="Hash_SetValue">
-<area shape="rect" id="Node000001" title="Sets new value of a given key." alt="" coords="5,29,124,55"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="37,31,31,21,34,11,45,5,65,3,88,6,98,15,94,19,85,11,65,8,47,10,38,15,36,20,41,28"/>
-<area shape="rect" id="Node000002" href="$hash__table_8c.html#a8889e063ac5cf3e79cb21bcba454b054" title=" " alt="" coords="172,29,293,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,39,158,39,158,45,124,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="205,31,199,21,202,11,213,5,233,3,256,6,266,15,262,19,253,11,233,8,215,10,206,15,204,20,209,28"/>
-</map>

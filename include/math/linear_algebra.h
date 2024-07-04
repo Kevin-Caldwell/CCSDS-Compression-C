@@ -25,10 +25,7 @@
 #ifndef LINEAR_ALGEBRA_H
 #define LINEAR_ALGEBRA_H
 
-#include "constants/typedefs.h"
 #include "constants/constants.h"
-#include "math_functions.h"
-
 
 /**
  * @brief Initializes the vector

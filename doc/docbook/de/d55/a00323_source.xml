@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_a00323_source" xml:lang="en-US">
-<title>encoder_constants.c</title>
-<indexterm><primary>src/encoder_constants.c</primary></indexterm>
-Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_a00323_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_a00140">constants/encoder_constants.h</link>&quot;</emphasis>
-<anchor xml:id="_a00323_source_1l00002"/>00002 
-<anchor xml:id="_a00323_source_1l00003"/><link linkend="_a00140_1aefcba2436e62e516a63bdad51613a2e5">00003</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_a00323_1aefcba2436e62e516a63bdad51613a2e5">B</link>&#32;=&#32;<link linkend="_a00152_1a816dcf31e408d445ca8275ad96e6eb1e">CLIP</link>(<link linkend="_a00140_1ad01e1c682be1b33d6ea8287bb7d5fff5">OUTPUT_WORD_SIZE</link>,&#32;1,&#32;8);
-</programlisting></section>

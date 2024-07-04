@@ -1,7 +1,0 @@
-<map id="VUF_read_stack" name="VUF_read_stack">
-<area shape="rect" id="Node000001" title="Reads the next value of size length from the VUF file." alt="" coords="5,29,132,55"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="44,31,39,21,41,11,52,5,69,3,89,6,98,15,94,18,86,11,69,8,53,10,46,15,44,20,48,28"/>
-<area shape="rect" id="Node000002" href="$file___i_o_8c.html#a6d14febd2771048b4a06dd86ea17718d" title=" " alt="" coords="180,29,253,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,39,166,39,166,45,132,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="192,31,187,21,189,11,200,5,217,3,237,6,246,15,242,18,234,11,217,8,201,10,194,15,192,20,196,28"/>
-</map>

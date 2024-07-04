@@ -12,7 +12,6 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 #include "math/math_functions.h"
-// #include "global_constants.h"
 
 #define TRUE 1
 #define FALSE 0

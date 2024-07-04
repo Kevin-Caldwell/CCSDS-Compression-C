@@ -1,7 +1,0 @@
-<map id="L_LocalDirectionVector" name="L_LocalDirectionVector">
-<area shape="rect" id="Node000001" title="Finds the Local Direction Vector using Direct Image Access." alt="" coords="299,29,469,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="430,20,427,15,419,12,384,8,356,10,342,15,339,20,346,27,343,31,334,21,338,11,355,5,384,3,420,7,430,11,434,17"/>
-<area shape="rect" id="Node000002" href="$legacy_8c.html#a9f6bc8c7505785f677d26e05d25e7ef1" title="Predicted Central Local Difference Calculation." alt="" coords="5,29,251,55"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="285,45,251,45,251,39,285,39"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="174,20,171,15,163,12,128,8,100,10,86,15,83,20,90,27,87,31,78,21,82,11,99,5,128,3,164,7,174,11,178,17"/>
-</map>

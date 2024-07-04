@@ -1,7 +1,0 @@
-<map id="LoadConstantFile" name="LoadConstantFile">
-<area shape="rect" id="Node000001" title="Loads a .CONST file into a HashTable filled with constants." alt="" coords="5,29,140,55"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="43,31,37,21,40,11,53,5,73,3,97,6,107,15,104,19,95,11,73,8,54,10,44,15,42,20,48,28"/>
-<area shape="rect" id="Node000002" href="$hash__table_8c.html#a168e04b561db13aa48b8c2675b4c3df8" title="Copies the key and data into the top of the Hash. Returns HASH_FULL if unable to insert new element." alt="" coords="188,29,309,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,39,174,39,174,45,140,45"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="219,31,213,21,216,11,229,5,249,3,273,6,283,15,280,19,271,11,249,8,230,10,220,15,218,20,224,28"/>
-</map>

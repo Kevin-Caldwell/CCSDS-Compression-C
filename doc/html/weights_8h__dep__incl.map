@@ -1,9 +1,0 @@
-<map id="include/predictor/weights.h" name="include/predictor/weights.h">
-<area shape="rect" id="Node000001" title="Functions for Initializing, Calculating and Updating Weights for Predictor and Reconstructor." alt="" coords="87,5,286,31"/>
-<area shape="rect" id="Node000002" href="$predictor_8h.html" title="Functions for the Predictor System." alt="" coords="85,79,289,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,44,189,79,184,79,184,44"/>
-<area shape="rect" id="Node000003" href="$reconstructor_8h_source.html" title=" " alt="" coords="5,152,171,192"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,115,113,154,110,150,160,111"/>
-<area shape="rect" id="Node000004" href="$generate__image_8h_source.html" title=" " alt="" coords="195,152,375,192"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="214,111,263,150,260,154,210,115"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="WeightUpdateScalingExponent" name="WeightUpdateScalingExponent">
-<area shape="rect" id="Node000001" title="Weight Update Scaling Exponent Calculation." alt="" coords="188,29,411,55"/>
-<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="340,20,329,11,299,8,275,10,262,15,260,20,266,27,262,31,254,21,259,11,274,5,299,3,331,7,343,16"/>
-<area shape="rect" id="Node000002" href="$legacy_8c.html#a47a3bd87a35a168c3b4718d8e5eb312f" title="Update Weights Calculations." alt="" coords="5,29,140,55"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,45,140,45,140,39,175,39"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="113,20,103,11,73,8,48,10,36,15,33,20,40,27,36,31,28,21,32,11,47,5,73,3,105,7,117,16"/>
-</map>
