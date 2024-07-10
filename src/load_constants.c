@@ -48,26 +48,25 @@ int LoadConstantFile(const char *file_name, HashTable *result)
     return RES_OK;
 }
 
-int PredictorConstantCount = 23;
+const int kpred_constant_count = 13;
+const char* kpred_constant_names[] = {
+    "LOSSLESS_COMPRESSION", 
+    "PREDICTION_MODE", 
+    "LOCAL_SUM",
+    "WEIGHT_RESOLUTION", 
+    "WEIGHT_INITIALIZATION", 
+    "UNSIGNED_SAMPLES", 
+    "PREDICTION_BANDS", 
+    "WEIGHT_COMPONENT_RESOLUTION", 
+    "REGISTER_SIZE", 
+    "ABSOLUTE_ERROR_LIMIT_BIT_DEPTH", 
+    "V_MIN", 
+    "V_MAX", 
+    "T_INC"
+};
 
 error_t SavePredictorConstants(S_kPred* kPred, char* file_name) {
     char write_buffer[100];
-
-    char* pred_constant_names[] = {
-        "LOSSLESS_COMPRESSION", 
-        "PREDICTION_MODE", 
-        "LOCAL_SUM",
-        "WEIGHT_RESOLUTION", 
-        "WEIGHT_INITIALIZATION", 
-        "UNSIGNED_SAMPLES", 
-        "PREDICTION_BANDS", 
-        "WEIGHT_COMPONENT_RESOLUTION", 
-        "REGISTER_SIZE", 
-        "ABSOLUTE_ERROR_LIMIT_BIT_DEPTH", 
-        "V_MIN", 
-        "V_MAX", 
-        "T_INC"
-    };
 
     int pred_constant_values[] = {
         (int) kPred->kLosslessCompression, 
@@ -85,9 +84,20 @@ error_t SavePredictorConstants(S_kPred* kPred, char* file_name) {
         (int) kPred->kTInc
     };
 
-    F_OPEN(file_name, WRITE);
+    file_t* fp = F_OPEN(file_name, WRITE);
+    if(!fp){
+        return FILE_NON_EXISTENT;
+    }
 
-    snprintf(write_buffer, 100, "%s:%d");
+    snprintf(write_buffer, 100, "%d\n", kpred_constant_count);
+    F_WRITE(write_buffer, sizeof(char), 100, fp);
+
+    for(int i = 0; i < kpred_constant_count; i++){
+        snprintf(write_buffer, 100, "%s:%d\n", kpred_constant_names[i], pred_constant_values[i]);
+        F_WRITE(write_buffer, sizeof(char), 100, fp);
+    }
+
+    F_CLOSE(fp);
 
     return RES_OK;
 }

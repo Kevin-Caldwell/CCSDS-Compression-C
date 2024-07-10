@@ -8,3 +8,4 @@ data/results/**
 data/temp/**
 .vscode
 .VSCodeCounter
+doc/**
